@@ -8,17 +8,23 @@ class ProgressRing extends StatelessWidget {
     required this.progress,
     this.size = 120,
     this.strokeWidth = 10,
+    this.backgroundColor,
+    this.gradient,
     this.child,
   });
 
   final double progress;
   final double size;
   final double strokeWidth;
+  final Color? backgroundColor;
+  final Gradient? gradient;
   final Widget? child;
 
   @override
   Widget build(BuildContext context) {
     final normalized = progress.clamp(0, 100) / 100;
+
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return SizedBox(
       width: size,
@@ -36,6 +42,14 @@ class ProgressRing extends StatelessWidget {
                 painter: _RingPainter(
                   progress: value,
                   strokeWidth: strokeWidth,
+                  backgroundColor: backgroundColor ??
+                      (isDark
+                          ? const Color(0xFF334155)
+                          : const Color(0xFFE5E7EB)),
+                  gradient: gradient ??
+                      const LinearGradient(
+                        colors: [Color(0xFF6366F1), Color(0xFFA855F7)],
+                      ),
                 ),
               );
             },
@@ -51,10 +65,14 @@ class _RingPainter extends CustomPainter {
   const _RingPainter({
     required this.progress,
     required this.strokeWidth,
+    required this.backgroundColor,
+    required this.gradient,
   });
 
   final double progress;
   final double strokeWidth;
+  final Color backgroundColor;
+  final Gradient gradient;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -62,14 +80,13 @@ class _RingPainter extends CustomPainter {
     final radius = (size.width - strokeWidth) / 2;
 
     final background = Paint()
-      ..color = const Color(0xFFE5E7EB)
+      ..color = backgroundColor
       ..style = PaintingStyle.stroke
       ..strokeWidth = strokeWidth;
 
     final foreground = Paint()
-      ..shader = const LinearGradient(
-        colors: [Color(0xFF6366F1), Color(0xFFA855F7)],
-      ).createShader(Rect.fromCircle(center: center, radius: radius))
+      ..shader =
+          gradient.createShader(Rect.fromCircle(center: center, radius: radius))
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
       ..strokeWidth = strokeWidth;
@@ -89,6 +106,8 @@ class _RingPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _RingPainter oldDelegate) {
     return oldDelegate.progress != progress ||
-        oldDelegate.strokeWidth != strokeWidth;
+        oldDelegate.strokeWidth != strokeWidth ||
+        oldDelegate.backgroundColor != backgroundColor ||
+        oldDelegate.gradient != gradient;
   }
 }
