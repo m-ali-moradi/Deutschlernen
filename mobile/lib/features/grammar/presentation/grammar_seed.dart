@@ -1,3 +1,6 @@
+// ─── Grammar Seed Data — synced from Figma Make ─────────────────────────────
+// Matches GrammarPage.tsx and store.tsx topic list exactly.
+
 class GrammarTopicView {
   const GrammarTopicView({
     required this.id,
@@ -23,746 +26,460 @@ class GrammarTopicView {
 }
 
 const grammarTopicsSeed = <GrammarTopicView>[
+  // ─── A1 ──────────────────────────────────────────────────────────────────
+
   GrammarTopicView(
-    id: 'g1',
-    title: 'Satzbau Grundlagen',
-    level: 'A1',
-    category: 'Satzbau',
-    icon: '🧱',
-    rule: 'Im Aussagesatz steht das konjugierte Verb an Position 2.',
-    explanation:
-        'Die erste Position kann durch Subjekt, Zeit oder Ort besetzt werden. Bei Ja/Nein-Fragen steht das Verb an Position 1, bei W-Fragen steht das Fragewort an Position 1. Imperativformen nutzen eine kurze Verbform. Konjunktionen wie und, oder, aber, denn verbinden Hauptsaetze ohne die Wortstellung zu veraendern.',
-    examples: [
-      'Ich lerne heute Deutsch.',
-      'Heute lerne ich Deutsch.',
-      'Kommst du morgen?',
-      'Warum lernst du Deutsch?',
-      'Komm bitte hierher!',
-    ],
-    progress: 0,
+    id: 'g1', title: 'Bestimmte Artikel', level: 'A1', category: 'Artikel', icon: '📘',
+    rule: 'Der (maskulin), Die (feminin), Das (neutrum) — bestimmte Artikel hängen vom Genus ab.',
+    explanation: 'In German, every noun has a grammatical gender. The definite articles are: der (masculine), die (feminine), das (neuter). In plural, all genders use \'die\'.',
+    examples: ['Der Mann liest ein Buch.', 'Die Frau trinkt Kaffee.', 'Das Kind spielt im Garten.', 'Die Kinder gehen zur Schule.'],
+    progress: 80,
   ),
+
   GrammarTopicView(
-    id: 'g2',
-    title: 'Nomen & Artikel',
-    level: 'A1',
-    category: 'Artikel & Nomen',
-    icon: '📘',
-    rule: 'Artikel zeigen Genus und Numerus: der/die/das, im Plural die.',
-    explanation:
-        'Jedes Nomen hat ein Genus und bildet den Plural oft mit -e, -er, -n/-en oder -s (manchmal mit Umlaut). Der bestimmte Artikel wird genutzt, wenn etwas bekannt ist; der unbestimmte Artikel (ein/eine) fuer Neues. Kein verneint Nomen und dekliniert wie ein.',
-    examples: [
-      'Der Tisch ist neu.',
-      'Eine Lampe steht im Zimmer.',
-      'Die Kinder spielen draussen.',
-      'Ich habe keine Zeit.',
-    ],
-    progress: 0,
+    id: 'g9', title: 'Satzbau', level: 'A1', category: 'Satzbau', icon: '🏗️',
+    rule: 'Das konjugierte Verb steht immer auf Position 2 im Hauptsatz.',
+    explanation: 'In German main clauses, the conjugated verb always occupies Position 2. In yes/no questions, the verb moves to Position 1. W-questions have the W-word in Position 1 and verb in Position 2.',
+    examples: ['Ich gehe morgen ins Kino.', 'Morgen gehe ich ins Kino.', 'Gehst du morgen ins Kino?', 'Wo wohnst du?'],
+    progress: 75,
   ),
+
   GrammarTopicView(
-    id: 'g3',
-    title: 'Kasus Grundlagen',
-    level: 'A1',
-    category: 'Kasus',
-    icon: '⚖️',
-    rule: 'Nominativ = Subjekt, Akkusativ = direktes Objekt, Dativ = indirektes Objekt.',
-    explanation:
-        'Der Kasus zeigt die Rolle im Satz. Im Akkusativ aendert sich der Artikel (der -> den). Der Dativ wird oft mit Praepositionen wie mit, nach, aus, bei, von, zu verwendet.',
-    examples: [
-      'Der Mann sieht den Hund.',
-      'Die Frau gibt dem Kind einen Apfel.',
-      'Ich fahre mit dem Bus.',
-    ],
-    progress: 0,
+    id: 'g10', title: 'Nominativ & Akkusativ', level: 'A1', category: 'Fälle', icon: '🎯',
+    rule: 'Nominativ = Subjekt (WER?), Akkusativ = direktes Objekt (WEN?). Nur maskulin ändert sich: der→den.',
+    explanation: 'German has four cases. At A1, focus on Nominativ (subject) and Akkusativ (direct object). Only masculine articles change in the Akkusativ: der→den, ein→einen.',
+    examples: ['Der Mann liest. (Nom)', 'Ich sehe den Mann. (Akk)', 'Sie kauft einen Tisch.', 'Wir lesen das Buch.'],
+    progress: 70,
   ),
+
   GrammarTopicView(
-    id: 'g4',
-    title: 'Pronomen Grundlagen',
-    level: 'A1',
-    category: 'Pronomen',
-    icon: '👤',
-    rule: 'Pronomen ersetzen Nomen; ihre Form richtet sich nach dem Kasus.',
-    explanation:
-        'Personalpronomen: ich, du, er/sie/es, wir, ihr, sie. Possessivpronomen wie mein/dein zeigen Besitz und passen sich an das Nomen an. Fragepronomen wer/was werden je nach Kasus gebeugt.',
-    examples: [
-      'Ich sehe dich.',
-      'Das ist mein Buch.',
-      'Wen siehst du?',
-    ],
-    progress: 0,
+    id: 'g11', title: 'Personalpronomen', level: 'A1', category: 'Pronomen', icon: '👤',
+    rule: 'Personalpronomen ersetzen Nomen und ändern sich nach Kasus.',
+    explanation: 'Personal pronouns replace nouns and change based on case. Possessive pronouns (mein, dein, sein, ihr) follow the same endings as ein/kein.',
+    examples: ['Ich sehe ihn.', 'Das ist mein Buch.', 'Wo ist dein Schlüssel?', 'Wer ist das?'],
+    progress: 60,
   ),
+
   GrammarTopicView(
-    id: 'g5',
-    title: 'Verben im Praesens',
-    level: 'A1',
-    category: 'Verben',
-    icon: '🔧',
-    rule: 'Praesens: Verbstamm + Endungen (-e, -st, -t, -en).',
-    explanation:
-        'Regelmaessige Verben folgen den Standardendungen. Unregelmaessige Verben wie sein und haben haben eigene Formen. Modalverben stellen den Infinitiv ans Satzende, und bei trennbaren Verben steht die Vorsilbe am Ende.',
-    examples: [
-      'Ich arbeite, du arbeitest, er arbeitet.',
-      'Ich bin muede und habe Zeit.',
-      'Ich kann heute kommen.',
-      'Ich stehe um 7 Uhr auf.',
-    ],
-    progress: 0,
+    id: 'g2', title: 'Präsens', level: 'A1', category: 'Zeiten', icon: '⏰',
+    rule: 'Im Präsens konjugiert man das Verb nach Person und Numerus.',
+    explanation: 'The present tense in German is formed by adding endings to the verb stem: -e, -st, -t, -en, -t, -en. Some verbs have stem changes (e→i, a→ä).',
+    examples: ['Ich lerne Deutsch.', 'Du arbeitest jeden Tag.', 'Er spricht Englisch.', 'Wir gehen ins Kino.'],
+    progress: 65,
   ),
+
   GrammarTopicView(
-    id: 'g6',
-    title: 'Zeitformen A1',
-    level: 'A1',
-    category: 'Zeiten',
-    icon: '⏰',
-    rule: 'Perfekt = haben/sein + Partizip II.',
-    explanation:
-        'Das Praesens beschreibt Gegenwart und nahe Zukunft. Das Perfekt wird fuer die Vergangenheit im Gespraech genutzt. Bewegungsverben und Zustandswechsel nehmen oft sein.',
-    examples: [
-      'Ich lerne Deutsch.',
-      'Ich habe Deutsch gelernt.',
-      'Sie ist nach Berlin gefahren.',
-    ],
-    progress: 0,
+    id: 'g12', title: 'Modalverben', level: 'A1', category: 'Verben', icon: '🔧',
+    rule: 'Modalverb (konjugiert, Pos. 2) + Infinitiv (am Ende).',
+    explanation: 'Modal verbs (können, müssen, wollen, sollen, dürfen, möchten) express ability, obligation, or desire. The main verb goes to the end as infinitive.',
+    examples: ['Ich kann Deutsch sprechen.', 'Du musst morgen arbeiten.', 'Darf ich hier rauchen?', 'Ich möchte einen Kaffee.'],
+    progress: 55,
   ),
+
   GrammarTopicView(
-    id: 'g7',
-    title: 'Praepositionen A1',
-    level: 'A1',
-    category: 'Prapositionen',
-    icon: '📍',
-    rule: 'Einige Praepositionen verlangen Akkusativ oder Dativ.',
-    explanation:
-        'Akkusativ-Praepositionen: durch, fuer, ohne, gegen, um. Dativ-Praepositionen: mit, nach, aus, bei, von, zu. Der Kasus ist fest.',
-    examples: [
-      'Ich gehe durch den Park.',
-      'Wir fahren mit dem Auto.',
-      'Er kommt aus der Schule.',
-    ],
-    progress: 0,
+    id: 'g13', title: 'Trennbare Verben', level: 'A1', category: 'Verben', icon: '✂️',
+    rule: 'Im Präsens trennt sich das Präfix und geht ans Satzende.',
+    explanation: 'Separable verbs have a prefix that detaches in Präsens and goes to the end. In Perfekt, ge- goes between prefix and stem: auf-ge-standen.',
+    examples: ['Ich stehe um 7 Uhr auf.', 'Sie kauft im Supermarkt ein.', 'Der Zug kommt um 10 an.', 'Ich bin aufgestanden.'],
+    progress: 50,
   ),
+
   GrammarTopicView(
-    id: 'g8',
-    title: 'Adjektive A1',
-    level: 'A1',
-    category: 'Adjektive',
-    icon: '🎨',
-    rule: 'Nach sein/werden/bleiben steht das Adjektiv ohne Endung.',
-    explanation:
-        'Praedikative Adjektive bleiben unveraendert. In einfachen Nominalphrasen erscheinen oft nur -e oder -en als Endung.',
-    examples: [
-      'Das Wetter ist gut.',
-      'Der gute Kaffee schmeckt.',
-      'Ich sehe einen guten Film.',
-    ],
-    progress: 0,
+    id: 'g14', title: 'Präpositionen (Akk/Dat)', level: 'A1', category: 'Präpositionen', icon: '📍',
+    rule: 'Akk: durch, für, ohne, gegen, um. Dat: mit, nach, aus, bei, von, zu, seit.',
+    explanation: 'Some prepositions always take Akkusativ (DOGFU), others always take Dativ. The article changes based on the required case.',
+    examples: ['Ich gehe durch den Park.', 'Das ist für dich.', 'Ich fahre mit dem Bus.', 'Sie kommt aus der Türkei.'],
+    progress: 45,
   ),
+
   GrammarTopicView(
-    id: 'g9',
-    title: 'Zeitformen A2',
-    level: 'A2',
-    category: 'Zeiten',
-    icon: '⏰',
-    rule: 'A2 erweitert die Vergangenheit und Zukunft.',
-    explanation:
-        'Perfekt wird vollstaendig verwendet. Praeteritum nutzt man vor allem bei sein, haben und Modalverben. Futur I drueckt Plan oder Vermutung aus; Plusquamperfekt beschreibt Vorvergangenheit.',
-    examples: [
-      'Ich hatte gegessen, bevor er kam.',
-      'Sie war gestern krank.',
-      'Ich werde morgen arbeiten.',
-    ],
-    progress: 0,
+    id: 'g15', title: 'Adjektive Grundlagen', level: 'A1', category: 'Adjektive', icon: '🎨',
+    rule: 'Prädikativ (nach sein): keine Endung. Attributiv (vor Nomen): mit Endung.',
+    explanation: 'Predicate adjectives (after sein) have no ending. Attributive adjectives (before nouns) take endings based on gender, case, and article type.',
+    examples: ['Das Buch ist interessant.', 'Der große Mann arbeitet hier.', 'Ich lese ein interessantes Buch.', 'Sie hat eine neue Tasche.'],
+    progress: 40,
   ),
+
   GrammarTopicView(
-    id: 'g10',
-    title: 'Satzbau A2',
-    level: 'A2',
-    category: 'Satzbau',
-    icon: '🧱',
-    rule: 'Inversion setzt Zeit/Ort nach vorn, das Verb bleibt auf Position 2.',
-    explanation:
-        'Bei zwei Verbformen entsteht die Verbklammer: konjugiertes Verb vorne, Infinitiv/Partizip am Ende. Das gilt auch fuer Modalverben.',
-    examples: [
-      'Morgens trinke ich Kaffee.',
-      'Ich kann heute nicht kommen.',
-      'Ich habe den Film gesehen.',
-    ],
-    progress: 0,
+    id: 'g37', title: 'Pluralbildung', level: 'A1', category: 'Artikel', icon: '📚',
+    rule: '5 Pluraltypen: -e, -er, -n/-en, -s, Umlaut. Immer Artikel \'die\'.',
+    explanation: 'German has five main plural patterns. There is no single rule — the plural must be learned with each noun. All plurals use the article \'die\'.',
+    examples: ['der Tisch → die Tische', 'das Kind → die Kinder', 'die Frau → die Frauen', 'das Auto → die Autos'],
+    progress: 70,
   ),
+
   GrammarTopicView(
-    id: 'g11',
-    title: 'Nebensaetze A2',
-    level: 'A2',
-    category: 'Nebensatze',
-    icon: '🔗',
+    id: 'g38', title: 'Negation', level: 'A1', category: 'Satzbau', icon: '🚫',
+    rule: '\'nicht\' negiert Verben/Adjektive. \'kein\' negiert Nomen mit ein/eine oder ohne Artikel.',
+    explanation: '\'nicht\' negates verbs, adjectives, adverbs, and specific nouns. \'kein\' replaces ein/eine or zero article before nouns.',
+    examples: ['Ich komme nicht.', 'Das ist nicht gut.', 'Ich habe kein Auto.', 'Er trinkt keinen Kaffee.'],
+    progress: 75,
+  ),
+
+  // ─── A2 ──────────────────────────────────────────────────────────────────
+
+  GrammarTopicView(
+    id: 'g5', title: 'Perfekt', level: 'A2', category: 'Zeiten', icon: '⏰',
+    rule: 'Perfekt = haben/sein + Partizip II',
+    explanation: 'The Perfekt tense is formed with an auxiliary verb (haben or sein) and the past participle. Most verbs use \'haben\'; verbs of motion/change use \'sein\'.',
+    examples: ['Ich habe Deutsch gelernt.', 'Sie ist nach Berlin gefahren.', 'Wir haben einen Film gesehen.', 'Er ist gestern angekommen.'],
+    progress: 55,
+  ),
+
+  GrammarTopicView(
+    id: 'g16', title: 'Präteritum', level: 'A2', category: 'Zeiten', icon: '📜',
+    rule: 'Regelmäßig: Stamm + -te. Unregelmäßig: Stammvokaländerung.',
+    explanation: 'Präteritum is mainly used in written German. In speech, only sein (war), haben (hatte), and modals (konnte, musste) are common in Präteritum.',
+    examples: ['Ich war gestern in Berlin.', 'Er hatte keine Zeit.', 'Sie konnte nicht kommen.', 'Der König lebte in einem Schloss.'],
+    progress: 45,
+  ),
+
+  GrammarTopicView(
+    id: 'g17', title: 'Futur I', level: 'A2', category: 'Zeiten', icon: '🔮',
+    rule: 'werden (konjugiert) + Infinitiv',
+    explanation: 'Futur I expresses future plans and predictions. However, Präsens + time word is more common in everyday speech.',
+    examples: ['Ich werde morgen kommen.', 'Es wird regnen.', 'Sie wird Ärztin werden.', 'Wir werden das schaffen!'],
+    progress: 35,
+  ),
+
+  GrammarTopicView(
+    id: 'g3', title: 'Nebensätze', level: 'A2', category: 'Nebensätze', icon: '🔗',
     rule: 'Im Nebensatz steht das konjugierte Verb am Ende.',
-    explanation:
-        'Wichtige Konjunktionen: weil (Grund), dass (Inhalt), wenn (Bedingung/haeufig), obwohl (Gegensatz), waehrend (Zeit/Gegensatz), bevor/nachdem (Zeitfolge), als (einmalige Vergangenheit).',
-    examples: [
-      'Ich bleibe zu Hause, weil ich krank bin.',
-      'Sie sagt, dass sie kommt.',
-      'Als ich jung war, wohnte ich in Wien.',
-    ],
+    explanation: 'Subordinating conjunctions (weil, dass, wenn, obwohl, als, bevor, nachdem, während) push the verb to the end of the clause.',
+    examples: ['Ich lerne Deutsch, weil ich in Berlin arbeite.', 'Sie sagt, dass sie morgen kommt.', 'Wenn es regnet, bleibe ich zu Hause.', 'Als ich Kind war, lebte ich in Kabul.'],
+    progress: 40,
+  ),
+
+  GrammarTopicView(
+    id: 'g18', title: 'Relativsätze (Grundlagen)', level: 'A2', category: 'Nebensätze', icon: '🔗',
+    rule: 'Relativpronomen: Genus/Numerus vom Bezugswort, Kasus aus dem Relativsatz.',
+    explanation: 'Relative clauses add information about a noun. The pronoun matches the noun in gender/number but takes its case from its role in the relative clause.',
+    examples: ['Der Mann, der dort steht, ist mein Chef.', 'Die Frau, die ich kenne, arbeitet bei Siemens.', 'Das Buch, das ich lese, ist interessant.', 'Die Leute, denen ich half, waren dankbar.'],
+    progress: 35,
+  ),
+
+  GrammarTopicView(
+    id: 'g19', title: 'Infinitivkonstruktionen', level: 'A2', category: 'Verben', icon: '🔄',
+    rule: 'zu + Infinitiv / um...zu / ohne...zu / anstatt...zu',
+    explanation: 'Infinitive constructions with \'zu\' are used after certain verbs and adjectives. um...zu (purpose), ohne...zu (without), anstatt...zu (instead of).',
+    examples: ['Ich versuche, Deutsch zu lernen.', 'Ich lerne, um in Berlin zu arbeiten.', 'Er ging, ohne etwas zu sagen.', 'Anstatt zu lernen, spielt sie.'],
+    progress: 30,
+  ),
+
+  GrammarTopicView(
+    id: 'g4', title: 'Wechselpräpositionen', level: 'A2', category: 'Präpositionen', icon: '📍',
+    rule: 'Wechselpräpositionen: Akkusativ (WOHIN?) oder Dativ (WO?).',
+    explanation: 'Nine prepositions (an, auf, hinter, in, neben, über, unter, vor, zwischen) take Akkusativ for movement and Dativ for location.',
+    examples: ['Ich stelle das Buch auf den Tisch. (Akk)', 'Das Buch liegt auf dem Tisch. (Dat)', 'Er geht in die Schule. (Akk)', 'Er ist in der Schule. (Dat)'],
+    progress: 30,
+  ),
+
+  GrammarTopicView(
+    id: 'g20', title: 'Adjektivdeklination', level: 'A2', category: 'Adjektive', icon: '🎨',
+    rule: 'Endung hängt ab von: Artikeltyp, Genus, Kasus.',
+    explanation: 'Adjective endings depend on the article type (definite/indefinite/none), gender, and case. After der/die/das mostly -e or -en. After ein the adjective shows gender.',
+    examples: ['Der neue Kollege ist nett.', 'Ich kaufe einen roten Pullover.', 'Sie arbeitet in einem großen Büro.', 'Die alten Bücher sind interessant.'],
+    progress: 25,
+  ),
+
+  GrammarTopicView(
+    id: 'g21', title: 'Komparativ & Superlativ', level: 'A2', category: 'Adjektive', icon: '📊',
+    rule: 'Komparativ: +er (als). Superlativ: am +sten / der/die/das +ste.',
+    explanation: 'Comparatives add -er, superlatives add -(e)sten. Many common adjectives get an Umlaut. Irregular: gut-besser-best, viel-mehr-meist.',
+    examples: ['Berlin ist größer als München.', 'Das ist das beste Restaurant.', 'Er ist nicht so groß wie sein Bruder.', 'Deutsch ist genauso schwer wie Französisch.'],
+    progress: 25,
+  ),
+
+  GrammarTopicView(
+    id: 'g22', title: 'Reflexive Verben', level: 'A2', category: 'Verben', icon: '🪞',
+    rule: 'Reflexivpronomen (mich/mir, dich/dir, sich, uns, euch) bezieht sich auf das Subjekt.',
+    explanation: 'Reflexive verbs use a pronoun referring back to the subject. Akkusativ or Dativ depending on whether there\'s another direct object.',
+    examples: ['Ich freue mich auf die Ferien.', 'Er setzt sich auf den Stuhl.', 'Ich wasche mir die Hände.', 'Kannst du dir das vorstellen?'],
+    progress: 20,
+  ),
+
+  GrammarTopicView(
+    id: 'g23', title: 'Indefinitpronomen', level: 'A2', category: 'Pronomen', icon: '❓',
+    rule: 'man, jemand, niemand, etwas, nichts, alle, viele, einige.',
+    explanation: 'Indefinite pronouns refer to unspecified people or things. \'man\' uses 3rd person singular. jemand/niemand are for people, etwas/nichts for things.',
+    examples: ['Man spricht hier Deutsch.', 'Jemand hat angerufen.', 'Niemand war zu Hause.', 'Alle sind eingeladen.'],
+    progress: 20,
+  ),
+
+  GrammarTopicView(
+    id: 'g39', title: 'Dativ', level: 'A2', category: 'Fälle', icon: '🎯',
+    rule: 'Dativ = indirektes Objekt (WEM?). Artikel: dem/der/dem/den+n.',
+    explanation: 'The Dativ case marks the indirect object (WEM?). Articles change: der→dem, die→der, das→dem, die(pl)→den+n. Many verbs and prepositions require Dativ.',
+    examples: ['Ich gebe dem Mann das Buch.', 'Sie hilft der Frau.', 'Er dankt den Kindern.', 'Ich schenke meiner Mutter Blumen.'],
+    progress: 30,
+  ),
+
+  GrammarTopicView(
+    id: 'g40', title: 'Verben mit Präpositionen', level: 'A2', category: 'Verben', icon: '🔧',
+    rule: 'Viele Verben haben feste Präpositionen: warten auf (Akk), sprechen über (Akk).',
+    explanation: 'Many German verbs require a specific preposition with a fixed case. These must be memorized as a unit: sich freuen auf (Akk), Angst haben vor (Dat).',
+    examples: ['Ich warte auf den Bus.', 'Sie denkt an ihre Familie.', 'Er interessiert sich für Kunst.', 'Wir sprechen über das Problem.'],
+    progress: 25,
+  ),
+
+  GrammarTopicView(
+    id: 'g41', title: 'Passiv (Grundlagen)', level: 'A2', category: 'Zeiten', icon: '⏰',
+    rule: 'Präsens Passiv: werden + P.II. Perfekt Passiv: sein + P.II + worden.',
+    explanation: 'Basic passive voice: Präsens Passiv with werden + Partizip II, and Perfekt Passiv with sein + P.II + worden. Agent with \'von + Dativ\'.',
+    examples: ['Das Essen wird gekocht.', 'Der Brief wird geschrieben.', 'Das Auto ist repariert worden.', 'Die E-Mail wurde von ihm geschickt.'],
+    progress: 20,
+  ),
+
+  // ─── B1 ──────────────────────────────────────────────────────────────────
+
+  GrammarTopicView(
+    id: 'g24', title: 'Plusquamperfekt', level: 'B1', category: 'Zeiten', icon: '⏪',
+    rule: 'hatte/war (Präteritum) + Partizip II',
+    explanation: 'Plusquamperfekt describes an action before another past action. Formed with hatte/war + Partizip II. Almost always used with nachdem.',
+    examples: ['Nachdem ich gegessen hatte, ging ich spazieren.', 'Er war schon gegangen, als ich ankam.', 'Sie hatte das Buch gelesen, bevor sie den Film sah.'],
+    progress: 15,
+  ),
+
+  GrammarTopicView(
+    id: 'g25', title: 'Futur I & II', level: 'B1', category: 'Zeiten', icon: '🔮',
+    rule: 'Futur I: werden + Inf. Futur II: werden + P.II + haben/sein.',
+    explanation: 'Futur I for future events. Futur II for completed future or assumptions about the past. With \'wohl\' = assumption.',
+    examples: ['Ich werde morgen kommen.', 'Bis morgen werde ich das Buch gelesen haben.', 'Er wird wohl schon gegangen sein.'],
+    progress: 10,
+  ),
+
+  GrammarTopicView(
+    id: 'g26', title: 'Erweiterte Nebensätze', level: 'B1', category: 'Nebensätze', icon: '🔗',
+    rule: 'damit, sodass, falls, seitdem, solange, sobald, je...desto',
+    explanation: 'B1 introduces new subordinating conjunctions for purpose, result, condition, and proportional relationships.',
+    examples: ['Ich erkläre es langsam, damit du es verstehst.', 'Falls es regnet, bleiben wir zu Hause.', 'Je mehr ich lerne, desto besser verstehe ich.'],
+    progress: 15,
+  ),
+
+  GrammarTopicView(
+    id: 'g27', title: 'Konditionalsätze', level: 'B1', category: 'Nebensätze', icon: '🔀',
+    rule: 'Real: wenn + Indikativ. Irreal: wenn + Konjunktiv II.',
+    explanation: 'Real conditions use Indikativ for possible situations. Unreal conditions use Konjunktiv II for hypothetical situations.',
+    examples: ['Wenn es regnet, bleibe ich zu Hause.', 'Wenn ich reich wäre, würde ich reisen.', 'Wenn ich Zeit hätte, würde ich dir helfen.'],
+    progress: 20,
+  ),
+
+  GrammarTopicView(
+    id: 'g6', title: 'Konjunktiv II', level: 'B1', category: 'Konjunktiv', icon: '💭',
+    rule: 'Konjunktiv II drückt irreale Situationen, Wünsche und höfliche Bitten aus.',
+    explanation: 'Konjunktiv II is used for hypothetical situations, wishes, and polite requests. For most verbs, use \'würde\' + infinitive. Common verbs have special forms: wäre, hätte, könnte.',
+    examples: ['Wenn ich reich wäre, würde ich reisen.', 'Ich hätte gern einen Kaffee.', 'Könnten Sie mir bitte helfen?', 'Wenn ich Zeit hätte, würde ich mehr lernen.'],
+    progress: 20,
+  ),
+
+  GrammarTopicView(
+    id: 'g7', title: 'Relativsätze (Fortgeschritten)', level: 'B1', category: 'Nebensätze', icon: '🔗',
+    rule: 'Relativsätze mit Präpositionen und Genitiv (dessen, deren).',
+    explanation: 'Advanced relative clauses use prepositions + relative pronouns and genitive forms (dessen, deren) for possession.',
+    examples: ['Der Mann, mit dem ich sprach, ist Arzt.', 'Die Stadt, in der ich wohne, ist schön.', 'Der Mann, dessen Auto rot ist, ist mein Nachbar.'],
+    progress: 15,
+  ),
+
+  GrammarTopicView(
+    id: 'g28', title: 'Partizipien als Adjektive', level: 'B1', category: 'Verben', icon: '📝',
+    rule: 'Partizip I (Inf+d) = laufend. Partizip II (ge...t/en). Beide als Adjektive deklinierbar.',
+    explanation: 'Both participles can be used as adjectives. Partizip I expresses an ongoing action (spielend = playing), Partizip II a completed state (repariert = repaired).',
+    examples: ['Das spielende Kind lacht.', 'Das reparierte Auto fährt wieder.', 'Die schlafende Katze liegt auf dem Sofa.'],
+    progress: 10,
+  ),
+
+  GrammarTopicView(
+    id: 'g29', title: 'Nominalisierung', level: 'B1', category: 'Verben', icon: '🔄',
+    rule: 'Verb → das + Infinitiv (das Lesen). Adjektiv → substantiviert (der Alte).',
+    explanation: 'Nominalization turns verbs and adjectives into nouns. Nominalized infinitives are always neuter (das Lesen). Common in formal German.',
+    examples: ['Das Lesen macht mir Spaß.', 'Das Gute daran ist...', 'Was gibt es Neues?', 'Der Kranke braucht Ruhe.'],
+    progress: 10,
+  ),
+
+  GrammarTopicView(
+    id: 'g30', title: 'Indirekte Rede', level: 'B1', category: 'Konjunktiv', icon: '💬',
+    rule: 'Konjunktiv I (formal) oder dass + Indikativ (Alltag).',
+    explanation: 'Reported speech uses Konjunktiv I in formal contexts. In everyday speech, \'dass + Indikativ\' is standard.',
+    examples: ['Er sagt, er sei müde.', 'Sie sagt, sie habe keine Zeit.', 'Er sagt, dass er müde ist.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g42', title: 'Genitiv', level: 'B1', category: 'Fälle', icon: '🎯',
+    rule: 'Genitiv = Besitz (WESSEN?). Artikel: des/der. Maskulin/Neutrum: Nomen + -(e)s.',
+    explanation: 'The Genitiv case expresses possession (WESSEN?). Masculine and neuter nouns add -(e)s. Used after certain prepositions and in formal/written German.',
+    examples: ['Das Auto des Mannes ist rot.', 'Die Tasche der Frau liegt dort.', 'Trotz des Regens gehen wir.', 'Während des Unterrichts schläft er.'],
+    progress: 10,
+  ),
+
+  GrammarTopicView(
+    id: 'g43', title: 'n-Deklination', level: 'B1', category: 'Fälle', icon: '📋',
+    rule: 'Schwache Nomen (maskulin) erhalten -n/-en in allen Fällen außer Nominativ Singular.',
+    explanation: 'Weak masculine nouns add -n or -en in Akkusativ, Dativ, and Genitiv singular. Includes: der Junge, der Kunde, der Kollege, der Herr, der Student, der Mensch.',
+    examples: ['Ich sehe den Studenten.', 'Er hilft dem Kollegen.', 'Das Büro des Herrn ist dort.', 'Ich kenne den Kunden.'],
+    progress: 10,
+  ),
+
+  GrammarTopicView(
+    id: 'g44', title: 'Wortstellung (Fortgeschritten)', level: 'B1', category: 'Satzbau', icon: '🏗️',
+    rule: 'TeKaMoLo: Temporal, Kausal, Modal, Lokal.',
+    explanation: 'Advanced word order follows TeKaMoLo (Time-Cause-Manner-Place). Adverbs and connectors have specific positions.',
+    examples: ['Ich fahre morgen wegen der Arbeit schnell nach Berlin.', 'Er hat gestern aus Langeweile allein im Park gesessen.', 'Deshalb muss er heute unbedingt ins Büro gehen.'],
+    progress: 10,
+  ),
+
+  // ─── B2 ──────────────────────────────────────────────────────────────────
+
+  GrammarTopicView(
+    id: 'g31', title: 'Konjunktiv I', level: 'B2', category: 'Konjunktiv', icon: '📰',
+    rule: 'Infinitivstamm + -e, -est, -e, -en, -et, -en. Für indirekte Rede in formellen Texten.',
+    explanation: 'Konjunktiv I is fully used in B2 for indirect speech in news, academic texts, and formal communications. If identical to Indikativ, use Konjunktiv II.',
+    examples: ['Der Minister sagte, die Lage sei ernst.', 'Experten behaupten, das Klima werde sich verändern.', 'Er sagte, er habe kein Geld.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g32', title: 'Konjunktiv II (Fortgeschritten)', level: 'B2', category: 'Konjunktiv', icon: '💭',
+    rule: 'Vergangenheit: hätte/wäre + P.II. Als ob + Konj. II.',
+    explanation: 'Advanced Konjunktiv II covers past irreality, als ob constructions, and würde as alternative to archaic forms.',
+    examples: ['Wenn ich das gewusst hätte, wäre ich gekommen.', 'Er tut so, als ob er alles wüsste.', 'Hätte ich mehr gelernt, hätte ich bestanden.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g8', title: 'Passiv', level: 'B2', category: 'Zeiten', icon: '⏰',
+    rule: 'Vorgangspassiv: werden + Partizip II / Zustandspassiv: sein + Partizip II',
+    explanation: 'German has two types of passive. Vorgangspassiv (process) uses \'werden\' + past participle. Zustandspassiv (state) uses \'sein\' + past participle.',
+    examples: ['Das Auto wird repariert. (Vorgang)', 'Das Auto ist repariert. (Zustand)', 'Der Brief wurde gestern geschrieben.', 'Die Tür ist geöffnet.'],
+    progress: 10,
+  ),
+
+  GrammarTopicView(
+    id: 'g33', title: 'Partizipialkonstruktionen', level: 'B2', category: 'Verben', icon: '📐',
+    rule: 'Partizip I/II als erweiterte Attribute, ersetzen Relativsätze.',
+    explanation: 'Participial constructions replace relative clauses in formal writing. Extended attributive structures place modifiers before the participle.',
+    examples: ['Die am Fenster stehende Frau ist meine Chefin.', 'Vom Regen überrascht, blieb er zu Hause.', 'Die kürzlich renovierte Wohnung sieht toll aus.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g34', title: 'Erweiterte Nebensätze (B2)', level: 'B2', category: 'Nebensätze', icon: '🔗',
+    rule: 'indem, wodurch, wobei, insofern, während (Kontrast).',
+    explanation: 'B2 introduces sophisticated conjunctions: indem (by doing), wodurch (through which), wobei (whereby), während (contrast).',
+    examples: ['Man lernt, indem man viel übt.', 'Er verdient gut, wobei er nicht viel arbeitet.', 'Während er Sport liebt, hasst sie Bewegung.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g35', title: 'Nominalstil', level: 'B2', category: 'Satzbau', icon: '🏛️',
+    rule: 'Nominale Ausdrücke ersetzen Nebensätze in formellen Texten.',
+    explanation: 'Nominal style replaces verb phrases with noun phrases. Characteristic of academic, legal, and formal German.',
+    examples: ['Nach der Analyse der Daten...', 'Aufgrund des Kostenanstiegs...', 'Trotz des schlechten Wetters...'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g36', title: 'Konnektoren', level: 'B2', category: 'Satzbau', icon: '🔗',
+    rule: 'allerdings, dennoch, hingegen, folglich, somit, außerdem.',
+    explanation: 'Sophisticated adverbial connectors for argumentation: contrast (allerdings, dennoch), consequence (folglich, somit), addition (außerdem).',
+    examples: ['Die Preise sind gestiegen; allerdings sind die Löhne gleich geblieben.', 'Dennoch gingen wir spazieren.', 'Folglich steigen auch die Preise.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g45', title: 'Genitiv-Präpositionen', level: 'B2', category: 'Präpositionen', icon: '📍',
+    rule: 'trotz, wegen, während, aufgrund, anstatt, innerhalb, außerhalb + Genitiv.',
+    explanation: 'Many prepositions require the Genitiv case, especially in formal and written German.',
+    examples: ['Trotz des schlechten Wetters gingen wir spazieren.', 'Wegen der Verspätung verpasste er den Termin.', 'Innerhalb eines Jahres hat er Deutsch gelernt.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g46', title: 'Doppelkonnektoren', level: 'B2', category: 'Satzbau', icon: '🔗',
+    rule: 'nicht nur...sondern auch, sowohl...als auch, weder...noch, entweder...oder, zwar...aber.',
+    explanation: 'Two-part connectors create sophisticated sentence structures for correlating ideas, contrasting, or listing.',
+    examples: ['Er spricht nicht nur Deutsch, sondern auch Französisch.', 'Sowohl der Chef als auch die Mitarbeiter sind zufrieden.', 'Weder das Essen noch der Service war gut.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g47', title: 'Passiversatzformen', level: 'B2', category: 'Verben', icon: '⏰',
+    rule: 'Alternativen zum Passiv: man, sich lassen, sein + zu + Inf, -bar/-lich.',
+    explanation: 'German offers several alternatives to the passive voice: \'man\' (impersonal), \'sich lassen\' (can be done), \'sein + zu + Infinitiv\' (must/can be done).',
+    examples: ['Man spricht hier Deutsch.', 'Das lässt sich leicht erklären.', 'Die Aufgabe ist bis morgen zu erledigen.', 'Das Problem ist lösbar.'],
+    progress: 5,
+  ),
+
+  GrammarTopicView(
+    id: 'g48', title: 'Funktionsverbgefüge', level: 'B2', category: 'Verben', icon: '⚙️',
+    rule: 'Verb + Nomen ersetzen einfache Verben: zur Verfügung stellen = bereitstellen.',
+    explanation: 'Fixed verb-noun combinations common in formal German. The verb is \'light\' and the noun carries the meaning.',
+    examples: ['Ich stelle Ihnen die Daten zur Verfügung.', 'Er hat eine Entscheidung getroffen.', 'Sie nimmt Einfluss auf die Politik.'],
+    progress: 5,
+  ),
+
+  // ─── C1 ──────────────────────────────────────────────────────────────────
+
+  GrammarTopicView(
+    id: 'g49', title: 'Modalpartikeln', level: 'C1', category: 'Partikeln', icon: '💬',
+    rule: 'doch, mal, ja, eben, halt, wohl, schon, eigentlich — unbetonte Nuancen.',
+    explanation: 'Modal particles add emotional nuance, attitude, or emphasis. They are unstressed, have no direct translation, and are essential for natural-sounding German.',
+    examples: ['Komm doch mal her!', 'Das ist ja interessant!', 'Das ist eben so.', 'Er wird wohl kommen.'],
     progress: 0,
   ),
+
   GrammarTopicView(
-    id: 'g12',
-    title: 'Relativsaetze A2',
-    level: 'A2',
-    category: 'Relativsatze',
-    icon: '🧵',
-    rule: 'Relativpronomen der/die/das passen sich an Genus und Kasus an.',
-    explanation:
-        'Der Relativsatz erklaert ein Nomen. Der Kasus haengt von der Funktion im Relativsatz ab (Nominativ, Akkusativ, Dativ).',
-    examples: [
-      'Das ist der Mann, der dort steht.',
-      'Ich sehe den Mann, den du kennst.',
-      'Das ist die Frau, der ich helfe.',
-    ],
+    id: 'g50', title: 'Subjektive Modalverben', level: 'C1', category: 'Verben', icon: '🔧',
+    rule: 'Modalverben drücken Vermutung aus: muss (sicher), dürfte (wahrscheinlich), kann (möglich).',
+    explanation: 'Modal verbs have subjective meanings expressing degrees of certainty: müssen (certain), dürfen (probable), können (possible).',
+    examples: ['Er muss krank sein. (= sicher)', 'Sie dürfte schon da sein. (= wahrscheinlich)', 'Das kann stimmen. (= möglich)', 'Er will das nicht gewusst haben.'],
     progress: 0,
   ),
+
   GrammarTopicView(
-    id: 'g13',
-    title: 'Infinitivkonstruktionen A2',
-    level: 'A2',
-    category: 'Infinitivkonstruktionen',
-    icon: '➰',
-    rule: 'Zu-Infinitiv erweitert Verben, um/ohne/anstatt zu zeigen Zweck oder Alternative.',
-    explanation:
-        'Zu + Infinitiv folgt oft auf Verben wie versuchen, hoffen, planen. Um ... zu drueckt Zweck aus, ohne ... zu Verneinung, anstatt ... zu Alternative.',
-    examples: [
-      'Ich versuche, mehr zu lesen.',
-      'Ich lerne, um die Pruefung zu bestehen.',
-      'Er ging, ohne zu bezahlen.',
-    ],
+    id: 'g51', title: 'Nomen-Verb-Verbindungen', level: 'C1', category: 'Verben', icon: '🔗',
+    rule: 'Feste Verbindungen: in Betracht ziehen, Bescheid geben, in Kauf nehmen.',
+    explanation: 'Fixed noun-verb collocations essential in formal/academic German. The verb is often \'light\' and the noun carries meaning.',
+    examples: ['Ich ziehe das in Betracht.', 'Bitte geben Sie mir Bescheid.', 'Das müssen wir in Kauf nehmen.'],
     progress: 0,
   ),
+
   GrammarTopicView(
-    id: 'g14',
-    title: 'Passiv A2',
-    level: 'A2',
-    category: 'Passiv',
-    icon: '🏗️',
-    rule: 'Passiv: werden + Partizip II.',
-    explanation:
-        'Im Perfekt Passiv steht: ist/hat + Partizip II + worden. Das Passiv betont die Handlung, nicht die handelnde Person.',
-    examples: [
-      'Der Vertrag wird unterschrieben.',
-      'Die Aufgabe ist erledigt worden.',
-      'Die Daten werden gespeichert.',
-    ],
+    id: 'g52', title: 'Erweiterte Passivformen', level: 'C1', category: 'Zeiten', icon: '⏰',
+    rule: 'Subjektloses Passiv, bekommen-Passiv, Passiv in allen Zeiten.',
+    explanation: 'Advanced passive includes: subjektloses Passiv (Es wird getanzt), bekommen/kriegen-Passiv (recipient passive), and passive in all tenses.',
+    examples: ['Hier wird nicht geraucht!', 'Es wurde die ganze Nacht getanzt.', 'Er bekommt das Buch geschenkt.'],
     progress: 0,
   ),
+
   GrammarTopicView(
-    id: 'g15',
-    title: 'Verben A2',
-    level: 'A2',
-    category: 'Verben',
-    icon: '🔧',
-    rule: 'Reflexive Verben und Praepositionalverben fordern feste Formen.',
-    explanation:
-        'Reflexive Verben nutzen sich/mich/dich. Praepositionalverben bestimmen den Kasus. Trennbare und untrennbare Praefixe veraendern Bedeutung und Betonung.',
-    examples: [
-      'Ich interessiere mich fuer Musik.',
-      'Wir warten auf den Bus.',
-      'Er versteht den Text.',
-    ],
+    id: 'g53', title: 'Weiterführende Nebensätze', level: 'C1', category: 'Nebensätze', icon: '🔗',
+    rule: 'was, wo, worüber, weshalb als Relativpronomen. Freie Relativsätze.',
+    explanation: 'Advanced relative clauses use \'was\' (whole clauses, indefinites, superlatives), \'wo\' (places/times), and wo(r)-compounds.',
+    examples: ['Er hat bestanden, was mich freut.', 'Das Beste, was passieren kann.', 'Die Stadt, wo ich geboren bin.', 'Das ist etwas, worüber wir reden müssen.'],
     progress: 0,
   ),
+
   GrammarTopicView(
-    id: 'g16',
-    title: 'Kasus & Wechselpraepositionen',
-    level: 'A2',
-    category: 'Kasus',
-    icon: '⚖️',
-    rule: 'Wechselpraepositionen: Akkusativ bei Bewegung, Dativ bei Lage.',
-    explanation:
-        'In, an, auf, ueber, unter, vor, hinter, neben, zwischen sind zweiwegig. Dativ wird ausserdem nach bestimmten Verben wie helfen, danken, gefallen genutzt.',
-    examples: [
-      'Ich lege das Buch auf den Tisch.',
-      'Das Buch liegt auf dem Tisch.',
-      'Ich helfe dem Freund.',
-    ],
+    id: 'g54', title: 'Apposition', level: 'C1', category: 'Satzbau', icon: '📋',
+    rule: 'Einschub, der ein Nomen näher bestimmt. Steht im gleichen Kasus.',
+    explanation: 'An apposition is a noun phrase placed next to another noun to explain or identify it. It takes the same case as the noun it refers to.',
+    examples: ['Berlin, die Hauptstadt Deutschlands, ist groß.', 'Herr Müller, unser neuer Chef, kommt aus München.', 'Ich sprach mit Frau Schmidt, der Leiterin.'],
     progress: 0,
   ),
+
   GrammarTopicView(
-    id: 'g17',
-    title: 'Adjektivdeklination',
-    level: 'A2',
-    category: 'Adjektive',
-    icon: '🎨',
-    rule: 'Die Adjektivendung zeigt Kasus, Genus und Numerus.',
-    explanation:
-        'Adjektivdeklination bedeutet: die Endung aendert sich je nach Kasus, Genus und Artikel.\n'
-        '\n'
-        'Beispiel:\n'
-        'der schoene Garten\n'
-        'einen schoenen Garten\n'
-        'mit einem schoenen Garten\n'
-        '\n'
-        'Warum? Die grammatische Information steht teils im Artikel, teils am Adjektiv.\n'
-        '\n'
-        'Schwache Deklination (bestimmter Artikel):\n'
-        'Nominativ: der schoene Mann / die schoene Frau / das schoene Haus / die schoenen Haeuser\n'
-        'Akkusativ: den schoenen Mann / die schoene Frau / das schoene Haus / die schoenen Haeuser\n'
-        'Dativ: dem schoenen Mann / der schoenen Frau / dem schoenen Haus / den schoenen Haeusern\n'
-        'Genitiv: des schoenen Mannes / der schoenen Frau / des schoenen Hauses / der schoenen Haeuser\n'
-        '\n'
-        'Gemischte Deklination (ein/kein/mein/...):\n'
-        'Nominativ: ein schoener Mann / eine schoene Frau / ein schoenes Haus / keine schoenen Haeuser\n'
-        'Akkusativ: einen schoenen Mann / eine schoene Frau / ein schoenes Haus / keine schoenen Haeuser\n'
-        'Dativ: einem schoenen Mann / einer schoenen Frau / einem schoenen Haus / keinen schoenen Haeusern\n'
-        'Genitiv: eines schoenen Mannes / einer schoenen Frau / eines schoenen Hauses / keiner schoenen Haeuser\n'
-        '\n'
-        'Starke Deklination (ohne Artikel):\n'
-        'Nominativ: schoener Mann / schoene Frau / schoenes Haus / schoene Haeuser\n'
-        'Akkusativ: schoenen Mann / schoene Frau / schoenes Haus / schoene Haeuser\n'
-        'Dativ: schoenem Mann / schoener Frau / schoenem Haus / schoenen Haeusern\n'
-        'Genitiv: schoenen Mannes / schoener Frau / schoenen Hauses / schoener Haeuser\n'
-        '\n'
-        'Faustregel: Je weniger der Artikel zeigt, desto staerker die Adjektivendung.',
-    examples: [
-      'Der grosse Hund schlaeft.',
-      'Ich sehe einen grossen Hund.',
-      'Mit gutem Wein feiert man gern.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g18',
-    title: 'Vergleichsformen',
-    level: 'A2',
-    category: 'Adjektive',
-    icon: '🎨',
-    rule: 'Komparativ: -er, Superlativ: am -sten / der/die/das -ste.',
-    explanation:
-        'Vergleiche nutzen den Komparativ (schneller) und den Superlativ (am schnellsten). Gleichheit und Ungleichheit werden mit genauso ... wie und nicht so ... wie ausgedrueckt.',
-    examples: [
-      'Berlin ist groesser als Hamburg.',
-      'Das ist der beste Kaffee.',
-      'Sie ist genauso schnell wie er.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g19',
-    title: 'Pronomen A2',
-    level: 'A2',
-    category: 'Pronomen',
-    icon: '👤',
-    rule: 'Reflexiv-, Relativ- und Indefinitpronomen richten sich nach dem Kasus.',
-    explanation:
-        'Reflexivpronomen: mich, dich, sich. Indefinitpronomen wie jemand, niemand, etwas, nichts, man, alle/viele/einige stehen ohne klares Bezugswort.',
-    examples: [
-      'Ich erinnere mich an den Termin.',
-      'Jemand hat angerufen.',
-      'Das ist der Kollege, dem ich vertraue.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g20',
-    title: 'Konjunktiv II Einfuehrung',
-    level: 'A2',
-    category: 'Konjunktiv',
-    icon: '💭',
-    rule: 'Wuerde + Infinitiv drueckt Wuensche, Hoeflichkeit und Irreales aus.',
-    explanation:
-        'Konjunktiv II wird oft mit wuerde gebildet. Haette/waere/koennte sind wichtige Sonderformen in der Hoeflichkeit.',
-    examples: [
-      'Ich wuerde gern mehr reisen.',
-      'Koennten Sie mir helfen?',
-      'Wenn ich Zeit haette, kaeme ich.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g21',
-    title: 'Zeitformen B1',
-    level: 'B1',
-    category: 'Zeiten',
-    icon: '⏰',
-    rule: 'Plusquamperfekt und Futur II erweitern die Zeitfolge.',
-    explanation:
-        'Praesens, Perfekt und Praeteritum werden sicher genutzt. Plusquamperfekt beschreibt eine Handlung vor einer anderen Vergangenheit. Futur II zeigt eine abgeschlossene Zukunft oder eine Vermutung.',
-    examples: [
-      'Ich hatte gegessen, bevor du kamst.',
-      'In zwei Stunden werde ich fertig sein.',
-      'Er wird schon gegangen sein.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g22',
-    title: 'Nebensaetze B1',
-    level: 'B1',
-    category: 'Nebensatze',
-    icon: '🔗',
-    rule: 'Neue Konjunktionen praezisieren Zweck, Folge und Zeit.',
-    explanation:
-        'Damit (Zweck), sodass (Folge), falls (Bedingung), seitdem/solange/sobald (Zeit) und je ... desto (Vergleich) erweitern die Satzverknuepfung.',
-    examples: [
-      'Ich erklaere es, damit du es verstehst.',
-      'Es regnete, sodass wir zu Hause blieben.',
-      'Je mehr ich lerne, desto sicherer werde ich.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g23',
-    title: 'Konditionalsaetze',
-    level: 'B1',
-    category: 'Konditionalsaetze',
-    icon: '⚙️',
-    rule: 'Reale Bedingungen nutzen Indikativ, irreale Konjunktiv II.',
-    explanation:
-        'Reale Bedingungen beschreiben moegliche Situationen. Irreale Bedingungen beschreiben Hypothesen oder Unmoegliches in Gegenwart oder Vergangenheit.',
-    examples: [
-      'Wenn es regnet, bleibe ich zu Hause.',
-      'Wenn ich Zeit haette, wuerde ich kommen.',
-      'Wenn ich mehr gelernt haette, haette ich bestanden.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g24',
-    title: 'Konjunktiv II B1',
-    level: 'B1',
-    category: 'Konjunktiv',
-    icon: '💭',
-    rule: 'Konjunktiv II beschreibt Wuensche, Hoeflichkeit und Hypothesen.',
-    explanation:
-        'Wuerde + Infinitiv ist haeufig, aber Formen wie waere, haette, koennte sind sehr wichtig. In der Vergangenheit nutzt man haette/waere + Partizip II.',
-    examples: [
-      'Ich haette gern einen Termin.',
-      'Koennten Sie das wiederholen?',
-      'Wenn ich reich waere, wuerde ich reisen.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g25',
-    title: 'Passiv B1',
-    level: 'B1',
-    category: 'Passiv',
-    icon: '🏗️',
-    rule: 'Passiv ist in allen Zeiten moeglich; Modalverben bleiben im Infinitiv.',
-    explanation:
-        'Passiv kombiniert werden + Partizip II mit dem jeweiligen Tempus. Bei Modalverben steht das Modal konjugiert und das Vollverb im Infinitiv.',
-    examples: [
-      'Der Bericht wird geschrieben.',
-      'Der Bericht wurde geschrieben.',
-      'Der Bericht muss geschrieben werden.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g26',
-    title: 'Relativsaetze B1',
-    level: 'B1',
-    category: 'Relativsatze',
-    icon: '🧵',
-    rule: 'Relativsaetze mit Praepositionen und Genitiv erweitern Details.',
-    explanation:
-        'Praepositional-Relativsaetze: mit dem, fuer den, an dem. Genitiv-Relativpronomen: dessen/deren.',
-    examples: [
-      'Das ist die Kollegin, mit der ich arbeite.',
-      'Der Mann, dessen Auto gestohlen wurde, ist veraergert.',
-      'Die Firma, fuer die sie arbeitet, ist gross.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g27',
-    title: 'Wortstellung & Adverbien',
-    level: 'B1',
-    category: 'Satzbau',
-    icon: '🧱',
-    rule: 'Im Mittelfeld steht oft Zeit vor Art und Ort.',
-    explanation:
-        'Bei komplexen Saetzen bleibt das Verb an Position 2 im Hauptsatz. Adverbien folgen haeufig der Reihenfolge: Zeit - Art - Ort. Satzverbinder wie deshalb oder trotzdem belegen Position 1.',
-    examples: [
-      'Ich habe gestern schnell zu Hause gelernt.',
-      'Deshalb gehe ich heute frueh.',
-      'Trotzdem bleibe ich noch kurz.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g28',
-    title: 'Verben B1',
-    level: 'B1',
-    category: 'Verben',
-    icon: '🔧',
-    rule: 'Fortgeschrittene Verben haben feste Praepositionen und Kasus.',
-    explanation:
-        'Praepositionalverben verlangen oft Akkusativ oder Dativ. Reflexive Verben nutzen sich-Formen. Modalverben im Praeteritum sind sehr haeufig.',
-    examples: [
-      'Wir warten auf den Zug.',
-      'Ich erinnere mich an das Meeting.',
-      'Er musste gestern arbeiten.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g29',
-    title: 'Partizipien B1',
-    level: 'B1',
-    category: 'Partizipien',
-    icon: '🧩',
-    rule: 'Partizip I und II koennen Adjektive ersetzen.',
-    explanation:
-        'Partizip I beschreibt eine laufende Handlung, Partizip II eine abgeschlossene. Beide koennen attributiv vor Nomen stehen.',
-    examples: [
-      'der lachende Mann',
-      'die geoeffnete Tuer',
-      'ein schlafendes Kind',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g30',
-    title: 'Nominalisierung B1',
-    level: 'B1',
-    category: 'Nominalisierung',
-    icon: '📝',
-    rule: 'Verben und Adjektive koennen substantiviert werden.',
-    explanation:
-        'Substantivierte Verben und Adjektive werden grossgeschrieben und erhalten Artikel. Das macht Texte formeller.',
-    examples: [
-      'das Lernen, das Lesen',
-      'etwas Gutes, etwas Neues',
-      'Beim Arbeiten hoert er Musik.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g31',
-    title: 'Indirekte Rede Einfuehrung',
-    level: 'B1',
-    category: 'Indirekte Rede',
-    icon: '🗣️',
-    rule: 'Konjunktiv I wird fuer indirekte Rede verwendet.',
-    explanation:
-        'In der indirekten Rede aendert sich die Verbform: er sagt, er komme; sie sagt, sie habe. Bei Unsicherheit kann auch Konjunktiv II verwendet werden.',
-    examples: [
-      'Er sagt, er komme spaeter.',
-      'Sie meinte, sie habe keine Zeit.',
-      'Laut Bericht sei das Problem geloest.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g32',
-    title: 'Genitiv',
-    level: 'B1',
-    category: 'Kasus',
-    icon: '⚖️',
-    rule: 'Der Genitiv zeigt Besitz oder Zugehoerigkeit.',
-    explanation:
-        'Genitiv-Artikel: des (mask./neut.), der (fem./pl.). Adjektive und Nomen bekommen oft -s/-es. Praepositionen wie wegen oder trotz verlangen Genitiv.',
-    examples: [
-      'das Auto des Mannes',
-      'die Farbe der Wand',
-      'wegen des Wetters',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g33',
-    title: 'Zeitformen B2',
-    level: 'B2',
-    category: 'Zeiten',
-    icon: '⏰',
-    rule: 'Die Zeitfolge steuert die Wahl der Zeiten im komplexen Satz.',
-    explanation:
-        'Futur II drueckt eine abgeschlossene Zukunft oder Vermutung aus. In komplexen Saetzen wird das Zeitverhaeltnis konsequent abgebildet.',
-    examples: [
-      'Bis morgen werde ich den Bericht geschrieben haben.',
-      'Er sagte, er sei schon gegangen gewesen.',
-      'Sie wird wohl angekommen sein.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g34',
-    title: 'Konjunktiv I B2',
-    level: 'B2',
-    category: 'Konjunktiv',
-    icon: '💭',
-    rule: 'Konjunktiv I ist die Standardsprache der indirekten Rede.',
-    explanation:
-        'Im Berichts- und Nachrichtenton wird Konjunktiv I genutzt, um Distanz zu markieren. Wenn Konjunktiv I mit Indikativ identisch ist, nutzt man oft Konjunktiv II.',
-    examples: [
-      'Der Sprecher erklaerte, er sei bereit.',
-      'Sie berichtete, sie habe alles geklaert.',
-      'Er sagte, er wuerde spaeter kommen.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g35',
-    title: 'Konjunktiv II B2',
-    level: 'B2',
-    category: 'Konjunktiv',
-    icon: '💭',
-    rule: 'Irreales in der Vergangenheit: haette/waere + Partizip II.',
-    explanation:
-        'Komplexe Hypothesen nutzen Konjunktiv II in Gegenwart und Vergangenheit. Ersatzformen mit wuerde sind moeglich, sollten aber stilistisch sinnvoll eingesetzt werden.',
-    examples: [
-      'Wenn ich frueher gelernt haette, haette ich bestanden.',
-      'Ich waere gegangen, aber ich war krank.',
-      'Er wuerde es anders machen.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g36',
-    title: 'Passiv B2',
-    level: 'B2',
-    category: 'Passiv',
-    icon: '🏗️',
-    rule: 'Vorgangspassiv = werden, Zustandspassiv = sein.',
-    explanation:
-        'Vorgangspassiv beschreibt die Handlung, Zustandspassiv das Ergebnis. Modalverben lassen sich in allen Zeiten kombinieren.',
-    examples: [
-      'Der Vertrag wird unterschrieben.',
-      'Der Vertrag ist unterschrieben.',
-      'Die Aufgabe kann erledigt worden sein.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g37',
-    title: 'Partizipialkonstruktionen B2',
-    level: 'B2',
-    category: 'Partizipien',
-    icon: '🧩',
-    rule: 'Partizipialsaetze verdichten Informationen.',
-    explanation:
-        'Partizip I/II koennen Nebensaetze ersetzen und stehen haeufig am Satzanfang. Sie sind typisch fuer schriftliche Texte.',
-    examples: [
-      'Vom Regen ueberrascht, blieb er zu Hause.',
-      'Die laechelnde Frau begruesste uns.',
-      'Die gestern eingereichten Dokumente fehlen.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g38',
-    title: 'Erweiterte Nebensaetze B2',
-    level: 'B2',
-    category: 'Nebensatze',
-    icon: '🔗',
-    rule: 'Komplexe Konjunktionen praezisieren Grund, Art und Folge.',
-    explanation:
-        'Indem beschreibt die Art und Weise, wodurch eine Folge, sodass eine direkte Folge, wobei einen Begleitumstand, insofern eine Einschraenkung. Waehren kann auch einen Gegensatz ausdruecken.',
-    examples: [
-      'Er loeste das Problem, indem er den Code refaktorierte.',
-      'Sie verpasste den Zug, wodurch sie zu spaet kam.',
-      'Er arbeitet, waehrend sie pausiert.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g39',
-    title: 'Relativsaetze B2',
-    level: 'B2',
-    category: 'Relativsatze',
-    icon: '🧵',
-    rule: 'Komplexe Relativsaetze kombinieren Praepositionen und Genitiv.',
-    explanation:
-        'Fortgeschrittene Relativsaetze nutzen praepositionale Formen und deren/dessen. Mehrere Relativsaetze koennen kombiniert werden.',
-    examples: [
-      'Das ist der Kunde, mit dem wir ueber den Vertrag sprachen.',
-      'Die Firma, deren Umsatz steigt, stellt ein.',
-      'Der Bericht, den ich dir geschickt habe, der gestern kam, ist wichtig.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g40',
-    title: 'Infinitivkonstruktionen B2',
-    level: 'B2',
-    category: 'Infinitivkonstruktionen',
-    icon: '➰',
-    rule: 'Mehrere Infinitive koennen in einem Satz kombiniert werden.',
-    explanation:
-        'Erweiterte um/ohne/anstatt zu-Konstruktionen enthalten eigene Angaben und Objekte. Mehrfachinfinitive treten oft mit Modalverben auf.',
-    examples: [
-      'Er versucht, den Vertrag unterschreiben zu lassen.',
-      'Sie ging, ohne den Chef zu informieren.',
-      'Statt zu warten, beschloss er zu gehen.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g41',
-    title: 'Nominalstil B2',
-    level: 'B2',
-    category: 'Nominalisierung',
-    icon: '📝',
-    rule: 'Nominalstil verdichtet Aussagen in Substantiven.',
-    explanation:
-        'Formelle Texte nutzen Nominalisierungen, um Informationen kompakt darzustellen. Das fuehrt zu laengeren Satzgliedern und weniger Verben.',
-    examples: [
-      'Die Durchfuehrung der Analyse dauerte zwei Tage.',
-      'Nach Abschluss der Pruefung erfolgt die Auswertung.',
-      'Die Verbesserung der Prozesse ist notwendig.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g42',
-    title: 'Praepositionen B2',
-    level: 'B2',
-    category: 'Prapositionen',
-    icon: '📍',
-    rule: 'Komplexe Praepositionalphrasen sind typisch fuer formelle Texte.',
-    explanation:
-        'Beispiele sind im Hinblick auf, in Bezug auf, aufgrund, gemaess, infolge. Diese Praepositionen haben feste Kasus (oft Genitiv).',
-    examples: [
-      'Im Hinblick auf die Kosten treffen wir eine Entscheidung.',
-      'Aufgrund des Wetters faellt das Meeting aus.',
-      'In Bezug auf das Angebot rufen wir an.',
-    ],
-    progress: 0,
-  ),
-  GrammarTopicView(
-    id: 'g43',
-    title: 'Textverknuepfung B2',
-    level: 'B2',
-    category: 'Textverknuepfung',
-    icon: '🧲',
-    rule: 'Konnektoren strukturieren Argumente und schaffen Kohaesion.',
-    explanation:
-        'Typische Konnektoren: allerdings, dennoch, hingegen, folglich, somit, ausserdem. Sie stellen Gegensatz, Folge oder Zusatz her.',
-    examples: [
-      'Er hat viel gelernt; dennoch fiel die Pruefung schwer.',
-      'Die Zahlen steigen, folglich investieren wir.',
-      'Ich bin muede; ausserdem regnet es.',
-    ],
+    id: 'g55', title: 'Komplexe Attribute', level: 'C1', category: 'Satzbau', icon: '📐',
+    rule: 'Erweiterte Attribute vor dem Nomen, typisch für Fachsprache.',
+    explanation: 'Complex pre-noun attributes compress relative clauses into extended adjective/participle phrases. Very common in academic and legal texts.',
+    examples: ['die seit langem diskutierte Frage', 'der von allen unterschriebene Vertrag', 'das in der letzten Sitzung beschlossene Gesetz'],
     progress: 0,
   ),
 ];
 
-const grammarLevels = ['Alle', 'A1', 'A2', 'B1', 'B2'];
+const grammarLevels = ['Alle', 'A1', 'A2', 'B1', 'B2', 'C1'];
+
 const grammarCategories = [
-  'Alle',
-  'Satzbau',
-  'Artikel & Nomen',
-  'Kasus',
-  'Pronomen',
-  'Verben',
-  'Zeiten',
-  'Prapositionen',
-  'Adjektive',
-  'Nebensatze',
-  'Relativsatze',
-  'Infinitivkonstruktionen',
-  'Passiv',
-  'Konjunktiv',
-  'Partizipien',
-  'Nominalisierung',
-  'Indirekte Rede',
-  'Konditionalsaetze',
-  'Textverknuepfung',
+  'Alle', 'Artikel', 'Satzbau', 'Fälle', 'Pronomen', 'Zeiten',
+  'Verben', 'Präpositionen', 'Adjektive', 'Nebensätze', 'Konjunktiv', 'Partikeln',
 ];

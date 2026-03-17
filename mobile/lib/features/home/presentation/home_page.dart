@@ -2,632 +2,362 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../core/database/database_providers.dart';
-import '../../../core/theme/app_tokens.dart';
-import '../../../shared/widgets/progress_ring.dart';
+// ─── Gradient helpers ────────────────────────────────────────────────────────
+const _gradPurple   = [Color(0xFF8B5CF6), Color(0xFF6D28D9)]; // from-purple-500 to-purple-700
+const _gradBlue     = [Color(0xFF3B82F6), Color(0xFF1D4ED8)]; // from-blue-500 to-blue-700
+const _gradOrange   = [Color(0xFFFB923C), Color(0xFFEA580C)]; // from-orange-400 to-orange-600
+const _gradChallenge = [Color(0xFF6366F1), Color(0xFFA855F7), Color(0xFFEC4899)]; // indigo→purple→pink
 
+// ─── Section card data ───────────────────────────────────────────────────────
+class _Section {
+  const _Section({required this.route, required this.label, required this.subtitle, required this.icon, required this.gradient});
+  final String route, label, subtitle, icon;
+  final List<Color> gradient;
+}
+
+const _sections = [
+  _Section(route: '/grammar',    label: 'Grammar',    subtitle: 'Regeln & Struktur',  icon: '📘', gradient: _gradPurple),
+  _Section(route: '/vocabulary', label: 'Vocabulary', subtitle: 'Wörter & Business',  icon: '📚', gradient: _gradBlue),
+  _Section(route: '/exercises',  label: 'Exercises',  subtitle: 'Tests & Quiz',        icon: '✏️', gradient: _gradOrange),
+];
+
+// ─── HomePage ────────────────────────────────────────────────────────────────
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stats = ref.watch(userStatsStreamProvider);
+    final scheme = Theme.of(context).colorScheme;
+    final isDark  = Theme.of(context).brightness == Brightness.dark;
 
-    return stats.when(
-      loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stack) => Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.error_outline_rounded, size: 44),
-              const SizedBox(height: 10),
-              const Text('Failed to load stats'),
-              const SizedBox(height: 12),
-              FilledButton(
-                onPressed: () => ref.invalidate(userStatsStreamProvider),
-                child: const Text('Retry'),
-              ),
-            ],
-          ),
-        ),
-      ),
-      data: (userStats) {
-        return SafeArea(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(20, 24, 20, 100),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _Header(streak: userStats.streak, xp: userStats.xp),
-                const SizedBox(height: 24),
-                _WeeklyProgress(
-                  progress: userStats.weeklyProgress,
-                  wordsLearned: userStats.wordsLearned,
-                  exercisesCompleted: userStats.exercisesCompleted,
-                ),
-                const SizedBox(height: 24),
-                _ChallengeCard(onStart: () => context.go('/vocabulary')),
-                const SizedBox(height: 24),
-                Text(
-                  'Lernbereiche',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                const SizedBox(height: 12),
-                _SectionCard(
-                  emoji: '📘',
-                  title: 'Grammar',
-                  subtitle: 'Regeln & Struktur',
-                  colors: const [Color(0xFFA855F7), Color(0xFF7C3AED)],
-                  shadowColor: const Color(0xFFD8B4FE),
-                  onTap: () => context.go('/grammar'),
-                ),
-                const SizedBox(height: 12),
-                _SectionCard(
-                  emoji: '📚',
-                  title: 'Vocabulary',
-                  subtitle: 'Wörter & Business',
-                  colors: const [Color(0xFF3B82F6), Color(0xFF2563EB)],
-                  shadowColor: const Color(0xFFBFDBFE),
-                  onTap: () => context.go('/vocabulary'),
-                ),
-                const SizedBox(height: 12),
-                _SectionCard(
-                  emoji: '✏️',
-                  title: 'Exercises',
-                  subtitle: 'Tests & Quiz',
-                  colors: const [Color(0xFFFB923C), Color(0xFFEA580C)],
-                  shadowColor: const Color(0xFFFED7AA),
-                  onTap: () => context.go('/exercises'),
-                ),
-                const SizedBox(height: 24),
-                _AchievementsPreview(onOpen: () => context.go('/profile')),
-                const SizedBox(height: 18),
-                _LevelBadge(level: userStats.level),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-}
+    final cardColor  = isDark ? const Color(0xFF0F172A) : Colors.white;
+    final textPrimary   = isDark ? Colors.white : const Color(0xFF111827);
+    final textMuted     = isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280);
+    final mutedBg       = isDark ? const Color(0xFF1E293B) : const Color(0xFFF9FAFB);
 
-class _Header extends StatelessWidget {
-  const _Header({required this.streak, required this.xp});
+    // Mock stats — replace with Riverpod provider
+    const streak = 7;
+    const xp = 340;
+    const weeklyProgress = 68;
+    const wordsLearned = 42;
+    const exercisesDone = 15;
+    const level = 'A2';
 
-  final int streak;
-  final int xp;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Row(
-      children: [
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Lerne Deutsch 🇩🇪',
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color:
-                          isDark ? AppTokens.darkText : AppTokens.lightText,
-                    ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                'Willkommen zurück!',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: isDark
-                          ? AppTokens.darkTextMuted
-                          : AppTokens.lightTextMuted,
-                    ),
-              ),
-            ],
-          ),
-        ),
-        _MetricChip(
-          icon: Icons.local_fire_department_rounded,
-          value: '$streak',
-          bg: isDark ? const Color(0xFF7C2D12) : const Color(0xFFFFEDD5),
-          fg: isDark ? const Color(0xFFFED7AA) : const Color(0xFF9A3412),
-        ),
-        const SizedBox(width: 8),
-        _MetricChip(
-          icon: Icons.bolt_rounded,
-          value: '$xp',
-          bg: isDark ? const Color(0xFF713F12) : const Color(0xFFFEF3C7),
-          fg: isDark ? const Color(0xFFFDE68A) : const Color(0xFFA16207),
-        ),
-      ],
-    );
-  }
-}
-
-class _MetricChip extends StatelessWidget {
-  const _MetricChip({
-    required this.icon,
-    required this.value,
-    required this.bg,
-    required this.fg,
-  });
-
-  final IconData icon;
-  final String value;
-  final Color bg;
-  final Color fg;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: bg,
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Row(
-        children: [
-          Icon(icon, size: 16, color: fg),
-          const SizedBox(width: 4),
-          Text(
-            value,
-            style: TextStyle(color: fg, fontWeight: FontWeight.w600),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _WeeklyProgress extends StatelessWidget {
-  const _WeeklyProgress({
-    required this.progress,
-    required this.wordsLearned,
-    required this.exercisesCompleted,
-  });
-
-  final int progress;
-  final int wordsLearned;
-  final int exercisesCompleted;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius30,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.2)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 18,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(20),
-      child: Row(
-        children: [
-          ProgressRing(
-            progress: progress.clamp(0, 100).toDouble(),
-            size: 100,
-            strokeWidth: 8,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  '$progress%',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: isDark
-                            ? AppTokens.darkText
-                            : AppTokens.lightText,
-                      ),
-                ),
-                Text(
-                  'Woche',
-                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                        color: isDark
-                            ? AppTokens.darkTextMuted
-                            : AppTokens.lightTextMuted,
-                      ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Wochenfortschritt',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: isDark
-                            ? AppTokens.darkText
-                            : AppTokens.lightText,
-                      ),
-                ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Expanded(
-                      child: _StatPill(
-                        title: 'Wörter',
-                        value: '$wordsLearned',
-                        bg: const Color(0xFFDBEAFE),
-                        fg: const Color(0xFF1D4ED8),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: _StatPill(
-                        title: 'Übungen',
-                        value: '$exercisesCompleted',
-                        bg: const Color(0xFFDCFCE7),
-                        fg: const Color(0xFF15803D),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _StatPill extends StatelessWidget {
-  const _StatPill({
-    required this.title,
-    required this.value,
-    required this.bg,
-    required this.fg,
-  });
-
-  final String title;
-  final String value;
-  final Color bg;
-  final Color fg;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? bg.withValues(alpha: 0.2) : bg,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  color: isDark ? fg.withValues(alpha: 0.9) : fg,
-                ),
-          ),
-          const SizedBox(height: 2),
-          Text(
-            value,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  color: isDark ? fg.withValues(alpha: 0.9) : fg,
-                ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _ChallengeCard extends StatelessWidget {
-  const _ChallengeCard({required this.onStart});
-
-  final VoidCallback onStart;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: AppTokens.radius30,
-        gradient: const LinearGradient(
-          colors: AppTokens.gradientIndigoPurplePink,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFFA855F7).withValues(alpha: 0.28),
-            blurRadius: 24,
-            offset: const Offset(0, 10),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(20),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Row(
-                  children: [
-                    Icon(Icons.emoji_events_rounded,
-                        size: 18, color: Colors.white),
-                    SizedBox(width: 6),
-                    Text(
-                      'Tägliche Herausforderung',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 6),
-                Text(
-                  '5 Business-Wörter lernen',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(height: 6),
-                Text(
-                  '+50 XP Belohnung',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 13,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          FilledButton.tonal(
-            onPressed: onStart,
-            style: FilledButton.styleFrom(
-              backgroundColor: Colors.white.withValues(alpha: 0.2),
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            ),
-            child: const Text('Start'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _SectionCard extends StatelessWidget {
-  const _SectionCard({
-    required this.emoji,
-    required this.title,
-    required this.subtitle,
-    required this.colors,
-    required this.shadowColor,
-    required this.onTap,
-  });
-
-  final String emoji;
-  final String title;
-  final String subtitle;
-  final List<Color> colors;
-  final Color shadowColor;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      borderRadius: AppTokens.radius20,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: AppTokens.radius20,
-        child: Ink(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: colors),
-            borderRadius: AppTokens.radius20,
-            boxShadow: [
-              BoxShadow(
-                color: shadowColor.withValues(alpha: 0.45),
-                blurRadius: 20,
-                offset: const Offset(0, 10),
-              ),
-            ],
-          ),
-          padding: const EdgeInsets.all(20),
-          child: Row(
+          // ── Header ──────────────────────────────────────────────────────
+          Row(
             children: [
-              Text(emoji, style: const TextStyle(fontSize: 34)),
-              const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
+                    Text('Lerne Deutsch 🇩🇪',
+                        style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600, color: textPrimary)),
                     const SizedBox(height: 2),
-                    Text(
-                      subtitle,
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
+                    Text('Willkommen zurück!', style: TextStyle(fontSize: 13, color: textMuted)),
                   ],
                 ),
               ),
-              const Icon(
-                Icons.chevron_right_rounded,
-                color: Colors.white70,
-                size: 26,
+              // Streak chip
+              _Chip(
+                icon: '🔥',
+                label: '$streak',
+                bg: isDark ? const Color(0xFF431407) : const Color(0xFFFFF7ED),
+                fg: const Color(0xFFEA580C),
+              ),
+              const SizedBox(width: 8),
+              // XP chip
+              _Chip(
+                icon: '⚡',
+                label: '$xp',
+                bg: isDark ? const Color(0xFF422006) : const Color(0xFFFEFCE8),
+                fg: const Color(0xFFCA8A04),
               ),
             ],
           ),
-        ),
+
+          const SizedBox(height: 20),
+
+          // ── Weekly Progress Card ─────────────────────────────────────────
+          _Card(
+            color: cardColor,
+            child: Row(
+              children: [
+                _ProgressRing(progress: weeklyProgress / 100, size: 96, label: '$weeklyProgress%', sublabel: 'Woche'),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Wochenfortschritt',
+                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: textPrimary)),
+                      const SizedBox(height: 10),
+                      Row(children: [
+                        Expanded(child: _StatMini(label: 'Wörter', value: '$wordsLearned',
+                            bg: isDark ? const Color(0xFF1E3A5F) : const Color(0xFFEFF6FF),
+                            fg: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1D4ED8))),
+                        const SizedBox(width: 8),
+                        Expanded(child: _StatMini(label: 'Übungen', value: '$exercisesDone',
+                            bg: isDark ? const Color(0xFF14532D) : const Color(0xFFF0FDF4),
+                            fg: isDark ? const Color(0xFF86EFAC) : const Color(0xFF15803D))),
+                      ]),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 16),
+
+          // ── Daily Challenge Card ─────────────────────────────────────────
+          _GradCard(
+            gradient: _gradChallenge,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(children: [
+                        const Text('🏆', style: TextStyle(fontSize: 16)),
+                        const SizedBox(width: 6),
+                        Text('Tägliche Herausforderung',
+                            style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.9))),
+                      ]),
+                      const SizedBox(height: 6),
+                      const Text('5 Business-Wörter lernen',
+                          style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white)),
+                      const SizedBox(height: 4),
+                      Text('+50 XP Belohnung', style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.8))),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 12),
+                GestureDetector(
+                  onTap: () => context.go('/vocabulary'),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Row(children: [
+                      Text('Start', style: TextStyle(fontSize: 13, color: Colors.white)),
+                      SizedBox(width: 4),
+                      Icon(Icons.chevron_right_rounded, size: 16, color: Colors.white),
+                    ]),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 20),
+
+          // ── Section Cards ────────────────────────────────────────────────
+          Text('Lernbereiche',
+              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: textPrimary)),
+          const SizedBox(height: 12),
+
+          ..._sections.map((s) => Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: _GradCard(
+                  gradient: s.gradient,
+                  onTap: () => context.go(s.route),
+                  child: Row(children: [
+                    Text(s.icon, style: const TextStyle(fontSize: 34)),
+                    const SizedBox(width: 14),
+                    Expanded(child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(s.label, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white)),
+                        const SizedBox(height: 2),
+                        Text(s.subtitle, style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.8))),
+                      ],
+                    )),
+                    Icon(Icons.chevron_right_rounded, color: Colors.white.withOpacity(0.6), size: 22),
+                  ]),
+                ),
+              )),
+
+          const SizedBox(height: 4),
+
+          // ── Achievements Preview ─────────────────────────────────────────
+          _Card(
+            color: cardColor,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Erfolge', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: textPrimary)),
+                    GestureDetector(
+                      onTap: () => context.go('/profile'),
+                      child: const Text('Alle anzeigen', style: TextStyle(fontSize: 12, color: Color(0xFF3B82F6))),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Row(children: [
+                  ...['🎯', '📚', '🔥', '💎'].asMap().entries.map((e) => Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Container(
+                          width: 52, height: 52,
+                          decoration: BoxDecoration(
+                            color: e.key < 3
+                                ? (isDark ? const Color(0xFF422006) : const Color(0xFFFEFCE8))
+                                : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF3F4F6)),
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          child: Center(
+                            child: Opacity(
+                              opacity: e.key < 3 ? 1.0 : 0.4,
+                              child: Text(e.value, style: const TextStyle(fontSize: 22)),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const Spacer(),
+                  Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                    Text('3/6', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: textPrimary)),
+                    Text('freigeschaltet', style: TextStyle(fontSize: 10, color: textMuted)),
+                  ]),
+                ]),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 16),
+
+          // ── Level Badge ──────────────────────────────────────────────────
+          Center(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 9),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(colors: [Color(0xFF3B82F6), Color(0xFF9333EA)]),
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                Text('Aktuelles Level:', style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.8))),
+                const SizedBox(width: 6),
+                const Text(level, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white)),
+              ]),
+            ),
+          ),
+
+          const SizedBox(height: 8),
+        ],
       ),
     );
   }
 }
 
-class _AchievementsPreview extends StatelessWidget {
-  const _AchievementsPreview({required this.onOpen});
+// ─── Shared widgets ───────────────────────────────────────────────────────────
 
-  final VoidCallback onOpen;
+class _Card extends StatelessWidget {
+  const _Card({required this.child, required this.color});
+  final Widget child;
+  final Color color;
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.07), blurRadius: 20, offset: const Offset(0, 6))],
+        ),
+        child: child,
+      );
+}
+
+class _GradCard extends StatelessWidget {
+  const _GradCard({required this.gradient, required this.child, this.onTap});
+  final List<Color> gradient;
+  final Widget child;
+  final VoidCallback? onTap;
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(18),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: gradient),
+            borderRadius: BorderRadius.circular(22),
+            boxShadow: [BoxShadow(color: gradient.first.withOpacity(0.3), blurRadius: 16, offset: const Offset(0, 6))],
+          ),
+          child: child,
+        ),
+      );
+}
+
+class _Chip extends StatelessWidget {
+  const _Chip({required this.icon, required this.label, required this.bg, required this.fg});
+  final String icon, label;
+  final Color bg, fg;
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(100)),
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          Text(icon, style: const TextStyle(fontSize: 13)),
+          const SizedBox(width: 4),
+          Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: fg)),
+        ]),
+      );
+}
+
+class _StatMini extends StatelessWidget {
+  const _StatMini({required this.label, required this.value, required this.bg, required this.fg});
+  final String label, value;
+  final Color bg, fg;
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(12)),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(label, style: TextStyle(fontSize: 11, color: fg)),
+          const SizedBox(height: 2),
+          Text(value, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: fg)),
+        ]),
+      );
+}
+
+class _ProgressRing extends StatelessWidget {
+  const _ProgressRing({required this.progress, required this.size, required this.label, required this.sublabel});
+  final double progress;
+  final double size;
+  final String label, sublabel;
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius30,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.2)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 18,
-            offset: const Offset(0, 8),
+    return SizedBox(
+      width: size, height: size,
+      child: Stack(alignment: Alignment.center, children: [
+        SizedBox(
+          width: size, height: size,
+          child: CircularProgressIndicator(
+            value: progress,
+            strokeWidth: 8,
+            backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
+            valueColor: const AlwaysStoppedAnimation(Color(0xFF6366F1)),
+            strokeCap: StrokeCap.round,
           ),
-        ],
-      ),
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Text(
-                'Erfolge',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color:
-                          isDark ? AppTokens.darkText : AppTokens.lightText,
-                    ),
-              ),
-              const Spacer(),
-              TextButton(
-                onPressed: onOpen,
-                child: const Text('Alle anzeigen'),
-              ),
-            ],
-          ),
-          const SizedBox(height: 6),
-          Row(
-            children: [
-              for (final item in [
-                ('🎯', true),
-                ('📚', true),
-                ('🔥', true),
-                ('💎', false),
-              ])
-                Opacity(
-                  opacity: item.$2 ? 1 : 0.4,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: Container(
-                      width: 56,
-                      height: 56,
-                      decoration: BoxDecoration(
-                        color: item.$2
-                            ? (isDark
-                                ? const Color(0xFF3F3A11)
-                                : const Color(0xFFFEF9C3))
-                            : (isDark
-                                ? const Color(0xFF1F2937)
-                                : const Color(0xFFE2E8F0)),
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(item.$1, style: const TextStyle(fontSize: 24)),
-                    ),
-                  ),
-                ),
-              const Spacer(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    '3/6',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          color: isDark
-                              ? AppTokens.darkText
-                              : AppTokens.lightText,
-                        ),
-                  ),
-                  Text(
-                    'freigeschaltet',
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: isDark
-                              ? AppTokens.darkTextMuted
-                              : AppTokens.lightTextMuted,
-                        ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _LevelBadge extends StatelessWidget {
-  const _LevelBadge({required this.level});
-
-  final String level;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: AppTokens.gradientBluePurple,
-          ),
-          borderRadius: BorderRadius.circular(999),
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text(
-              'Aktuelles Level:',
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 13,
-              ),
-            ),
-            const SizedBox(width: 6),
-            Text(
-              level,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-      ),
+        Column(mainAxisSize: MainAxisSize.min, children: [
+          Text(label, style: TextStyle(
+              fontSize: 19, fontWeight: FontWeight.w700,
+              color: isDark ? Colors.white : const Color(0xFF111827))),
+          Text(sublabel, style: const TextStyle(fontSize: 10, color: Color(0xFF94A3B8))),
+        ]),
+      ]),
     );
   }
 }

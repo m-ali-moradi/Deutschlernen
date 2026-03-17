@@ -1,1403 +1,749 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'vocabulary_data.dart';
 
-import '../../../core/database/app_database.dart';
-import '../../../core/database/database_providers.dart';
-import '../../../core/database/seed_data.dart';
-import '../../../core/theme/app_tokens.dart';
+// ─── Category display config ──────────────────────────────────────────────────
+class _CatConfig {
+  const _CatConfig({required this.name, required this.icon, required this.colors});
+  final String name, icon;
+  final List<Color> colors;
+}
 
-enum _VocabTab { words, phrases, favorites, difficult }
+const _catConfigs = [
+  // ── Session 1 ──────────────────────────────────────────────────────────
+  _CatConfig(name: 'Büro & Verwaltung',         icon: '🏢', colors: [Color(0xFF6366F1), Color(0xFF4F46E5)]),
+  _CatConfig(name: 'E-Mail & Korrespondenz',     icon: '📧', colors: [Color(0xFF0EA5E9), Color(0xFF0284C7)]),
+  _CatConfig(name: 'Meetings & Präsentationen',  icon: '🤝', colors: [Color(0xFF8B5CF6), Color(0xFF7C3AED)]),
+  _CatConfig(name: 'Bewerbung & Karriere',       icon: '💼', colors: [Color(0xFF3B82F6), Color(0xFF1D4ED8)]),
+  _CatConfig(name: 'Alltag Deutsch',             icon: '🌍', colors: [Color(0xFF22C55E), Color(0xFF15803D)]),
+  _CatConfig(name: 'Telefon & Kommunikation',    icon: '📞', colors: [Color(0xFFF59E0B), Color(0xFFD97706)]),
+  // ── Session 2 ──────────────────────────────────────────────────────────
+  _CatConfig(name: 'IT & Technik',               icon: '💻', colors: [Color(0xFF06B6D4), Color(0xFF0891B2)]),
+  _CatConfig(name: 'Finanzen',                   icon: '💰', colors: [Color(0xFF10B981), Color(0xFF059669)]),
+  _CatConfig(name: 'Verträge & Recht',           icon: '📋', colors: [Color(0xFFEF4444), Color(0xFFDC2626)]),
+  _CatConfig(name: 'Marketing & Vertrieb',       icon: '📢', colors: [Color(0xFFF97316), Color(0xFFEA580C)]),
+  // ── Session 3 ──────────────────────────────────────────────────────────
+  _CatConfig(name: 'Bildung & Schule',           icon: '🎓', colors: [Color(0xFF7C3AED), Color(0xFF5B21B6)]),
+  _CatConfig(name: 'Visum & Behörden',           icon: '🏛️', colors: [Color(0xFF475569), Color(0xFF1E293B)]),
+  _CatConfig(name: 'Ausbildung & Praktikum',     icon: '🔧', colors: [Color(0xFFD97706), Color(0xFFB45309)]),
+  _CatConfig(name: 'Jobsuche & Bewerbung',       icon: '🔍', colors: [Color(0xFF059669), Color(0xFF047857)]),
+];
 
+// ─── Riverpod state ───────────────────────────────────────────────────────────
+// Simple in-memory state — replace with Drift-backed provider when ready
+final _vocabProvider = StateNotifierProvider<_VocabNotifier, List<VocabWord>>(
+  (ref) => _VocabNotifier(),
+);
+
+class _VocabNotifier extends StateNotifier<List<VocabWord>> {
+  _VocabNotifier() : super(vocabularyData.map((w) => w.copyWith()).toList());
+
+  void toggleFavorite(String id) {
+    state = state.map((w) => w.id == id ? w.copyWith(isFavorite: !w.isFavorite) : w).toList();
+  }
+
+  void setDifficulty(String id, String difficulty) {
+    state = state.map((w) => w.id == id ? w.copyWith(difficulty: difficulty) : w).toList();
+  }
+}
+
+// ─── Phrases data ─────────────────────────────────────────────────────────────
+const _phrases = [
+  (german: 'Sehr geehrte Damen und Herren',     english: 'Dear Sir or Madam',                 dari: 'خانم‌ها و آقایان محترم',             tag: 'Formal'),
+  (german: 'Mit freundlichen Grüßen',           english: 'Kind regards',                       dari: 'با احترام',                          tag: 'Formal'),
+  (german: 'Könnten Sie mir bitte helfen?',     english: 'Could you please help me?',          dari: 'آیا می‌توانید کمکم کنید؟',           tag: 'Polite'),
+  (german: 'Ich möchte mich vorstellen',        english: 'I would like to introduce myself',   dari: 'می‌خواهم خودم را معرفی کنم',         tag: 'Meeting'),
+  (german: 'Wie besprochen...',                 english: 'As discussed...',                    dari: 'طوری که بحث شد...',                   tag: 'Email'),
+  (german: 'Im Anhang finden Sie...',           english: 'Please find attached...',            dari: 'در پیوست می‌یابید...',                tag: 'Email'),
+  (german: 'Ich bin für Rückfragen erreichbar', english: 'I am available for further questions',dari: 'من برای سوالات بیشتر در دسترس هستم', tag: 'Email'),
+  (german: 'Vielen Dank für Ihre Nachricht',    english: 'Thank you for your message',         dari: 'تشکر از پیام شما',                    tag: 'Email'),
+  (german: 'Ich würde gerne einen Termin vereinbaren', english: 'I\'d like to schedule an appointment', dari: 'می‌خواهم وقت ملاقات تعیین کنم', tag: 'Meeting'),
+  (german: 'Darf ich kurz unterbrechen?',       english: 'May I briefly interrupt?',           dari: 'آیا می‌توانم کمی صحبت شما را قطع کنم؟', tag: 'Meeting'),
+  (german: 'Was halten Sie davon?',             english: 'What do you think about it?',        dari: 'نظر شما چیست؟',                       tag: 'Meeting'),
+  (german: 'Entschuldigung für die Verspätung', english: 'Sorry for the delay',                dari: 'ببخشید بخاطر تأخیر',                  tag: 'Polite'),
+  (german: 'Ich bin damit einverstanden',       english: 'I agree with that',                  dari: 'من با این موافق هستم',                 tag: 'Meeting'),
+  (german: 'Könnten wir das auf morgen verschieben?', english: 'Could we postpone to tomorrow?', dari: 'آیا می‌توانیم به فردا موکول کنیم؟', tag: 'Meeting'),
+  (german: 'Ich melde mich so schnell wie möglich', english: 'I will get back to you ASAP',   dari: 'هر چه زودتر با شما تماس می‌گیرم',    tag: 'Email'),
+  (german: 'Bezugnehmend auf unser Gespräch...', english: 'Referring to our conversation...', dari: 'با اشاره به گفتگوی ما...',             tag: 'Email'),
+  (german: 'Ich freue mich auf die Zusammenarbeit', english: 'I look forward to collaborating', dari: 'من مشتاق همکاری هستم',              tag: 'Formal'),
+  (german: 'Wann passt es Ihnen am besten?',   english: 'When suits you best?',               dari: 'چه وقت برای شما مناسب‌تر است؟',       tag: 'Polite'),
+  (german: 'Für weitere Informationen stehe ich gerne zur Verfügung', english: 'For further info please contact me', dari: 'برای اطلاعات بیشتر در دسترس هستم', tag: 'Formal'),
+  (german: 'Ich bestätige den Eingang Ihrer E-Mail', english: 'I confirm receipt of your email', dari: 'دریافت ایمیل شما را تأیید می‌کنم', tag: 'Email'),
+];
+
+// ─── VocabularyPage ───────────────────────────────────────────────────────────
 class VocabularyPage extends ConsumerStatefulWidget {
   const VocabularyPage({super.key});
-
   @override
   ConsumerState<VocabularyPage> createState() => _VocabularyPageState();
 }
 
-class _Header extends StatelessWidget {
-  const _Header({
-    required this.isDari,
-    required this.onBack,
-    required this.onToggleLanguage,
-  });
-
-  final bool isDari;
-  final VoidCallback onBack;
-  final VoidCallback onToggleLanguage;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Row(
-      children: [
-        _IconButton(
-          icon: Icons.arrow_back_rounded,
-          onPressed: onBack,
-        ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Wortschatz 📚',
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color:
-                          isDark ? AppTokens.darkText : AppTokens.lightText,
-                    ),
-              ),
-              const SizedBox(height: 2),
-              Text(
-                'Wörter & Business',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: isDark
-                          ? AppTokens.darkTextMuted
-                          : AppTokens.lightTextMuted,
-                    ),
-              ),
-            ],
-          ),
-        ),
-        InkWell(
-          onTap: onToggleLanguage,
-          borderRadius: AppTokens.radius16,
-          child: Ink(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF1E293B) : Colors.white,
-              borderRadius: AppTokens.radius16,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.08),
-                  blurRadius: 8,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.translate_rounded,
-                    size: 16, color: Color(0xFF3B82F6)),
-                const SizedBox(width: 6),
-                Text(
-                  isDari ? 'دری' : 'EN',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: isDark
-                        ? AppTokens.darkText
-                        : const Color(0xFF334155),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _SearchField extends StatelessWidget {
-  const _SearchField({required this.onChanged});
-
-  final ValueChanged<String> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      onChanged: onChanged,
-      decoration: const InputDecoration(
-        hintText: 'Wort suchen...',
-        prefixIcon: Icon(Icons.search_rounded),
-      ),
-    );
-  }
-}
-
-class _TabBar extends StatelessWidget {
-  const _TabBar({required this.tab, required this.onChanged});
-
-  final _VocabTab tab;
-  final ValueChanged<_VocabTab> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-        borderRadius: AppTokens.radius20,
-      ),
-      child: Row(
-        children: [
-          _TabButton(
-            label: 'Wörter',
-            selected: tab == _VocabTab.words,
-            onTap: () => onChanged(_VocabTab.words),
-          ),
-          _TabButton(
-            label: 'Phrasen',
-            selected: tab == _VocabTab.phrases,
-            onTap: () => onChanged(_VocabTab.phrases),
-          ),
-          _TabButton(
-            label: 'Favoriten',
-            selected: tab == _VocabTab.favorites,
-            onTap: () => onChanged(_VocabTab.favorites),
-          ),
-          _TabButton(
-            label: 'Schwierig',
-            selected: tab == _VocabTab.difficult,
-            onTap: () => onChanged(_VocabTab.difficult),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _TabButton extends StatelessWidget {
-  const _TabButton({
-    required this.label,
-    required this.selected,
-    required this.onTap,
-  });
-
-  final String label;
-  final bool selected;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Expanded(
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: AppTokens.radius16,
-        child: Ink(
-          height: 38,
-          decoration: BoxDecoration(
-            color: selected
-                ? (isDark ? const Color(0xFF334155) : Colors.white)
-                : Colors.transparent,
-            borderRadius: AppTokens.radius16,
-            boxShadow: selected
-                ? [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.08),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4),
-                    ),
-                  ]
-                : null,
-          ),
-          child: Center(
-            child: Text(
-              label,
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: selected
-                    ? (isDark
-                        ? const Color(0xFF60A5FA)
-                        : const Color(0xFF3B82F6))
-                    : (isDark
-                        ? const Color(0xFF94A3B8)
-                        : const Color(0xFF64748B)),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _CategoryTile extends StatelessWidget {
-  const _CategoryTile({
-    required this.title,
-    required this.count,
-    required this.style,
-    required this.onTap,
-  });
-
-  final String title;
-  final int count;
-  final _CategoryStyle style;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      borderRadius: AppTokens.radius20,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: AppTokens.radius20,
-        child: Ink(
-          decoration: BoxDecoration(
-            borderRadius: AppTokens.radius20,
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: style.colors,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: style.colors.last.withValues(alpha: 0.35),
-                blurRadius: 16,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(style.emoji, style: const TextStyle(fontSize: 22)),
-              const Spacer(),
-              Text(
-                title,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 14.5,
-                  fontWeight: FontWeight.w700,
-                  height: 1.2,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                '$count Wörter',
-                style: const TextStyle(
-                  color: Color(0xFFBFDBFE),
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _PhraseCard extends StatelessWidget {
-  const _PhraseCard({
-    required this.phrase,
-    required this.isDari,
-  });
-
-  final Map<String, String> phrase;
-  final bool isDari;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final translation = isDari ? phrase['dari']! : phrase['english']!;
-    final translationStyle = Theme.of(context).textTheme.bodySmall?.copyWith(
-          color: isDark ? AppTokens.darkTextMuted : AppTokens.lightTextMuted,
-          fontFamily: isDari ? 'Vazirmatn' : null,
-        );
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius24,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.18)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 12,
-            offset: const Offset(0, 6),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(16),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  phrase['german']!,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color:
-                            isDark ? AppTokens.darkText : AppTokens.lightText,
-                      ),
-                ),
-                const SizedBox(height: 4),
-                Directionality(
-                  textDirection:
-                      isDari ? TextDirection.rtl : TextDirection.ltr,
-                  child: Text(
-                    translation,
-                    textAlign: isDari ? TextAlign.right : TextAlign.left,
-                    style: translationStyle,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            decoration: BoxDecoration(
-              color: isDark
-                  ? const Color(0xFF312E81)
-                  : const Color(0xFFEDE9FE),
-              borderRadius: BorderRadius.circular(999),
-            ),
-            child: Text(
-              phrase['tag']!,
-              style: TextStyle(
-                fontSize: 10,
-                color: isDark ? Colors.white : const Color(0xFF6D28D9),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _WordCard extends StatelessWidget {
-  const _WordCard({
-    required this.word,
-    required this.isDari,
-    required this.onTap,
-    required this.onToggleFavorite,
-  });
-
-  final VocabularyWord word;
-  final bool isDari;
-  final VoidCallback onTap;
-  final VoidCallback onToggleFavorite;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return InkWell(
-      onTap: onTap,
-      borderRadius: AppTokens.radius24,
-      child: Ink(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-          borderRadius: AppTokens.radius24,
-          boxShadow: [
-            BoxShadow(
-              color: isDark
-                  ? Colors.black.withValues(alpha: 0.18)
-                  : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-              blurRadius: 12,
-              offset: const Offset(0, 6),
-            ),
-          ],
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    word.german,
-                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          color:
-                              isDark ? AppTokens.darkText : AppTokens.lightText,
-                        ),
-                  ),
-                  Text(
-                    word.phonetic,
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: isDark
-                              ? AppTokens.darkTextMuted
-                              : AppTokens.lightTextMuted,
-                        ),
-                  ),
-                  const SizedBox(height: 4),
-                  Directionality(
-                    textDirection:
-                        isDari ? TextDirection.rtl : TextDirection.ltr,
-                    child: Text(
-                      isDari ? word.dari : word.english,
-                      textAlign: isDari ? TextAlign.right : TextAlign.left,
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: isDark
-                                ? AppTokens.darkTextMuted
-                                : AppTokens.lightTextMuted,
-                            fontFamily: isDari ? 'Vazirmatn' : null,
-                          ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            _TagChip(tag: word.tag),
-            IconButton(
-              onPressed: onToggleFavorite,
-              icon: Icon(
-                word.isFavorite
-                    ? Icons.favorite_rounded
-                    : Icons.favorite_border_rounded,
-                color: word.isFavorite
-                    ? const Color(0xFFEF4444)
-                    : (isDark
-                        ? const Color(0xFF475569)
-                        : const Color(0xFFCBD5F5)),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _TagChip extends StatelessWidget {
-  const _TagChip({required this.tag});
-
-  final String tag;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    Color bg;
-    Color fg;
-
-    switch (tag) {
-      case 'HR':
-        bg = isDark ? const Color(0xFF1E3A8A) : const Color(0xFFDBEAFE);
-        fg = isDark ? const Color(0xFFBFDBFE) : const Color(0xFF1D4ED8);
-        break;
-      case 'Finance':
-        bg = isDark ? const Color(0xFF14532D) : const Color(0xFFDCFCE7);
-        fg = isDark ? const Color(0xFF86EFAC) : const Color(0xFF15803D);
-        break;
-      case 'IT':
-        bg = isDark ? const Color(0xFF155E75) : const Color(0xFFECFEFF);
-        fg = isDark ? const Color(0xFF67E8F9) : const Color(0xFF0E7490);
-        break;
-      case 'Legal':
-        bg = isDark ? const Color(0xFF7F1D1D) : const Color(0xFFFEE2E2);
-        fg = isDark ? const Color(0xFFFCA5A5) : const Color(0xFFB91C1C);
-        break;
-      case 'Marketing':
-        bg = isDark ? const Color(0xFF9A3412) : const Color(0xFFFFEDD5);
-        fg = isDark ? const Color(0xFFFED7AA) : const Color(0xFFC2410C);
-        break;
-      case 'Sales':
-        bg = isDark ? const Color(0xFF92400E) : const Color(0xFFFEF3C7);
-        fg = isDark ? const Color(0xFFFCD34D) : const Color(0xFFB45309);
-        break;
-      case 'Learning':
-        bg = isDark ? const Color(0xFF312E81) : const Color(0xFFEDE9FE);
-        fg = isDark ? const Color(0xFFC4B5FD) : const Color(0xFF6D28D9);
-        break;
-      default:
-        bg = isDark ? const Color(0xFF312E81) : const Color(0xFFEDE9FE);
-        fg = isDark ? const Color(0xFFC4B5FD) : const Color(0xFF6D28D9);
-    }
-
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-        color: bg,
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Text(
-        tag,
-        style: TextStyle(fontSize: 10, color: fg),
-      ),
-    );
-  }
-}
-
-class _WordDetailView extends StatelessWidget {
-  const _WordDetailView({
-    required this.word,
-    required this.isDari,
-    required this.onBack,
-    required this.onFavorite,
-    required this.onDifficulty,
-    required this.onFlashcard,
-  });
-
-  final VocabularyWord word;
-  final bool isDari;
-  final VoidCallback onBack;
-  final VoidCallback onFavorite;
-  final ValueChanged<String> onDifficulty;
-  final VoidCallback onFlashcard;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final translation = isDari ? word.dari : word.english;
-    final contextText = isDari ? word.contextDari : word.context;
-
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(20, 24, 20, 110),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                _IconButton(
-                  icon: Icons.arrow_back_rounded,
-                  onPressed: onBack,
-                ),
-                const Spacer(),
-                _IconButton(
-                  icon: word.isFavorite
-                      ? Icons.favorite_rounded
-                      : Icons.favorite_border_rounded,
-                  iconColor: word.isFavorite
-                      ? const Color(0xFFEF4444)
-                      : null,
-                  onPressed: onFavorite,
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: AppTokens.radius30,
-                gradient: const LinearGradient(
-                  colors: [Color(0xFF3B82F6), Color(0xFFA855F7)],
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0xFF3B82F6).withValues(alpha: 0.3),
-                    blurRadius: 20,
-                    offset: const Offset(0, 8),
-                  ),
-                ],
-              ),
-              child: Column(
-                children: [
-                  Text(
-                    word.german,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    word.phonetic,
-                    style: const TextStyle(color: Colors.white70),
-                  ),
-                  const SizedBox(height: 10),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.2),
-                      shape: BoxShape.circle,
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.volume_up_rounded,
-                          color: Colors.white),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 14),
-            _InfoCard(
-              title: 'Bedeutung',
-              content: translation,
-              isDari: isDari,
-            ),
-            const SizedBox(height: 10),
-            _InfoCard(
-              title: 'Beispielsatz',
-              content: word.example,
-            ),
-            const SizedBox(height: 10),
-            _InfoCard(
-              title: 'Business-Kontext',
-              content: contextText,
-              isDari: isDari,
-              chip: word.tag,
-            ),
-            const SizedBox(height: 12),
-            Row(
-              children: [
-                Expanded(
-                  child: DropdownButtonFormField<String>(
-                    value: word.difficulty,
-                    items: const [
-                      DropdownMenuItem(value: 'easy', child: Text('Leicht')),
-                      DropdownMenuItem(value: 'medium', child: Text('Mittel')),
-                      DropdownMenuItem(value: 'hard', child: Text('Schwer')),
-                    ],
-                    onChanged: (value) {
-                      if (value != null) onDifficulty(value);
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: FilledButton(
-                    onPressed: onFlashcard,
-                    style: FilledButton.styleFrom(
-                      backgroundColor: const Color(0xFF3B82F6),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                    ),
-                    child: const Text('Flashcard starten'),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _InfoCard extends StatelessWidget {
-  const _InfoCard({
-    required this.title,
-    required this.content,
-    this.isDari = false,
-    this.chip,
-  });
-
-  final String title;
-  final String content;
-  final bool isDari;
-  final String? chip;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius30,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.16)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 12,
-            offset: const Offset(0, 6),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(18),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: isDark ? AppTokens.darkText : AppTokens.lightText,
-                ),
-          ),
-          const SizedBox(height: 6),
-          Directionality(
-            textDirection: isDari ? TextDirection.rtl : TextDirection.ltr,
-            child: Text(
-              content,
-              textAlign: isDari ? TextAlign.right : TextAlign.left,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: isDark
-                        ? AppTokens.darkTextMuted
-                        : AppTokens.lightTextMuted,
-                    fontFamily: isDari ? 'Vazirmatn' : null,
-                  ),
-            ),
-          ),
-          if (chip != null) ...[
-            const SizedBox(height: 10),
-            _TagChip(tag: chip!),
-          ],
-        ],
-      ),
-    );
-  }
-}
-
-class _FlashcardView extends StatelessWidget {
-  const _FlashcardView({
-    required this.word,
-    required this.isDari,
-    required this.index,
-    required this.total,
-    required this.isFlipped,
-    required this.onToggleFlip,
-    required this.onClose,
-    required this.onDifficulty,
-  });
-
-  final VocabularyWord word;
-  final bool isDari;
-  final int index;
-  final int total;
-  final bool isFlipped;
-  final VoidCallback onToggleFlip;
-  final VoidCallback onClose;
-  final ValueChanged<String> onDifficulty;
-
-  @override
-  Widget build(BuildContext context) {
-    final progress = total == 0 ? 0.0 : index / total;
-
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                _IconButton(
-                  icon: Icons.close_rounded,
-                  onPressed: onClose,
-                ),
-                const Spacer(),
-                Text(
-                  '$index / $total',
-                  style: Theme.of(context).textTheme.labelMedium,
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(999),
-              child: LinearProgressIndicator(
-                value: progress,
-                minHeight: 6,
-              ),
-            ),
-            const SizedBox(height: 24),
-            Expanded(
-              child: Center(
-                child: GestureDetector(
-                  onTap: onToggleFlip,
-                  child: TweenAnimationBuilder<double>(
-                    tween: Tween<double>(begin: 0, end: isFlipped ? 1 : 0),
-                    duration: const Duration(milliseconds: 300),
-                    builder: (context, value, child) {
-                      final angle = value * math.pi;
-                      final isBack = angle > math.pi / 2;
-
-                      return Transform(
-                        transform: Matrix4.identity()
-                          ..setEntry(3, 2, 0.001)
-                          ..rotateY(angle),
-                        alignment: Alignment.center,
-                        child: Container(
-                          width: double.infinity,
-                          constraints: const BoxConstraints(maxWidth: 360),
-                          padding: const EdgeInsets.all(24),
-                          decoration: BoxDecoration(
-                            borderRadius: AppTokens.radius30,
-                            gradient: LinearGradient(
-                              colors: isBack
-                                  ? const [Color(0xFF22C55E), Color(0xFF0D9488)]
-                                  : const [Color(0xFF3B82F6), Color(0xFFA855F7)],
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.2),
-                                blurRadius: 20,
-                                offset: const Offset(0, 10),
-                              ),
-                            ],
-                          ),
-                          child: Transform(
-                            alignment: Alignment.center,
-                            transform: Matrix4.identity()
-                              ..rotateY(isBack ? math.pi : 0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  isBack
-                                      ? (isDari ? 'دری' : 'English')
-                                      : 'Deutsch',
-                                  style: const TextStyle(color: Colors.white70),
-                                ),
-                                const SizedBox(height: 10),
-                                Directionality(
-                                  textDirection: isBack && isDari
-                                      ? TextDirection.rtl
-                                      : TextDirection.ltr,
-                                  child: Text(
-                                    isBack
-                                        ? (isDari ? word.dari : word.english)
-                                        : word.german,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 26,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: isBack && isDari
-                                          ? 'Vazirmatn'
-                                          : null,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                if (!isBack)
-                                  Text(
-                                    word.phonetic,
-                                    style:
-                                        const TextStyle(color: Colors.white70),
-                                  ),
-                                if (isBack) ...[
-                                  const SizedBox(height: 12),
-                                  Container(
-                                    padding: const EdgeInsets.all(12),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white.withValues(alpha: 0.2),
-                                      borderRadius: BorderRadius.circular(16),
-                                    ),
-                                    child: Text(
-                                      word.example,
-                                      textAlign: TextAlign.center,
-                                      style:
-                                          const TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 12, vertical: 6),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white.withValues(alpha: 0.2),
-                                      borderRadius: BorderRadius.circular(999),
-                                    ),
-                                    child: Text(
-                                      word.tag,
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 11,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ],
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Row(
-              children: [
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: () => onDifficulty('hard'),
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: const Color(0xFFDC2626),
-                    ),
-                    child: const Text('❌ Schwer'),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: () => onDifficulty('medium'),
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: const Color(0xFFB45309),
-                    ),
-                    child: const Text('🤔 Mittel'),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: FilledButton(
-                    onPressed: () => onDifficulty('easy'),
-                    style: FilledButton.styleFrom(
-                      backgroundColor: const Color(0xFF22C55E),
-                      foregroundColor: Colors.white,
-                    ),
-                    child: const Text('✅ Leicht'),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _IconButton extends StatelessWidget {
-  const _IconButton({
-    required this.icon,
-    required this.onPressed,
-    this.iconColor,
-  });
-
-  final IconData icon;
-  final VoidCallback onPressed;
-  final Color? iconColor;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Material(
-      color: Colors.transparent,
-      borderRadius: AppTokens.radius16,
-      child: InkWell(
-        onTap: onPressed,
-        borderRadius: AppTokens.radius16,
-        child: Ink(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: isDark ? const Color(0xFF1E293B) : Colors.white,
-            borderRadius: AppTokens.radius16,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.08),
-                blurRadius: 8,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          child: Icon(
-            icon,
-            size: 20,
-            color: iconColor ??
-                (isDark ? const Color(0xFFE2E8F0) : const Color(0xFF64748B)),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _FlashcardFab extends StatelessWidget {
-  const _FlashcardFab({required this.onPressed});
-
-  final VoidCallback? onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: AnimatedOpacity(
-        opacity: onPressed == null ? 0.4 : 1,
-        duration: const Duration(milliseconds: 200),
-        child: Container(
-          width: 56,
-          height: 56,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            gradient: const LinearGradient(
-              colors: [Color(0xFF3B82F6), Color(0xFFA855F7)],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF3B82F6).withValues(alpha: 0.4),
-                blurRadius: 16,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          child: const Icon(Icons.style_rounded, color: Colors.white),
-        ),
-      ),
-    );
-  }
-}
-
-class _CategoryStyle {
-  const _CategoryStyle({required this.emoji, required this.colors});
-
-  final String emoji;
-  final List<Color> colors;
-}
-
-const _categoryFallbackStyles = <_CategoryStyle>[
-  _CategoryStyle(emoji: '💼', colors: [Color(0xFF3B82F6), Color(0xFF2563EB)]),
-  _CategoryStyle(emoji: '💬', colors: [Color(0xFF14B8A6), Color(0xFF0D9488)]),
-  _CategoryStyle(emoji: '🤝', colors: [Color(0xFFA855F7), Color(0xFF7E22CE)]),
-  _CategoryStyle(emoji: '💻', colors: [Color(0xFF06B6D4), Color(0xFF0E7490)]),
-  _CategoryStyle(emoji: '💰', colors: [Color(0xFF22C55E), Color(0xFF16A34A)]),
-  _CategoryStyle(emoji: '📄', colors: [Color(0xFFFF5A6E), Color(0xFFFF2D45)]),
-  _CategoryStyle(emoji: '📢', colors: [Color(0xFFFF8A00), Color(0xFFFB5607)]),
-  _CategoryStyle(emoji: '🎓', colors: [Color(0xFF6366F1), Color(0xFF4F46E5)]),
-];
-
-const _categoryDesignStyles = <String, _CategoryStyle>{
-  'Bewerbung & Karriere': _CategoryStyle(
-      emoji: '💼', colors: [Color(0xFF3B82F6), Color(0xFF2563EB)]),
-  'Buro Kommunikation': _CategoryStyle(
-      emoji: '💬', colors: [Color(0xFF14B8A6), Color(0xFF0D9488)]),
-  'Meetings': _CategoryStyle(
-      emoji: '🤝', colors: [Color(0xFFA855F7), Color(0xFF7E22CE)]),
-  'IT & Technik': _CategoryStyle(
-      emoji: '💻', colors: [Color(0xFF06B6D4), Color(0xFF0E7490)]),
-  'Finanzen': _CategoryStyle(
-      emoji: '💰', colors: [Color(0xFF22C55E), Color(0xFF16A34A)]),
-  'Vertrage': _CategoryStyle(
-      emoji: '📄', colors: [Color(0xFFFF5A6E), Color(0xFFFF2D45)]),
-  'Marketing': _CategoryStyle(
-      emoji: '📢', colors: [Color(0xFFFF8A00), Color(0xFFFB5607)]),
-  'Bildung': _CategoryStyle(
-      emoji: '🎓', colors: [Color(0xFF6366F1), Color(0xFF4F46E5)]),
-};
-
-_CategoryStyle _categoryStyleFor(String category, int index) {
-  return _categoryDesignStyles[category] ??
-      _categoryFallbackStyles[index % _categoryFallbackStyles.length];
-}
-
-List<MapEntry<String, int>> _sortCategoryEntries(
-    List<MapEntry<String, int>> entries) {
-  const categoryOrder = <String>[
-    'Bewerbung & Karriere',
-    'Buro Kommunikation',
-    'Meetings',
-    'IT & Technik',
-    'Finanzen',
-    'Vertrage',
-    'Marketing',
-    'Bildung',
-  ];
-
-  final orderLookup = <String, int>{
-    for (var i = 0; i < categoryOrder.length; i++) categoryOrder[i]: i,
-  };
-
-  entries.sort((a, b) {
-    final ai = orderLookup[a.key] ?? 999;
-    final bi = orderLookup[b.key] ?? 999;
-    if (ai != bi) return ai.compareTo(bi);
-    return a.key.compareTo(b.key);
-  });
-  return entries;
-}
-
-extension<T> on Iterable<T> {
-  T? get firstOrNull => isEmpty ? null : first;
-}
-
 class _VocabularyPageState extends ConsumerState<VocabularyPage> {
-  _VocabTab _tab = _VocabTab.words;
+  String _tab = 'words';
   String _search = '';
   String? _selectedCategory;
-  String? _selectedWordId;
-
   bool _flashcardMode = false;
+  VocabWord? _selectedWord;
   int _flashcardIndex = 0;
   bool _isFlipped = false;
+  bool _isDari = false;
 
-  @override
-  Widget build(BuildContext context) {
-    final wordsAsync = ref.watch(vocabularyStreamProvider);
-    final prefsAsync = ref.watch(userPreferencesStreamProvider);
+  final _tabs = const [
+    ('words', 'Wörter'), ('phrases', 'Phrasen'),
+    ('favorites', 'Favoriten'), ('difficult', 'Schwierig'),
+  ];
 
-    if (wordsAsync.isLoading || prefsAsync.isLoading) {
-      return const Center(child: CircularProgressIndicator());
-    }
-    if (wordsAsync.hasError || prefsAsync.hasError) {
-      return Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.error_outline_rounded, size: 44),
-              const SizedBox(height: 10),
-              const Text('Failed to load vocabulary data'),
-              const SizedBox(height: 12),
-              FilledButton(
-                onPressed: () {
-                  ref.invalidate(vocabularyStreamProvider);
-                  ref.invalidate(userPreferencesStreamProvider);
-                },
-                child: const Text('Retry'),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
-    final words = wordsAsync.value!;
-    final prefs = prefsAsync.value!;
-    final isDari = prefs.nativeLanguage == 'dari';
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    var filtered = words.where((w) {
-      if (_tab == _VocabTab.favorites && !w.isFavorite) return false;
-      if (_tab == _VocabTab.difficult && !w.isDifficult) return false;
-      if (_selectedCategory != null && w.category != _selectedCategory) {
-        return false;
-      }
+  List<VocabWord> _filtered(List<VocabWord> words) {
+    return words.where((w) {
+      if (_tab == 'favorites' && !w.isFavorite) return false;
+      if (_tab == 'difficult' && !w.isDifficult) return false;
+      if (_selectedCategory != null && w.category != _selectedCategory) return false;
       if (_search.isNotEmpty) {
-        final needle = _search.toLowerCase();
-        final inGerman = w.german.toLowerCase().contains(needle);
-        final inEnglish = w.english.toLowerCase().contains(needle);
-        final inDari = w.dari.contains(needle);
-        if (!(inGerman || inEnglish || inDari)) return false;
+        final s = _search.toLowerCase();
+        if (!w.german.toLowerCase().contains(s) &&
+            !w.english.toLowerCase().contains(s) &&
+            !w.dari.contains(s)) return false;
       }
       return true;
     }).toList();
+  }
 
-    if (_selectedWordId != null) {
-      final selected = words.where((w) => w.id == _selectedWordId).firstOrNull;
-      if (selected == null) {
-        _selectedWordId = null;
-      } else {
-        return _WordDetailView(
-          word: selected,
-          isDari: isDari,
-          onBack: () => setState(() => _selectedWordId = null),
-          onFavorite: () =>
-              ref.read(appSettingsActionsProvider).toggleFavorite(selected.id),
-          onDifficulty: (difficulty) => ref
-              .read(appSettingsActionsProvider)
-              .setWordDifficulty(selected.id, difficulty),
-          onFlashcard: () {
-            setState(() {
-              _flashcardMode = true;
-              _flashcardIndex = 0;
-              _isFlipped = false;
-              _selectedWordId = null;
-            });
-          },
-        );
-      }
-    }
+  @override
+  Widget build(BuildContext context) {
+    final words = ref.watch(_vocabProvider);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    if (_flashcardMode) return _buildFlashcard(isDark, words);
+    if (_selectedWord != null) return _buildWordDetail(isDark, words);
+    return _buildMain(isDark, words);
+  }
 
-    final flashcardWords = filtered.isNotEmpty ? filtered : words;
-    if (_flashcardMode && flashcardWords.isNotEmpty) {
-      final currentWord =
-          flashcardWords[_flashcardIndex % flashcardWords.length];
-      return _FlashcardView(
-        word: currentWord,
-        isDari: isDari,
-        index: (_flashcardIndex % flashcardWords.length) + 1,
-        total: flashcardWords.length,
-        isFlipped: _isFlipped,
-        onToggleFlip: () => setState(() => _isFlipped = !_isFlipped),
-        onClose: () => setState(() {
-          _flashcardMode = false;
-          _isFlipped = false;
-          _flashcardIndex = 0;
-        }),
-        onDifficulty: (difficulty) async {
-          await ref
-              .read(appSettingsActionsProvider)
-              .setWordDifficulty(currentWord.id, difficulty);
-          if (!mounted) return;
-          setState(() {
-            _isFlipped = false;
-            _flashcardIndex = (_flashcardIndex + 1) % flashcardWords.length;
-          });
-        },
-      );
-    }
+  // ── MAIN VIEW ─────────────────────────────────────────────────────────────
+  Widget _buildMain(bool isDark, List<VocabWord> allWords) {
+    final tp   = isDark ? Colors.white : const Color(0xFF111827);
+    final tm   = isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280);
+    final card = isDark ? const Color(0xFF0F172A) : Colors.white;
+    final tabBg= isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
+    final filtered = _filtered(allWords);
 
-    final categoryCounts = <String, int>{};
-    for (final w in words) {
-      categoryCounts[w.category] = (categoryCounts[w.category] ?? 0) + 1;
-    }
-    final categoryEntries =
-        _sortCategoryEntries(categoryCounts.entries.toList());
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-    return SafeArea(
-      child: Stack(
-        children: [
-          SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(20, 24, 20, 120),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _Header(
-                  isDari: isDari,
-                  onBack: () => context.go('/'),
-                  onToggleLanguage: () {
-                    final next = isDari ? 'en' : 'dari';
-                    ref.read(appSettingsActionsProvider).setNativeLanguage(next);
-                  },
-                ),
-                const SizedBox(height: 14),
-                _SearchField(
-                  onChanged: (value) => setState(() => _search = value),
-                ),
-                const SizedBox(height: 14),
-                _TabBar(
-                  tab: _tab,
-                  onChanged: (next) => setState(() {
-                    _tab = next;
-                    _selectedCategory = null;
-                  }),
-                ),
-                const SizedBox(height: 16),
-                if (_tab == _VocabTab.words && _selectedCategory == null)
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Business-Kategorien',
-                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              color: isDark
-                                  ? AppTokens.darkText
-                                  : AppTokens.lightText,
-                            ),
-                      ),
-                      const SizedBox(height: 12),
-                      GridView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: categoryEntries.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 12,
-                          crossAxisSpacing: 12,
-                          childAspectRatio: 1.25,
-                        ),
-                        itemBuilder: (context, index) {
-                          final entry = categoryEntries[index];
-                          final style = _categoryStyleFor(entry.key, index);
+        // ── Header ──────────────────────────────────────────────────────
+        Row(children: [
+          _BackBtn(isDark: isDark, onTap: () => context.go('/')),
+          const SizedBox(width: 12),
+          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('Wortschatz 📚', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: tp)),
+            Text('${allWords.length} Wörter · ${_catConfigs.length} Kategorien',
+                style: TextStyle(fontSize: 12, color: tm)),
+          ])),
+          // Lang toggle
+          _LangToggle(isDari: _isDari, isDark: isDark, card: card, tp: tp,
+              onTap: () => setState(() => _isDari = !_isDari)),
+        ]),
 
-                          return _CategoryTile(
-                            title: entry.key,
-                            count: entry.value,
-                            style: style,
-                            onTap: () =>
-                                setState(() => _selectedCategory = entry.key),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                if (_selectedCategory != null)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 6),
-                    child: Row(
-                      children: [
-                        TextButton(
-                          onPressed: () =>
-                              setState(() => _selectedCategory = null),
-                          child: const Text('Alle Kategorien'),
-                        ),
-                        const Icon(Icons.chevron_right_rounded, size: 16),
-                        Flexible(
-                          child: Text(
-                            _selectedCategory!,
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                if (_tab == _VocabTab.phrases)
-                  Column(
-                    children: [
-                      for (final phrase in phraseSeed)
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
-                          child: _PhraseCard(
-                            phrase: phrase,
-                            isDari: isDari,
-                          ),
-                        ),
-                    ],
-                  )
-                else if (_selectedCategory != null || _tab != _VocabTab.words)
-                  Column(
-                    children: [
-                      for (final word in filtered)
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
-                          child: _WordCard(
-                            word: word,
-                            isDari: isDari,
-                            onTap: () =>
-                                setState(() => _selectedWordId = word.id),
-                            onToggleFavorite: () => ref
-                                .read(appSettingsActionsProvider)
-                                .toggleFavorite(word.id),
-                          ),
-                        ),
-                      if (filtered.isEmpty)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 24),
-                          child: Column(
-                            children: [
-                              Text(
-                                _tab == _VocabTab.favorites
-                                    ? '💝'
-                                    : _tab == _VocabTab.difficult
-                                        ? '💪'
-                                        : '🔍',
-                                style: const TextStyle(fontSize: 36),
-                              ),
-                              const SizedBox(height: 6),
-                              Text(
-                                _tab == _VocabTab.favorites
-                                    ? 'Keine Favoriten'
-                                    : _tab == _VocabTab.difficult
-                                        ? 'Keine schwierigen Wörter'
-                                        : 'Keine Ergebnisse',
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                            ],
-                          ),
-                        ),
-                    ],
-                  ),
-              ],
+        const SizedBox(height: 14),
+
+        // ── Search ──────────────────────────────────────────────────────
+        Container(
+          decoration: BoxDecoration(color: card, borderRadius: BorderRadius.circular(16),
+              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, 3))]),
+          child: TextField(
+            onChanged: (v) => setState(() => _search = v),
+            style: TextStyle(fontSize: 14, color: isDark ? Colors.white : const Color(0xFF111827)),
+            decoration: InputDecoration(
+              hintText: 'Wort suchen auf Deutsch oder English...',
+              hintStyle: TextStyle(color: tm, fontSize: 13),
+              prefixIcon: Icon(Icons.search_rounded, color: tm, size: 20),
+              border: InputBorder.none,
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             ),
           ),
-          Positioned(
-            right: 20,
-            bottom: 90,
-            child: _FlashcardFab(
-              onPressed: words.isEmpty
-                  ? null
-                  : () => setState(() {
-                        _flashcardMode = true;
-                        _flashcardIndex = 0;
-                        _isFlipped = false;
-                      }),
+        ),
+
+        const SizedBox(height: 12),
+
+        // ── Tabs ─────────────────────────────────────────────────────────
+        Container(
+          padding: const EdgeInsets.all(4),
+          decoration: BoxDecoration(color: tabBg, borderRadius: BorderRadius.circular(16)),
+          child: Row(children: _tabs.map((t) {
+            final active = _tab == t.$1;
+            final count = t.$1 == 'favorites' ? allWords.where((w) => w.isFavorite).length
+                        : t.$1 == 'difficult' ? allWords.where((w) => w.isDifficult).length
+                        : null;
+            return Expanded(
+              child: GestureDetector(
+                onTap: () => setState(() { _tab = t.$1; _selectedCategory = null; _search = ''; }),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  decoration: BoxDecoration(
+                    color: active ? card : Colors.transparent,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: active ? [BoxShadow(color: Colors.black.withOpacity(0.07), blurRadius: 6, offset: const Offset(0, 2))] : null,
+                  ),
+                  child: Center(child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    Text(t.$2, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500,
+                        color: active ? const Color(0xFF2563EB) : tm)),
+                    if (count != null && count > 0) ...[
+                      const SizedBox(width: 4),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                        decoration: BoxDecoration(
+                          color: active ? const Color(0xFF2563EB) : tm,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: Text('$count', style: const TextStyle(fontSize: 9, color: Colors.white)),
+                      ),
+                    ],
+                  ])),
+                ),
+              ),
+            );
+          }).toList()),
+        ),
+
+        const SizedBox(height: 16),
+
+        // ── Phrases tab ──────────────────────────────────────────────────
+        if (_tab == 'phrases')
+          ..._buildPhrases(isDark, tp, tm, card)
+
+        // ── Category grid (words home) ───────────────────────────────────
+        else if (_tab == 'words' && _selectedCategory == null && _search.isEmpty)
+          ..._buildCategoryGrid(isDark, allWords, tp, tm, card)
+
+        // ── Word list ────────────────────────────────────────────────────
+        else ...[
+          // Category breadcrumb
+          if (_selectedCategory != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Row(children: [
+                GestureDetector(
+                  onTap: () => setState(() => _selectedCategory = null),
+                  child: const Text('Alle Kategorien', style: TextStyle(fontSize: 13, color: Color(0xFF3B82F6))),
+                ),
+                const Icon(Icons.chevron_right_rounded, size: 14, color: Color(0xFF94A3B8)),
+                Expanded(child: Text(_selectedCategory!, style: TextStyle(fontSize: 13, color: tp),
+                    overflow: TextOverflow.ellipsis)),
+                Text('${filtered.length} Wörter', style: TextStyle(fontSize: 12, color: tm)),
+              ]),
             ),
-          ),
+
+          if (_search.isNotEmpty && filtered.isEmpty)
+            Center(child: Padding(padding: const EdgeInsets.only(top: 32),
+              child: Text('Keine Wörter gefunden', style: TextStyle(fontSize: 14, color: tm))))
+          else
+            ..._buildWordList(filtered, isDark, allWords, tp, tm, card),
         ],
-      ),
+
+        const SizedBox(height: 8),
+      ]),
     );
+  }
+
+  // ── Category grid ─────────────────────────────────────────────────────────
+  List<Widget> _buildCategoryGrid(bool isDark, List<VocabWord> allWords, Color tp, Color tm, Color card) {
+    return [
+      // Flashcard CTA
+      GestureDetector(
+        onTap: () => setState(() { _flashcardMode = true; _flashcardIndex = 0; _isFlipped = false; }),
+        child: Container(
+          width: double.infinity, padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(colors: [Color(0xFF6366F1), Color(0xFF9333EA)]),
+            borderRadius: BorderRadius.circular(18),
+            boxShadow: [BoxShadow(color: const Color(0xFF6366F1).withOpacity(0.3), blurRadius: 12, offset: const Offset(0, 4))],
+          ),
+          child: Row(children: [
+            const Text('🎴', style: TextStyle(fontSize: 22)),
+            const SizedBox(width: 12),
+            Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const Text('Flashcard-Modus', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white)),
+              Text('${allWords.length} Karten', style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.7))),
+            ])),
+            const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 16),
+          ]),
+        ),
+      ),
+
+      const SizedBox(height: 20),
+
+      Text('Kategorien', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: tp)),
+      const SizedBox(height: 12),
+
+      GridView.count(
+        crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10,
+        childAspectRatio: 1.45, shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        children: _catConfigs.map((cat) {
+          final count = wordCountForCategory(cat.name);
+          return GestureDetector(
+            onTap: () => setState(() => _selectedCategory = cat.name),
+            child: Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: cat.colors, begin: Alignment.topLeft, end: Alignment.bottomRight),
+                borderRadius: BorderRadius.circular(18),
+                boxShadow: [BoxShadow(color: cat.colors.first.withOpacity(0.3), blurRadius: 10, offset: const Offset(0, 4))],
+              ),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text(cat.icon, style: const TextStyle(fontSize: 22)),
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(cat.name, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.white),
+                      maxLines: 1, overflow: TextOverflow.ellipsis),
+                  Text('$count Wörter', style: TextStyle(fontSize: 10, color: Colors.white.withOpacity(0.7))),
+                ]),
+              ]),
+            ),
+          );
+        }).toList(),
+      ),
+    ];
+  }
+
+  // ── Word list ──────────────────────────────────────────────────────────────
+  List<Widget> _buildWordList(List<VocabWord> filtered, bool isDark, List<VocabWord> allWords, Color tp, Color tm, Color card) {
+    return filtered.map((w) => Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: GestureDetector(
+        onTap: () => setState(() => _selectedWord = w),
+        child: Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: card, borderRadius: BorderRadius.circular(16),
+            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: const Offset(0, 2))],
+          ),
+          child: Row(children: [
+            Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                Expanded(child: Text(w.german, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: tp))),
+                _DiffDot(w.difficulty),
+              ]),
+              const SizedBox(height: 2),
+              Text(_isDari ? w.dari : w.english, style: TextStyle(fontSize: 12, color: tm),
+                  textDirection: _isDari ? TextDirection.rtl : TextDirection.ltr),
+              const SizedBox(height: 4),
+              Row(children: [
+                _TagPill(w.tag, isDark: isDark),
+                const SizedBox(width: 6),
+                _TagPill(w.category.split(' & ').first, isDark: isDark, muted: true),
+              ]),
+            ])),
+            const SizedBox(width: 8),
+            GestureDetector(
+              onTap: () => ref.read(_vocabProvider.notifier).toggleFavorite(w.id),
+              child: Padding(
+                padding: const EdgeInsets.all(4),
+                child: Icon(w.isFavorite ? Icons.favorite_rounded : Icons.favorite_outline_rounded,
+                    size: 20, color: w.isFavorite ? const Color(0xFFEF4444) : tm),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    )).toList();
+  }
+
+  // ── Phrases ────────────────────────────────────────────────────────────────
+  List<Widget> _buildPhrases(bool isDark, Color tp, Color tm, Color card) {
+    return _phrases.map((p) => Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: card, borderRadius: BorderRadius.circular(16),
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: const Offset(0, 2))],
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(children: [
+            Expanded(child: Text(p.german, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: tp))),
+            _TagPill(p.tag, isDark: isDark),
+          ]),
+          const SizedBox(height: 5),
+          Text(_isDari ? p.dari : p.english, style: TextStyle(fontSize: 12, color: tm),
+              textDirection: _isDari ? TextDirection.rtl : TextDirection.ltr),
+        ]),
+      ),
+    )).toList();
+  }
+
+  // ── WORD DETAIL ────────────────────────────────────────────────────────────
+  Widget _buildWordDetail(bool isDark, List<VocabWord> allWords) {
+    final w   = _selectedWord!;
+    final tp  = isDark ? Colors.white : const Color(0xFF111827);
+    final tm  = isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280);
+    final card= isDark ? const Color(0xFF0F172A) : Colors.white;
+    final cat = _catConfigs.firstWhere((c) => c.name == w.category, orElse: () => _catConfigs.first);
+
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(children: [
+          _BackBtn(isDark: isDark, onTap: () => setState(() => _selectedWord = null)),
+          const Spacer(),
+          GestureDetector(
+            onTap: () => ref.read(_vocabProvider.notifier).toggleFavorite(w.id),
+            child: Container(
+              width: 36, height: 36,
+              decoration: BoxDecoration(color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 8, offset: const Offset(0, 2))]),
+              child: Icon(w.isFavorite ? Icons.favorite_rounded : Icons.favorite_outline_rounded,
+                  size: 18, color: w.isFavorite ? const Color(0xFFEF4444) : tm),
+            ),
+          ),
+        ]),
+        const SizedBox(height: 16),
+
+        // Header card — uses category color
+        Container(
+          width: double.infinity, padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 20),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: cat.colors, begin: Alignment.topLeft, end: Alignment.bottomRight),
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: Column(children: [
+            Text(w.german, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: Colors.white), textAlign: TextAlign.center),
+            const SizedBox(height: 6),
+            Text(w.phonetic, style: TextStyle(fontSize: 13, color: Colors.white.withOpacity(0.65))),
+            const SizedBox(height: 12),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              _PillWhite(w.tag),
+              const SizedBox(width: 8),
+              _PillWhite(w.category.split(' ').first),
+            ]),
+          ]),
+        ),
+        const SizedBox(height: 14),
+
+        _DetailCard(card: card, title: _isDari ? 'دری' : 'English',
+            child: Text(_isDari ? w.dari : w.english,
+                style: TextStyle(fontSize: 15, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF374151)),
+                textDirection: _isDari ? TextDirection.rtl : TextDirection.ltr)),
+        const SizedBox(height: 10),
+
+        _DetailCard(card: card, title: 'Beispielsatz', child:
+            Text('"${w.example}"', style: TextStyle(fontSize: 14, fontStyle: FontStyle.italic,
+                color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF374151)))),
+        const SizedBox(height: 10),
+
+        _DetailCard(card: card, title: 'Kontext', child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(_isDari ? w.contextDari : w.context,
+              style: TextStyle(fontSize: 14, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF374151)),
+              textDirection: _isDari ? TextDirection.rtl : TextDirection.ltr),
+        ])),
+        const SizedBox(height: 10),
+
+        // Difficulty selector
+        _DetailCard(card: card, title: 'Schwierigkeit', child:
+          Row(children: ['easy', 'medium', 'hard'].map((d) {
+            final sel = w.difficulty == d;
+            final label = d == 'easy' ? 'Leicht' : d == 'medium' ? 'Mittel' : 'Schwer';
+            final color = d == 'easy' ? const Color(0xFF22C55E) : d == 'medium' ? const Color(0xFFF59E0B) : const Color(0xFFEF4444);
+            final bg    = d == 'easy'
+                ? (isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4))
+                : d == 'medium'
+                ? (isDark ? const Color(0xFF1C1A09) : const Color(0xFFFEFCE8))
+                : (isDark ? const Color(0xFF450A0A) : const Color(0xFFFFF1F2));
+            return Expanded(child: Padding(
+              padding: EdgeInsets.only(right: d != 'hard' ? 8 : 0),
+              child: GestureDetector(
+                onTap: () => ref.read(_vocabProvider.notifier).setDifficulty(w.id, d),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 150),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                    color: sel ? color : bg,
+                    borderRadius: BorderRadius.circular(12),
+                    border: sel ? null : Border.all(color: color.withOpacity(0.3), width: 1.5),
+                  ),
+                  child: Center(child: Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600,
+                      color: sel ? Colors.white : color))),
+                ),
+              ),
+            ));
+          }).toList()),
+        ),
+        const SizedBox(height: 14),
+
+        // Flashcard button
+        GestureDetector(
+          onTap: () => setState(() { _flashcardMode = true; _selectedWord = null; _flashcardIndex = 0; _isFlipped = false; }),
+          child: Container(
+            width: double.infinity, padding: const EdgeInsets.symmetric(vertical: 16),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: cat.colors),
+              borderRadius: BorderRadius.circular(14),
+              boxShadow: [BoxShadow(color: cat.colors.first.withOpacity(0.3), blurRadius: 10, offset: const Offset(0, 4))],
+            ),
+            child: const Center(child: Text('Flashcard starten',
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white))),
+          ),
+        ),
+      ]),
+    );
+  }
+
+  // ── FLASHCARD MODE ─────────────────────────────────────────────────────────
+  Widget _buildFlashcard(bool isDark, List<VocabWord> allWords) {
+    final words = _filtered(allWords).isNotEmpty ? _filtered(allWords) : allWords;
+    if (words.isEmpty) return const Center(child: Text('Keine Wörter'));
+    final w = words[_flashcardIndex % words.length];
+    final cat = _catConfigs.firstWhere((c) => c.name == w.category, orElse: () => _catConfigs.first);
+    final tm  = isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280);
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
+      child: Column(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          _BackBtn(isDark: isDark, onTap: () => setState(() { _flashcardMode = false; _flashcardIndex = 0; _isFlipped = false; })),
+          Text('${(_flashcardIndex % words.length) + 1} / ${words.length}',
+              style: TextStyle(fontSize: 13, color: tm)),
+        ]),
+        const SizedBox(height: 14),
+
+        // Progress bar
+        ClipRRect(
+          borderRadius: BorderRadius.circular(100),
+          child: LinearProgressIndicator(
+            value: ((_flashcardIndex % words.length) + 1) / words.length,
+            minHeight: 8,
+            backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
+            valueColor: AlwaysStoppedAnimation(cat.colors.first),
+          ),
+        ),
+
+        const SizedBox(height: 8),
+        Text(w.category, style: TextStyle(fontSize: 11, color: tm), textAlign: TextAlign.center),
+        const SizedBox(height: 20),
+
+        // Card
+        Expanded(
+          child: GestureDetector(
+            onTap: () => setState(() => _isFlipped = !_isFlipped),
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              transitionBuilder: (child, anim) => _FlipTransition(turns: anim, child: child),
+              child: _isFlipped
+                  ? _FlashBack(key: const ValueKey('b'), word: w, isDari: _isDari)
+                  : _FlashFront(key: const ValueKey('f'), word: w, colors: cat.colors),
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 20),
+
+        // Difficulty buttons
+        Row(children: [
+          Expanded(child: _DiffBtn(label: 'Schwer', emoji: '❌',
+              bg: isDark ? const Color(0xFF450A0A) : const Color(0xFFFFF1F2), fg: const Color(0xFFEF4444),
+              onTap: () => _nextCard('hard', words))),
+          const SizedBox(width: 10),
+          Expanded(child: _DiffBtn(label: 'Mittel', emoji: '🤔',
+              bg: isDark ? const Color(0xFF1C1A09) : const Color(0xFFFEFCE8), fg: const Color(0xFFF59E0B),
+              onTap: () => _nextCard('medium', words))),
+          const SizedBox(width: 10),
+          Expanded(child: _DiffBtn(label: 'Leicht', emoji: '✅',
+              bg: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4), fg: const Color(0xFF22C55E),
+              onTap: () => _nextCard('easy', words))),
+        ]),
+        const SizedBox(height: 8),
+      ]),
+    );
+  }
+
+  void _nextCard(String difficulty, List<VocabWord> words) {
+    final w = words[_flashcardIndex % words.length];
+    ref.read(_vocabProvider.notifier).setDifficulty(w.id, difficulty);
+    setState(() {
+      _isFlipped = false;
+      _flashcardIndex = (_flashcardIndex + 1) % words.length;
+    });
+  }
+}
+
+// ─── Shared small widgets ─────────────────────────────────────────────────────
+
+class _BackBtn extends StatelessWidget {
+  const _BackBtn({required this.isDark, required this.onTap});
+  final bool isDark; final VoidCallback onTap;
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: 36, height: 36,
+          decoration: BoxDecoration(
+            color: isDark ? const Color(0xFF1E293B) : Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 8, offset: const Offset(0, 2))],
+          ),
+          child: Icon(Icons.arrow_back_ios_new_rounded, size: 16,
+              color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF374151)),
+        ),
+      );
+}
+
+class _LangToggle extends StatelessWidget {
+  const _LangToggle({required this.isDari, required this.isDark, required this.card, required this.tp, required this.onTap});
+  final bool isDari, isDark; final Color card, tp; final VoidCallback onTap;
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+          decoration: BoxDecoration(color: card, borderRadius: BorderRadius.circular(12),
+              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.07), blurRadius: 8, offset: const Offset(0, 2))]),
+          child: Row(children: [
+            const Icon(Icons.translate_rounded, size: 15, color: Color(0xFF3B82F6)),
+            const SizedBox(width: 5),
+            Text(isDari ? 'دری' : 'EN', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: tp)),
+          ]),
+        ),
+      );
+}
+
+class _TagPill extends StatelessWidget {
+  const _TagPill(this.label, {required this.isDark, this.muted = false});
+  final String label; final bool isDark, muted;
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+        decoration: BoxDecoration(
+          color: muted
+              ? (isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9))
+              : (isDark ? const Color(0xFF1E3A5F) : const Color(0xFFEFF6FF)),
+          borderRadius: BorderRadius.circular(100),
+        ),
+        child: Text(label, style: TextStyle(fontSize: 10,
+            color: muted ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280)) : const Color(0xFF2563EB))),
+      );
+}
+
+class _PillWhite extends StatelessWidget {
+  const _PillWhite(this.label);
+  final String label;
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(100)),
+        child: Text(label, style: const TextStyle(fontSize: 11, color: Colors.white)),
+      );
+}
+
+class _DiffDot extends StatelessWidget {
+  const _DiffDot(this.d);
+  final String d;
+  @override
+  Widget build(BuildContext context) {
+    final c = d == 'easy' ? const Color(0xFF22C55E) : d == 'hard' ? const Color(0xFFEF4444) : const Color(0xFFF59E0B);
+    return Container(width: 8, height: 8, margin: const EdgeInsets.only(left: 6), decoration: BoxDecoration(color: c, shape: BoxShape.circle));
+  }
+}
+
+class _DetailCard extends StatelessWidget {
+  const _DetailCard({required this.card, required this.title, required this.child});
+  final Color card; final String title; final Widget child;
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Container(
+      width: double.infinity, padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(color: card, borderRadius: BorderRadius.circular(18),
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: const Offset(0, 2))]),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(title, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600,
+            color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280))),
+        const SizedBox(height: 6),
+        child,
+      ]),
+    );
+  }
+}
+
+class _DiffBtn extends StatelessWidget {
+  const _DiffBtn({required this.label, required this.emoji, required this.bg, required this.fg, required this.onTap});
+  final String label, emoji; final Color bg, fg; final VoidCallback onTap;
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(16)),
+          child: Column(children: [
+            Text(emoji, style: const TextStyle(fontSize: 20)),
+            const SizedBox(height: 4),
+            Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: fg)),
+          ]),
+        ),
+      );
+}
+
+// Flashcard widgets
+class _FlashFront extends StatelessWidget {
+  const _FlashFront({super.key, required this.word, required this.colors});
+  final VocabWord word; final List<Color> colors;
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: colors, begin: Alignment.topLeft, end: Alignment.bottomRight),
+          borderRadius: BorderRadius.circular(28),
+          boxShadow: [BoxShadow(color: colors.first.withOpacity(0.35), blurRadius: 24, offset: const Offset(0, 10))],
+        ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text('Deutsch', style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.6))),
+          const SizedBox(height: 14),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Text(word.german, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: Colors.white), textAlign: TextAlign.center)),
+          const SizedBox(height: 8),
+          Text(word.phonetic, style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.6))),
+          const SizedBox(height: 24),
+          Text('Tippen zum Umdrehen', style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.4))),
+        ]),
+      );
+}
+
+class _FlashBack extends StatelessWidget {
+  const _FlashBack({super.key, required this.word, required this.isDari});
+  final VocabWord word; final bool isDari;
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(colors: [Color(0xFF22C55E), Color(0xFF0D9488)], begin: Alignment.topLeft, end: Alignment.bottomRight),
+          borderRadius: BorderRadius.circular(28),
+          boxShadow: [BoxShadow(color: const Color(0xFF22C55E).withOpacity(0.3), blurRadius: 24, offset: const Offset(0, 10))],
+        ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(isDari ? 'دری' : 'English', style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.6))),
+          const SizedBox(height: 14),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Text(isDari ? word.dari : word.english,
+                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.white), textAlign: TextAlign.center,
+                textDirection: isDari ? TextDirection.rtl : TextDirection.ltr)),
+          const SizedBox(height: 16),
+          Container(margin: const EdgeInsets.symmetric(horizontal: 28), padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(16)),
+              child: Text(word.example, style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.9)), textAlign: TextAlign.center)),
+          const SizedBox(height: 10),
+          Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(100)),
+              child: Text(word.tag, style: const TextStyle(fontSize: 11, color: Colors.white))),
+        ]),
+      );
+}
+
+class _FlipTransition extends AnimatedWidget {
+  const _FlipTransition({required Animation<double> turns, required this.child}) : super(listenable: turns);
+  final Widget child;
+  @override
+  Widget build(BuildContext context) {
+    final v = (listenable as Animation<double>).value;
+    return Transform(transform: Matrix4.rotationY((1 - v) * 3.14159), alignment: Alignment.center, child: child);
   }
 }

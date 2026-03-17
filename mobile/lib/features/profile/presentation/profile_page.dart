@@ -1,835 +1,432 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../core/database/app_database.dart';
-import '../../../core/database/database_providers.dart';
-import '../../../core/theme/app_tokens.dart';
-import '../../../shared/widgets/progress_ring.dart';
+// ─── Achievement model ────────────────────────────────────────────────────────
+class _Achievement {
+  const _Achievement({required this.id, required this.icon, required this.title, required this.description, required this.unlocked});
+  final String id, icon, title, description;
+  final bool unlocked;
+}
 
+const _achievements = [
+  _Achievement(id: 'a1', icon: '🎯', title: 'Erste Schritte',    description: '10 Wörter gelernt',        unlocked: true),
+  _Achievement(id: 'a2', icon: '📚', title: 'Wortschatz-Profi', description: '50 Wörter gelernt',         unlocked: true),
+  _Achievement(id: 'a3', icon: '🔥', title: 'Streak-Meister',   description: '7 Tage in Folge',           unlocked: true),
+  _Achievement(id: 'a4', icon: '💎', title: 'Grammatik-Guru',   description: '10 Grammatikthemen',        unlocked: false),
+  _Achievement(id: 'a5', icon: '🏆', title: 'Perfektionist',    description: '100% in einem Test',        unlocked: false),
+  _Achievement(id: 'a6', icon: '⭐', title: 'Business-Experte', description: 'Alle Business-Wörter',      unlocked: false),
+];
+
+// ─── ProfilePage ──────────────────────────────────────────────────────────────
 class ProfilePage extends ConsumerStatefulWidget {
   const ProfilePage({super.key});
-
   @override
   ConsumerState<ProfilePage> createState() => _ProfilePageState();
 }
 
 class _ProfilePageState extends ConsumerState<ProfilePage> {
+  bool _darkMode = false;
   String _language = 'en';
+  String _nativeLang = 'en';
 
   @override
   Widget build(BuildContext context) {
-    final stats = ref.watch(userStatsStreamProvider);
-    final prefs = ref.watch(userPreferencesStreamProvider);
-    final achievements = ref.watch(achievementsStreamProvider);
-
-    if (stats.isLoading || prefs.isLoading || achievements.isLoading) {
-      return const Center(child: CircularProgressIndicator());
-    }
-
-    if (stats.hasError || prefs.hasError || achievements.hasError) {
-      return Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.error_outline_rounded, size: 44),
-              const SizedBox(height: 10),
-              const Text('Failed to load profile data'),
-              const SizedBox(height: 12),
-              FilledButton(
-                onPressed: () {
-                  ref.invalidate(userStatsStreamProvider);
-                  ref.invalidate(userPreferencesStreamProvider);
-                  ref.invalidate(achievementsStreamProvider);
-                },
-                child: const Text('Retry'),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
-    final userStats = stats.value!;
-    final userPrefs = prefs.value!;
-    final achievementList = achievements.value!;
-    final unlocked = achievementList.where((a) => a.unlocked).length;
-    final weakAreas = (jsonDecode(userStats.weakAreasJson) as List<dynamic>)
-        .map((e) => e.toString())
-        .toList();
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textPrimary = isDark ? Colors.white : const Color(0xFF111827);
+    final textMuted   = isDark ? const Color(0xFF94A3B8) : const Color(0xFF6B7280);
+    final cardColor   = isDark ? const Color(0xFF0F172A) : Colors.white;
 
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(20, 24, 20, 100),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                _IconButton(
-                  icon: Icons.arrow_back_rounded,
-                  onPressed: () => context.go('/'),
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Profil',
-                        style:
-                            Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  color: isDark
-                                      ? AppTokens.darkText
-                                      : AppTokens.lightText,
-                                ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        'Deine Lernstatistik',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: isDark
-                                  ? AppTokens.darkTextMuted
-                                  : AppTokens.lightTextMuted,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+    // Mock stats — replace with Riverpod provider
+    const xp = 340;
+    const streak = 7;
+    const wordsLearned = 42;
+    const exercisesDone = 15;
+    const grammarDone = 8;
+    const weeklyProgress = 68;
+    const level = 'A2';
+    const weakAreas = ['Dativ', 'Konjunktiv II'];
+
+    final statCards = [
+      (label: 'XP Punkte',  value: '$xp',            icon: '⚡', bg: isDark ? const Color(0xFF422006) : const Color(0xFFFEFCE8), fg: const Color(0xFFCA8A04)),
+      (label: 'Streak',     value: '$streak Tage',    icon: '🔥', bg: isDark ? const Color(0xFF431407) : const Color(0xFFFFF7ED), fg: const Color(0xFFEA580C)),
+      (label: 'Wörter',     value: '$wordsLearned',   icon: '📚', bg: isDark ? const Color(0xFF1E3A5F) : const Color(0xFFEFF6FF), fg: const Color(0xFF2563EB)),
+      (label: 'Übungen',    value: '$exercisesDone',  icon: '🎯', bg: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4), fg: const Color(0xFF16A34A)),
+    ];
+
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+
+        // ── Header ────────────────────────────────────────────────────────
+        Row(children: [
+          _BackButton(isDark: isDark, onTap: () => context.go('/')),
+          const SizedBox(width: 12),
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('Profil', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: textPrimary)),
+            Text('Deine Lernstatistik', style: TextStyle(fontSize: 12, color: textMuted)),
+          ]),
+        ]),
+
+        const SizedBox(height: 20),
+
+        // ── Level Card (blue→purple→pink gradient) ──────────────────────
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(22),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Color(0xFF3B82F6), Color(0xFFA855F7), Color(0xFFEC4899)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
-            const SizedBox(height: 16),
-            _LevelCard(stats: userStats),
-            const SizedBox(height: 18),
-            Text(
-              'Statistiken',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: isDark ? AppTokens.darkText : AppTokens.lightText,
+            borderRadius: BorderRadius.circular(24),
+            boxShadow: [BoxShadow(color: const Color(0xFFA855F7).withOpacity(0.35), blurRadius: 20, offset: const Offset(0, 8))],
+          ),
+          child: Column(children: [
+            // Progress ring (white)
+            SizedBox(
+              width: 110, height: 110,
+              child: Stack(alignment: Alignment.center, children: [
+                SizedBox(
+                  width: 110, height: 110,
+                  child: CircularProgressIndicator(
+                    value: weeklyProgress / 100,
+                    strokeWidth: 8,
+                    backgroundColor: Colors.white.withOpacity(0.25),
+                    valueColor: const AlwaysStoppedAnimation(Colors.white),
+                    strokeCap: StrokeCap.round,
                   ),
+                ),
+                Column(mainAxisSize: MainAxisSize.min, children: [
+                  Text(level, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: Colors.white)),
+                  Text('Level', style: TextStyle(fontSize: 10, color: Colors.white.withOpacity(0.7))),
+                ]),
+              ]),
             ),
             const SizedBox(height: 12),
-            GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 12,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              childAspectRatio: 1.4,
-              children: [
-                _StatTile(
-                  label: 'XP Punkte',
-                  value: '${userStats.xp}',
-                  icon: Icons.bolt_rounded,
-                  color: const Color(0xFFF59E0B),
-                ),
-                _StatTile(
-                  label: 'Streak',
-                  value: '${userStats.streak} Tage',
-                  icon: Icons.local_fire_department_rounded,
-                  color: const Color(0xFFF97316),
-                ),
-                _StatTile(
-                  label: 'Wörter',
-                  value: '${userStats.wordsLearned}',
-                  icon: Icons.menu_book_rounded,
-                  color: const Color(0xFF3B82F6),
-                ),
-                _StatTile(
-                  label: 'Übungen',
-                  value: '${userStats.exercisesCompleted}',
-                  icon: Icons.track_changes_rounded,
-                  color: const Color(0xFF22C55E),
-                ),
-              ],
-            ),
-            const SizedBox(height: 18),
-            if (weakAreas.isNotEmpty)
-              _WeakAreasCard(
-                areas: weakAreas,
-                onOpen: () => context.go('/grammar'),
-              ),
-            const SizedBox(height: 18),
-            _AchievementsCard(
-              achievements: achievementList,
-              unlockedCount: unlocked,
-            ),
-            const SizedBox(height: 18),
-            _SettingsCard(
-              darkMode: userPrefs.darkMode,
-              onToggleDarkMode: (value) => ref
-                  .read(appSettingsActionsProvider)
-                  .setDarkMode(value),
-              language: _language,
-              onLanguageChanged: (value) =>
-                  setState(() => _language = value),
-              nativeLanguage: userPrefs.nativeLanguage,
-              onNativeLanguageChanged: (value) => ref
-                  .read(appSettingsActionsProvider)
-                  .setNativeLanguage(value),
-            ),
-            const SizedBox(height: 8),
-            Center(
-              child: Column(
-                children: [
-                  Text(
-                    'Deutsch Lernen App v1.0',
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: isDark
-                              ? AppTokens.darkTextMuted
-                              : AppTokens.lightTextMuted,
-                        ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    'Made with ❤️ for German learners',
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: isDark
-                              ? const Color(0xFF475569)
-                              : const Color(0xFFCBD5F5),
-                        ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _LevelCard extends StatelessWidget {
-  const _LevelCard({required this.stats});
-
-  final UserStat stats;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: AppTokens.radius30,
-        gradient: const LinearGradient(
-          colors: [Color(0xFF3B82F6), Color(0xFFA855F7), Color(0xFFEC4899)],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFFA855F7).withValues(alpha: 0.3),
-            blurRadius: 22,
-            offset: const Offset(0, 10),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        children: [
-          ProgressRing(
-            progress: stats.weeklyProgress.toDouble(),
-            size: 110,
-            strokeWidth: 8,
-            backgroundColor: Colors.white.withValues(alpha: 0.2),
-            gradient: const LinearGradient(
-              colors: [Colors.white, Colors.white],
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  stats.level,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const Text(
-                  'Level',
-                  style: TextStyle(color: Colors.white70, fontSize: 10),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            'Deutsch Lerner',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            '${stats.weeklyProgress}% Wochenfortschritt',
-            style: const TextStyle(color: Colors.white70, fontSize: 13),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            children: [
-              _MiniStat(label: 'XP', value: '${stats.xp}'),
-              const SizedBox(width: 8),
-              _MiniStat(label: 'Streak', value: '${stats.streak} 🔥'),
-              const SizedBox(width: 8),
-              _MiniStat(
-                  label: 'Grammatik',
-                  value: '${stats.grammarTopicsCompleted}'),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _MiniStat extends StatelessWidget {
-  const _MiniStat({required this.label, required this.value});
-
-  final String label;
-  final String value;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.2),
-          borderRadius: AppTokens.radius20,
-        ),
-        child: Column(
-          children: [
-            Text(
-              label,
-              style: const TextStyle(color: Colors.white70, fontSize: 10),
-            ),
+            const Text('Deutsch Lerner', style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600, color: Colors.white)),
             const SizedBox(height: 4),
-            Text(
-              value,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
+            Text('$weeklyProgress% Wochenfortschritt', style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.7))),
+            const SizedBox(height: 16),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              _GlassStat(label: 'XP', value: '$xp'),
+              const SizedBox(width: 12),
+              _GlassStat(label: 'Streak', value: '$streak 🔥'),
+              const SizedBox(width: 12),
+              _GlassStat(label: 'Grammatik', value: '$grammarDone'),
+            ]),
+          ]),
         ),
-      ),
-    );
-  }
-}
 
-class _StatTile extends StatelessWidget {
-  const _StatTile({
-    required this.label,
-    required this.value,
-    required this.icon,
-    required this.color,
-  });
+        const SizedBox(height: 20),
 
-  final String label;
-  final String value;
-  final IconData icon;
-  final Color color;
+        // ── Stats Grid ───────────────────────────────────────────────────
+        Text('Statistiken', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: textPrimary)),
+        const SizedBox(height: 12),
 
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final bg = isDark ? color.withValues(alpha: 0.2) : color.withValues(alpha: 0.12);
+        GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 12,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          childAspectRatio: 1.6,
+          children: statCards.map((s) => Container(
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(color: s.bg, borderRadius: BorderRadius.circular(16)),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                Text(s.icon, style: const TextStyle(fontSize: 16)),
+                const SizedBox(width: 6),
+                Text(s.label, style: TextStyle(fontSize: 11, color: s.fg.withOpacity(0.8))),
+              ]),
+              const SizedBox(height: 6),
+              Text(s.value, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: s.fg)),
+            ]),
+          )).toList(),
+        ),
 
-    return Container(
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: bg,
-        borderRadius: AppTokens.radius24,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(icon, size: 18, color: color),
-          const SizedBox(height: 8),
-          Text(
-            label,
-            style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  color: isDark
-                      ? AppTokens.darkTextMuted
-                      : AppTokens.lightTextMuted,
-                ),
-          ),
-          const Spacer(),
-          Text(
-            value,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  color: isDark ? AppTokens.darkText : AppTokens.lightText,
-                ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+        const SizedBox(height: 20),
 
-class _WeakAreasCard extends StatelessWidget {
-  const _WeakAreasCard({required this.areas, required this.onOpen});
-
-  final List<String> areas;
-  final VoidCallback onOpen;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius30,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.2)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 16,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(18),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.warning_amber_rounded,
-                  size: 18, color: Color(0xFFF59E0B)),
-              const SizedBox(width: 6),
-              Text(
-                'Schwache Bereiche',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: isDark
-                          ? AppTokens.darkText
-                          : AppTokens.lightText,
-                    ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          for (final area in areas)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: InkWell(
-                onTap: onOpen,
-                borderRadius: BorderRadius.circular(16),
-                child: Ink(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-                  decoration: BoxDecoration(
-                    color: isDark
-                        ? const Color(0xFF3F2D0C)
-                        : const Color(0xFFFFFBEB),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 32,
-                        height: 32,
+        // ── Weak Areas ───────────────────────────────────────────────────
+        if (weakAreas.isNotEmpty) ...[
+          _SectionCard(
+            cardColor: cardColor,
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                const Text('⚠️', style: TextStyle(fontSize: 16)),
+                const SizedBox(width: 8),
+                Text('Schwache Bereiche', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: textPrimary)),
+              ]),
+              const SizedBox(height: 12),
+              ...weakAreas.map((area) => Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: GestureDetector(
+                      onTap: () => context.go('/grammar'),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFFDE68A),
+                          color: isDark ? const Color(0xFF1C1A09) : const Color(0xFFFEFCE8),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        alignment: Alignment.center,
-                        child: const Text('📘', style: TextStyle(fontSize: 14)),
+                        child: Row(children: [
+                          Container(
+                            width: 32, height: 32,
+                            decoration: BoxDecoration(
+                              color: isDark ? const Color(0xFF422006) : const Color(0xFFFEF3C7),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Center(child: Text('📘', style: TextStyle(fontSize: 14))),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(child: Text(area, style: TextStyle(fontSize: 14,
+                              color: isDark ? const Color(0xFFFCD34D) : const Color(0xFF92400E)))),
+                          Icon(Icons.chevron_right_rounded, size: 16,
+                              color: isDark ? const Color(0xFFFCD34D) : const Color(0xFFD97706)),
+                        ]),
                       ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: Text(
-                          area,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                color: isDark
-                                    ? const Color(0xFFFCD34D)
-                                    : const Color(0xFFB45309),
-                              ),
-                        ),
-                      ),
-                      const Icon(Icons.chevron_right_rounded,
-                          size: 16, color: Color(0xFFF59E0B)),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-        ],
-      ),
-    );
-  }
-}
-
-class _AchievementsCard extends StatelessWidget {
-  const _AchievementsCard({
-    required this.achievements,
-    required this.unlockedCount,
-  });
-
-  final List<Achievement> achievements;
-  final int unlockedCount;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius30,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.2)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 16,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      padding: const EdgeInsets.all(18),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.emoji_events_rounded,
-                  size: 18, color: Color(0xFFF59E0B)),
-              const SizedBox(width: 6),
-              Text(
-                'Erfolge',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: isDark
-                          ? AppTokens.darkText
-                          : AppTokens.lightText,
                     ),
-              ),
-              const Spacer(),
-              Text(
-                '$unlockedCount/${achievements.length}',
-                style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                      color: isDark
-                          ? AppTokens.darkTextMuted
-                          : AppTokens.lightTextMuted,
-                    ),
-              ),
-            ],
+                  )),
+            ]),
           ),
-          const SizedBox(height: 10),
-          for (final achievement in achievements)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: achievement.unlocked
-                      ? const Color(0xFFFFFBEB)
-                      : (isDark
-                          ? const Color(0xFF1E293B)
-                          : const Color(0xFFF1F5F9)),
-                  borderRadius: AppTokens.radius24,
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 44,
-                      height: 44,
+          const SizedBox(height: 16),
+        ],
+
+        // ── Achievements ────────────────────────────────────────────────
+        _SectionCard(
+          cardColor: cardColor,
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(children: [
+              const Text('🏆', style: TextStyle(fontSize: 16)),
+              const SizedBox(width: 8),
+              Expanded(child: Text('Erfolge', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: textPrimary))),
+              Text('${_achievements.where((a) => a.unlocked).length}/${_achievements.length}',
+                  style: TextStyle(fontSize: 12, color: textMuted)),
+            ]),
+            const SizedBox(height: 12),
+            ..._achievements.map((a) => Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Opacity(
+                    opacity: a.unlocked ? 1.0 : 0.5,
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
+                        color: a.unlocked
+                            ? (isDark ? const Color(0xFF1C1A09) : const Color(0xFFFEFCE8))
+                            : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF9FAFB)),
                         borderRadius: BorderRadius.circular(16),
-                        color: achievement.unlocked
-                            ? const Color(0xFFFDE68A)
-                            : (isDark
-                                ? const Color(0xFF334155)
-                                : const Color(0xFFE2E8F0)),
                       ),
-                      alignment: Alignment.center,
-                      child: Text(achievement.icon,
-                          style: const TextStyle(fontSize: 22)),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            achievement.title,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium
-                                ?.copyWith(
-                                  color: isDark
-                                      ? AppTokens.darkText
-                                      : AppTokens.lightText,
-                                ),
+                      child: Row(children: [
+                        Container(
+                          width: 44, height: 44,
+                          decoration: BoxDecoration(
+                            gradient: a.unlocked
+                                ? const LinearGradient(
+                                    colors: [Color(0xFFFDE047), Color(0xFFF59E0B)],
+                                    begin: Alignment.topLeft, end: Alignment.bottomRight)
+                                : null,
+                            color: a.unlocked ? null : (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                            borderRadius: BorderRadius.circular(14),
                           ),
-                          Text(
-                            achievement.description,
-                            style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                                  color: isDark
-                                      ? AppTokens.darkTextMuted
-                                      : AppTokens.lightTextMuted,
-                                ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    if (achievement.unlocked)
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFDCFCE7),
-                          borderRadius: BorderRadius.circular(999),
+                          child: Center(child: Text(a.icon, style: const TextStyle(fontSize: 20))),
                         ),
-                        child: const Text(
-                          'Fertig',
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Color(0xFF15803D),
+                        const SizedBox(width: 12),
+                        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          Text(a.title, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: textPrimary)),
+                          const SizedBox(height: 2),
+                          Text(a.description, style: TextStyle(fontSize: 11, color: textMuted)),
+                        ])),
+                        if (a.unlocked)
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: isDark ? const Color(0xFF052E16) : const Color(0xFFDCFCE7),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Text('Fertig',
+                                style: TextStyle(fontSize: 10, color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF16A34A))),
                           ),
-                        ),
+                      ]),
+                    ),
+                  ),
+                )),
+          ]),
+        ),
+
+        const SizedBox(height: 16),
+
+        // ── Settings ────────────────────────────────────────────────────
+        _SectionCard(
+          cardColor: cardColor,
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('Einstellungen', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: textPrimary)),
+            const SizedBox(height: 8),
+
+            // Dark mode toggle
+            GestureDetector(
+              onTap: () => setState(() => _darkMode = !_darkMode),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Row(children: [
+                  Icon(_darkMode ? Icons.dark_mode_rounded : Icons.light_mode_rounded,
+                      size: 20, color: _darkMode ? const Color(0xFF818CF8) : const Color(0xFFF59E0B)),
+                  const SizedBox(width: 12),
+                  Expanded(child: Text(_darkMode ? 'Dark Mode' : 'Light Mode',
+                      style: TextStyle(fontSize: 14, color: textPrimary))),
+                  // Toggle pill
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    width: 48, height: 28,
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: _darkMode ? const Color(0xFF6366F1) : const Color(0xFFCBD5E1),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: AnimatedAlign(
+                      duration: const Duration(milliseconds: 200),
+                      alignment: _darkMode ? Alignment.centerRight : Alignment.centerLeft,
+                      child: Container(
+                        width: 24, height: 24,
+                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(100),
+                            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.12), blurRadius: 4)]),
                       ),
-                  ],
-                ),
+                    ),
+                  ),
+                ]),
               ),
             ),
-        ],
-      ),
+
+            Divider(height: 1, color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
+
+            // Language
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Row(children: [
+                const Icon(Icons.language_rounded, size: 20, color: Color(0xFF3B82F6)),
+                const SizedBox(width: 12),
+                Expanded(child: Text('Sprache', style: TextStyle(fontSize: 14, color: textPrimary))),
+                _DropdownSelect(
+                  value: _language,
+                  items: const {'en': 'English', 'de': 'Deutsch', 'tr': 'Türkçe', 'ar': 'العربية'},
+                  isDark: isDark,
+                  onChanged: (v) => setState(() => _language = v),
+                ),
+              ]),
+            ),
+
+            Divider(height: 1, color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
+
+            // Native language
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Row(children: [
+                const Icon(Icons.translate_rounded, size: 20, color: Color(0xFFA855F7)),
+                const SizedBox(width: 12),
+                Expanded(child: Text('Muttersprache', style: TextStyle(fontSize: 14, color: textPrimary))),
+                _DropdownSelect(
+                  value: _nativeLang,
+                  items: const {'en': 'English', 'dari': 'دری (Dari)'},
+                  isDark: isDark,
+                  onChanged: (v) => setState(() => _nativeLang = v),
+                ),
+              ]),
+            ),
+          ]),
+        ),
+
+        const SizedBox(height: 16),
+
+        // ── App version ──────────────────────────────────────────────────
+        const Center(child: Column(children: [
+          Text('Deutsch Lernen App v1.0', style: TextStyle(fontSize: 12, color: Color(0xFF94A3B8))),
+          SizedBox(height: 4),
+          Text('Made with ❤️ for German learners', style: TextStyle(fontSize: 11, color: Color(0xFFCBD5E1))),
+        ])),
+        const SizedBox(height: 8),
+      ]),
     );
   }
 }
 
-class _SettingsCard extends StatelessWidget {
-  const _SettingsCard({
-    required this.darkMode,
-    required this.onToggleDarkMode,
-    required this.language,
-    required this.onLanguageChanged,
-    required this.nativeLanguage,
-    required this.onNativeLanguageChanged,
-  });
+// ─── Shared widgets ───────────────────────────────────────────────────────────
 
-  final bool darkMode;
-  final ValueChanged<bool> onToggleDarkMode;
-  final String language;
-  final ValueChanged<String> onLanguageChanged;
-  final String nativeLanguage;
-  final ValueChanged<String> onNativeLanguageChanged;
-
+class _BackButton extends StatelessWidget {
+  const _BackButton({required this.isDark, required this.onTap});
+  final bool isDark;
+  final VoidCallback onTap;
   @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: isDark ? AppTokens.darkCard : AppTokens.lightCard,
-        borderRadius: AppTokens.radius30,
-        boxShadow: [
-          BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.2)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.6),
-            blurRadius: 16,
-            offset: const Offset(0, 8),
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: 36, height: 36,
+          decoration: BoxDecoration(
+            color: isDark ? const Color(0xFF1E293B) : Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 8, offset: const Offset(0, 2))],
           ),
-        ],
-      ),
-      padding: const EdgeInsets.all(18),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Einstellungen',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: isDark ? AppTokens.darkText : AppTokens.lightText,
-                ),
-          ),
-          const SizedBox(height: 10),
-          Row(
-            children: [
-              Icon(
-                darkMode ? Icons.dark_mode_rounded : Icons.light_mode_rounded,
-                color: darkMode ? const Color(0xFF818CF8) : const Color(0xFFF59E0B),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  darkMode ? 'Dark Mode' : 'Light Mode',
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-              ),
-              _ToggleSwitch(
-                enabled: darkMode,
-                onChanged: onToggleDarkMode,
-              ),
-            ],
-          ),
-          const Divider(height: 24),
-          Row(
-            children: [
-              const Icon(Icons.language_rounded, color: Color(0xFF3B82F6)),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  'Sprache',
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-              ),
-              _DropdownPill(
-                value: language,
-                onChanged: onLanguageChanged,
-                items: const [
-                  DropdownMenuItem(value: 'en', child: Text('English')),
-                  DropdownMenuItem(value: 'de', child: Text('Deutsch')),
-                  DropdownMenuItem(value: 'tr', child: Text('Türkçe')),
-                  DropdownMenuItem(value: 'ar', child: Text('العربية')),
-                ],
-              ),
-            ],
-          ),
-          const Divider(height: 24),
-          Row(
-            children: [
-              const Icon(Icons.translate_rounded, color: Color(0xFFA855F7)),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  'Muttersprache',
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-              ),
-              _DropdownPill(
-                value: nativeLanguage,
-                onChanged: onNativeLanguageChanged,
-                items: const [
-                  DropdownMenuItem(value: 'en', child: Text('English')),
-                  DropdownMenuItem(value: 'dari', child: Text('دری (Dari)')),
-                ],
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+          child: Icon(Icons.arrow_back_ios_new_rounded, size: 16,
+              color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF374151)),
+        ),
+      );
 }
 
-class _DropdownPill extends StatelessWidget {
-  const _DropdownPill({
-    required this.value,
-    required this.onChanged,
-    required this.items,
-  });
+class _GlassStat extends StatelessWidget {
+  const _GlassStat({required this.label, required this.value});
+  final String label, value;
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.2),
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Column(children: [
+          Text(label, style: TextStyle(fontSize: 10, color: Colors.white.withOpacity(0.6))),
+          const SizedBox(height: 2),
+          Text(value, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white)),
+        ]),
+      );
+}
 
+class _SectionCard extends StatelessWidget {
+  const _SectionCard({required this.cardColor, required this.child});
+  final Color cardColor;
+  final Widget child;
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          color: cardColor,
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 16, offset: const Offset(0, 4))],
+        ),
+        child: child,
+      );
+}
+
+class _DropdownSelect extends StatelessWidget {
+  const _DropdownSelect({required this.value, required this.items, required this.isDark, required this.onChanged});
   final String value;
-  final ValueChanged<String> onChanged;
-  final List<DropdownMenuItem<String>> items;
-
+  final Map<String, String> items;
+  final bool isDark;
+  final void Function(String) onChanged;
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
+    final fg = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF374151);
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-        borderRadius: BorderRadius.circular(12),
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(12)),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<String>(
           value: value,
-          items: items,
-          onChanged: (value) {
-            if (value != null) onChanged(value);
-          },
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: isDark ? AppTokens.darkText : AppTokens.lightText,
-              ),
+          isDense: true,
+          style: TextStyle(fontSize: 13, color: fg),
           dropdownColor: isDark ? const Color(0xFF1E293B) : Colors.white,
-        ),
-      ),
-    );
-  }
-}
-
-class _ToggleSwitch extends StatelessWidget {
-  const _ToggleSwitch({required this.enabled, required this.onChanged});
-
-  final bool enabled;
-  final ValueChanged<bool> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => onChanged(!enabled),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: 52,
-        height: 28,
-        padding: const EdgeInsets.all(3),
-        decoration: BoxDecoration(
-          color: enabled ? const Color(0xFF6366F1) : const Color(0xFFCBD5F5),
-          borderRadius: BorderRadius.circular(999),
-        ),
-        child: AnimatedAlign(
-          duration: const Duration(milliseconds: 200),
-          alignment: enabled ? Alignment.centerRight : Alignment.centerLeft,
-          child: Container(
-            width: 22,
-            height: 22,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _IconButton extends StatelessWidget {
-  const _IconButton({
-    required this.icon,
-    required this.onPressed,
-  });
-
-  final IconData icon;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Material(
-      color: Colors.transparent,
-      borderRadius: AppTokens.radius16,
-      child: InkWell(
-        onTap: onPressed,
-        borderRadius: AppTokens.radius16,
-        child: Ink(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: isDark ? const Color(0xFF1E293B) : Colors.white,
-            borderRadius: AppTokens.radius16,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.08),
-                blurRadius: 8,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          child: Icon(
-            icon,
-            size: 20,
-            color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF64748B),
-          ),
+          items: items.entries.map((e) => DropdownMenuItem(value: e.key, child: Text(e.value))).toList(),
+          onChanged: (v) { if (v != null) onChanged(v); },
         ),
       ),
     );
