@@ -1,0 +1,101 @@
+[
+  {
+    "id": "a22001",
+    "german": "die Zielgruppe",
+    "english": "Target audience / Target group",
+    "category": "Marketing & Vertrieb",
+    "tag": "Strategy",
+    "example": "Unsere Zielgruppe sind Berufseinsteiger.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مخاطب هدف"
+  },
+  {
+    "id": "a22002",
+    "german": "der Wettbewerber",
+    "english": "Competitor",
+    "category": "Marketing & Vertrieb",
+    "tag": "Market",
+    "example": "Wir beobachten die Aktivitäten unserer Wettbewerber.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "رقیب"
+  },
+  {
+    "id": "a22003",
+    "german": "die Nachfrage",
+    "english": "Demand",
+    "category": "Marketing & Vertrieb",
+    "tag": "Market",
+    "example": "Die Nachfrage nach diesem Produkt ist gestiegen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تقاضا"
+  },
+  {
+    "id": "a22004",
+    "german": "der Absatz",
+    "english": "Sales (units sold)",
+    "category": "Marketing & Vertrieb",
+    "tag": "Sales",
+    "example": "Der Absatz ist im letzten Quartal gestiegen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فروش"
+  },
+  {
+    "id": "a22005",
+    "german": "die Kampagne",
+    "english": "Campaign",
+    "category": "Marketing & Vertrieb",
+    "tag": "Campaign",
+    "example": "Wir planen eine neue Marketingkampagne für den Herbst.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کمپین"
+  },
+  {
+    "id": "a22006",
+    "german": "verhandeln",
+    "english": "To negotiate",
+    "category": "Marketing & Vertrieb",
+    "tag": "Sales",
+    "example": "Wir verhandeln gerade über den Preis.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مذاکره کردن"
+  },
+  {
+    "id": "a22007",
+    "german": "der Vertrieb",
+    "english": "Sales / Distribution",
+    "category": "Marketing & Vertrieb",
+    "tag": "Department",
+    "example": "Ich arbeite im Vertrieb.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فروش / توزیع"
+  },
+  {
+    "id": "a22008",
+    "german": "der Lead",
+    "english": "Lead / Potential customer",
+    "category": "Marketing & Vertrieb",
+    "tag": "CRM",
+    "example": "Wir haben 50 neue Leads diese Woche generiert.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "سرنخ"
+  },
+  {
+    "id": "a22009",
+    "german": "der Kundenstamm",
+    "english": "Customer base / Client portfolio",
+    "category": "Marketing & Vertrieb",
+    "tag": "CRM",
+    "example": "Unser Kundenstamm wächst stetig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پایگاه مشتریان"
+  }
+]

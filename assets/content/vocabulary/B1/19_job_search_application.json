@@ -1,0 +1,68 @@
+[
+  {
+    "id": "b11901",
+    "german": "die Agentur für Arbeit",
+    "english": "Federal Employment Agency",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Authority",
+    "example": "Bei der Agentur für Arbeit kann ich mich als arbeitssuchend melden.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "اداره کار"
+  },
+  {
+    "id": "b11902",
+    "german": "das Arbeitslosengeld",
+    "english": "Unemployment benefit",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Finance",
+    "example": "Ich beziehe Arbeitslosengeld seit dem Jobverlust.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "کمک‌هزینه بیکاری"
+  },
+  {
+    "id": "b11903",
+    "german": "die Bewerbungsunterlagen",
+    "english": "Application documents",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Application",
+    "example": "Zu den Bewerbungsunterlagen gehören Lebenslauf, Anschreiben und Zeugnisse.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "اسناد درخواست کار"
+  },
+  {
+    "id": "b11904",
+    "german": "die Gehaltsvorstellung",
+    "english": "Expected salary / Salary expectation",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Interview",
+    "example": "Wie ist Ihre Gehaltsvorstellung?",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "توقع معاش"
+  },
+  {
+    "id": "b11905",
+    "german": "die Initiativbewerbung",
+    "english": "Unsolicited / Speculative application",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Application",
+    "example": "Ich sende eine Initiativbewerbung an Firmen, die mich interessieren.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "درخواست خودجوش"
+  },
+  {
+    "id": "b11906",
+    "german": "der Personalvermittler",
+    "english": "Recruitment agency / Staffing agency",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Recruitment",
+    "example": "Ich habe meinen Job über einen Personalvermittler gefunden.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "آژانس کاریابی"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "a10301",
+    "german": "der Vertrag",
+    "english": "Contract",
+    "category": "Vertrage",
+    "tag": "Legal",
+    "example": "Wir mussen den Vertrag unterschreiben.",
+    "difficulty": "easy",
+    "isFavorite": true,
+    "dari": "قرارداد"
+  },
+  {
+    "id": "a10302",
+    "german": "die Unterschrift",
+    "english": "Signature",
+    "category": "Vertrage",
+    "tag": "Legal",
+    "example": "Die Unterschrift fehlt auf Seite zwei.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "امضا"
+  }
+]

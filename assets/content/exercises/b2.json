@@ -1,0 +1,842 @@
+[
+  {
+    "id": "b2_g31_1",
+    "type": "multiple-choice",
+    "question": "Der Sprecher betonte, die Situation ___ ernst.",
+    "options": ["ist", "sei", "wäre", "sind"],
+    "correctAnswer": 1,
+    "topic": "Konjunktiv I",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g31_2",
+    "type": "multiple-choice",
+    "question": "Er sagte, er ___ das Buch nicht gelesen.",
+    "options": ["hat", "hätte", "habe", "hatte"],
+    "correctAnswer": 2,
+    "topic": "Konjunktiv I",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g31_3",
+    "type": "multiple-choice",
+    "question": "Die Kanzlerin erklärte, man ___ neue Wege gehen.",
+    "options": ["müsse", "muss", "müsste", "müssen"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv I",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g32_1",
+    "type": "multiple-choice",
+    "question": "Wenn ich das gewusst ___, ___ ich nicht gekommen.",
+    "options": ["habe - wäre", "hätte - wäre", "hatte - war", "hätte - wurde"],
+    "correctAnswer": 1,
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g32_2",
+    "type": "multiple-choice",
+    "question": "Er tut so, als ___ er alles.",
+    "options": ["weiß", "wusste", "wüsste", "wissen"],
+    "correctAnswer": 2,
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g32_3",
+    "type": "multiple-choice",
+    "question": "___ du mir bitte das Salz reichen?",
+    "options": ["Kannst", "Konntest", "Könntest", "Können"],
+    "correctAnswer": 2,
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g8_1",
+    "type": "multiple-choice",
+    "question": "Das Haus ___ im Jahr 1990 gebaut.",
+    "options": ["wurde", "war", "wird", "ist"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g8_2",
+    "type": "multiple-choice",
+    "question": "Die Tür ___ geschlossen. (Zustand: Jemand hat sie schon zugemacht)",
+    "options": ["wird", "wurde", "ist", "war"],
+    "correctAnswer": 2,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g8_3",
+    "type": "multiple-choice",
+    "question": "Die E-Mail ___ gestern von ihm ___.",
+    "options": ["ist - geschrieben worden", "hat - geschrieben werden", "war - geschrieben", "wurde - geschrieben worden"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g33_1",
+    "type": "multiple-choice",
+    "question": "Die ___ Zeitung lag auf dem Tisch. (Zeitung, die man gelesen hat)",
+    "options": ["gelesene", "lesende", "gelesen", "lesend"],
+    "correctAnswer": 0,
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g33_2",
+    "type": "multiple-choice",
+    "question": "Der ___ Junge freut sich über das Eis. (Junge, der lacht)",
+    "options": ["gelachte", "lachende", "lachend", "lachender"],
+    "correctAnswer": 1,
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g33_3",
+    "type": "multiple-choice",
+    "question": "Das ___ Haus wird bald abgerissen. (Haus, das zerstört wurde)",
+    "options": ["zerstörende", "zerstört", "zerstörte", "zerstören"],
+    "correctAnswer": 2,
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g34_1",
+    "type": "multiple-choice",
+    "question": "Man lernt am besten, ___ man viel spricht.",
+    "options": ["indem", "wobei", "dadurch", "während"],
+    "correctAnswer": 0,
+    "topic": "Erweiterte Nebensätze (B2)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g34_2",
+    "type": "multiple-choice",
+    "question": "___ er reich ist, ist er unglücklich.",
+    "options": ["Während", "Indem", "Wobei", "Dadurch"],
+    "correctAnswer": 0,
+    "topic": "Erweiterte Nebensätze (B2)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g34_3",
+    "type": "multiple-choice",
+    "question": "Er arbeitet viel, ___ seine Gesundheit leidet.",
+    "options": ["indem", "wobei", "dadurch", "dass"],
+    "correctAnswer": 1,
+    "topic": "Erweiterte Nebensätze (B2)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g35_1",
+    "type": "multiple-choice",
+    "question": "Typisch für den Nominalstil: 'Nach der ___ der Daten...'",
+    "options": ["Analysieren", "Analyse", "analysiert", "analysierend"],
+    "correctAnswer": 1,
+    "topic": "Nominalstil",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g35_2",
+    "type": "multiple-choice",
+    "question": "'Weil es viel geregnet hat...' -> Nominalstil: '___ des starken Regens...'",
+    "options": ["Trotz", "Während", "Aufgrund", "Innerhalb"],
+    "correctAnswer": 2,
+    "topic": "Nominalstil",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g35_3",
+    "type": "multiple-choice",
+    "question": "'Bevor er abfuhr...' -> Nominalstil: 'Vor ___...'",
+    "options": ["seiner Abfahrt", "seinen Abfahren", "seine Abfahrt", "seiner abgefahren"],
+    "correctAnswer": 0,
+    "topic": "Nominalstil",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g36_1",
+    "type": "multiple-choice",
+    "question": "Die Löhne sind gestiegen. ___, sind die Preise auch gestiegen.",
+    "options": ["Darüber hinaus", "Allerdings", "Zwar", "Sondern"],
+    "correctAnswer": 1,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g36_2",
+    "type": "multiple-choice",
+    "question": "Die Firma macht Verluste. ___ müssen Mitarbeiter entlassen werden.",
+    "options": ["Folglich", "Dennoch", "Während", "Zwar"],
+    "correctAnswer": 0,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g36_3",
+    "type": "multiple-choice",
+    "question": "Es hat stark geregnet. ___ sind wir wandern gegangen.",
+    "options": ["Deshalb", "Folglich", "Dennoch", "Stattdessen"],
+    "correctAnswer": 2,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g45_1",
+    "type": "multiple-choice",
+    "question": "___ des schlechten Wetters blieben wir zu Hause.",
+    "options": ["Wegen", "Trotz", "Während", "Aufgrund"],
+    "correctAnswer": 0,
+    "topic": "Genitiv-Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g45_2",
+    "type": "multiple-choice",
+    "question": "___ des Konzerts darf man nicht filmen.",
+    "options": ["Wegen", "Trotz", "Während", "Außerhalb"],
+    "correctAnswer": 2,
+    "topic": "Genitiv-Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g45_3",
+    "type": "multiple-choice",
+    "question": "___ Proteste wurde das Gesetz verabschiedet.",
+    "options": ["Trotz der", "Wegen der", "Trotz den", "Während der"],
+    "correctAnswer": 0,
+    "topic": "Genitiv-Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g46_1",
+    "type": "multiple-choice",
+    "question": "Er spricht ___ Englisch als auch Spanisch.",
+    "options": ["sowohl", "weder", "entweder", "zwar"],
+    "correctAnswer": 0,
+    "topic": "Doppelkonnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g46_2",
+    "type": "multiple-choice",
+    "question": "Das Auto ist ___ schnell, sondern auch umweltfreundlich.",
+    "options": ["weder", "sowohl", "nicht nur", "zwar"],
+    "correctAnswer": 2,
+    "topic": "Doppelkonnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g46_3",
+    "type": "multiple-choice",
+    "question": "Wir fahren ___ ans Meer oder in die Berge.",
+    "options": ["weder", "sowohl", "entweder", "zwar"],
+    "correctAnswer": 2,
+    "topic": "Doppelkonnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g47_1",
+    "type": "multiple-choice",
+    "question": "Das Problem ___ sich leicht lösen. (= kann gelöst werden)",
+    "options": ["muss", "wird", "lässt", "ist"],
+    "correctAnswer": 2,
+    "topic": "Passiversatzformen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g47_2",
+    "type": "multiple-choice",
+    "question": "Die Aufgabe ___ bis morgen zu erledigen. (= muss erledigt werden)",
+    "options": ["wird", "ist", "lässt", "hat"],
+    "correctAnswer": 1,
+    "topic": "Passiversatzformen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g47_3",
+    "type": "multiple-choice",
+    "question": "Das Wasser ist nicht ___. (trinken + bar)",
+    "options": ["trinklich", "getrunken", "trinkbar", "trinkend"],
+    "correctAnswer": 2,
+    "topic": "Passiversatzformen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g48_1",
+    "type": "multiple-choice",
+    "question": "Der Politiker ___ einen wichtigen Entschluss ___.",
+    "options": ["hat - gemacht", "hat - gefasst", "hat - getroffen", "hat - getan"],
+    "correctAnswer": 1,
+    "topic": "Funktionsverbgefüge",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g48_2",
+    "type": "multiple-choice",
+    "question": "Ich möchte Ihnen einen Vorschlag ___.",
+    "options": ["geben", "tun", "bringen", "machen"],
+    "correctAnswer": 3,
+    "topic": "Funktionsverbgefüge",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g48_3",
+    "type": "multiple-choice",
+    "question": "Wir müssen die Maschine in Betrieb ___.",
+    "options": ["setzen", "nehmen", "stellen", "bringen"],
+    "correctAnswer": 1,
+    "topic": "Funktionsverbgefüge",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g61_1",
+    "type": "multiple-choice",
+    "question": "Er sieht aus, als ___ er nicht geschlafen.",
+    "options": ["hat", "hatte", "hätte", "hättest"],
+    "correctAnswer": 2,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g61_2",
+    "type": "multiple-choice",
+    "question": "Sie benahm sich, als ob sie mich nicht ___.",
+    "options": ["kennt", "kannte", "kennen", "kennte"],
+    "correctAnswer": 3,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g61_3",
+    "type": "multiple-choice",
+    "question": "Es scheint, als ___ alles in Ordnung.",
+    "options": ["ist", "sei", "wäre", "war"],
+    "correctAnswer": 2,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g31_4",
+    "type": "multiple-choice",
+    "question": "Die Zeugen berichteten später, der Verdächtige ___ sofort geflohen.",
+    "options": ["sei", "ist", "wäre", "habe"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv I",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g31_5",
+    "type": "multiple-choice",
+    "question": "Sie behauptet steif und fest, sie ___ immer die Wahrheit gesagt.",
+    "options": ["habe", "hat", "hätte", "habet"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv I",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g31_6",
+    "type": "multiple-choice",
+    "question": "In der gestrigen Zeitung stand, das Projekt ___ erfolgreich abgeschlossen.",
+    "options": ["sei", "ist", "wäre", "werde"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv I",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g32_4",
+    "type": "multiple-choice",
+    "question": "Hättest du mir die Wahrheit gesagt, ___ ich jetzt nicht so enttäuscht ___.",
+    "options": ["wäre - gewesen", "war - gewesen", "hättest - gewesen", "würde - sein"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g32_5",
+    "type": "multiple-choice",
+    "question": "Es wäre wirklich besser gewesen, wenn wir damals viel früher ___ ___.",
+    "options": ["losgegangen wären", "losgingen", "losgegangen sind", "losgehen würden"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g32_6",
+    "type": "multiple-choice",
+    "question": "An deiner Stelle ___ ich das tolle Angebot sofort angenommen.",
+    "options": ["hätte", "wäre", "würde", "habe"],
+    "correctAnswer": 0,
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g8_4",
+    "type": "multiple-choice",
+    "question": "In der gestrigen Konferenz ___ ausführlich über die neuen Pläne ___.",
+    "options": ["wurde - diskutiert", "ist - diskutiert", "wird - diskutieren", "wurde - diskutieren"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g8_5",
+    "type": "multiple-choice",
+    "question": "Das komplizierte Problem ___ bereits vollständig gelöst.",
+    "options": ["ist", "wird", "wurde", "war"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g8_6",
+    "type": "multiple-choice",
+    "question": "Ich hoffe sehr, dass die anstrengende Arbeit bald ___ ___.",
+    "options": ["fertiggestellt wird", "fertigstellt werde", "fertiggestellt ist", "fertiggestellt wurde"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g33_4",
+    "type": "multiple-choice",
+    "question": "Die ___ Kinder spielten ausgelassen im großen Stadtpark.",
+    "options": ["laufenden", "gelaufenen", "laufend", "gelaufen"],
+    "correctAnswer": 0,
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g33_5",
+    "type": "multiple-choice",
+    "question": "Vom plötzlichen Sturm ___ , suchten sie schnell Schutz in einer Hütte.",
+    "options": ["überrascht", "überraschend", "überraschte", "überraschten"],
+    "correctAnswer": 0,
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g33_6",
+    "type": "multiple-choice",
+    "question": "Das direkt am Stadtrand ___ Haus ist heutzutage sehr teuer.",
+    "options": ["liegende", "gelegene", "liegend", "gelegen"],
+    "correctAnswer": 0,
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g34_4",
+    "type": "multiple-choice",
+    "question": "Er verbesserte sein Deutsch erheblich, ___ er täglich Radio hörte.",
+    "options": ["indem", "wodurch", "wobei", "insofern"],
+    "correctAnswer": 0,
+    "topic": "Erweiterte Nebensätze (B2)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g34_5",
+    "type": "multiple-choice",
+    "question": "Es kam zu einem Unfall, ___ glücklicherweise niemand verletzt wurde.",
+    "options": ["wobei", "indem", "wodurch", "während"],
+    "correctAnswer": 0,
+    "topic": "Erweiterte Nebensätze (B2)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g34_6",
+    "type": "multiple-choice",
+    "question": "___ er im Moment sehr beschäftigt war, nahm er sich Zeit für uns.",
+    "options": ["Obschon", "Indem", "Wobei", "Dadurch"],
+    "correctAnswer": 0,
+    "topic": "Erweiterte Nebensätze (B2)",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g35_4",
+    "type": "multiple-choice",
+    "question": "Wegen ___ der Kosten musste das Projekt sofort gestoppt werden.",
+    "options": ["des Anstiegs", "dem Anstieg", "des Steigens", "der Steigerung"],
+    "correctAnswer": 0,
+    "topic": "Nominalstil",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g35_5",
+    "type": "multiple-choice",
+    "question": "Trotz ___ der schwierigen Prüfung war er am Abend deprimiert.",
+    "options": ["des Bestehens", "des Bestanden", "dem Bestehen", "des Bestands"],
+    "correctAnswer": 0,
+    "topic": "Nominalstil",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g35_6",
+    "type": "multiple-choice",
+    "question": "Nach ___ des offiziellen Vertrages begannen endlich die Arbeiten.",
+    "options": ["der Unterzeichnung", "dem Unterzeichnen", "der Unterzeichnet", "des Unterzeichnens"],
+    "correctAnswer": 0,
+    "topic": "Nominalstil",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g36_4",
+    "type": "multiple-choice",
+    "question": "Das Wetter war gestern sehr schlecht. ___ gingen wir lange spazieren.",
+    "options": ["Dennoch", "Folglich", "Zudem", "Zwar"],
+    "correctAnswer": 0,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g36_5",
+    "type": "multiple-choice",
+    "question": "Er ist sehr talentiert; ___ ist er leider auch oft unorganisiert.",
+    "options": ["allerdings", "somit", "außerdem", "folglich"],
+    "correctAnswer": 0,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g36_6",
+    "type": "multiple-choice",
+    "question": "Die Nachfrage sank erheblich; ___ fielen auch die Preise.",
+    "options": ["folglich", "dennoch", "allerdings", "zwar"],
+    "correctAnswer": 0,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g45_4",
+    "type": "multiple-choice",
+    "question": "___ der langandauernden Bauarbeiten ist die Straße gesperrt.",
+    "options": ["Aufgrund", "Trotz", "Während", "Jenseits"],
+    "correctAnswer": 0,
+    "topic": "Genitiv-Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g45_5",
+    "type": "multiple-choice",
+    "question": "___ eines Monats muss die Rechnung vollständig bezahlt werden.",
+    "options": ["Innerhalb", "Außerhalb", "Wegen", "Trotz"],
+    "correctAnswer": 0,
+    "topic": "Genitiv-Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g45_6",
+    "type": "multiple-choice",
+    "question": "Er kaufte das Auto schlussendlich ___ des extrem hohen Preises.",
+    "options": ["trotz", "wegen", "während", "aufgrund"],
+    "correctAnswer": 0,
+    "topic": "Genitiv-Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g46_4",
+    "type": "multiple-choice",
+    "question": "Er ist ___ außerordentlich intelligent ___ sehr fleißig.",
+    "options": ["sowohl - als auch", "weder - noch", "entweder - oder", "zwar - aber"],
+    "correctAnswer": 0,
+    "topic": "Doppelkonnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g46_5",
+    "type": "multiple-choice",
+    "question": "Wir können ___ heute noch fahren ___ bis morgen warten.",
+    "options": ["entweder - oder", "sowohl - als auch", "weder - noch", "zwar - aber"],
+    "correctAnswer": 0,
+    "topic": "Doppelkonnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g46_6",
+    "type": "multiple-choice",
+    "question": "Das ist ___ recht teuer, ___ es ist von extrem guter Qualität.",
+    "options": ["zwar - aber", "weder - noch", "entweder - oder", "nicht nur - sondern auch"],
+    "correctAnswer": 0,
+    "topic": "Doppelkonnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g47_4",
+    "type": "multiple-choice",
+    "question": "Die Schrift auf dem alten Brief ist kaum noch ___.",
+    "options": ["lesbar", "leserlich", "gelesen", "lesend"],
+    "correctAnswer": 0,
+    "topic": "Passiversatzformen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g47_5",
+    "type": "multiple-choice",
+    "question": "Hier ___ man laut Schild absolut nicht rauchen.",
+    "options": ["darf", "lässt", "wird", "ist"],
+    "correctAnswer": 0,
+    "topic": "Passiversatzformen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g47_6",
+    "type": "multiple-choice",
+    "question": "Das alte Auto ___ sich leider nicht mehr reparieren.",
+    "options": ["lässt", "wird", "ist", "kann"],
+    "correctAnswer": 0,
+    "topic": "Passiversatzformen",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g48_4",
+    "type": "multiple-choice",
+    "question": "Wir müssen dieses wichtige Thema zur Sprache ___.",
+    "options": ["bringen", "setzen", "stellen", "nehmen"],
+    "correctAnswer": 0,
+    "topic": "Funktionsverbgefüge",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g48_5",
+    "type": "multiple-choice",
+    "question": "Er hat massiv auf die Entscheidung der Regierung ___ ___.",
+    "options": ["Einfluss genommen", "Einfluss gemacht", "Einfluss getan", "Einfluss gegeben"],
+    "correctAnswer": 0,
+    "topic": "Funktionsverbgefüge",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g48_6",
+    "type": "multiple-choice",
+    "question": "Das steht heute wirklich nicht zur ___.",
+    "options": ["Diskussion", "Wahl", "Verfügung", "Rede"],
+    "correctAnswer": 0,
+    "topic": "Funktionsverbgefüge",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g61_4",
+    "type": "multiple-choice",
+    "question": "Es klingt so, als ___ du mir absolut nicht ___.",
+    "options": ["würdest - glauben", "glaubst - glauben", "hättest - geglaubt", "wirst - glauben"],
+    "correctAnswer": 0,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g61_5",
+    "type": "multiple-choice",
+    "question": "Er tat so, als ___ er die richtige Antwort schon ___.",
+    "options": ["wüsste", "weiß", "gewusst hätte", "wissen würde"],
+    "correctAnswer": 0,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "b2_g61_6",
+    "type": "multiple-choice",
+    "question": "Sie sieht heute wirklich aus, als ___ sie krank ___.",
+    "options": ["wäre", "sei", "ist", "würde sein"],
+    "correctAnswer": 0,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "ex_fb_b2_1",
+    "type": "fill-blank",
+    "question": "Er tut so, als ___ er alles besser.",
+    "options": ["wisse", "wüsste", "weiß", "gewusst"],
+    "correctAnswer": 1,
+    "topic": "Irreale Vergleichssätze",
+    "level": "B2"
+  },
+  {
+    "id": "ex_fb_b2_2",
+    "type": "fill-blank",
+    "question": "Trotz ___ Regens gingen wir spazieren.",
+    "options": ["den", "dem", "des", "der"],
+    "correctAnswer": 2,
+    "topic": "Genitiv",
+    "level": "B2"
+  },
+  {
+    "id": "ex_fb_b2_3",
+    "type": "fill-blank",
+    "question": "Es ist wichtig, dass alle Mitarbeiter ___ werden. (informieren - Passiv)",
+    "options": ["informiert werden", "informiert sein", "informieren", "informiert"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "ex_fb_b2_4",
+    "type": "fill-blank",
+    "question": "Je mehr ich lerne, ___ besser werde ich.",
+    "options": ["dann", "desto", "weil", "wenn"],
+    "correctAnswer": 1,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "ex_fb_b2_5",
+    "type": "fill-blank",
+    "question": "Er hat sich ___ die neue Stelle beworben.",
+    "options": ["für", "um", "auf", "an"],
+    "correctAnswer": 1,
+    "topic": "Präpositionalobjekte",
+    "level": "B2"
+  },
+  {
+    "id": "ex_fb_b2_6",
+    "type": "fill-blank",
+    "question": "Anstelle ___ Autos nahm er das Fahrrad.",
+    "options": ["des", "dem", "den", "das"],
+    "correctAnswer": 0,
+    "topic": "Genitiv",
+    "level": "B2"
+  },
+  {
+    "id": "ex_so_b2_1",
+    "type": "sentence-order",
+    "question": "Er behauptet, dass er die Wahrheit sagt.",
+    "options": ["die", "Wahrheit", "behauptet", "Er", "dass", "er", "sagt"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "B2"
+  },
+  {
+    "id": "ex_so_b2_2",
+    "type": "sentence-order",
+    "question": "Trotz der Verspätung kamen wir pünktlich an.",
+    "options": ["kamen", "wir", "an", "pünktlich", "Trotz", "der", "Verspätung"],
+    "correctAnswer": 0,
+    "topic": "Präpositionen",
+    "level": "B2"
+  },
+  {
+    "id": "ex_so_b2_3",
+    "type": "sentence-order",
+    "question": "Je länger ich warte, desto ungeduldiger werde ich.",
+    "options": ["desto", "ungeduldiger", "werde", "ich", "Je", "länger", "ich", "warte"],
+    "correctAnswer": 0,
+    "topic": "Konnektoren",
+    "level": "B2"
+  },
+  {
+    "id": "ex_so_b2_4",
+    "type": "sentence-order",
+    "question": "Es wird erwartet, dass alle teilnehmen.",
+    "options": ["dass", "alle", "teilnehmen", "wird", "Es", "erwartet"],
+    "correctAnswer": 0,
+    "topic": "Passiv",
+    "level": "B2"
+  },
+  {
+    "id": "ex_so_b2_5",
+    "type": "sentence-order",
+    "question": "Er hat sich für die Unterstützung bedankt.",
+    "options": ["Unterstützung", "bedankt", "für", "die", "Er", "hat", "sich"],
+    "correctAnswer": 0,
+    "topic": "Präpositionalobjekte",
+    "level": "B2"
+  },
+  {
+    "id": "ex_so_b2_6",
+    "type": "sentence-order",
+    "question": "Anstatt zu arbeiten, schaute er fern.",
+    "options": ["schaute", "er", "fern", "Anstatt", "zu", "arbeiten"],
+    "correctAnswer": 0,
+    "topic": "Infinitivsätze",
+    "level": "B2"
+  },
+  {
+    "id": "ex_bd_b2_1",
+    "type": "business-dialog",
+    "question": "Abteilungsleiter: Die Quartalszahlen sind unbefriedigend.\nController: ___",
+    "options": [
+      "Wir müssen die Ursachen analysieren und Maßnahmen ergreifen.",
+      "Das ist Pech.",
+      "Ich habe damit nichts zu tun.",
+      "Vielleicht wird es nächstes Mal besser."
+    ],
+    "correctAnswer": 0,
+    "topic": "Berichtswesen",
+    "level": "B2"
+  },
+  {
+    "id": "ex_bd_b2_2",
+    "type": "business-dialog",
+    "question": "Einkäufer: Der Lieferant hat die Preise erhöht.\nGeschäftsführer: ___",
+    "options": [
+      "Wir sollten über alternative Anbieter nachdenken.",
+      "Das ist mir egal.",
+      "Schade.",
+      "Dann zahlen wir eben mehr."
+    ],
+    "correctAnswer": 0,
+    "topic": "Beschaffung",
+    "level": "B2"
+  },
+  {
+    "id": "ex_bd_b2_3",
+    "type": "business-dialog",
+    "question": "Marketing: Die neue Kampagne erzielt keine Wirkung.\nChef: ___",
+    "options": [
+      "Wir müssen unsere Strategie überdenken.",
+      "Habe ich es nicht gesagt?",
+      "Hören wir einfach auf.",
+      "Mehr Werbung hilft immer."
+    ],
+    "correctAnswer": 0,
+    "topic": "Marketing",
+    "level": "B2"
+  },
+  {
+    "id": "ex_bd_b2_4",
+    "type": "business-dialog",
+    "question": "IT: Es gab eine Sicherheitslücke im System.\nCIO: ___",
+    "options": [
+      "Wurde der Fehler bereits behoben?",
+      "Das passiert ständig.",
+      "Wer ist schuld?",
+      "Ignorieren Sie es einfach."
+    ],
+    "correctAnswer": 0,
+    "topic": "IT-Sicherheit",
+    "level": "B2"
+  },
+  {
+    "id": "ex_bd_b2_5",
+    "type": "business-dialog",
+    "question": "Personalabteilung: Wir haben Schwierigkeiten, Fachkräfte zu finden.\nVorstand: ___",
+    "options": [
+      "Wir müssen unser Employer Branding verbessern.",
+      "Das ist ein allgemeines Problem.",
+      "Nehmen Sie doch irgendwen.",
+      "Brauchen wir wirklich Fachkräfte?"
+    ],
+    "correctAnswer": 0,
+    "topic": "Personalwesen",
+    "level": "B2"
+  },
+  {
+    "id": "ex_bd_b2_6",
+    "type": "business-dialog",
+    "question": "Projektleiter: Der Zeitplan kann nicht eingehalten werden.\nKunde: ___",
+    "options": [
+      "Welche Auswirkungen hat das auf das Budget?",
+      "Das ist inakzeptabel.",
+      "Egal.",
+      "Dann machen wir eben später weiter."
+    ],
+    "correctAnswer": 0,
+    "topic": "Projektmanagement",
+    "level": "B2"
+  }
+]

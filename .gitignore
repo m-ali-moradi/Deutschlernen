@@ -1,0 +1,27 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub/
+build/
+docs/
+*.lock
+
+# Generated plugin and package files
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies*
+
+# Databases
+*.sqlite
+*.sqlite-journal
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+*.log

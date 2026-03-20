@@ -1,0 +1,46 @@
+[
+  {
+    "id": "b10501",
+    "german": "die Conversion-Rate",
+    "english": "Conversion rate",
+    "category": "Marketing",
+    "tag": "Marketing",
+    "example": "Unsere Conversion-Rate steigt kontinuierlich.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "نرخ تبدیل"
+  },
+  {
+    "id": "b10502",
+    "german": "die Markenbekanntheit",
+    "english": "Brand awareness",
+    "category": "Marketing",
+    "tag": "Marketing",
+    "example": "Wir wollen die Markenbekanntheit steigern.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "شناخت برند"
+  },
+  {
+    "id": "b10503",
+    "german": "die Lead-Generierung",
+    "english": "Lead generation",
+    "category": "Marketing",
+    "tag": "Marketing",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Lead-Generierung.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "تولید سرنخ"
+  },
+  {
+    "id": "b10504",
+    "german": "die Kundenbindung",
+    "english": "Customer retention",
+    "category": "Marketing",
+    "tag": "Marketing",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Kundenbindung.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "وفاداری مشتری"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "a20901",
+    "german": "die Niederlassung",
+    "english": "branch office",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Niederlassung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "نمایندگی"
+  },
+  {
+    "id": "a20902",
+    "german": "das Tochterunternehmen",
+    "english": "subsidiary",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist das Tochterunternehmen wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "شرکت فرعی"
+  },
+  {
+    "id": "a20903",
+    "german": "die Muttergesellschaft",
+    "english": "parent company",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Muttergesellschaft wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "شرکت مادر"
+  },
+  {
+    "id": "a20904",
+    "german": "die Unternehmensgruppe",
+    "english": "corporate group",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Unternehmensgruppe wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گروه شرکتی"
+  },
+  {
+    "id": "a20905",
+    "german": "das Organigramm",
+    "english": "org chart",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist das Organigramm wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "چارت سازمانی"
+  },
+  {
+    "id": "a20906",
+    "german": "die Hierarchie",
+    "english": "hierarchy",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Hierarchie wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "سلسله‌مراتب"
+  },
+  {
+    "id": "a20907",
+    "german": "die Leitungsebene",
+    "english": "management level",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist die Leitungsebene wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "سطح مدیریت"
+  },
+  {
+    "id": "a20908",
+    "german": "der Vorstand",
+    "english": "board of directors",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Vorstand wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "هیئت مدیره"
+  },
+  {
+    "id": "a20909",
+    "german": "die Geschaeftsleitung",
+    "english": "executive management",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist die Geschaeftsleitung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "رهبری اجرایی"
+  },
+  {
+    "id": "a20910",
+    "german": "die Geschaeftsfuehrung",
+    "english": "company management",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist die Geschaeftsfuehrung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیریت شرکت"
+  },
+  {
+    "id": "a20911",
+    "german": "der Geschaeftsbereich",
+    "english": "business unit",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Geschaeftsbereich wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بخش تجاری"
+  },
+  {
+    "id": "a20912",
+    "german": "die Berichtslinie",
+    "english": "reporting line",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist die Berichtslinie wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "خط گزارش‌دهی"
+  }
+]

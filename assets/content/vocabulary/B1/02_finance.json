@@ -1,0 +1,123 @@
+[
+  {
+    "id": "b10201",
+    "german": "die Gewinnmarge",
+    "english": "Profit margin",
+    "category": "Finanzen",
+    "tag": "Finance",
+    "example": "Unsere Gewinnmarge ist dieses Jahr hoher.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "حاشیه سود"
+  },
+  {
+    "id": "b10202",
+    "german": "die Kostenstelle",
+    "english": "Cost center",
+    "category": "Finanzen",
+    "tag": "Finance",
+    "example": "Bitte die Kostenstelle auf der Rechnung eintragen.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "مرکز هزینه"
+  },
+  {
+    "id": "b10203",
+    "german": "die Liquiditaet",
+    "english": "Liquidity",
+    "category": "Finanzen",
+    "tag": "Finance",
+    "example": "Die Liquiditaet des Unternehmens ist stabil.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "نقدینگی"
+  },
+  {
+    "id": "b10204",
+    "german": "die Lieferkette",
+    "english": "Supply chain",
+    "category": "Finanzen",
+    "tag": "Finance",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Lieferkette.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "زنجیره تأمین"
+  },
+  {
+    "id": "b10205",
+    "german": "die Mehrwertsteuer (MwSt)",
+    "english": "VAT / Sales tax",
+    "category": "Finanzen",
+    "tag": "Tax",
+    "example": "Der Preis versteht sich inklusive 19% Mehrwertsteuer.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "مالیات بر ارزش افزوده"
+  },
+  {
+    "id": "b10206",
+    "german": "die Steuererklärung",
+    "english": "Tax return",
+    "category": "Finanzen",
+    "tag": "Tax",
+    "example": "Ich muss bis zum 31. Juli meine Steuererklärung abgeben.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "اظهارنامه مالیاتی"
+  },
+  {
+    "id": "b10207",
+    "german": "der Zinssatz",
+    "english": "Interest rate",
+    "category": "Finanzen",
+    "tag": "Banking",
+    "example": "Der aktuelle Zinssatz beträgt 3,5%.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "نرخ سود"
+  },
+  {
+    "id": "b10208",
+    "german": "die Mahnung",
+    "english": "Payment reminder / Dunning notice",
+    "category": "Finanzen",
+    "tag": "Document",
+    "example": "Ich habe eine Mahnung wegen einer unbezahlten Rechnung erhalten.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "اخطار پرداخت"
+  },
+  {
+    "id": "b10209",
+    "german": "die Liquidität",
+    "english": "Liquidity / Cash flow",
+    "category": "Finanzen",
+    "tag": "Accounting",
+    "example": "Das Unternehmen hat Probleme mit der Liquidität.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "نقدینگی"
+  },
+  {
+    "id": "b10210",
+    "german": "der Jahresabschluss",
+    "english": "Annual financial statement",
+    "category": "Finanzen",
+    "tag": "Accounting",
+    "example": "Der Jahresabschluss muss bis März fertig sein.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "صورت‌حساب سالانه"
+  },
+  {
+    "id": "b10211",
+    "german": "die Spesenabrechnnung",
+    "english": "Expense report",
+    "category": "Finanzen",
+    "tag": "Document",
+    "example": "Bitte reichen Sie die Spesenabrechnung bis Freitag ein.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "گزارش مصارف"
+  }
+]

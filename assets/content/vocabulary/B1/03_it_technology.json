@@ -1,0 +1,57 @@
+[
+  {
+    "id": "b10301",
+    "german": "die Schnittstelle",
+    "english": "Interface",
+    "category": "IT & Technik",
+    "tag": "IT",
+    "example": "Die Schnittstelle verbindet beide Systeme.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "واسطه"
+  },
+  {
+    "id": "b10302",
+    "german": "die Berechtigung",
+    "english": "Permission",
+    "category": "IT & Technik",
+    "tag": "IT",
+    "example": "Sie haben keine Berechtigung fuer diesen Bereich.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "اجازه دسترسی"
+  },
+  {
+    "id": "b10303",
+    "german": "die Schnittstelle",
+    "english": "Interface / API",
+    "category": "IT & Technik",
+    "tag": "Development",
+    "example": "Die beiden Systeme kommunizieren über eine Schnittstelle.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "واسطه"
+  },
+  {
+    "id": "b10304",
+    "german": "die Bandbreite",
+    "english": "Bandwidth",
+    "category": "IT & Technik",
+    "tag": "Internet",
+    "example": "Wir brauchen mehr Bandbreite für das Video-Meeting.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "پهنای باند"
+  },
+  {
+    "id": "b10305",
+    "german": "verschlüsseln",
+    "english": "To encrypt",
+    "category": "IT & Technik",
+    "tag": "Security",
+    "example": "Alle Daten werden verschlüsselt übertragen.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "رمزگذاری کردن"
+  }
+]

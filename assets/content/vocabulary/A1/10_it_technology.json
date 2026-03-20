@@ -1,0 +1,145 @@
+[
+  {
+    "id": "a11001",
+    "german": "die Fehlermeldung",
+    "english": "Error message",
+    "category": "IT & Technik",
+    "tag": "IT",
+    "example": "Ich bekomme eine Fehlermeldung beim Login.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پیام خطا"
+  },
+  {
+    "id": "a11002",
+    "german": "der Sicherheitscheck",
+    "english": "Security check",
+    "category": "IT & Technik",
+    "tag": "IT",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff der Sicherheitscheck.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "بررسی امنیتی"
+  },
+  {
+    "id": "a11003",
+    "german": "das Passwort",
+    "english": "Password",
+    "category": "IT & Technik",
+    "tag": "Security",
+    "example": "Bitte ändern Sie Ihr Passwort regelmäßig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "گذرواژه"
+  },
+  {
+    "id": "a11004",
+    "german": "der Benutzername",
+    "english": "Username / Login name",
+    "category": "IT & Technik",
+    "tag": "Security",
+    "example": "Bitte geben Sie Ihren Benutzernamen ein.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "نام کاربری"
+  },
+  {
+    "id": "a11005",
+    "german": "die Cloud",
+    "english": "Cloud (storage/computing)",
+    "category": "IT & Technik",
+    "tag": "Infrastructure",
+    "example": "Die Dateien werden in der Cloud gespeichert.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ابر"
+  },
+  {
+    "id": "a11006",
+    "german": "das Update",
+    "english": "Update / Patch",
+    "category": "IT & Technik",
+    "tag": "Software",
+    "example": "Bitte installieren Sie das neueste Update.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "به‌روزرسانی"
+  },
+  {
+    "id": "a11007",
+    "german": "neu starten",
+    "english": "To restart / To reboot",
+    "category": "IT & Technik",
+    "tag": "Hardware",
+    "example": "Bitte starten Sie den Computer neu.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "راه‌اندازی دوباره"
+  },
+  {
+    "id": "a11008",
+    "german": "herunterladen",
+    "english": "To download",
+    "category": "IT & Technik",
+    "tag": "Internet",
+    "example": "Ich lade die Datei herunter.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "دانلود کردن"
+  },
+  {
+    "id": "a11009",
+    "german": "hochladen",
+    "english": "To upload",
+    "category": "IT & Technik",
+    "tag": "Internet",
+    "example": "Bitte laden Sie das Dokument hoch.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "آپلود کردن"
+  },
+  {
+    "id": "a11010",
+    "german": "das Netzwerk",
+    "english": "Network",
+    "category": "IT & Technik",
+    "tag": "Infrastructure",
+    "example": "Das interne Netzwerk ist ausgefallen.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "شبکه"
+  },
+  {
+    "id": "a11011",
+    "german": "die Festplatte",
+    "english": "Hard drive",
+    "category": "IT & Technik",
+    "tag": "Hardware",
+    "example": "Die Festplatte ist voll.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "هارددیسک"
+  },
+  {
+    "id": "a11012",
+    "german": "der Support",
+    "english": "IT support / Help desk",
+    "category": "IT & Technik",
+    "tag": "Service",
+    "example": "Bitte wenden Sie sich an den IT-Support.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پشتیبانی تخنیکی"
+  },
+  {
+    "id": "a11013",
+    "german": "der Server",
+    "english": "Server",
+    "category": "IT & Technik",
+    "tag": "Infrastructure",
+    "example": "Der Server ist überlastet.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "سرور"
+  }
+]

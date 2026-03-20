@@ -1,0 +1,24 @@
+[
+  {
+    "id": "a11201",
+    "german": "das Angebot",
+    "english": "Offer",
+    "category": "Marketing",
+    "tag": "Sales",
+    "example": "Wir haben ein neues Angebot erstellt.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پیشنهاد"
+  },
+  {
+    "id": "a11202",
+    "german": "die Kampagne",
+    "english": "Campaign",
+    "category": "Marketing",
+    "tag": "Marketing",
+    "example": "Die neue Kampagne startet im April.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "کمپاین"
+  }
+]

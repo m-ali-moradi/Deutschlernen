@@ -1,0 +1,200 @@
+[
+  {
+    "id": "a20101",
+    "german": "das Vorstellungsgesprach",
+    "english": "Job interview",
+    "category": "Bewerbung & Karriere",
+    "tag": "HR",
+    "example": "Mein Vorstellungsgesprach ist am Montag.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مصاحبه شغلی"
+  },
+  {
+    "id": "a20102",
+    "german": "die Probezeit",
+    "english": "Probation period",
+    "category": "Bewerbung & Karriere",
+    "tag": "HR",
+    "example": "Die Probezeit dauert sechs Monate.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "دوره آزمایشی"
+  },
+  {
+    "id": "a20103",
+    "german": "die Teamleitung",
+    "english": "Team lead",
+    "category": "Bewerbung & Karriere",
+    "tag": "HR",
+    "example": "Die Teamleitung organisiert das Projekt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "رهبری تیم"
+  },
+  {
+    "id": "a20104",
+    "german": "der Onboarding-Prozess",
+    "english": "Onboarding process",
+    "category": "Bewerbung & Karriere",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff der Onboarding-Prozess.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "روند آشناسازی"
+  },
+  {
+    "id": "a20105",
+    "german": "der Lebenslauf",
+    "english": "CV / Résumé",
+    "category": "Bewerbung & Karriere",
+    "tag": "Application",
+    "example": "Bitte senden Sie Ihren Lebenslauf als PDF.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "رزومه"
+  },
+  {
+    "id": "a20106",
+    "german": "die Bewerbung",
+    "english": "Job application",
+    "category": "Bewerbung & Karriere",
+    "tag": "Application",
+    "example": "Ich schicke heute meine Bewerbung ab.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "درخواست کار"
+  },
+  {
+    "id": "a20107",
+    "german": "das Zeugnis",
+    "english": "Reference / Certificate",
+    "category": "Bewerbung & Karriere",
+    "tag": "Document",
+    "example": "Bitte legen Sie ein aktuelles Arbeitszeugnis bei.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تصدیق‌نامه"
+  },
+  {
+    "id": "a20108",
+    "german": "die Probezeit",
+    "english": "Probation period / Trial period",
+    "category": "Bewerbung & Karriere",
+    "tag": "Contract",
+    "example": "Die Probezeit beträgt drei Monate.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "دوره آزمایشی"
+  },
+  {
+    "id": "a20109",
+    "german": "der Arbeitsvertrag",
+    "english": "Employment contract",
+    "category": "Bewerbung & Karriere",
+    "tag": "Contract",
+    "example": "Ich habe einen unbefristeten Arbeitsvertrag.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "قرارداد کاری"
+  },
+  {
+    "id": "a20110",
+    "german": "die Beförderung",
+    "english": "Promotion",
+    "category": "Bewerbung & Karriere",
+    "tag": "Career",
+    "example": "Sie hat eine Beförderung zum Abteilungsleiter bekommen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "ارتقا"
+  },
+  {
+    "id": "a20111",
+    "german": "die Kündigung",
+    "english": "Termination / Resignation",
+    "category": "Bewerbung & Karriere",
+    "tag": "Contract",
+    "example": "Die Kündigung muss schriftlich eingereicht werden.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فسخ"
+  },
+  {
+    "id": "a20112",
+    "german": "die Qualifikation",
+    "english": "Qualification",
+    "category": "Bewerbung & Karriere",
+    "tag": "Skills",
+    "example": "Welche Qualifikationen bringen Sie mit?",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "صلاحیت"
+  },
+  {
+    "id": "a20113",
+    "german": "der Arbeitgeber",
+    "english": "Employer",
+    "category": "Bewerbung & Karriere",
+    "tag": "Roles",
+    "example": "Der Arbeitgeber ist für die Zahlung verantwortlich.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارفرما"
+  },
+  {
+    "id": "a20114",
+    "german": "der Arbeitnehmer",
+    "english": "Employee",
+    "category": "Bewerbung & Karriere",
+    "tag": "Roles",
+    "example": "Der Arbeitnehmer hat Anspruch auf 20 Tage Urlaub.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارمند"
+  },
+  {
+    "id": "a20115",
+    "german": "die Fortbildung",
+    "english": "Further training / Professional development",
+    "category": "Bewerbung & Karriere",
+    "tag": "Development",
+    "example": "Die Firma bezahlt für meine Fortbildung.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "آموزش تکمیلی"
+  },
+  {
+    "id": "a20116",
+    "german": "das Netzwerk",
+    "english": "Network / Professional network",
+    "category": "Bewerbung & Karriere",
+    "tag": "Career",
+    "example": "Ein gutes Netzwerk ist wichtig für die Karriere.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "شبکه حرفه‌ای"
+  },
+  {
+    "id": "a20117",
+    "german": "der Arbeitsmarkt",
+    "english": "Labour market / Job market",
+    "category": "Bewerbung & Karriere",
+    "tag": "Economy",
+    "example": "Der Arbeitsmarkt in Deutschland ist sehr gut.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بازار کار"
+  },
+  {
+    "id": "a20118",
+    "german": "der Minijob",
+    "english": "Mini job (max €520/month)",
+    "category": "Bewerbung & Karriere",
+    "tag": "Work Type",
+    "example": "Ein Minijob ist steuerfrei bis 520 Euro.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کار کوچک / نیمه‌وقت"
+  }
+]

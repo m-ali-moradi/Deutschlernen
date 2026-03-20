@@ -1,0 +1,90 @@
+[
+  {
+    "id": "a21801",
+    "german": "sich melden",
+    "english": "To answer / To pick up (phone)",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Es meldet sich niemand.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پاسخ دادن"
+  },
+  {
+    "id": "a21802",
+    "german": "Wer spricht bitte?",
+    "english": "Who is calling, please?",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Guten Tag, hier ist Müller GmbH. Wer spricht bitte?",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "لطفاً چه کسی صحبت می‌کند؟"
+  },
+  {
+    "id": "a21803",
+    "german": "verbinden",
+    "english": "To connect / To transfer (a call)",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Ich verbinde Sie mit Frau Schmidt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "وصل کردن / انتقال تماس"
+  },
+  {
+    "id": "a21804",
+    "german": "in der Leitung",
+    "english": "On hold / On the line",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Bitte bleiben Sie in der Leitung.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "در خط"
+  },
+  {
+    "id": "a21805",
+    "german": "eine Nachricht hinterlassen",
+    "english": "To leave a message",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Darf ich eine Nachricht hinterlassen?",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گذاشتن پیام"
+  },
+  {
+    "id": "a21806",
+    "german": "die Durchwahl",
+    "english": "Extension (phone number)",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Meine Durchwahl ist 234.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "شماره داخلی"
+  },
+  {
+    "id": "a21807",
+    "german": "die Telefonkonferenz",
+    "english": "Conference call",
+    "category": "Telefon & Kommunikation",
+    "tag": "Phone",
+    "example": "Wir haben eine Telefonkonferenz mit drei Standorten.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کنفرانس تلفنی"
+  },
+  {
+    "id": "a21808",
+    "german": "erreichbar sein",
+    "english": "To be reachable / Available",
+    "category": "Telefon & Kommunikation",
+    "tag": "Communication",
+    "example": "Ich bin ab 14 Uhr erreichbar.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "در دسترس بودن"
+  }
+]

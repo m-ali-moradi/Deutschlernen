@@ -1,0 +1,817 @@
+[
+  {
+    "id": "a1_g1_1",
+    "type": "multiple-choice",
+    "question": "___ Haus ist groß.",
+    "options": ["Der", "Die", "Das", "Ein"],
+    "correctAnswer": 2,
+    "topic": "Bestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g1_2",
+    "type": "multiple-choice",
+    "question": "Wo ist ___ Tisch?",
+    "options": ["der", "die", "das", "dem"],
+    "correctAnswer": 0,
+    "topic": "Bestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g1_3",
+    "type": "multiple-choice",
+    "question": "___ Lampe funktioniert nicht.",
+    "options": ["Der", "Die", "Das", "Den"],
+    "correctAnswer": 1,
+    "topic": "Bestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g9_1",
+    "type": "multiple-choice",
+    "question": "Welcher Satz ist richtig?",
+    "options": [
+      "Ich heute gehe ins Kino.",
+      "Gehe ich heute ins Kino.",
+      "Heute gehe ich ins Kino.",
+      "Heute ich ins Kino gehe."
+    ],
+    "correctAnswer": 2,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g9_2",
+    "type": "multiple-choice",
+    "question": "___ du aus Berlin?",
+    "options": ["Kommen", "Kommt", "Kommst", "Komm"],
+    "correctAnswer": 2,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g9_3",
+    "type": "multiple-choice",
+    "question": "Wo ___ der Bahnhof?",
+    "options": ["ist", "sein", "bist", "sind"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g10_1",
+    "type": "multiple-choice",
+    "question": "Ich sehe ___ Hund.",
+    "options": ["der", "den", "dem", "das"],
+    "correctAnswer": 1,
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g10_2",
+    "type": "multiple-choice",
+    "question": "___ Apfel ist lecker.",
+    "options": ["Den", "Der", "Dem", "Das"],
+    "correctAnswer": 1,
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g10_3",
+    "type": "multiple-choice",
+    "question": "Wir kaufen ___ Auto.",
+    "options": ["ein", "einen", "einem", "einer"],
+    "correctAnswer": 0,
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g11_1",
+    "type": "multiple-choice",
+    "question": "Das ist Tom. ___ lernt Deutsch.",
+    "options": ["Sie", "Ich", "Wir", "Er"],
+    "correctAnswer": 3,
+    "topic": "Personalpronomen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g11_2",
+    "type": "multiple-choice",
+    "question": "Kommst ___ aus Spanien?",
+    "options": ["Sie", "du", "ihr", "wir"],
+    "correctAnswer": 1,
+    "topic": "Personalpronomen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g11_3",
+    "type": "multiple-choice",
+    "question": "Wie heißt ___? (formell)",
+    "options": ["ihr", "Sie", "sie", "du"],
+    "correctAnswer": 1,
+    "topic": "Personalpronomen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g2_1",
+    "type": "multiple-choice",
+    "question": "Er ___ ein Buch. (lesen)",
+    "options": ["lese", "lest", "liest", "lesen"],
+    "correctAnswer": 2,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g2_2",
+    "type": "multiple-choice",
+    "question": "Wir ___ nach Hause. (gehen)",
+    "options": ["geht", "gehe", "gehen", "gehst"],
+    "correctAnswer": 2,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g2_3",
+    "type": "multiple-choice",
+    "question": "___ ihr Deutsch?",
+    "options": ["Spricht", "Sprechen", "Sprichst", "Sprecht"],
+    "correctAnswer": 3,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g12_1",
+    "type": "multiple-choice",
+    "question": "Du ___ heute arbeiten.",
+    "options": ["musst", "muss", "müssen", "müsst"],
+    "correctAnswer": 0,
+    "topic": "Modalverben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g12_2",
+    "type": "multiple-choice",
+    "question": "Ich ___ nicht schwimmen.",
+    "options": ["kannst", "kann", "können", "könnt"],
+    "correctAnswer": 1,
+    "topic": "Modalverben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g12_3",
+    "type": "multiple-choice",
+    "question": "Hier ___ man nicht rauchen.",
+    "options": ["dürfen", "darfst", "darf", "dürft"],
+    "correctAnswer": 2,
+    "topic": "Modalverben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g13_1",
+    "type": "multiple-choice",
+    "question": "Der Film ___ um 20 Uhr ___.",
+    "options": ["an fängt", "fängt an", "fangt an", "anfangt"],
+    "correctAnswer": 1,
+    "topic": "Trennbare Verben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g13_2",
+    "type": "multiple-choice",
+    "question": "Wann ___ du am Samstag ___?",
+    "options": ["stehest auf", "aufstehst", "stehst auf", "stehst an"],
+    "correctAnswer": 2,
+    "topic": "Trennbare Verben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g13_3",
+    "type": "multiple-choice",
+    "question": "Wir ___ im Supermarkt ___.",
+    "options": ["ein kaufen", "kaufen ein", "kaufen an", "kaufen aus"],
+    "correctAnswer": 1,
+    "topic": "Trennbare Verben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g14_1",
+    "type": "multiple-choice",
+    "question": "Ich fahre ___ dem Bus.",
+    "options": ["in", "mit", "aus", "nach"],
+    "correctAnswer": 1,
+    "topic": "Präpositionen (Akk/Dat)",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g14_2",
+    "type": "multiple-choice",
+    "question": "Die Blumen sind ___ dich.",
+    "options": ["für", "ohne", "durch", "mit"],
+    "correctAnswer": 0,
+    "topic": "Präpositionen (Akk/Dat)",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g14_3",
+    "type": "multiple-choice",
+    "question": "Er kommt ___ der Türkei.",
+    "options": ["von", "aus", "nach", "zu"],
+    "correctAnswer": 1,
+    "topic": "Präpositionen (Akk/Dat)",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g15_1",
+    "type": "multiple-choice",
+    "question": "Das Haus ist sehr ___.",
+    "options": ["schöne", "schönen", "schön", "schönes"],
+    "correctAnswer": 2,
+    "topic": "Adjektive Grundlagen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g15_2",
+    "type": "multiple-choice",
+    "question": "Das ist ein ___ Auto.",
+    "options": ["neue", "neues", "neuen", "neu"],
+    "correctAnswer": 1,
+    "topic": "Adjektive Grundlagen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g15_3",
+    "type": "multiple-choice",
+    "question": "Die ___ Lampe funktioniert nicht.",
+    "options": ["alte", "altes", "alter", "alt"],
+    "correctAnswer": 0,
+    "topic": "Adjektive Grundlagen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g37_1",
+    "type": "multiple-choice",
+    "question": "Ein Tisch, viele ___",
+    "options": ["Tischn", "Tische", "Tischs", "Tischer"],
+    "correctAnswer": 1,
+    "topic": "Pluralbildung",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g37_2",
+    "type": "multiple-choice",
+    "question": "Eine Frau, zwei ___",
+    "options": ["Fraus", "Frauen", "Fraue", "Frauer"],
+    "correctAnswer": 1,
+    "topic": "Pluralbildung",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g37_3",
+    "type": "multiple-choice",
+    "question": "Ein Kind, viele ___",
+    "options": ["Kind", "Kinder", "Kindern", "Kinden"],
+    "correctAnswer": 1,
+    "topic": "Pluralbildung",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g38_1",
+    "type": "multiple-choice",
+    "question": "Das ist ___ Auto.",
+    "options": ["nicht", "kein", "keine", "keinen"],
+    "correctAnswer": 1,
+    "topic": "Negation",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g38_2",
+    "type": "multiple-choice",
+    "question": "Ich bin ___ müde.",
+    "options": ["nicht", "kein", "keine", "nichts"],
+    "correctAnswer": 0,
+    "topic": "Negation",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g38_3",
+    "type": "multiple-choice",
+    "question": "Er hat ___ Zeit.",
+    "options": ["nicht", "kein", "keine", "nichts"],
+    "correctAnswer": 2,
+    "topic": "Negation",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g56_1",
+    "type": "multiple-choice",
+    "question": "___ mir bitte das Buch! (du)",
+    "options": ["Geben", "Gebe", "Gibst", "Gib"],
+    "correctAnswer": 3,
+    "topic": "Imperativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g56_2",
+    "type": "multiple-choice",
+    "question": "___ Platz! (Sie)",
+    "options": ["Nimm", "Nehmt", "Nehmen Sie", "Nehmen"],
+    "correctAnswer": 2,
+    "topic": "Imperativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g56_3",
+    "type": "multiple-choice",
+    "question": "___ ruhig! (ihr)",
+    "options": ["Seid", "Sind", "Sei", "Seien"],
+    "correctAnswer": 0,
+    "topic": "Imperativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g57_1",
+    "type": "multiple-choice",
+    "question": "Wie spät ist es? (02:30)",
+    "options": ["halb drei", "halb zwei", "zwei dreißig", "dreißig nach zwei"],
+    "correctAnswer": 0,
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g57_2",
+    "type": "multiple-choice",
+    "question": "Der ___ Mai.",
+    "options": ["fünf", "fünfte", "fünften", "fünfst"],
+    "correctAnswer": 1,
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g57_3",
+    "type": "multiple-choice",
+    "question": "Ich bin ___ Jahre alt. (25)",
+    "options": ["fünfundzwanzig", "zwanzigfünf", "fünfzwanzig", "zwei und fünfzig"],
+    "correctAnswer": 0,
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g1_4",
+    "type": "multiple-choice",
+    "question": "___ Katze schläft auf dem Sofa.",
+    "options": ["Der", "Die", "Das", "Ein"],
+    "correctAnswer": 1,
+    "topic": "Bestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g1_5",
+    "type": "multiple-choice",
+    "question": "Kennen Sie ___ Mann dort?",
+    "options": ["der", "die", "das", "den"],
+    "correctAnswer": 3,
+    "topic": "Bestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g1_6",
+    "type": "multiple-choice",
+    "question": "___ Buch liegt auf dem Tisch.",
+    "options": ["Der", "Die", "Das", "Den"],
+    "correctAnswer": 2,
+    "topic": "Bestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g9_4",
+    "type": "multiple-choice",
+    "question": "Woher ___ du?",
+    "options": ["kommt", "kommst", "kommen", "komme"],
+    "correctAnswer": 1,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g9_5",
+    "type": "multiple-choice",
+    "question": "Heute ___ ich leider keine Zeit.",
+    "options": ["habe", "hast", "hat", "haben"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g9_6",
+    "type": "multiple-choice",
+    "question": "Ich ___ am liebsten Pizza.",
+    "options": ["essen", "esse", "isst", "esst"],
+    "correctAnswer": 1,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g10_4",
+    "type": "multiple-choice",
+    "question": "Er sucht schon lange ___ Schlüssel.",
+    "options": ["der", "die", "das", "den"],
+    "correctAnswer": 3,
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g10_5",
+    "type": "multiple-choice",
+    "question": "Haben Sie heute ___ Termin?",
+    "options": ["ein", "einen", "eine", "einem"],
+    "correctAnswer": 1,
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g10_6",
+    "type": "multiple-choice",
+    "question": "___ Apfelsaft schmeckt sehr gut.",
+    "options": ["Den", "Der", "Dem", "Des"],
+    "correctAnswer": 1,
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g11_4",
+    "type": "multiple-choice",
+    "question": "Das ist Maria. ___ kommt aus Italien.",
+    "options": ["Er", "Sie", "Es", "Wir"],
+    "correctAnswer": 1,
+    "topic": "Personalpronomen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g11_5",
+    "type": "multiple-choice",
+    "question": "Wir sind müde. ___ gehen jetzt schlafen.",
+    "options": ["Ihr", "Sie", "Wir", "Ich"],
+    "correctAnswer": 2,
+    "topic": "Personalpronomen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g11_6",
+    "type": "multiple-choice",
+    "question": "Wo genau wohnst ___?",
+    "options": ["er", "du", "wir", "sie"],
+    "correctAnswer": 1,
+    "topic": "Personalpronomen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g2_4",
+    "type": "multiple-choice",
+    "question": "Was ___ du beruflich?",
+    "options": ["machst", "machen", "macht", "mache"],
+    "correctAnswer": 0,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g2_5",
+    "type": "multiple-choice",
+    "question": "Die Kinder ___ heute Deutsch.",
+    "options": ["lernt", "lernen", "lernst", "lerne"],
+    "correctAnswer": 1,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g2_6",
+    "type": "multiple-choice",
+    "question": "Wo ___ ihr gerade?",
+    "options": ["wohnt", "wohnen", "wohnst", "wohne"],
+    "correctAnswer": 0,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g12_4",
+    "type": "multiple-choice",
+    "question": "Wir ___ jetzt nach Hause gehen.",
+    "options": ["wollen", "willst", "wollt", "will"],
+    "correctAnswer": 0,
+    "topic": "Modalverben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g12_5",
+    "type": "multiple-choice",
+    "question": "___ du mir bitte helfen?",
+    "options": ["Kannst", "Kann", "Können", "Könnt"],
+    "correctAnswer": 0,
+    "topic": "Modalverben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g12_6",
+    "type": "multiple-choice",
+    "question": "Er ___ heute keine Pizza essen.",
+    "options": ["möchtet", "möchte", "möchten", "möchtest"],
+    "correctAnswer": 1,
+    "topic": "Modalverben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g13_4",
+    "type": "multiple-choice",
+    "question": "Ich ___ dich morgen ___.",
+    "options": ["rufe - an", "an - rufe", "rufe - aus", "rufe - mit"],
+    "correctAnswer": 0,
+    "topic": "Trennbare Verben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g13_5",
+    "type": "multiple-choice",
+    "question": "___ du bitte das Licht ___?",
+    "options": ["machst - aus", "aus - machst", "macht - aus", "machen - aus"],
+    "correctAnswer": 0,
+    "topic": "Trennbare Verben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g13_6",
+    "type": "multiple-choice",
+    "question": "Wir ___ pünktlich um 8 Uhr ___.",
+    "options": ["gehen - los", "los - gehen", "gehen - ab", "gehen - an"],
+    "correctAnswer": 0,
+    "topic": "Trennbare Verben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g14_4",
+    "type": "multiple-choice",
+    "question": "Ich gehe jeden Tag ___ die Schule.",
+    "options": ["in", "zu", "nach", "mit"],
+    "correctAnswer": 0,
+    "topic": "Präpositionen (Akk/Dat)",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g14_5",
+    "type": "multiple-choice",
+    "question": "Er arbeitet schon lange ___ Siemens.",
+    "options": ["bei", "in", "an", "zu"],
+    "correctAnswer": 0,
+    "topic": "Präpositionen (Akk/Dat)",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g14_6",
+    "type": "multiple-choice",
+    "question": "Was machst du am ___?",
+    "options": ["Wochenende", "Woche", "Wochentag", "Wochen"],
+    "correctAnswer": 0,
+    "topic": "Präpositionen (Akk/Dat)",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g15_4",
+    "type": "multiple-choice",
+    "question": "Die Suppe schmeckt sehr ___.",
+    "options": ["leckerer", "leckeren", "lecker", "leckeres"],
+    "correctAnswer": 2,
+    "topic": "Adjektive Grundlagen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g15_5",
+    "type": "multiple-choice",
+    "question": "Ich habe einen sehr ___ Hund.",
+    "options": ["kleiner", "kleinen", "kleine", "kleines"],
+    "correctAnswer": 1,
+    "topic": "Adjektive Grundlagen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g15_6",
+    "type": "multiple-choice",
+    "question": "Sie trägt heute ein ___ Kleid.",
+    "options": ["rotes", "roter", "rot", "roten"],
+    "correctAnswer": 0,
+    "topic": "Adjektive Grundlagen",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g37_4",
+    "type": "multiple-choice",
+    "question": "Ein Apfel, zwei ___",
+    "options": ["Apfel", "Äpfel", "Apfeln", "Äpfeln"],
+    "correctAnswer": 1,
+    "topic": "Pluralbildung",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g37_5",
+    "type": "multiple-choice",
+    "question": "Das rote Auto, die vielen ___",
+    "options": ["Auto", "Auton", "Autos", "Auter"],
+    "correctAnswer": 2,
+    "topic": "Pluralbildung",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g37_6",
+    "type": "multiple-choice",
+    "question": "Der nette Freund, viele ___",
+    "options": ["Freunds", "Freunde", "Freunden", "Freund"],
+    "correctAnswer": 1,
+    "topic": "Pluralbildung",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g38_4",
+    "type": "multiple-choice",
+    "question": "Ich verstehe diesen Satz ___.",
+    "options": ["nicht", "kein", "keine", "nichts"],
+    "correctAnswer": 0,
+    "topic": "Negation",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g38_5",
+    "type": "multiple-choice",
+    "question": "Er hat im Moment ___ Geld.",
+    "options": ["nicht", "kein", "keine", "nichts"],
+    "correctAnswer": 1,
+    "topic": "Negation",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g38_6",
+    "type": "multiple-choice",
+    "question": "Das ist absolut ___ Problem.",
+    "options": ["nicht", "kein", "keine", "nichts"],
+    "correctAnswer": 1,
+    "topic": "Negation",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g56_4",
+    "type": "multiple-choice",
+    "question": "___ bitte das Fenster auf!",
+    "options": ["Machst", "Mach", "Macht", "Machen"],
+    "correctAnswer": 1,
+    "topic": "Imperativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g56_5",
+    "type": "multiple-choice",
+    "question": "Bitte ___ leise!",
+    "options": ["Seid", "Sind", "Bist", "Sei"],
+    "correctAnswer": 0,
+    "topic": "Imperativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g56_6",
+    "type": "multiple-choice",
+    "question": "___ Sie bitte hier auf mich!",
+    "options": ["Warten", "Wartet", "Warte", "Warten Sie"],
+    "correctAnswer": 3,
+    "topic": "Imperativ",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g57_4",
+    "type": "multiple-choice",
+    "question": "Wann beginnt der Kurs? ___ genau 9 Uhr.",
+    "options": ["am", "um", "im", "zum"],
+    "correctAnswer": 1,
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g57_5",
+    "type": "multiple-choice",
+    "question": "Wie viel kostet das? Es kostet ___ Euro.",
+    "options": ["zwölf", "zwanzig", "zwei", "zehn"],
+    "correctAnswer": 0,
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1"
+  },
+  {
+    "id": "a1_g57_6",
+    "type": "multiple-choice",
+    "question": "Heute ist der ___ Mai.",
+    "options": ["eins", "erster", "erste", "erst"],
+    "correctAnswer": 1,
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1"
+  },
+  {
+    "id": "ex_fb_a1_1",
+    "type": "fill-blank",
+    "question": "Ich ___ aus Deutschland. (kommen)",
+    "options": ["kommt", "kommst", "komme", "kommen"],
+    "correctAnswer": 2,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "ex_fb_a1_2",
+    "type": "fill-blank",
+    "question": "Das ist ___ Apfel.",
+    "options": ["ein", "eine", "einen", "einem"],
+    "correctAnswer": 0,
+    "topic": "Unbestimmte Artikel",
+    "level": "A1"
+  },
+  {
+    "id": "ex_fb_a1_3",
+    "type": "fill-blank",
+    "question": "Wie ___ du?",
+    "options": ["heißen", "heißt", "heiße", "heißst"],
+    "correctAnswer": 1,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "ex_fb_a1_4",
+    "type": "fill-blank",
+    "question": "Wir ___ nach Hause. (gehen)",
+    "options": ["geht", "gehst", "gehe", "gehen"],
+    "correctAnswer": 3,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "ex_fb_a1_5",
+    "type": "fill-blank",
+    "question": "Wo ___ der Bahnhof?",
+    "options": ["ist", "sind", "bist", "sein"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "ex_fb_a1_6",
+    "type": "fill-blank",
+    "question": "Er ___ ein Buch. (lesen)",
+    "options": ["lese", "liest", "lest", "lesen"],
+    "correctAnswer": 1,
+    "topic": "Präsens",
+    "level": "A1"
+  },
+  {
+    "id": "ex_so_a1_1",
+    "type": "sentence-order",
+    "question": "Ich komme aus Deutschland.",
+    "options": ["aus", "Deutschland", "Ich", "komme"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "ex_so_a1_2",
+    "type": "sentence-order",
+    "question": "Das ist ein Apfel.",
+    "options": ["ist", "Apfel", "ein", "Das"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "ex_so_a1_3",
+    "type": "sentence-order",
+    "question": "Wo wohnst du?",
+    "options": ["du?", "Wo", "wohnst"],
+    "correctAnswer": 0,
+    "topic": "W-Fragen",
+    "level": "A1"
+  },
+  {
+    "id": "ex_so_a1_4",
+    "type": "sentence-order",
+    "question": "Ich lerne Deutsch.",
+    "options": ["Deutsch", "lerne", "Ich"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A1"
+  },
+  {
+    "id": "ex_so_a1_5",
+    "type": "sentence-order",
+    "question": "Der Tee ist heiß.",
+    "options": ["heiß", "ist", "Der", "Tee"],
+    "correctAnswer": 0,
+    "topic": "Adjektive",
+    "level": "A1"
+  },
+  {
+    "id": "ex_so_a1_6",
+    "type": "sentence-order",
+    "question": "Hast du Geschwister?",
+    "options": ["du", "Hast", "Geschwister?"],
+    "correctAnswer": 0,
+    "topic": "Ja/Nein-Fragen",
+    "level": "A1"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "a10501",
+    "german": "das Zertifikat",
+    "english": "Certificate",
+    "category": "Bildung",
+    "tag": "Learning",
+    "example": "Nach dem Kurs bekomme ich ein Zertifikat.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تصدیق‌نامه"
+  },
+  {
+    "id": "a10502",
+    "german": "der Lernpfad",
+    "english": "Learning path",
+    "category": "Bildung",
+    "tag": "Learning",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff der Lernpfad.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "مسیر یادگیری"
+  }
+]

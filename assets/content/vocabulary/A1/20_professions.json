@@ -1,0 +1,35 @@
+[
+  {
+    "id": "a12001",
+    "german": "der Buchhalter",
+    "english": "accountant",
+    "category": "Berufsrollen",
+    "tag": "Finance",
+    "example": "Im Arbeitsalltag ist der Buchhalter wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "حسابدار"
+  },
+  {
+    "id": "a12002",
+    "german": "der Ingenieur",
+    "english": "engineer",
+    "category": "Berufsrollen",
+    "tag": "Engineering",
+    "example": "Im Arbeitsalltag ist der Ingenieur wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "انجینر"
+  },
+  {
+    "id": "a12003",
+    "german": "die Sekretaerin",
+    "english": "secretary",
+    "category": "Berufsrollen",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Sekretaerin wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "منشی"
+  }
+]

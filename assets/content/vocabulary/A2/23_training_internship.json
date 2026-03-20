@@ -1,0 +1,167 @@
+[
+  {
+    "id": "a22301",
+    "german": "die Ausbildung",
+    "english": "Vocational training / Apprenticeship",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Ich mache eine Ausbildung zum Kaufmann.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "آموزش حرفه‌ای / کارآموزی"
+  },
+  {
+    "id": "a22302",
+    "german": "die Berufsschule",
+    "english": "Vocational school",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "An der Berufsschule lerne ich die theoretischen Grundlagen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدرسه حرفه‌ای"
+  },
+  {
+    "id": "a22303",
+    "german": "der Ausbilder / die Ausbilderin",
+    "english": "Trainer / Mentor (during apprenticeship)",
+    "category": "Ausbildung & Praktikum",
+    "tag": "People",
+    "example": "Mein Ausbilder erklärt mir die Aufgaben.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مربی / سرپرست آموزشی"
+  },
+  {
+    "id": "a22304",
+    "german": "der Auszubildende (Azubi)",
+    "english": "Apprentice / Trainee",
+    "category": "Ausbildung & Praktikum",
+    "tag": "People",
+    "example": "Als Azubi verdiene ich 800 Euro im Monat.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارآموز"
+  },
+  {
+    "id": "a22305",
+    "german": "das Praktikum",
+    "english": "Internship / Work placement",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Internship",
+    "example": "Ich mache ein Praktikum bei einer IT-Firma.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارآموزی"
+  },
+  {
+    "id": "a22306",
+    "german": "die Abschlussprüfung",
+    "english": "Final exam / Graduation exam",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Exams",
+    "example": "Die Abschlussprüfung findet vor der IHK statt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "امتحان نهایی"
+  },
+  {
+    "id": "a22307",
+    "german": "der Berufsberater",
+    "english": "Careers advisor / Vocational counsellor",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Support",
+    "example": "Der Berufsberater bei der Agentur für Arbeit hilft mir.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مشاور شغلی"
+  },
+  {
+    "id": "a22308",
+    "german": "die Weiterbildung",
+    "english": "Further training / Continuing education",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Ich mache eine Weiterbildung zum Projektmanager.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "آموزش تکمیلی"
+  },
+  {
+    "id": "a22309",
+    "german": "betrieblich",
+    "english": "Company-based / In-house",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Die betriebliche Ausbildung findet im Unternehmen statt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "شرکتی / درون‌سازمانی"
+  },
+  {
+    "id": "a22310",
+    "german": "die Probezeit (Ausbildung)",
+    "english": "Trial period (apprenticeship)",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Contract",
+    "example": "Die Probezeit der Ausbildung dauert drei Monate.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "دوره آزمایشی"
+  },
+  {
+    "id": "a22311",
+    "german": "das Berichtsheft",
+    "english": "Training report booklet",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Ich muss täglich das Berichtsheft ausfüllen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "دفتر گزارش کارآموزی"
+  },
+  {
+    "id": "a22312",
+    "german": "der Facharbeiter",
+    "english": "Skilled worker / Qualified tradesperson",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Qualification",
+    "example": "Als Facharbeiter verdiene ich mehr als als Hilfskraft.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارگر ماهر"
+  },
+  {
+    "id": "a22313",
+    "german": "dual",
+    "english": "Dual (system)",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Das duale Ausbildungssystem ist eine Besonderheit Deutschlands.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "دوگانه"
+  },
+  {
+    "id": "a22314",
+    "german": "der Meister",
+    "english": "Master craftsman (advanced qualification)",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Qualification",
+    "example": "Nach dem Gesellenbrief kann man den Meister machen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "استادکار"
+  },
+  {
+    "id": "a22315",
+    "german": "der Praktikumsbericht",
+    "english": "Internship report",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Internship",
+    "example": "Am Ende muss ich einen Praktikumsbericht schreiben.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گزارش کارآموزی"
+  }
+]

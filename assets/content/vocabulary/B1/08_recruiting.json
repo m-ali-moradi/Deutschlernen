@@ -1,0 +1,35 @@
+[
+  {
+    "id": "b10801",
+    "german": "das Auswahlverfahren",
+    "english": "selection process",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist das Auswahlverfahren wichtig.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "روند گزینش"
+  },
+  {
+    "id": "b10802",
+    "german": "das Assessment-Center",
+    "english": "assessment center",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist das Assessment-Center wichtig.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "مرکز ارزیابی"
+  },
+  {
+    "id": "b10803",
+    "german": "die Vertragsunterzeichnung",
+    "english": "contract signing",
+    "category": "Recruiting",
+    "tag": "Legal",
+    "example": "Im Arbeitsalltag ist die Vertragsunterzeichnung wichtig.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "امضای قرارداد"
+  }
+]

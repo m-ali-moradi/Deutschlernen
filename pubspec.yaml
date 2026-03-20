@@ -1,0 +1,43 @@
+name: deutschlernen
+description: Flutter implementation of DeutschLernen with SQLite + Drift.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.5.1
+  go_router: ^14.8.1
+  drift: 2.31.0
+  drift_flutter: ^0.2.4
+  sqlite3_flutter_libs: ^0.5.28
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.15
+  drift_dev: 2.31.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/content/vocabulary/misc.json
+    - assets/content/vocabulary/A1/
+    - assets/content/vocabulary/A2/
+    - assets/content/vocabulary/B1/
+    - assets/content/vocabulary/B2/
+    - assets/content/vocabulary/C1/
+    - assets/content/exercises/
+    - assets/content/grammar/
+    - assets/content/phrases/
+    - assets/content/achievements/

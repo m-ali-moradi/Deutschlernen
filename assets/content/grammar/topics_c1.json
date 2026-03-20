@@ -1,0 +1,126 @@
+[
+  {
+    "id": "g49",
+    "title": "Modalpartikeln",
+    "level": "C1",
+    "category": "Partikeln",
+    "icon": "💬",
+    "rule": "doch, mal, ja, eben, halt, wohl, schon, eigentlich — unbetonte Nuancen.",
+    "explanation": "Modal particles add emotional nuance, attitude, or emphasis. They are unstressed, have no direct translation, and are essential for natural-sounding German.",
+    "examples": [
+      "Komm doch mal her!",
+      "Das ist ja interessant!",
+      "Das ist eben so.",
+      "Er wird wohl kommen."
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g50",
+    "title": "Subjektive Modalverben",
+    "level": "C1",
+    "category": "Verben",
+    "icon": "🔧",
+    "rule": "Modalverben drücken Vermutung aus: muss (sicher), dürfte (wahrscheinlich), kann (möglich).",
+    "explanation": "Modal verbs have subjective meanings expressing degrees of certainty: müssen (certain), dürfen (probable), können (possible).",
+    "examples": [
+      "Er muss krank sein. (= sicher)",
+      "Sie dürfte schon da sein. (= wahrscheinlich)",
+      "Das kann stimmen. (= möglich)",
+      "Er will das nicht gewusst haben."
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g51",
+    "title": "Nomen-Verb-Verbindungen",
+    "level": "C1",
+    "category": "Verben",
+    "icon": "🔗",
+    "rule": "Feste Verbindungen: in Betracht ziehen, Bescheid geben, in Kauf nehmen.",
+    "explanation": "Fixed noun-verb collocations essential in formal/academic German. The verb is often 'light' and the noun carries meaning.",
+    "examples": [
+      "Ich ziehe das in Betracht.",
+      "Bitte geben Sie mir Bescheid.",
+      "Das müssen wir in Kauf nehmen."
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g52",
+    "title": "Erweiterte Passivformen",
+    "level": "C1",
+    "category": "Zeiten",
+    "icon": "⏰",
+    "rule": "Subjektloses Passiv, bekommen-Passiv, Passiv in allen Zeiten.",
+    "explanation": "Advanced passive includes: subjektloses Passiv (Es wird getanzt), bekommen/kriegen-Passiv (recipient passive), and passive in all tenses.",
+    "examples": [
+      "Hier wird nicht geraucht!",
+      "Es wurde die ganze Nacht getanzt.",
+      "Er bekommt das Buch geschenkt."
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g53",
+    "title": "Weiterführende Nebensätze",
+    "level": "C1",
+    "category": "Nebensätze",
+    "icon": "🔗",
+    "rule": "was, wo, worüber, weshalb als Relativpronomen. Freie Relativsätze.",
+    "explanation": "Advanced relative clauses use 'was' (whole clauses, indefinites, superlatives), 'wo' (places/times), and wo(r)-compounds.",
+    "examples": [
+      "Er hat bestanden, was mich freut.",
+      "Das Beste, was passieren kann.",
+      "Die Stadt, wo ich geboren bin.",
+      "Das ist etwas, worüber wir reden müssen."
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g54",
+    "title": "Apposition",
+    "level": "C1",
+    "category": "Satzbau",
+    "icon": "📋",
+    "rule": "Einschub, der ein Nomen näher bestimmt. Steht im gleichen Kasus.",
+    "explanation": "An apposition is a noun phrase placed next to another noun to explain or identify it. It takes the same case as the noun it refers to.",
+    "examples": [
+      "Berlin, die Hauptstadt Deutschlands, ist groß.",
+      "Herr Müller, unser neuer Chef, kommt aus München.",
+      "Ich sprach mit Frau Schmidt, der Leiterin."
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g55",
+    "title": "Komplexe Attribute",
+    "level": "C1",
+    "category": "Satzbau",
+    "icon": "📐",
+    "rule": "Erweiterte Attribute vor dem Nomen, typisch für Fachsprache.",
+    "explanation": "Complex pre-noun attributes compress relative clauses into extended adjective/participle phrases. Very common in academic and legal texts.",
+    "examples": [
+      "die seit langem diskutierte Frage",
+      "der von allen unterschriebene Vertrag",
+      "das in der letzten Sitzung beschlossene Gesetz"
+    ],
+    "progress": 0
+  },
+  {
+    "id": "g62",
+    "title": "Textkohärenz & Diskursmarker",
+    "level": "C1",
+    "category": "Satzbau",
+    "icon": "🧭",
+    "rule": "Diskursmarker strukturieren Argumentation: einerseits…andererseits, zusammenfassend, im Hinblick auf.",
+    "explanation": "At C1 level, learners master discourse markers and text-cohesion strategies for academic, professional, and argumentative writing.",
+    "examples": [
+      "Einerseits ist das Projekt vielversprechend, andererseits ist es riskant.",
+      "Zusammenfassend lässt sich sagen, dass ...",
+      "Im Hinblick auf die aktuelle Lage müssen wir handeln.",
+      "Darüber hinaus sollte berücksichtigt werden, dass ..."
+    ],
+    "progress": 0
+  }
+]

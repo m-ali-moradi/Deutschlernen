@@ -1,0 +1,68 @@
+[
+  {
+    "id": "a11301",
+    "german": "die Marke",
+    "english": "Brand",
+    "category": "Marketing & Vertrieb",
+    "tag": "Branding",
+    "example": "Diese Marke ist weltweit bekannt.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "برند"
+  },
+  {
+    "id": "a11302",
+    "german": "das Angebot",
+    "english": "Offer / Quote / Proposal",
+    "category": "Marketing & Vertrieb",
+    "tag": "Sales",
+    "example": "Ich schicke Ihnen ein Angebot bis Mittwoch.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پیشنهاد"
+  },
+  {
+    "id": "a11303",
+    "german": "der Kunde / die Kundin",
+    "english": "Customer / Client",
+    "category": "Marketing & Vertrieb",
+    "tag": "Sales",
+    "example": "Der Kunde ist zufrieden mit unserem Service.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "مشتری"
+  },
+  {
+    "id": "a11304",
+    "german": "der Rabatt",
+    "english": "Discount",
+    "category": "Marketing & Vertrieb",
+    "tag": "Pricing",
+    "example": "Für Großbestellungen gewähren wir 10% Rabatt.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تخفیف"
+  },
+  {
+    "id": "a11305",
+    "german": "die Werbung",
+    "english": "Advertising / Advertisement",
+    "category": "Marketing & Vertrieb",
+    "tag": "Campaign",
+    "example": "Die Werbung läuft auf allen Social-Media-Kanälen.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تبلیغات"
+  },
+  {
+    "id": "a11306",
+    "german": "der Preis",
+    "english": "Price",
+    "category": "Marketing & Vertrieb",
+    "tag": "Pricing",
+    "example": "Wie hoch ist der Preis für dieses Modell?",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "قیمت"
+  }
+]

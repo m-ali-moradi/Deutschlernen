@@ -1,0 +1,112 @@
+[
+  {
+    "id": "a21401",
+    "german": "die Akte",
+    "english": "File / Dossier",
+    "category": "Büro & Verwaltung",
+    "tag": "Document",
+    "example": "Bitte legen Sie die Akte zur Unterschrift vor.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پرونده / دوسیه"
+  },
+  {
+    "id": "a21402",
+    "german": "der Stempel",
+    "english": "Stamp / Seal",
+    "category": "Büro & Verwaltung",
+    "tag": "Stationery",
+    "example": "Der Brief braucht noch einen Stempel.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مهر / مُهر"
+  },
+  {
+    "id": "a21403",
+    "german": "die Unterschrift",
+    "english": "Signature",
+    "category": "Büro & Verwaltung",
+    "tag": "Document",
+    "example": "Bitte leisten Sie hier Ihre Unterschrift.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "امضا"
+  },
+  {
+    "id": "a21404",
+    "german": "die Besprechung",
+    "english": "Meeting / Discussion",
+    "category": "Büro & Verwaltung",
+    "tag": "Meeting",
+    "example": "Die Besprechung beginnt pünktlich um 9 Uhr.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "جلسه / گفت‌وگو"
+  },
+  {
+    "id": "a21405",
+    "german": "die Überstunden",
+    "english": "Overtime",
+    "category": "Büro & Verwaltung",
+    "tag": "HR",
+    "example": "Ich habe diese Woche viele Überstunden gemacht.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "اضافه‌کاری"
+  },
+  {
+    "id": "a21406",
+    "german": "der Vorgesetzte",
+    "english": "Supervisor / Superior",
+    "category": "Büro & Verwaltung",
+    "tag": "Hierarchy",
+    "example": "Ich muss das mit meinem Vorgesetzten besprechen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "سرپرست / مافوق"
+  },
+  {
+    "id": "a21407",
+    "german": "die Abteilung",
+    "english": "Department",
+    "category": "Büro & Verwaltung",
+    "tag": "Structure",
+    "example": "Welche Abteilung leiten Sie?",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بخش / دپارتمان"
+  },
+  {
+    "id": "a21408",
+    "german": "der Konferenzraum",
+    "english": "Conference room",
+    "category": "Büro & Verwaltung",
+    "tag": "Rooms",
+    "example": "Das Meeting findet im Konferenzraum statt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "اتاق کنفرانس"
+  },
+  {
+    "id": "a21409",
+    "german": "die Geschäftsreise",
+    "english": "Business trip",
+    "category": "Büro & Verwaltung",
+    "tag": "Travel",
+    "example": "Ich bin nächste Woche auf Geschäftsreise nach Frankfurt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "سفر کاری"
+  },
+  {
+    "id": "a21410",
+    "german": "das Protokoll",
+    "english": "Minutes / Meeting notes",
+    "category": "Büro & Verwaltung",
+    "tag": "Document",
+    "example": "Wer schreibt heute das Protokoll?",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "صورت‌جلسه / یادداشت جلسه"
+  }
+]

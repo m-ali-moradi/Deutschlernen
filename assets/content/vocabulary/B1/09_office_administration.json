@@ -1,0 +1,68 @@
+[
+  {
+    "id": "b10901",
+    "german": "die Urlaubsantrag",
+    "english": "Leave request / Holiday form",
+    "category": "Büro & Verwaltung",
+    "tag": "HR",
+    "example": "Ich muss einen Urlaubsantrag ausfüllen.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "درخواست رخصتی"
+  },
+  {
+    "id": "b10902",
+    "german": "die Krankschreibung",
+    "english": "Sick note / Medical certificate",
+    "category": "Büro & Verwaltung",
+    "tag": "HR",
+    "example": "Ich brauche eine Krankschreibung vom Arzt.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "گواهی مریضی"
+  },
+  {
+    "id": "b10903",
+    "german": "die Gehaltsabrechnung",
+    "english": "Pay slip / Payroll statement",
+    "category": "Büro & Verwaltung",
+    "tag": "HR",
+    "example": "Ich habe meine Gehaltsabrechnung noch nicht erhalten.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "فیش معاش"
+  },
+  {
+    "id": "b10904",
+    "german": "die Stellenausschreibung",
+    "english": "Job posting / Vacancy",
+    "category": "Büro & Verwaltung",
+    "tag": "Recruitment",
+    "example": "Ich habe die Stellenausschreibung online gesehen.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "آگهی استخدام"
+  },
+  {
+    "id": "b10905",
+    "german": "die Vollmacht",
+    "english": "Power of attorney / Authorization",
+    "category": "Büro & Verwaltung",
+    "tag": "Document",
+    "example": "Ich habe eine Vollmacht für diese Unterschrift.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "وکالت‌نامه"
+  },
+  {
+    "id": "b10906",
+    "german": "der Tagesordnungspunkt",
+    "english": "Agenda item",
+    "category": "Büro & Verwaltung",
+    "tag": "Meeting",
+    "example": "Der nächste Tagesordnungspunkt ist das Budget.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "نکته دستور جلسه"
+  }
+]

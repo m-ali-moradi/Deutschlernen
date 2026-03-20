@@ -1,0 +1,68 @@
+[
+  {
+    "id": "a21201",
+    "german": "die Poststelle",
+    "english": "mail room",
+    "category": "Bueroumgebung",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Poststelle wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بخش پستی"
+  },
+  {
+    "id": "a21202",
+    "german": "der Aktenordner",
+    "english": "binder",
+    "category": "Bueroumgebung",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Aktenordner wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فولدر اسناد"
+  },
+  {
+    "id": "a21203",
+    "german": "der Aktenschrank",
+    "english": "filing cabinet",
+    "category": "Bueroumgebung",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Aktenschrank wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کابینت اسناد"
+  },
+  {
+    "id": "a21204",
+    "german": "die Hausordnung",
+    "english": "office rules",
+    "category": "Bueroumgebung",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Hausordnung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "قوانین داخلی"
+  },
+  {
+    "id": "a21205",
+    "german": "das Bueroinventar",
+    "english": "office equipment",
+    "category": "Bueroumgebung",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist das Bueroinventar wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تجهیزات دفتر"
+  },
+  {
+    "id": "a21206",
+    "german": "die Sitzordnung",
+    "english": "seating plan",
+    "category": "Bueroumgebung",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Sitzordnung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "چیدمان صندلی‌ها"
+  }
+]

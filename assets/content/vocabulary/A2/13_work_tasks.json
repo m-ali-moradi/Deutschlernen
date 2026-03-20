@@ -1,0 +1,178 @@
+[
+  {
+    "id": "a21301",
+    "german": "die Verantwortlichkeit",
+    "english": "responsibility",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Verantwortlichkeit wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مسئولیت"
+  },
+  {
+    "id": "a21302",
+    "german": "die Zuweisung",
+    "english": "assignment allocation",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Zuweisung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تخصیص"
+  },
+  {
+    "id": "a21303",
+    "german": "die Bearbeitung",
+    "english": "processing",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Bearbeitung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پردازش"
+  },
+  {
+    "id": "a21304",
+    "german": "die Recherche",
+    "english": "research",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Recherche wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تحقیق"
+  },
+  {
+    "id": "a21305",
+    "german": "die Analyse",
+    "english": "analysis",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Analyse wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تحلیل"
+  },
+  {
+    "id": "a21306",
+    "german": "die Freigabe",
+    "english": "approval",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Freigabe wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تأیید"
+  },
+  {
+    "id": "a21307",
+    "german": "die Priorisierung",
+    "english": "prioritization",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Priorisierung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "اولویت‌بندی"
+  },
+  {
+    "id": "a21308",
+    "german": "die Kontrolle",
+    "english": "review",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Kontrolle wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بررسی"
+  },
+  {
+    "id": "a21309",
+    "german": "die Umsetzung",
+    "english": "implementation",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Umsetzung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "اجرا"
+  },
+  {
+    "id": "a21310",
+    "german": "die Terminierung",
+    "english": "scheduling",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Terminierung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "زمان‌بندی"
+  },
+  {
+    "id": "a21311",
+    "german": "die Auswertung",
+    "english": "evaluation",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Auswertung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "ارزیابی"
+  },
+  {
+    "id": "a21312",
+    "german": "die Archivierung",
+    "english": "archiving",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Archivierung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بایگانی"
+  },
+  {
+    "id": "a21313",
+    "german": "die Ablage",
+    "english": "filing",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Ablage wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بایگانی"
+  },
+  {
+    "id": "a21314",
+    "german": "die Ueberarbeitung",
+    "english": "revision",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Ueberarbeitung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بازنگری"
+  },
+  {
+    "id": "a21315",
+    "german": "die Dokumentation",
+    "english": "documentation",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Dokumentation wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مستندسازی"
+  },
+  {
+    "id": "a21316",
+    "german": "die Nachverfolgung",
+    "english": "follow-up",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Nachverfolgung wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پیگیری"
+  }
+]

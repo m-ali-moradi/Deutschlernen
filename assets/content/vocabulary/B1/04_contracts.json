@@ -1,0 +1,24 @@
+[
+  {
+    "id": "b10401",
+    "german": "die Klausel",
+    "english": "Clause",
+    "category": "Vertrage",
+    "tag": "Legal",
+    "example": "Die Klausel regelt die Haftung.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "بند"
+  },
+  {
+    "id": "b10402",
+    "german": "die Haftung",
+    "english": "Liability",
+    "category": "Vertrage",
+    "tag": "Legal",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Haftung.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "مسئولیت"
+  }
+]

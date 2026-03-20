@@ -1,0 +1,21 @@
+{
+  "vocabularyTotal": 487,
+  "vocabularyBuckets": {
+    "a1": 162,
+    "a2": 228,
+    "b1": 97,
+    "b2": 0,
+    "misc": 0
+  },
+  "exercisesTotal": 90,
+  "exerciseBuckets": {
+    "a1": 21,
+    "a2": 29,
+    "b1": 24,
+    "b2": 16
+  },
+  "grammarTopicsTotal": 55,
+  "grammarDetailTotal": 42,
+  "phrasesTotal": 14,
+  "achievementsTotal": 6
+}

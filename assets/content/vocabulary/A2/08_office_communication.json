@@ -1,0 +1,35 @@
+[
+  {
+    "id": "a20801",
+    "german": "die Dringlichkeit",
+    "english": "Urgency",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Bitte markieren Sie die Dringlichkeit.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فوریت"
+  },
+  {
+    "id": "a20802",
+    "german": "die Erreichbarkeit",
+    "english": "Availability",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Meine Erreichbarkeit ist von 9 bis 17 Uhr.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "در دسترس بودن"
+  },
+  {
+    "id": "a20803",
+    "german": "die Ruecksprache",
+    "english": "Consultation",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Ruecksprache.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مشوره / هماهنگی"
+  }
+]

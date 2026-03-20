@@ -1,0 +1,79 @@
+[
+  {
+    "id": "a11701",
+    "german": "die Frist",
+    "english": "Deadline",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Die Frist endet am Freitag.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "مهلت"
+  },
+  {
+    "id": "a11702",
+    "german": "die Ruckmeldung",
+    "english": "Feedback",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Vielen Dank fur Ihre schnelle Ruckmeldung.",
+    "difficulty": "easy",
+    "isFavorite": true,
+    "dari": "بازخورد"
+  },
+  {
+    "id": "a11703",
+    "german": "die Weiterleitung",
+    "english": "Forwarding",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Danke fuer die Weiterleitung der E-Mail.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ارجاع"
+  },
+  {
+    "id": "a11704",
+    "german": "der Anhang",
+    "english": "Attachment",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Die Datei ist im Anhang.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ضمیمه"
+  },
+  {
+    "id": "a11705",
+    "german": "die Prioritaet",
+    "english": "Priority",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Prioritaet.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "اولویت"
+  },
+  {
+    "id": "a11706",
+    "german": "die Produktivitaet",
+    "english": "Productivity",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Produktivitaet.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "بهره‌وری"
+  },
+  {
+    "id": "a11707",
+    "german": "das Zeitmanagement",
+    "english": "Time management",
+    "category": "Buro Kommunikation",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff das Zeitmanagement.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "مدیریت زمان"
+  }
+]

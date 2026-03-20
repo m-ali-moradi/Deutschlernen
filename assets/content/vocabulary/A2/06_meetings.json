@@ -1,0 +1,35 @@
+[
+  {
+    "id": "a20601",
+    "german": "die Tagesordnung",
+    "english": "Agenda",
+    "category": "Meetings",
+    "tag": "Office",
+    "example": "Lassen Sie uns die Tagesordnung durchgehen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "دستور جلسه"
+  },
+  {
+    "id": "a20602",
+    "german": "die Abstimmung",
+    "english": "Vote or alignment",
+    "category": "Meetings",
+    "tag": "Office",
+    "example": "Wir brauchen eine Abstimmung im Team.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "هماهنگی"
+  },
+  {
+    "id": "a20603",
+    "german": "die Rueckfrage",
+    "english": "Follow-up question",
+    "category": "Meetings",
+    "tag": "Office",
+    "example": "Ich habe noch eine Rueckfrage zum Budget.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پرسش تکمیلی"
+  }
+]

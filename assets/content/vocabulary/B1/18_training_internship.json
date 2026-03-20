@@ -1,0 +1,90 @@
+[
+  {
+    "id": "b11801",
+    "german": "der Ausbildungsbetrieb",
+    "english": "Training company / Employer during apprenticeship",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Mein Ausbildungsbetrieb ist eine mittelständische Firma.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "شرکت آموزشی"
+  },
+  {
+    "id": "b11802",
+    "german": "die Ausbildungsvergütung",
+    "english": "Apprenticeship allowance / Training pay",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Finance",
+    "example": "Die Ausbildungsvergütung steigt jedes Jahr.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "دستمزد آموزشی"
+  },
+  {
+    "id": "b11803",
+    "german": "der Ausbildungsvertrag",
+    "english": "Apprenticeship contract",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Contract",
+    "example": "Der Ausbildungsvertrag muss von beiden Seiten unterschrieben werden.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "قرارداد آموزشی"
+  },
+  {
+    "id": "b11804",
+    "german": "die IHK (Industrie- und Handelskammer)",
+    "english": "Chamber of Commerce and Industry",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Organisation",
+    "example": "Die IHK organisiert die Abschlussprüfungen.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "اتاق صنایع و تجارت"
+  },
+  {
+    "id": "b11805",
+    "german": "die Umschulung",
+    "english": "Retraining / Career change training",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Training",
+    "example": "Nach dem Jobverlust mache ich eine Umschulung.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "بازآموزی"
+  },
+  {
+    "id": "b11806",
+    "german": "der Bildungsgutschein",
+    "english": "Education voucher (from job centre)",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Funding",
+    "example": "Mit dem Bildungsgutschein kann ich kostenlos einen Kurs besuchen.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "کوپن آموزشی"
+  },
+  {
+    "id": "b11807",
+    "german": "das Gesellenstück",
+    "english": "Journeyman's piece / Qualifying work",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Exams",
+    "example": "Der Tischler hat sein Gesellenstück fertiggestellt.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "کار پایانی شاگردی"
+  },
+  {
+    "id": "b11808",
+    "german": "der Gesellenbrief",
+    "english": "Journeyman's certificate",
+    "category": "Ausbildung & Praktikum",
+    "tag": "Qualification",
+    "example": "Nach der Prüfung erhält man den Gesellenbrief.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "گواهی شاگردی"
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "id": "a21501",
+    "german": "der Betreff",
+    "english": "Subject line",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Bitte tragen Sie einen klaren Betreff ein.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "موضوع"
+  },
+  {
+    "id": "a21502",
+    "german": "weiterleiten",
+    "english": "To forward (an email)",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Ich leite Ihnen die E-Mail weiter.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فوروارد کردن"
+  },
+  {
+    "id": "a21503",
+    "german": "Sehr geehrte Damen und Herren",
+    "english": "Dear Sir or Madam",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Salutation",
+    "example": "Sehr geehrte Damen und Herren, ich schreibe wegen...",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "خانم‌ها و آقایان محترم"
+  },
+  {
+    "id": "a21504",
+    "german": "Mit freundlichen Grüßen",
+    "english": "Kind regards / Yours sincerely",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Closing",
+    "example": "Mit freundlichen Grüßen, Ahmad Ahmadi",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "با احترام / ارادتمند شما"
+  },
+  {
+    "id": "a21505",
+    "german": "wie besprochen",
+    "english": "As discussed",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Phrase",
+    "example": "Wie besprochen sende ich Ihnen die Unterlagen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "طبق صحبت"
+  },
+  {
+    "id": "a21506",
+    "german": "in der Anlage",
+    "english": "Enclosed / Please find attached",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Phrase",
+    "example": "In der Anlage finden Sie unseren Angebot.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "پیوست / لطفاً پیوست را ببینید"
+  },
+  {
+    "id": "a21507",
+    "german": "die Rückmeldung",
+    "english": "Feedback / Response",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Communication",
+    "example": "Ich bitte um Ihre Rückmeldung bis Donnerstag.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "بازخورد / پاسخ"
+  },
+  {
+    "id": "a21508",
+    "german": "der Absender",
+    "english": "Sender",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Der Absender der E-Mail ist unbekannt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "فرستنده"
+  },
+  {
+    "id": "a21509",
+    "german": "der Empfänger",
+    "english": "Recipient",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Bitte prüfen Sie den Empfänger.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گیرنده"
+  },
+  {
+    "id": "a21510",
+    "german": "in Kopie setzen (CC)",
+    "english": "To CC (copy someone)",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Bitte setzen Sie mich in Kopie.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "در کپی قرار دادن (CC)"
+  },
+  {
+    "id": "a21511",
+    "german": "die Vorlage",
+    "english": "Template",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Document",
+    "example": "Benutzen Sie bitte unsere Vorlage.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "قالب"
+  },
+  {
+    "id": "a21512",
+    "german": "vertraulich",
+    "english": "Confidential",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Priority",
+    "example": "Diese E-Mail ist streng vertraulich.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "محرمانه"
+  },
+  {
+    "id": "a21513",
+    "german": "einreichen",
+    "english": "To submit / To file",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Action",
+    "example": "Bitte reichen Sie die Unterlagen bis Freitag ein.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "ارائه کردن / ثبت کردن"
+  }
+]

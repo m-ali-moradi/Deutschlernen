@@ -1,0 +1,35 @@
+[
+  {
+    "id": "b10601",
+    "german": "die Holding",
+    "english": "holding company",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Holding wichtig.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "شرکت هلدینگ"
+  },
+  {
+    "id": "b10602",
+    "german": "die Rechtsform",
+    "english": "legal form",
+    "category": "Unternehmensstruktur",
+    "tag": "Legal",
+    "example": "Im Arbeitsalltag ist die Rechtsform wichtig.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "شکل حقوقی"
+  },
+  {
+    "id": "b10603",
+    "german": "die Konzernstruktur",
+    "english": "corporate structure",
+    "category": "Unternehmensstruktur",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist die Konzernstruktur wichtig.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "ساختار گروه شرکتی"
+  }
+]

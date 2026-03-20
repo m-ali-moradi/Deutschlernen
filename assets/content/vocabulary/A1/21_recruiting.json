@@ -1,0 +1,101 @@
+[
+  {
+    "id": "a12101",
+    "german": "die Vakanz",
+    "english": "vacancy",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist die Vakanz wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "موقف خالی"
+  },
+  {
+    "id": "a12102",
+    "german": "der Bewerber",
+    "english": "applicant",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist der Bewerber wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "متقاضی"
+  },
+  {
+    "id": "a12103",
+    "german": "die Bewerberin",
+    "english": "female applicant",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist die Bewerberin wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "متقاضی زن"
+  },
+  {
+    "id": "a12104",
+    "german": "die Einstellung",
+    "english": "hiring",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist die Einstellung wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "استخدام"
+  },
+  {
+    "id": "a12105",
+    "german": "die Zusage",
+    "english": "acceptance",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist die Zusage wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "قبول"
+  },
+  {
+    "id": "a12106",
+    "german": "die Absage",
+    "english": "rejection",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist die Absage wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "رد"
+  },
+  {
+    "id": "a12107",
+    "german": "das Eintrittsdatum",
+    "english": "start date",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist das Eintrittsdatum wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تاریخ شروع"
+  },
+  {
+    "id": "a12108",
+    "german": "die Referenz",
+    "english": "reference",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist die Referenz wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "رفرنس"
+  },
+  {
+    "id": "a12109",
+    "german": "das Bewerbungsformular",
+    "english": "application form",
+    "category": "Recruiting",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist das Bewerbungsformular wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "فورم درخواست"
+  }
+]

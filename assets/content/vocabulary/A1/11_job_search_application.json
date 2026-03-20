@@ -1,0 +1,68 @@
+[
+  {
+    "id": "a11101",
+    "german": "das Jobportal",
+    "english": "Job portal / Job website",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Job Search",
+    "example": "Ich suche auf Indeed und StepStone nach Jobs.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پورتال کاریابی"
+  },
+  {
+    "id": "a11102",
+    "german": "arbeitslos",
+    "english": "Unemployed",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Status",
+    "example": "Ich bin seit drei Monaten arbeitslos.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "بیکار"
+  },
+  {
+    "id": "a11103",
+    "german": "die Absage",
+    "english": "Rejection (from a job application)",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Application",
+    "example": "Ich habe leider eine Absage erhalten.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "رد"
+  },
+  {
+    "id": "a11104",
+    "german": "die Zusage",
+    "english": "Job offer / Acceptance",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Application",
+    "example": "Ich habe eine Zusage für die Stelle bekommen!",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "قبول"
+  },
+  {
+    "id": "a11105",
+    "german": "Vollzeit",
+    "english": "Full-time",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Work Type",
+    "example": "Ich suche eine Vollzeitstelle mit 40 Stunden pro Woche.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تمام‌وقت"
+  },
+  {
+    "id": "a11106",
+    "german": "Teilzeit",
+    "english": "Part-time",
+    "category": "Jobsuche & Bewerbung",
+    "tag": "Work Type",
+    "example": "Ich arbeite Teilzeit, 20 Stunden pro Woche.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "نیمه‌وقت"
+  }
+]

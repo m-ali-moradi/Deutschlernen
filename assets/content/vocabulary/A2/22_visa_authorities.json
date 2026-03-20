@@ -1,0 +1,112 @@
+[
+  {
+    "id": "a22201",
+    "german": "beantragen",
+    "english": "To apply for / To request",
+    "category": "Visum & Behörden",
+    "tag": "Action",
+    "example": "Ich möchte eine Aufenthaltserlaubnis beantragen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "درخواست دادن"
+  },
+  {
+    "id": "a22202",
+    "german": "verlängern",
+    "english": "To extend / To renew (visa, permit)",
+    "category": "Visum & Behörden",
+    "tag": "Action",
+    "example": "Ich muss mein Visum verlängern.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تمدید کردن"
+  },
+  {
+    "id": "a22203",
+    "german": "ablaufen",
+    "english": "To expire",
+    "category": "Visum & Behörden",
+    "tag": "Action",
+    "example": "Mein Visum läuft nächsten Monat ab.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "منقضی شدن"
+  },
+  {
+    "id": "a22204",
+    "german": "die Übersetzung",
+    "english": "Translation",
+    "category": "Visum & Behörden",
+    "tag": "Document",
+    "example": "Ich brauche eine beglaubigte Übersetzung meines Reisepasses.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "ترجمه"
+  },
+  {
+    "id": "a22205",
+    "german": "das Konsulat",
+    "english": "Consulate",
+    "category": "Visum & Behörden",
+    "tag": "Authority",
+    "example": "Das Konsulat stellt Visa für kürzere Aufenthalte aus.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کنسولگری"
+  },
+  {
+    "id": "a22206",
+    "german": "der Antrag",
+    "english": "Application / Request (official)",
+    "category": "Visum & Behörden",
+    "tag": "Action",
+    "example": "Ich stelle einen Antrag auf Aufenthaltserlaubnis.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "درخواست / تقاضا"
+  },
+  {
+    "id": "a22207",
+    "german": "die Wartezeit",
+    "english": "Waiting period / Processing time",
+    "category": "Visum & Behörden",
+    "tag": "Process",
+    "example": "Die Wartezeit für einen Termin beträgt mehrere Wochen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "زمان انتظار"
+  },
+  {
+    "id": "a22208",
+    "german": "zuständig sein",
+    "english": "To be responsible for / In charge of",
+    "category": "Visum & Behörden",
+    "tag": "Communication",
+    "example": "Welches Amt ist für meinen Fall zuständig?",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مسئول بودن"
+  },
+  {
+    "id": "a22209",
+    "german": "die Bescheinigung",
+    "english": "Certificate / Confirmation document",
+    "category": "Visum & Behörden",
+    "tag": "Document",
+    "example": "Ich brauche eine Bescheinigung vom Arbeitgeber.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گواهی / تأییدیه"
+  },
+  {
+    "id": "a22210",
+    "german": "nachweisen",
+    "english": "To prove / To demonstrate (officially)",
+    "category": "Visum & Behörden",
+    "tag": "Action",
+    "example": "Sie müssen ausreichende Sprachkenntnisse nachweisen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "اثبات کردن / ارائه مدرک"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "a10201",
+    "german": "die Abteilung",
+    "english": "department",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Abteilung wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "بخش"
+  },
+  {
+    "id": "a10202",
+    "german": "der Bereich",
+    "english": "division",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Bereich wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "حوزه"
+  },
+  {
+    "id": "a10203",
+    "german": "die Einheit",
+    "english": "unit",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Einheit wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "واحد"
+  },
+  {
+    "id": "a10204",
+    "german": "die Zentrale",
+    "english": "headquarters",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Zentrale wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "مرکز"
+  },
+  {
+    "id": "a10205",
+    "german": "der Standort",
+    "english": "site location",
+    "category": "Unternehmensstruktur",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Standort wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "محل"
+  }
+]

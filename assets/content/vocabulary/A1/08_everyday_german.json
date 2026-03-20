@@ -1,0 +1,167 @@
+[
+  {
+    "id": "a10801",
+    "german": "Guten Morgen",
+    "english": "Good morning",
+    "category": "Alltag Deutsch",
+    "tag": "Greeting",
+    "example": "Guten Morgen! Wie geht es Ihnen?",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "صبح بخیر"
+  },
+  {
+    "id": "a10802",
+    "german": "Guten Tag",
+    "english": "Good day / Hello",
+    "category": "Alltag Deutsch",
+    "tag": "Greeting",
+    "example": "Guten Tag, ich hätte gerne einen Termin.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "روز بخیر"
+  },
+  {
+    "id": "a10803",
+    "german": "Auf Wiedersehen",
+    "english": "Goodbye (formal)",
+    "category": "Alltag Deutsch",
+    "tag": "Farewell",
+    "example": "Auf Wiedersehen und schönes Wochenende!",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "خداحافظی"
+  },
+  {
+    "id": "a10804",
+    "german": "Tschüss",
+    "english": "Bye (informal)",
+    "category": "Alltag Deutsch",
+    "tag": "Farewell",
+    "example": "Tschüss, bis morgen!",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "خدا حافظ"
+  },
+  {
+    "id": "a10805",
+    "german": "Wie geht es Ihnen?",
+    "english": "How are you? (formal)",
+    "category": "Alltag Deutsch",
+    "tag": "Greeting",
+    "example": "Guten Morgen! Wie geht es Ihnen?",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "حال شما چطور است؟"
+  },
+  {
+    "id": "a10806",
+    "german": "Danke schön",
+    "english": "Thank you very much",
+    "category": "Alltag Deutsch",
+    "tag": "Politeness",
+    "example": "Danke schön für Ihre Hilfe!",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "خیلی ممنون"
+  },
+  {
+    "id": "a10807",
+    "german": "Bitte",
+    "english": "Please / You're welcome",
+    "category": "Alltag Deutsch",
+    "tag": "Politeness",
+    "example": "Bitte helfen Sie mir. — Danke! — Bitte!",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "لطفاً"
+  },
+  {
+    "id": "a10808",
+    "german": "Entschuldigung",
+    "english": "Excuse me / Sorry",
+    "category": "Alltag Deutsch",
+    "tag": "Politeness",
+    "example": "Entschuldigung, wo ist die Toilette?",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ببخشید"
+  },
+  {
+    "id": "a10809",
+    "german": "Verstehen",
+    "english": "To understand",
+    "category": "Alltag Deutsch",
+    "tag": "Communication",
+    "example": "Ich verstehe das nicht. Können Sie es erklären?",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "فهمیدن"
+  },
+  {
+    "id": "a10810",
+    "german": "die Apotheke",
+    "english": "Pharmacy / Chemist",
+    "category": "Alltag Deutsch",
+    "tag": "Places",
+    "example": "Ich gehe zur Apotheke, ein Medikament zu kaufen.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "دواخانه"
+  },
+  {
+    "id": "a10811",
+    "german": "das Krankenhaus",
+    "english": "Hospital",
+    "category": "Alltag Deutsch",
+    "tag": "Places",
+    "example": "Wo ist das nächste Krankenhaus?",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "شفاخانه"
+  },
+  {
+    "id": "a10812",
+    "german": "der Ausweis",
+    "english": "ID card / Identity document",
+    "category": "Alltag Deutsch",
+    "tag": "Documents",
+    "example": "Bitte zeigen Sie mir Ihren Ausweis.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تذکره"
+  },
+  {
+    "id": "a10813",
+    "german": "die Miete",
+    "english": "Rent",
+    "category": "Alltag Deutsch",
+    "tag": "Living",
+    "example": "Die Miete beträgt 800 Euro pro Monat.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "کرایه"
+  },
+  {
+    "id": "a10814",
+    "german": "der Supermarkt",
+    "english": "Supermarket",
+    "category": "Alltag Deutsch",
+    "tag": "Shopping",
+    "example": "Ich gehe nach der Arbeit in den Supermarkt.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "سوپرمارکت"
+  },
+  {
+    "id": "a10815",
+    "german": "die Kasse",
+    "english": "Checkout / Cash register",
+    "category": "Alltag Deutsch",
+    "tag": "Shopping",
+    "example": "An der Kasse bezahle ich mit Karte.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "صندوق"
+  }
+]

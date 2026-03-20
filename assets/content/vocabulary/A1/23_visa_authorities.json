@@ -1,0 +1,35 @@
+[
+  {
+    "id": "a12301",
+    "german": "das Visum",
+    "english": "Visa",
+    "category": "Visum & Behörden",
+    "tag": "Visa",
+    "example": "Ich habe ein Visum für Deutschland beantragt.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ویزا"
+  },
+  {
+    "id": "a12302",
+    "german": "der Reisepass",
+    "english": "Passport",
+    "category": "Visum & Behörden",
+    "tag": "Document",
+    "example": "Mein Reisepass ist noch zwei Jahre gültig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پاسپورت"
+  },
+  {
+    "id": "a12303",
+    "german": "die Botschaft",
+    "english": "Embassy",
+    "category": "Visum & Behörden",
+    "tag": "Authority",
+    "example": "Das Visum muss bei der deutschen Botschaft beantragt werden.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "سفارت"
+  }
+]

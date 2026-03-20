@@ -1,0 +1,974 @@
+[
+  {
+    "id": "a2_g5_1",
+    "type": "multiple-choice",
+    "question": "Ich ___ gestern einen Apfel gegessen.",
+    "options": ["bin", "habe", "hat", "ist"],
+    "correctAnswer": 1,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g5_2",
+    "type": "multiple-choice",
+    "question": "Wir sind nach Berlin ___.",
+    "options": ["gefahrt", "fahren", "gefahren", "gefährt"],
+    "correctAnswer": 2,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g5_3",
+    "type": "multiple-choice",
+    "question": "Was hast du gestern ___?",
+    "options": ["gemacht", "machen", "gemachen", "machst"],
+    "correctAnswer": 0,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g16_1",
+    "type": "multiple-choice",
+    "question": "Früher ___ ich in München.",
+    "options": ["war", "bin", "sein", "waren"],
+    "correctAnswer": 0,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g16_2",
+    "type": "multiple-choice",
+    "question": "Er ___ keine Zeit.",
+    "options": ["hat", "hatte", "hattet", "habt"],
+    "correctAnswer": 1,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g16_3",
+    "type": "multiple-choice",
+    "question": "Wir ___ nicht kommen.",
+    "options": ["konnten", "können", "konntet", "könnt"],
+    "correctAnswer": 0,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g17_1",
+    "type": "multiple-choice",
+    "question": "Ich ___ morgen lernen.",
+    "options": ["werde", "wird", "werden", "werdet"],
+    "correctAnswer": 0,
+    "topic": "Futur I",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g17_2",
+    "type": "multiple-choice",
+    "question": "Es ___ am Wochenende regnen.",
+    "options": ["werden", "werde", "wirst", "wird"],
+    "correctAnswer": 3,
+    "topic": "Futur I",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g17_3",
+    "type": "multiple-choice",
+    "question": "Wir ___ bald nach Hause ___.",
+    "options": ["werden - gehen", "wird - gehen", "werden - geht", "wird - geht"],
+    "correctAnswer": 0,
+    "topic": "Futur I",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g3_1",
+    "type": "multiple-choice",
+    "question": "Ich lerne Deutsch, weil ich in Deutschland ___.",
+    "options": ["lebe", "leben", "lebt", "bin"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g3_2",
+    "type": "multiple-choice",
+    "question": "Sie sagt, dass sie morgen ___.",
+    "options": ["kommt", "kommen", "komme", "kommst"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g3_3",
+    "type": "multiple-choice",
+    "question": "___ es regnet, bleibe ich zu Hause.",
+    "options": ["Wenn", "Weil", "Dass", "Obwohl"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g18_1",
+    "type": "multiple-choice",
+    "question": "Der Mann, ___ da steht, ist mein Bruder.",
+    "options": ["den", "dem", "das", "der"],
+    "correctAnswer": 3,
+    "topic": "Relativsätze (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g18_2",
+    "type": "multiple-choice",
+    "question": "Die Frau, ___ ich kenne, wohnt hier.",
+    "options": ["die", "der", "das", "den"],
+    "correctAnswer": 0,
+    "topic": "Relativsätze (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g18_3",
+    "type": "multiple-choice",
+    "question": "Das Buch, ___ ich lese, ist super.",
+    "options": ["der", "die", "das", "den"],
+    "correctAnswer": 2,
+    "topic": "Relativsätze (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g19_1",
+    "type": "multiple-choice",
+    "question": "Ich versuche, schneller ___ ___.",
+    "options": ["lernen", "zu lernen", "gelernt", "lerne"],
+    "correctAnswer": 1,
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g19_2",
+    "type": "multiple-choice",
+    "question": "Sie arbeitet viel, ___ viel Geld zu verdienen.",
+    "options": ["um", "ohne", "anstatt", "weil"],
+    "correctAnswer": 0,
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g19_3",
+    "type": "multiple-choice",
+    "question": "Er geht, ___ ein Wort zu sagen.",
+    "options": ["um", "ohne", "anstatt", "dass"],
+    "correctAnswer": 1,
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g4_1",
+    "type": "multiple-choice",
+    "question": "Ich lege das Buch auf ___ Tisch.",
+    "options": ["den", "dem", "der", "das"],
+    "correctAnswer": 0,
+    "topic": "Wechselpräpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g4_2",
+    "type": "multiple-choice",
+    "question": "Das Buch liegt auf ___ Tisch.",
+    "options": ["den", "dem", "der", "das"],
+    "correctAnswer": 1,
+    "topic": "Wechselpräpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g4_3",
+    "type": "multiple-choice",
+    "question": "Wir gehen in ___ Kino.",
+    "options": ["das", "dem", "den", "der"],
+    "correctAnswer": 0,
+    "topic": "Wechselpräpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g20_1",
+    "type": "multiple-choice",
+    "question": "Das ist ein ___ Auto.",
+    "options": ["neues", "neue", "neuen", "neu"],
+    "correctAnswer": 0,
+    "topic": "Adjektivdeklination",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g20_2",
+    "type": "multiple-choice",
+    "question": "Der ___ Mann liest ein Buch.",
+    "options": ["alte", "alten", "altes", "alter"],
+    "correctAnswer": 0,
+    "topic": "Adjektivdeklination",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g20_3",
+    "type": "multiple-choice",
+    "question": "Ich kaufe einen ___ Pullover.",
+    "options": ["roten", "rote", "rotes", "roter"],
+    "correctAnswer": 0,
+    "topic": "Adjektivdeklination",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g21_1",
+    "type": "multiple-choice",
+    "question": "Ein Elefant ist ___ als eine Maus.",
+    "options": ["groß", "größer", "am größten", "große"],
+    "correctAnswer": 1,
+    "topic": "Komparativ & Superlativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g21_2",
+    "type": "multiple-choice",
+    "question": "Dieses Buch ist ___ am besten.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "correctAnswer": 2,
+    "topic": "Komparativ & Superlativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g21_3",
+    "type": "multiple-choice",
+    "question": "Ich trinke Tee, aber Kaffee trinke ich ___.",
+    "options": ["lieber", "gern", "am liebsten", "mehr"],
+    "correctAnswer": 0,
+    "topic": "Komparativ & Superlativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g22_1",
+    "type": "multiple-choice",
+    "question": "Ich freue ___ auf das Wochenende.",
+    "options": ["mich", "mir", "dich", "sich"],
+    "correctAnswer": 0,
+    "topic": "Reflexive Verben",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g22_2",
+    "type": "multiple-choice",
+    "question": "Er wäscht ___ die Hände.",
+    "options": ["sich", "ihm", "mich", "dir"],
+    "correctAnswer": 0,
+    "topic": "Reflexive Verben",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g22_3",
+    "type": "multiple-choice",
+    "question": "Wir treffen ___ um 8 Uhr.",
+    "options": ["euch", "uns", "sich", "mich"],
+    "correctAnswer": 1,
+    "topic": "Reflexive Verben",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g23_1",
+    "type": "multiple-choice",
+    "question": "Hier spricht ___ Deutsch.",
+    "options": ["man", "jemand", "niemand", "alle"],
+    "correctAnswer": 0,
+    "topic": "Indefinitpronomen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g23_2",
+    "type": "multiple-choice",
+    "question": "Hat ___ angerufen?",
+    "options": ["man", "jemand", "nichts", "alles"],
+    "correctAnswer": 1,
+    "topic": "Indefinitpronomen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g23_3",
+    "type": "multiple-choice",
+    "question": "Ich habe ___ gegessen.",
+    "options": ["nichts", "niemand", "alles", "jemand"],
+    "correctAnswer": 0,
+    "topic": "Indefinitpronomen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g39_1",
+    "type": "multiple-choice",
+    "question": "Ich helfe ___ Frau.",
+    "options": ["der", "die", "den", "dem"],
+    "correctAnswer": 0,
+    "topic": "Dativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g39_2",
+    "type": "multiple-choice",
+    "question": "Das Buch gehört ___ Mann.",
+    "options": ["den", "dem", "der", "das"],
+    "correctAnswer": 1,
+    "topic": "Dativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g39_3",
+    "type": "multiple-choice",
+    "question": "Ich danke ___ Kindern.",
+    "options": ["den", "dem", "die", "der"],
+    "correctAnswer": 0,
+    "topic": "Dativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g40_1",
+    "type": "multiple-choice",
+    "question": "Ich warte ___ den Bus.",
+    "options": ["auf", "für", "an", "über"],
+    "correctAnswer": 0,
+    "topic": "Verben mit Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g40_2",
+    "type": "multiple-choice",
+    "question": "Er denkt ___ seine Familie.",
+    "options": ["an", "auf", "mit", "zu"],
+    "correctAnswer": 0,
+    "topic": "Verben mit Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g40_3",
+    "type": "multiple-choice",
+    "question": "Wir sprechen ___ das Problem.",
+    "options": ["über", "auf", "mit", "von"],
+    "correctAnswer": 0,
+    "topic": "Verben mit Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g41_1",
+    "type": "multiple-choice",
+    "question": "Das Auto ___ repariert.",
+    "options": ["wird", "werden", "ist", "sind"],
+    "correctAnswer": 0,
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g41_2",
+    "type": "multiple-choice",
+    "question": "Das Essen wird von ihm ___.",
+    "options": ["gekocht", "kochen", "kocht", "kochte"],
+    "correctAnswer": 0,
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g41_3",
+    "type": "multiple-choice",
+    "question": "Die Briefe ___ geschrieben werden.",
+    "options": ["werden", "wird", "wurde", "wurden"],
+    "correctAnswer": 0,
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g58_1",
+    "type": "multiple-choice",
+    "question": "Ich bin müde, ___ ich arbeite weiter.",
+    "options": ["aber", "und", "oder", "weil"],
+    "correctAnswer": 0,
+    "topic": "Konjunktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g58_2",
+    "type": "multiple-choice",
+    "question": "Du kannst Tee ___ Kaffee haben.",
+    "options": ["oder", "und", "aber", "denn"],
+    "correctAnswer": 0,
+    "topic": "Konjunktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g58_3",
+    "type": "multiple-choice",
+    "question": "Er lacht, ___ er glücklich ist.",
+    "options": ["weil", "denn", "aber", "oder"],
+    "correctAnswer": 0,
+    "topic": "Konjunktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g59_1",
+    "type": "multiple-choice",
+    "question": "Setz ___ bitte hin!",
+    "options": ["dich", "dir", "sich", "mich"],
+    "correctAnswer": 0,
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g59_2",
+    "type": "multiple-choice",
+    "question": "Zieh ___ die Schuhe aus!",
+    "options": ["dir", "dich", "sich", "euch"],
+    "correctAnswer": 0,
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g59_3",
+    "type": "multiple-choice",
+    "question": "Bitte nicht ___!",
+    "options": ["rauchen", "raucht", "rauche", "geraucht"],
+    "correctAnswer": 0,
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g5_4",
+    "type": "multiple-choice",
+    "question": "Ich ___ heute Morgen schon einen Kaffee getrunken.",
+    "options": ["bin", "habe", "hat", "ist"],
+    "correctAnswer": 1,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g5_5",
+    "type": "multiple-choice",
+    "question": "Seid ihr schon mal nach Japan ___?",
+    "options": ["geflogen", "fliegt", "geflogt", "fliegen"],
+    "correctAnswer": 0,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g5_6",
+    "type": "multiple-choice",
+    "question": "Er ___ das Fenster sofort ___.",
+    "options": ["hat - aufgemacht", "ist - aufgemacht", "hat - aufgemachen", "hat - aufmacht"],
+    "correctAnswer": 0,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g16_4",
+    "type": "multiple-choice",
+    "question": "Als Kind ___ ich jeden Tag draußen.",
+    "options": ["spielte", "spielt", "gespielte", "spielten"],
+    "correctAnswer": 0,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g16_5",
+    "type": "multiple-choice",
+    "question": "Es ___ einmal einen alten König.",
+    "options": ["gab", "gbt", "gabt", "gaben"],
+    "correctAnswer": 0,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g16_6",
+    "type": "multiple-choice",
+    "question": "Wir ___ im letzten Urlaub in Spanien.",
+    "options": ["waren", "war", "seid", "sind"],
+    "correctAnswer": 0,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g17_4",
+    "type": "multiple-choice",
+    "question": "Ich ___ dir ganz sicher nächste Woche helfen.",
+    "options": ["werde", "wird", "wirst", "werden"],
+    "correctAnswer": 0,
+    "topic": "Futur I",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g17_5",
+    "type": "multiple-choice",
+    "question": "Im Jahr 2050 ___ die Autos fliegen können.",
+    "options": ["werden", "wird", "werde", "werdet"],
+    "correctAnswer": 0,
+    "topic": "Futur I",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g17_6",
+    "type": "multiple-choice",
+    "question": "Wann ___ du endlich mit der Arbeit ___?",
+    "options": ["wirst - fertig sein", "wirst - wirst", "wirst - bist", "wirst - war"],
+    "correctAnswer": 0,
+    "topic": "Futur I",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g3_4",
+    "type": "multiple-choice",
+    "question": "Ich weiß leider nicht, ob er heute ___.",
+    "options": ["kommt", "kommen", "kommst", "komme"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g3_5",
+    "type": "multiple-choice",
+    "question": "Obwohl es sehr kalt war, ___ er spazieren.",
+    "options": ["ging", "geht", "gegangen", "ginge"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g3_6",
+    "type": "multiple-choice",
+    "question": "Bevor ich schlafen gehe, ___ ich noch ein Glas Wasser.",
+    "options": ["trinke", "trinken", "trinkst", "trinkt"],
+    "correctAnswer": 0,
+    "topic": "Nebensätze",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g18_4",
+    "type": "multiple-choice",
+    "question": "Das Kind, ___ dort spielt, ist meine Nichte.",
+    "options": ["das", "der", "die", "den"],
+    "correctAnswer": 0,
+    "topic": "Relativsätze (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g18_5",
+    "type": "multiple-choice",
+    "question": "Die Leute, ___ wir gestern trafen, waren freundlich.",
+    "options": ["die", "den", "der", "dem"],
+    "correctAnswer": 0,
+    "topic": "Relativsätze (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g18_6",
+    "type": "multiple-choice",
+    "question": "Wo ist der Hund, ___ so laut bellt?",
+    "options": ["der", "den", "dem", "das"],
+    "correctAnswer": 0,
+    "topic": "Relativsätze (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g19_4",
+    "type": "multiple-choice",
+    "question": "Es ist gesund, jeden Tag viel Obst ___ ___.",
+    "options": ["essen", "zu essen", "gegessen", "esse"],
+    "correctAnswer": 1,
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g19_5",
+    "type": "multiple-choice",
+    "question": "Ich koche heute zu Hause, anstatt essen ___ ___.",
+    "options": ["zu gehen", "gehen", "gegessen", "gehe"],
+    "correctAnswer": 0,
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g19_6",
+    "type": "multiple-choice",
+    "question": "Hast du Lust, heute Abend mit ins Kino ___ ___?",
+    "options": ["zu gehen", "gehen", "gegessen", "gehst"],
+    "correctAnswer": 0,
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g4_4",
+    "type": "multiple-choice",
+    "question": "Die kleine Katze springt schnell auf ___ Sofa.",
+    "options": ["das", "dem", "den", "der"],
+    "correctAnswer": 0,
+    "topic": "Wechselpräpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g4_5",
+    "type": "multiple-choice",
+    "question": "Die müde Katze schläft auf ___ bequemen Sofa.",
+    "options": ["das", "dem", "den", "der"],
+    "correctAnswer": 1,
+    "topic": "Wechselpräpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g4_6",
+    "type": "multiple-choice",
+    "question": "Ich hänge das neue Bild an ___ Wand.",
+    "options": ["die", "der", "den", "das"],
+    "correctAnswer": 0,
+    "topic": "Wechselpräpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g20_4",
+    "type": "multiple-choice",
+    "question": "Ein ___ heißer Kaffee schmeckt am Morgen gut.",
+    "options": ["starker", "starken", "starke", "starkes"],
+    "correctAnswer": 0,
+    "topic": "Adjektivdeklination",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g20_5",
+    "type": "multiple-choice",
+    "question": "Ich trinke am liebsten ___ Tee ohne Zucker.",
+    "options": ["grünen", "grüne", "grüner", "grünes"],
+    "correctAnswer": 0,
+    "topic": "Adjektivdeklination",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g20_6",
+    "type": "multiple-choice",
+    "question": "Die ___ Kinder spielen seit Stunden im Garten.",
+    "options": ["kleinen", "kleine", "kleiner", "kleines"],
+    "correctAnswer": 0,
+    "topic": "Adjektivdeklination",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g21_4",
+    "type": "multiple-choice",
+    "question": "Heute ist es viel ___ als gestern.",
+    "options": ["wärmer", "warm", "am wärmsten", "warme"],
+    "correctAnswer": 0,
+    "topic": "Komparativ & Superlativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g21_5",
+    "type": "multiple-choice",
+    "question": "Das ist das ___ Haus in der ganzen Stadt.",
+    "options": ["älteste", "älter", "am ältesten", "alte"],
+    "correctAnswer": 0,
+    "topic": "Komparativ & Superlativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g21_6",
+    "type": "multiple-choice",
+    "question": "Die Grammatik ist ___ als ich dachte.",
+    "options": ["schwerer", "schwer", "am schwersten", "schwere"],
+    "correctAnswer": 0,
+    "topic": "Komparativ & Superlativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g22_4",
+    "type": "multiple-choice",
+    "question": "Ich muss ___ jetzt wirklich beeilen.",
+    "options": ["mich", "mir", "dich", "sich"],
+    "correctAnswer": 0,
+    "topic": "Reflexive Verben",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g22_5",
+    "type": "multiple-choice",
+    "question": "Setzt ___ bitte schnell hin!",
+    "options": ["euch", "uns", "sich", "dich"],
+    "correctAnswer": 0,
+    "topic": "Reflexive Verben",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g22_6",
+    "type": "multiple-choice",
+    "question": "Interessierst du ___ eigentlich für Politik?",
+    "options": ["dich", "dir", "sich", "mich"],
+    "correctAnswer": 0,
+    "topic": "Reflexive Verben",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g23_4",
+    "type": "multiple-choice",
+    "question": "___ hat einfach meinen Stift genommen.",
+    "options": ["Jemand", "Niemand", "Etwas", "Alles"],
+    "correctAnswer": 0,
+    "topic": "Indefinitpronomen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g23_5",
+    "type": "multiple-choice",
+    "question": "Es gibt hier leider ___ zu essen.",
+    "options": ["nichts", "niemand", "man", "alle"],
+    "correctAnswer": 0,
+    "topic": "Indefinitpronomen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g23_6",
+    "type": "multiple-choice",
+    "question": "___ wissen mittlerweile, wie wichtig Sport ist.",
+    "options": ["Alle", "Jemand", "Etwas", "Man"],
+    "correctAnswer": 0,
+    "topic": "Indefinitpronomen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g39_4",
+    "type": "multiple-choice",
+    "question": "Ich antworte ___ Lehrer per E-Mail.",
+    "options": ["dem", "den", "der", "das"],
+    "correctAnswer": 0,
+    "topic": "Dativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g39_5",
+    "type": "multiple-choice",
+    "question": "Schmeckt ___ das neue Essen?",
+    "options": ["dir", "dich", "dein", "du"],
+    "correctAnswer": 0,
+    "topic": "Dativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g39_6",
+    "type": "multiple-choice",
+    "question": "Er gratuliert ___ besten Freund zum Geburtstag.",
+    "options": ["seinem", "seinen", "seiner", "sein"],
+    "correctAnswer": 0,
+    "topic": "Dativ",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g40_4",
+    "type": "multiple-choice",
+    "question": "Ich träume oft ___ einem langen Urlaub am Meer.",
+    "options": ["von", "für", "an", "über"],
+    "correctAnswer": 0,
+    "topic": "Verben mit Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g40_5",
+    "type": "multiple-choice",
+    "question": "Freust du dich ___ das tolle Geschenk?",
+    "options": ["über", "für", "an", "auf"],
+    "correctAnswer": 0,
+    "topic": "Verben mit Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g40_6",
+    "type": "multiple-choice",
+    "question": "Er nimmt dieses Jahr ___ dem Kurs teil.",
+    "options": ["an", "für", "mit", "zu"],
+    "correctAnswer": 0,
+    "topic": "Verben mit Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g41_4",
+    "type": "multiple-choice",
+    "question": "In dieser Fabrik ___ wirklich viel gearbeitet.",
+    "options": ["wird", "werden", "ist", "sind"],
+    "correctAnswer": 0,
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g41_5",
+    "type": "multiple-choice",
+    "question": "Das Lied ___ von vielen Menschen gerne ___.",
+    "options": ["wird - gesungen", "ist - gesungen", "wird - singen", "wird - gesingt"],
+    "correctAnswer": 0,
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g41_6",
+    "type": "multiple-choice",
+    "question": "Die Fenster ___ gestern gründlich ___.",
+    "options": ["wurden - geputzt", "werden - geputzt", "sind - geputzt", "wurden - putzen"],
+    "correctAnswer": 0,
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g58_4",
+    "type": "multiple-choice",
+    "question": "Ich bleibe heute zu Hause, ___ ich bin leider krank.",
+    "options": ["denn", "weil", "aber", "und"],
+    "correctAnswer": 0,
+    "topic": "Konjunktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g58_5",
+    "type": "multiple-choice",
+    "question": "Entweder gehen wir ins Kino ___ wir bleiben heute hier.",
+    "options": ["oder", "aber", "und", "sondern"],
+    "correctAnswer": 0,
+    "topic": "Konjunktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g58_6",
+    "type": "multiple-choice",
+    "question": "Nicht nur er, ___ auch all seine Freunde kommen.",
+    "options": ["sondern", "aber", "und", "oder"],
+    "correctAnswer": 0,
+    "topic": "Konjunktionen",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g59_4",
+    "type": "multiple-choice",
+    "question": "___ bitte sofort das Fenster ___!",
+    "options": ["Mach - zu", "Machst - zu", "Mache - zu", "Machen - zu"],
+    "correctAnswer": 0,
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g59_5",
+    "type": "multiple-choice",
+    "question": "___ Sie bitte vorsichtig ___!",
+    "options": ["Treten Sie - ein", "Treten - ein", "Tretet - ein", "Trete - ein"],
+    "correctAnswer": 0,
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2"
+  },
+  {
+    "id": "a2_g59_6",
+    "type": "multiple-choice",
+    "question": "___ euch bitte warm ___!",
+    "options": ["Zieht - an", "Zieh - an", "Ziehen - an", "Zieht - aus"],
+    "correctAnswer": 0,
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2"
+  },
+  {
+    "id": "ex_fb_a2_1",
+    "type": "fill-blank",
+    "question": "Morgen ___ ich meine Großeltern. (besuchen)",
+    "options": ["besuchen", "besuche", "besucht", "besuchst"],
+    "correctAnswer": 1,
+    "topic": "Präsens",
+    "level": "A2"
+  },
+  {
+    "id": "ex_fb_a2_2",
+    "type": "fill-blank",
+    "question": "Ich habe den Brief ___ . (schreiben)",
+    "options": ["geschrieben", "geschreibt", "schreiben", "geschreibe"],
+    "correctAnswer": 0,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "ex_fb_a2_3",
+    "type": "fill-blank",
+    "question": "Wir ___ gestern im Kino. (sein)",
+    "options": ["sind", "war", "waren", "wart"],
+    "correctAnswer": 2,
+    "topic": "Präteritum",
+    "level": "A2"
+  },
+  {
+    "id": "ex_fb_a2_4",
+    "type": "fill-blank",
+    "question": "Das ist das Haus, ___ ich wohne.",
+    "options": ["der", "die", "das", "in dem"],
+    "correctAnswer": 3,
+    "topic": "Relativsätze",
+    "level": "A2"
+  },
+  {
+    "id": "ex_fb_a2_5",
+    "type": "fill-blank",
+    "question": "Ich freue mich ___ den Urlaub.",
+    "options": ["auf", "über", "für", "an"],
+    "correctAnswer": 0,
+    "topic": "Präpositionen",
+    "level": "A2"
+  },
+  {
+    "id": "ex_fb_a2_6",
+    "type": "fill-blank",
+    "question": "Er ___ heute länger arbeiten. (müssen)",
+    "options": ["muss", "müsst", "mussst", "müssen"],
+    "correctAnswer": 0,
+    "topic": "Modalverben",
+    "level": "A2"
+  },
+  {
+    "id": "ex_so_a2_1",
+    "type": "sentence-order",
+    "question": "Ich gehe heute ins Kino.",
+    "options": ["ins", "Heute", "Kino", "gehe", "ich"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A2"
+  },
+  {
+    "id": "ex_so_a2_2",
+    "type": "sentence-order",
+    "question": "Kannst du mir helfen?",
+    "options": ["helfen?", "mir", "du", "Kannst"],
+    "correctAnswer": 0,
+    "topic": "Modalverben",
+    "level": "A2"
+  },
+  {
+    "id": "ex_so_a2_3",
+    "type": "sentence-order",
+    "question": "Das Wetter ist heute schön.",
+    "options": ["heute", "schön", "Wetter", "Das", "ist"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A2"
+  },
+  {
+    "id": "ex_so_a2_4",
+    "type": "sentence-order",
+    "question": "Ich habe gestern gearbeitet.",
+    "options": ["gearbeitet", "gestern", "habe", "Ich"],
+    "correctAnswer": 0,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "ex_so_a2_5",
+    "type": "sentence-order",
+    "question": "Wo hast du gewohnt?",
+    "options": ["du", "hast", "Wo", "gewohnt?"],
+    "correctAnswer": 0,
+    "topic": "Perfekt",
+    "level": "A2"
+  },
+  {
+    "id": "ex_so_a2_6",
+    "type": "sentence-order",
+    "question": "Wir essen um acht Uhr.",
+    "options": ["Uhr", "acht", "Wir", "um", "essen"],
+    "correctAnswer": 0,
+    "topic": "Satzbau",
+    "level": "A2"
+  }
+]

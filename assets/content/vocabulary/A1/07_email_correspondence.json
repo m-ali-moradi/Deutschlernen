@@ -1,0 +1,112 @@
+[
+  {
+    "id": "a10701",
+    "german": "die E-Mail",
+    "english": "Email",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Digital",
+    "example": "Ich schicke Ihnen die Unterlagen per E-Mail.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ایمیل"
+  },
+  {
+    "id": "a10702",
+    "german": "der Anhang",
+    "english": "Attachment",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Im Anhang finden Sie die Rechnung.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ضمیمه"
+  },
+  {
+    "id": "a10703",
+    "german": "antworten",
+    "english": "To reply",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Bitte antworten Sie bis Freitag.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پاسخ دادن"
+  },
+  {
+    "id": "a10704",
+    "german": "die Frist",
+    "english": "Deadline",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Scheduling",
+    "example": "Die Frist für die Bewerbung endet am 30. März.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "مهلت"
+  },
+  {
+    "id": "a10705",
+    "german": "dringend",
+    "english": "Urgent",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Priority",
+    "example": "Diese Angelegenheit ist sehr dringend.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "فوری"
+  },
+  {
+    "id": "a10706",
+    "german": "die Unterschrift",
+    "english": "Email signature / Signature",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Email",
+    "example": "Meine Unterschrift enthält Name und Telefonnummer.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "امضای ایمیل"
+  },
+  {
+    "id": "a10707",
+    "german": "der Brief",
+    "english": "Letter",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Postal",
+    "example": "Ich schreibe einen offiziellen Brief.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "نامه"
+  },
+  {
+    "id": "a10708",
+    "german": "der Umschlag",
+    "english": "Envelope",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Postal",
+    "example": "Die Dokumente sind im Umschlag.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پاکت"
+  },
+  {
+    "id": "a10709",
+    "german": "das Formular",
+    "english": "Form / Application form",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Document",
+    "example": "Bitte füllen Sie dieses Formular aus.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "فورم"
+  },
+  {
+    "id": "a10710",
+    "german": "ausfüllen",
+    "english": "To fill out / To complete",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Action",
+    "example": "Bitte füllen Sie das Formular vollständig aus.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "پُر کردن"
+  }
+]

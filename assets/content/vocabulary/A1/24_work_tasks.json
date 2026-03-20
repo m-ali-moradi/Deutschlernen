@@ -1,0 +1,46 @@
+[
+  {
+    "id": "a12401",
+    "german": "die Aufgabe",
+    "english": "task",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Aufgabe wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "وظیفه"
+  },
+  {
+    "id": "a12402",
+    "german": "der Auftrag",
+    "english": "assignment",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Auftrag wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "ماموریت"
+  },
+  {
+    "id": "a12403",
+    "german": "der Bericht",
+    "english": "report",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Bericht wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "گزارش"
+  },
+  {
+    "id": "a12404",
+    "german": "die Korrektur",
+    "english": "correction",
+    "category": "Arbeitsaufgaben",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist die Korrektur wichtig.",
+    "difficulty": "easy",
+    "isFavorite": false,
+    "dari": "تصحیح"
+  }
+]

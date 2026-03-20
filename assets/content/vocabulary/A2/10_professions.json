@@ -1,0 +1,178 @@
+[
+  {
+    "id": "a21001",
+    "german": "der Geschaeftsfuehrer",
+    "english": "managing director",
+    "category": "Berufsrollen",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Geschaeftsfuehrer wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیرعامل"
+  },
+  {
+    "id": "a21002",
+    "german": "der Projektmanager",
+    "english": "project manager",
+    "category": "Berufsrollen",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Projektmanager wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر پروژه"
+  },
+  {
+    "id": "a21003",
+    "german": "der Produktmanager",
+    "english": "product manager",
+    "category": "Berufsrollen",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Produktmanager wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر محصول"
+  },
+  {
+    "id": "a21004",
+    "german": "der Vertriebsleiter",
+    "english": "sales manager",
+    "category": "Berufsrollen",
+    "tag": "Sales",
+    "example": "Im Arbeitsalltag ist der Vertriebsleiter wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر فروش"
+  },
+  {
+    "id": "a21005",
+    "german": "der Marketingleiter",
+    "english": "marketing manager",
+    "category": "Berufsrollen",
+    "tag": "Marketing",
+    "example": "Im Arbeitsalltag ist der Marketingleiter wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر مارکیتنگ"
+  },
+  {
+    "id": "a21006",
+    "german": "der Finanzleiter",
+    "english": "finance manager",
+    "category": "Berufsrollen",
+    "tag": "Finance",
+    "example": "Im Arbeitsalltag ist der Finanzleiter wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر مالی"
+  },
+  {
+    "id": "a21007",
+    "german": "der Personalreferent",
+    "english": "HR specialist",
+    "category": "Berufsrollen",
+    "tag": "HR",
+    "example": "Im Arbeitsalltag ist der Personalreferent wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارشناس منابع انسانی"
+  },
+  {
+    "id": "a21008",
+    "german": "der Einkaeufer",
+    "english": "buyer",
+    "category": "Berufsrollen",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Einkaeufer wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "خریدار"
+  },
+  {
+    "id": "a21009",
+    "german": "der Lagerleiter",
+    "english": "warehouse manager",
+    "category": "Berufsrollen",
+    "tag": "Logistics",
+    "example": "Im Arbeitsalltag ist der Lagerleiter wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر انبار"
+  },
+  {
+    "id": "a21010",
+    "german": "der Kundenbetreuer",
+    "english": "account manager",
+    "category": "Berufsrollen",
+    "tag": "Sales",
+    "example": "Im Arbeitsalltag ist der Kundenbetreuer wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مسوول ارتباط با مشتری"
+  },
+  {
+    "id": "a21011",
+    "german": "der Berater",
+    "english": "consultant",
+    "category": "Berufsrollen",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Berater wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مشاور"
+  },
+  {
+    "id": "a21012",
+    "german": "der Analyst",
+    "english": "analyst",
+    "category": "Berufsrollen",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Analyst wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تحلیل‌گر"
+  },
+  {
+    "id": "a21013",
+    "german": "der Sachbearbeiter",
+    "english": "clerk",
+    "category": "Berufsrollen",
+    "tag": "Office",
+    "example": "Im Arbeitsalltag ist der Sachbearbeiter wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "کارمند اداری"
+  },
+  {
+    "id": "a21014",
+    "german": "der Qualitaetsmanager",
+    "english": "quality manager",
+    "category": "Berufsrollen",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Qualitaetsmanager wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مدیر کیفیت"
+  },
+  {
+    "id": "a21015",
+    "german": "der Teamleiter",
+    "english": "team lead",
+    "category": "Berufsrollen",
+    "tag": "Management",
+    "example": "Im Arbeitsalltag ist der Teamleiter wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "سرپرست تیم"
+  },
+  {
+    "id": "a21016",
+    "german": "der Softwareentwickler",
+    "english": "software developer",
+    "category": "Berufsrollen",
+    "tag": "IT",
+    "example": "Im Arbeitsalltag ist der Softwareentwickler wichtig.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "توسعه‌دهنده نرم‌افزار"
+  }
+]

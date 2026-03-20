@@ -1,0 +1,123 @@
+[
+  {
+    "id": "a20201",
+    "german": "der Umsatz",
+    "english": "Revenue",
+    "category": "Finanzen",
+    "tag": "Finance",
+    "example": "Der Umsatz ist dieses Quartal gestiegen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گردش مالی"
+  },
+  {
+    "id": "a20202",
+    "german": "die Kostenanalyse",
+    "english": "Cost analysis",
+    "category": "Finanzen",
+    "tag": "Finance",
+    "example": "Im Arbeitsalltag nutzen wir den Begriff die Kostenanalyse.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "تحلیل هزینه‌ها"
+  },
+  {
+    "id": "a20203",
+    "german": "die Überweisung",
+    "english": "Bank transfer / Wire transfer",
+    "category": "Finanzen",
+    "tag": "Banking",
+    "example": "Bitte veranlassen Sie die Überweisung heute.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "حواله بانکی"
+  },
+  {
+    "id": "a20204",
+    "german": "der Steuerberater",
+    "english": "Tax advisor / Accountant",
+    "category": "Finanzen",
+    "tag": "Tax",
+    "example": "Ich gehe zum Steuerberater für die Steuererklärung.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "مشاور مالیاتی"
+  },
+  {
+    "id": "a20205",
+    "german": "das Girokonto",
+    "english": "Current account / Checking account",
+    "category": "Finanzen",
+    "tag": "Banking",
+    "example": "Für Gehaltszahlungen brauchen Sie ein Girokonto.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "حساب جاری"
+  },
+  {
+    "id": "a20206",
+    "german": "die IBAN",
+    "english": "IBAN (bank account number)",
+    "category": "Finanzen",
+    "tag": "Banking",
+    "example": "Bitte teilen Sie mir Ihre IBAN mit.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "آی‌بان"
+  },
+  {
+    "id": "a20207",
+    "german": "die Buchhaltung",
+    "english": "Accounting / Bookkeeping",
+    "category": "Finanzen",
+    "tag": "Department",
+    "example": "Die Buchhaltung prüft alle Ausgaben.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "حسابداری"
+  },
+  {
+    "id": "a20208",
+    "german": "der Kredit",
+    "english": "Loan / Credit",
+    "category": "Finanzen",
+    "tag": "Banking",
+    "example": "Ich habe einen Kredit bei der Bank beantragt.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "قرضه"
+  },
+  {
+    "id": "a20209",
+    "german": "der Kassenbon",
+    "english": "Till receipt / Cash receipt",
+    "category": "Finanzen",
+    "tag": "Document",
+    "example": "Bewahren Sie den Kassenbon für die Buchhaltung auf.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "رسید صندوق"
+  },
+  {
+    "id": "a20210",
+    "german": "die Abrechnung",
+    "english": "Settlement / Statement of accounts",
+    "category": "Finanzen",
+    "tag": "Accounting",
+    "example": "Die monatliche Abrechnung kommt per E-Mail.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "صورت‌حساب"
+  },
+  {
+    "id": "a20211",
+    "german": "der Umsatz",
+    "english": "Turnover / Sales revenue",
+    "category": "Finanzen",
+    "tag": "Accounting",
+    "example": "Der Umsatz ist im Vergleich zum Vorjahr gestiegen.",
+    "difficulty": "medium",
+    "isFavorite": false,
+    "dari": "گردش مالی"
+  }
+]

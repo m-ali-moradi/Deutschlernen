@@ -1,0 +1,100 @@
+[
+  {
+    "id": "p1",
+    "german": "Sehr geehrte Damen und Herren",
+    "english": "Dear Sir or Madam",
+    "dari": "خانم ها و اقایان محترم",
+    "tag": "Formal"
+  },
+  {
+    "id": "p2",
+    "german": "Mit freundlichen Grussen",
+    "english": "Kind regards",
+    "dari": "با احترام",
+    "tag": "Formal"
+  },
+  {
+    "id": "p3",
+    "german": "Konnte Sie mir bitte helfen?",
+    "english": "Could you please help me?",
+    "dari": "ایا می توانید لطفا کمکم کنید؟",
+    "tag": "Polite"
+  },
+  {
+    "id": "p4",
+    "german": "Ich mochte mich vorstellen",
+    "english": "I would like to introduce myself",
+    "dari": "می خواهم خودم را معرفی کنم",
+    "tag": "Meeting"
+  },
+  {
+    "id": "p5",
+    "german": "Im Anhang finden Sie...",
+    "english": "Please find attached...",
+    "dari": "در پیوست می یابید...",
+    "tag": "Email"
+  },
+  {
+    "id": "p6",
+    "german": "Vielen Dank fur Ihre Ruckmeldung.",
+    "english": "Thank you for your feedback.",
+    "dari": "از بازخورد شما سپاسگزارم.",
+    "tag": "Office"
+  },
+  {
+    "id": "p7",
+    "german": "Ich stimme Ihrem Vorschlag zu.",
+    "english": "I agree with your proposal.",
+    "dari": "من با پیشنهاد شما موافقم.",
+    "tag": "Meeting"
+  },
+  {
+    "id": "p8",
+    "german": "Bis wann ist die Frist?",
+    "english": "Until when is the deadline?",
+    "dari": "مهلت تا چه زمانی است؟",
+    "tag": "Deadline"
+  },
+  {
+    "id": "p9",
+    "german": "Konnen wir einen Termin vereinbaren?",
+    "english": "Can we schedule an appointment?",
+    "dari": "ایا می توانیم یک وقت تعیین کنیم؟",
+    "tag": "Scheduling"
+  },
+  {
+    "id": "p10",
+    "german": "Ich sende Ihnen das Angebot heute.",
+    "english": "I will send you the offer today.",
+    "dari": "من امروز پیشنهاد را برای شما ارسال می کنم.",
+    "tag": "Sales"
+  },
+  {
+    "id": "pv2",
+    "german": "Mit freundlichen Grüßen",
+    "english": "Kind regards",
+    "dari": "با احترام",
+    "tag": "Formal"
+  },
+  {
+    "id": "pv3",
+    "german": "Könnten Sie mir bitte helfen?",
+    "english": "Could you please help me?",
+    "dari": "آیا می‌توانید کمکم کنید؟",
+    "tag": "Polite"
+  },
+  {
+    "id": "pv4",
+    "german": "Ich möchte mich vorstellen",
+    "english": "I would like to introduce myself",
+    "dari": "می‌خواهم خودم را معرفی کنم",
+    "tag": "Meeting"
+  },
+  {
+    "id": "pv5",
+    "german": "Wie besprochen...",
+    "english": "As discussed...",
+    "dari": "طوری که بحث شد...",
+    "tag": "Email"
+  }
+]

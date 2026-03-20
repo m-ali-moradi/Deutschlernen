@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a1",
+    "title": "Erste Schritte",
+    "description": "Complete your first lesson",
+    "icon": "🎯",
+    "unlocked": true
+  },
+  {
+    "id": "a2",
+    "title": "Wortmeister",
+    "description": "Learn 10 vocabulary words",
+    "icon": "📚",
+    "unlocked": true
+  },
+  {
+    "id": "a3",
+    "title": "Grammatik-Guru",
+    "description": "Complete 5 grammar topics",
+    "icon": "🧠",
+    "unlocked": false
+  },
+  {
+    "id": "a4",
+    "title": "Flammen-Held",
+    "description": "7-day learning streak",
+    "icon": "🔥",
+    "unlocked": true
+  },
+  {
+    "id": "a5",
+    "title": "Perfektionist",
+    "description": "Score 100% on an exercise",
+    "icon": "💎",
+    "unlocked": false
+  },
+  {
+    "id": "a6",
+    "title": "Business-Profi",
+    "description": "Learn all business vocabulary",
+    "icon": "💼",
+    "unlocked": false
+  }
+]

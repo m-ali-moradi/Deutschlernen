@@ -1,0 +1,24 @@
+[
+  {
+    "id": "b11001",
+    "german": "Bezug nehmend auf",
+    "english": "With reference to / Regarding",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Phrase",
+    "example": "Bezug nehmend auf unser Telefonat vom Montag...",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "با اشاره به"
+  },
+  {
+    "id": "b11002",
+    "german": "für Rückfragen stehe ich zur Verfügung",
+    "english": "Available for any questions",
+    "category": "E-Mail & Korrespondenz",
+    "tag": "Phrase",
+    "example": "Für Rückfragen stehe ich jederzeit zur Verfügung.",
+    "difficulty": "hard",
+    "isFavorite": false,
+    "dari": "برای پرسش‌های بیشتر در دسترس هستم"
+  }
+]
