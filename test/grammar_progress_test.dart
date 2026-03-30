@@ -1,5 +1,5 @@
 import 'package:deutschlernen_mobile/core/database/app_database.dart';
-import 'package:deutschlernen_mobile/core/learning/grammar_progress.dart';
+import 'package:deutschlernen_mobile/features/grammar/domain/grammar_logic.dart';
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 

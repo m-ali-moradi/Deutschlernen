@@ -47,7 +47,7 @@ class GrammarContentService {
 
   static Future<List<GrammarTopicView>> loadTopics(String level) async {
     final data = await ContentLoader.loadList(
-      'assets/content/grammar/topics_${level.toLowerCase()}.json',
+      'assets/content/grammar/en/topics_${level.toLowerCase()}.json',
     );
     return data.map(GrammarTopicView.fromJson).toList();
   }

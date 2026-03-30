@@ -7,6 +7,7 @@ class VocabularyReviewInfo {
   const VocabularyReviewInfo({
     required this.wordId,
     required this.status,
+    required this.lastResult,
     required this.leitnerBox,
     required this.reviewCount,
     required this.lapseCount,
@@ -17,6 +18,7 @@ class VocabularyReviewInfo {
 
   final String wordId;
   final VocabularyReviewStatus status;
+  final ReviewResult? lastResult;
   final int leitnerBox;
   final int reviewCount;
   final int lapseCount;
@@ -220,6 +222,7 @@ VocabularyReviewInfo _buildReviewInfo({
     return VocabularyReviewInfo(
       wordId: wordId,
       status: VocabularyReviewStatus.newWord,
+      lastResult: null,
       leitnerBox: 0,
       reviewCount: 0,
       lapseCount: 0,
@@ -235,6 +238,7 @@ VocabularyReviewInfo _buildReviewInfo({
   final lastReviewedAt = _dateTimeValue(progressRow['last_reviewed_at']);
   final nextReviewAt = _dateTimeValue(progressRow['next_review_at']);
   final masteredAt = _dateTimeValue(progressRow['mastered_at']);
+  final lastResultValue = _stringValue(progressRow['last_result']);
   final storedStatus = _stringValue(progressRow['status']);
 
   final status = deriveReviewStatus(
@@ -248,6 +252,9 @@ VocabularyReviewInfo _buildReviewInfo({
   return VocabularyReviewInfo(
     wordId: wordId,
     status: status,
+    lastResult: lastResultValue.isEmpty
+        ? null
+        : ReviewResultX.fromValue(lastResultValue),
     leitnerBox: leitnerBox,
     reviewCount: reviewCount,
     lapseCount: lapseCount,

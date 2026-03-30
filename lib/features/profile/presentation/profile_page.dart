@@ -3,9 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../core/content/sync/connectivity_service.dart';
 import '../../../core/database/database_providers.dart';
-import '../../../core/learning/weak_area_routes.dart';
-import '../../../core/theme/app_tokens.dart';
+import '../../../core/content/sync/sync_state.dart';
+import '../../learning_path/data/models/weak_area_models.dart';
+import '../../../../core/theme/app_tokens.dart';
 import '../../../shared/widgets/app_state_view.dart';
 import '../../../shared/localization/app_ui_text.dart';
 
@@ -52,10 +54,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(strings.either(german: 'Fortschritt zurücksetzen?', english: 'Reset progress?')),
+        title: Text(strings.either(
+            german: 'Fortschritt zurücksetzen?', english: 'Reset progress?')),
         content: Text(strings.either(
-          german: 'Dies löscht all deine XP, Grammatik-Fortschritte und Vokabel-Statistiken. Dies kann nicht rückgängig gemacht werden.',
-          english: 'This will erase all your XP, grammar progress, and vocabulary stats. This cannot be undone.',
+          german:
+              'Dies löscht all deine XP, Grammatik-Fortschritte und Vokabel-Statistiken. Dies kann nicht rückgängig gemacht werden.',
+          english:
+              'This will erase all your XP, grammar progress, and vocabulary stats. This cannot be undone.',
         )),
         actions: [
           TextButton(
@@ -65,7 +70,8 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
           TextButton(
             onPressed: () => Navigator.pop(context, true),
             style: TextButton.styleFrom(foregroundColor: Colors.red),
-            child: Text(strings.either(german: 'Zurücksetzen', english: 'Reset')),
+            child:
+                Text(strings.either(german: 'Zurücksetzen', english: 'Reset')),
           ),
         ],
       ),
@@ -75,7 +81,10 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
       await ref.read(appSettingsActionsProvider).resetAllUserProgress();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(strings.either(german: 'Fortschritt zurückgesetzt.', english: 'Progress reset.'))),
+          SnackBar(
+              content: Text(strings.either(
+                  german: 'Fortschritt zurückgesetzt.',
+                  english: 'Progress reset.'))),
         );
       }
     }
@@ -185,7 +194,8 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                         borderRadius: BorderRadius.circular(24),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFFA855F7).withOpacity(0.35),
+                            color:
+                                const Color(0xFFA855F7).withValues(alpha: 0.35),
                             blurRadius: 20,
                             offset: const Offset(0, 8),
                           ),
@@ -206,7 +216,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                                     value: weeklyProgress / 100,
                                     strokeWidth: 8,
                                     backgroundColor:
-                                        Colors.white.withOpacity(0.25),
+                                        Colors.white.withValues(alpha: 0.25),
                                     valueColor: const AlwaysStoppedAnimation(
                                       Colors.white,
                                     ),
@@ -229,7 +239,8 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                                           german: 'Level', english: 'Level'),
                                       style: TextStyle(
                                         fontSize: 10,
-                                        color: Colors.white.withOpacity(0.7),
+                                        color:
+                                            Colors.white.withValues(alpha: 0.7),
                                       ),
                                     ),
                                   ],
@@ -256,7 +267,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                             ),
                             style: TextStyle(
                               fontSize: 12,
-                              color: Colors.white.withOpacity(0.7),
+                              color: Colors.white.withValues(alpha: 0.7),
                             ),
                           ),
                           const SizedBox(height: 16),
@@ -444,45 +455,119 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                                       ),
                                     ),
                                   ),
-                                  AnimatedContainer(
-                                    duration: const Duration(milliseconds: 200),
-                                    width: 48,
-                                    height: 28,
-                                    padding: const EdgeInsets.all(2),
-                                    decoration: BoxDecoration(
-                                      color: prefs.darkMode
-                                          ? const Color(0xFF6366F1)
-                                          : const Color(0xFFCBD5E1),
-                                      borderRadius: BorderRadius.circular(100),
-                                    ),
-                                    child: AnimatedAlign(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      alignment: prefs.darkMode
-                                          ? Alignment.centerRight
-                                          : Alignment.centerLeft,
-                                      child: Container(
-                                        width: 24,
-                                        height: 24,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(100),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black
-                                                  .withOpacity(0.12),
-                                              blurRadius: 4,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
+                                  _CustomSwitch(
+                                    value: prefs.darkMode,
+                                    activeColor: const Color(0xFF6366F1),
                                   ),
                                 ],
                               ),
                             ),
                           ),
+                          Divider(
+                            height: 1,
+                            color: isDark
+                                ? const Color(0xFF1E293B)
+                                : const Color(0xFFF1F5F9),
+                          ),
+                          GestureDetector(
+                            onTap: () => ref
+                                .read(appSettingsActionsProvider)
+                                .setAutoSync(!prefs.autoSync),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Row(
+                                children: [
+                                  const Icon(
+                                    Icons.sync_rounded,
+                                    size: 20,
+                                    color: Color(0xFF10B981),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          strings.either(
+                                            german: 'Auto-Synchronisierung',
+                                            english: 'Auto-Sync Content',
+                                          ),
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: textPrimary,
+                                          ),
+                                        ),
+                                        Text(
+                                          strings.either(
+                                            german: 'Inhalte automatisch laden',
+                                            english:
+                                                'Fetch updates automatically',
+                                          ),
+                                          style: TextStyle(
+                                            fontSize: 11,
+                                            color: textMuted,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  _CustomSwitch(
+                                    value: prefs.autoSync,
+                                    activeColor: const Color(0xFF10B981),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          if (!prefs.autoSync) ...[
+                            const SizedBox(height: 4),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 32),
+                              child: TextButton.icon(
+                                onPressed: () {
+                                  final isOnline = ref
+                                          .read(connectivityProvider)
+                                          .valueOrNull ??
+                                      false;
+                                  if (!isOnline) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(strings.offlineMessage()),
+                                        duration: const Duration(seconds: 2),
+                                      ),
+                                    );
+                                    return;
+                                  }
+
+                                  ref
+                                      .read(syncStateProvider.notifier)
+                                      .triggerManualSync();
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(strings.either(
+                                        german: 'Synchronisierung gestartet...',
+                                        english: 'Syncing started...',
+                                      )),
+                                      duration: const Duration(seconds: 2),
+                                    ),
+                                  );
+                                },
+                                icon:
+                                    const Icon(Icons.refresh_rounded, size: 16),
+                                label: Text(strings.either(
+                                  german: 'Jetzt synchronisieren',
+                                  english: 'Sync Now',
+                                )),
+                                style: TextButton.styleFrom(
+                                  visualDensity: VisualDensity.compact,
+                                  foregroundColor: const Color(0xFF10B981),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 4),
+                                ),
+                              ),
+                            ),
+                          ],
                           Divider(
                             height: 1,
                             color: isDark
@@ -633,10 +718,14 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                           TextButton.icon(
                             onPressed: () => _handleResetProgress(strings),
                             icon: const Icon(Icons.refresh_rounded, size: 18),
-                            label: Text(strings.either(german: 'Fortschritt zurücksetzen', english: 'Reset Progress')),
+                            label: Text(strings.either(
+                                german: 'Fortschritt zurücksetzen',
+                                english: 'Reset Progress')),
                             style: TextButton.styleFrom(
-                              foregroundColor: Colors.red.withOpacity(0.8),
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              foregroundColor:
+                                  Colors.red.withValues(alpha: 0.8),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
                             ),
                           ),
                           const SizedBox(height: 16),
@@ -655,7 +744,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                             ),
                             style: TextStyle(
                               fontSize: 11,
-                              color: textMuted.withOpacity(0.8),
+                              color: textMuted.withValues(alpha: 0.8),
                             ),
                           ),
                         ],
@@ -727,7 +816,7 @@ class _BackButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.08),
+                color: Colors.black.withValues(alpha: 0.08),
                 blurRadius: 8,
                 offset: const Offset(0, 2),
               ),
@@ -753,15 +842,15 @@ class _GlassStat extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.2),
+          color: Colors.white.withValues(alpha: 0.2),
           borderRadius: BorderRadius.circular(14),
         ),
         child: Column(
           children: [
             Text(
               label,
-              style:
-                  TextStyle(fontSize: 10, color: Colors.white.withOpacity(0.6)),
+              style: TextStyle(
+                  fontSize: 10, color: Colors.white.withValues(alpha: 0.6)),
             ),
             const SizedBox(height: 2),
             Text(
@@ -793,7 +882,7 @@ class _SectionCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.06),
+              color: Colors.black.withValues(alpha: 0.06),
               blurRadius: 16,
               offset: const Offset(0, 4),
             ),
@@ -838,7 +927,7 @@ class _CompactStatCard extends StatelessWidget {
                     label,
                     style: TextStyle(
                       fontSize: 11,
-                      color: fg.withOpacity(0.8),
+                      color: fg.withValues(alpha: 0.8),
                     ),
                   ),
                 ),
@@ -944,6 +1033,46 @@ class _DropdownSelect extends StatelessWidget {
               onChanged(nextValue);
             }
           },
+        ),
+      ),
+    );
+  }
+}
+
+/// A custom switch widget that matches the app's design system.
+class _CustomSwitch extends StatelessWidget {
+  const _CustomSwitch({required this.value, required this.activeColor});
+
+  final bool value;
+  final Color activeColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      width: 48,
+      height: 28,
+      padding: const EdgeInsets.all(2),
+      decoration: BoxDecoration(
+        color: value ? activeColor : const Color(0xFFCBD5E1),
+        borderRadius: BorderRadius.circular(100),
+      ),
+      child: AnimatedAlign(
+        duration: const Duration(milliseconds: 200),
+        alignment: value ? Alignment.centerRight : Alignment.centerLeft,
+        child: Container(
+          width: 24,
+          height: 24,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(100),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.12),
+                blurRadius: 4,
+              ),
+            ],
+          ),
         ),
       ),
     );

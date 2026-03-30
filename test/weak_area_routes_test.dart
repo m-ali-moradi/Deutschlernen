@@ -1,4 +1,4 @@
-import 'package:deutschlernen_mobile/core/learning/weak_area_routes.dart';
+import 'package:deutschlernen_mobile/features/learning_path/data/models/weak_area_models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

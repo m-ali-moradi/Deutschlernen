@@ -59,6 +59,13 @@ class $VocabularyWordsTable extends VocabularyWords
   late final GeneratedColumn<String> contextDari = GeneratedColumn<String>(
       'context_dari', aliasedName, false,
       type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  @override
+  late final GeneratedColumn<String> level = GeneratedColumn<String>(
+      'level', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('A1'));
   static const VerificationMeta _difficultyMeta =
       const VerificationMeta('difficulty');
   @override
@@ -104,6 +111,7 @@ class $VocabularyWordsTable extends VocabularyWords
         example,
         context,
         contextDari,
+        level,
         difficulty,
         isFavorite,
         isDifficult,
@@ -174,6 +182,10 @@ class $VocabularyWordsTable extends VocabularyWords
     } else if (isInserting) {
       context.missing(_contextDariMeta);
     }
+    if (data.containsKey('level')) {
+      context.handle(
+          _levelMeta, level.isAcceptableOrUnknown(data['level']!, _levelMeta));
+    }
     if (data.containsKey('difficulty')) {
       context.handle(
           _difficultyMeta,
@@ -225,6 +237,8 @@ class $VocabularyWordsTable extends VocabularyWords
           .read(DriftSqlType.string, data['${effectivePrefix}context'])!,
       contextDari: attachedDatabase.typeMapping
           .read(DriftSqlType.string, data['${effectivePrefix}context_dari'])!,
+      level: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}level'])!,
       difficulty: attachedDatabase.typeMapping
           .read(DriftSqlType.string, data['${effectivePrefix}difficulty'])!,
       isFavorite: attachedDatabase.typeMapping
@@ -252,6 +266,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
   final String example;
   final String context;
   final String contextDari;
+  final String level;
   final String difficulty;
   final bool isFavorite;
   final bool isDifficult;
@@ -266,6 +281,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
       required this.example,
       required this.context,
       required this.contextDari,
+      required this.level,
       required this.difficulty,
       required this.isFavorite,
       required this.isDifficult,
@@ -282,6 +298,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
     map['example'] = Variable<String>(example);
     map['context'] = Variable<String>(context);
     map['context_dari'] = Variable<String>(contextDari);
+    map['level'] = Variable<String>(level);
     map['difficulty'] = Variable<String>(difficulty);
     map['is_favorite'] = Variable<bool>(isFavorite);
     map['is_difficult'] = Variable<bool>(isDifficult);
@@ -300,6 +317,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
       example: Value(example),
       context: Value(context),
       contextDari: Value(contextDari),
+      level: Value(level),
       difficulty: Value(difficulty),
       isFavorite: Value(isFavorite),
       isDifficult: Value(isDifficult),
@@ -320,6 +338,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
       example: serializer.fromJson<String>(json['example']),
       context: serializer.fromJson<String>(json['context']),
       contextDari: serializer.fromJson<String>(json['contextDari']),
+      level: serializer.fromJson<String>(json['level']),
       difficulty: serializer.fromJson<String>(json['difficulty']),
       isFavorite: serializer.fromJson<bool>(json['isFavorite']),
       isDifficult: serializer.fromJson<bool>(json['isDifficult']),
@@ -339,6 +358,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
       'example': serializer.toJson<String>(example),
       'context': serializer.toJson<String>(context),
       'contextDari': serializer.toJson<String>(contextDari),
+      'level': serializer.toJson<String>(level),
       'difficulty': serializer.toJson<String>(difficulty),
       'isFavorite': serializer.toJson<bool>(isFavorite),
       'isDifficult': serializer.toJson<bool>(isDifficult),
@@ -356,6 +376,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
           String? example,
           String? context,
           String? contextDari,
+          String? level,
           String? difficulty,
           bool? isFavorite,
           bool? isDifficult,
@@ -370,6 +391,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
         example: example ?? this.example,
         context: context ?? this.context,
         contextDari: contextDari ?? this.contextDari,
+        level: level ?? this.level,
         difficulty: difficulty ?? this.difficulty,
         isFavorite: isFavorite ?? this.isFavorite,
         isDifficult: isDifficult ?? this.isDifficult,
@@ -387,6 +409,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
       context: data.context.present ? data.context.value : this.context,
       contextDari:
           data.contextDari.present ? data.contextDari.value : this.contextDari,
+      level: data.level.present ? data.level.value : this.level,
       difficulty:
           data.difficulty.present ? data.difficulty.value : this.difficulty,
       isFavorite:
@@ -409,6 +432,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
           ..write('example: $example, ')
           ..write('context: $context, ')
           ..write('contextDari: $contextDari, ')
+          ..write('level: $level, ')
           ..write('difficulty: $difficulty, ')
           ..write('isFavorite: $isFavorite, ')
           ..write('isDifficult: $isDifficult, ')
@@ -428,6 +452,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
       example,
       context,
       contextDari,
+      level,
       difficulty,
       isFavorite,
       isDifficult,
@@ -445,6 +470,7 @@ class VocabularyWord extends DataClass implements Insertable<VocabularyWord> {
           other.example == this.example &&
           other.context == this.context &&
           other.contextDari == this.contextDari &&
+          other.level == this.level &&
           other.difficulty == this.difficulty &&
           other.isFavorite == this.isFavorite &&
           other.isDifficult == this.isDifficult &&
@@ -461,6 +487,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
   final Value<String> example;
   final Value<String> context;
   final Value<String> contextDari;
+  final Value<String> level;
   final Value<String> difficulty;
   final Value<bool> isFavorite;
   final Value<bool> isDifficult;
@@ -476,6 +503,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
     this.example = const Value.absent(),
     this.context = const Value.absent(),
     this.contextDari = const Value.absent(),
+    this.level = const Value.absent(),
     this.difficulty = const Value.absent(),
     this.isFavorite = const Value.absent(),
     this.isDifficult = const Value.absent(),
@@ -492,6 +520,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
     required String example,
     required String context,
     required String contextDari,
+    this.level = const Value.absent(),
     required String difficulty,
     this.isFavorite = const Value.absent(),
     this.isDifficult = const Value.absent(),
@@ -517,6 +546,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
     Expression<String>? example,
     Expression<String>? context,
     Expression<String>? contextDari,
+    Expression<String>? level,
     Expression<String>? difficulty,
     Expression<bool>? isFavorite,
     Expression<bool>? isDifficult,
@@ -533,6 +563,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
       if (example != null) 'example': example,
       if (context != null) 'context': context,
       if (contextDari != null) 'context_dari': contextDari,
+      if (level != null) 'level': level,
       if (difficulty != null) 'difficulty': difficulty,
       if (isFavorite != null) 'is_favorite': isFavorite,
       if (isDifficult != null) 'is_difficult': isDifficult,
@@ -551,6 +582,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
       Value<String>? example,
       Value<String>? context,
       Value<String>? contextDari,
+      Value<String>? level,
       Value<String>? difficulty,
       Value<bool>? isFavorite,
       Value<bool>? isDifficult,
@@ -566,6 +598,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
       example: example ?? this.example,
       context: context ?? this.context,
       contextDari: contextDari ?? this.contextDari,
+      level: level ?? this.level,
       difficulty: difficulty ?? this.difficulty,
       isFavorite: isFavorite ?? this.isFavorite,
       isDifficult: isDifficult ?? this.isDifficult,
@@ -604,6 +637,9 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
     if (contextDari.present) {
       map['context_dari'] = Variable<String>(contextDari.value);
     }
+    if (level.present) {
+      map['level'] = Variable<String>(level.value);
+    }
     if (difficulty.present) {
       map['difficulty'] = Variable<String>(difficulty.value);
     }
@@ -634,6 +670,7 @@ class VocabularyWordsCompanion extends UpdateCompanion<VocabularyWord> {
           ..write('example: $example, ')
           ..write('context: $context, ')
           ..write('contextDari: $contextDari, ')
+          ..write('level: $level, ')
           ..write('difficulty: $difficulty, ')
           ..write('isFavorite: $isFavorite, ')
           ..write('isDifficult: $isDifficult, ')
@@ -3371,6 +3408,16 @@ class $UserPreferencesTable extends UserPreferences
       defaultConstraints: GeneratedColumn.constraintIsAlways(
           'CHECK ("has_seen_onboarding" IN (0, 1))'),
       defaultValue: const Constant(false));
+  static const VerificationMeta _autoSyncMeta =
+      const VerificationMeta('autoSync');
+  @override
+  late final GeneratedColumn<bool> autoSync = GeneratedColumn<bool>(
+      'auto_sync', aliasedName, false,
+      type: DriftSqlType.bool,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('CHECK ("auto_sync" IN (0, 1))'),
+      defaultValue: const Constant(false));
   static const VerificationMeta _updatedAtMeta =
       const VerificationMeta('updatedAt');
   @override
@@ -3386,6 +3433,7 @@ class $UserPreferencesTable extends UserPreferences
         nativeLanguage,
         displayLanguage,
         hasSeenOnboarding,
+        autoSync,
         updatedAt
       ];
   @override
@@ -3423,6 +3471,10 @@ class $UserPreferencesTable extends UserPreferences
           hasSeenOnboarding.isAcceptableOrUnknown(
               data['has_seen_onboarding']!, _hasSeenOnboardingMeta));
     }
+    if (data.containsKey('auto_sync')) {
+      context.handle(_autoSyncMeta,
+          autoSync.isAcceptableOrUnknown(data['auto_sync']!, _autoSyncMeta));
+    }
     if (data.containsKey('updated_at')) {
       context.handle(_updatedAtMeta,
           updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta));
@@ -3446,6 +3498,8 @@ class $UserPreferencesTable extends UserPreferences
           DriftSqlType.string, data['${effectivePrefix}display_language'])!,
       hasSeenOnboarding: attachedDatabase.typeMapping.read(
           DriftSqlType.bool, data['${effectivePrefix}has_seen_onboarding'])!,
+      autoSync: attachedDatabase.typeMapping
+          .read(DriftSqlType.bool, data['${effectivePrefix}auto_sync'])!,
       updatedAt: attachedDatabase.typeMapping
           .read(DriftSqlType.dateTime, data['${effectivePrefix}updated_at'])!,
     );
@@ -3463,6 +3517,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
   final String nativeLanguage;
   final String displayLanguage;
   final bool hasSeenOnboarding;
+  final bool autoSync;
   final DateTime updatedAt;
   const UserPreference(
       {required this.id,
@@ -3470,6 +3525,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
       required this.nativeLanguage,
       required this.displayLanguage,
       required this.hasSeenOnboarding,
+      required this.autoSync,
       required this.updatedAt});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -3479,6 +3535,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
     map['native_language'] = Variable<String>(nativeLanguage);
     map['display_language'] = Variable<String>(displayLanguage);
     map['has_seen_onboarding'] = Variable<bool>(hasSeenOnboarding);
+    map['auto_sync'] = Variable<bool>(autoSync);
     map['updated_at'] = Variable<DateTime>(updatedAt);
     return map;
   }
@@ -3490,6 +3547,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
       nativeLanguage: Value(nativeLanguage),
       displayLanguage: Value(displayLanguage),
       hasSeenOnboarding: Value(hasSeenOnboarding),
+      autoSync: Value(autoSync),
       updatedAt: Value(updatedAt),
     );
   }
@@ -3503,6 +3561,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
       nativeLanguage: serializer.fromJson<String>(json['nativeLanguage']),
       displayLanguage: serializer.fromJson<String>(json['displayLanguage']),
       hasSeenOnboarding: serializer.fromJson<bool>(json['hasSeenOnboarding']),
+      autoSync: serializer.fromJson<bool>(json['autoSync']),
       updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
     );
   }
@@ -3515,6 +3574,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
       'nativeLanguage': serializer.toJson<String>(nativeLanguage),
       'displayLanguage': serializer.toJson<String>(displayLanguage),
       'hasSeenOnboarding': serializer.toJson<bool>(hasSeenOnboarding),
+      'autoSync': serializer.toJson<bool>(autoSync),
       'updatedAt': serializer.toJson<DateTime>(updatedAt),
     };
   }
@@ -3525,6 +3585,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
           String? nativeLanguage,
           String? displayLanguage,
           bool? hasSeenOnboarding,
+          bool? autoSync,
           DateTime? updatedAt}) =>
       UserPreference(
         id: id ?? this.id,
@@ -3532,6 +3593,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
         nativeLanguage: nativeLanguage ?? this.nativeLanguage,
         displayLanguage: displayLanguage ?? this.displayLanguage,
         hasSeenOnboarding: hasSeenOnboarding ?? this.hasSeenOnboarding,
+        autoSync: autoSync ?? this.autoSync,
         updatedAt: updatedAt ?? this.updatedAt,
       );
   UserPreference copyWithCompanion(UserPreferencesCompanion data) {
@@ -3547,6 +3609,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
       hasSeenOnboarding: data.hasSeenOnboarding.present
           ? data.hasSeenOnboarding.value
           : this.hasSeenOnboarding,
+      autoSync: data.autoSync.present ? data.autoSync.value : this.autoSync,
       updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
     );
   }
@@ -3559,6 +3622,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
           ..write('nativeLanguage: $nativeLanguage, ')
           ..write('displayLanguage: $displayLanguage, ')
           ..write('hasSeenOnboarding: $hasSeenOnboarding, ')
+          ..write('autoSync: $autoSync, ')
           ..write('updatedAt: $updatedAt')
           ..write(')'))
         .toString();
@@ -3566,7 +3630,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
 
   @override
   int get hashCode => Object.hash(id, darkMode, nativeLanguage, displayLanguage,
-      hasSeenOnboarding, updatedAt);
+      hasSeenOnboarding, autoSync, updatedAt);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -3576,6 +3640,7 @@ class UserPreference extends DataClass implements Insertable<UserPreference> {
           other.nativeLanguage == this.nativeLanguage &&
           other.displayLanguage == this.displayLanguage &&
           other.hasSeenOnboarding == this.hasSeenOnboarding &&
+          other.autoSync == this.autoSync &&
           other.updatedAt == this.updatedAt);
 }
 
@@ -3585,6 +3650,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
   final Value<String> nativeLanguage;
   final Value<String> displayLanguage;
   final Value<bool> hasSeenOnboarding;
+  final Value<bool> autoSync;
   final Value<DateTime> updatedAt;
   const UserPreferencesCompanion({
     this.id = const Value.absent(),
@@ -3592,6 +3658,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
     this.nativeLanguage = const Value.absent(),
     this.displayLanguage = const Value.absent(),
     this.hasSeenOnboarding = const Value.absent(),
+    this.autoSync = const Value.absent(),
     this.updatedAt = const Value.absent(),
   });
   UserPreferencesCompanion.insert({
@@ -3600,6 +3667,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
     this.nativeLanguage = const Value.absent(),
     this.displayLanguage = const Value.absent(),
     this.hasSeenOnboarding = const Value.absent(),
+    this.autoSync = const Value.absent(),
     this.updatedAt = const Value.absent(),
   });
   static Insertable<UserPreference> custom({
@@ -3608,6 +3676,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
     Expression<String>? nativeLanguage,
     Expression<String>? displayLanguage,
     Expression<bool>? hasSeenOnboarding,
+    Expression<bool>? autoSync,
     Expression<DateTime>? updatedAt,
   }) {
     return RawValuesInsertable({
@@ -3616,6 +3685,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
       if (nativeLanguage != null) 'native_language': nativeLanguage,
       if (displayLanguage != null) 'display_language': displayLanguage,
       if (hasSeenOnboarding != null) 'has_seen_onboarding': hasSeenOnboarding,
+      if (autoSync != null) 'auto_sync': autoSync,
       if (updatedAt != null) 'updated_at': updatedAt,
     });
   }
@@ -3626,6 +3696,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
       Value<String>? nativeLanguage,
       Value<String>? displayLanguage,
       Value<bool>? hasSeenOnboarding,
+      Value<bool>? autoSync,
       Value<DateTime>? updatedAt}) {
     return UserPreferencesCompanion(
       id: id ?? this.id,
@@ -3633,6 +3704,7 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
       nativeLanguage: nativeLanguage ?? this.nativeLanguage,
       displayLanguage: displayLanguage ?? this.displayLanguage,
       hasSeenOnboarding: hasSeenOnboarding ?? this.hasSeenOnboarding,
+      autoSync: autoSync ?? this.autoSync,
       updatedAt: updatedAt ?? this.updatedAt,
     );
   }
@@ -3655,6 +3727,9 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
     if (hasSeenOnboarding.present) {
       map['has_seen_onboarding'] = Variable<bool>(hasSeenOnboarding.value);
     }
+    if (autoSync.present) {
+      map['auto_sync'] = Variable<bool>(autoSync.value);
+    }
     if (updatedAt.present) {
       map['updated_at'] = Variable<DateTime>(updatedAt.value);
     }
@@ -3669,7 +3744,1596 @@ class UserPreferencesCompanion extends UpdateCompanion<UserPreference> {
           ..write('nativeLanguage: $nativeLanguage, ')
           ..write('displayLanguage: $displayLanguage, ')
           ..write('hasSeenOnboarding: $hasSeenOnboarding, ')
+          ..write('autoSync: $autoSync, ')
           ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $VocabularyGroupsTable extends VocabularyGroups
+    with TableInfo<$VocabularyGroupsTable, VocabularyGroupEntity> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VocabularyGroupsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+      'name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _levelRangeMeta =
+      const VerificationMeta('levelRange');
+  @override
+  late final GeneratedColumn<String> levelRange = GeneratedColumn<String>(
+      'level_range', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _sortOrderMeta =
+      const VerificationMeta('sortOrder');
+  @override
+  late final GeneratedColumn<int> sortOrder = GeneratedColumn<int>(
+      'sort_order', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  @override
+  List<GeneratedColumn> get $columns => [id, name, levelRange, sortOrder];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'vocabulary_groups';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<VocabularyGroupEntity> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+          _nameMeta, name.isAcceptableOrUnknown(data['name']!, _nameMeta));
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('level_range')) {
+      context.handle(
+          _levelRangeMeta,
+          levelRange.isAcceptableOrUnknown(
+              data['level_range']!, _levelRangeMeta));
+    } else if (isInserting) {
+      context.missing(_levelRangeMeta);
+    }
+    if (data.containsKey('sort_order')) {
+      context.handle(_sortOrderMeta,
+          sortOrder.isAcceptableOrUnknown(data['sort_order']!, _sortOrderMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  VocabularyGroupEntity map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VocabularyGroupEntity(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      name: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}name'])!,
+      levelRange: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}level_range'])!,
+      sortOrder: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}sort_order'])!,
+    );
+  }
+
+  @override
+  $VocabularyGroupsTable createAlias(String alias) {
+    return $VocabularyGroupsTable(attachedDatabase, alias);
+  }
+}
+
+class VocabularyGroupEntity extends DataClass
+    implements Insertable<VocabularyGroupEntity> {
+  final String id;
+  final String name;
+  final String levelRange;
+  final int sortOrder;
+  const VocabularyGroupEntity(
+      {required this.id,
+      required this.name,
+      required this.levelRange,
+      required this.sortOrder});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['name'] = Variable<String>(name);
+    map['level_range'] = Variable<String>(levelRange);
+    map['sort_order'] = Variable<int>(sortOrder);
+    return map;
+  }
+
+  VocabularyGroupsCompanion toCompanion(bool nullToAbsent) {
+    return VocabularyGroupsCompanion(
+      id: Value(id),
+      name: Value(name),
+      levelRange: Value(levelRange),
+      sortOrder: Value(sortOrder),
+    );
+  }
+
+  factory VocabularyGroupEntity.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VocabularyGroupEntity(
+      id: serializer.fromJson<String>(json['id']),
+      name: serializer.fromJson<String>(json['name']),
+      levelRange: serializer.fromJson<String>(json['levelRange']),
+      sortOrder: serializer.fromJson<int>(json['sortOrder']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'name': serializer.toJson<String>(name),
+      'levelRange': serializer.toJson<String>(levelRange),
+      'sortOrder': serializer.toJson<int>(sortOrder),
+    };
+  }
+
+  VocabularyGroupEntity copyWith(
+          {String? id, String? name, String? levelRange, int? sortOrder}) =>
+      VocabularyGroupEntity(
+        id: id ?? this.id,
+        name: name ?? this.name,
+        levelRange: levelRange ?? this.levelRange,
+        sortOrder: sortOrder ?? this.sortOrder,
+      );
+  VocabularyGroupEntity copyWithCompanion(VocabularyGroupsCompanion data) {
+    return VocabularyGroupEntity(
+      id: data.id.present ? data.id.value : this.id,
+      name: data.name.present ? data.name.value : this.name,
+      levelRange:
+          data.levelRange.present ? data.levelRange.value : this.levelRange,
+      sortOrder: data.sortOrder.present ? data.sortOrder.value : this.sortOrder,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyGroupEntity(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('levelRange: $levelRange, ')
+          ..write('sortOrder: $sortOrder')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, name, levelRange, sortOrder);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VocabularyGroupEntity &&
+          other.id == this.id &&
+          other.name == this.name &&
+          other.levelRange == this.levelRange &&
+          other.sortOrder == this.sortOrder);
+}
+
+class VocabularyGroupsCompanion extends UpdateCompanion<VocabularyGroupEntity> {
+  final Value<String> id;
+  final Value<String> name;
+  final Value<String> levelRange;
+  final Value<int> sortOrder;
+  final Value<int> rowid;
+  const VocabularyGroupsCompanion({
+    this.id = const Value.absent(),
+    this.name = const Value.absent(),
+    this.levelRange = const Value.absent(),
+    this.sortOrder = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VocabularyGroupsCompanion.insert({
+    required String id,
+    required String name,
+    required String levelRange,
+    this.sortOrder = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : id = Value(id),
+        name = Value(name),
+        levelRange = Value(levelRange);
+  static Insertable<VocabularyGroupEntity> custom({
+    Expression<String>? id,
+    Expression<String>? name,
+    Expression<String>? levelRange,
+    Expression<int>? sortOrder,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (name != null) 'name': name,
+      if (levelRange != null) 'level_range': levelRange,
+      if (sortOrder != null) 'sort_order': sortOrder,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VocabularyGroupsCompanion copyWith(
+      {Value<String>? id,
+      Value<String>? name,
+      Value<String>? levelRange,
+      Value<int>? sortOrder,
+      Value<int>? rowid}) {
+    return VocabularyGroupsCompanion(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      levelRange: levelRange ?? this.levelRange,
+      sortOrder: sortOrder ?? this.sortOrder,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (levelRange.present) {
+      map['level_range'] = Variable<String>(levelRange.value);
+    }
+    if (sortOrder.present) {
+      map['sort_order'] = Variable<int>(sortOrder.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyGroupsCompanion(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('levelRange: $levelRange, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $VocabularyCategoriesTable extends VocabularyCategories
+    with TableInfo<$VocabularyCategoriesTable, VocabularyCategoryEntity> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VocabularyCategoriesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _groupIdMeta =
+      const VerificationMeta('groupId');
+  @override
+  late final GeneratedColumn<String> groupId = GeneratedColumn<String>(
+      'group_id', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: true,
+      defaultConstraints: GeneratedColumn.constraintIsAlways(
+          'REFERENCES vocabulary_groups (id)'));
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+      'name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _iconMeta = const VerificationMeta('icon');
+  @override
+  late final GeneratedColumn<String> icon = GeneratedColumn<String>(
+      'icon', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _gradientColorsJsonMeta =
+      const VerificationMeta('gradientColorsJson');
+  @override
+  late final GeneratedColumn<String> gradientColorsJson =
+      GeneratedColumn<String>('gradient_colors_json', aliasedName, false,
+          type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _sortOrderMeta =
+      const VerificationMeta('sortOrder');
+  @override
+  late final GeneratedColumn<int> sortOrder = GeneratedColumn<int>(
+      'sort_order', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _wordCountMeta =
+      const VerificationMeta('wordCount');
+  @override
+  late final GeneratedColumn<int> wordCount = GeneratedColumn<int>(
+      'word_count', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _isCachedMeta =
+      const VerificationMeta('isCached');
+  @override
+  late final GeneratedColumn<bool> isCached = GeneratedColumn<bool>(
+      'is_cached', aliasedName, false,
+      type: DriftSqlType.bool,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('CHECK ("is_cached" IN (0, 1))'),
+      defaultValue: const Constant(true));
+  @override
+  List<GeneratedColumn> get $columns => [
+        id,
+        groupId,
+        name,
+        icon,
+        gradientColorsJson,
+        sortOrder,
+        wordCount,
+        isCached
+      ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'vocabulary_categories';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<VocabularyCategoryEntity> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('group_id')) {
+      context.handle(_groupIdMeta,
+          groupId.isAcceptableOrUnknown(data['group_id']!, _groupIdMeta));
+    } else if (isInserting) {
+      context.missing(_groupIdMeta);
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+          _nameMeta, name.isAcceptableOrUnknown(data['name']!, _nameMeta));
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('icon')) {
+      context.handle(
+          _iconMeta, icon.isAcceptableOrUnknown(data['icon']!, _iconMeta));
+    } else if (isInserting) {
+      context.missing(_iconMeta);
+    }
+    if (data.containsKey('gradient_colors_json')) {
+      context.handle(
+          _gradientColorsJsonMeta,
+          gradientColorsJson.isAcceptableOrUnknown(
+              data['gradient_colors_json']!, _gradientColorsJsonMeta));
+    } else if (isInserting) {
+      context.missing(_gradientColorsJsonMeta);
+    }
+    if (data.containsKey('sort_order')) {
+      context.handle(_sortOrderMeta,
+          sortOrder.isAcceptableOrUnknown(data['sort_order']!, _sortOrderMeta));
+    }
+    if (data.containsKey('word_count')) {
+      context.handle(_wordCountMeta,
+          wordCount.isAcceptableOrUnknown(data['word_count']!, _wordCountMeta));
+    }
+    if (data.containsKey('is_cached')) {
+      context.handle(_isCachedMeta,
+          isCached.isAcceptableOrUnknown(data['is_cached']!, _isCachedMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  VocabularyCategoryEntity map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VocabularyCategoryEntity(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      groupId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}group_id'])!,
+      name: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}name'])!,
+      icon: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}icon'])!,
+      gradientColorsJson: attachedDatabase.typeMapping.read(
+          DriftSqlType.string, data['${effectivePrefix}gradient_colors_json'])!,
+      sortOrder: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}sort_order'])!,
+      wordCount: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}word_count'])!,
+      isCached: attachedDatabase.typeMapping
+          .read(DriftSqlType.bool, data['${effectivePrefix}is_cached'])!,
+    );
+  }
+
+  @override
+  $VocabularyCategoriesTable createAlias(String alias) {
+    return $VocabularyCategoriesTable(attachedDatabase, alias);
+  }
+}
+
+class VocabularyCategoryEntity extends DataClass
+    implements Insertable<VocabularyCategoryEntity> {
+  final String id;
+  final String groupId;
+  final String name;
+  final String icon;
+  final String gradientColorsJson;
+  final int sortOrder;
+  final int wordCount;
+  final bool isCached;
+  const VocabularyCategoryEntity(
+      {required this.id,
+      required this.groupId,
+      required this.name,
+      required this.icon,
+      required this.gradientColorsJson,
+      required this.sortOrder,
+      required this.wordCount,
+      required this.isCached});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['group_id'] = Variable<String>(groupId);
+    map['name'] = Variable<String>(name);
+    map['icon'] = Variable<String>(icon);
+    map['gradient_colors_json'] = Variable<String>(gradientColorsJson);
+    map['sort_order'] = Variable<int>(sortOrder);
+    map['word_count'] = Variable<int>(wordCount);
+    map['is_cached'] = Variable<bool>(isCached);
+    return map;
+  }
+
+  VocabularyCategoriesCompanion toCompanion(bool nullToAbsent) {
+    return VocabularyCategoriesCompanion(
+      id: Value(id),
+      groupId: Value(groupId),
+      name: Value(name),
+      icon: Value(icon),
+      gradientColorsJson: Value(gradientColorsJson),
+      sortOrder: Value(sortOrder),
+      wordCount: Value(wordCount),
+      isCached: Value(isCached),
+    );
+  }
+
+  factory VocabularyCategoryEntity.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VocabularyCategoryEntity(
+      id: serializer.fromJson<String>(json['id']),
+      groupId: serializer.fromJson<String>(json['groupId']),
+      name: serializer.fromJson<String>(json['name']),
+      icon: serializer.fromJson<String>(json['icon']),
+      gradientColorsJson:
+          serializer.fromJson<String>(json['gradientColorsJson']),
+      sortOrder: serializer.fromJson<int>(json['sortOrder']),
+      wordCount: serializer.fromJson<int>(json['wordCount']),
+      isCached: serializer.fromJson<bool>(json['isCached']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'groupId': serializer.toJson<String>(groupId),
+      'name': serializer.toJson<String>(name),
+      'icon': serializer.toJson<String>(icon),
+      'gradientColorsJson': serializer.toJson<String>(gradientColorsJson),
+      'sortOrder': serializer.toJson<int>(sortOrder),
+      'wordCount': serializer.toJson<int>(wordCount),
+      'isCached': serializer.toJson<bool>(isCached),
+    };
+  }
+
+  VocabularyCategoryEntity copyWith(
+          {String? id,
+          String? groupId,
+          String? name,
+          String? icon,
+          String? gradientColorsJson,
+          int? sortOrder,
+          int? wordCount,
+          bool? isCached}) =>
+      VocabularyCategoryEntity(
+        id: id ?? this.id,
+        groupId: groupId ?? this.groupId,
+        name: name ?? this.name,
+        icon: icon ?? this.icon,
+        gradientColorsJson: gradientColorsJson ?? this.gradientColorsJson,
+        sortOrder: sortOrder ?? this.sortOrder,
+        wordCount: wordCount ?? this.wordCount,
+        isCached: isCached ?? this.isCached,
+      );
+  VocabularyCategoryEntity copyWithCompanion(
+      VocabularyCategoriesCompanion data) {
+    return VocabularyCategoryEntity(
+      id: data.id.present ? data.id.value : this.id,
+      groupId: data.groupId.present ? data.groupId.value : this.groupId,
+      name: data.name.present ? data.name.value : this.name,
+      icon: data.icon.present ? data.icon.value : this.icon,
+      gradientColorsJson: data.gradientColorsJson.present
+          ? data.gradientColorsJson.value
+          : this.gradientColorsJson,
+      sortOrder: data.sortOrder.present ? data.sortOrder.value : this.sortOrder,
+      wordCount: data.wordCount.present ? data.wordCount.value : this.wordCount,
+      isCached: data.isCached.present ? data.isCached.value : this.isCached,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyCategoryEntity(')
+          ..write('id: $id, ')
+          ..write('groupId: $groupId, ')
+          ..write('name: $name, ')
+          ..write('icon: $icon, ')
+          ..write('gradientColorsJson: $gradientColorsJson, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('wordCount: $wordCount, ')
+          ..write('isCached: $isCached')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, groupId, name, icon, gradientColorsJson,
+      sortOrder, wordCount, isCached);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VocabularyCategoryEntity &&
+          other.id == this.id &&
+          other.groupId == this.groupId &&
+          other.name == this.name &&
+          other.icon == this.icon &&
+          other.gradientColorsJson == this.gradientColorsJson &&
+          other.sortOrder == this.sortOrder &&
+          other.wordCount == this.wordCount &&
+          other.isCached == this.isCached);
+}
+
+class VocabularyCategoriesCompanion
+    extends UpdateCompanion<VocabularyCategoryEntity> {
+  final Value<String> id;
+  final Value<String> groupId;
+  final Value<String> name;
+  final Value<String> icon;
+  final Value<String> gradientColorsJson;
+  final Value<int> sortOrder;
+  final Value<int> wordCount;
+  final Value<bool> isCached;
+  final Value<int> rowid;
+  const VocabularyCategoriesCompanion({
+    this.id = const Value.absent(),
+    this.groupId = const Value.absent(),
+    this.name = const Value.absent(),
+    this.icon = const Value.absent(),
+    this.gradientColorsJson = const Value.absent(),
+    this.sortOrder = const Value.absent(),
+    this.wordCount = const Value.absent(),
+    this.isCached = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VocabularyCategoriesCompanion.insert({
+    required String id,
+    required String groupId,
+    required String name,
+    required String icon,
+    required String gradientColorsJson,
+    this.sortOrder = const Value.absent(),
+    this.wordCount = const Value.absent(),
+    this.isCached = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : id = Value(id),
+        groupId = Value(groupId),
+        name = Value(name),
+        icon = Value(icon),
+        gradientColorsJson = Value(gradientColorsJson);
+  static Insertable<VocabularyCategoryEntity> custom({
+    Expression<String>? id,
+    Expression<String>? groupId,
+    Expression<String>? name,
+    Expression<String>? icon,
+    Expression<String>? gradientColorsJson,
+    Expression<int>? sortOrder,
+    Expression<int>? wordCount,
+    Expression<bool>? isCached,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (groupId != null) 'group_id': groupId,
+      if (name != null) 'name': name,
+      if (icon != null) 'icon': icon,
+      if (gradientColorsJson != null)
+        'gradient_colors_json': gradientColorsJson,
+      if (sortOrder != null) 'sort_order': sortOrder,
+      if (wordCount != null) 'word_count': wordCount,
+      if (isCached != null) 'is_cached': isCached,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VocabularyCategoriesCompanion copyWith(
+      {Value<String>? id,
+      Value<String>? groupId,
+      Value<String>? name,
+      Value<String>? icon,
+      Value<String>? gradientColorsJson,
+      Value<int>? sortOrder,
+      Value<int>? wordCount,
+      Value<bool>? isCached,
+      Value<int>? rowid}) {
+    return VocabularyCategoriesCompanion(
+      id: id ?? this.id,
+      groupId: groupId ?? this.groupId,
+      name: name ?? this.name,
+      icon: icon ?? this.icon,
+      gradientColorsJson: gradientColorsJson ?? this.gradientColorsJson,
+      sortOrder: sortOrder ?? this.sortOrder,
+      wordCount: wordCount ?? this.wordCount,
+      isCached: isCached ?? this.isCached,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (groupId.present) {
+      map['group_id'] = Variable<String>(groupId.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (icon.present) {
+      map['icon'] = Variable<String>(icon.value);
+    }
+    if (gradientColorsJson.present) {
+      map['gradient_colors_json'] = Variable<String>(gradientColorsJson.value);
+    }
+    if (sortOrder.present) {
+      map['sort_order'] = Variable<int>(sortOrder.value);
+    }
+    if (wordCount.present) {
+      map['word_count'] = Variable<int>(wordCount.value);
+    }
+    if (isCached.present) {
+      map['is_cached'] = Variable<bool>(isCached.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyCategoriesCompanion(')
+          ..write('id: $id, ')
+          ..write('groupId: $groupId, ')
+          ..write('name: $name, ')
+          ..write('icon: $icon, ')
+          ..write('gradientColorsJson: $gradientColorsJson, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('wordCount: $wordCount, ')
+          ..write('isCached: $isCached, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $VocabularyPendingCategoriesTable extends VocabularyPendingCategories
+    with
+        TableInfo<$VocabularyPendingCategoriesTable,
+            VocabularyPendingCategoryEntity> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VocabularyPendingCategoriesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _groupIdMeta =
+      const VerificationMeta('groupId');
+  @override
+  late final GeneratedColumn<String> groupId = GeneratedColumn<String>(
+      'group_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+      'name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _iconMeta = const VerificationMeta('icon');
+  @override
+  late final GeneratedColumn<String> icon = GeneratedColumn<String>(
+      'icon', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _gradientColorsJsonMeta =
+      const VerificationMeta('gradientColorsJson');
+  @override
+  late final GeneratedColumn<String> gradientColorsJson =
+      GeneratedColumn<String>('gradient_colors_json', aliasedName, false,
+          type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _sortOrderMeta =
+      const VerificationMeta('sortOrder');
+  @override
+  late final GeneratedColumn<int> sortOrder = GeneratedColumn<int>(
+      'sort_order', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _wordCountMeta =
+      const VerificationMeta('wordCount');
+  @override
+  late final GeneratedColumn<int> wordCount = GeneratedColumn<int>(
+      'word_count', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  @override
+  List<GeneratedColumn> get $columns =>
+      [id, groupId, name, icon, gradientColorsJson, sortOrder, wordCount];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'vocabulary_pending_categories';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<VocabularyPendingCategoryEntity> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('group_id')) {
+      context.handle(_groupIdMeta,
+          groupId.isAcceptableOrUnknown(data['group_id']!, _groupIdMeta));
+    } else if (isInserting) {
+      context.missing(_groupIdMeta);
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+          _nameMeta, name.isAcceptableOrUnknown(data['name']!, _nameMeta));
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('icon')) {
+      context.handle(
+          _iconMeta, icon.isAcceptableOrUnknown(data['icon']!, _iconMeta));
+    } else if (isInserting) {
+      context.missing(_iconMeta);
+    }
+    if (data.containsKey('gradient_colors_json')) {
+      context.handle(
+          _gradientColorsJsonMeta,
+          gradientColorsJson.isAcceptableOrUnknown(
+              data['gradient_colors_json']!, _gradientColorsJsonMeta));
+    } else if (isInserting) {
+      context.missing(_gradientColorsJsonMeta);
+    }
+    if (data.containsKey('sort_order')) {
+      context.handle(_sortOrderMeta,
+          sortOrder.isAcceptableOrUnknown(data['sort_order']!, _sortOrderMeta));
+    }
+    if (data.containsKey('word_count')) {
+      context.handle(_wordCountMeta,
+          wordCount.isAcceptableOrUnknown(data['word_count']!, _wordCountMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  VocabularyPendingCategoryEntity map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VocabularyPendingCategoryEntity(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      groupId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}group_id'])!,
+      name: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}name'])!,
+      icon: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}icon'])!,
+      gradientColorsJson: attachedDatabase.typeMapping.read(
+          DriftSqlType.string, data['${effectivePrefix}gradient_colors_json'])!,
+      sortOrder: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}sort_order'])!,
+      wordCount: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}word_count'])!,
+    );
+  }
+
+  @override
+  $VocabularyPendingCategoriesTable createAlias(String alias) {
+    return $VocabularyPendingCategoriesTable(attachedDatabase, alias);
+  }
+}
+
+class VocabularyPendingCategoryEntity extends DataClass
+    implements Insertable<VocabularyPendingCategoryEntity> {
+  final String id;
+  final String groupId;
+  final String name;
+  final String icon;
+  final String gradientColorsJson;
+  final int sortOrder;
+  final int wordCount;
+  const VocabularyPendingCategoryEntity(
+      {required this.id,
+      required this.groupId,
+      required this.name,
+      required this.icon,
+      required this.gradientColorsJson,
+      required this.sortOrder,
+      required this.wordCount});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['group_id'] = Variable<String>(groupId);
+    map['name'] = Variable<String>(name);
+    map['icon'] = Variable<String>(icon);
+    map['gradient_colors_json'] = Variable<String>(gradientColorsJson);
+    map['sort_order'] = Variable<int>(sortOrder);
+    map['word_count'] = Variable<int>(wordCount);
+    return map;
+  }
+
+  VocabularyPendingCategoriesCompanion toCompanion(bool nullToAbsent) {
+    return VocabularyPendingCategoriesCompanion(
+      id: Value(id),
+      groupId: Value(groupId),
+      name: Value(name),
+      icon: Value(icon),
+      gradientColorsJson: Value(gradientColorsJson),
+      sortOrder: Value(sortOrder),
+      wordCount: Value(wordCount),
+    );
+  }
+
+  factory VocabularyPendingCategoryEntity.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VocabularyPendingCategoryEntity(
+      id: serializer.fromJson<String>(json['id']),
+      groupId: serializer.fromJson<String>(json['groupId']),
+      name: serializer.fromJson<String>(json['name']),
+      icon: serializer.fromJson<String>(json['icon']),
+      gradientColorsJson:
+          serializer.fromJson<String>(json['gradientColorsJson']),
+      sortOrder: serializer.fromJson<int>(json['sortOrder']),
+      wordCount: serializer.fromJson<int>(json['wordCount']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'groupId': serializer.toJson<String>(groupId),
+      'name': serializer.toJson<String>(name),
+      'icon': serializer.toJson<String>(icon),
+      'gradientColorsJson': serializer.toJson<String>(gradientColorsJson),
+      'sortOrder': serializer.toJson<int>(sortOrder),
+      'wordCount': serializer.toJson<int>(wordCount),
+    };
+  }
+
+  VocabularyPendingCategoryEntity copyWith(
+          {String? id,
+          String? groupId,
+          String? name,
+          String? icon,
+          String? gradientColorsJson,
+          int? sortOrder,
+          int? wordCount}) =>
+      VocabularyPendingCategoryEntity(
+        id: id ?? this.id,
+        groupId: groupId ?? this.groupId,
+        name: name ?? this.name,
+        icon: icon ?? this.icon,
+        gradientColorsJson: gradientColorsJson ?? this.gradientColorsJson,
+        sortOrder: sortOrder ?? this.sortOrder,
+        wordCount: wordCount ?? this.wordCount,
+      );
+  VocabularyPendingCategoryEntity copyWithCompanion(
+      VocabularyPendingCategoriesCompanion data) {
+    return VocabularyPendingCategoryEntity(
+      id: data.id.present ? data.id.value : this.id,
+      groupId: data.groupId.present ? data.groupId.value : this.groupId,
+      name: data.name.present ? data.name.value : this.name,
+      icon: data.icon.present ? data.icon.value : this.icon,
+      gradientColorsJson: data.gradientColorsJson.present
+          ? data.gradientColorsJson.value
+          : this.gradientColorsJson,
+      sortOrder: data.sortOrder.present ? data.sortOrder.value : this.sortOrder,
+      wordCount: data.wordCount.present ? data.wordCount.value : this.wordCount,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyPendingCategoryEntity(')
+          ..write('id: $id, ')
+          ..write('groupId: $groupId, ')
+          ..write('name: $name, ')
+          ..write('icon: $icon, ')
+          ..write('gradientColorsJson: $gradientColorsJson, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('wordCount: $wordCount')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      id, groupId, name, icon, gradientColorsJson, sortOrder, wordCount);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VocabularyPendingCategoryEntity &&
+          other.id == this.id &&
+          other.groupId == this.groupId &&
+          other.name == this.name &&
+          other.icon == this.icon &&
+          other.gradientColorsJson == this.gradientColorsJson &&
+          other.sortOrder == this.sortOrder &&
+          other.wordCount == this.wordCount);
+}
+
+class VocabularyPendingCategoriesCompanion
+    extends UpdateCompanion<VocabularyPendingCategoryEntity> {
+  final Value<String> id;
+  final Value<String> groupId;
+  final Value<String> name;
+  final Value<String> icon;
+  final Value<String> gradientColorsJson;
+  final Value<int> sortOrder;
+  final Value<int> wordCount;
+  final Value<int> rowid;
+  const VocabularyPendingCategoriesCompanion({
+    this.id = const Value.absent(),
+    this.groupId = const Value.absent(),
+    this.name = const Value.absent(),
+    this.icon = const Value.absent(),
+    this.gradientColorsJson = const Value.absent(),
+    this.sortOrder = const Value.absent(),
+    this.wordCount = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VocabularyPendingCategoriesCompanion.insert({
+    required String id,
+    required String groupId,
+    required String name,
+    required String icon,
+    required String gradientColorsJson,
+    this.sortOrder = const Value.absent(),
+    this.wordCount = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : id = Value(id),
+        groupId = Value(groupId),
+        name = Value(name),
+        icon = Value(icon),
+        gradientColorsJson = Value(gradientColorsJson);
+  static Insertable<VocabularyPendingCategoryEntity> custom({
+    Expression<String>? id,
+    Expression<String>? groupId,
+    Expression<String>? name,
+    Expression<String>? icon,
+    Expression<String>? gradientColorsJson,
+    Expression<int>? sortOrder,
+    Expression<int>? wordCount,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (groupId != null) 'group_id': groupId,
+      if (name != null) 'name': name,
+      if (icon != null) 'icon': icon,
+      if (gradientColorsJson != null)
+        'gradient_colors_json': gradientColorsJson,
+      if (sortOrder != null) 'sort_order': sortOrder,
+      if (wordCount != null) 'word_count': wordCount,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VocabularyPendingCategoriesCompanion copyWith(
+      {Value<String>? id,
+      Value<String>? groupId,
+      Value<String>? name,
+      Value<String>? icon,
+      Value<String>? gradientColorsJson,
+      Value<int>? sortOrder,
+      Value<int>? wordCount,
+      Value<int>? rowid}) {
+    return VocabularyPendingCategoriesCompanion(
+      id: id ?? this.id,
+      groupId: groupId ?? this.groupId,
+      name: name ?? this.name,
+      icon: icon ?? this.icon,
+      gradientColorsJson: gradientColorsJson ?? this.gradientColorsJson,
+      sortOrder: sortOrder ?? this.sortOrder,
+      wordCount: wordCount ?? this.wordCount,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (groupId.present) {
+      map['group_id'] = Variable<String>(groupId.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (icon.present) {
+      map['icon'] = Variable<String>(icon.value);
+    }
+    if (gradientColorsJson.present) {
+      map['gradient_colors_json'] = Variable<String>(gradientColorsJson.value);
+    }
+    if (sortOrder.present) {
+      map['sort_order'] = Variable<int>(sortOrder.value);
+    }
+    if (wordCount.present) {
+      map['word_count'] = Variable<int>(wordCount.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyPendingCategoriesCompanion(')
+          ..write('id: $id, ')
+          ..write('groupId: $groupId, ')
+          ..write('name: $name, ')
+          ..write('icon: $icon, ')
+          ..write('gradientColorsJson: $gradientColorsJson, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('wordCount: $wordCount, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $GrammarDetailsTable extends GrammarDetails
+    with TableInfo<$GrammarDetailsTable, GrammarDetail> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $GrammarDetailsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _topicIdMeta =
+      const VerificationMeta('topicId');
+  @override
+  late final GeneratedColumn<String> topicId = GeneratedColumn<String>(
+      'topic_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _languageCodeMeta =
+      const VerificationMeta('languageCode');
+  @override
+  late final GeneratedColumn<String> languageCode = GeneratedColumn<String>(
+      'language_code', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+      'title', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _categoryMeta =
+      const VerificationMeta('category');
+  @override
+  late final GeneratedColumn<String> category = GeneratedColumn<String>(
+      'category', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _ruleMeta = const VerificationMeta('rule');
+  @override
+  late final GeneratedColumn<String> rule = GeneratedColumn<String>(
+      'rule', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _explanationMeta =
+      const VerificationMeta('explanation');
+  @override
+  late final GeneratedColumn<String> explanation = GeneratedColumn<String>(
+      'explanation', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _examplesJsonMeta =
+      const VerificationMeta('examplesJson');
+  @override
+  late final GeneratedColumn<String> examplesJson = GeneratedColumn<String>(
+      'examples_json', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _detailJsonMeta =
+      const VerificationMeta('detailJson');
+  @override
+  late final GeneratedColumn<String> detailJson = GeneratedColumn<String>(
+      'detail_json', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _updatedAtMeta =
+      const VerificationMeta('updatedAt');
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+      'updated_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns => [
+        topicId,
+        languageCode,
+        title,
+        category,
+        rule,
+        explanation,
+        examplesJson,
+        detailJson,
+        updatedAt
+      ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'grammar_details';
+  @override
+  VerificationContext validateIntegrity(Insertable<GrammarDetail> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('topic_id')) {
+      context.handle(_topicIdMeta,
+          topicId.isAcceptableOrUnknown(data['topic_id']!, _topicIdMeta));
+    } else if (isInserting) {
+      context.missing(_topicIdMeta);
+    }
+    if (data.containsKey('language_code')) {
+      context.handle(
+          _languageCodeMeta,
+          languageCode.isAcceptableOrUnknown(
+              data['language_code']!, _languageCodeMeta));
+    } else if (isInserting) {
+      context.missing(_languageCodeMeta);
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+          _titleMeta, title.isAcceptableOrUnknown(data['title']!, _titleMeta));
+    }
+    if (data.containsKey('category')) {
+      context.handle(_categoryMeta,
+          category.isAcceptableOrUnknown(data['category']!, _categoryMeta));
+    }
+    if (data.containsKey('rule')) {
+      context.handle(
+          _ruleMeta, rule.isAcceptableOrUnknown(data['rule']!, _ruleMeta));
+    }
+    if (data.containsKey('explanation')) {
+      context.handle(
+          _explanationMeta,
+          explanation.isAcceptableOrUnknown(
+              data['explanation']!, _explanationMeta));
+    }
+    if (data.containsKey('examples_json')) {
+      context.handle(
+          _examplesJsonMeta,
+          examplesJson.isAcceptableOrUnknown(
+              data['examples_json']!, _examplesJsonMeta));
+    }
+    if (data.containsKey('detail_json')) {
+      context.handle(
+          _detailJsonMeta,
+          detailJson.isAcceptableOrUnknown(
+              data['detail_json']!, _detailJsonMeta));
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(_updatedAtMeta,
+          updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {topicId, languageCode};
+  @override
+  GrammarDetail map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return GrammarDetail(
+      topicId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}topic_id'])!,
+      languageCode: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}language_code'])!,
+      title: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}title']),
+      category: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}category']),
+      rule: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}rule']),
+      explanation: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}explanation']),
+      examplesJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}examples_json']),
+      detailJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}detail_json']),
+      updatedAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}updated_at'])!,
+    );
+  }
+
+  @override
+  $GrammarDetailsTable createAlias(String alias) {
+    return $GrammarDetailsTable(attachedDatabase, alias);
+  }
+}
+
+class GrammarDetail extends DataClass implements Insertable<GrammarDetail> {
+  final String topicId;
+  final String languageCode;
+  final String? title;
+  final String? category;
+  final String? rule;
+  final String? explanation;
+  final String? examplesJson;
+  final String? detailJson;
+  final DateTime updatedAt;
+  const GrammarDetail(
+      {required this.topicId,
+      required this.languageCode,
+      this.title,
+      this.category,
+      this.rule,
+      this.explanation,
+      this.examplesJson,
+      this.detailJson,
+      required this.updatedAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['topic_id'] = Variable<String>(topicId);
+    map['language_code'] = Variable<String>(languageCode);
+    if (!nullToAbsent || title != null) {
+      map['title'] = Variable<String>(title);
+    }
+    if (!nullToAbsent || category != null) {
+      map['category'] = Variable<String>(category);
+    }
+    if (!nullToAbsent || rule != null) {
+      map['rule'] = Variable<String>(rule);
+    }
+    if (!nullToAbsent || explanation != null) {
+      map['explanation'] = Variable<String>(explanation);
+    }
+    if (!nullToAbsent || examplesJson != null) {
+      map['examples_json'] = Variable<String>(examplesJson);
+    }
+    if (!nullToAbsent || detailJson != null) {
+      map['detail_json'] = Variable<String>(detailJson);
+    }
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    return map;
+  }
+
+  GrammarDetailsCompanion toCompanion(bool nullToAbsent) {
+    return GrammarDetailsCompanion(
+      topicId: Value(topicId),
+      languageCode: Value(languageCode),
+      title:
+          title == null && nullToAbsent ? const Value.absent() : Value(title),
+      category: category == null && nullToAbsent
+          ? const Value.absent()
+          : Value(category),
+      rule: rule == null && nullToAbsent ? const Value.absent() : Value(rule),
+      explanation: explanation == null && nullToAbsent
+          ? const Value.absent()
+          : Value(explanation),
+      examplesJson: examplesJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(examplesJson),
+      detailJson: detailJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(detailJson),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory GrammarDetail.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return GrammarDetail(
+      topicId: serializer.fromJson<String>(json['topicId']),
+      languageCode: serializer.fromJson<String>(json['languageCode']),
+      title: serializer.fromJson<String?>(json['title']),
+      category: serializer.fromJson<String?>(json['category']),
+      rule: serializer.fromJson<String?>(json['rule']),
+      explanation: serializer.fromJson<String?>(json['explanation']),
+      examplesJson: serializer.fromJson<String?>(json['examplesJson']),
+      detailJson: serializer.fromJson<String?>(json['detailJson']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'topicId': serializer.toJson<String>(topicId),
+      'languageCode': serializer.toJson<String>(languageCode),
+      'title': serializer.toJson<String?>(title),
+      'category': serializer.toJson<String?>(category),
+      'rule': serializer.toJson<String?>(rule),
+      'explanation': serializer.toJson<String?>(explanation),
+      'examplesJson': serializer.toJson<String?>(examplesJson),
+      'detailJson': serializer.toJson<String?>(detailJson),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+    };
+  }
+
+  GrammarDetail copyWith(
+          {String? topicId,
+          String? languageCode,
+          Value<String?> title = const Value.absent(),
+          Value<String?> category = const Value.absent(),
+          Value<String?> rule = const Value.absent(),
+          Value<String?> explanation = const Value.absent(),
+          Value<String?> examplesJson = const Value.absent(),
+          Value<String?> detailJson = const Value.absent(),
+          DateTime? updatedAt}) =>
+      GrammarDetail(
+        topicId: topicId ?? this.topicId,
+        languageCode: languageCode ?? this.languageCode,
+        title: title.present ? title.value : this.title,
+        category: category.present ? category.value : this.category,
+        rule: rule.present ? rule.value : this.rule,
+        explanation: explanation.present ? explanation.value : this.explanation,
+        examplesJson:
+            examplesJson.present ? examplesJson.value : this.examplesJson,
+        detailJson: detailJson.present ? detailJson.value : this.detailJson,
+        updatedAt: updatedAt ?? this.updatedAt,
+      );
+  GrammarDetail copyWithCompanion(GrammarDetailsCompanion data) {
+    return GrammarDetail(
+      topicId: data.topicId.present ? data.topicId.value : this.topicId,
+      languageCode: data.languageCode.present
+          ? data.languageCode.value
+          : this.languageCode,
+      title: data.title.present ? data.title.value : this.title,
+      category: data.category.present ? data.category.value : this.category,
+      rule: data.rule.present ? data.rule.value : this.rule,
+      explanation:
+          data.explanation.present ? data.explanation.value : this.explanation,
+      examplesJson: data.examplesJson.present
+          ? data.examplesJson.value
+          : this.examplesJson,
+      detailJson:
+          data.detailJson.present ? data.detailJson.value : this.detailJson,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarDetail(')
+          ..write('topicId: $topicId, ')
+          ..write('languageCode: $languageCode, ')
+          ..write('title: $title, ')
+          ..write('category: $category, ')
+          ..write('rule: $rule, ')
+          ..write('explanation: $explanation, ')
+          ..write('examplesJson: $examplesJson, ')
+          ..write('detailJson: $detailJson, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(topicId, languageCode, title, category, rule,
+      explanation, examplesJson, detailJson, updatedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is GrammarDetail &&
+          other.topicId == this.topicId &&
+          other.languageCode == this.languageCode &&
+          other.title == this.title &&
+          other.category == this.category &&
+          other.rule == this.rule &&
+          other.explanation == this.explanation &&
+          other.examplesJson == this.examplesJson &&
+          other.detailJson == this.detailJson &&
+          other.updatedAt == this.updatedAt);
+}
+
+class GrammarDetailsCompanion extends UpdateCompanion<GrammarDetail> {
+  final Value<String> topicId;
+  final Value<String> languageCode;
+  final Value<String?> title;
+  final Value<String?> category;
+  final Value<String?> rule;
+  final Value<String?> explanation;
+  final Value<String?> examplesJson;
+  final Value<String?> detailJson;
+  final Value<DateTime> updatedAt;
+  final Value<int> rowid;
+  const GrammarDetailsCompanion({
+    this.topicId = const Value.absent(),
+    this.languageCode = const Value.absent(),
+    this.title = const Value.absent(),
+    this.category = const Value.absent(),
+    this.rule = const Value.absent(),
+    this.explanation = const Value.absent(),
+    this.examplesJson = const Value.absent(),
+    this.detailJson = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  GrammarDetailsCompanion.insert({
+    required String topicId,
+    required String languageCode,
+    this.title = const Value.absent(),
+    this.category = const Value.absent(),
+    this.rule = const Value.absent(),
+    this.explanation = const Value.absent(),
+    this.examplesJson = const Value.absent(),
+    this.detailJson = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : topicId = Value(topicId),
+        languageCode = Value(languageCode);
+  static Insertable<GrammarDetail> custom({
+    Expression<String>? topicId,
+    Expression<String>? languageCode,
+    Expression<String>? title,
+    Expression<String>? category,
+    Expression<String>? rule,
+    Expression<String>? explanation,
+    Expression<String>? examplesJson,
+    Expression<String>? detailJson,
+    Expression<DateTime>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (topicId != null) 'topic_id': topicId,
+      if (languageCode != null) 'language_code': languageCode,
+      if (title != null) 'title': title,
+      if (category != null) 'category': category,
+      if (rule != null) 'rule': rule,
+      if (explanation != null) 'explanation': explanation,
+      if (examplesJson != null) 'examples_json': examplesJson,
+      if (detailJson != null) 'detail_json': detailJson,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  GrammarDetailsCompanion copyWith(
+      {Value<String>? topicId,
+      Value<String>? languageCode,
+      Value<String?>? title,
+      Value<String?>? category,
+      Value<String?>? rule,
+      Value<String?>? explanation,
+      Value<String?>? examplesJson,
+      Value<String?>? detailJson,
+      Value<DateTime>? updatedAt,
+      Value<int>? rowid}) {
+    return GrammarDetailsCompanion(
+      topicId: topicId ?? this.topicId,
+      languageCode: languageCode ?? this.languageCode,
+      title: title ?? this.title,
+      category: category ?? this.category,
+      rule: rule ?? this.rule,
+      explanation: explanation ?? this.explanation,
+      examplesJson: examplesJson ?? this.examplesJson,
+      detailJson: detailJson ?? this.detailJson,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (topicId.present) {
+      map['topic_id'] = Variable<String>(topicId.value);
+    }
+    if (languageCode.present) {
+      map['language_code'] = Variable<String>(languageCode.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (category.present) {
+      map['category'] = Variable<String>(category.value);
+    }
+    if (rule.present) {
+      map['rule'] = Variable<String>(rule.value);
+    }
+    if (explanation.present) {
+      map['explanation'] = Variable<String>(explanation.value);
+    }
+    if (examplesJson.present) {
+      map['examples_json'] = Variable<String>(examplesJson.value);
+    }
+    if (detailJson.present) {
+      map['detail_json'] = Variable<String>(detailJson.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('GrammarDetailsCompanion(')
+          ..write('topicId: $topicId, ')
+          ..write('languageCode: $languageCode, ')
+          ..write('title: $title, ')
+          ..write('category: $category, ')
+          ..write('rule: $rule, ')
+          ..write('explanation: $explanation, ')
+          ..write('examplesJson: $examplesJson, ')
+          ..write('detailJson: $detailJson, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
           ..write(')'))
         .toString();
   }
@@ -3690,6 +5354,13 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $UserStatsTable userStats = $UserStatsTable(this);
   late final $UserPreferencesTable userPreferences =
       $UserPreferencesTable(this);
+  late final $VocabularyGroupsTable vocabularyGroups =
+      $VocabularyGroupsTable(this);
+  late final $VocabularyCategoriesTable vocabularyCategories =
+      $VocabularyCategoriesTable(this);
+  late final $VocabularyPendingCategoriesTable vocabularyPendingCategories =
+      $VocabularyPendingCategoriesTable(this);
+  late final $GrammarDetailsTable grammarDetails = $GrammarDetailsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -3702,7 +5373,11 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         exerciseAttempts,
         achievements,
         userStats,
-        userPreferences
+        userPreferences,
+        vocabularyGroups,
+        vocabularyCategories,
+        vocabularyPendingCategories,
+        grammarDetails
       ];
 }
 
@@ -3717,6 +5392,7 @@ typedef $$VocabularyWordsTableCreateCompanionBuilder = VocabularyWordsCompanion
   required String example,
   required String context,
   required String contextDari,
+  Value<String> level,
   required String difficulty,
   Value<bool> isFavorite,
   Value<bool> isDifficult,
@@ -3734,6 +5410,7 @@ typedef $$VocabularyWordsTableUpdateCompanionBuilder = VocabularyWordsCompanion
   Value<String> example,
   Value<String> context,
   Value<String> contextDari,
+  Value<String> level,
   Value<String> difficulty,
   Value<bool> isFavorite,
   Value<bool> isDifficult,
@@ -3776,6 +5453,9 @@ class $$VocabularyWordsTableFilterComposer
 
   ColumnFilters<String> get contextDari => $composableBuilder(
       column: $table.contextDari, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get level => $composableBuilder(
+      column: $table.level, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get difficulty => $composableBuilder(
       column: $table.difficulty, builder: (column) => ColumnFilters(column));
@@ -3826,6 +5506,9 @@ class $$VocabularyWordsTableOrderingComposer
   ColumnOrderings<String> get contextDari => $composableBuilder(
       column: $table.contextDari, builder: (column) => ColumnOrderings(column));
 
+  ColumnOrderings<String> get level => $composableBuilder(
+      column: $table.level, builder: (column) => ColumnOrderings(column));
+
   ColumnOrderings<String> get difficulty => $composableBuilder(
       column: $table.difficulty, builder: (column) => ColumnOrderings(column));
 
@@ -3874,6 +5557,9 @@ class $$VocabularyWordsTableAnnotationComposer
 
   GeneratedColumn<String> get contextDari => $composableBuilder(
       column: $table.contextDari, builder: (column) => column);
+
+  GeneratedColumn<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => column);
 
   GeneratedColumn<String> get difficulty => $composableBuilder(
       column: $table.difficulty, builder: (column) => column);
@@ -3924,6 +5610,7 @@ class $$VocabularyWordsTableTableManager extends RootTableManager<
             Value<String> example = const Value.absent(),
             Value<String> context = const Value.absent(),
             Value<String> contextDari = const Value.absent(),
+            Value<String> level = const Value.absent(),
             Value<String> difficulty = const Value.absent(),
             Value<bool> isFavorite = const Value.absent(),
             Value<bool> isDifficult = const Value.absent(),
@@ -3940,6 +5627,7 @@ class $$VocabularyWordsTableTableManager extends RootTableManager<
             example: example,
             context: context,
             contextDari: contextDari,
+            level: level,
             difficulty: difficulty,
             isFavorite: isFavorite,
             isDifficult: isDifficult,
@@ -3956,6 +5644,7 @@ class $$VocabularyWordsTableTableManager extends RootTableManager<
             required String example,
             required String context,
             required String contextDari,
+            Value<String> level = const Value.absent(),
             required String difficulty,
             Value<bool> isFavorite = const Value.absent(),
             Value<bool> isDifficult = const Value.absent(),
@@ -3972,6 +5661,7 @@ class $$VocabularyWordsTableTableManager extends RootTableManager<
             example: example,
             context: context,
             contextDari: contextDari,
+            level: level,
             difficulty: difficulty,
             isFavorite: isFavorite,
             isDifficult: isDifficult,
@@ -5335,6 +7025,7 @@ typedef $$UserPreferencesTableCreateCompanionBuilder = UserPreferencesCompanion
   Value<String> nativeLanguage,
   Value<String> displayLanguage,
   Value<bool> hasSeenOnboarding,
+  Value<bool> autoSync,
   Value<DateTime> updatedAt,
 });
 typedef $$UserPreferencesTableUpdateCompanionBuilder = UserPreferencesCompanion
@@ -5344,6 +7035,7 @@ typedef $$UserPreferencesTableUpdateCompanionBuilder = UserPreferencesCompanion
   Value<String> nativeLanguage,
   Value<String> displayLanguage,
   Value<bool> hasSeenOnboarding,
+  Value<bool> autoSync,
   Value<DateTime> updatedAt,
 });
 
@@ -5373,6 +7065,9 @@ class $$UserPreferencesTableFilterComposer
   ColumnFilters<bool> get hasSeenOnboarding => $composableBuilder(
       column: $table.hasSeenOnboarding,
       builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<bool> get autoSync => $composableBuilder(
+      column: $table.autoSync, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get updatedAt => $composableBuilder(
       column: $table.updatedAt, builder: (column) => ColumnFilters(column));
@@ -5405,6 +7100,9 @@ class $$UserPreferencesTableOrderingComposer
       column: $table.hasSeenOnboarding,
       builder: (column) => ColumnOrderings(column));
 
+  ColumnOrderings<bool> get autoSync => $composableBuilder(
+      column: $table.autoSync, builder: (column) => ColumnOrderings(column));
+
   ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
       column: $table.updatedAt, builder: (column) => ColumnOrderings(column));
 }
@@ -5432,6 +7130,9 @@ class $$UserPreferencesTableAnnotationComposer
 
   GeneratedColumn<bool> get hasSeenOnboarding => $composableBuilder(
       column: $table.hasSeenOnboarding, builder: (column) => column);
+
+  GeneratedColumn<bool> get autoSync =>
+      $composableBuilder(column: $table.autoSync, builder: (column) => column);
 
   GeneratedColumn<DateTime> get updatedAt =>
       $composableBuilder(column: $table.updatedAt, builder: (column) => column);
@@ -5469,6 +7170,7 @@ class $$UserPreferencesTableTableManager extends RootTableManager<
             Value<String> nativeLanguage = const Value.absent(),
             Value<String> displayLanguage = const Value.absent(),
             Value<bool> hasSeenOnboarding = const Value.absent(),
+            Value<bool> autoSync = const Value.absent(),
             Value<DateTime> updatedAt = const Value.absent(),
           }) =>
               UserPreferencesCompanion(
@@ -5477,6 +7179,7 @@ class $$UserPreferencesTableTableManager extends RootTableManager<
             nativeLanguage: nativeLanguage,
             displayLanguage: displayLanguage,
             hasSeenOnboarding: hasSeenOnboarding,
+            autoSync: autoSync,
             updatedAt: updatedAt,
           ),
           createCompanionCallback: ({
@@ -5485,6 +7188,7 @@ class $$UserPreferencesTableTableManager extends RootTableManager<
             Value<String> nativeLanguage = const Value.absent(),
             Value<String> displayLanguage = const Value.absent(),
             Value<bool> hasSeenOnboarding = const Value.absent(),
+            Value<bool> autoSync = const Value.absent(),
             Value<DateTime> updatedAt = const Value.absent(),
           }) =>
               UserPreferencesCompanion.insert(
@@ -5493,6 +7197,7 @@ class $$UserPreferencesTableTableManager extends RootTableManager<
             nativeLanguage: nativeLanguage,
             displayLanguage: displayLanguage,
             hasSeenOnboarding: hasSeenOnboarding,
+            autoSync: autoSync,
             updatedAt: updatedAt,
           ),
           withReferenceMapper: (p0) => p0
@@ -5517,6 +7222,1034 @@ typedef $$UserPreferencesTableProcessedTableManager = ProcessedTableManager<
     ),
     UserPreference,
     PrefetchHooks Function()>;
+typedef $$VocabularyGroupsTableCreateCompanionBuilder
+    = VocabularyGroupsCompanion Function({
+  required String id,
+  required String name,
+  required String levelRange,
+  Value<int> sortOrder,
+  Value<int> rowid,
+});
+typedef $$VocabularyGroupsTableUpdateCompanionBuilder
+    = VocabularyGroupsCompanion Function({
+  Value<String> id,
+  Value<String> name,
+  Value<String> levelRange,
+  Value<int> sortOrder,
+  Value<int> rowid,
+});
+
+final class $$VocabularyGroupsTableReferences extends BaseReferences<
+    _$AppDatabase, $VocabularyGroupsTable, VocabularyGroupEntity> {
+  $$VocabularyGroupsTableReferences(
+      super.$_db, super.$_table, super.$_typedResult);
+
+  static MultiTypedResultKey<$VocabularyCategoriesTable,
+      List<VocabularyCategoryEntity>> _vocabularyCategoriesRefsTable(
+          _$AppDatabase db) =>
+      MultiTypedResultKey.fromTable(db.vocabularyCategories,
+          aliasName: $_aliasNameGenerator(
+              db.vocabularyGroups.id, db.vocabularyCategories.groupId));
+
+  $$VocabularyCategoriesTableProcessedTableManager
+      get vocabularyCategoriesRefs {
+    final manager =
+        $$VocabularyCategoriesTableTableManager($_db, $_db.vocabularyCategories)
+            .filter((f) => f.groupId.id.sqlEquals($_itemColumn<String>('id')!));
+
+    final cache =
+        $_typedResult.readTableOrNull(_vocabularyCategoriesRefsTable($_db));
+    return ProcessedTableManager(
+        manager.$state.copyWith(prefetchedData: cache));
+  }
+}
+
+class $$VocabularyGroupsTableFilterComposer
+    extends Composer<_$AppDatabase, $VocabularyGroupsTable> {
+  $$VocabularyGroupsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get levelRange => $composableBuilder(
+      column: $table.levelRange, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnFilters(column));
+
+  Expression<bool> vocabularyCategoriesRefs(
+      Expression<bool> Function($$VocabularyCategoriesTableFilterComposer f)
+          f) {
+    final $$VocabularyCategoriesTableFilterComposer composer = $composerBuilder(
+        composer: this,
+        getCurrentColumn: (t) => t.id,
+        referencedTable: $db.vocabularyCategories,
+        getReferencedColumn: (t) => t.groupId,
+        builder: (joinBuilder,
+                {$addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer}) =>
+            $$VocabularyCategoriesTableFilterComposer(
+              $db: $db,
+              $table: $db.vocabularyCategories,
+              $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+              joinBuilder: joinBuilder,
+              $removeJoinBuilderFromRootComposer:
+                  $removeJoinBuilderFromRootComposer,
+            ));
+    return f(composer);
+  }
+}
+
+class $$VocabularyGroupsTableOrderingComposer
+    extends Composer<_$AppDatabase, $VocabularyGroupsTable> {
+  $$VocabularyGroupsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get levelRange => $composableBuilder(
+      column: $table.levelRange, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnOrderings(column));
+}
+
+class $$VocabularyGroupsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $VocabularyGroupsTable> {
+  $$VocabularyGroupsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get levelRange => $composableBuilder(
+      column: $table.levelRange, builder: (column) => column);
+
+  GeneratedColumn<int> get sortOrder =>
+      $composableBuilder(column: $table.sortOrder, builder: (column) => column);
+
+  Expression<T> vocabularyCategoriesRefs<T extends Object>(
+      Expression<T> Function($$VocabularyCategoriesTableAnnotationComposer a)
+          f) {
+    final $$VocabularyCategoriesTableAnnotationComposer composer =
+        $composerBuilder(
+            composer: this,
+            getCurrentColumn: (t) => t.id,
+            referencedTable: $db.vocabularyCategories,
+            getReferencedColumn: (t) => t.groupId,
+            builder: (joinBuilder,
+                    {$addJoinBuilderToRootComposer,
+                    $removeJoinBuilderFromRootComposer}) =>
+                $$VocabularyCategoriesTableAnnotationComposer(
+                  $db: $db,
+                  $table: $db.vocabularyCategories,
+                  $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                  joinBuilder: joinBuilder,
+                  $removeJoinBuilderFromRootComposer:
+                      $removeJoinBuilderFromRootComposer,
+                ));
+    return f(composer);
+  }
+}
+
+class $$VocabularyGroupsTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VocabularyGroupsTable,
+    VocabularyGroupEntity,
+    $$VocabularyGroupsTableFilterComposer,
+    $$VocabularyGroupsTableOrderingComposer,
+    $$VocabularyGroupsTableAnnotationComposer,
+    $$VocabularyGroupsTableCreateCompanionBuilder,
+    $$VocabularyGroupsTableUpdateCompanionBuilder,
+    (VocabularyGroupEntity, $$VocabularyGroupsTableReferences),
+    VocabularyGroupEntity,
+    PrefetchHooks Function({bool vocabularyCategoriesRefs})> {
+  $$VocabularyGroupsTableTableManager(
+      _$AppDatabase db, $VocabularyGroupsTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VocabularyGroupsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VocabularyGroupsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VocabularyGroupsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String> name = const Value.absent(),
+            Value<String> levelRange = const Value.absent(),
+            Value<int> sortOrder = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabularyGroupsCompanion(
+            id: id,
+            name: name,
+            levelRange: levelRange,
+            sortOrder: sortOrder,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            required String name,
+            required String levelRange,
+            Value<int> sortOrder = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabularyGroupsCompanion.insert(
+            id: id,
+            name: name,
+            levelRange: levelRange,
+            sortOrder: sortOrder,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (
+                    e.readTable(table),
+                    $$VocabularyGroupsTableReferences(db, table, e)
+                  ))
+              .toList(),
+          prefetchHooksCallback: ({vocabularyCategoriesRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [
+                if (vocabularyCategoriesRefs) db.vocabularyCategories
+              ],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (vocabularyCategoriesRefs)
+                    await $_getPrefetchedData<VocabularyGroupEntity,
+                            $VocabularyGroupsTable, VocabularyCategoryEntity>(
+                        currentTable: table,
+                        referencedTable: $$VocabularyGroupsTableReferences
+                            ._vocabularyCategoriesRefsTable(db),
+                        managerFromTypedResult: (p0) =>
+                            $$VocabularyGroupsTableReferences(db, table, p0)
+                                .vocabularyCategoriesRefs,
+                        referencedItemsForCurrentItem: (item,
+                                referencedItems) =>
+                            referencedItems.where((e) => e.groupId == item.id),
+                        typedResults: items)
+                ];
+              },
+            );
+          },
+        ));
+}
+
+typedef $$VocabularyGroupsTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $VocabularyGroupsTable,
+    VocabularyGroupEntity,
+    $$VocabularyGroupsTableFilterComposer,
+    $$VocabularyGroupsTableOrderingComposer,
+    $$VocabularyGroupsTableAnnotationComposer,
+    $$VocabularyGroupsTableCreateCompanionBuilder,
+    $$VocabularyGroupsTableUpdateCompanionBuilder,
+    (VocabularyGroupEntity, $$VocabularyGroupsTableReferences),
+    VocabularyGroupEntity,
+    PrefetchHooks Function({bool vocabularyCategoriesRefs})>;
+typedef $$VocabularyCategoriesTableCreateCompanionBuilder
+    = VocabularyCategoriesCompanion Function({
+  required String id,
+  required String groupId,
+  required String name,
+  required String icon,
+  required String gradientColorsJson,
+  Value<int> sortOrder,
+  Value<int> wordCount,
+  Value<bool> isCached,
+  Value<int> rowid,
+});
+typedef $$VocabularyCategoriesTableUpdateCompanionBuilder
+    = VocabularyCategoriesCompanion Function({
+  Value<String> id,
+  Value<String> groupId,
+  Value<String> name,
+  Value<String> icon,
+  Value<String> gradientColorsJson,
+  Value<int> sortOrder,
+  Value<int> wordCount,
+  Value<bool> isCached,
+  Value<int> rowid,
+});
+
+final class $$VocabularyCategoriesTableReferences extends BaseReferences<
+    _$AppDatabase, $VocabularyCategoriesTable, VocabularyCategoryEntity> {
+  $$VocabularyCategoriesTableReferences(
+      super.$_db, super.$_table, super.$_typedResult);
+
+  static $VocabularyGroupsTable _groupIdTable(_$AppDatabase db) =>
+      db.vocabularyGroups.createAlias($_aliasNameGenerator(
+          db.vocabularyCategories.groupId, db.vocabularyGroups.id));
+
+  $$VocabularyGroupsTableProcessedTableManager get groupId {
+    final $_column = $_itemColumn<String>('group_id')!;
+
+    final manager =
+        $$VocabularyGroupsTableTableManager($_db, $_db.vocabularyGroups)
+            .filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_groupIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+        manager.$state.copyWith(prefetchedData: [item]));
+  }
+}
+
+class $$VocabularyCategoriesTableFilterComposer
+    extends Composer<_$AppDatabase, $VocabularyCategoriesTable> {
+  $$VocabularyCategoriesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get icon => $composableBuilder(
+      column: $table.icon, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get gradientColorsJson => $composableBuilder(
+      column: $table.gradientColorsJson,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get wordCount => $composableBuilder(
+      column: $table.wordCount, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<bool> get isCached => $composableBuilder(
+      column: $table.isCached, builder: (column) => ColumnFilters(column));
+
+  $$VocabularyGroupsTableFilterComposer get groupId {
+    final $$VocabularyGroupsTableFilterComposer composer = $composerBuilder(
+        composer: this,
+        getCurrentColumn: (t) => t.groupId,
+        referencedTable: $db.vocabularyGroups,
+        getReferencedColumn: (t) => t.id,
+        builder: (joinBuilder,
+                {$addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer}) =>
+            $$VocabularyGroupsTableFilterComposer(
+              $db: $db,
+              $table: $db.vocabularyGroups,
+              $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+              joinBuilder: joinBuilder,
+              $removeJoinBuilderFromRootComposer:
+                  $removeJoinBuilderFromRootComposer,
+            ));
+    return composer;
+  }
+}
+
+class $$VocabularyCategoriesTableOrderingComposer
+    extends Composer<_$AppDatabase, $VocabularyCategoriesTable> {
+  $$VocabularyCategoriesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get icon => $composableBuilder(
+      column: $table.icon, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get gradientColorsJson => $composableBuilder(
+      column: $table.gradientColorsJson,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get wordCount => $composableBuilder(
+      column: $table.wordCount, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<bool> get isCached => $composableBuilder(
+      column: $table.isCached, builder: (column) => ColumnOrderings(column));
+
+  $$VocabularyGroupsTableOrderingComposer get groupId {
+    final $$VocabularyGroupsTableOrderingComposer composer = $composerBuilder(
+        composer: this,
+        getCurrentColumn: (t) => t.groupId,
+        referencedTable: $db.vocabularyGroups,
+        getReferencedColumn: (t) => t.id,
+        builder: (joinBuilder,
+                {$addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer}) =>
+            $$VocabularyGroupsTableOrderingComposer(
+              $db: $db,
+              $table: $db.vocabularyGroups,
+              $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+              joinBuilder: joinBuilder,
+              $removeJoinBuilderFromRootComposer:
+                  $removeJoinBuilderFromRootComposer,
+            ));
+    return composer;
+  }
+}
+
+class $$VocabularyCategoriesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $VocabularyCategoriesTable> {
+  $$VocabularyCategoriesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get icon =>
+      $composableBuilder(column: $table.icon, builder: (column) => column);
+
+  GeneratedColumn<String> get gradientColorsJson => $composableBuilder(
+      column: $table.gradientColorsJson, builder: (column) => column);
+
+  GeneratedColumn<int> get sortOrder =>
+      $composableBuilder(column: $table.sortOrder, builder: (column) => column);
+
+  GeneratedColumn<int> get wordCount =>
+      $composableBuilder(column: $table.wordCount, builder: (column) => column);
+
+  GeneratedColumn<bool> get isCached =>
+      $composableBuilder(column: $table.isCached, builder: (column) => column);
+
+  $$VocabularyGroupsTableAnnotationComposer get groupId {
+    final $$VocabularyGroupsTableAnnotationComposer composer = $composerBuilder(
+        composer: this,
+        getCurrentColumn: (t) => t.groupId,
+        referencedTable: $db.vocabularyGroups,
+        getReferencedColumn: (t) => t.id,
+        builder: (joinBuilder,
+                {$addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer}) =>
+            $$VocabularyGroupsTableAnnotationComposer(
+              $db: $db,
+              $table: $db.vocabularyGroups,
+              $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+              joinBuilder: joinBuilder,
+              $removeJoinBuilderFromRootComposer:
+                  $removeJoinBuilderFromRootComposer,
+            ));
+    return composer;
+  }
+}
+
+class $$VocabularyCategoriesTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VocabularyCategoriesTable,
+    VocabularyCategoryEntity,
+    $$VocabularyCategoriesTableFilterComposer,
+    $$VocabularyCategoriesTableOrderingComposer,
+    $$VocabularyCategoriesTableAnnotationComposer,
+    $$VocabularyCategoriesTableCreateCompanionBuilder,
+    $$VocabularyCategoriesTableUpdateCompanionBuilder,
+    (VocabularyCategoryEntity, $$VocabularyCategoriesTableReferences),
+    VocabularyCategoryEntity,
+    PrefetchHooks Function({bool groupId})> {
+  $$VocabularyCategoriesTableTableManager(
+      _$AppDatabase db, $VocabularyCategoriesTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VocabularyCategoriesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VocabularyCategoriesTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VocabularyCategoriesTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String> groupId = const Value.absent(),
+            Value<String> name = const Value.absent(),
+            Value<String> icon = const Value.absent(),
+            Value<String> gradientColorsJson = const Value.absent(),
+            Value<int> sortOrder = const Value.absent(),
+            Value<int> wordCount = const Value.absent(),
+            Value<bool> isCached = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabularyCategoriesCompanion(
+            id: id,
+            groupId: groupId,
+            name: name,
+            icon: icon,
+            gradientColorsJson: gradientColorsJson,
+            sortOrder: sortOrder,
+            wordCount: wordCount,
+            isCached: isCached,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            required String groupId,
+            required String name,
+            required String icon,
+            required String gradientColorsJson,
+            Value<int> sortOrder = const Value.absent(),
+            Value<int> wordCount = const Value.absent(),
+            Value<bool> isCached = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabularyCategoriesCompanion.insert(
+            id: id,
+            groupId: groupId,
+            name: name,
+            icon: icon,
+            gradientColorsJson: gradientColorsJson,
+            sortOrder: sortOrder,
+            wordCount: wordCount,
+            isCached: isCached,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (
+                    e.readTable(table),
+                    $$VocabularyCategoriesTableReferences(db, table, e)
+                  ))
+              .toList(),
+          prefetchHooksCallback: ({groupId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins: <
+                  T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic>>(state) {
+                if (groupId) {
+                  state = state.withJoin(
+                    currentTable: table,
+                    currentColumn: table.groupId,
+                    referencedTable:
+                        $$VocabularyCategoriesTableReferences._groupIdTable(db),
+                    referencedColumn: $$VocabularyCategoriesTableReferences
+                        ._groupIdTable(db)
+                        .id,
+                  ) as T;
+                }
+
+                return state;
+              },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ));
+}
+
+typedef $$VocabularyCategoriesTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $VocabularyCategoriesTable,
+        VocabularyCategoryEntity,
+        $$VocabularyCategoriesTableFilterComposer,
+        $$VocabularyCategoriesTableOrderingComposer,
+        $$VocabularyCategoriesTableAnnotationComposer,
+        $$VocabularyCategoriesTableCreateCompanionBuilder,
+        $$VocabularyCategoriesTableUpdateCompanionBuilder,
+        (VocabularyCategoryEntity, $$VocabularyCategoriesTableReferences),
+        VocabularyCategoryEntity,
+        PrefetchHooks Function({bool groupId})>;
+typedef $$VocabularyPendingCategoriesTableCreateCompanionBuilder
+    = VocabularyPendingCategoriesCompanion Function({
+  required String id,
+  required String groupId,
+  required String name,
+  required String icon,
+  required String gradientColorsJson,
+  Value<int> sortOrder,
+  Value<int> wordCount,
+  Value<int> rowid,
+});
+typedef $$VocabularyPendingCategoriesTableUpdateCompanionBuilder
+    = VocabularyPendingCategoriesCompanion Function({
+  Value<String> id,
+  Value<String> groupId,
+  Value<String> name,
+  Value<String> icon,
+  Value<String> gradientColorsJson,
+  Value<int> sortOrder,
+  Value<int> wordCount,
+  Value<int> rowid,
+});
+
+class $$VocabularyPendingCategoriesTableFilterComposer
+    extends Composer<_$AppDatabase, $VocabularyPendingCategoriesTable> {
+  $$VocabularyPendingCategoriesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get groupId => $composableBuilder(
+      column: $table.groupId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get icon => $composableBuilder(
+      column: $table.icon, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get gradientColorsJson => $composableBuilder(
+      column: $table.gradientColorsJson,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get wordCount => $composableBuilder(
+      column: $table.wordCount, builder: (column) => ColumnFilters(column));
+}
+
+class $$VocabularyPendingCategoriesTableOrderingComposer
+    extends Composer<_$AppDatabase, $VocabularyPendingCategoriesTable> {
+  $$VocabularyPendingCategoriesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get groupId => $composableBuilder(
+      column: $table.groupId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get icon => $composableBuilder(
+      column: $table.icon, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get gradientColorsJson => $composableBuilder(
+      column: $table.gradientColorsJson,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get wordCount => $composableBuilder(
+      column: $table.wordCount, builder: (column) => ColumnOrderings(column));
+}
+
+class $$VocabularyPendingCategoriesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $VocabularyPendingCategoriesTable> {
+  $$VocabularyPendingCategoriesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get groupId =>
+      $composableBuilder(column: $table.groupId, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get icon =>
+      $composableBuilder(column: $table.icon, builder: (column) => column);
+
+  GeneratedColumn<String> get gradientColorsJson => $composableBuilder(
+      column: $table.gradientColorsJson, builder: (column) => column);
+
+  GeneratedColumn<int> get sortOrder =>
+      $composableBuilder(column: $table.sortOrder, builder: (column) => column);
+
+  GeneratedColumn<int> get wordCount =>
+      $composableBuilder(column: $table.wordCount, builder: (column) => column);
+}
+
+class $$VocabularyPendingCategoriesTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VocabularyPendingCategoriesTable,
+    VocabularyPendingCategoryEntity,
+    $$VocabularyPendingCategoriesTableFilterComposer,
+    $$VocabularyPendingCategoriesTableOrderingComposer,
+    $$VocabularyPendingCategoriesTableAnnotationComposer,
+    $$VocabularyPendingCategoriesTableCreateCompanionBuilder,
+    $$VocabularyPendingCategoriesTableUpdateCompanionBuilder,
+    (
+      VocabularyPendingCategoryEntity,
+      BaseReferences<_$AppDatabase, $VocabularyPendingCategoriesTable,
+          VocabularyPendingCategoryEntity>
+    ),
+    VocabularyPendingCategoryEntity,
+    PrefetchHooks Function()> {
+  $$VocabularyPendingCategoriesTableTableManager(
+      _$AppDatabase db, $VocabularyPendingCategoriesTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VocabularyPendingCategoriesTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VocabularyPendingCategoriesTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VocabularyPendingCategoriesTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String> groupId = const Value.absent(),
+            Value<String> name = const Value.absent(),
+            Value<String> icon = const Value.absent(),
+            Value<String> gradientColorsJson = const Value.absent(),
+            Value<int> sortOrder = const Value.absent(),
+            Value<int> wordCount = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabularyPendingCategoriesCompanion(
+            id: id,
+            groupId: groupId,
+            name: name,
+            icon: icon,
+            gradientColorsJson: gradientColorsJson,
+            sortOrder: sortOrder,
+            wordCount: wordCount,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            required String groupId,
+            required String name,
+            required String icon,
+            required String gradientColorsJson,
+            Value<int> sortOrder = const Value.absent(),
+            Value<int> wordCount = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabularyPendingCategoriesCompanion.insert(
+            id: id,
+            groupId: groupId,
+            name: name,
+            icon: icon,
+            gradientColorsJson: gradientColorsJson,
+            sortOrder: sortOrder,
+            wordCount: wordCount,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$VocabularyPendingCategoriesTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $VocabularyPendingCategoriesTable,
+        VocabularyPendingCategoryEntity,
+        $$VocabularyPendingCategoriesTableFilterComposer,
+        $$VocabularyPendingCategoriesTableOrderingComposer,
+        $$VocabularyPendingCategoriesTableAnnotationComposer,
+        $$VocabularyPendingCategoriesTableCreateCompanionBuilder,
+        $$VocabularyPendingCategoriesTableUpdateCompanionBuilder,
+        (
+          VocabularyPendingCategoryEntity,
+          BaseReferences<_$AppDatabase, $VocabularyPendingCategoriesTable,
+              VocabularyPendingCategoryEntity>
+        ),
+        VocabularyPendingCategoryEntity,
+        PrefetchHooks Function()>;
+typedef $$GrammarDetailsTableCreateCompanionBuilder = GrammarDetailsCompanion
+    Function({
+  required String topicId,
+  required String languageCode,
+  Value<String?> title,
+  Value<String?> category,
+  Value<String?> rule,
+  Value<String?> explanation,
+  Value<String?> examplesJson,
+  Value<String?> detailJson,
+  Value<DateTime> updatedAt,
+  Value<int> rowid,
+});
+typedef $$GrammarDetailsTableUpdateCompanionBuilder = GrammarDetailsCompanion
+    Function({
+  Value<String> topicId,
+  Value<String> languageCode,
+  Value<String?> title,
+  Value<String?> category,
+  Value<String?> rule,
+  Value<String?> explanation,
+  Value<String?> examplesJson,
+  Value<String?> detailJson,
+  Value<DateTime> updatedAt,
+  Value<int> rowid,
+});
+
+class $$GrammarDetailsTableFilterComposer
+    extends Composer<_$AppDatabase, $GrammarDetailsTable> {
+  $$GrammarDetailsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get topicId => $composableBuilder(
+      column: $table.topicId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get languageCode => $composableBuilder(
+      column: $table.languageCode, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get title => $composableBuilder(
+      column: $table.title, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get category => $composableBuilder(
+      column: $table.category, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get rule => $composableBuilder(
+      column: $table.rule, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get explanation => $composableBuilder(
+      column: $table.explanation, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get examplesJson => $composableBuilder(
+      column: $table.examplesJson, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get detailJson => $composableBuilder(
+      column: $table.detailJson, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+      column: $table.updatedAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$GrammarDetailsTableOrderingComposer
+    extends Composer<_$AppDatabase, $GrammarDetailsTable> {
+  $$GrammarDetailsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get topicId => $composableBuilder(
+      column: $table.topicId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get languageCode => $composableBuilder(
+      column: $table.languageCode,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get title => $composableBuilder(
+      column: $table.title, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get category => $composableBuilder(
+      column: $table.category, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get rule => $composableBuilder(
+      column: $table.rule, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get explanation => $composableBuilder(
+      column: $table.explanation, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get examplesJson => $composableBuilder(
+      column: $table.examplesJson,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get detailJson => $composableBuilder(
+      column: $table.detailJson, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+      column: $table.updatedAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$GrammarDetailsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $GrammarDetailsTable> {
+  $$GrammarDetailsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get topicId =>
+      $composableBuilder(column: $table.topicId, builder: (column) => column);
+
+  GeneratedColumn<String> get languageCode => $composableBuilder(
+      column: $table.languageCode, builder: (column) => column);
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get category =>
+      $composableBuilder(column: $table.category, builder: (column) => column);
+
+  GeneratedColumn<String> get rule =>
+      $composableBuilder(column: $table.rule, builder: (column) => column);
+
+  GeneratedColumn<String> get explanation => $composableBuilder(
+      column: $table.explanation, builder: (column) => column);
+
+  GeneratedColumn<String> get examplesJson => $composableBuilder(
+      column: $table.examplesJson, builder: (column) => column);
+
+  GeneratedColumn<String> get detailJson => $composableBuilder(
+      column: $table.detailJson, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$GrammarDetailsTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $GrammarDetailsTable,
+    GrammarDetail,
+    $$GrammarDetailsTableFilterComposer,
+    $$GrammarDetailsTableOrderingComposer,
+    $$GrammarDetailsTableAnnotationComposer,
+    $$GrammarDetailsTableCreateCompanionBuilder,
+    $$GrammarDetailsTableUpdateCompanionBuilder,
+    (
+      GrammarDetail,
+      BaseReferences<_$AppDatabase, $GrammarDetailsTable, GrammarDetail>
+    ),
+    GrammarDetail,
+    PrefetchHooks Function()> {
+  $$GrammarDetailsTableTableManager(
+      _$AppDatabase db, $GrammarDetailsTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$GrammarDetailsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$GrammarDetailsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$GrammarDetailsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> topicId = const Value.absent(),
+            Value<String> languageCode = const Value.absent(),
+            Value<String?> title = const Value.absent(),
+            Value<String?> category = const Value.absent(),
+            Value<String?> rule = const Value.absent(),
+            Value<String?> explanation = const Value.absent(),
+            Value<String?> examplesJson = const Value.absent(),
+            Value<String?> detailJson = const Value.absent(),
+            Value<DateTime> updatedAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              GrammarDetailsCompanion(
+            topicId: topicId,
+            languageCode: languageCode,
+            title: title,
+            category: category,
+            rule: rule,
+            explanation: explanation,
+            examplesJson: examplesJson,
+            detailJson: detailJson,
+            updatedAt: updatedAt,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String topicId,
+            required String languageCode,
+            Value<String?> title = const Value.absent(),
+            Value<String?> category = const Value.absent(),
+            Value<String?> rule = const Value.absent(),
+            Value<String?> explanation = const Value.absent(),
+            Value<String?> examplesJson = const Value.absent(),
+            Value<String?> detailJson = const Value.absent(),
+            Value<DateTime> updatedAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              GrammarDetailsCompanion.insert(
+            topicId: topicId,
+            languageCode: languageCode,
+            title: title,
+            category: category,
+            rule: rule,
+            explanation: explanation,
+            examplesJson: examplesJson,
+            detailJson: detailJson,
+            updatedAt: updatedAt,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$GrammarDetailsTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $GrammarDetailsTable,
+    GrammarDetail,
+    $$GrammarDetailsTableFilterComposer,
+    $$GrammarDetailsTableOrderingComposer,
+    $$GrammarDetailsTableAnnotationComposer,
+    $$GrammarDetailsTableCreateCompanionBuilder,
+    $$GrammarDetailsTableUpdateCompanionBuilder,
+    (
+      GrammarDetail,
+      BaseReferences<_$AppDatabase, $GrammarDetailsTable, GrammarDetail>
+    ),
+    GrammarDetail,
+    PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -5537,4 +8270,14 @@ class $AppDatabaseManager {
       $$UserStatsTableTableManager(_db, _db.userStats);
   $$UserPreferencesTableTableManager get userPreferences =>
       $$UserPreferencesTableTableManager(_db, _db.userPreferences);
+  $$VocabularyGroupsTableTableManager get vocabularyGroups =>
+      $$VocabularyGroupsTableTableManager(_db, _db.vocabularyGroups);
+  $$VocabularyCategoriesTableTableManager get vocabularyCategories =>
+      $$VocabularyCategoriesTableTableManager(_db, _db.vocabularyCategories);
+  $$VocabularyPendingCategoriesTableTableManager
+      get vocabularyPendingCategories =>
+          $$VocabularyPendingCategoriesTableTableManager(
+              _db, _db.vocabularyPendingCategories);
+  $$GrammarDetailsTableTableManager get grammarDetails =>
+      $$GrammarDetailsTableTableManager(_db, _db.grammarDetails);
 }

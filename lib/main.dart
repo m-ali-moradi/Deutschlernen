@@ -7,9 +7,15 @@ import 'core/content/content_validator.dart';
 import 'core/content/phrase_content_service.dart';
 import 'features/grammar/presentation/grammar_detail_map.dart';
 import 'features/grammar/presentation/grammar_seed.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   assert(() {
     ContentValidator.validate();

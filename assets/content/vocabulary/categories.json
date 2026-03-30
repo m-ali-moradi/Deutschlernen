@@ -1,0 +1,60 @@
+[
+  {"id": "greetings", "groupId": "daily_life_basics", "name": "Greetings", "icon": "👋", "colors": ["0xFF2563EB", "0xFF1D4ED8"], "sortOrder": 1},
+  {"id": "numbers", "groupId": "daily_life_basics", "name": "Numbers", "icon": "🔢", "colors": ["0xFF0EA5E9", "0xFF0284C7"], "sortOrder": 2},
+  {"id": "time", "groupId": "daily_life_basics", "name": "Time", "icon": "⏰", "colors": ["0xFF22C55E", "0xFF15803D"], "sortOrder": 3},
+  {"id": "days", "groupId": "daily_life_basics", "name": "Days", "icon": "📅", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 4},
+  {"id": "family", "groupId": "daily_life_basics", "name": "Family", "icon": "👨‍👩‍👧‍👦", "colors": ["0xFF8B5CF6", "0xFF7C3AED"], "sortOrder": 5},
+  {"id": "home", "groupId": "daily_life_basics", "name": "Home", "icon": "🏠", "colors": ["0xFFEC4899", "0xFFDB2777"], "sortOrder": 6},
+  {"id": "food", "groupId": "daily_life_basics", "name": "Food", "icon": "🍎", "colors": ["0xFFF97316", "0xFFEA580C"], "sortOrder": 7},
+  {"id": "shopping", "groupId": "daily_life_basics", "name": "Shopping", "icon": "🛍️", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 8},
+
+  {"id": "name_origin", "groupId": "personal_information", "name": "Name & Origin", "icon": "🆔", "colors": ["0xFF10B981", "0xFF059669"], "sortOrder": 1},
+  {"id": "address_phone", "groupId": "personal_information", "name": "Address & Phone", "icon": "📍", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 2},
+  {"id": "age_nationality", "groupId": "personal_information", "name": "Age & Nationality", "icon": "🌍", "colors": ["0xFFF43F5E", "0xFFE11D48"], "sortOrder": 3},
+  {"id": "documents", "groupId": "personal_information", "name": "Documents", "icon": "📄", "colors": ["0xFF64748B", "0xFF334155"], "sortOrder": 4},
+
+  {"id": "train_bus", "groupId": "travel_transport", "name": "Train & Bus", "icon": "🚆", "colors": ["0xFF3B82F6", "0xFF2563EB"], "sortOrder": 1},
+  {"id": "airport", "groupId": "travel_transport", "name": "Airport", "icon": "✈️", "colors": ["0xFF06B6D4", "0xFF0891B2"], "sortOrder": 2},
+  {"id": "ticket_booking", "groupId": "travel_transport", "name": "Ticket & Booking", "icon": "🎫", "colors": ["0xFF10B981", "0xFF059669"], "sortOrder": 3},
+  {"id": "hotel", "groupId": "travel_transport", "name": "Hotel", "icon": "🏨", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 4},
+  {"id": "directions", "groupId": "travel_transport", "name": "Directions", "icon": "🧭", "colors": ["0xFFEC4899", "0xFFDB2777"], "sortOrder": 5},
+
+  {"id": "rooms", "groupId": "home_housing", "name": "Rooms", "icon": "🚪", "colors": ["0xFF8B5CF6", "0xFF7C3AED"], "sortOrder": 1},
+  {"id": "furniture", "groupId": "home_housing", "name": "Furniture", "icon": "🛋️", "colors": ["0xFFF43F5E", "0xFFC026D3"], "sortOrder": 2},
+  {"id": "rent_cleaning", "groupId": "home_housing", "name": "Rent & Cleaning", "icon": "🧼", "colors": ["0xFFF59E0B", "0xFFEA580C"], "sortOrder": 3},
+  {"id": "repairs", "groupId": "home_housing", "name": "Repairs", "icon": "🛠️", "colors": ["0xFF64748B", "0xFF475569"], "sortOrder": 4},
+
+  {"id": "body_parts", "groupId": "health_body", "name": "Body Parts", "icon": "💪", "colors": ["0xFFEF4444", "0xFFB91C1C"], "sortOrder": 1},
+  {"id": "symptoms", "groupId": "health_body", "name": "Symptoms", "icon": "🤒", "colors": ["0xFF10B981", "0xFF047857"], "sortOrder": 2},
+  {"id": "doctor_pharmacy", "groupId": "health_body", "name": "Doctor & Pharmacy", "icon": "🏥", "colors": ["0xFF3B82F6", "0xFF1E40AF"], "sortOrder": 3},
+  {"id": "emergency", "groupId": "health_body", "name": "Emergency", "icon": "🚨", "colors": ["0xFFF97316", "0xFFC2410C"], "sortOrder": 4},
+
+  {"id": "school", "groupId": "education", "name": "School", "icon": "🏫", "colors": ["0xFF8B5CF6", "0xFF5B21B6"], "sortOrder": 1},
+  {"id": "university", "groupId": "education", "name": "University", "icon": "🏛️", "colors": ["0xFF10B981", "0xFF065F46"], "sortOrder": 2},
+  {"id": "subjects", "groupId": "education", "name": "Subjects", "icon": "📚", "colors": ["0xFFF59E0B", "0xFFB45309"], "sortOrder": 3},
+  {"id": "exams_homework", "groupId": "education", "name": "Exams & Homework", "icon": "✍️", "colors": ["0xFFEC4899", "0xFF9D174D"], "sortOrder": 4},
+
+  {"id": "company", "groupId": "work_business", "name": "Company", "icon": "🏢", "colors": ["0xFF1E40AF", "0xFF1E3A8A"], "sortOrder": 1},
+  {"id": "meetings", "groupId": "work_business", "name": "Meetings", "icon": "🤝", "colors": ["0xFF0EA5E9", "0xFF0369A1"], "sortOrder": 2},
+  {"id": "contracts", "groupId": "work_business", "name": "Contracts", "icon": "📄", "colors": ["0xFF059669", "0xFF064E3B"], "sortOrder": 3},
+  {"id": "office_tasks", "groupId": "work_business", "name": "Office & Tasks", "icon": "🖥️", "colors": ["0xFFD97706", "0xFF92400E"], "sortOrder": 4},
+  {"id": "salary_projects", "groupId": "work_business", "name": "Salary & Projects", "icon": "📈", "colors": ["0xFF7C3AED", "0xFF4C1D95"], "sortOrder": 5},
+  {"id": "application", "groupId": "work_business", "name": "Application & Career", "icon": "💼", "colors": ["0xFF1E40AF", "0xFF1D4ED8"], "sortOrder": 6},
+  {"id": "finance", "groupId": "work_business", "name": "Finance & Accounting", "icon": "💰", "colors": ["0xFF10B981", "0xFF059669"], "sortOrder": 7},
+  {"id": "marketing", "groupId": "work_business", "name": "Marketing & Sales", "icon": "📢", "colors": ["0xFFF97316", "0xFFEA580C"], "sortOrder": 8},
+  {"id": "hr", "groupId": "work_business", "name": "Human Resources", "icon": "👥", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 9},
+
+  {"id": "computer_hardware", "groupId": "technology_it", "name": "Computer & Hardware", "icon": "💻", "colors": ["0xFF4F46E5", "0xFF3730A3"], "sortOrder": 1},
+  {"id": "software_app", "groupId": "technology_it", "name": "Software & App", "icon": "📱", "colors": ["0xFF0891B2", "0xFF155E75"], "sortOrder": 2},
+  {"id": "internet_data", "groupId": "technology_it", "name": "Internet & Data", "icon": "🌐", "colors": ["0xFF7E22CE", "0xFF581C87"], "sortOrder": 3},
+  {"id": "security", "groupId": "technology_it", "name": "Security", "icon": "🔒", "colors": ["0xFFBE123C", "0xFF881337"], "sortOrder": 4},
+
+  {"id": "government_law", "groupId": "society_public_life", "name": "Government & Law", "icon": "⚖️", "colors": ["0xFF334155", "0xFF0F172A"], "sortOrder": 1},
+  {"id": "authorities", "groupId": "society_public_life", "name": "Authorities & Visa", "icon": "🛂", "colors": ["0xFF64748B", "0xFF334155"], "sortOrder": 2},
+  {"id": "environment", "groupId": "society_public_life", "name": "Environment", "icon": "🌿", "colors": ["0xFF15803D", "0xFF14532D"], "sortOrder": 3},
+  {"id": "media_culture", "groupId": "society_public_life", "name": "Media & Culture", "icon": "🎭", "colors": ["0xFFC026D3", "0xFF701A75"], "sortOrder": 4},
+
+  {"id": "opinions_arguments", "groupId": "abstract_formal_language", "name": "Opinions & Arguments", "icon": "💭", "colors": ["0xFF4B5563", "0xFF1F2937"], "sortOrder": 1},
+  {"id": "cause_result", "groupId": "abstract_formal_language", "name": "Cause & Result", "icon": "🔗", "colors": ["0xFFB91C1C", "0xFF7F1D1D"], "sortOrder": 2},
+  {"id": "comparison", "groupId": "abstract_formal_language", "name": "Comparison", "icon": "⚖️", "colors": ["0xFF1D4ED8", "0xFF1E3A8A"], "sortOrder": 3}
+]

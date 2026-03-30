@@ -190,9 +190,9 @@ class _OnboardingSlide extends StatelessWidget {
               borderRadius: BorderRadius.circular(40),
               boxShadow: [
                 BoxShadow(
-                  color: gradient.last.withOpacity(0.3),
-                  blurRadius: 32,
-                  offset: const Offset(0, 16),
+                        color: Colors.black.withValues(alpha: 0.08),
+                        blurRadius: 20,
+                        offset: const Offset(0, 8),
                 ),
               ],
             ),

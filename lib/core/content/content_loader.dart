@@ -46,8 +46,12 @@ class ContentLoader {
   ) async {
     final results = <Map<String, dynamic>>[];
     for (final level in levels) {
-      final data = await loadList('assets/content/$folder/$level.json');
-      results.addAll(data);
+      try {
+        final data = await loadList('assets/content/$folder/$level.json');
+        results.addAll(data);
+      } catch (e) {
+        // Skip missing or invalid files
+      }
     }
     return results;
   }

@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:deutschlernen_mobile/core/database/app_database.dart';
 import 'package:deutschlernen_mobile/core/database/database_providers.dart';
-import 'package:deutschlernen_mobile/features/exercises/presentation/exercise_page.dart';
-import 'package:deutschlernen_mobile/features/grammar/presentation/grammar_rich_detail_page.dart';
-import 'package:deutschlernen_mobile/features/grammar/presentation/grammar_section.dart';
-import 'package:deutschlernen_mobile/features/vocabulary/presentation/vocabulary_page.dart';
+import 'package:deutschlernen_mobile/features/exercises/presentation/screens/exercise_screen.dart';
+import 'package:deutschlernen_mobile/features/grammar/data/models/grammar_detail_models.dart';
+import 'package:deutschlernen_mobile/features/grammar/presentation/widgets/grammar_rich_detail_view.dart';
+import 'package:deutschlernen_mobile/features/vocabulary/presentation/screens/vocabulary_screen.dart';
 import 'package:deutschlernen_mobile/shared/widgets/app_state_view.dart';
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
@@ -82,14 +82,14 @@ void main() {
       gradient: const [Color(0xFF3B82F6), Color(0xFFA855F7)],
       levelBg: const Color(0xFFE0E7FF),
       levelText: const Color(0xFF1D4ED8),
-      sections: const [
+      sections: [
         ConceptSection(title: 'Concept', text: 'Test text'),
       ],
     );
 
     await tester.pumpWidget(
       MaterialApp(
-        home: GrammarRichDetailPage(
+        home: GrammarRichDetailView(
           topicTitle: 'Konjunktiv',
           topicCategory: 'Konjunktiv',
           topicLevel: 'B1',
@@ -132,7 +132,7 @@ void main() {
     await _pumpWithDatabase(
       tester,
       db,
-      const VocabularyPage(initialTab: 'words'),
+      const VocabularyScreen(initialTab: 'words'),
     );
 
     expect(find.text('Fällig'), findsNothing);
@@ -202,7 +202,7 @@ void main() {
     await _pumpWithDatabase(
       tester,
       db,
-      const VocabularyPage(initialTab: 'words'),
+      const VocabularyScreen(initialTab: 'words'),
     );
 
     await tester.scrollUntilVisible(
@@ -245,7 +245,7 @@ void main() {
     await _pumpWithDatabase(
       tester,
       db,
-      const ExercisePage(),
+      const ExerciseScreen(),
     );
 
     await tester.scrollUntilVisible(

@@ -1,5 +1,5 @@
 import '../../../core/content/content_loader.dart';
-import 'grammar_section.dart';
+import '../data/models/grammar_detail_models.dart';
 import 'grammar_seed.dart';
 
 /// This map holds the grammar data for the rich detail views.
@@ -16,7 +16,7 @@ class GrammarDetailService {
     }
 
     final map = await ContentLoader.loadMap(
-      'assets/content/grammar/detail_${level.toLowerCase()}.json',
+      'assets/content/grammar/en/detail_${level.toLowerCase()}.json',
     );
 
     if (!map.containsKey(topicId)) {
@@ -47,10 +47,14 @@ Future<void> preloadGrammarDetailMap() async {
       continue;
     }
 
-    final detail =
-        await GrammarDetailService.loadDetail(entry.key, entry.value);
-    if (detail != null) {
-      grammarDetailMap[entry.key] = detail;
+    try {
+      final detail =
+          await GrammarDetailService.loadDetail(entry.key, entry.value);
+      if (detail != null) {
+        grammarDetailMap[entry.key] = detail;
+      }
+    } catch (e) {
+      // Skip topics whose details cannot be loaded
     }
   }
 }

@@ -1,4 +1,4 @@
-import 'package:deutschlernen_mobile/core/learning/dashboard_summary.dart';
+import 'package:deutschlernen_mobile/features/learning_path/domain/dashboard_logic.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

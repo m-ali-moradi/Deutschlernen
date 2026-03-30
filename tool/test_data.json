@@ -1,0 +1,54 @@
+{
+  "groups": [],
+  "categories": [
+    {
+      "id": "time_management",
+      "groupId": "work_business",
+      "name": "Time Management",
+      "icon": "⏳",
+      "colors": ["0xFF3B82F6", "0xFF1D4ED8"],
+      "sortOrder": 10
+    }
+  ],
+  "words": [
+    {
+      "id": "b11001",
+      "german": "der Termin",
+      "english": "the appointment",
+      "category": "time_management",
+      "group": "work_business",
+      "tag": "Noun",
+      "example": "Ich habe morgen einen wichtigen Termin.",
+      "difficulty": "easy",
+      "isFavorite": false,
+      "dari": "وقت ملاقات",
+      "level": "A2"
+    },
+    {
+      "id": "b11002",
+      "german": "die Frist",
+      "english": "the deadline",
+      "category": "time_management",
+      "group": "work_business",
+      "tag": "Noun",
+      "example": "Wir müssen die Frist unbedingt einhalten.",
+      "difficulty": "medium",
+      "isFavorite": false,
+      "dari": "مهلت",
+      "level": "B1"
+    },
+    {
+      "id": "b11003",
+      "german": "rechtzeitig",
+      "english": "on time / punctually",
+      "category": "time_management",
+      "group": "work_business",
+      "tag": "Adjective/Adverb",
+      "example": "Bitte reichen Sie die Dokumente rechtzeitig ein.",
+      "difficulty": "medium",
+      "isFavorite": false,
+      "dari": "به موقع",
+      "level": "B1"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "67274485975",
+    "project_id": "deutschlernen-7aaf5",
+    "storage_bucket": "deutschlernen-7aaf5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67274485975:android:9cc00762a54a0ca4cdc092",
+        "android_client_info": {
+          "package_name": "com.example.deutschlernen_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH9xpjMwrP8AI3n5KftWoy4HAdNxrary0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

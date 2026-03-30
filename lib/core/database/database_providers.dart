@@ -4,8 +4,10 @@ import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app_database.dart';
-import '../learning/continue_learning.dart';
-import '../learning/dashboard_summary.dart';
+import '../../features/learning_path/domain/dashboard_logic.dart';
+import '../../features/learning_path/domain/continue_learning_logic.dart';
+import '../content/sync/grammar_localization_repository.dart';
+import '../../features/grammar/data/models/grammar_detail_models.dart';
 import '../learning/review_logic.dart';
 import '../learning/vocabulary_review.dart';
 
@@ -335,6 +337,28 @@ final grammarTopicsStreamProvider = StreamProvider.autoDispose((ref) {
   return db.select(db.grammarTopics).watch();
 });
 
+final vocabularyGroupsStreamProvider = StreamProvider.autoDispose((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return (db.select(db.vocabularyGroups)
+        ..orderBy([(t) => OrderingTerm(expression: t.sortOrder)]))
+      .watch();
+});
+
+final vocabularyCategoriesStreamProvider = StreamProvider.autoDispose((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return (db.select(db.vocabularyCategories)
+        ..orderBy([(t) => OrderingTerm(expression: t.sortOrder)]))
+      .watch();
+});
+
+final vocabularyPendingCategoriesStreamProvider =
+    StreamProvider.autoDispose((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return (db.select(db.vocabularyPendingCategories)
+        ..orderBy([(t) => OrderingTerm(expression: t.sortOrder)]))
+      .watch();
+});
+
 /// Provides a set of actions to update app settings and learning progress.
 final appSettingsActionsProvider = Provider<_AppSettingsActions>((ref) {
   return _AppSettingsActions(ref.watch(appDatabaseProvider));
@@ -390,4 +414,27 @@ class _AppSettingsActions {
   Future<void> resetAllUserProgress() => _db.resetAllUserProgress();
 
   Future<void> markOnboardingAsSeen() => _db.markOnboardingAsSeen();
+
+  Future<void> setAutoSync(bool value) => _db.setAutoSync(value);
 }
+
+final localizedGrammarTopicsProvider =
+    FutureProvider.autoDispose<List<GrammarTopic>>((ref) async {
+  final baseTopics = await ref.watch(grammarTopicsStreamProvider.future);
+  final langCode = ref.watch(displayLanguageProvider);
+  final repo = ref.watch(grammarLocalizationRepositoryProvider);
+
+  return repo.getLocalizedTopics(baseTopics, langCode);
+});
+
+final grammarDetailProvider = FutureProvider.family
+    .autoDispose<GrammarDetailData?, String>((ref, topicId) async {
+  final baseTopics = await ref.watch(grammarTopicsStreamProvider.future);
+  final baseTopic = baseTopics.where((t) => t.id == topicId).firstOrNull;
+  final level = baseTopic?.level ?? 'A1';
+
+  final repo = ref.watch(grammarLocalizationRepositoryProvider);
+  final langCode = ref.watch(displayLanguageProvider);
+
+  return repo.getDetailTopic(topicId, level, langCode);
+});

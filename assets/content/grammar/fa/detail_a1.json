@@ -1,0 +1,54 @@
+{
+  "g1": {
+    "id": "g1",
+    "subtitle": "حروف تعریف · اسامی",
+    "emoji": "📘",
+    "gradient": [
+      "#3B82F6",
+      "#4F46E5"
+    ],
+    "levelBg": "#DCFCE7",
+    "levelText": "#16A34A",
+    "sections": [
+      {
+        "type": "concept",
+        "title": "مفهوم پایه",
+        "text": "هر اسم در زبان آلمانی دارای یک جنسیت گرامری است: مذکر (der)، مؤنث (die) یا خنثی (das). در حالت جمع، تمام جنسیت‌ها از 'die' استفاده می‌کنند. قاعده قابل اعتمادی وجود ندارد — شما باید حرف تعریف را همراه با هر اسم یاد بگیرید.",
+        "bullets": [
+          "der ← مذکر (der Mann, der Tisch)",
+          "die ← مؤنث (die Frau, die Lampe)",
+          "das ← خنثی (das Kind, das Buch)",
+          "die ← تمام جمع‌ها (die Männer, die Frauen)"
+        ]
+      },
+      {
+        "type": "conjugation",
+        "title": "جدول حروف تعریف",
+        "color": "blue",
+        "rows": [
+          {
+            "left": "مذکر",
+            "right": "der Mann"
+          },
+          {
+            "left": "مؤنث",
+            "right": "die Frau"
+          },
+          {
+            "left": "خنثی",
+            "right": "das Kind"
+          },
+          {
+            "left": "جمع",
+            "right": "die Kinder"
+          }
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "اسم‌هایی که به -ung، -heit، -keit، -schaft، -tion ختم می‌شوند معمولاً مؤنث (die) هستند. اسم‌هایی که به -chen، -lein ختم می‌شوند همیشه خنثی (das) هستند.",
+        "variant": "info"
+      }
+    ]
+  }
+}

@@ -27,6 +27,10 @@ part 'app_database.g.dart';
     Achievements,
     UserStats,
     UserPreferences,
+    VocabularyGroups,
+    VocabularyCategories,
+    VocabularyPendingCategories,
+    GrammarDetails,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -53,7 +57,7 @@ class AppDatabase extends _$AppDatabase {
   ///
   /// Incremented when tables or columns change.
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 11;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -75,8 +79,47 @@ class AppDatabase extends _$AppDatabase {
             await m.createTable(vocabularyWords);
           }
           if (from < 4) {
+            try {
+              await m.addColumn(
+                  userPreferences, userPreferences.hasSeenOnboarding);
+            } catch (_) {}
+          }
+          if (from < 5) {
+            try {
+              await m.addColumn(userPreferences, userPreferences.autoSync);
+            } catch (_) {}
+          }
+          if (from < 6) {
+            try {
+              await m.addColumn(vocabularyWords, vocabularyWords.level);
+            } catch (_) {}
+          }
+          if (from < 7) {
+            await m.createTable(vocabularyGroups);
+            await m.createTable(vocabularyCategories);
+          }
+          if (from < 8) {
             await m.addColumn(
-                userPreferences, userPreferences.hasSeenOnboarding);
+                vocabularyCategories, vocabularyCategories.isCached);
+            await m.createTable(vocabularyPendingCategories);
+          }
+          if (from < 9) {
+            try {
+              await m.addColumn(
+                  vocabularyCategories, vocabularyCategories.wordCount);
+            } catch (_) {}
+            try {
+              await m.addColumn(vocabularyPendingCategories,
+                  vocabularyPendingCategories.wordCount);
+            } catch (_) {}
+          }
+          if (from < 10) {
+            await m.createTable(grammarDetails);
+          }
+          if (from < 11) {
+            try {
+              await m.addColumn(grammarDetails, grammarDetails.category);
+            } catch (_) {}
           }
           await createManualIndexes();
         },
@@ -88,7 +131,9 @@ class AppDatabase extends _$AppDatabase {
               await _seedInitialData(force: true);
             } else if ((details.versionBefore ?? 0) > 0 &&
                 (details.versionBefore ?? 0) < schemaVersion) {
-              // Future migration seeding could go here
+              if ((details.versionBefore ?? 0) < 8) {
+                await _seedInitialData(force: true);
+              }
             }
 
             await _seedIfContentMissing();
@@ -100,6 +145,9 @@ class AppDatabase extends _$AppDatabase {
   Future<void> createManualIndexes() async {
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_vocab_category ON vocabulary_words (category)',
+    );
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_level ON vocabulary_words (level)',
     );
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_vocab_difficulty ON vocabulary_words (difficulty)',
@@ -146,13 +194,26 @@ class AppDatabase extends _$AppDatabase {
     final exerciseCount = exerciseCountRow.read(exerciseCountExp) ?? 0;
     final grammarCount = grammarCountRow.read(grammarCountExp) ?? 0;
 
-    if (vocabCount == 0 || exerciseCount == 0 || grammarCount == 0) {
+    final groupCountRow =
+        await customSelect('SELECT COUNT(*) AS c FROM vocabulary_groups')
+            .getSingle();
+    final groupCount = (groupCountRow.data['c'] as int?) ?? 0;
+
+    if (vocabCount == 0 ||
+        exerciseCount == 0 ||
+        grammarCount == 0 ||
+        groupCount == 0) {
       await _seedInitialData();
+      await _migrateLegacyCategories(this);
       return;
     }
 
+    // Always run migration to ensure any legacy categories in existing words match the new UI
+    await _migrateLegacyCategories(this);
+
     // Weekly reset check
-    final stats = await (select(userStats)..where((t) => t.id.equals(1))).getSingleOrNull();
+    final stats = await (select(userStats)..where((t) => t.id.equals(1)))
+        .getSingleOrNull();
     if (stats != null) {
       final now = DateTime.now();
       final lastWeek = _getIsoWeek(stats.updatedAt);
@@ -171,7 +232,7 @@ class AppDatabase extends _$AppDatabase {
     // _seedInitialData uses insertOrReplace, and we clear old exercises so they are fully synced.
     final allVocabData = await ContentLoader.loadMany(ContentAssets.vocabulary);
     final grammarData = await ContentLoader.loadAllLevels(
-      'grammar',
+      'grammar/en',
       ['topics_a1', 'topics_a2', 'topics_b1', 'topics_b2', 'topics_c1'],
     );
     final allExerciseData = await ContentLoader.loadAllLevels(
@@ -228,12 +289,16 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
       ['a1', 'a2', 'b1', 'b2', 'c1'],
     );
     final grammarData = await ContentLoader.loadAllLevels(
-      'grammar',
+      'grammar/en',
       ['topics_a1', 'topics_a2', 'topics_b1', 'topics_b2', 'topics_c1'],
     );
     final achievementsData = await ContentLoader.loadList(
       'assets/content/achievements/achievements.json',
     );
+    final groupsData =
+        await ContentLoader.loadList(ContentAssets.vocabularyGroups);
+    final categoriesData =
+        await ContentLoader.loadList(ContentAssets.vocabularyCategories);
 
     await transaction(() async {
       final existingStats = await (select(userStats)
@@ -263,6 +328,8 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
             .insert(const UserPreferencesCompanion(id: Value(1)));
       }
 
+      await _upsertVocabularyGroups(groupsData);
+      await _upsertVocabularyCategories(categoriesData, isCached: true);
       await _upsertVocabularyContent(vocabulary);
 
       // Clear old exercises to remove any deleted JSON entries (e.g., old vocab exercises)
@@ -378,8 +445,145 @@ ON CONFLICT(id) DO UPDATE SET
     });
   }
 
+  Future<void> _upsertVocabularyGroups(List<Map<String, dynamic>> rows) async {
+    for (final row in rows) {
+      await customStatement(
+        '''
+INSERT INTO vocabulary_groups (id, name, level_range, sort_order)
+VALUES (?, ?, ?, ?)
+ON CONFLICT(id) DO UPDATE SET
+  name = excluded.name,
+  level_range = excluded.level_range,
+  sort_order = excluded.sort_order
+''',
+        [
+          (row['id'] ?? '').toString(),
+          (row['name'] ?? '').toString(),
+          (row['levelRange'] ?? '').toString(),
+          (row['sortOrder'] as num?)?.toInt() ?? 0,
+        ],
+      );
+    }
+  }
+
+  Future<void> _upsertVocabularyCategories(
+    List<Map<String, dynamic>> rows, {
+    bool isCached = true,
+  }) async {
+    for (final row in rows) {
+      await customStatement(
+        '''
+INSERT INTO vocabulary_categories (id, group_id, name, icon, gradient_colors_json, sort_order, is_cached)
+VALUES (?, ?, ?, ?, ?, ?, ?)
+ON CONFLICT(id) DO UPDATE SET
+  group_id = excluded.group_id,
+  name = excluded.name,
+  icon = excluded.icon,
+  gradient_colors_json = excluded.gradient_colors_json,
+  sort_order = excluded.sort_order,
+  is_cached = excluded.is_cached
+''',
+        [
+          (row['id'] ?? '').toString(),
+          (row['groupId'] ?? '').toString(),
+          (row['name'] ?? '').toString(),
+          (row['icon'] ?? '').toString(),
+          jsonEncode(row['colors'] ?? []),
+          (row['sortOrder'] as num?)?.toInt() ?? 0,
+          isCached ? 1 : 0,
+        ],
+      );
+    }
+  }
+
+  String _mapLegacyCategory(String category, String tag) {
+    switch (category) {
+      case 'Unternehmensführung':
+        return 'Company';
+      case 'Meetings':
+        return 'Meetings';
+      case 'Akademischer Diskurs':
+        return 'University';
+      case 'Abstrakte Konzepte':
+        return 'Opinions & Arguments';
+      case 'Bildung':
+        return 'School';
+      case 'Bildung & Schule':
+        switch (tag) {
+          case 'University':
+            return 'University';
+          case 'Exams':
+            return 'Exams & Homework';
+          default:
+            return 'School';
+        }
+      case 'Bewerbung':
+        return 'Application & Career';
+      case 'Finanzen':
+        return 'Finance & Accounting';
+      case 'Marketing & Vertrieb':
+        return 'Marketing & Sales';
+      case 'Personalwesen':
+        return 'Human Resources';
+      case 'Visa & Behörden':
+        return 'Authorities & Visa';
+      case 'IT & Technologie':
+      case 'IT & Technik':
+        return 'Software & App';
+      case 'Telekommunikation':
+        return 'Software & App';
+      case 'Berufe':
+        return 'Application & Career';
+      case 'Gesundheit':
+        return 'Doctor & Pharmacy';
+      case 'Alltag & Basics':
+        return 'Greetings';
+      case 'Office':
+        return 'Office & Tasks';
+      default:
+        return category;
+    }
+  }
+
+  Future<void> _migrateLegacyCategories(AppDatabase db) async {
+    final mapping = {
+      'Unternehmensführung': 'Company',
+      'Meetings': 'Meetings',
+      'Verträge': 'Contracts',
+      'Vertrage': 'Contracts',
+      'Akademischer Diskurs': 'University',
+      'Abstrakte Konzepte': 'Opinions & Arguments',
+      'Bildung': 'School',
+      'Bildung & Schule': 'School',
+      'Bewerbung': 'Application & Career',
+      'Finanzen': 'Finance & Accounting',
+      'Marketing & Vertrieb': 'Marketing & Sales',
+      'Personalwesen': 'Human Resources',
+      'Visa & Behörden': 'Authorities & Visa',
+      'IT & Technologie': 'Software & App',
+      'IT & Technik': 'Software & App',
+      'Telekommunikation': 'Software & App',
+      'Berufe': 'Application & Career',
+      'Gesundheit': 'Doctor & Pharmacy',
+      'Alltag & Basics': 'Greetings',
+      'Office': 'Office & Tasks',
+      'Verträge & Recht': 'Government & Law',
+    };
+
+    for (final entry in mapping.entries) {
+      await db.customStatement(
+        'UPDATE vocabulary_words SET category = ? WHERE category = ?',
+        [entry.value, entry.key],
+      );
+    }
+  }
+
   Future<void> _upsertVocabularyContent(List<Map<String, dynamic>> rows) async {
     for (final row in rows) {
+      final category = (row['category'] ?? '').toString();
+      final tag = (row['tag'] ?? '').toString();
+      final mappedCategory = _mapLegacyCategory(category, tag);
+
       await customStatement(
         '''
 INSERT INTO vocabulary_words (
@@ -394,9 +598,10 @@ INSERT INTO vocabulary_words (
   context_dari,
   difficulty,
   is_favorite,
-  is_difficult
+  is_difficult,
+  level
 )
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ON CONFLICT(id) DO UPDATE SET
   german = excluded.german,
   english = excluded.english,
@@ -407,6 +612,7 @@ ON CONFLICT(id) DO UPDATE SET
   context = excluded.context,
   context_dari = excluded.context_dari,
   difficulty = excluded.difficulty,
+  level = excluded.level,
   updated_at = (CAST(strftime('%s', 'now') AS INTEGER) * 1000)
 ''',
         [
@@ -414,14 +620,15 @@ ON CONFLICT(id) DO UPDATE SET
           (row['german'] ?? '').toString(),
           (row['english'] ?? '').toString(),
           (row['dari'] ?? '').toString(),
-          (row['category'] ?? '').toString(),
+          mappedCategory,
           (row['tag'] ?? '').toString(),
           (row['example'] ?? '').toString(),
           (row['context'] ?? '').toString(),
           (row['contextDari'] ?? '').toString(),
-          (row['difficulty'] ?? '').toString(),
+          (row['difficulty'] ?? 'medium').toString(),
           ((row['isFavorite'] as bool?) ?? false) ? 1 : 0,
           ((row['isDifficult'] as bool?) ?? false) ? 1 : 0,
+          (row['level'] ?? 'A1').toString(),
         ],
       );
     }
@@ -480,7 +687,6 @@ WHERE typeof(updated_at) = 'text'
     );
   }
 
-
   /// Saves the result of a vocabulary practice session.
   ///
   /// It calculates when the word should be reviewed next.
@@ -533,10 +739,19 @@ WHERE typeof(updated_at) = 'text'
     );
   }
 
+  /// Sets whether the app should automatically sync cloud content.
+  Future<void> setAutoSync(bool value) {
+    return (update(userPreferences)..where((t) => t.id.equals(1))).write(
+      UserPreferencesCompanion(
+        autoSync: Value(value),
+        updatedAt: Value(DateTime.now()),
+      ),
+    );
+  }
+
   Future<void> reseedContent() async {
     await _seedInitialData();
   }
-
 
   Future<int> _completedGrammarTopicCount() async {
     final rows = await (select(grammarTopics)
@@ -562,8 +777,7 @@ WHERE typeof(updated_at) = 'text'
       if (topicRow == null) return;
 
       // Phase 2: Exact match only
-      await (delete(exerciseAttempts)
-            ..where((t) => t.topic.equals(topicTitle)))
+      await (delete(exerciseAttempts)..where((t) => t.topic.equals(topicTitle)))
           .go();
 
       await (update(grammarTopics)..where((t) => t.id.equals(topicRow.id)))
@@ -585,10 +799,13 @@ WHERE typeof(updated_at) = 'text'
     required bool isCorrect,
     required int xpGained,
   }) async {
-    final exerciseRow = await (select(exercises)..where((t) => t.id.equals(exerciseId))).getSingleOrNull();
+    final exerciseRow = await (select(exercises)
+          ..where((t) => t.id.equals(exerciseId)))
+        .getSingleOrNull();
     if (exerciseRow == null) return;
 
-    final stats = await (select(userStats)..where((t) => t.id.equals(1))).getSingle();
+    final stats =
+        await (select(userStats)..where((t) => t.id.equals(1))).getSingle();
 
     await (update(userStats)..where((t) => t.id.equals(1))).write(
       UserStatsCompanion(
@@ -614,27 +831,37 @@ WHERE typeof(updated_at) = 'text'
   }
 
   Future<void> _syncGrammarCompletionForExercise(String exerciseId) async {
-    final attemptRef = await (select(exercises)..where((t) => t.id.equals(exerciseId))).getSingleOrNull();
+    final attemptRef = await (select(exercises)
+          ..where((t) => t.id.equals(exerciseId)))
+        .getSingleOrNull();
     if (attemptRef == null) return;
 
     final topicTitle = attemptRef.topic;
     if (topicTitle.isEmpty) return;
 
     // Phase 2: Exact match only for reliability
-    final topic = await (select(grammarTopics)..where((t) => t.title.equals(topicTitle))).getSingleOrNull();
+    final topic = await (select(grammarTopics)
+          ..where((t) => t.title.equals(topicTitle)))
+        .getSingleOrNull();
 
     if (topic != null) {
-      final allLinkedExercises = await (select(exercises)..where((t) => t.topic.equals(topic.title))).get();
+      final allLinkedExercises = await (select(exercises)
+            ..where((t) => t.topic.equals(topic.title)))
+          .get();
       final linkedIds = allLinkedExercises.map((e) => e.id).toList();
 
       if (linkedIds.isEmpty) return;
 
       final correctAttempts = await (select(exerciseAttempts)
-            ..where((t) => t.exerciseId.isIn(linkedIds) & t.isCorrect.equals(true)))
+            ..where(
+                (t) => t.exerciseId.isIn(linkedIds) & t.isCorrect.equals(true)))
           .get();
 
-      final distinctCorrectIds = correctAttempts.map((a) => a.exerciseId).toSet();
-      final progress = ((distinctCorrectIds.length / linkedIds.length) * 100).round().clamp(0, 100);
+      final distinctCorrectIds =
+          correctAttempts.map((a) => a.exerciseId).toSet();
+      final progress = ((distinctCorrectIds.length / linkedIds.length) * 100)
+          .round()
+          .clamp(0, 100);
 
       await (update(grammarTopics)..where((t) => t.id.equals(topic.id))).write(
         GrammarTopicsCompanion(
@@ -668,6 +895,7 @@ WHERE typeof(updated_at) = 'text'
     final base = await getApplicationDocumentsDirectory();
     return File(p.join(base.path, 'deutschlernen.sqlite'));
   }
+
   /// Remembers that the user has seen the "Quick Start" guide.
   Future<void> markOnboardingAsSeen() async {
     await (update(userPreferences)..where((t) => t.id.equals(1)))

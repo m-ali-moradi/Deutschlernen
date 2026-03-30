@@ -12,6 +12,7 @@ class VocabularyWords extends Table {
   TextColumn get example => text()();
   TextColumn get context => text()();
   TextColumn get contextDari => text()();
+  TextColumn get level => text().withDefault(const Constant('A1'))();
   TextColumn get difficulty => text()();
   BoolColumn get isFavorite => boolean().withDefault(const Constant(false))();
   BoolColumn get isDifficult => boolean().withDefault(const Constant(false))();
@@ -39,6 +40,54 @@ class VocabularyProgress extends Table {
   Set<Column<Object>> get primaryKey => {wordId};
 }
 
+/// This table defines logical groups for vocabulary categories.
+/// Groups like "Work & Business" or "Daily Life Basics".
+@DataClassName('VocabularyGroupEntity')
+class VocabularyGroups extends Table {
+  TextColumn get id => text()();
+  TextColumn get name => text()();
+  TextColumn get levelRange => text()();
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+
+  @override
+  Set<Column<Object>> get primaryKey => {id};
+}
+
+/// This table defines specific categories within a group.
+/// E.g., "Meetings" inside "Work & Business".
+@DataClassName('VocabularyCategoryEntity')
+class VocabularyCategories extends Table {
+  TextColumn get id => text()();
+  TextColumn get groupId => text().references(VocabularyGroups, #id)();
+  // Name is used for internal reference and labeling.
+  TextColumn get name => text()();
+  TextColumn get icon => text()();
+  // Store gradient colors as a JSON string for flexibility.
+  TextColumn get gradientColorsJson => text()();
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+  IntColumn get wordCount => integer().withDefault(const Constant(0))();
+  BoolColumn get isCached => boolean().withDefault(const Constant(true))();
+
+  @override
+  Set<Column<Object>> get primaryKey => {id};
+}
+
+/// This table stores categories discovered from the cloud but not yet downloaded.
+/// They are shown as group updates until the user downloads them locally.
+@DataClassName('VocabularyPendingCategoryEntity')
+class VocabularyPendingCategories extends Table {
+  TextColumn get id => text()();
+  TextColumn get groupId => text()();
+  TextColumn get name => text()();
+  TextColumn get icon => text()();
+  TextColumn get gradientColorsJson => text()();
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+  IntColumn get wordCount => integer().withDefault(const Constant(0))();
+
+  @override
+  Set<Column<Object>> get primaryKey => {id};
+}
+
 /// This table is for grammar lessons.
 /// Each row represents a topic like "Präsens", "Artikel", or "Passiv".
 class GrammarTopics extends Table {
@@ -55,6 +104,26 @@ class GrammarTopics extends Table {
 
   @override
   Set<Column<Object>> get primaryKey => {id};
+}
+
+/// This table caches the rich detail JSON payloads and translated metadata
+/// for grammar topics downloaded from the cloud or cached for offline use.
+class GrammarDetails extends Table {
+  TextColumn get topicId => text()();
+  TextColumn get languageCode => text()();
+  
+  TextColumn get title => text().nullable()();
+  TextColumn get category => text().nullable()();
+  TextColumn get rule => text().nullable()();
+  TextColumn get explanation => text().nullable()();
+  TextColumn get examplesJson => text().nullable()();
+  
+  TextColumn get detailJson => text().nullable()();
+  
+  DateTimeColumn get updatedAt => dateTime().withDefault(currentDateAndTime)();
+
+  @override
+  Set<Column<Object>> get primaryKey => {topicId, languageCode};
 }
 
 /// This table stores all the practice questions (exercises).
@@ -127,6 +196,7 @@ class UserPreferences extends Table {
   TextColumn get displayLanguage => text().withDefault(const Constant('en'))();
   BoolColumn get hasSeenOnboarding =>
       boolean().withDefault(const Constant(false))();
+  BoolColumn get autoSync => boolean().withDefault(const Constant(false))();
   DateTimeColumn get updatedAt => dateTime().withDefault(currentDateAndTime)();
 
   @override
