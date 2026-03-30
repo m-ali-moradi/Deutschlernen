@@ -1,0 +1,79 @@
+﻿{
+    "id":  "g35",
+    "title":  "Nominalstil",
+    "level":  "B2",
+    "category":  "Satzbau",
+    "icon":  "🏛️",
+    "rule":  "Nominale Ausdrücke ersetzen Nebensätze in formellen Texten.",
+    "explanation":  "Nominal style replaces verb phrases with noun phrases. Characteristic of academic, legal, and formal German.",
+    "examples":  [
+                     "Nach der Analyse der Daten...",
+                     "Aufgrund des Kostenanstiegs...",
+                     "Trotz des schlechten Wetters..."
+                 ],
+    "detail":  {
+                   "id":  "g35",
+                   "subtitle":  "Nominalstil · Formelle Sprache",
+                   "emoji":  "📝",
+                   "gradient":  [
+                                    "#475569",
+                                    "#334155"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Nominalstil · Nominal Style",
+                                        "text":  "Formal German uses noun-heavy constructions (Nominalstil) instead of verbal constructions. This condenses information into fewer clauses.",
+                                        "bullets":  [
+                                                        "Verbal: Er analysierte die Daten gestern.",
+                                                        "Nominal: Die gestrige Analyse der Daten ...",
+                                                        "Very common in official documents, academic writing, news"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Verbal → Nominal",
+                                        "from":  {
+                                                     "label":  "VERBAL",
+                                                     "text":  "Er hat die Daten analysiert."
+                                                 },
+                                        "to":  {
+                                                   "label":  "NOMINAL",
+                                                   "text":  "Die Analyse der Daten erfolgte durch ihn."
+                                               },
+                                        "note":  "Verb becomes noun, sentence structure changes"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Nominalstil in der Praxis",
+                                        "color":  "slate",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Die Durchführung der Analyse dauerte zwei Tage.",
+                                                          "en":  "The execution of the analysis took two days."
+                                                      },
+                                                      {
+                                                          "de":  "Nach Abschluss der Prüfung erfolgt die Auswertung.",
+                                                          "en":  "After completion of the exam, the evaluation follows."
+                                                      },
+                                                      {
+                                                          "de":  "Die Verbesserung der Prozesse ist notwendig.",
+                                                          "en":  "The improvement of processes is necessary."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Verbs → nouns: analysieren → die Analyse, verbessern → die Verbesserung.",
+                                                      "Prepositions link noun phrases: nach, durch, bei, infolge.",
+                                                      "Common in law, science, journalism, and business.",
+                                                      "Makes texts denser and more formal but harder to read."
+                                                  ]
+                                    }
+                                ]
+               }
+}

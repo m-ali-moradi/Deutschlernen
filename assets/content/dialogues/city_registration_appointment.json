@@ -1,0 +1,160 @@
+{
+    "id": "city_registration_appointment",
+    "title": "Bürgeramt Anmeldung",
+    "english_title": "Address Registration",
+    "level": "A1",
+    "category": "Amtssprache",
+    "description": "Learn how to register your address (Anmeldung) in Germany, a mandatory step for every resident.",
+    "icon": "registration",
+    "image": "assets/images/dialogues/city_registration_appointment.png",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Guten Tag, wie kann ich Ihnen helfen?",
+            "english": "Good day, how can I help you?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag, ich möchte mich anmelden.",
+            "english": "Good day, I would like to register my address."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Haben Sie einen Termin?",
+            "english": "Do you have an appointment?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, ich habe um 10 Uhr einen Termin.",
+            "english": "Yes, I have an appointment at 10 o’clock."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Darf ich bitte Ihren Ausweis oder Reisepass sehen?",
+            "english": "May I please see your ID or passport?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, hier ist mein Reisepass.",
+            "english": "Yes, here is my passport."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Haben Sie die Wohnungsgeberbestätigung dabei?",
+            "english": "Do you have the landlord confirmation?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, hier ist die Wohnungsgeberbestätigung.",
+            "english": "Yes, here is the landlord confirmation."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Seit wann wohnen Sie in dieser Wohnung?",
+            "english": "Since when have you been living in this apartment?"
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Seit dem 1. März 2026.",
+            "english": "Since March 1, 2026."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Sind Sie ledig, verheiratet oder geschieden?",
+            "english": "Are you single, married, or divorced?"
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich bin ledig.",
+            "english": "I am single."
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Welche Staatsangehörigkeit haben Sie?",
+            "english": "What is your nationality?"
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich habe die afghanische Staatsangehörigkeit.",
+            "english": "I have Afghan nationality."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Möchten Sie Ihre Religionszugehörigkeit angeben?",
+            "english": "Would you like to state your religion?"
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, das möchte ich nicht angeben.",
+            "english": "No, I do not want to state that."
+        },
+        {
+            "id": 17,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Alles klar. Ich bearbeite jetzt Ihre Anmeldung.",
+            "english": "Alright. I will process your registration now."
+        },
+        {
+            "id": 18,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Hier ist Ihre Meldebestätigung.",
+            "english": "Here is your registration confirmation."
+        },
+        {
+            "id": 19,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank.",
+            "english": "Thank you very much."
+        },
+        {
+            "id": 20,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Gern geschehen. Einen schönen Tag noch!",
+            "english": "You’re welcome. Have a nice day!"
+        },
+        {
+            "id": 21,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke, Ihnen auch! Auf Wiedersehen.",
+            "english": "Thanks, you too! Goodbye."
+        }
+        
+    ]
+}

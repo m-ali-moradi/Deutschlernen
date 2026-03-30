@@ -1,0 +1,186 @@
+{
+    "topic": "Genitiv",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g42_1",
+            "type": "multiple-choice",
+            "question": "Das ist das Haus ___ Mannes.",
+            "options": [
+                "den",
+                "des",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g42_2",
+            "type": "multiple-choice",
+            "question": "Wegen ___ Regens bleiben wir zu Hause.",
+            "options": [
+                "dem",
+                "den",
+                "des",
+                "der"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g42_3",
+            "type": "multiple-choice",
+            "question": "Die Blätter ___ Baumes fallen ab.",
+            "options": [
+                "den",
+                "der",
+                "des",
+                "dem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g42_4",
+            "type": "multiple-choice",
+            "question": "Während ___ Sommers ist es hier oft unerträglich heiß.",
+            "options": [
+                "der",
+                "den",
+                "dem",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g42_5",
+            "type": "multiple-choice",
+            "question": "Innerhalb ___ Woche muss diese Arbeit fertig sein.",
+            "options": [
+                "eines",
+                "der",
+                "eine",
+                "einer"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g42_6",
+            "type": "multiple-choice",
+            "question": "Die Farbe ___ neuen Autos gefällt mir sehr.",
+            "options": [
+                "der",
+                "den",
+                "des",
+                "dem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_genitiv_7",
+            "type": "multiple-choice",
+            "question": "Das Haus ___ Lehrers ist groß.",
+            "options": [
+                "der",
+                "dem",
+                "des",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_genitiv_8",
+            "type": "multiple-choice",
+            "question": "Das Auto ___ Frau ist neu.",
+            "options": [
+                "der",
+                "dem",
+                "den",
+                "das"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_genitiv_9",
+            "type": "multiple-choice",
+            "question": "Das Spielzeug ___ Kindes ist kaputt.",
+            "options": [
+                "der",
+                "dem",
+                "den",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_genitiv_10",
+            "type": "multiple-choice",
+            "question": "Wegen ___ schlechten Wetters bleiben wir zu Hause.",
+            "options": [
+                "den",
+                "des",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_genitiv_11",
+            "type": "multiple-choice",
+            "question": "Trotz ___ Regens gehen wir spazieren.",
+            "options": [
+                "der",
+                "dem",
+                "des",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_genitiv_12",
+            "type": "multiple-choice",
+            "question": "Während ___ Urlaubs haben wir viel gelesen.",
+            "options": [
+                "den",
+                "der",
+                "dem",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_genitiv_13",
+            "type": "multiple-choice",
+            "question": "Die Farbe ___ Hauses gefällt mir.",
+            "options": [
+                "dem",
+                "des",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_genitiv_14",
+            "type": "multiple-choice",
+            "question": "Ich kenne den Preis ___ Kleides nicht.",
+            "options": [
+                "dem",
+                "des",
+                "der",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_genitiv_15",
+            "type": "multiple-choice",
+            "question": "Der Name ___ Mannes ist mir entfallen.",
+            "options": [
+                "dem",
+                "den",
+                "der",
+                "des"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

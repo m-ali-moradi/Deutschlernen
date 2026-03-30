@@ -1,0 +1,84 @@
+﻿{
+    "id":  "g51",
+    "title":  "Nomen-Verb-Verbindungen",
+    "level":  "C1",
+    "category":  "Verben",
+    "icon":  "🔗",
+    "rule":  "Feste Verbindungen: in Betracht ziehen, Bescheid geben, in Kauf nehmen.",
+    "explanation":  "Fixed noun-verb collocations essential in formal/academic German. The verb is often \u0027light\u0027 and the noun carries meaning.",
+    "examples":  [
+                     "Ich ziehe das in Betracht.",
+                     "Bitte geben Sie mir Bescheid.",
+                     "Das müssen wir in Kauf nehmen."
+                 ],
+    "detail":  {
+                   "id":  "g51",
+                   "subtitle":  "Nomen-Verb-Verbindungen · Kollokationen",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#10B981",
+                                    "#059669"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Feste Nomen-Verb-Verbindungen",
+                                        "text":  "Diese Verbindungen sind lexikalische Einheiten: Das Nomen trägt die zentrale Bedeutung, das Verb ist oft ein schwaches Verb. Auf C1-Niveau sind sie in akademischem, juristischem, administrativem und beruflichem Deutsch besonders wichtig."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Typische Verbindungen",
+                                        "color":  "emerald",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "in Betracht ziehen",
+                                                         "right":  "to consider"
+                                                     },
+                                                     {
+                                                         "left":  "Bescheid geben",
+                                                         "right":  "to let someone know"
+                                                     },
+                                                     {
+                                                         "left":  "in Kauf nehmen",
+                                                         "right":  "to accept/tolerate"
+                                                     },
+                                                     {
+                                                         "left":  "zur Verfügung stehen",
+                                                         "right":  "to be available"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Gebrauch",
+                                        "color":  "green",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wir ziehen mehrere Lösungen in Betracht.",
+                                                          "en":  "We are considering several solutions."
+                                                      },
+                                                      {
+                                                          "de":  "Bitte geben Sie mir bis morgen Bescheid.",
+                                                          "en":  "Please let me know by tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Diese Verzögerung müssen wir wohl in Kauf nehmen.",
+                                                          "en":  "We will probably have to accept this delay."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Lerne diese Ausdrücke als feste Einheiten und nicht als einzelne Wörter.",
+                                                      "Das Nomen bestimmt meist die Bedeutung; das Verb bleibt oft allgemein.",
+                                                      "Sie kommen besonders häufig in formellem Schriftdeutsch vor.",
+                                                      "Artikel und Präpositionen gehören zur festen Wendung dazu."
+                                                  ]
+                                    }
+                                ]
+               }
+}

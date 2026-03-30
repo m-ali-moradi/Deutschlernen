@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../domain/grammar_providers.dart';
-import '../../domain/grammar_view_providers.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_providers.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_view_providers.dart';
 
+/// Archeived class
 /// A sleek text input field for filtering grammar topics.
 ///
 /// This widget automatically disappears if `grammarIsSearchingProvider` is false.
@@ -72,3 +73,6 @@ class _GrammarSearchBarState extends ConsumerState<GrammarSearchBar> {
     );
   }
 }
+
+
+

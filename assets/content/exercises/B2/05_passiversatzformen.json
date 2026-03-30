@@ -1,0 +1,186 @@
+{
+    "topic": "Passiversatzformen",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g47_1",
+            "type": "multiple-choice",
+            "question": "Das Problem ___ sich leicht lösen. (= kann gelöst werden)",
+            "options": [
+                "ist",
+                "wird",
+                "muss",
+                "lässt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g47_2",
+            "type": "multiple-choice",
+            "question": "Die Aufgabe ___ bis morgen zu erledigen. (= muss erledigt werden)",
+            "options": [
+                "lässt",
+                "hat",
+                "wird",
+                "ist"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g47_3",
+            "type": "multiple-choice",
+            "question": "Das Wasser ist nicht ___. (trinken + bar)",
+            "options": [
+                "trinklich",
+                "trinkend",
+                "getrunken",
+                "trinkbar"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g47_4",
+            "type": "multiple-choice",
+            "question": "Die Schrift auf dem alten Brief ist kaum noch ___.",
+            "options": [
+                "lesbar",
+                "leserlich",
+                "lesend",
+                "gelesen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g47_5",
+            "type": "multiple-choice",
+            "question": "Hier ___ man laut Schild absolut nicht rauchen.",
+            "options": [
+                "lässt",
+                "ist",
+                "wird",
+                "darf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g47_6",
+            "type": "multiple-choice",
+            "question": "Das alte Auto ___ sich leider nicht mehr reparieren.",
+            "options": [
+                "lässt",
+                "wird",
+                "kann",
+                "ist"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_passiversatzformen_7",
+            "type": "multiple-choice",
+            "question": "Das Problem lässt ___ lösen.",
+            "options": [
+                "sich",
+                "es",
+                "mich",
+                "ihn"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_passiversatzformen_8",
+            "type": "multiple-choice",
+            "question": "Diese Schrift ist kaum ___ (lesen).",
+            "options": [
+                "gelesen",
+                "lesbar",
+                "leserlich",
+                "lesend"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_passiversatzformen_9",
+            "type": "multiple-choice",
+            "question": "Dieses Wasser ist nicht ___ (trinken).",
+            "options": [
+                "trinkbar",
+                "getränkt",
+                "trinkend",
+                "getrunken"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_passiversatzformen_10",
+            "type": "multiple-choice",
+            "question": "Die Tür ___ sich nicht öffnen.",
+            "options": [
+                "lässt",
+                "kann",
+                "ist",
+                "wird"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_passiversatzformen_11",
+            "type": "multiple-choice",
+            "question": "Die Aufgabe ist kaum zu ___ (schaffen).",
+            "options": [
+                "geschafft",
+                "schaffbar",
+                "schaffend",
+                "schaffen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_passiversatzformen_12",
+            "type": "multiple-choice",
+            "question": "Das ist eine ___ (verstehen) Reaktion.",
+            "options": [
+                "verstandene",
+                "verstehbare",
+                "verständliche",
+                "verstehende"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_passiversatzformen_13",
+            "type": "multiple-choice",
+            "question": "Die Rechnung ist innerhalb von 14 Tagen zu ___.",
+            "options": [
+                "bezahlbar",
+                "bezahlend",
+                "bezahlt",
+                "bezahlen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_passiversatzformen_14",
+            "type": "multiple-choice",
+            "question": "Dieser Pilz ist nicht ___ (essen).",
+            "options": [
+                "gegessen",
+                "essbar",
+                "esslich",
+                "essend"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_passiversatzformen_15",
+            "type": "multiple-choice",
+            "question": "Der Brief lässt ___ nicht entziffern.",
+            "options": [
+                "sich",
+                "dich",
+                "ihn",
+                "es"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

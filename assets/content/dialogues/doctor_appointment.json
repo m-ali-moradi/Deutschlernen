@@ -1,0 +1,165 @@
+{
+    "id": "doctor_appointment",
+    "title": "Beim Arzt",
+    "english_title": "At the Doctor",
+    "level": "A2",
+    "category": "Gesundheit",
+    "description": "You want to visit the doctor .",
+    "icon": "medical_services_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Rezeption",
+            "german": "Guten Tag, wie kann ich Ihnen helfen?",
+            "english": "Good day, how can I help you?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag, ich möchte einen Termin vereinbaren.",
+            "english": "Good day, I would like to make an appointment."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Rezeption",
+            "german": "Worum geht es?",
+            "english": "What is it about?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich habe seit zwei Tagen Fieber und Husten.",
+            "english": "I have had a fever and cough for two days."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Rezeption",
+            "german": "Haben Sie heute Zeit oder passt Ihnen morgen besser?",
+            "english": "Do you have time today or is tomorrow better for you?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Heute wäre gut.",
+            "english": "Today would be good."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Rezeption",
+            "german": "Können Sie um 15 Uhr kommen?",
+            "english": "Can you come at 3 PM?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, das passt.",
+            "english": "Yes, that works."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Rezeption",
+            "german": "Bitte bringen Sie Ihre Gesundheitskarte mit.",
+            "english": "Please bring your health insurance card."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, mache ich. Vielen Dank.",
+            "english": "Yes, I will. Thank you."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Guten Tag, was kann ich für Sie tun?",
+            "english": "Good day, what can I do for you?"
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich habe Fieber, Husten und Halsschmerzen.",
+            "english": "I have a fever, cough, and sore throat."
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Seit wann haben Sie diese Symptome?",
+            "english": "Since when have you had these symptoms?"
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Seit etwa zwei Tagen.",
+            "english": "For about two days."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Haben Sie Medikamente genommen?",
+            "english": "Have you taken any medication?"
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, noch nicht.",
+            "english": "No, not yet."
+        },
+        {
+            "id": 17,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Ich werde Sie jetzt untersuchen.",
+            "english": "I will examine you now."
+        },
+        {
+            "id": 18,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Sie haben eine Erkältung. Ich verschreibe Ihnen Medikamente.",
+            "english": "You have a cold. I will prescribe you medication."
+        },
+        {
+            "id": 19,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Brauche ich eine Krankschreibung?",
+            "english": "Do I need a sick note?"
+        },
+        {
+            "id": 20,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Ja, ich schreibe Sie für drei Tage krank.",
+            "english": "Yes, I will give you sick leave for three days."
+        },
+        {
+            "id": 21,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank.",
+            "english": "Thank you very much."
+        },
+        {
+            "id": 22,
+            "sender": "left",
+            "role": "Arzt",
+            "german": "Gute Besserung!",
+            "english": "Get well soon!"
+        }
+    ]
+}

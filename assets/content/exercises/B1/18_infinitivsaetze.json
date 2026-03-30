@@ -1,0 +1,193 @@
+{
+    "topic": "InfinitivsÃ¤tze",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "ex_fb_b1_4",
+            "type": "fill-blank",
+            "question": "Er arbeitet, ___ Geld zu verdienen.",
+            "options": [
+                "damit",
+                "dass",
+                "weil",
+                "um"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "ex_so_b1_5",
+            "type": "sentence-order",
+            "question": "Er hat vergessen, den Müll wegzubringen.",
+            "options": [
+                "den",
+                "Müll",
+                "vergessen",
+                "Er",
+                "hat",
+                "wegzubringen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_b1_6",
+            "type": "sentence-order",
+            "question": "Wir müssen uns beeilen, um den Zug zu erwischen.",
+            "options": [
+                "um",
+                "Zug",
+                "den",
+                "beeilen",
+                "Wir",
+                "müssen",
+                "uns",
+                "zu",
+                "erwischen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_infinitivsaetze_4",
+            "type": "multiple-choice",
+            "question": "Ich habe vor, am Wochenende nach Paris ___.",
+            "options": [
+                "fahren",
+                "gefahren",
+                "zu fahren",
+                "zu fährt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_infinitivsaetze_5",
+            "type": "multiple-choice",
+            "question": "Es ist verboten, hier ___.",
+            "options": [
+                "parken",
+                "geparkt",
+                "zu parken",
+                "zu parkt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_infinitivsaetze_6",
+            "type": "multiple-choice",
+            "question": "Ich verspreche dir, pünktlich ___.",
+            "options": [
+                "sein",
+                "zu sein",
+                "zu ist",
+                "gewesen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_infinitivsaetze_7",
+            "type": "multiple-choice",
+            "question": "Hast du Lust, heute Abend ins Kino ___?",
+            "options": [
+                "zu geht",
+                "gehen",
+                "gegangen",
+                "zu gehen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_infinitivsaetze_8",
+            "type": "multiple-choice",
+            "question": "Er hat vergessen, die Tür ___.",
+            "options": [
+                "zu abschließen",
+                "abzuschließen",
+                "abschließen zu",
+                "abgeschlossen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_infinitivsaetze_9",
+            "type": "multiple-choice",
+            "question": "Ist es möglich, das Ticket online ___?",
+            "options": [
+                "zu kaufen",
+                "kaufen",
+                "zu kauft",
+                "gekauft"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_infinitivsaetze_10",
+            "type": "multiple-choice",
+            "question": "Sie versucht, weniger Kaffee ___.",
+            "options": [
+                "getrunken",
+                "zu trinken",
+                "zu trinkt",
+                "trinken"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_infinitivsaetze_11",
+            "type": "multiple-choice",
+            "question": "Es macht keinen Spaß, im Regen ___.",
+            "options": [
+                "zu warten",
+                "zu wartet",
+                "warten",
+                "gewartet"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_infinitivsaetze_12",
+            "type": "multiple-choice",
+            "question": "Ich beginne bald, Spanisch ___.",
+            "options": [
+                "gelernt",
+                "zu lernen",
+                "lernen",
+                "zu lernt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_infinitivsaetze_13",
+            "type": "multiple-choice",
+            "question": "Es ist wichtig, jeden Tag Vokabeln ___.",
+            "options": [
+                "wiederholen",
+                "zu wiederholt",
+                "wiederholt",
+                "zu wiederholen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_infinitivsaetze_14",
+            "type": "multiple-choice",
+            "question": "Er weigert sich, mir das Geheimnis ___.",
+            "options": [
+                "verraten zu",
+                "verraten",
+                "zu verraten",
+                "zu verrät"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_infinitivsaetze_15",
+            "type": "multiple-choice",
+            "question": "Sie plant, nächstes Jahr ___.",
+            "options": [
+                "ausgewandert",
+                "zu auswandern",
+                "auszuwandern",
+                "auswandern zu"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

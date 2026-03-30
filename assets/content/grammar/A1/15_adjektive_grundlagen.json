@@ -1,0 +1,109 @@
+﻿{
+    "id":  "g15",
+    "title":  "Adjektive Grundlagen",
+    "level":  "A1",
+    "category":  "Adjektive",
+    "icon":  "🎨",
+    "rule":  "Prädikativ (nach sein): keine Endung. Attributiv (vor Nomen): mit Endung.",
+    "explanation":  "Predicate adjectives (after sein) have no ending. Attributive adjectives (before nouns) take endings based on gender, case, and article type.",
+    "examples":  [
+                     "Das Buch ist interessant.",
+                     "Der große Mann arbeitet hier.",
+                     "Ich lese ein interessantes Buch.",
+                     "Sie hat eine neue Tasche."
+                 ],
+    "detail":  {
+                   "id":  "g15",
+                   "subtitle":  "Adjektive · Grundlagen",
+                   "emoji":  "🎨",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#8B5CF6"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Prädikative vs. Attributive Adjektive",
+                                        "text":  "Adjectives after sein/werden (predicate) have NO ending. Adjectives placed BEFORE a noun (attributive) must take an ending matching gender, case, and article.",
+                                        "bullets":  [
+                                                        "Prädikativ: Das Auto ist schnell. (no ending)",
+                                                        "Attributiv: Das schnellE Auto fährt. (with ending)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Prädikative Adjektive (kein Endung)",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das Buch ist interessant.",
+                                                          "en":  "The book is interesting."
+                                                      },
+                                                      {
+                                                          "de":  "Der Film war gut.",
+                                                          "en":  "The film was good."
+                                                      },
+                                                      {
+                                                          "de":  "Die Blumen sind schön.",
+                                                          "en":  "The flowers are beautiful."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Adjektivendungen nach bestimmtem Artikel",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Maskulin",
+                                                        "Feminin",
+                                                        "Neutrum"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nominativ",
+                                                         "der alt-e Mann",
+                                                         "die alt-e Frau",
+                                                         "das alt-e Kind"
+                                                     ],
+                                                     [
+                                                         "Akkusativ",
+                                                         "den alt-en Mann",
+                                                         "die alt-e Frau",
+                                                         "das alt-e Kind"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Attributive Adjektive",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der große Mann arbeitet hier.",
+                                                          "en":  "The tall man works here."
+                                                      },
+                                                      {
+                                                          "de":  "Ich lese ein interessantes Buch.",
+                                                          "en":  "I\u0027m reading an interesting book."
+                                                      },
+                                                      {
+                                                          "de":  "Sie hat eine neue Tasche.",
+                                                          "en":  "She has a new bag."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "After sein, werden, bleiben → NO ending: Das Haus ist groß.",
+                                                      "Before a noun → ALWAYS an ending: ein großES Haus.",
+                                                      "After der/die/das → mostly -e or -en.",
+                                                      "After ein → adjective shows the gender: ein großER Mann, ein großES Kind."
+                                                  ]
+                                    }
+                                ]
+               }
+}

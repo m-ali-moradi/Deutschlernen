@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/database/database_providers.dart';
-import '../../core/theme/app_tokens.dart';
+import 'package:flutter/services.dart';
+
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
 import '../localization/app_ui_text.dart';
 
 // ─── Nav item model ───────────────────────────────────────────────────────────
@@ -17,17 +19,20 @@ class _NavItem {
   final IconData icon, activeIcon;
 }
 
-// ─── AppShellScaffold ─────────────────────────────────────────────────────────
-/// Wrap page content in this widget. It provides the bottom nav bar.
-/// Usage in router: place this as the shell for all top-level routes.
+/// The primary layout wrapper for top-level application screens.
+///
+/// This scaffold provides:
+/// *   **Persistent Navigation**: A bottom navigation bar integrated with GoRouter.
+/// *   **Back-Button Management**: A [PopScope] that intercepts system back gestures
+///     to ensure users cycle back to the Home screen ('/') before exiting the app.
+/// *   **Content Selection**: A [SelectionArea] wrapper to support text selection 
+///     across the entire child widget tree.
 class AppShellScaffold extends ConsumerWidget {
   const AppShellScaffold({super.key, required this.child});
   final Widget child;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final location = GoRouterState.of(context).uri.path;
-    final needsTopInset = !location.startsWith('/grammar');
     final strings = AppUiText(ref.watch(displayLanguageProvider));
     final navItems = [
       _NavItem(
@@ -46,10 +51,10 @@ class AppShellScaffold extends ConsumerWidget {
           icon: Icons.library_books_outlined,
           activeIcon: Icons.library_books_rounded),
       _NavItem(
-          path: '/exercises',
-          label: strings.either(german: 'Übungen', english: 'Exercises'),
-          icon: Icons.edit_outlined,
-          activeIcon: Icons.edit_rounded),
+          path: '/practice',
+          label: strings.practiceSectionTitle(),
+          icon: Icons.edit_note_rounded,
+          activeIcon: Icons.edit_note_rounded),
       _NavItem(
           path: '/profile',
           label: strings.either(german: 'Profil', english: 'Profile'),
@@ -57,20 +62,26 @@ class AppShellScaffold extends ConsumerWidget {
           activeIcon: Icons.person_rounded),
     ];
 
-    return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      extendBody: false,
-      body: needsTopInset
-          ? SafeArea(
-              top: true,
-              bottom: false,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 8),
-                child: child,
-              ),
-            )
-          : child,
-      bottomNavigationBar: _BottomNav(navItems: navItems),
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+
+        final state = GoRouterState.of(context);
+        final location = state.uri.path;
+
+        if (location != '/') {
+          context.go('/');
+        } else {
+          SystemNavigator.pop();
+        }
+      },
+      child: Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        extendBody: false,
+        body: SelectionArea(child: child),
+        bottomNavigationBar: _BottomNav(navItems: navItems),
+      ),
     );
   }
 }
@@ -203,3 +214,4 @@ bool _isActiveLocation(String location, String path) {
 
   return location == path || location.startsWith('$path/');
 }
+

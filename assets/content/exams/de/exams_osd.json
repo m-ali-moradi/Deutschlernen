@@ -1,0 +1,470 @@
+[
+  {
+    "id": "osd-a1",
+    "title": "ÖSD Zertifikat A1",
+    "provider": "ÖSD",
+    "level": "A1",
+    "description": "Standard für Einreise- und Aufenthaltsanforderungen für die österreichische Staatsbürgerschaft.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "30 Min.",
+        "description": "Durchsagen, einfache E-Mails und kurze Informationstexte lesen.",
+        "parts": [
+          {
+            "title": "Teil 1: E-Mails/Nachrichten",
+            "description": "2 kurze E-Mails oder Nachrichten lesen und entscheiden, ob 5 Aussagen Richtig oder Falsch sind."
+          },
+          {
+            "title": "Teil 2: Selektives Lesen",
+            "description": "5 kurze Personenbeschreibungen/Situationen lesen und 5 entsprechenden Orten/Anzeigen zuordnen (Selektives Lesen)."
+          },
+          {
+            "title": "Teil 3: Schilder/Anzeigen",
+            "description": "Hinweisschilder, Schilder oder Kurzanzeigen lesen und 5 Multiple-Choice-Fragen beantworten (a, b, c)."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "10 Min.",
+        "description": "Kurze Durchsagen und Nachrichten verstehen.",
+        "parts": [
+          {
+            "title": "Teil 1: Telefongespräche",
+            "description": "5 kurze Aufnahmen (z. B. Telefongespräche) hören und 5 Multiple-Choice-Fragen beantworten (Bild/Text). Zweimal gehört."
+          },
+          {
+            "title": "Teil 2: Radionachrichten",
+            "description": "Eine längere Aufnahme hören (z. B. Radionachrichten) und entscheiden, ob 5 Aussagen Richtig oder Falsch sind. Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Kurzdurchsagen",
+            "description": "5 kurze Durchsagen hören und 5 Bildern oder Kategorien zuordnen. Einmal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "20 Min.",
+        "description": "Persönliche Daten ausfüllen und einfache Notizen schreiben.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: Formular ausfüllen",
+            "description": "Ein Formular (z. B. Registrierung) mit 5 persönlichen Details basierend auf einem bereitgestellten Text vervollständigen."
+          },
+          {
+            "title": "Aufgabe 2: Persönliche Notiz",
+            "description": "Eine kurze persönliche Notiz/E-Mail (ca. 30 Wörter) als Antwort auf 3 Stichpunkte schreiben."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "10 Min.",
+        "description": "Über sich selbst sprechen und Fragen stellen.",
+        "parts": [
+          {
+            "title": "Teil 1: Vorstellung",
+            "description": "Vorstellung: Relevante persönliche Informationen anhand von Stichworten (Name, Alter, Land usw.) geben."
+          },
+          {
+            "title": "Teil 2: Fragen & Antworten",
+            "description": "Fragen zum persönlichen Leben anhand von Bildkarten stellen und beantworten."
+          },
+          {
+            "title": "Teil 3: Bitten & Vorschläge",
+            "description": "Bitten formulieren oder Vorschläge basierend auf Symbolen/Bildern machen; Partner antwortet."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "grading": [
+      {
+        "points": "88–100",
+        "grade": "sehr gut"
+      },
+      {
+        "points": "75–87",
+        "grade": "gut"
+      },
+      {
+        "points": "60–74",
+        "grade": "befriedigend"
+      },
+      {
+        "points": "0–59",
+        "grade": "nicht bestanden"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Modelltest",
+        "description": "Informationen und Modelltest für die ÖSD Zertifikat A1 Prüfung",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-a1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "osd-a2",
+    "title": "ÖSD Zertifikat A2",
+    "provider": "ÖSD",
+    "level": "A2",
+    "description": "Kommunikation bei Routineaufgaben und Austausch über vertraute und geläufige Dinge.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "30 Min.",
+        "description": "Mitteilungen, Schilder und Anzeigen lesen.",
+        "parts": [
+          {
+            "title": "Teil 1: Globalverstehen",
+            "description": "5 kurze Mitteilungen/E-Mails lesen und 5 Multiple-Choice-Fragen beantworten (Globalverstehen)."
+          },
+          {
+            "title": "Teil 2: Selektives Lesen",
+            "description": "Zeitungsanzeigen oder Verzeichniseinträge lesen und 5 spezifischen Anforderungen zuordnen (Selektives Lesen)."
+          },
+          {
+            "title": "Teil 3: Detailliertes Verstehen",
+            "description": "Hinweisschilder, Schilder oder Kurzartikel lesen und 5 spezifische Details identifizieren (Richtig/Falsch oder MCQ)."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "15 Min.",
+        "description": "Telefongespräche, Radio oder direkt gesprochene Informationen verstehen.",
+        "parts": [
+          {
+            "title": "Teil 1: Telefonansagen",
+            "description": "5 Telefonansagen oder Mitteilungen hören und 5 Multiple-Choice-Fragen beantworten (a, b, c). Einmal gehört."
+          },
+          {
+            "title": "Teil 2: Interview/Gespräch",
+            "description": "Ein längeres Gespräch (z. B. Interview) hören und entscheiden, ob 5 Aussagen Richtig oder Falsch sind. Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Radiodurchsagen",
+            "description": "5 Radiodurchsagen oder Nachrichtenschnipsel hören und 5 Multiple-Choice-Fragen beantworten (Selektives Hören). Zweimal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "30 Min.",
+        "description": "Nachrichten schreiben und komplexere Formulare ausfüllen.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: E-Mail/Brief schreiben",
+            "description": "E-Mail oder persönlichen Brief schreiben (ca. 40 Wörter), 3 Stichpunkte abdecken."
+          },
+          {
+            "title": "Aufgabe 2: Formular/Fragebogen",
+            "description": "Ein komplexeres Formular oder einen Fragebogen basierend auf einer Beschreibung ausfüllen (z. B. Bewerbungsdetails)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Informationsaustausch über persönliche und geläufige Themen.",
+        "parts": [
+          {
+            "title": "Teil 1: Kurzpräsentation",
+            "description": "Eine Kurzpräsentation (ca. 2 Min.) über sich selbst halten und Anschlussfragen beantworten."
+          },
+          {
+            "title": "Teil 2: Dialog/Erfahrungen",
+            "description": "Ein Stichwort/Thema wählen und einen Dialog mit dem Partner über eigene Erfahrungen führen."
+          },
+          {
+            "title": "Teil 3: Gemeinsames Planen",
+            "description": "Gemeinsam mit dem Partner etwas planen (z. B. ein Treffen oder einen Ausflug) und einen Konsens erzielen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "grading": [
+      {
+        "points": "80 -90",
+        "grade": "sehr gut"
+      },
+      {
+        "points": "64 -79",
+        "grade": "gut"
+      },
+      {
+        "points": "45 -63",
+        "grade": "bestanden"
+      },
+      {
+        "points": "0 -44",
+        "grade": "nicht bestanden"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Modelltest",
+        "description": "Informationen und Modelltest für die ÖSD Zertifikat A2 Prüfung",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-a2-za2/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "osd-b1",
+    "title": "ÖSD Zertifikat B1",
+    "provider": "ÖSD",
+    "level": "B1",
+    "description": "Strukturgleich zum Goethe-Zertifikat B1. Modulares Format.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "65 Min.",
+        "parts": [
+          {
+            "title": "Teil 1: Erfahrungsberichte",
+            "description": "Blogbeiträge/Berichte - 6 Richtig/Falsch."
+          },
+          {
+            "title": "Teil 2: Zeitungsberichte",
+            "description": "Zeitungsberichte - 6 MCQs (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Anzeige & Situationen",
+            "description": "Anzeigen Situationen zuordnen (7 Anzeigen, 10 Situationen)."
+          },
+          {
+            "title": "Teil 4: Forumsmeinungen",
+            "description": "Forumsmeinungen - Standpunkte der Autoren identifizieren (Pro/Contra)."
+          },
+          {
+            "title": "Teil 5: Regeln & Anleitungen",
+            "description": "Regeln/Anleitungen - 4 MCQs (a, b, c)."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "40 Min.",
+        "parts": [
+          {
+            "title": "Teil 1: Kurze Ansagen",
+            "description": "Kurze Ansagen - MCQ + Richtig/Falsch (5 Items). Zweimal gehört."
+          },
+          {
+            "title": "Teil 2: Vortrag/Präsentation",
+            "description": "Vortrag/Präsentation - 5 MCQs. Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Gespräch/Dialog",
+            "description": "Dialog zwischen 2 Personen - 7 Richtig/Falsch. Einmal gehört."
+          },
+          {
+            "title": "Teil 4: Radiodiskussion",
+            "description": "Radiodiskussion - 8 Sprecherzuordnungen. Zweimal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "60 Min.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: Persönliche E-Mail",
+            "description": "Persönliche E-Mail (80 Wörter, 3 Punkte)."
+          },
+          {
+            "title": "Aufgabe 2: Forumsbeitrag",
+            "description": "Forumsbeitrag (80 Wörter, Meinungsäußerung)."
+          },
+          {
+            "title": "Aufgabe 3: Formelle E-Mail",
+            "description": "Formelle E-Mail (40 Wörter, z. B. Entschuldigung)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "parts": [
+          {
+            "title": "Teil 1: Gemeinsam planen",
+            "description": "Etwas gemeinsam planen."
+          },
+          {
+            "title": "Teil 2: Präsentation",
+            "description": "Präsentation über ein Thema (Vor-/Nachteile)."
+          },
+          {
+            "title": "Teil 3: Fragerunde",
+            "description": "Fragerunde zur Präsentation."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Modelltest",
+        "description": "Informationen und Modelltest für die ÖSD Zertifikat B1 Prüfung",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-b1-zb1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "osd-b2",
+    "title": "ÖSD Zertifikat B2",
+    "provider": "ÖSD",
+    "level": "B2",
+    "description": "Allgemeines Deutsch für Beruf oder Studium. Fortgeschrittene Sprachkenntnisse.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "90 Min.",
+        "description": "Komplexe Texte und detaillierte Informationen verstehen.",
+        "parts": [
+          {
+            "title": "Teil 1: Globalverstehen",
+            "description": "5 kurze Texte/Artikel lesen und entsprechenden Titeln/Überschriften zuordnen (Selektives Verstehen)."
+          },
+          {
+            "title": "Teil 2: Detailliertes Lesen",
+            "description": "Einen längeren Zeitschriften- oder Zeitungsartikel lesen und 5 Multiple-Choice-Fragen beantworten (Detailliertes Lesen)."
+          },
+          {
+            "title": "Teil 3: Selektives Lesen",
+            "description": "Anzeigen oder Fachinformationen scannen und richtig zuordnen (Globales Lesen)."
+          },
+          {
+            "title": "Teil 4: Sprachbausteine",
+            "description": "Einen Lückentext mit korrekten Präpositionen Grammatik ergänzen (Fortgeschrittener Wortschatz/Grammatik)."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "30 Min.",
+        "description": "Radiosendungen, Interviews und öffentliche Vorträge verstehen.",
+        "parts": [
+          {
+            "title": "Teil 1: Radiointerview/Bericht",
+            "description": "Ein Radiointerview oder einen Bericht hören und 10 Multiple-Choice- oder Kurzantwortfragen beantworten. Zweimal gehört."
+          },
+          {
+            "title": "Teil 2: Selektives Hören",
+            "description": "5 kurze Aufnahmen (Nachrichten, Wetter usw.) hören und 5 Multiple-Choice-Fragen beantworten. Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Meinungen erkennen",
+            "description": "Eine Diskussion hören und entscheiden, ob 5 Aussagen Richtig oder Falsch sind. Einmal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "90 Min.",
+        "description": "Meinungen zu sozialen oder technischen Themen äußern.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: Persönlicher Aufsatz",
+            "description": "Eine detaillierte persönliche Nachricht oder einen Aufsatz (ca. 200 Wörter) zu einem bereitgestellten Thema schreiben."
+          },
+          {
+            "title": "Aufgabe 2: Formelle Nachricht",
+            "description": "Auf eine berufliche oder institutionelle E-Mail/Anfrage formell antworten (ca. 120 Wörter)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15-20 Min.",
+        "description": "Fortgeschrittene Interaktion und Monologe.",
+        "parts": [
+          {
+            "title": "Teil 1: Detaillierte Präsentation",
+            "description": "Eine detaillierte Präsentation (ca. 4 Min.) zu einem komplexen Thema halten und Fragen beantworten."
+          },
+          {
+            "title": "Teil 2: Kritische Diskussion",
+            "description": "Eine kritische Diskussion mit dem Partner über ein bestimmtes Thema führen und Argumente austauschen."
+          },
+          {
+            "title": "Teil 3: Verhandeln/Problemlösung",
+            "description": "Eine komplexe Aufgabe gemeinsam verhandeln oder lösen und dabei die eigene Position verteidigen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Modelltest",
+        "description": "Informationen und Modelltest für die ÖSD Zertifikat B2 Prüfung",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-b2-zb2/",
+        "type": "url"
+      }
+    ]
+  }
+]

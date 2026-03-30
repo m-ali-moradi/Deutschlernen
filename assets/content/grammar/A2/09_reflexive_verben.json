@@ -1,0 +1,190 @@
+﻿{
+    "id":  "g22",
+    "title":  "Reflexive Verben",
+    "level":  "A2",
+    "category":  "Verben",
+    "icon":  "🪞",
+    "rule":  "Reflexivpronomen (mich/mir, dich/dir, sich, uns, euch) bezieht sich auf das Subjekt.",
+    "explanation":  "Reflexive verbs use a pronoun referring back to the subject. Akkusativ or Dativ depending on whether there\u0027s another direct object.",
+    "examples":  [
+                     "Ich freue mich auf die Ferien.",
+                     "Er setzt sich auf den Stuhl.",
+                     "Ich wasche mir die Hände.",
+                     "Kannst du dir das vorstellen?"
+                 ],
+    "detail":  {
+                   "id":  "g22",
+                   "subtitle":  "Verben · Reflexive Verben",
+                   "emoji":  "🪞",
+                   "gradient":  [
+                                    "#06B6D4",
+                                    "#14B8A6"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Reflexive Verben",
+                                        "text":  "Reflexive verbs have a pronoun that refers back to the subject. The reflexive pronoun can be in the Akkusativ or Dativ, depending on the verb."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Reflexivpronomen",
+                                        "headers":  [
+                                                        "Person",
+                                                        "Akkusativ",
+                                                        "Dativ"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "ich",
+                                                         "mich",
+                                                         "mir"
+                                                     ],
+                                                     [
+                                                         "du",
+                                                         "dich",
+                                                         "dir"
+                                                     ],
+                                                     [
+                                                         "er/sie/es",
+                                                         "sich",
+                                                         "sich"
+                                                     ],
+                                                     [
+                                                         "wir",
+                                                         "uns",
+                                                         "uns"
+                                                     ],
+                                                     [
+                                                         "ihr",
+                                                         "euch",
+                                                         "euch"
+                                                     ],
+                                                     [
+                                                         "sie/Sie",
+                                                         "sich",
+                                                         "sich"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Akkusativ-Reflexiv",
+                                        "color":  "cyan",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich freue mich auf die Ferien.",
+                                                          "en":  "I look forward to the holidays."
+                                                      },
+                                                      {
+                                                          "de":  "Er setzt sich auf den Stuhl.",
+                                                          "en":  "He sits down on the chair."
+                                                      },
+                                                      {
+                                                          "de":  "Wir interessieren uns für Kunst.",
+                                                          "en":  "We are interested in art."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Dativ-Reflexiv",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich wasche mir die Hände.",
+                                                          "en":  "I wash my hands."
+                                                      },
+                                                      {
+                                                          "de":  "Kannst du dir das vorstellen?",
+                                                          "en":  "Can you imagine that?"
+                                                      },
+                                                      {
+                                                          "de":  "Er merkt sich das Wort.",
+                                                          "en":  "He memorizes the word."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Use Dativ reflexive when there\u0027s ALSO a direct object (Akkusativ): \u0027Ich wasche MICH\u0027 vs. \u0027Ich wasche MIR die Hände\u0027.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Häufige Reflexivverben (Akk)",
+                                        "color":  "cyan",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "sich freuen (auf/über)",
+                                                         "right":  "to be happy / look forward to"
+                                                     },
+                                                     {
+                                                         "left":  "sich setzen",
+                                                         "right":  "to sit down"
+                                                     },
+                                                     {
+                                                         "left":  "sich fühlen",
+                                                         "right":  "to feel"
+                                                     },
+                                                     {
+                                                         "left":  "sich erinnern (an)",
+                                                         "right":  "to remember"
+                                                     },
+                                                     {
+                                                         "left":  "sich interessieren (für)",
+                                                         "right":  "to be interested in"
+                                                     },
+                                                     {
+                                                         "left":  "sich ärgern (über)",
+                                                         "right":  "to be annoyed about"
+                                                     },
+                                                     {
+                                                         "left":  "sich entschuldigen",
+                                                         "right":  "to apologize"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Häufige Reflexivverben (Dat)",
+                                        "color":  "teal",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "sich (Dat) vorstellen",
+                                                         "right":  "to imagine"
+                                                     },
+                                                     {
+                                                         "left":  "sich (Dat) merken",
+                                                         "right":  "to memorize"
+                                                     },
+                                                     {
+                                                         "left":  "sich (Dat) wünschen",
+                                                         "right":  "to wish for"
+                                                     },
+                                                     {
+                                                         "left":  "sich (Dat) leisten",
+                                                         "right":  "to afford"
+                                                     },
+                                                     {
+                                                         "left":  "sich (Dat) waschen",
+                                                         "right":  "to wash (body part)"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "3rd person reflexive is always \u0027sich\u0027 (Akk. and Dat.).",
+                                                      "If the sentence has another Akk. object, the reflexive is Dativ.",
+                                                      "Akk reflexive: Ich wasche MICH. (no other object)",
+                                                      "Dat reflexive: Ich wasche MIR die Hände. (die Hände = Akk object)",
+                                                      "Learn reflexive verbs with their preposition: sich freuen AUF."
+                                                  ]
+                                    }
+                                ]
+               }
+}

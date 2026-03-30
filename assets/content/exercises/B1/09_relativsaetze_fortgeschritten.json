@@ -1,0 +1,186 @@
+{
+    "topic": "RelativsÃ¤tze (Fortgeschritten)",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g7_1",
+            "type": "multiple-choice",
+            "question": "Das ist die Frau, ___ Auto dort steht.",
+            "options": [
+                "deren",
+                "der",
+                "dessen",
+                "die"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g7_2",
+            "type": "multiple-choice",
+            "question": "Der Mann, ___ dem ich spreche, ist mein Onkel.",
+            "options": [
+                "von",
+                "mit",
+                "aus",
+                "nach"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g7_3",
+            "type": "multiple-choice",
+            "question": "Der Junge, ___ Stift ich ausgeliehen habe, heißt Paul.",
+            "options": [
+                "den",
+                "dem",
+                "dessen",
+                "deren"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g7_4",
+            "type": "multiple-choice",
+            "question": "Das ist das Kind, ___ Eltern ich sehr gut kenne.",
+            "options": [
+                "dem",
+                "die",
+                "dessen",
+                "deren"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g7_5",
+            "type": "multiple-choice",
+            "question": "Die Firma, ___ ich arbeite, ist international sehr bekannt.",
+            "options": [
+                "an der",
+                "bei der",
+                "in die",
+                "von der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g7_6",
+            "type": "multiple-choice",
+            "question": "Das ist etwas, ___ ich mich schon lange sehr freue.",
+            "options": [
+                "womit",
+                "worauf",
+                "wovon",
+                "worüber"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_7",
+            "type": "multiple-choice",
+            "question": "Das ist der Autor, ___ neues Buch ein Bestseller ist.",
+            "options": [
+                "dessen",
+                "dem",
+                "den",
+                "deren"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_8",
+            "type": "multiple-choice",
+            "question": "Die Frau, ___ Mantel rot ist, ist meine Tante.",
+            "options": [
+                "dessen",
+                "deren",
+                "die",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_9",
+            "type": "multiple-choice",
+            "question": "Die Kinder, ___ Eltern arbeiten, sind im Kindergarten.",
+            "options": [
+                "dessen",
+                "denen",
+                "deren",
+                "die"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_10",
+            "type": "multiple-choice",
+            "question": "Der Baum, unter ___ wir sitzen, ist eine Linde.",
+            "options": [
+                "der",
+                "den",
+                "dem",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_11",
+            "type": "multiple-choice",
+            "question": "Das ist das Haus, an ___ wir uns gestern getroffen haben.",
+            "options": [
+                "das",
+                "der",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_12",
+            "type": "multiple-choice",
+            "question": "Der Fehler, auf ___ du mich aufmerksam gemacht hast, ist korrigiert.",
+            "options": [
+                "dem",
+                "der",
+                "den",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_13",
+            "type": "multiple-choice",
+            "question": "Das Projekt, für ___ wir arbeiten, ist sehr interessant.",
+            "options": [
+                "den",
+                "das",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_14",
+            "type": "multiple-choice",
+            "question": "Die Studenten, mit ___ ich gesprochen habe, waren sehr freundlich.",
+            "options": [
+                "deren",
+                "die",
+                "denen",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_fortgeschritten_15",
+            "type": "multiple-choice",
+            "question": "Alles, ___ er sagt, ist wahr.",
+            "options": [
+                "welches",
+                "dem",
+                "das",
+                "was"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

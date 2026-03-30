@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../core/database/app_database.dart';
-import '../../../core/content/sync/sync_service.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
 import 'grammar_view_providers.dart';
 
 /// Provider for the currently selected grammar level filter.
@@ -12,10 +12,16 @@ final selectedGrammarCategoryProvider = StateProvider<String>((ref) => 'Alle');
 /// Provider for the grammar search query.
 final grammarSearchQueryProvider = StateProvider<String>((ref) => '');
 
+/// Local grammar topics loaded from the database.
+final localGrammarTopicsProvider =
+    Provider<AsyncValue<List<GrammarTopic>>>((ref) {
+  return ref.watch(grammarTopicsStreamProvider);
+});
+
 /// Provider that filters grammar topics based on level, category, and search query.
 final filteredGrammarTopicsProvider =
-    Provider<AsyncValue<List<SyncEntry<GrammarTopic>>>>((ref) {
-  final grammarAsync = ref.watch(hybridGrammarProvider);
+    Provider<AsyncValue<List<GrammarTopic>>>((ref) {
+  final grammarAsync = ref.watch(localGrammarTopicsProvider);
   final level = ref.watch(selectedGrammarLevelProvider);
   final category = ref.watch(selectedGrammarCategoryProvider);
   final query = ref.watch(grammarSearchQueryProvider).toLowerCase();
@@ -23,14 +29,14 @@ final filteredGrammarTopicsProvider =
   return grammarAsync.whenData((allEntries) {
     return allEntries.where((entry) {
       // Level filter
-      if (level != 'Alle' && entry.displayLevel != level) {
+      if (level != 'Alle' && entry.level != level) {
         return false;
       }
 
       // Category filter
       if (category != 'Alle') {
         final cat = category.toLowerCase();
-        final tCat = entry.localData?.category.toLowerCase() ?? '';
+        final tCat = entry.category.toLowerCase();
         if (!tCat.contains(cat) && !cat.contains(tCat.split(' ').first)) {
           return false;
         }
@@ -38,7 +44,7 @@ final filteredGrammarTopicsProvider =
 
       // Search query filter
       if (query.isNotEmpty) {
-        return entry.displayTitle.toLowerCase().contains(query);
+        return entry.title.toLowerCase().contains(query);
       }
 
       return true;
@@ -49,13 +55,13 @@ final filteredGrammarTopicsProvider =
 
 /// Provider for grouping filtered grammar topics by level.
 final groupedGrammarTopicsProvider =
-    Provider<AsyncValue<Map<String, List<SyncEntry<GrammarTopic>>>>>((ref) {
+    Provider<AsyncValue<Map<String, List<GrammarTopic>>>>((ref) {
   final filteredAsync = ref.watch(filteredGrammarTopicsProvider);
 
   return filteredAsync.whenData((topics) {
-    final map = <String, List<SyncEntry<GrammarTopic>>>{};
+    final map = <String, List<GrammarTopic>>{};
     for (final t in topics) {
-      final lv = t.displayLevel;
+      final lv = t.level;
       map.putIfAbsent(lv, () => []).add(t);
     }
     return map;

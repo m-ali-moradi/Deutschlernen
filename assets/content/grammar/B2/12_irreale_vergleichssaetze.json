@@ -1,0 +1,153 @@
+﻿{
+    "id":  "g61",
+    "title":  "Irreale Vergleichssätze",
+    "level":  "B2",
+    "category":  "Nebensätze",
+    "icon":  "🔮",
+    "rule":  "als ob / als wenn + Konjunktiv II: \u0027Er tut so, als ob er nichts wüsste.\u0027",
+    "explanation":  "Unreal comparison clauses express how something appears or seems, even though it is not true. They use als ob / als wenn / als + Konjunktiv II.",
+    "examples":  [
+                     "Er tut so, als ob er alles wüsste.",
+                     "Sie sieht aus, als hätte sie nicht geschlafen.",
+                     "Es klingt, als wäre es wahr.",
+                     "Er benimmt sich, als ob er der Chef wäre."
+                 ],
+    "detail":  {
+                   "id":  "g61",
+                   "subtitle":  "Nebensätze · Irreale Vergleiche",
+                   "emoji":  "🔮",
+                   "gradient":  [
+                                    "#A855F7",
+                                    "#7C3AED"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Irreale Vergleichssätze · als ob / als wenn / als",
+                                        "text":  "Unreal comparison clauses describe how something appears or seems, even though it is not the reality. They use Konjunktiv II to signal that the comparison is hypothetical or contrary to fact.",
+                                        "bullets":  [
+                                                        "als ob + Konjunktiv II (verb at end): Er tut so, als ob er müde wäre.",
+                                                        "als wenn + Konjunktiv II (verb at end): Sie sieht aus, als wenn sie geweint hätte.",
+                                                        "als + Konjunktiv II (verb in position 2!): Er redet, als wäre er ein Experte."
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Drei Varianten",
+                                        "headers":  [
+                                                        "Form",
+                                                        "Wortstellung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "als ob",
+                                                         "Verb am Ende",
+                                                         "Er tut, als ob er nichts wüsste."
+                                                     ],
+                                                     [
+                                                         "als wenn",
+                                                         "Verb am Ende",
+                                                         "Er tut, als wenn er nichts wüsste."
+                                                     ],
+                                                     [
+                                                         "als",
+                                                         "Verb auf Pos. 2!",
+                                                         "Er tut, als wüsste er nichts."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "The short form \u0027als\u0027 (without ob/wenn) puts the verb directly after \u0027als\u0027 — no subordinate clause word order! This form sounds more elegant in writing.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Gegenwart (Konjunktiv II Präsens)",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er benimmt sich, als ob er der Chef wäre.",
+                                                          "en":  "He behaves as if he were the boss."
+                                                      },
+                                                      {
+                                                          "de":  "Sie sieht aus, als hätte sie nicht geschlafen.",
+                                                          "en":  "She looks as if she hadn\u0027t slept."
+                                                      },
+                                                      {
+                                                          "de":  "Es klingt, als wäre die Musik live.",
+                                                          "en":  "It sounds as if the music were live."
+                                                      },
+                                                      {
+                                                          "de":  "Er redet, als wüsste er alles.",
+                                                          "en":  "He talks as if he knew everything."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Vergangenheit (Konjunktiv II Perfekt)",
+                                        "color":  "purple",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er sieht aus, als ob er die ganze Nacht gearbeitet hätte.",
+                                                          "en":  "He looks as if he had worked all night."
+                                                      },
+                                                      {
+                                                          "de":  "Sie reagierte, als wäre nichts passiert.",
+                                                          "en":  "She reacted as if nothing had happened."
+                                                      },
+                                                      {
+                                                          "de":  "Es scheint, als hätten sie sich nie gestritten.",
+                                                          "en":  "It seems as if they had never argued."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Nützliche Verben für Vergleichssätze",
+                                        "color":  "fuchsia",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "aussehen",
+                                                         "right":  "to look (as if)"
+                                                     },
+                                                     {
+                                                         "left":  "sich benehmen",
+                                                         "right":  "to behave (as if)"
+                                                     },
+                                                     {
+                                                         "left":  "klingen",
+                                                         "right":  "to sound (as if)"
+                                                     },
+                                                     {
+                                                         "left":  "wirken",
+                                                         "right":  "to seem (as if)"
+                                                     },
+                                                     {
+                                                         "left":  "scheinen",
+                                                         "right":  "to appear (as if)"
+                                                     },
+                                                     {
+                                                         "left":  "so tun",
+                                                         "right":  "to act/pretend (as if)"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "als ob / als wenn → subordinate clause: verb at the END.",
+                                                      "als (alone) → verb directly after als (position 2).",
+                                                      "Konjunktiv II Präsens for current comparisons: als ob er krank wäre.",
+                                                      "Konjunktiv II Perfekt for past comparisons: als ob er krank gewesen wäre.",
+                                                      "All three forms (als ob, als wenn, als) are interchangeable in meaning."
+                                                  ]
+                                    }
+                                ]
+               }
+}

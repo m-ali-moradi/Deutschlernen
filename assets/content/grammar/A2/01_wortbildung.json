@@ -1,0 +1,116 @@
+﻿{
+    "id":  "g65",
+    "title":  "Wortbildung",
+    "level":  "A2",
+    "category":  "Artikel",
+    "icon":  "🧱",
+    "rule":  "Komposita: Letztes Wort bestimmt Genus. Endungen helfen bei der Genus-Wahl.",
+    "explanation":  "Compound nouns are formed by joining words. The last noun determines the overall gender. Suffixes (-ung, -heit, -chen) are key indicators of a noun\u0027s gender.",
+    "examples":  [
+                     "die Haustür (Tür ist feminin)",
+                     "das Tischbein (Bein ist neutrum)",
+                     "die Wohnung (-ung ist immer feminin)",
+                     "das Mädchen (-chen ist immer neutrum)"
+                 ],
+    "detail":  {
+                   "id":  "g65",
+                   "subtitle":  "Komposita · Endungen",
+                   "emoji":  "🧱",
+                   "gradient":  [
+                                    "#F59E0B",
+                                    "#EF4444"
+                                ],
+                   "levelBg":  "#FEF9C3",
+                   "levelText":  "#A16207",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Zusammensetzung · Compound Nouns",
+                                        "text":  "German is famous for long words. Most long nouns are simply several shorter words combined into one. The gender is always determined by the LAST word.",
+                                        "bullets":  [
+                                                        "Grundwort (Last word) = determines the Grammatical Gender",
+                                                        "Bestimmungswort (First word) = describes the purpose or type",
+                                                        "Compound words are always written as ONE word"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Die Gender-Regel",
+                                        "formula":  "A(der) + B(die) = die AB",
+                                        "colors":  [
+                                                       "#F59E0B",
+                                                       "#EF4444"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Beispiele für Komposita",
+                                        "headers":  [
+                                                        "Bestandteile",
+                                                        "Kompositum",
+                                                        "Bedeutung"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Haus (n) + Tür (f)",
+                                                         "die Haustür",
+                                                         "front door"
+                                                     ],
+                                                     [
+                                                         "Fuß (m) + Ball (m)",
+                                                         "der Fußball",
+                                                         "football"
+                                                     ],
+                                                     [
+                                                         "Schlafen (v) + Zimmer (n)",
+                                                         "das Schlafzimmer",
+                                                         "bedroom"
+                                                     ],
+                                                     [
+                                                         "Apfel (m) + Saft (m)",
+                                                         "der Apfelsaft",
+                                                         "apple juice"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Sometimes a \u0027Fugen-s\u0027 is added for smoother pronunciation: Geburtstag, Wohnungstür, Liebeslied.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Wichtige Nomen-Endungen (Gender)",
+                                        "color":  "amber",
+                                        "items":  [
+                                                      {
+                                                          "de":  "-ung (die)",
+                                                          "en":  "die Wohnung, die Leitung, die Reinigung"
+                                                      },
+                                                      {
+                                                          "de":  "-heit / -keit (die)",
+                                                          "en":  "die Freiheit, die Höflichkeit, die Krankheit"
+                                                      },
+                                                      {
+                                                          "de":  "-chen / -lein (das)",
+                                                          "en":  "das Mädchen, das Brötchen, das Fräulein"
+                                                      },
+                                                      {
+                                                          "de":  "-ism / -er (der)",
+                                                          "en":  "der Optimismus, der Lehrer, der Fahrer"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "The article belongs only to the final part of the compound.",
+                                                      "Compound nouns are always capitalized.",
+                                                      "You can combine nours, verbs, and adjectives.",
+                                                      "Learning suffixes helps you guess the gender of thousands of nouns."
+                                                  ]
+                                    }
+                                ]
+               }
+}

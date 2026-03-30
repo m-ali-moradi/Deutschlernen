@@ -1,0 +1,172 @@
+﻿{
+    "id": "g1",
+    "title": "Bestimmte Artikel",
+    "level": "A1",
+    "category": "Artikel",
+    "icon": "📘",
+    "rule": "Der (maskulin), Die (feminin), Das (neutrum) — bestimmte Artikel hängen vom Genus ab.",
+    "explanation": "In German, every noun has a grammatical gender. The definite articles are: der (masculine), die (feminine), das (neuter). In plural, all genders use \u0027die\u0027. There is no reliable rule — you must learn the article with each noun.",
+    "examples": [
+        "Der Mann liest ein Buch.",
+        "Die Frau trinkt Kaffee.",
+        "Das Kind spielt im Garten.",
+        "Die Kinder gehen zur Schule."
+    ],
+    "detail": {
+        "id": "g1",
+        "subtitle": "Artikel · Nomen",
+        "emoji": "📘",
+        "gradient": [
+            "#3B82F6",
+            "#4F46E5"
+        ],
+        "levelBg": "#DCFCE7",
+        "levelText": "#16A34A",
+        "sections": [
+            {
+                "type": "concept",
+                "title": "Grundkonzept · Basic Concept",
+                "text": "Every German noun has a grammatical gender: masculine (der), feminine (die), or neuter (das). In the plural, all genders use \u0027die\u0027. There is no reliable rule — you must learn the article with each noun.",
+                "bullets": [
+                    "der → masculine (der Mann, der Tisch)",
+                    "die → feminine (die Frau, die Lampe)",
+                    "das → neuter (das Kind, das Buch)",
+                    "die → ALL plurals (die Männer, die Frauen)"
+                ]
+            },
+            {
+                "type": "conjugation",
+                "title": "Artikel-Tabelle",
+                "color": "blue",
+                "rows": [
+                    {
+                        "left": "Maskulin",
+                        "right": "der Mann"
+                    },
+                    {
+                        "left": "Feminin",
+                        "right": "die Frau"
+                    },
+                    {
+                        "left": "Neutrum",
+                        "right": "das Kind"
+                    },
+                    {
+                        "left": "Plural",
+                        "right": "die Kinder"
+                    }
+                ]
+            },
+            {
+                "type": "tip",
+                "text": "Nouns ending in -ung, -heit, -keit, -schaft, -tion are usually feminine (die). Nouns ending in -chen, -lein are always neuter (das).",
+                "variant": "info"
+            },
+            {
+                "type": "comparison",
+                "title": "Genus-Tipps nach Endung",
+                "headers": [
+                    "Endung",
+                    "Genus",
+                    "Beispiel"
+                ],
+                "rows": [
+                    [
+                        "-er, -ling, -ismus",
+                        "der (maskulin)",
+                        "der Lehrer, der Lehrling"
+                    ],
+                    [
+                        "-ung, -heit, -keit",
+                        "die (feminin)",
+                        "die Zeitung, die Freiheit"
+                    ],
+                    [
+                        "-schaft, -tion, -ie",
+                        "die (feminin)",
+                        "die Freundschaft, die Nation"
+                    ],
+                    [
+                        "-chen, -lein, -um",
+                        "das (neutrum)",
+                        "das Mädchen, das Datum"
+                    ],
+                    [
+                        "-ment, -tum",
+                        "das (neutrum)",
+                        "das Dokument, das Eigentum"
+                    ]
+                ]
+            },
+            {
+                "type": "tip",
+                "text": "Compound nouns always take the gender of the LAST word: die Haustür (die Tür), der Schreibtisch (der Tisch), das Schlafzimmer (das Zimmer).",
+                "variant": "success"
+            },
+            {
+                "type": "comparison",
+                "title": "Bestimmt vs. Unbestimmt",
+                "headers": [
+                    "Bestimmt",
+                    "Unbestimmt",
+                    "Negation"
+                ],
+                "rows": [
+                    [
+                        "der Mann",
+                        "ein Mann",
+                        "kein Mann"
+                    ],
+                    [
+                        "die Frau",
+                        "eine Frau",
+                        "keine Frau"
+                    ],
+                    [
+                        "das Kind",
+                        "ein Kind",
+                        "kein Kind"
+                    ],
+                    [
+                        "die Kinder",
+                        "– Kinder",
+                        "keine Kinder"
+                    ]
+                ]
+            },
+            {
+                "type": "examples",
+                "title": "Beispiele",
+                "color": "blue",
+                "items": [
+                    {
+                        "de": "Der Mann liest ein Buch.",
+                        "en": "The man is reading a book."
+                    },
+                    {
+                        "de": "Die Frau trinkt Kaffee.",
+                        "en": "The woman is drinking coffee."
+                    },
+                    {
+                        "de": "Das Kind spielt im Garten.",
+                        "en": "The child is playing in the garden."
+                    },
+                    {
+                        "de": "Ich habe keine Schwester.",
+                        "en": "I don\u0027t have a sister."
+                    }
+                ]
+            },
+            {
+                "type": "rules",
+                "title": "Wichtige Regeln",
+                "items": [
+                    "Always learn the article together with the noun: der Tisch, die Lampe, das Buch.",
+                    "Compound nouns take the gender of the LAST word: der Schreibtisch.",
+                    "\u0027kein\u0027 follows the same pattern as \u0027ein\u0027 but is used for negation.",
+                    "In plural, there is no indefinite article — just use the noun alone."
+                ]
+            }
+        ]
+    }
+}

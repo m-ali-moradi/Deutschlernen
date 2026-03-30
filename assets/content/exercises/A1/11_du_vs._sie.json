@@ -1,0 +1,186 @@
+{
+    "topic": "Du vs. Sie",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g63_1",
+            "type": "multiple-choice",
+            "question": "Herr Schmidt, kommen ___ aus Berlin?",
+            "options": [
+                "wir",
+                "ihr",
+                "Sie",
+                "du"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g63_2",
+            "type": "multiple-choice",
+            "question": "Max, hast ___ heute Zeit?",
+            "options": [
+                "ihr",
+                "wir",
+                "Sie",
+                "du"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_3",
+            "type": "multiple-choice",
+            "question": "Hallo, wie heißt ___? (Freund)",
+            "options": [
+                "wir",
+                "ihr",
+                "du",
+                "Sie"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_du_vs._sie_4",
+            "type": "multiple-choice",
+            "question": "Guten Tag, wie heißen ___? (Chef)",
+            "options": [
+                "ihr",
+                "er",
+                "du",
+                "Sie"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_5",
+            "type": "multiple-choice",
+            "question": "Woher kommst ___? (Kind)",
+            "options": [
+                "ihr",
+                "Sie",
+                "wir",
+                "du"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_6",
+            "type": "multiple-choice",
+            "question": "Kommen ___ aus Berlin, Herr Müller?",
+            "options": [
+                "Sie",
+                "ihr",
+                "du",
+                "er"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_du_vs._sie_7",
+            "type": "multiple-choice",
+            "question": "Kannst ___ mir helfen? (Schwester)",
+            "options": [
+                "ihr",
+                "er",
+                "Sie",
+                "du"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_8",
+            "type": "multiple-choice",
+            "question": "Können ___ mir bitte helfen? (Fremde Frau)",
+            "options": [
+                "Sie",
+                "ihr",
+                "wir",
+                "du"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_du_vs._sie_9",
+            "type": "multiple-choice",
+            "question": "Was machst ___ heute Abend? (Kollege)",
+            "options": [
+                "du",
+                "Sie",
+                "ihr",
+                "er"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_du_vs._sie_10",
+            "type": "multiple-choice",
+            "question": "Was machen ___ beruflich, Frau Schmidt?",
+            "options": [
+                "ihr",
+                "er",
+                "du",
+                "Sie"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_11",
+            "type": "multiple-choice",
+            "question": "Hast ___ Zeit? (Bruder)",
+            "options": [
+                "Sie",
+                "du",
+                "ihr",
+                "wir"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_du_vs._sie_12",
+            "type": "multiple-choice",
+            "question": "Haben ___ einen Termin? (Arzt)",
+            "options": [
+                "Sie",
+                "du",
+                "er",
+                "ihr"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_du_vs._sie_13",
+            "type": "multiple-choice",
+            "question": "Möchtest ___ einen Kaffee? (Freundin)",
+            "options": [
+                "wir",
+                "ihr",
+                "Sie",
+                "du"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_14",
+            "type": "multiple-choice",
+            "question": "Möchten ___ noch etwas trinken, Herr Krause?",
+            "options": [
+                "er",
+                "du",
+                "ihr",
+                "Sie"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_du_vs._sie_15",
+            "type": "multiple-choice",
+            "question": "Wie alt bist ___? (Klassenkamerad)",
+            "options": [
+                "er",
+                "ihr",
+                "Sie",
+                "du"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

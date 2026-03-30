@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../shared/widgets/app_state_view.dart';
-import '../../domain/grammar_providers.dart';
+import 'package:deutschmate_mobile/shared/widgets/app_state_view.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_providers.dart';
 import '../widgets/grammar_header.dart';
 import '../widgets/grammar_filters.dart';
 import '../widgets/grammar_topic_list.dart';
@@ -58,35 +59,45 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
     final groupedAsync = ref.watch(groupedGrammarTopicsProvider);
 
     return Scaffold(
-      backgroundColor:
-          isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-      body: SafeArea(
-        child: groupedAsync.when(
-          data: (grouped) {
-            return SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const GrammarHeader(),
-                  const SizedBox(height: 16),
-                  const GrammarFilters(),
-                  const SizedBox(height: 16),
-                  GrammarTopicList(groupedTopics: grouped),
-                ],
+      backgroundColor: AppTokens.background(isDark),
+      body: Stack(
+        children: [
+          // Premium background
+          Positioned.fill(child: AppTokens.meshBackground(isDark)),
+          
+          SafeArea(
+            child: groupedAsync.when(
+              data: (grouped) {
+                return SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  padding: const EdgeInsets.fromLTRB(18, 16, 18, 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const GrammarHeader(),
+                      const SizedBox(height: 16),
+                      const GrammarFilters(),
+                      const SizedBox(height: 16),
+                      GrammarTopicList(groupedTopics: grouped),
+                    ],
+                  ),
+                );
+              },
+              loading: () => const AppStateView.loading(
+                title: 'Loading grammar',
+                message: 'The topics are being synchronized.',
               ),
-            );
-          },
-          loading: () => const AppStateView.loading(
-            title: 'Loading grammar',
-            message: 'The topics are being synchronized.',
+              error: (e, s) => AppStateView.error(
+                message: 'The grammar could not be loaded.\n$e',
+                onAction: () => ref.invalidate(groupedGrammarTopicsProvider),
+              ),
+            ),
           ),
-          error: (e, s) => AppStateView.error(
-            message: 'The grammar could not be loaded.\n$e',
-            onAction: () => ref.invalidate(groupedGrammarTopicsProvider),
-          ),
-        ),
+        ],
       ),
     );
   }
 }
+
+
+

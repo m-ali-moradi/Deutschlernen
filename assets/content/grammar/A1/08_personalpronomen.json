@@ -1,0 +1,157 @@
+﻿{
+    "id":  "g11",
+    "title":  "Personalpronomen",
+    "level":  "A1",
+    "category":  "Pronomen",
+    "icon":  "👤",
+    "rule":  "Personalpronomen ersetzen Nomen und ändern sich nach Kasus.",
+    "explanation":  "Personal pronouns replace nouns and change based on case. Possessive pronouns (mein, dein, sein, ihr) follow the same endings as ein/kein.",
+    "examples":  [
+                     "Ich sehe ihn.",
+                     "Das ist mein Buch.",
+                     "Wo ist dein Schlüssel?",
+                     "Wer ist das?"
+                 ],
+    "detail":  {
+                   "id":  "g11",
+                   "subtitle":  "Pronomen · Grundlagen",
+                   "emoji":  "👤",
+                   "gradient":  [
+                                    "#14B8A6",
+                                    "#10B981"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Personalpronomen",
+                                        "text":  "Personal pronouns replace nouns. They change depending on the case. At A1, focus on Nominativ and Akkusativ forms."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Personalpronomen Tabelle",
+                                        "headers":  [
+                                                        "Person",
+                                                        "Nominativ",
+                                                        "Akkusativ"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "1. Sg.",
+                                                         "ich",
+                                                         "mich"
+                                                     ],
+                                                     [
+                                                         "2. Sg.",
+                                                         "du",
+                                                         "dich"
+                                                     ],
+                                                     [
+                                                         "3. Sg. m.",
+                                                         "er",
+                                                         "ihn"
+                                                     ],
+                                                     [
+                                                         "3. Sg. f.",
+                                                         "sie",
+                                                         "sie"
+                                                     ],
+                                                     [
+                                                         "3. Sg. n.",
+                                                         "es",
+                                                         "es"
+                                                     ],
+                                                     [
+                                                         "1. Pl.",
+                                                         "wir",
+                                                         "uns"
+                                                     ],
+                                                     [
+                                                         "2. Pl.",
+                                                         "ihr",
+                                                         "euch"
+                                                     ],
+                                                     [
+                                                         "3. Pl./formal",
+                                                         "sie/Sie",
+                                                         "sie/Sie"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Possessivpronomen",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das ist mein Buch.",
+                                                          "en":  "That is my book."
+                                                      },
+                                                      {
+                                                          "de":  "Wo ist dein Schlüssel?",
+                                                          "en":  "Where is your key?"
+                                                      },
+                                                      {
+                                                          "de":  "Sein Auto ist neu.",
+                                                          "en":  "His car is new."
+                                                      },
+                                                      {
+                                                          "de":  "Ihre Tasche ist groß.",
+                                                          "en":  "Her/Their bag is big."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Possessivpronomen Übersicht",
+                                        "color":  "emerald",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "mein"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "dein"
+                                                     },
+                                                     {
+                                                         "left":  "er/es",
+                                                         "right":  "sein"
+                                                     },
+                                                     {
+                                                         "left":  "sie",
+                                                         "right":  "ihr"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "unser"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "euer"
+                                                     },
+                                                     {
+                                                         "left":  "sie/Sie",
+                                                         "right":  "ihr/Ihr"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Possessive pronouns take the SAME endings as \u0027ein/kein\u0027: mein Tisch (m.), meine Lampe (f.), mein Buch (n.).",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Personal pronouns change with case — learn Nominativ and Akkusativ first.",
+                                                      "Possessive pronouns agree with the NOUN they modify, not the owner.",
+                                                      "Interrogative pronouns: Wer? (who/Nom), Wen? (whom/Akk), Was? (what).",
+                                                      "\u0027Sie\u0027 (capital) = formal you, \u0027sie\u0027 (lowercase) = she or they."
+                                                  ]
+                                    }
+                                ]
+               }
+}

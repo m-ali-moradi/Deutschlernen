@@ -1,4 +1,4 @@
-import 'package:deutschlernen_mobile/features/learning_path/data/models/weak_area_models.dart';
+import 'package:deutschmate_mobile/features/learning_path/data/models/weak_area_models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -10,12 +10,12 @@ void main() {
 
     expect(
       resolveWeakAreaRoute('Büro Kommunikation').route,
-      '/vocabulary?category=B%C3%BCro%20Kommunikation&tab=words',
+      '/vocabulary?category=email_communication&tab=words',
     );
 
     expect(
       resolveWeakAreaRoute('business').route,
-      '/vocabulary?category=Bewerbung%20%26%20Karriere&tab=words',
+      '/vocabulary?category=application&tab=words',
     );
 
     expect(resolveWeakAreaRoute('unknown topic').route, '/grammar');

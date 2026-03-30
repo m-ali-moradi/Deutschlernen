@@ -1,0 +1,103 @@
+﻿{
+    "id":  "g47",
+    "title":  "Passiversatzformen",
+    "level":  "B2",
+    "category":  "Verben",
+    "icon":  "⏰",
+    "rule":  "Alternativen zum Passiv: man, sich lassen, sein + zu + Inf, -bar/-lich.",
+    "explanation":  "German offers several alternatives to the passive voice: \u0027man\u0027 (impersonal), \u0027sich lassen\u0027 (can be done), \u0027sein + zu + Infinitiv\u0027 (must/can be done), and adjective forms such as \u0027-lösbar\u0027 or similar \u0027-bar\u0027 formations.",
+    "examples":  [
+                     "Man spricht hier Deutsch.",
+                     "Das lässt sich leicht erklären.",
+                     "Die Aufgabe ist bis morgen zu erledigen.",
+                     "Das Problem ist lösbar."
+                 ],
+    "detail":  {
+                   "id":  "g47",
+                   "subtitle":  "Passiversatzformen · Alternativen",
+                   "emoji":  "🔁",
+                   "gradient":  [
+                                    "#22C55E",
+                                    "#059669"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Alternativen zum Passiv",
+                                        "text":  "German often avoids passive voice by using other structures. These alternatives sound more natural in some contexts and are frequent in formal and technical language."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Typische Ersatzformen",
+                                        "headers":  [
+                                                        "Form",
+                                                        "Struktur",
+                                                        "Bedeutung"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "man",
+                                                         "Man repariert das Gerät.",
+                                                         "general human subject"
+                                                     ],
+                                                     [
+                                                         "sich lassen",
+                                                         "Das Gerät lässt sich reparieren.",
+                                                         "can be done"
+                                                     ],
+                                                     [
+                                                         "sein + zu + Infinitiv",
+                                                         "Das Gerät ist zu reparieren.",
+                                                         "must/can be done"
+                                                     ],
+                                                     [
+                                                         "-bar Adjektiv",
+                                                         "Das Problem ist lösbar.",
+                                                         "can be done / can be solved"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Vergleich",
+                                        "color":  "emerald",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Text kann leicht erklärt werden. / Der Text lässt sich leicht erklären.",
+                                                          "en":  "The text can easily be explained. / The text can be explained easily."
+                                                      },
+                                                      {
+                                                          "de":  "Das Formular ist bis Freitag auszufüllen.",
+                                                          "en":  "The form is to be filled out by Friday."
+                                                      },
+                                                      {
+                                                          "de":  "Das Problem ist lösbar.",
+                                                          "en":  "The problem can be solved."
+                                                      },
+                                                      {
+                                                          "de":  "Man baut hier gerade eine neue Brücke.",
+                                                          "en":  "A new bridge is being built here right now."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Passiversatzformen are especially useful when the passive sounds heavy, repetitive, or too impersonal.",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "sich lassen + Infinitiv often expresses possibility.",
+                                                      "sein + zu + Infinitiv is more formal and often sounds official.",
+                                                      "-bar adjectives often express possibility: lösbar, sichtbar, essbar.",
+                                                      "man is common in everyday and neutral explanations.",
+                                                      "Choose the form that best matches the register and intended nuance."
+                                                  ]
+                                    }
+                                ]
+               }
+}

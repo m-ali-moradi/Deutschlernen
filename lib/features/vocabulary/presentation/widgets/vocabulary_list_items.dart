@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../core/content/sync/sync_service.dart';
-import '../../../../core/database/app_database.dart';
-import 'vocabulary_common_widgets.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/shared/widgets/premium_card.dart';
+import 'package:deutschmate_mobile/core/learning/review_logic.dart';
+import './vocabulary_common_widgets.dart';
 
 /// A card widget representing a single vocabulary word in the dictionary list.
 /// Displays the word, translated meaning, tag, difficulty and a favorite toggle.
@@ -10,15 +11,15 @@ class WordCard extends StatelessWidget {
   const WordCard({
     super.key,
     required this.entry,
-    required this.reviewStatus,
+    required this.lastResult,
     required this.isDark,
     required this.isDari,
     required this.onTap,
     required this.onFavoriteToggle,
   });
 
-  final SyncEntry<VocabularyWord> entry;
-  final String reviewStatus;
+  final VocabularyWord entry;
+  final ReviewResult? lastResult;
   final bool isDark;
   final bool isDari;
   final VoidCallback onTap;
@@ -26,85 +27,78 @@ class WordCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final word = entry.localData;
-    final isFav = word?.isFavorite ?? false;
-    final title = entry.displayTitle;
-    final meaning = isDari
-        ? (word?.dari ?? entry.cloudMetadata?['dari']?.toString() ?? '')
-        : (word?.english ?? entry.cloudMetadata?['english']?.toString() ?? '');
-    final tag = word?.tag ?? entry.cloudMetadata?['tag'] ?? '';
-    final difficulty = word?.difficulty ?? 'medium';
+    final word = entry;
+    final isFav = word.isFavorite;
+    final title = word.german;
+    final meaning = isDari ? word.dari : word.english;
+    final tag = word.tag;
 
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
-          borderRadius: BorderRadius.circular(20),
-          child: Ink(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF1E293B) : Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.04),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
-                )
-              ],
-            ),
-            child: Row(
-              children: [
-                DifficultyDot(difficulty),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: AppTokens.textPrimary(isDark),
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        meaning,
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: AppTokens.textMuted(isDark),
-                        ),
-                        textDirection:
-                            isDari ? TextDirection.rtl : TextDirection.ltr,
-                      ),
-                      if (tag.isNotEmpty) ...[
-                        const SizedBox(height: 6),
-                        MetaPill(
-                          label: tag,
-                          dark: isDark,
-                          icon: Icons.label_outline_rounded,
-                        ),
-                      ],
-                    ],
+    return PremiumCard(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: EdgeInsets.zero,
+      onTap: onTap,
+      useGlass: true,
+      blur: 10,
+      borderOpacity: isDark ? 0.08 : 0.06,
+      shadowOpacity: isDark ? 0.15 : 0.04,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            DifficultyDot(lastResult),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.5,
+                      color: AppTokens.textPrimary(isDark),
+                    ),
                   ),
-                ),
-                IconButton(
-                  icon: Icon(
-                    isFav
-                        ? Icons.favorite_rounded
-                        : Icons.favorite_border_rounded,
-                    color: isFav ? Colors.red : AppTokens.textMuted(isDark),
-                    size: 20,
+                  const SizedBox(height: 4),
+                  Text(
+                    meaning,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppTokens.textMuted(isDark),
+                    ),
+                    textDirection:
+                        isDari ? TextDirection.rtl : TextDirection.ltr,
                   ),
-                  onPressed: onFavoriteToggle,
-                ),
-              ],
+                  if (tag.isNotEmpty) ...[
+                    const SizedBox(height: 8),
+                    MetaPill(
+                      label: tag,
+                      dark: isDark,
+                      icon: Icons.label_outline_rounded,
+                    ),
+                  ],
+                ],
+              ),
             ),
-          ),
+            Material(
+              color: Colors.transparent,
+              child: IconButton(
+                icon: Icon(
+                  isFav
+                      ? Icons.favorite_rounded
+                      : Icons.favorite_border_rounded,
+                  color: isFav
+                      ? const Color(0xFFEF4444)
+                      : AppTokens.textMuted(isDark).withValues(alpha: 0.3),
+                  size: 22,
+                ),
+                onPressed: onFavoriteToggle,
+                splashRadius: 24,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -126,37 +120,38 @@ class PhraseCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
+    return PremiumCard(
       margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+      padding: EdgeInsets.zero,
+      useGlass: true,
+      blur: 10,
+      borderOpacity: isDark ? 0.08 : 0.04,
+      shadowOpacity: isDark ? 0.1 : 0.02,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              phrase,
+              style: TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.w900,
+                letterSpacing: -0.5,
+                color: AppTokens.textPrimary(isDark),
+              ),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              english,
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: AppTokens.textMuted(isDark),
+              ),
+            ),
+          ],
         ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            phrase,
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-              color: AppTokens.textPrimary(isDark),
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            english,
-            style: TextStyle(
-              fontSize: 13,
-              color: AppTokens.textMuted(isDark),
-            ),
-          ),
-        ],
       ),
     );
   }

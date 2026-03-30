@@ -1,0 +1,186 @@
+{
+    "topic": "PrÃ¤positionen (Akk/Dat)",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g14_1",
+            "type": "multiple-choice",
+            "question": "Ich fahre ___ dem Bus.",
+            "options": [
+                "mit",
+                "aus",
+                "nach",
+                "in"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g14_2",
+            "type": "multiple-choice",
+            "question": "Die Blumen sind ___ dich.",
+            "options": [
+                "mit",
+                "für",
+                "ohne",
+                "durch"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g14_3",
+            "type": "multiple-choice",
+            "question": "Er kommt ___ der Türkei.",
+            "options": [
+                "von",
+                "aus",
+                "nach",
+                "zu"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g14_4",
+            "type": "multiple-choice",
+            "question": "Ich gehe jeden Tag ___ die Schule.",
+            "options": [
+                "nach",
+                "in",
+                "mit",
+                "zu"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g14_5",
+            "type": "multiple-choice",
+            "question": "Er arbeitet schon lange ___ Siemens.",
+            "options": [
+                "an",
+                "zu",
+                "in",
+                "bei"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g14_6",
+            "type": "multiple-choice",
+            "question": "Was machst du am ___?",
+            "options": [
+                "Wochen",
+                "Wochenende",
+                "Woche",
+                "Wochentag"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_7",
+            "type": "multiple-choice",
+            "question": "Ich gehe durch ___ Park.",
+            "options": [
+                "der",
+                "das",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_8",
+            "type": "multiple-choice",
+            "question": "Wir fahren mit ___ Zug.",
+            "options": [
+                "der",
+                "das",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_9",
+            "type": "multiple-choice",
+            "question": "Das Geschenk ist für ___ Mutter.",
+            "options": [
+                "den",
+                "der",
+                "das",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_10",
+            "type": "multiple-choice",
+            "question": "Er kommt aus ___ Iran.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_11",
+            "type": "multiple-choice",
+            "question": "Ich sitze bei ___ Arzt.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_12",
+            "type": "multiple-choice",
+            "question": "Sie arbeitet ohne ___ Computer.",
+            "options": [
+                "einen",
+                "eine",
+                "ein",
+                "einem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_13",
+            "type": "multiple-choice",
+            "question": "Wir wandern um ___ See.",
+            "options": [
+                "der",
+                "das",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_14",
+            "type": "multiple-choice",
+            "question": "Er wohnt gegenüber ___ Post.",
+            "options": [
+                "dem",
+                "die",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_praepositionen_akk_dat_15",
+            "type": "multiple-choice",
+            "question": "Die Blumen sind von ___ Kinder.",
+            "options": [
+                "der",
+                "dem",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

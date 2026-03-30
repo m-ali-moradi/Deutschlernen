@@ -1,0 +1,172 @@
+{
+    "id": "workplace_first_day",
+    "title": "Erster Tag im Büro",
+    "english_title": "First Day at the Office",
+    "level": "A2",
+    "category": "Arbeit",
+    "description": "Learn useful phrases for your first day at work.",
+    "icon": "work",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Kollege",
+            "german": "Guten Morgen! Sie müssen neu hier sein, oder?",
+            "english": "Good morning! You must be new here, right?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Morgen, ja genau. Heute ist mein erster Tag.",
+            "english": "Good morning, yes exactly. Today is my first day."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Kollege",
+            "german": "Herzlich willkommen im Team!",
+            "english": "Welcome to the team!"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank, ich freue mich, hier zu sein.",
+            "english": "Thank you very much, I am happy to be here."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Guten Tag, ich bin Herr Müller, Ihr Vorgesetzter.",
+            "english": "Good day, I am Mr. Müller, your supervisor."
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag Herr Müller, ich bin Ali.",
+            "english": "Good day Mr. Müller, I am Ali."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Ich zeige Ihnen kurz das Büro.",
+            "english": "I will briefly show you the office."
+        },
+        {
+            "id": 8,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Hier ist Ihr Arbeitsplatz.",
+            "english": "This is your workspace."
+        },
+        {
+            "id": 9,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank.",
+            "english": "Thank you very much."
+        },
+        {
+            "id": 10,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Haben Sie schon Zugang zu Ihrem Computer?",
+            "english": "Do you already have access to your computer?"
+        },
+        {
+            "id": 11,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Noch nicht.",
+            "english": "Not yet."
+        },
+        {
+            "id": 12,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Die IT-Abteilung richtet das heute für Sie ein.",
+            "english": "The IT department will set that up for you today."
+        },
+        {
+            "id": 13,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Alles klar.",
+            "english": "Alright."
+        },
+        {
+            "id": 14,
+            "sender": "left",
+            "role": "Kollege",
+            "german": "Wenn Sie Fragen haben, können Sie mich jederzeit fragen.",
+            "english": "If you have questions, you can ask me anytime."
+        },
+        {
+            "id": 15,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke, das ist sehr nett.",
+            "english": "Thank you, that is very kind."
+        },
+        {
+            "id": 16,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Heute lernen Sie erst einmal die Abläufe kennen.",
+            "english": "Today you will first get to know the processes."
+        },
+        {
+            "id": 17,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Gut, ich bin bereit.",
+            "english": "Good, I am ready."
+        },
+        {
+            "id": 18,
+            "sender": "left",
+            "role": "Kollege",
+            "german": "Kommen Sie, ich zeige Ihnen die Küche und den Pausenraum.",
+            "english": "Come, I will show you the kitchen and the break room."
+        },
+        {
+            "id": 19,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Sehr gerne.",
+            "english": "With pleasure."
+        },
+        {
+            "id": 20,
+            "sender": "left",
+            "role": "Kollege",
+            "german": "Um 12 Uhr machen wir Mittagspause.",
+            "english": "We take a lunch break at 12."
+        },
+        {
+            "id": 21,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Alles klar, danke für die Information.",
+            "english": "Alright, thanks for the information."
+        },
+        {
+            "id": 22,
+            "sender": "left",
+            "role": "Vorgesetzter",
+            "german": "Wenn alles klar ist, können Sie später mit Ihrer ersten Aufgabe beginnen.",
+            "english": "If everything is clear, you can start your first task later."
+        },
+        {
+            "id": 23,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Perfekt, vielen Dank.",
+            "english": "Perfect, thank you very much."
+        }
+    ]
+}

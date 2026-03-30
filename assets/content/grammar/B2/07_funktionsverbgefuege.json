@@ -1,0 +1,74 @@
+﻿{
+    "id":  "g48",
+    "title":  "Funktionsverbgefüge",
+    "level":  "B2",
+    "category":  "Verben",
+    "icon":  "⚙️",
+    "rule":  "Verb + Nomen ersetzen einfache Verben: zur Verfügung stellen = bereitstellen.",
+    "explanation":  "Fixed verb-noun combinations common in formal German. The verb is \u0027light\u0027 and the noun carries the meaning.",
+    "examples":  [
+                     "Ich stelle Ihnen die Daten zur Verfügung.",
+                     "Er hat eine Entscheidung getroffen.",
+                     "Sie nimmt Einfluss auf die Politik."
+                 ],
+    "detail":  {
+                   "id":  "g48",
+                   "subtitle":  "Funktionsverbgefüge · Formeller Stil",
+                   "emoji":  "🧱",
+                   "gradient":  [
+                                    "#EC4899",
+                                    "#BE185D"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Funktionsverbgefüge verstehen",
+                                        "text":  "A Funktionsverbgefüge combines a semantically weak verb with a noun that carries the core meaning. This pattern is frequent in formal, administrative, and business German."
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Einfaches Verb → Funktionsverbgefüge",
+                                        "from":  {
+                                                     "label":  "VERB",
+                                                     "text":  "Wir prüfen den Vorschlag."
+                                                 },
+                                        "to":  {
+                                                   "label":  "FVG",
+                                                   "text":  "Wir nehmen den Vorschlag in Prüfung."
+                                               },
+                                        "note":  "The noun carries the main meaning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Häufige Verbindungen",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "eine Entscheidung treffen",
+                                                          "en":  "to make a decision"
+                                                      },
+                                                      {
+                                                          "de":  "in Betracht ziehen",
+                                                          "en":  "to take into consideration"
+                                                      },
+                                                      {
+                                                          "de":  "zur Verfügung stehen",
+                                                          "en":  "to be available"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "The verb is often weak: treffen, bringen, setzen, kommen, stehen.",
+                                                      "The noun expresses the core action or state.",
+                                                      "These structures are common in business and official communication.",
+                                                      "Learn them as fixed combinations, not as separate words."
+                                                  ]
+                                    }
+                                ]
+               }
+}

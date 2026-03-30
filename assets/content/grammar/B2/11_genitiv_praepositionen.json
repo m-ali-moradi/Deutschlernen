@@ -1,0 +1,93 @@
+﻿{
+    "id":  "g45",
+    "title":  "Genitiv-Präpositionen",
+    "level":  "B2",
+    "category":  "Präpositionen",
+    "icon":  "📍",
+    "rule":  "trotz, wegen, während, aufgrund, anstatt, innerhalb, außerhalb + Genitiv.",
+    "explanation":  "Many prepositions require the Genitiv case, especially in formal and written German.",
+    "examples":  [
+                     "Trotz des schlechten Wetters gingen wir spazieren.",
+                     "Wegen der Verspätung verpasste er den Termin.",
+                     "Innerhalb eines Jahres hat er Deutsch gelernt."
+                 ],
+    "detail":  {
+                   "id":  "g45",
+                   "subtitle":  "Genitiv-Präpositionen · Formelle Sprache",
+                   "emoji":  "🧾",
+                   "gradient":  [
+                                    "#F472B6",
+                                    "#DB2777"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Präpositionen mit Genitiv",
+                                        "text":  "At B2, learners meet formal prepositions that require the genitive. They are especially common in legal, administrative, journalistic, and academic German."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Häufige Genitiv-Präpositionen",
+                                        "color":  "pink",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "während",
+                                                         "right":  "während des Meetings"
+                                                     },
+                                                     {
+                                                         "left":  "trotz",
+                                                         "right":  "trotz des Problems"
+                                                     },
+                                                     {
+                                                         "left":  "wegen",
+                                                         "right":  "wegen des Wetters"
+                                                     },
+                                                     {
+                                                         "left":  "innerhalb",
+                                                         "right":  "innerhalb einer Woche"
+                                                     },
+                                                     {
+                                                         "left":  "außerhalb",
+                                                         "right":  "außerhalb der Stadt"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Formelle Beispiele",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wegen des Streiks kam es zu Verspätungen.",
+                                                          "en":  "Because of the strike, there were delays."
+                                                      },
+                                                      {
+                                                          "de":  "Innerhalb eines Monats wurde das Projekt abgeschlossen.",
+                                                          "en":  "The project was completed within one month."
+                                                      },
+                                                      {
+                                                          "de":  "Trotz der Kritik blieb der Plan bestehen.",
+                                                          "en":  "Despite the criticism, the plan remained in place."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "In spoken German, some of these prepositions are often used with Dativ, but in formal German the Genitiv form is expected.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Genitive prepositions are a strong marker of formal register.",
+                                                      "Masculine and neuter nouns often add -(e)s in the genitive.",
+                                                      "Plural nouns keep the plural form: während der Ferien.",
+                                                      "Do not mix spoken Dativ patterns into formal writing."
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Plusquamperfekt",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g24_1",
+            "type": "multiple-choice",
+            "question": "Nachdem er ___ ___, ging er schlafen.",
+            "options": [
+                "gegessen war",
+                "gegessen hatte",
+                "gegessen haben",
+                "gegessen hat"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g24_2",
+            "type": "multiple-choice",
+            "question": "Als ich ankam, ___ der Zug schon abgefahren.",
+            "options": [
+                "hat",
+                "hatte",
+                "ist",
+                "war"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g24_3",
+            "type": "multiple-choice",
+            "question": "Wir ___ das Museum schon vorher besucht.",
+            "options": [
+                "haben",
+                "hatten",
+                "waren",
+                "sind"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g24_4",
+            "type": "multiple-choice",
+            "question": "Er ___ schon alles ___ (vorbereiten), als die Gäste kamen.",
+            "options": [
+                "war vorbereitet",
+                "hatte vorzubereiten",
+                "hatte vorbereitet",
+                "hat vorbereitet"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g24_5",
+            "type": "multiple-choice",
+            "question": "Nachdem wir das Spiel ___ ___ (verlieren), waren wir sehr traurig.",
+            "options": [
+                "verloren hatten",
+                "verloren haben",
+                "verloren waren",
+                "verliert hatten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g24_6",
+            "type": "multiple-choice",
+            "question": "Sie ___ sich schon komplett ___ (umziehen), bevor er anrief.",
+            "options": [
+                "hat - umgezogen",
+                "hatte - umgezogen",
+                "war - umgezogen",
+                "ist - umgezogen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_plusquamperfekt_7",
+            "type": "multiple-choice",
+            "question": "Nachdem er gegessen ___, ging er spazieren.",
+            "options": [
+                "hatte",
+                "hat",
+                "habe",
+                "war"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_plusquamperfekt_8",
+            "type": "multiple-choice",
+            "question": "Als wir ankamen, ___ der Zug schon abgefahren.",
+            "options": [
+                "hat",
+                "ist",
+                "war",
+                "hatte"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_plusquamperfekt_9",
+            "type": "multiple-choice",
+            "question": "Er bestand die Prüfung, weil er so viel gelernt ___.",
+            "options": [
+                "hatte",
+                "hat",
+                "ist",
+                "war"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_plusquamperfekt_10",
+            "type": "multiple-choice",
+            "question": "Sie kaufte sich ein Eis, nachdem sie ___.",
+            "options": [
+                "geschwommen war",
+                "geschwommen hatte",
+                "schwammt",
+                "geschwommen ist"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_plusquamperfekt_11",
+            "type": "multiple-choice",
+            "question": "Nachdem wir die Tickets gekauft ___, stiegen wir in den Zug.",
+            "options": [
+                "sind",
+                "hatten",
+                "waren",
+                "haben"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_plusquamperfekt_12",
+            "type": "multiple-choice",
+            "question": "Als der Film begann, ___ ich bereits eingeschlafen.",
+            "options": [
+                "hat",
+                "war",
+                "hatte",
+                "ist"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_plusquamperfekt_13",
+            "type": "multiple-choice",
+            "question": "Er sagte, er ___ das Buch schon gelesen.",
+            "options": [
+                "hat",
+                "ist",
+                "war",
+                "hatte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_plusquamperfekt_14",
+            "type": "multiple-choice",
+            "question": "Ich fand den Schlüssel, den ich am Morgen verloren ___.",
+            "options": [
+                "hatte",
+                "war",
+                "wurde",
+                "hat"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_plusquamperfekt_15",
+            "type": "multiple-choice",
+            "question": "Sie ärgerte sich, weil sie den Bus verpasst ___.",
+            "options": [
+                "war",
+                "hat",
+                "hatte",
+                "ist"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

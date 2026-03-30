@@ -1,0 +1,123 @@
+{
+    "id": "supermarket",
+    "title": "Im Supermarkt",
+    "english_title": "At the Supermarket",
+    "level": "A2",
+    "category": "Einkaufen",
+    "description": "Practice everyday shopping, asking for item locations, and making payments.",
+    "icon": "shopping_cart_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Guten Tag.",
+            "english": "Good day."
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag.",
+            "english": "Good day."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Haben Sie alles gefunden?",
+            "english": "Did you find everything?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, danke.",
+            "english": "Yes, thank you."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Möchten Sie eine Tüte?",
+            "english": "Would you like a bag?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, danke. Ich habe eine Tasche dabei.",
+            "english": "No, thank you. I have a bag with me."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Das macht zusammen 23 Euro 50.",
+            "english": "That comes to 23 euros 50."
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Kann ich mit Karte bezahlen?",
+            "english": "Can I pay by card?"
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Ja, natürlich.",
+            "english": "Yes, of course."
+        },
+        {
+            "id": 10,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Bitte halten Sie Ihre Karte an das Gerät oder stecken Sie sie ein.",
+            "english": "Please hold your card to the device or insert it."
+        },
+        {
+            "id": 11,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Einen Moment, bitte.",
+            "english": "One moment, please."
+        },
+        {
+            "id": 12,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Möchten Sie den Kassenbon?",
+            "english": "Would you like the receipt?"
+        },
+        {
+            "id": 13,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, bitte.",
+            "english": "Yes, please."
+        },
+        {
+            "id": 14,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Hier ist Ihr Bon. Danke schön.",
+            "english": "Here is your receipt. Thank you."
+        },
+        {
+            "id": 15,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke, auf Wiedersehen.",
+            "english": "Thank you, goodbye."
+        },
+        {
+            "id": 16,
+            "sender": "left",
+            "role": "Kassierer",
+            "german": "Auf Wiedersehen.",
+            "english": "Goodbye."
+        }
+    ]
+}

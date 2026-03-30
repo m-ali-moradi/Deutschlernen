@@ -1,0 +1,119 @@
+﻿{
+    "id":  "g9",
+    "title":  "Satzbau",
+    "level":  "A1",
+    "category":  "Satzbau",
+    "icon":  "🏗️",
+    "rule":  "Das konjugierte Verb steht immer auf Position 2 im Hauptsatz.",
+    "explanation":  "In German main clauses, the conjugated verb always occupies Position 2. In yes/no questions, the verb moves to Position 1. W-questions have the W-word in Position 1 and verb in Position 2.",
+    "examples":  [
+                     "Ich gehe morgen ins Kino.",
+                     "Morgen gehe ich ins Kino.",
+                     "Gehst du morgen ins Kino?",
+                     "Wo wohnst du?"
+                 ],
+    "detail":  {
+                   "id":  "g9",
+                   "subtitle":  "Satzbau · Grundstruktur",
+                   "emoji":  "🏗️",
+                   "gradient":  [
+                                    "#06B6D4",
+                                    "#3B82F6"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Wortstellung · Word Order",
+                                        "text":  "In German, the conjugated verb ALWAYS stands in Position 2 in a main clause (Hauptsatz). The subject can move, but the verb stays put.",
+                                        "bullets":  [
+                                                        "Position 1: Subject or other element (time, place)",
+                                                        "Position 2: Conjugated verb (ALWAYS!)",
+                                                        "Position 3+: Other elements",
+                                                        "End: Second part of verb (participle, infinitive, prefix)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Verb in Position 2",
+                                        "from":  {
+                                                     "label":  "NORMAL",
+                                                     "text":  "Ich lerne heute Deutsch."
+                                                 },
+                                        "to":  {
+                                                   "label":  "INVERSION",
+                                                   "text":  "Heute lerne ich Deutsch."
+                                               },
+                                        "note":  "When another element takes Position 1, subject moves after the verb"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Aussagesätze (Statements)",
+                                        "color":  "cyan",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich gehe morgen ins Kino.",
+                                                          "en":  "I\u0027m going to the cinema tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Morgen gehe ich ins Kino.",
+                                                          "en":  "Tomorrow I\u0027m going to the cinema."
+                                                      },
+                                                      {
+                                                          "de":  "Im Kino sehe ich einen Film.",
+                                                          "en":  "In the cinema I watch a film."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Ja/Nein-Fragen (Verb first!)",
+                                        "color":  "blue",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Lernst du Deutsch?",
+                                                          "en":  "Are you learning German?"
+                                                      },
+                                                      {
+                                                          "de":  "Gehst du morgen ins Kino?",
+                                                          "en":  "Are you going to the cinema tomorrow?"
+                                                      },
+                                                      {
+                                                          "de":  "Ist das dein Buch?",
+                                                          "en":  "Is that your book?"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "W-Fragen",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wer ist das?",
+                                                          "en":  "Who is that?"
+                                                      },
+                                                      {
+                                                          "de":  "Was machst du?",
+                                                          "en":  "What are you doing?"
+                                                      },
+                                                      {
+                                                          "de":  "Warum lernst du Deutsch?",
+                                                          "en":  "Why are you learning German?"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Verb ALWAYS in Position 2 in main clauses.",
+                                                      "Yes/No questions → verb in Position 1.",
+                                                      "W-questions → W-word in Position 1, verb in Position 2.",
+                                                      "und, oder, aber, denn don\u0027t change word order."
+                                                  ]
+                                    }
+                                ]
+               }
+}

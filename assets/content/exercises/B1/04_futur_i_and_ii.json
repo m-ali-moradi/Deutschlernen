@@ -1,0 +1,186 @@
+{
+    "topic": "Futur I & II",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g25_1",
+            "type": "multiple-choice",
+            "question": "NÃ¤chste Woche ___ ich das Buch ___.",
+            "options": [
+                "werde - gelesen",
+                "wird - gelesen haben",
+                "werde - gelesen haben",
+                "werde - lesen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g25_2",
+            "type": "multiple-choice",
+            "question": "Wo ist Tom? - Er ___ wohl schon gegangen ___.",
+            "options": [
+                "wird - sind",
+                "wird - sein",
+                "wird - haben",
+                "werden - sein"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g25_3",
+            "type": "multiple-choice",
+            "question": "Bis morgen ___ wir die Arbeit beendet ___.",
+            "options": [
+                "wird - haben",
+                "werden - hat",
+                "werden - sein",
+                "werden - haben"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g25_4",
+            "type": "multiple-choice",
+            "question": "Ich ___ morgen um diese Zeit entspannt im Flugzeug ___.",
+            "options": [
+                "werde - sitze",
+                "werde - sitzen",
+                "wird - sitzen",
+                "werde - gesessen haben"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g25_5",
+            "type": "multiple-choice",
+            "question": "In zwei Stunden ___ er wohl an seinem Ziel ___ ___.",
+            "options": [
+                "wird - angekommen haben",
+                "werden - angekommen sein",
+                "wird - angekommen sein",
+                "wird - ankommen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g25_6",
+            "type": "multiple-choice",
+            "question": "Glaubst du wirklich, du ___ die Prüfung ___ ___?",
+            "options": [
+                "wirst - bestanden haben",
+                "wirst - bestanden sein",
+                "wirst - bestehen",
+                "wirst - bestehe"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_futur_i_and_ii_7",
+            "type": "multiple-choice",
+            "question": "Nächstes Jahr ___ wir ein Haus bauen. (Futur I)",
+            "options": [
+                "werden wir haben",
+                "werden wir sein",
+                "werden",
+                "würden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_futur_i_and_ii_8",
+            "type": "multiple-choice",
+            "question": "Bis morgen ___ ich das Buch gelesen haben. (Futur II)",
+            "options": [
+                "wird",
+                "werde",
+                "werdet",
+                "werden"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_futur_i_and_ii_9",
+            "type": "multiple-choice",
+            "question": "Er ___ wahrscheinlich den Zug verpasst haben.",
+            "options": [
+                "werden",
+                "werdet",
+                "werde",
+                "wird"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_futur_i_and_ii_10",
+            "type": "multiple-choice",
+            "question": "In zwei Jahren ___ sie ihr Studium beendet haben.",
+            "options": [
+                "werden",
+                "wird",
+                "werde",
+                "werdet"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_futur_i_and_ii_11",
+            "type": "multiple-choice",
+            "question": "Gegen Abend ___ der Regen aufgehört haben.",
+            "options": [
+                "wird",
+                "werde",
+                "werdet",
+                "werden"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_futur_i_and_ii_12",
+            "type": "multiple-choice",
+            "question": "___ du mir morgen helfen? (Futur I)",
+            "options": [
+                "Werdet",
+                "Wird",
+                "Werden",
+                "Wirst"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_futur_i_and_ii_13",
+            "type": "multiple-choice",
+            "question": "Bis Ende des Jahres ___ wir umgezogen sein. (Futur II)",
+            "options": [
+                "werdet",
+                "werde",
+                "wird",
+                "werden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_futur_i_and_ii_14",
+            "type": "multiple-choice",
+            "question": "Er ___ sicher im Stau gestanden haben.",
+            "options": [
+                "werden",
+                "wird",
+                "werde",
+                "wirst"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_futur_i_and_ii_15",
+            "type": "multiple-choice",
+            "question": "Morgen ___ das Wetter besser sein.",
+            "options": [
+                "wird",
+                "werde",
+                "wirst",
+                "werden"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

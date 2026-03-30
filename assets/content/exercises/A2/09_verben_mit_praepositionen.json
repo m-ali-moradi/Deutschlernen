@@ -1,0 +1,186 @@
+{
+    "topic": "Verben mit PrÃ¤positionen",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g40_1",
+            "type": "multiple-choice",
+            "question": "Ich warte ___ den Bus.",
+            "options": [
+                "an",
+                "über",
+                "auf",
+                "für"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g40_2",
+            "type": "multiple-choice",
+            "question": "Er denkt ___ seine Familie.",
+            "options": [
+                "auf",
+                "an",
+                "zu",
+                "mit"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g40_3",
+            "type": "multiple-choice",
+            "question": "Wir sprechen ___ das Problem.",
+            "options": [
+                "über",
+                "von",
+                "mit",
+                "auf"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g40_4",
+            "type": "multiple-choice",
+            "question": "Ich träume oft ___ einem langen Urlaub am Meer.",
+            "options": [
+                "für",
+                "von",
+                "an",
+                "über"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g40_5",
+            "type": "multiple-choice",
+            "question": "Freust du dich ___ das tolle Geschenk?",
+            "options": [
+                "auf",
+                "über",
+                "an",
+                "für"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g40_6",
+            "type": "multiple-choice",
+            "question": "Er nimmt dieses Jahr ___ dem Kurs teil.",
+            "options": [
+                "zu",
+                "an",
+                "für",
+                "mit"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_7",
+            "type": "multiple-choice",
+            "question": "Ich warte ___ den Bus.",
+            "options": [
+                "an",
+                "um",
+                "für",
+                "auf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_8",
+            "type": "multiple-choice",
+            "question": "Wir sprechen ___ das Wetter.",
+            "options": [
+                "an",
+                "über",
+                "um",
+                "auf"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_9",
+            "type": "multiple-choice",
+            "question": "Er denkt oft ___ seine Familie.",
+            "options": [
+                "in",
+                "über",
+                "an",
+                "auf"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_10",
+            "type": "multiple-choice",
+            "question": "Interessierst du dich ___ Kunst?",
+            "options": [
+                "auf",
+                "über",
+                "für",
+                "an"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_11",
+            "type": "multiple-choice",
+            "question": "Träumst du auch ___ Urlaub?",
+            "options": [
+                "auf",
+                "von",
+                "an",
+                "über"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_12",
+            "type": "multiple-choice",
+            "question": "Ich freue mich ___ das Wochenende. (heute ist Mittwoch)",
+            "options": [
+                "an",
+                "für",
+                "auf",
+                "über"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_13",
+            "type": "multiple-choice",
+            "question": "Wir freuen uns ___ das Geschenk. (schon bekommen)",
+            "options": [
+                "für",
+                "auf",
+                "über",
+                "an"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_14",
+            "type": "multiple-choice",
+            "question": "Ich erinnere mich nicht ___ seinen Namen.",
+            "options": [
+                "für",
+                "auf",
+                "über",
+                "an"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_verben_mit_praepositionen_15",
+            "type": "multiple-choice",
+            "question": "Kümmerst du dich ___ den Hund?",
+            "options": [
+                "um",
+                "über",
+                "für",
+                "an"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

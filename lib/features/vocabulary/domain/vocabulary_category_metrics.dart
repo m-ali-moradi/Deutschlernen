@@ -1,39 +1,20 @@
 import 'dart:math';
 
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../../core/database/app_database.dart';
-import '../../../core/learning/review_logic.dart';
-import '../../../core/learning/vocabulary_review.dart';
-import '../../../core/content/sync/sync_service.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/learning/review_logic.dart';
+import 'package:deutschmate_mobile/core/learning/vocabulary_review.dart';
 
-/// Converts live Firestore metadata into the same entry model used by cached
-/// vocabulary rows.
-List<SyncEntry<VocabularyWord>> vocabularyEntriesFromRemoteCategoryData(
-  List<Map<String, dynamic>> remoteWords,
-  String categoryId,
-) {
-  return remoteWords
-      .map(
-        (metadata) => SyncEntry<VocabularyWord>(
-          id: metadata['id']?.toString() ?? '',
-          cloudMetadata: metadata,
-          isDownloaded: false,
-        ),
-      )
-      .where((entry) => vocabularyEntryCategory(entry) == categoryId)
-      .toList(growable: false);
+/// Extracts the category identifier from a vocabulary word.
+String vocabularyEntryCategory(VocabularyWord entry) {
+  return entry.category;
 }
 
-/// Returns the category id for either a cached word or a remote entry.
-String vocabularyEntryCategory(SyncEntry<VocabularyWord> entry) {
-  return entry.localData?.category ??
-      entry.cloudMetadata?['category']?.toString() ??
-      '';
-}
-
-/// Counts the vocabulary entries that belong to a specific group.
+/// Aggregates vocabulary counts for an entire [VocabularyGroupEntity].
+///
+/// Groups act as top-level collections (e.g., "A1 Core") containing multiple categories.
 int vocabularyCountForGroup(
-  List<SyncEntry<VocabularyWord>> entries,
+  List<VocabularyWord> entries,
   List<VocabularyCategoryEntity> categories,
   String groupId,
 ) {
@@ -47,20 +28,40 @@ int vocabularyCountForGroup(
   }).length;
 }
 
-/// Builds the category count label shown under each vocabulary card.
-String vocabularyCategoryCountLabel({
-  required AppUiText strings,
-  required int easy,
-  required int total,
-  required int medium,
-  required int hard,
-}) {
-  return '$easy / $total ${strings.either(german: 'leichte Wörter', english: 'easy words')} · '
-      '$medium ${strings.either(german: 'mittel', english: 'medium')} · '
-      '$hard ${strings.either(german: 'schwer', english: 'hard')}';
+/// Counts the total number of words that have been successfully reviewed or are in the SRS cycle.
+///
+/// Unlike 'Easy', this includes all words that have some review history (Hard, Medium, or Easy).
+int vocabularyCategoryLearnedCount(
+  List<VocabularyWord> entries,
+  Map<String, VocabularyReviewInfo> reviewById,
+  String categoryId,
+  Map<String, ReviewResult> optimisticReviewResults,
+) {
+  return entries
+      .where(
+        (entry) =>
+            vocabularyEntryCategory(entry) == categoryId &&
+            (optimisticReviewResults.containsKey(entry.id) ||
+                (reviewById[entry.id]?.reviewCount ?? 0) > 0),
+      )
+      .length;
 }
 
-/// Resolves the current review result, including optimistic updates.
+/// Generates a localized summary label for a vocabulary category card.
+///
+/// Displays progress as `Learned / Total` followed by a breakdown of current SRS Box states.
+String vocabularyCategoryCountLabel({
+  required AppUiText strings,
+  required int learned,
+  required int total,
+}) {
+  return '$learned / $total ${strings.either(german: 'gelernte Wörter', english: 'words learned')}';
+}
+
+/// Determines the current review status of a word, prioritizing pending optimistic updates.
+///
+/// This prevents UI lag by allowing users to see their progress immediately even before
+/// the database write has fully finalized.
 ReviewResult? vocabularyReviewResultForWord(
   Map<String, ReviewResult> optimisticReviewResults,
   Map<String, VocabularyReviewInfo> reviewById,
@@ -69,9 +70,10 @@ ReviewResult? vocabularyReviewResultForWord(
   return optimisticReviewResults[wordId] ?? reviewById[wordId]?.lastResult;
 }
 
-/// Counts easy-reviewed vocabulary entries within a category.
+/// Determines the current review status of a word, prioritizing pending optimistic updates.
+/// Counts the number of words in a category that the user has marked as 'Easy' in SRS.
 int vocabularyCategoryEasyCount(
-  List<SyncEntry<VocabularyWord>> entries,
+  List<VocabularyWord> entries,
   Map<String, VocabularyReviewInfo> reviewById,
   String categoryId,
   Map<String, ReviewResult> optimisticReviewResults,
@@ -90,9 +92,9 @@ int vocabularyCategoryEasyCount(
       .length;
 }
 
-/// Counts vocabulary entries for a specific review result.
+/// Generic counter for vocabulary words matching a specific [ReviewResult] within a category.
 int vocabularyCategoryResultCount(
-  List<SyncEntry<VocabularyWord>> entries,
+  List<VocabularyWord> entries,
   Map<String, VocabularyReviewInfo> reviewById,
   String categoryId,
   ReviewResult result,
@@ -112,9 +114,9 @@ int vocabularyCategoryResultCount(
       .length;
 }
 
-/// Counts all vocabulary entries within a category.
+/// Returns the total number of words belonging to the specified [categoryId].
 int vocabularyCategoryTotalCount(
-  List<SyncEntry<VocabularyWord>> entries,
+  List<VocabularyWord> entries,
   String categoryId,
 ) {
   return entries
@@ -122,13 +124,20 @@ int vocabularyCategoryTotalCount(
       .length;
 }
 
-/// Builds the review queue that prioritizes hard and medium words first.
+/// Constructs an optimized flashcard queue based on common learning heuristics.
+///
+/// The algorithm:
+/// 1. Filters for 'Hard' and 'Medium' words based on recent performance.
+/// 2. Shuffles these prioritized words to keep the session fresh.
+/// 3. Appends all other words in the category at the end of the list.
+///
+/// If no words require priority review, the entire list is returned as-is.
 List<String> vocabularyPriorityFlashcardQueue(
-  List<SyncEntry<VocabularyWord>> entries,
+  List<VocabularyWord> entries,
   Map<String, VocabularyReviewInfo> reviewById,
   Map<String, ReviewResult> optimisticReviewResults,
 ) {
-  final priority = <SyncEntry<VocabularyWord>>[];
+  final priority = <VocabularyWord>[];
 
   for (final entry in entries) {
     final result = vocabularyReviewResultForWord(

@@ -1,0 +1,522 @@
+[
+  {
+    "id": "goethe-a1",
+    "title": "Goethe-Zertifikat A1: Start Deutsch 1",
+    "provider": "Goethe",
+    "level": "A1",
+    "description": "Standard für Ehegattenvisum und einfache Kommunikation.",
+    "structure": [
+      {
+        "name": "Hören",
+        "duration": "20 Min.",
+        "description": "Kurze Durchsagen und Dialoge hören.",
+        "parts": [
+          {
+            "title": "Teil 1: Alltagsgespräche",
+            "description": "6 kurze Gespräche (MCQ, zweimal hören)."
+          },
+          {
+            "title": "Teil 2: Durchsagen",
+            "description": "4 Durchsagen (Richtig/Falsch, einmal hören)."
+          },
+          {
+            "title": "Teil 3: Telefonansagen",
+            "description": "5 Telefonansagen/Nachrichten (MCQ, zweimal hören)."
+          }
+        ]
+      },
+      {
+        "name": "Lesen",
+        "duration": "25 Min.",
+        "description": "Notizen, E-Mails und Anzeigen lesen.",
+        "parts": [
+          {
+            "title": "Teil 1: E-Mails/Notizen",
+            "description": "2 kurze E-Mails/Notizen (Richtig/Falsch oder MCQ)."
+          },
+          {
+            "title": "Teil 2: Anzeigen zuordnen",
+            "description": "5 Anzeigen Situationen zuordnen."
+          },
+          {
+            "title": "Teil 3: Aushänge/Schilder",
+            "description": "Hinweisschilder lesen (Richtig/Falsch)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "20 Min.",
+        "description": "Formular ausfüllen und kurze Nachricht.",
+        "parts": [
+          {
+            "title": "Teil 1: Formular ausfüllen",
+            "description": "Formular basierend auf einem kurzen Text ausfüllen (5 Items)."
+          },
+          {
+            "title": "Teil 2: Persönliche Nachricht",
+            "description": "E-Mail oder Brief über ein Alltagsthema schreiben (ca. 30 Wörter)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Vorstellung und Gruppeninteraktion.",
+        "parts": [
+          {
+            "title": "Teil 1: Sich vorstellen",
+            "description": "Sich vorstellen (Name buchstabieren, Zahl nennen)."
+          },
+          {
+            "title": "Teil 2: Fragen/Antworten",
+            "description": "Fragen zu einem Thema stellen/beantworten."
+          },
+          {
+            "title": "Teil 3: Bitten formulieren",
+            "description": "Bitten formulieren basierend auf Bildkarten."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "resources": [
+      {
+        "title": "Übungsmaterialien",
+        "description": "Offizielle Übungsmaterialien für die Goethe 1 Prüfung",
+        "url": "https://www.goethe.de/ins/mm/de/spr/prf/gzsd1/ueb.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "sehr gut"
+      },
+      {
+        "points": "80–89",
+        "grade": "gut"
+      },
+      {
+        "points": "70–79",
+        "grade": "befriedigend"
+      },
+      {
+        "points": "60–69",
+        "grade": "ausreichend"
+      },
+      {
+        "points": "0–59",
+        "grade": "nicht bestanden"
+      }
+    ]
+  },
+  {
+    "id": "goethe-a2",
+    "title": "Goethe-Zertifikat A2",
+    "provider": "Goethe",
+    "level": "A2",
+    "description": "Einfache Sprachkenntnisse für den Alltag.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "30 Min.",
+        "description": "Kurze Berichte und Mitteilungen.",
+        "parts": [
+          {
+            "title": "Teil 1: Blogbeitrag/Artikel",
+            "description": "Blogpost/Artikel lesen (5 MCQ)."
+          },
+          {
+            "title": "Teil 2: Informationssuche",
+            "description": "Informationstext (z. B. Fahrplan) lesen und Details finden."
+          },
+          {
+            "title": "Teil 3: Anzeigen zuordnen",
+            "description": "5 Situationen 7 Anzeigen zuordnen."
+          },
+          {
+            "title": "Teil 4: Durchsagen/Hinweise",
+            "description": "Mehrere Durchsagen lesen und die richtige auswählen."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "30 Min.",
+        "description": "Radiodurchsagen und Gespräche.",
+        "parts": [
+          {
+            "title": "Teil 1: Kurznachrichten",
+            "description": "5 kurze Ansagen/Mitteilungen (MCQ, zweimal hören)."
+          },
+          {
+            "title": "Teil 2: Alltagsgespräch",
+            "description": "Gespräch über Alltagsaktivitäten (Zuordnungsaufgabe, einmal hören)."
+          },
+          {
+            "title": "Teil 3: Privates Gespräch",
+            "description": "Privates Gespräch (MCQ, einmal hören)."
+          },
+          {
+            "title": "Teil 4: Radio-Interview",
+            "description": "Interview im Radio (Richtig/Falsch, zweimal hören)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "30 Min.",
+        "description": "Persönliche Mitteilungen.",
+        "parts": [
+          {
+            "title": "Teil 1: Alltagssituation",
+            "description": "Eine Nachricht zu einer Situation schreiben (ca. 40 Wörter)."
+          },
+          {
+            "title": "Teil 2: Formelle Mitteilung",
+            "description": "Eine Frage beantworten oder etwas beschreiben (ca. 30 Wörter)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "15 Min.",
+        "description": "Pause vor dem mündlichen Teil.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Mündliche Gruppenprüfung.",
+        "parts": [
+          {
+            "title": "Teil 1: Fragen zur Person",
+            "description": "4 persönliche Fragen basierend auf Stichworten beantworten."
+          },
+          {
+            "title": "Teil 2: Thema präsentieren",
+            "description": "Über etwas aus dem eigenen Leben sprechen (basierend auf einer Karte)."
+          },
+          {
+            "title": "Teil 3: Gemeinsam planen",
+            "description": "Etwas gemeinsam mit dem Partner planen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "resources": [
+      {
+        "title": "Übungsmaterialien",
+        "description": "Offizielle Übungsmaterialien für die Goethe A2 Prüfung",
+        "url": "https://www.goethe.de/ins/mm/de/spr/prf/gzsd2/ueb.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "sehr gut"
+      },
+      {
+        "points": "80–89",
+        "grade": "gut"
+      },
+      {
+        "points": "70–79",
+        "grade": "befriedigend"
+      },
+      {
+        "points": "60–69",
+        "grade": "ausreichend"
+      },
+      {
+        "points": "0–59",
+        "grade": "nicht bestanden"
+      }
+    ]
+  },
+  {
+    "id": "goethe-b1",
+    "title": "Goethe-Zertifikat B1",
+    "provider": "Goethe",
+    "level": "B1",
+    "description": "Selbstständige Sprachanwendung.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "65 Min.",
+        "description": "Blogs, Artikel und Regeln.",
+        "parts": [
+          {
+            "title": "Teil 1: Blog/E-Mail",
+            "description": "Einen persönlichen Blog/E-Mail lesen (6 Richtig/Falsch)."
+          },
+          {
+            "title": "Teil 2: Zeitungsartikel",
+            "description": "Zeitungsartikel lesen (6 MCQ)."
+          },
+          {
+            "title": "Teil 3: Anzeigen zuordnen",
+            "description": "7 Interessenbeschreibungen 10 Anzeigen zuordnen."
+          },
+          {
+            "title": "Teil 4: Gästekommentare",
+            "description": "Kommentare zu einem Thema lesen und Meinungen identifizieren (Richtig/Falsch)."
+          },
+          {
+            "title": "Teil 5: Regelwerke/Anweisungen",
+            "description": "Regeln/Anleitungen lesen und MCQ beantworten."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "40 Min.",
+        "description": "Durchsagen und Diskussionen.",
+        "parts": [
+          {
+            "title": "Teil 1: Kurznachrichten",
+            "description": "10 kurze Ansagen (Richtig/Falsch & MCQ, zweimal hören)."
+          },
+          {
+            "title": "Teil 2: Vortrag/Präsentation",
+            "description": "Führung oder Präsentation (MCQ, einmal hören)."
+          },
+          {
+            "title": "Teil 3: Privatgespräch",
+            "description": "Gespräch zwischen zwei Personen (Richtig/Falsch, einmal hören)."
+          },
+          {
+            "title": "Teil 4: Radio-Diskussion",
+            "description": "Radiodiskussion mit Moderator und Gästen (MCQ, zweimal hören)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "60 Min.",
+        "description": "Persönliche und halbformelle E-Mails.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: Persönliche E-Mail",
+            "description": "Persönliche E-Mail schreiben (ca. 80 Wörter)."
+          },
+          {
+            "title": "Aufgabe 2: Forumsbeitrag",
+            "description": "Eigene Meinung zu einem Forumsthema äußern (ca. 80 Wörter)."
+          },
+          {
+            "title": "Aufgabe 3: Formelle Mitteilung",
+            "description": "E-Mail (40 Wörter, z. B. Entschuldigung)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Präsentation und Diskussion.",
+        "parts": [
+          {
+            "title": "Teil 1: Gemeinsam planen",
+            "description": "Etwas gemeinsam mit einem Partner planen."
+          },
+          {
+            "title": "Teil 2: Präsentation halten",
+            "description": "Kurze Präsentation über ein Thema halten."
+          },
+          {
+            "title": "Teil 3: Fragen/Feedback",
+            "description": "Fragen zu den Präsentationen stellen/beantworten."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "resources": [
+      {
+        "title": "Übungsmaterialien",
+        "description": "Offizielle Übungsmaterialien für die Goethe B1 Prüfung",
+        "url": "https://www.goethe.de/ins/mm/de/spr/prf/gzb1/ueb.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "sehr gut"
+      },
+      {
+        "points": "80–89,5",
+        "grade": "gut"
+      },
+      {
+        "points": "70–79,5",
+        "grade": "befriedigend"
+      },
+      {
+        "points": "60–69,5",
+        "grade": "ausreichend"
+      },
+      {
+        "points": "0–59,5",
+        "grade": "nicht bestanden"
+      }
+    ]
+  },
+  {
+    "id": "goethe-b2",
+    "title": "Goethe-Zertifikat B2",
+    "provider": "Goethe",
+    "level": "B2",
+    "description": "Fortgeschrittene Sprachkenntnisse für Beruf und Studium.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "65 Min.",
+        "description": "Komplexe Berichte und Meinungen.",
+        "parts": [
+          {
+            "title": "Teil 1: Meinungzuordnung",
+            "description": "Forumsbeiträge lesen und Meinungen identifizieren (Richtig/Falsch)."
+          },
+          {
+            "title": "Teil 2: Textlogik (Lücken)",
+            "description": "Fehlende Sätze in einen Text einfügen."
+          },
+          {
+            "title": "Teil 3: Analytischer Text",
+            "description": "Einen analytischen Text lesen und MCQ beantworten."
+          },
+          {
+            "title": "Teil 4: Standpunkte zuordnen",
+            "description": "Aussagen Texten zuordnen (Selektives Lesen)."
+          },
+          {
+            "title": "Teil 5: Regelwerke/Vorschriften",
+            "description": "Vorschriften/Anleitungen lesen und MCQ beantworten."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "40 Min.",
+        "description": "Radioprogramme und Vorträge.",
+        "parts": [
+          {
+            "title": "Teil 1: Kurze Hörtexte",
+            "description": "Kurze Gespräche/Mitteilungen verstehen (Richtig/Falsch & MCQ)."
+          },
+          {
+            "title": "Teil 2: Radio-Interview",
+            "description": "Einen längeren Vortrag über ein Thema verstehen (MCQ)."
+          },
+          {
+            "title": "Teil 3: Diskussionsbeiträge",
+            "description": "Meinungen in einer Diskussion identifizieren (Zuordnungsaufgabe)."
+          },
+          {
+            "title": "Teil 4: Expertengespräch",
+            "description": "Einen Vortrag oder ein Interview verstehen (MCQ)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "75 Min.",
+        "description": "Meinungsäußerung und formelle Mitteilungen.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: Forumsbeitrag",
+            "description": "Einen Beitrag schreiben und die eigene Meinung äußern (ca. 150 Wörter)."
+          },
+          {
+            "title": "Aufgabe 2: Formelle Mitteilung",
+            "description": "Formelle Nachricht/E-Mail zur Informationsbeschaffung schreiben (ca. 100 Wörter)."
+          }
+        ]
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Partnerprüfung.",
+        "parts": [
+          {
+            "title": "Teil 1: Vortrag halten",
+            "description": "Kurze Präsentation zu einem Thema halten und Fragen beantworten."
+          },
+          {
+            "title": "Teil 2: Diskussion führen",
+            "description": "Ein Thema mit dem Partner diskutieren, Meinungen äußern und begründen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "resources": [
+      {
+        "title": "Übungsmaterialien",
+        "description": "Offizielle Übungsmaterialien für die Goethe B2 Prüfung",
+        "url": "https://www.goethe.de/ins/mm/de/spr/prf/gzb2/ue9.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "grade": "Pass",
+        "points": "60% in each module"
+      }
+    ]
+  }
+]

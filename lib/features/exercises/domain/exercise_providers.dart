@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../core/database/app_database.dart';
-import '../../../core/content/sync/sync_service.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
 
 /// Currently selected level filter for exercises.
 final exerciseLevelProvider = StateProvider<String>((ref) => 'Alle');
@@ -14,32 +14,91 @@ final exerciseTopicProvider = StateProvider<String?>((ref) => null);
 /// Currently selected category filter (if any).
 final exerciseCategoryProvider = StateProvider<String?>((ref) => null);
 
+/// Local exercises loaded from the database.
+final localExercisesProvider = Provider<List<Exercise>>((ref) {
+  return ref.watch(exercisesStreamProvider).valueOrNull ?? const <Exercise>[];
+});
+
+class ExerciseTypeProgress {
+  const ExerciseTypeProgress({
+    required this.completed,
+    required this.total,
+  });
+
+  final int completed;
+  final int total;
+
+  double get fraction {
+    if (total <= 0) return 0;
+    return (completed / total).clamp(0, 1);
+  }
+}
+
 /// Filtered list of exercises based on selected filters.
-final filteredExercisesProvider = Provider<List<SyncEntry<Exercise>>>((ref) {
-  final allExercises = ref.watch(hybridExercisesProvider).valueOrNull ?? [];
+final filteredExercisesProvider = Provider<List<Exercise>>((ref) {
+  final allExercises = ref.watch(localExercisesProvider);
   final level = ref.watch(exerciseLevelProvider);
   final type = ref.watch(exerciseTypeProvider);
   final topic = ref.watch(exerciseTopicProvider);
-  final category = ref.watch(exerciseCategoryProvider);
 
   return allExercises.where((e) {
-    final eLevel = e.localData?.level ?? e.cloudMetadata?['level'] ?? 'A1';
-    final eType = e.localData?.type ?? e.cloudMetadata?['type'] ?? '';
-    final eTopic = e.localData?.topic ?? e.cloudMetadata?['topic'] ?? '';
-    final eCategory = e.cloudMetadata?['category'] ?? '';
+    final eLevel = e.level;
+    final eType = e.type;
+    final eTopic = e.topic;
 
     final matchesLevel = level == 'Alle' || eLevel == level;
     final matchesType = type == 'all' || eType == type;
     final matchesTopic = topic == null || _matchesTopic(eTopic, topic);
 
-    // If we have a specific topic, we are lenient about the category since local exercises
-    // currently lack category metadata.
-    final matchesCategory = category == null ||
-        eCategory == category ||
-        (topic != null && eCategory.isEmpty);
-
-    return matchesLevel && matchesType && matchesTopic && matchesCategory;
+    return matchesLevel && matchesType && matchesTopic;
   }).toList();
+});
+
+final exerciseTypeProgressProvider =
+    Provider<Map<String, ExerciseTypeProgress>>((ref) {
+  final filteredExercises = ref.watch(filteredExercisesProvider);
+  final attempts = ref.watch(exerciseAttemptsStreamProvider).valueOrNull ?? [];
+
+  final allById = <String, String>{};
+  for (final entry in filteredExercises) {
+    allById[entry.id] = _normalizeExerciseType(entry.type);
+  }
+
+  final correctIds = attempts
+      .where((attempt) =>
+          attempt.scope == 'exercises' &&
+          attempt.isCorrect &&
+          allById.containsKey(attempt.exerciseId))
+      .map((attempt) => attempt.exerciseId)
+      .toSet();
+
+  var allTotal = 0;
+  var allCompleted = 0;
+
+  final typeTotals = <String, int>{};
+  final typeCompleted = <String, int>{};
+
+  for (final entry in filteredExercises) {
+    final type = allById[entry.id] ?? '';
+    if (type.isEmpty) continue;
+
+    allTotal += 1;
+    typeTotals[type] = (typeTotals[type] ?? 0) + 1;
+
+    if (correctIds.contains(entry.id)) {
+      allCompleted += 1;
+      typeCompleted[type] = (typeCompleted[type] ?? 0) + 1;
+    }
+  }
+
+  return {
+    'all': ExerciseTypeProgress(completed: allCompleted, total: allTotal),
+    for (final type in typeTotals.keys)
+      type: ExerciseTypeProgress(
+        completed: typeCompleted[type] ?? 0,
+        total: typeTotals[type] ?? 0,
+      ),
+  };
 });
 
 bool _matchesTopic(String exerciseTopic, String selectedTopic) {
@@ -59,4 +118,11 @@ String _normalizeTopic(String value) {
       .replaceAll('ü', 'ue')
       .replaceAll('ß', 'ss')
       .replaceAll(RegExp(r'\s+'), ' ');
+}
+
+String _normalizeExerciseType(String type) {
+  if (type == 'fill-in-blank') {
+    return 'fill-blank';
+  }
+  return type;
 }

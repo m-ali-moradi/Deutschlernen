@@ -1,0 +1,186 @@
+{
+    "topic": "Adjektive Grundlagen",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "ex_so_a1_5",
+            "type": "sentence-order",
+            "question": "Der Tee ist heiß.",
+            "options": [
+                "heiß",
+                "ist",
+                "Der",
+                "Tee"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_adjektive_2",
+            "type": "multiple-choice",
+            "question": "Das Auto ist ___ schnell.",
+            "options": [
+                "viel",
+                "oft",
+                "sehr",
+                "mehr"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_3",
+            "type": "multiple-choice",
+            "question": "Der Mann ist ___ groß.",
+            "options": [
+                "sehr",
+                "viel",
+                "gut",
+                "gern"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_adjektive_4",
+            "type": "multiple-choice",
+            "question": "Ist die Tasche neu? Ja, sie ist ___.",
+            "options": [
+                "alt",
+                "neu",
+                "leicht",
+                "schwer"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_adjektive_5",
+            "type": "multiple-choice",
+            "question": "Das Haus ist nicht klein, es ist ___.",
+            "options": [
+                "kalt",
+                "neu",
+                "warm",
+                "groß"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_adjektive_6",
+            "type": "multiple-choice",
+            "question": "Die Suppe ist sehr ___.",
+            "options": [
+                "heiß",
+                "langsam",
+                "schnell",
+                "kalt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_adjektive_7",
+            "type": "multiple-choice",
+            "question": "Mein Zimmer ist ___ und hell.",
+            "options": [
+                "krank",
+                "müde",
+                "groß",
+                "böse"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_8",
+            "type": "multiple-choice",
+            "question": "Der Kaffee ist zu ___.",
+            "options": [
+                "kurz",
+                "kalt",
+                "lang",
+                "schwer"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_adjektive_9",
+            "type": "multiple-choice",
+            "question": "Dieser Test ist sehr ___.",
+            "options": [
+                "einfach",
+                "langsam",
+                "kalt",
+                "schnell"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_adjektive_10",
+            "type": "multiple-choice",
+            "question": "Das Wetter ist heute ___.",
+            "options": [
+                "teuer",
+                "kurz",
+                "lang",
+                "schön"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_adjektive_11",
+            "type": "multiple-choice",
+            "question": "Der Weg ist sehr ___.",
+            "options": [
+                "weit",
+                "kalt",
+                "billig",
+                "teuer"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_adjektive_12",
+            "type": "multiple-choice",
+            "question": "Die Frau ist sehr ___.",
+            "options": [
+                "weit",
+                "freundlich",
+                "kalt",
+                "schnell"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_adjektive_13",
+            "type": "multiple-choice",
+            "question": "Der Baum ist sehr ___.",
+            "options": [
+                "hoch",
+                "kurz",
+                "tief",
+                "billig"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_adjektive_14",
+            "type": "multiple-choice",
+            "question": "Das Wasser ist ___.",
+            "options": [
+                "lang",
+                "hoch",
+                "schnell",
+                "tief"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_adjektive_15",
+            "type": "multiple-choice",
+            "question": "Das Buch ist sehr ___.",
+            "options": [
+                "müde",
+                "krank",
+                "langsam",
+                "interessant"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

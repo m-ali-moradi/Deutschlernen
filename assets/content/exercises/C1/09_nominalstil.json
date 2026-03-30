@@ -1,0 +1,190 @@
+{
+    "topic": "Nominalstil",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "ex_fb_c1_2",
+            "type": "fill-blank",
+            "question": "In Anbetracht ___ UmstÃ¤nde war das die richtige Entscheidung.",
+            "options": [
+                "der",
+                "den",
+                "dem",
+                "des"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_c1_2",
+            "type": "sentence-order",
+            "question": "In Anbetracht der aktuellen Lage ist Vorsicht geboten.",
+            "options": [
+                "aktuellen",
+                "Lage",
+                "ist",
+                "Vorsicht",
+                "geboten",
+                "In",
+                "Anbetracht",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_nominalstil_3",
+            "type": "multiple-choice",
+            "question": "Um Fehler zu vermeiden... -> Zur ___ von Fehlern...",
+            "options": [
+                "Vermeiden",
+                "Vermeidet",
+                "Vermeidung",
+                "Meiden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_nominalstil_4",
+            "type": "multiple-choice",
+            "question": "Weil es stark regnete... -> Infolge des ___ Regens...",
+            "options": [
+                "starker",
+                "starkes",
+                "starkem",
+                "starken"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_nominalstil_5",
+            "type": "multiple-choice",
+            "question": "Nachdem das Gesetz beschlossen wurde... -> Nach ___ des Gesetzes...",
+            "options": [
+                "Verabschieden",
+                "Verabschiedung",
+                "Abschied",
+                "Beschließen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_nominalstil_6",
+            "type": "multiple-choice",
+            "question": "Obwohl er protestierte... -> Ungeachtet seines ___...",
+            "options": [
+                "Protesten",
+                "Protest",
+                "Protestieren",
+                "Protests"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_nominalstil_7",
+            "type": "multiple-choice",
+            "question": "Als der Vertrag unterzeichnet wurde... -> Bei ___ des Vertrags...",
+            "options": [
+                "Unterzeichnung",
+                "Zeichnen",
+                "Unterzeichnen",
+                "Zeichnung"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_nominalstil_8",
+            "type": "multiple-choice",
+            "question": "Damit die Umwelt geschützt wird... -> Zum ___ der Umwelt...",
+            "options": [
+                "Schützt",
+                "Schutz",
+                "Schütz",
+                "Schützen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_nominalstil_9",
+            "type": "multiple-choice",
+            "question": "Weil das Interesse gering war... -> Mangels ___...",
+            "options": [
+                "Interessant",
+                "Interesse",
+                "Interesses",
+                "Interessen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_nominalstil_10",
+            "type": "multiple-choice",
+            "question": "Wenn die Frist abläuft... -> Nach Ablauf der ___...",
+            "options": [
+                "Frists",
+                "Frist",
+                "Fristes",
+                "Frister"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_nominalstil_11",
+            "type": "multiple-choice",
+            "question": "Wie im Gesetz vorgeschrieben... -> Gemäß den ___ des Gesetzes...",
+            "options": [
+                "Vorschriften",
+                "Vorschrifte",
+                "Vorschrift",
+                "Vorschreiben"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_nominalstil_12",
+            "type": "multiple-choice",
+            "question": "Um den Konflikt zu lösen... -> Zur ___ des Konflikts...",
+            "options": [
+                "Gelöst",
+                "Lös",
+                "Lösung",
+                "Lösen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_nominalstil_13",
+            "type": "multiple-choice",
+            "question": "Dass die Preise steigen... -> Das ___ der Preise...",
+            "options": [
+                "Steigerung",
+                "Stieg",
+                "Steigen",
+                "Steigt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_nominalstil_14",
+            "type": "multiple-choice",
+            "question": "Wenn das System ausfällt... -> Bei ___ des Systems...",
+            "options": [
+                "Fallen",
+                "Fall",
+                "Ausfallen",
+                "Ausfall"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_nominalstil_15",
+            "type": "multiple-choice",
+            "question": "Weil er Erfahrung hat... -> Kraft seiner ___...",
+            "options": [
+                "Fahren",
+                "Erfahren",
+                "Erfahrung",
+                "Erfahrt"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

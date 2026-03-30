@@ -1,0 +1,87 @@
+﻿{
+    "id":  "g32",
+    "title":  "Konjunktiv II (Fortgeschritten)",
+    "level":  "B2",
+    "category":  "Konjunktiv",
+    "icon":  "💭",
+    "rule":  "Vergangenheit: hätte/wäre + P.II. Als ob + Konj. II.",
+    "explanation":  "Advanced Konjunktiv II covers past irreality, als ob constructions, and würde as alternative to archaic forms.",
+    "examples":  [
+                     "Wenn ich das gewusst hätte, wäre ich gekommen.",
+                     "Er tut so, als ob er alles wüsste.",
+                     "Hätte ich mehr gelernt, hätte ich bestanden."
+                 ],
+    "detail":  {
+                   "id":  "g32",
+                   "subtitle":  "Konjunktiv II · Fortgeschritten",
+                   "emoji":  "💭",
+                   "gradient":  [
+                                    "#7C3AED",
+                                    "#6D28D9"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Konjunktiv II · Irreal in der Vergangenheit",
+                                        "text":  "Advanced Konjunktiv II covers unreal conditions in the past: hätte/wäre + Partizip II.",
+                                        "bullets":  [
+                                                        "Gegenwart: Wenn ich Zeit hätte, würde ich kommen.",
+                                                        "Vergangenheit: Wenn ich Zeit gehabt hätte, wäre ich gekommen.",
+                                                        "Both hätte and wäre + Partizip II for past unreal"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Irreale Vergangenheit",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wenn ich früher gelernt hätte, hätte ich bestanden.",
+                                                          "en":  "If I had studied earlier, I would have passed."
+                                                      },
+                                                      {
+                                                          "de":  "Ich wäre gegangen, aber ich war krank.",
+                                                          "en":  "I would have gone, but I was sick."
+                                                      },
+                                                      {
+                                                          "de":  "Wenn sie angerufen hätte, wäre ich gekommen.",
+                                                          "en":  "If she had called, I would have come."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Gegenwart vs. Vergangenheit",
+                                        "headers":  [
+                                                        "",
+                                                        "Gegenwart",
+                                                        "Vergangenheit"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "wenn-Satz",
+                                                         "Wenn ich Zeit hätte",
+                                                         "Wenn ich Zeit gehabt hätte"
+                                                     ],
+                                                     [
+                                                         "Hauptsatz",
+                                                         "würde ich kommen",
+                                                         "wäre ich gekommen"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Past unreal: hätte/wäre + Partizip II.",
+                                                      "hätte for haben-verbs, wäre for sein-verbs.",
+                                                      "Double Konjunktiv II in both clauses.",
+                                                      "wäre + Partizip II for motion/state change verbs in the past."
+                                                  ]
+                                    }
+                                ]
+               }
+}

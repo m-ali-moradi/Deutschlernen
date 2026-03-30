@@ -1,0 +1,186 @@
+{
+    "topic": "Komplexe Attribute",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g55_1",
+            "type": "multiple-choice",
+            "question": "Die ___ Zeitung. (Zeitung, die man heute liest)",
+            "options": [
+                "lesende heute",
+                "heutige lesende",
+                "heute gelesene",
+                "gelesen heute"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g55_2",
+            "type": "multiple-choice",
+            "question": "Der ___ Vertrag muss eingehalten werden.",
+            "options": [
+                "unterschrieben von allen",
+                "von allen unterschriebene",
+                "von alle unterschreibende",
+                "unterschreibte"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g55_3",
+            "type": "multiple-choice",
+            "question": "Ein ___ Experte gab uns Rat.",
+            "options": [
+                "auf Gebiet dieses bekannt",
+                "auf diesem Gebiet bekannter",
+                "bekannt auf Bereich",
+                "bekannter auf diesem Gebiet"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g55_4",
+            "type": "multiple-choice",
+            "question": "Die ___ Frage beschäftigt die Wissenschaftler noch heute.",
+            "options": [
+                "lang diskutierende",
+                "diskutierte seit langem",
+                "diskutiert seit langem",
+                "seit langem diskutierte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g55_5",
+            "type": "multiple-choice",
+            "question": "Das erst gestern ___ Gesetz wurde sofort verabschiedet.",
+            "options": [
+                "im Parlament beschlossen",
+                "beschlossene im Parlament",
+                "Parlament beschlossene",
+                "im Parlament beschlossene"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g55_6",
+            "type": "multiple-choice",
+            "question": "Der erst ___ Erfolg freut das gesamte Team sehr.",
+            "options": [
+                "schwere erreichte",
+                "erreichte nur schwer",
+                "nur schwer erreichte",
+                "nur schwer erreichende"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_komplexe_attribute_7",
+            "type": "multiple-choice",
+            "question": "Das von ihm ___ (schreiben) Buch war ein Erfolg.",
+            "options": [
+                "schreibende",
+                "geschriebenes",
+                "geschriebener",
+                "geschriebene"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_komplexe_attribute_8",
+            "type": "multiple-choice",
+            "question": "Der in der Stadt ___ (leben) Hund.",
+            "options": [
+                "lebende",
+                "lebendes",
+                "lebender",
+                "gelebte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_komplexe_attribute_9",
+            "type": "multiple-choice",
+            "question": "Die auf dem Tisch ___ (liegen) Brille.",
+            "options": [
+                "gelegene",
+                "gelegte",
+                "liegende",
+                "liegenden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_komplexe_attribute_10",
+            "type": "multiple-choice",
+            "question": "Das seit Jahren leer ___ (stehen) Haus.",
+            "options": [
+                "gestandene",
+                "stehendes",
+                "stehende",
+                "stehender"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_komplexe_attribute_11",
+            "type": "multiple-choice",
+            "question": "Die von der Polizei ___ (suchen) Frau.",
+            "options": [
+                "gesuchter",
+                "gesuchte",
+                "suchte",
+                "suchende"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_komplexe_attribute_12",
+            "type": "multiple-choice",
+            "question": "Der schnell ___ (wachsen) Baum.",
+            "options": [
+                "wachsender",
+                "wachsende",
+                "gewachsener",
+                "gewachsene"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_komplexe_attribute_13",
+            "type": "multiple-choice",
+            "question": "Die zur Zeit ___ (stattfinden) Konferenz.",
+            "options": [
+                "stattgefundener",
+                "stattfindender",
+                "stattfindende",
+                "stattgefundene"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_komplexe_attribute_14",
+            "type": "multiple-choice",
+            "question": "Die von Schülern ___ (lösen) Aufgaben.",
+            "options": [
+                "gelösten",
+                "lösenden",
+                "gelöste",
+                "lösbaren"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_komplexe_attribute_15",
+            "type": "multiple-choice",
+            "question": "Das gestern ___ (liefern) Paket.",
+            "options": [
+                "lieferndes",
+                "liefernde",
+                "geliefertes",
+                "gelieferte"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

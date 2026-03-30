@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../core/content/sync/sync_service.dart';
-import '../../../core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
 
 /// Represents the state of the vocabulary flashcard session.
 ///
@@ -21,12 +20,12 @@ class VocabularyFlashcardSessionState {
   final bool isActive;
   final int index;
   final bool isFlipped;
-  final List<SyncEntry<VocabularyWord>> entries;
+  final List<VocabularyWord> entries;
 
   /// Gets the current vocabulary word in the session.
   ///
   /// Returns `null` if the session is not active or if there are no entries.
-  SyncEntry<VocabularyWord>? get currentEntry {
+  VocabularyWord? get currentEntry {
     if (!isActive || entries.isEmpty) {
       return null;
     }
@@ -42,7 +41,7 @@ class VocabularyFlashcardSessionState {
     bool? isActive,
     int? index,
     bool? isFlipped,
-    List<SyncEntry<VocabularyWord>>? entries,
+    List<VocabularyWord>? entries,
   }) {
     return VocabularyFlashcardSessionState(
       isActive: isActive ?? this.isActive,
@@ -65,24 +64,32 @@ class VocabularyFlashcardSessionNotifier
   ///
   /// This method initializes the session state with the provided entries,
   /// sets the index to 0, and marks the session as active.
-  void start(List<SyncEntry<VocabularyWord>> entries) {
+  void start(List<VocabularyWord> entries) {
     state = VocabularyFlashcardSessionState(
       isActive: true,
       index: 0,
       isFlipped: false,
-      entries: List<SyncEntry<VocabularyWord>>.unmodifiable(entries),
+      entries: List<VocabularyWord>.unmodifiable(entries),
     );
   }
 
+  /// Resets the session state and marks it as inactive.
+  ///
+  /// This is called when the user manually leaves the flashcard screen or completing the queue.
   void exit() {
     state = const VocabularyFlashcardSessionState();
   }
 
+  /// Toggles the visual state of the current card between 'Front' (German) and 'Back' (Translation).
   void toggleFlip() {
     if (!state.isActive) return;
     state = state.copyWith(isFlipped: !state.isFlipped);
   }
 
+  /// Advances to the next card in the current session's queue.
+  ///
+  /// If the current card is the last one in the sequence, the session is
+  /// automatically closed via [exit].
   void next() {
     if (!state.isActive || state.entries.isEmpty) return;
 
@@ -97,6 +104,10 @@ class VocabularyFlashcardSessionNotifier
     );
   }
 
+  /// Reverts to the previous card in the sequence.
+  ///
+  /// This operation is only valid if the current index is greater than zero and
+  /// the session is active.
   void previous() {
     if (!state.isActive || state.entries.isEmpty || state.index == 0) return;
 

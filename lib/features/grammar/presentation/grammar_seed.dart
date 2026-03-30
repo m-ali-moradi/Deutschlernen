@@ -1,4 +1,5 @@
-import '../../../core/content/content_loader.dart';
+import 'package:deutschmate_mobile/core/content/content_assets.dart';
+import 'package:deutschmate_mobile/core/content/content_loader.dart';
 
 /// This class represents a single grammar topic as a data object.
 class GrammarTopicView {
@@ -45,22 +46,13 @@ class GrammarTopicView {
 class GrammarContentService {
   static List<GrammarTopicView>? _cache;
 
-  static Future<List<GrammarTopicView>> loadTopics(String level) async {
-    final data = await ContentLoader.loadList(
-      'assets/content/grammar/en/topics_${level.toLowerCase()}.json',
-    );
-    return data.map(GrammarTopicView.fromJson).toList();
-  }
-
   static Future<List<GrammarTopicView>> loadAllTopics() async {
     if (_cache != null) {
       return _cache!;
     }
 
-    final all = <GrammarTopicView>[];
-    for (final level in ['a1', 'a2', 'b1', 'b2', 'c1']) {
-      all.addAll(await loadTopics(level));
-    }
+    final data = await ContentLoader.loadMany(ContentAssets.grammar);
+    final all = data.map(GrammarTopicView.fromJson).toList();
     _cache = all;
     return all;
   }

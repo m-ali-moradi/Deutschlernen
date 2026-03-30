@@ -1,0 +1,108 @@
+﻿{
+    "id":  "g63",
+    "title":  "Du vs. Sie",
+    "level":  "A1",
+    "category":  "Pronomen",
+    "icon":  "🤝",
+    "rule":  "du (informell) für Freunde/Familie, Sie (formell) für Unbekannte/Chefs.",
+    "explanation":  "German has two ways to say \u0027you\u0027. \u0027du\u0027 is informal (close relationships), \u0027Sie\u0027 is formal (professional/strangers). Choosing the right one is essential for social politeness.",
+    "examples":  [
+                     "Max, kommst du?",
+                     "Herr Schmidt, kommen Sie?",
+                     "Wie geht es euch? (Plural)",
+                     "Wo wohnen Sie?"
+                 ],
+    "detail":  {
+                   "id":  "g63",
+                   "subtitle":  "Anrede · Formal vs. Informell",
+                   "emoji":  "🤝",
+                   "gradient":  [
+                                    "#10B981",
+                                    "#3B82F6"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Grundkonzept · Basic Concept",
+                                        "text":  "How you address someone in German depends on your relationship. \u0027du\u0027 is for friends and family, while \u0027Sie\u0027 is used for strangers and formal social settings.",
+                                        "bullets":  [
+                                                        "du → children, family, close friends, pets",
+                                                        "Sie → adults you don\u0027t know, superiors, officials",
+                                                        "The plural of \u0027du\u0027 is \u0027ihr\u0027 (multi-person informal)",
+                                                        "The plural of \u0027Sie\u0027 is \u0027Sie\u0027 (capitalized!)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Vergleich: du vs. Sie",
+                                        "headers":  [
+                                                        "Aspekt",
+                                                        "du (informell)",
+                                                        "Sie (formell)"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Beziehung",
+                                                         "Freunde, Familie",
+                                                         "Unbekannte, Chefs"
+                                                     ],
+                                                     [
+                                                         "Verform",
+                                                         "du kommst",
+                                                         "Sie kommen"
+                                                     ],
+                                                     [
+                                                         "Anrede",
+                                                         "Vorname (Hallo Max)",
+                                                         "Herr/Frau + Nachname"
+                                                     ],
+                                                     [
+                                                         "Plural",
+                                                         "ihr kommt",
+                                                         "Sie kommen"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Wait for the older person or the superior to offer the \u0027du\u0027 before switching from \u0027Sie\u0027. This is called \u0027Duzen\u0027.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Max, kannst du mir helfen?",
+                                                          "en":  "Max, can you help me? (informal)"
+                                                      },
+                                                      {
+                                                          "de":  "Frau Müller, können Sie mir bitte helfen?",
+                                                          "en":  "Ms. Müller, can you please help me? (formal)"
+                                                      },
+                                                      {
+                                                          "de":  "Wie geht es euch?",
+                                                          "en":  "How are you (plural, informal) doing?"
+                                                      },
+                                                      {
+                                                          "de":  "Wo wohnen Sie, Herr Schmidt?",
+                                                          "en":  "Where do you live, Mr. Schmidt?"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "Always capitalize \u0027Sie\u0027 (formal you) and its variants (Ihr, Ihnen).",
+                                                      "Use \u0027Sie\u0027 in shops, offices, and with senior citizens.",
+                                                      "\u0027du\u0027 used to be for kids, but is common among students and young coworkers.",
+                                                      "Choosing \u0027Sie\u0027 marks respect and distance."
+                                                  ]
+                                    }
+                                ]
+               }
+}

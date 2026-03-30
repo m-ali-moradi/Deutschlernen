@@ -1,0 +1,189 @@
+{
+    "topic": "NebensÃ¤tze",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "ex_so_b2_1",
+            "type": "sentence-order",
+            "question": "Er behauptet, dass er die Wahrheit sagt.",
+            "options": [
+                "die",
+                "Wahrheit",
+                "behauptet",
+                "Er",
+                "dass",
+                "er",
+                "sagt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nebensaetze_2",
+            "type": "multiple-choice",
+            "question": "Ich weiß nicht, ___ er heute kommt.",
+            "options": [
+                "dass",
+                "wenn",
+                "ob",
+                "weil"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_nebensaetze_3",
+            "type": "multiple-choice",
+            "question": "Wir blieben zu Hause, ___ das Wetter so schlecht war.",
+            "options": [
+                "da",
+                "denn",
+                "dass",
+                "weil"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_nebensaetze_4",
+            "type": "multiple-choice",
+            "question": "Er fragt, ___ wir heute Abend Zeit haben.",
+            "options": [
+                "ob",
+                "als",
+                "dass",
+                "wenn"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nebensaetze_5",
+            "type": "multiple-choice",
+            "question": "___ ich klein war, lebten wir in München.",
+            "options": [
+                "Wann",
+                "Dass",
+                "Als",
+                "Wenn"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_nebensaetze_6",
+            "type": "multiple-choice",
+            "question": "Es ist wichtig, ___ man regelmäßig Sport treibt.",
+            "options": [
+                "wenn",
+                "dass",
+                "ob",
+                "weil"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_nebensaetze_7",
+            "type": "multiple-choice",
+            "question": "Er kam zu spät, ___ er den Bus verpasst hatte.",
+            "options": [
+                "denn",
+                "obwohl",
+                "weil",
+                "dass"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_nebensaetze_8",
+            "type": "multiple-choice",
+            "question": "___ sie krank ist, geht sie zur Arbeit.",
+            "options": [
+                "Da",
+                "Dass",
+                "Weil",
+                "Obwohl"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_nebensaetze_9",
+            "type": "multiple-choice",
+            "question": "Er lernt Deutsch, ___ in Deutschland zu studieren.",
+            "options": [
+                "um",
+                "weil",
+                "für",
+                "damit"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nebensaetze_10",
+            "type": "multiple-choice",
+            "question": "Ich helfe dir, ___ du mich darum bittest.",
+            "options": [
+                "sofern",
+                "während",
+                "indem",
+                "ob"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nebensaetze_11",
+            "type": "multiple-choice",
+            "question": "Er log, ___ ohne rot zu werden.",
+            "options": [
+                "indem",
+                "anstatt",
+                "ohne",
+                "während"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_pad_10_nebensaetze.json_1",
+            "type": "multiple-choice",
+            "question": "Wir haben gewonnen, ___ der Schiedsrichter schlecht war.",
+            "options": [
+                "obwohl",
+                "weil",
+                "ob",
+                "dass"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_pad_10_nebensaetze.json_2",
+            "type": "multiple-choice",
+            "question": "Ich frage mich, ___ er gestern so traurig war.",
+            "options": [
+                "ob",
+                "weil",
+                "dass",
+                "warum"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_pad_10_nebensaetze.json_3",
+            "type": "multiple-choice",
+            "question": "Sag mir Bescheid, ___ du Zeit hast.",
+            "options": [
+                "dass",
+                "wenn",
+                "als",
+                "ob"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "pad_final_10_nebensaetze.json_0",
+            "type": "multiple-choice",
+            "question": "Wir haben das Museum besucht, ___ sehr interessant war.",
+            "options": [
+                "das",
+                "welches",
+                "dass",
+                "was"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

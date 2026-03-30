@@ -1,0 +1,94 @@
+﻿{
+    "id":  "g25",
+    "title":  "Futur I \u0026 II",
+    "level":  "B1",
+    "category":  "Zeiten",
+    "icon":  "🔮",
+    "rule":  "Futur I: werden + Inf. Futur II: werden + P.II + haben/sein.",
+    "explanation":  "Futur I for future events. Futur II for completed future or assumptions about the past. With \u0027wohl\u0027 = assumption.",
+    "examples":  [
+                     "Ich werde morgen kommen.",
+                     "Bis morgen werde ich das Buch gelesen haben.",
+                     "Er wird wohl schon gegangen sein."
+                 ],
+    "detail":  {
+                   "id":  "g25",
+                   "subtitle":  "Zeiten · Futur I \u0026 II",
+                   "emoji":  "🔮",
+                   "gradient":  [
+                                    "#0EA5E9",
+                                    "#6366F1"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Futur I \u0026 Futur II",
+                                        "text":  "Futur I (werden + Infinitiv) expresses future events. Futur II (werden + Partizip II + haben/sein) expresses something completed by a future point, or assumptions about the past."
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Futur I",
+                                        "formula":  "werden (konj.) + Infinitiv",
+                                        "colors":  [
+                                                       "#0EA5E9",
+                                                       "#0284C7"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Futur II",
+                                        "formula":  "werden (konj.) + Partizip II + haben/sein",
+                                        "colors":  [
+                                                       "#6366F1",
+                                                       "#4F46E5"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Futur I",
+                                        "color":  "sky",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich werde morgen kommen.",
+                                                          "en":  "I will come tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Es wird wohl regnen.",
+                                                          "en":  "It will probably rain."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Futur II",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Bis morgen werde ich das Buch gelesen haben.",
+                                                          "en":  "By tomorrow I will have read the book."
+                                                      },
+                                                      {
+                                                          "de":  "Er wird wohl schon gegangen sein.",
+                                                          "en":  "He will probably have already left."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Futur II with \u0027wohl\u0027 = assumption about the past: \u0027Er wird das vergessen haben\u0027 = He has probably forgotten that.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Futur I: werden + Infinitiv → future or assumption.",
+                                                      "Futur II: werden + P.II + haben/sein → completed future or past assumption.",
+                                                      "With \u0027wohl\u0027, \u0027wahrscheinlich\u0027 → assumption, not future."
+                                                  ]
+                                    }
+                                ]
+               }
+}

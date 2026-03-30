@@ -1,0 +1,79 @@
+﻿{
+    "id":  "g34",
+    "title":  "Erweiterte Nebensätze (B2)",
+    "level":  "B2",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "indem, wodurch, wobei, insofern, während (Kontrast).",
+    "explanation":  "B2 introduces sophisticated conjunctions: indem (by doing), wodurch (through which), wobei (whereby), während (contrast).",
+    "examples":  [
+                     "Man lernt, indem man viel übt.",
+                     "Er verdient gut, wobei er nicht viel arbeitet.",
+                     "Während er Sport liebt, hasst sie Bewegung."
+                 ],
+    "detail":  {
+                   "id":  "g34",
+                   "subtitle":  "Erweiterte Nebensätze · B2",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#14B8A6",
+                                    "#0D9488"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Erweiterte Nebensätze · B2",
+                                        "text":  "New conjunctions at B2 level for manner, result, and concomitance.",
+                                        "bullets":  [
+                                                        "indem = by doing",
+                                                        "wodurch = through which (result)",
+                                                        "wobei = whereby, while",
+                                                        "insofern = insofar as",
+                                                        "während = while / whereas (contrast)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "indem \u0026 wodurch",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er löste das Problem, indem er den Code refaktorierte.",
+                                                          "en":  "He solved the problem by refactoring the code."
+                                                      },
+                                                      {
+                                                          "de":  "Sie verpasste den Zug, wodurch sie zu spät kam.",
+                                                          "en":  "She missed the train, through which she came too late."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "wobei \u0026 während (Kontrast)",
+                                        "color":  "cyan",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er arbeitet, wobei er Musik hört.",
+                                                          "en":  "He works, while (at the same time) listening to music."
+                                                      },
+                                                      {
+                                                          "de":  "Er arbeitet, während sie pausiert.",
+                                                          "en":  "He works, whereas she takes a break."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "All subordinating conjunctions → verb at the end.",
+                                                      "indem = manner (how something is done).",
+                                                      "wodurch = result/consequence.",
+                                                      "während = simultaneous time OR contrast."
+                                                  ]
+                                    }
+                                ]
+               }
+}

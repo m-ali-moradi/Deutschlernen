@@ -1,0 +1,121 @@
+﻿{
+    "id":  "g68",
+    "title":  "Unbestimmte Artikel",
+    "level":  "A1",
+    "category":  "Artikel",
+    "icon":  "📖",
+    "rule":  "ein (maskulinum/neutrum), eine (femininum) — für unbekannte Dinge.",
+    "explanation":  "Indefinite articles are used when talking about something for the first time or something non-specific. In the plural, there is no indefinite article (Nullartikel).",
+    "examples":  [
+                     "Das ist ein Tisch.",
+                     "Das ist eine Lampe.",
+                     "Das ist ein Buch.",
+                     "Das sind (-) Kinder."
+                 ],
+    "detail":  {
+                   "id":  "g68",
+                   "subtitle":  "ein · eine · ein",
+                   "emoji":  "📖",
+                   "gradient":  [
+                                    "#F59E0B",
+                                    "#D97706"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Unbestimmte Artikel · Indefinite Articles",
+                                        "text":  "We use the indefinite article (a/an) when we talk about something for the first time, when the specific item is not yet known, or when it doesn\u0027t matter which one it is.",
+                                        "bullets":  [
+                                                        "ein → masculine (ein Tisch, ein Hund)",
+                                                        "eine → feminine (eine Lampe, eine Frau)",
+                                                        "ein → neuter (ein Buch, ein Kind)",
+                                                        "(-) → NO indefinite article in Plural!"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Deklination (Nominativ)",
+                                        "color":  "orange",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "Maskulin",
+                                                         "right":  "ein Mann"
+                                                     },
+                                                     {
+                                                         "left":  "Feminin",
+                                                         "right":  "eine Frau"
+                                                     },
+                                                     {
+                                                         "left":  "Neutrum",
+                                                         "right":  "ein Kind"
+                                                     },
+                                                     {
+                                                         "left":  "Plural",
+                                                         "right":  "(-) Kinder"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "In the plural, we don\u0027t use \u0027ein\u0027. We simply use the noun without an article (Nullartikel): \u0027Das sind Kinder.\u0027 (Those are children.)",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Negativartikel (Kein)",
+                                        "headers":  [
+                                                        "Genus",
+                                                        "Positiv",
+                                                        "Negativ"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "maskulin",
+                                                         "ein Tisch",
+                                                         "kein Tisch"
+                                                     ],
+                                                     [
+                                                         "feminin",
+                                                         "eine Lampe",
+                                                         "keine Lampe"
+                                                     ],
+                                                     [
+                                                         "neutrum",
+                                                         "ein Buch",
+                                                         "kein Buch"
+                                                     ],
+                                                     [
+                                                         "plural",
+                                                         "(-) Kinder",
+                                                         "keine Kinder"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispielsätze",
+                                        "color":  "amber",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das ist EIN Apfel.",
+                                                          "en":  "That is AN apple."
+                                                      },
+                                                      {
+                                                          "de":  "Ich habe EINE Schwester.",
+                                                          "en":  "I have A sister."
+                                                      },
+                                                      {
+                                                          "de":  "Hast du EIN Auto? - Nein, ich habe KEIN Auto.",
+                                                          "en":  "Do you have A car? - No, I have NO car."
+                                                      },
+                                                      {
+                                                          "de":  "Hier sind (-) Blumen.",
+                                                          "en":  "Here are (-) flowers."
+                                                      }
+                                                  ]
+                                    }
+                                ]
+               }
+}

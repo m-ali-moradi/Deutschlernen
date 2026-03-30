@@ -1,5 +1,6 @@
-import '../../domain/dashboard_logic.dart';
-import '../../domain/dashboard_logic.dart' show DashboardSummary, DashboardNextAction;
+import 'package:deutschmate_mobile/features/learning_path/domain/dashboard_logic.dart';
+import 'package:deutschmate_mobile/features/learning_path/domain/dashboard_logic.dart'
+    show DashboardSummary, DashboardNextAction;
 
 class LearningPathState {
   const LearningPathState({
@@ -10,3 +11,6 @@ class LearningPathState {
   final DashboardSummary summary;
   final DashboardNextAction nextAction;
 }
+
+
+

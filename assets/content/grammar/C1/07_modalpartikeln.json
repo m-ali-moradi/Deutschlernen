@@ -1,0 +1,128 @@
+﻿{
+    "id":  "g49",
+    "title":  "Modalpartikeln",
+    "level":  "C1",
+    "category":  "Partikeln",
+    "icon":  "💬",
+    "rule":  "doch, mal, ja, eben, halt, wohl, schon, eigentlich — unbetonte Nuancen.",
+    "explanation":  "Modal particles add emotional nuance, attitude, or emphasis. They are unstressed, have no direct translation, and are essential for natural-sounding German.",
+    "examples":  [
+                     "Komm doch mal her!",
+                     "Das ist ja interessant!",
+                     "Das ist eben so.",
+                     "Er wird wohl kommen."
+                 ],
+    "detail":  {
+                   "id":  "g49",
+                   "subtitle":  "Modalpartikeln · Nuance und Haltung",
+                   "emoji":  "💬",
+                   "gradient":  [
+                                    "#FB7185",
+                                    "#E11D48"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Was sind Modalpartikeln?",
+                                        "text":  "Modalpartikeln verändern nicht den Sachinhalt eines Satzes. Sie zeigen stattdessen Haltung, Erwartung, Betonung, Beruhigung, Überraschung, Ungeduld oder Abschwächung. Meist sind sie unbetont und stark vom Kontext und der Intonation abhängig.",
+                                        "bullets":  [
+                                                        "Sie sind typisch für gesprochene Sprache und natürliche Gespräche.",
+                                                        "Sie lassen sich oft nicht wörtlich übersetzen.",
+                                                        "Dieselbe Partikel kann je nach Kontext verschiedene Nuancen ausdrücken."
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Typische Partikeln und Nuancen",
+                                        "headers":  [
+                                                        "Partikel",
+                                                        "Wirkung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "doch",
+                                                         "Widerspruch, Aufforderung",
+                                                         "Komm doch mit."
+                                                     ],
+                                                     [
+                                                         "ja",
+                                                         "Gemeinsamkeit, Selbstverständlichkeit",
+                                                         "Das ist ja klar."
+                                                     ],
+                                                     [
+                                                         "mal",
+                                                         "Abschwächung, Lockerheit",
+                                                         "Schau mal hier."
+                                                     ],
+                                                     [
+                                                         "wohl",
+                                                         "Vermutung",
+                                                         "Er kommt wohl später."
+                                                     ],
+                                                     [
+                                                         "eigentlich",
+                                                         "Neugierde, Umlenkung",
+                                                         "Was machst du eigentlich?"
+                                                     ],
+                                                     [
+                                                         "halt / eben",
+                                                         "Resignation, Akzeptanz",
+                                                         "Das ist halt so."
+                                                     ],
+                                                     [
+                                                         "schon",
+                                                         "Beruhigung, Zuversicht",
+                                                         "Das wird schon klappen."
+                                                     ],
+                                                     [
+                                                         "ruhig",
+                                                         "Ermutigung, Erlaubnis",
+                                                         "Du kannst ruhig fragen."
+                                                     ],
+                                                     [
+                                                         "bloß / nur",
+                                                         "Warnung, Verstärkung",
+                                                         "Mach das bloß nicht!"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Gespräch",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Komm doch mal vorbei!",
+                                                          "en":  "Why don\u0027t you come by sometime!"
+                                                      },
+                                                      {
+                                                          "de":  "Du bist ja schon fertig.",
+                                                          "en":  "Oh, you\u0027re already finished."
+                                                      },
+                                                      {
+                                                          "de":  "Das ist eben so.",
+                                                          "en":  "That\u0027s just the way it is."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Lerne Modalpartikeln nicht als direkte Übersetzungen. Merke sie dir in typischen Situationen und Satzmustern.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Modalpartikeln sind meist unbetont und können nicht allein stehen.",
+                                                      "Sie kommen im gesprochenen Deutsch und in Dialogen sehr häufig vor.",
+                                                      "Eine Partikel kann je nach Ton und Kontext unterschiedliche Nuancen haben.",
+                                                      "Nutze sie, um natürlicher zu klingen, aber erst wenn du die Situation verstehst."
+                                                  ]
+                                    }
+                                ]
+               }
+}

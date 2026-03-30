@@ -1,0 +1,186 @@
+{
+    "topic": "WeiterfÃ¼hrende NebensÃ¤tze",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g53_1",
+            "type": "multiple-choice",
+            "question": "Das ist genau das, ___ ich meine.",
+            "options": [
+                "welches",
+                "dass",
+                "was",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g53_2",
+            "type": "multiple-choice",
+            "question": "Das Dorf, ___ ich wohne, ist klein.",
+            "options": [
+                "dort",
+                "worin",
+                "in dem",
+                "wo"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g53_3",
+            "type": "multiple-choice",
+            "question": "Er hat die Prüfung bestanden, ___ uns alle freut.",
+            "options": [
+                "dass",
+                "was",
+                "darüber",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g53_4",
+            "type": "multiple-choice",
+            "question": "Das ist ein Thema, ___ wir unbedingt noch einmal sprechen müssen.",
+            "options": [
+                "worauf",
+                "wovon",
+                "darüber",
+                "womit"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g53_5",
+            "type": "multiple-choice",
+            "question": "Er hat das Meeting komplett vergessen, ___ mich ehrlich gesagt nicht wundert.",
+            "options": [
+                "welches",
+                "das",
+                "dass",
+                "was"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g53_6",
+            "type": "multiple-choice",
+            "question": "Die Art und Weise, ___ er dieses komplexe Problem löste, war genial.",
+            "options": [
+                "darüber",
+                "dass",
+                "wie",
+                "wodurch"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_7",
+            "type": "multiple-choice",
+            "question": "Sie kam zu spät, ___ ich schon gerechnet hatte.",
+            "options": [
+                "womit",
+                "wofür",
+                "was",
+                "worauf"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_8",
+            "type": "multiple-choice",
+            "question": "Er hat mir geholfen, ___ ich sehr dankbar bin.",
+            "options": [
+                "womit",
+                "worauf",
+                "worüber",
+                "wofür"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_9",
+            "type": "multiple-choice",
+            "question": "Es regnete den ganzen Tag, ___ unser Ausflug ins Wasser fiel.",
+            "options": [
+                "womit",
+                "wofür",
+                "weshalb",
+                "worauf"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_10",
+            "type": "multiple-choice",
+            "question": "Er sagte die Wahrheit, ___ sie nicht gerechnet hatte.",
+            "options": [
+                "worauf",
+                "worüber",
+                "womit",
+                "wofür"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_11",
+            "type": "multiple-choice",
+            "question": "Ich bekam ein Geschenk, ___ ich mich sehr gefreut habe.",
+            "options": [
+                "wofür",
+                "womit",
+                "worüber",
+                "worauf"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_12",
+            "type": "multiple-choice",
+            "question": "Sie hat ihr Studium abgebrochen, ___ ihre Eltern sehr enttäuscht waren.",
+            "options": [
+                "worüber",
+                "wofür",
+                "worauf",
+                "womit"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_13",
+            "type": "multiple-choice",
+            "question": "Er sprach sehr laut, ___ er die Aufmerksamkeit auf sich zog.",
+            "options": [
+                "wodurch",
+                "woraus",
+                "womit",
+                "worauf"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_weiterfuehrende_nebensaetze_14",
+            "type": "multiple-choice",
+            "question": "Er lügte, ___ niemand merkte.",
+            "options": [
+                "worauf",
+                "was",
+                "wodurch",
+                "womit"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "pad_final_05_weiterfuehrende_nebensaetze.json_0",
+            "type": "multiple-choice",
+            "question": "Er hat das Buch nicht gelesen, ___ er zugeben musste.",
+            "options": [
+                "worauf",
+                "womit",
+                "was",
+                "wodurch"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

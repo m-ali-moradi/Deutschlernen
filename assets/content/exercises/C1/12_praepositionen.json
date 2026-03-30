@@ -1,0 +1,189 @@
+{
+    "topic": "PrÃ¤positionen",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "ex_fb_c1_5",
+            "type": "fill-blank",
+            "question": "Ungeachtet ___ Kritik hielt er an seinem Plan fest.",
+            "options": [
+                "den",
+                "des",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "ex_so_c1_4",
+            "type": "sentence-order",
+            "question": "Er handelte ungeachtet der daraus resultierenden Schwierigkeiten.",
+            "options": [
+                "daraus",
+                "resultierenden",
+                "Schwierigkeiten",
+                "Er",
+                "handelte",
+                "ungeachtet",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_praepositionen_3",
+            "type": "multiple-choice",
+            "question": "___ des Wetters ging er raus.",
+            "options": [
+                "Ungeachtet",
+                "Infolge",
+                "Wegen",
+                "Aufgrund"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_praepositionen_4",
+            "type": "multiple-choice",
+            "question": "___ der Feier gab es eine Rede.",
+            "options": [
+                "Auf",
+                "Anlässlich",
+                "Für",
+                "Um"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_praepositionen_5",
+            "type": "multiple-choice",
+            "question": "___ der Beweise wurde er freigesprochen.",
+            "options": [
+                "Trotz",
+                "Dank",
+                "Wegen",
+                "Mangels"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_praepositionen_6",
+            "type": "multiple-choice",
+            "question": "___ dieses Problems müssen wir handeln.",
+            "options": [
+                "Angesichts",
+                "Ungeachtet",
+                "Entgegen",
+                "Trotz"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_praepositionen_7",
+            "type": "multiple-choice",
+            "question": "___ Ihrer Anfrage senden wir Ihnen...",
+            "options": [
+                "Innerhalb",
+                "Trotz",
+                "Fernab",
+                "Bezüglich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_praepositionen_8",
+            "type": "multiple-choice",
+            "question": "___ der Stadtgrenze liegt der See.",
+            "options": [
+                "Bezüglich",
+                "Angesichts",
+                "Mangels",
+                "Jenseits"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_praepositionen_9",
+            "type": "multiple-choice",
+            "question": "Er verhielt sich ___ der Vorschriften.",
+            "options": [
+                "trotz",
+                "wegen",
+                "aufgrund",
+                "gemäß"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_praepositionen_10",
+            "type": "multiple-choice",
+            "question": "___ meiner Kenntnis ist das falsch.",
+            "options": [
+                "Trotz",
+                "Wegen",
+                "Nach",
+                "Aufgrund"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_praepositionen_11",
+            "type": "multiple-choice",
+            "question": "___ des Vertrages müssen wir kündigen.",
+            "options": [
+                "Laut",
+                "Aufgrund",
+                "Wegen",
+                "Trotz"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_praepositionen_12",
+            "type": "multiple-choice",
+            "question": "___ aller Warnungen badete er im Meer.",
+            "options": [
+                "Aufgrund",
+                "Wegen",
+                "Entgegen",
+                "Laut"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_praepositionen_13",
+            "type": "multiple-choice",
+            "question": "___ des Chaos blieb er ruhig.",
+            "options": [
+                "Mangels",
+                "Inmitten",
+                "Bezüglich",
+                "Angesichts"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_praepositionen_14",
+            "type": "multiple-choice",
+            "question": "___ seiner Verdienste wurde er befördert.",
+            "options": [
+                "Aufgrund",
+                "Ungachtet",
+                "Trotz",
+                "Entgegen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_praepositionen_15",
+            "type": "multiple-choice",
+            "question": "___ den Erwartungen war der Film gut.",
+            "options": [
+                "Wegen",
+                "Entgegen",
+                "Trotz",
+                "Laut"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

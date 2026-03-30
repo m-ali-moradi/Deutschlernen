@@ -1,0 +1,186 @@
+{
+    "topic": "Dativ",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g39_1",
+            "type": "multiple-choice",
+            "question": "Ich helfe ___ Frau.",
+            "options": [
+                "die",
+                "den",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g39_2",
+            "type": "multiple-choice",
+            "question": "Das Buch gehört ___ Mann.",
+            "options": [
+                "der",
+                "das",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g39_3",
+            "type": "multiple-choice",
+            "question": "Ich danke ___ Kindern.",
+            "options": [
+                "der",
+                "dem",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g39_4",
+            "type": "multiple-choice",
+            "question": "Ich antworte ___ Lehrer per E-Mail.",
+            "options": [
+                "den",
+                "dem",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g39_5",
+            "type": "multiple-choice",
+            "question": "Schmeckt ___ das neue Essen?",
+            "options": [
+                "dir",
+                "dich",
+                "dein",
+                "du"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g39_6",
+            "type": "multiple-choice",
+            "question": "Er gratuliert ___ besten Freund zum Geburtstag.",
+            "options": [
+                "seinem",
+                "seinen",
+                "sein",
+                "seiner"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_dativ_7",
+            "type": "multiple-choice",
+            "question": "Das Auto gehört ___ (mein Vater).",
+            "options": [
+                "meinen Vater",
+                "meinem Vater",
+                "meines Vaters",
+                "meiner Vater"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_dativ_8",
+            "type": "multiple-choice",
+            "question": "Ich helfe ___ (die Frau).",
+            "options": [
+                "dem Frau",
+                "der Frau",
+                "die Frau",
+                "den Frau"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_dativ_9",
+            "type": "multiple-choice",
+            "question": "Wie geht es ___ (deine Eltern)?",
+            "options": [
+                "deinem Eltern",
+                "deinen Eltern",
+                "deine Eltern",
+                "deiner Eltern"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_dativ_10",
+            "type": "multiple-choice",
+            "question": "Das Buch gefällt ___ (das Kind).",
+            "options": [
+                "das Kind",
+                "dem Kind",
+                "der Kind",
+                "den Kind"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_dativ_11",
+            "type": "multiple-choice",
+            "question": "Wir danken ___ (der Lehrer).",
+            "options": [
+                "dem Lehrer",
+                "des Lehrers",
+                "der Lehrer",
+                "den Lehrer"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_dativ_12",
+            "type": "multiple-choice",
+            "question": "Er antwortet ___ (der Chef) nicht.",
+            "options": [
+                "den Chef",
+                "der Chef",
+                "das Chef",
+                "dem Chef"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_dativ_13",
+            "type": "multiple-choice",
+            "question": "Schmeckt ___ (ihr) die Pizza?",
+            "options": [
+                "ihnen",
+                "euch",
+                "ihr",
+                "uns"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_dativ_14",
+            "type": "multiple-choice",
+            "question": "Passt ___ (du) der Termin?",
+            "options": [
+                "Sie",
+                "dir",
+                "dein",
+                "dich"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_dativ_15",
+            "type": "multiple-choice",
+            "question": "Ich gratuliere ___ (mein Freund) zum Geburtstag.",
+            "options": [
+                "mein Freund",
+                "meinem Freund",
+                "meiner Freund",
+                "meinen Freund"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

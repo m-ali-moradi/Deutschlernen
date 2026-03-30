@@ -1,0 +1,188 @@
+{
+    "topic": "NebensÃ¤tze",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "ex_fb_b1_6",
+            "type": "fill-blank",
+            "question": "Bevor ich schlafen gehe, ___ ich ein Buch. (lesen)",
+            "options": [
+                "lese",
+                "gelesen",
+                "lest",
+                "las"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_b1_2",
+            "type": "sentence-order",
+            "question": "Obwohl es regnet, gehen wir spazieren.",
+            "options": [
+                "spazieren",
+                "gehen",
+                "wir",
+                "regnet",
+                "es",
+                "Obwohl"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_nebensaetze_3",
+            "type": "multiple-choice",
+            "question": "Ich weiß, ___ du Recht hast.",
+            "options": [
+                "denn",
+                "weil",
+                "das",
+                "dass"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nebensaetze_4",
+            "type": "multiple-choice",
+            "question": "Kannst du mir sagen, ___ der Zug abfährt?",
+            "options": [
+                "als",
+                "wenn",
+                "ob",
+                "wann"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nebensaetze_5",
+            "type": "multiple-choice",
+            "question": "Wir bleiben zu Hause, ___ es stark regnet.",
+            "options": [
+                "dass",
+                "weil",
+                "deshalb",
+                "denn"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_nebensaetze_6",
+            "type": "multiple-choice",
+            "question": "Er fragt, ___ wir heute Abend ins Kino gehen.",
+            "options": [
+                "dass",
+                "wenn",
+                "als",
+                "ob"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nebensaetze_7",
+            "type": "multiple-choice",
+            "question": "___ ich gestern aufwachte, schien die Sonne.",
+            "options": [
+                "Wenn",
+                "Als",
+                "Dass",
+                "Wann"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_nebensaetze_8",
+            "type": "multiple-choice",
+            "question": "Ruf mich an, ___ du ankommst.",
+            "options": [
+                "ob",
+                "wenn",
+                "wann",
+                "als"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_nebensaetze_9",
+            "type": "multiple-choice",
+            "question": "Ich freue mich, ___ du mich besuchst.",
+            "options": [
+                "wenn",
+                "wann",
+                "dass",
+                "weil"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_nebensaetze_10",
+            "type": "multiple-choice",
+            "question": "Weißt du, ___ dieses Auto gehört?",
+            "options": [
+                "wer",
+                "wen",
+                "wem",
+                "was"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_nebensaetze_11",
+            "type": "multiple-choice",
+            "question": "Es ist wichtig, ___ man jeden Tag genug Wasser trinkt.",
+            "options": [
+                "dass",
+                "ob",
+                "weil",
+                "wenn"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_nebensaetze_12",
+            "type": "multiple-choice",
+            "question": "Er ist müde, ___ er hat gestern spät gearbeitet.",
+            "options": [
+                "denn",
+                "da",
+                "dass",
+                "weil"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_nebensaetze_13",
+            "type": "multiple-choice",
+            "question": "Ich bleibe im Büro, ___ ich alle Mails beantwortet habe.",
+            "options": [
+                "bis",
+                "als",
+                "wenn",
+                "seit"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_nebensaetze_14",
+            "type": "multiple-choice",
+            "question": "___ er krank ist, geht er heute nicht zur Arbeit.",
+            "options": [
+                "Denn",
+                "Dass",
+                "Da",
+                "Weil"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_nebensaetze_15",
+            "type": "multiple-choice",
+            "question": "Sie lernt Deutsch, ___ sie in der Schweiz arbeiten will.",
+            "options": [
+                "dass",
+                "da",
+                "denn",
+                "weil"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+﻿{
+    "id":  "g52",
+    "title":  "Erweiterte Passivformen",
+    "level":  "C1",
+    "category":  "Zeiten",
+    "icon":  "⏰",
+    "rule":  "Subjektloses Passiv, bekommen-Passiv, Passiv in allen Zeiten.",
+    "explanation":  "Advanced passive includes: subjektloses Passiv (Es wird getanzt), bekommen/kriegen-Passiv (recipient passive), and passive in all tenses.",
+    "examples":  [
+                     "Hier wird nicht geraucht!",
+                     "Es wurde die ganze Nacht getanzt.",
+                     "Er bekommt das Buch geschenkt."
+                 ],
+    "detail":  {
+                   "id":  "g52",
+                   "subtitle":  "Erweiterte Passivformen · C1",
+                   "emoji":  "⏰",
+                   "gradient":  [
+                                    "#FB923C",
+                                    "#EA580C"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Mehr als nur werden + Partizip II",
+                                        "text":  "Auf C1-Niveau bedeutet Passiv, mehrere Varianten sicher zu beherrschen: subjektloses Passiv, Empfängerpassiv mit bekommen/kriegen und Passiv in verschiedenen Zeitstufen. So kann man Inhalte in formellen Texten flexibler darstellen."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Wichtige Passivformen",
+                                        "headers":  [
+                                                        "Form",
+                                                        "Beispiel",
+                                                        "Fokus"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "subjektloses Passiv",
+                                                         "Hier wird nicht geraucht.",
+                                                         "allgemeine Regel / Handlung"
+                                                     ],
+                                                     [
+                                                         "bekommen-Passiv",
+                                                         "Er bekommt das Dokument zugeschickt.",
+                                                         "Empfänger"
+                                                     ],
+                                                     [
+                                                         "Perfekt Passiv",
+                                                         "Der Vertrag ist unterschrieben worden.",
+                                                         "abgeschlossener Vorgang"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Formelle Kontexte",
+                                        "color":  "orange",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Es wurde bis spät in die Nacht diskutiert.",
+                                                          "en":  "People discussed until late into the night."
+                                                      },
+                                                      {
+                                                          "de":  "Die Kundin bekam die Rechnung sofort zugesandt.",
+                                                          "en":  "The customer was sent the invoice immediately."
+                                                      },
+                                                      {
+                                                          "de":  "Der Bericht wird bis morgen fertiggestellt worden sein.",
+                                                          "en":  "The report will have been completed by tomorrow."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Nutze das Empfängerpassiv, wenn der Empfänger wichtiger ist als der Handelnde. Nutze das subjektlose Passiv, wenn die Handlung zählt und der Täter unwichtig ist.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Nicht jedes Verb bildet jede Passivvariante natürlich.",
+                                                      "Das bekommen/kriegen-Passiv steht meist bei Verben des Gebens oder Überreichens.",
+                                                      "Passivketten werden lang, deshalb nutzt formelles Schriftdeutsch sie häufiger als die Alltagssprache.",
+                                                      "Wähle die Passivform nach dem Informationsfokus: Vorgang, Zustand oder Empfänger."
+                                                  ]
+                                    }
+                                ]
+               }
+}

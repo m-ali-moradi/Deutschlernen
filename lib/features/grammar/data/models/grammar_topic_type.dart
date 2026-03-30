@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
 
 /// Category gradient colors
 ///
@@ -67,6 +67,124 @@ List<Color> getGrammarCategoryGradient(String category) {
   }
 }
 
+/// Category icons
+///
+/// Returns an IconData representing the category, with optional topic-specific overrides.
+IconData getGrammarCategoryIcon(String category, [String? title]) {
+  // Topic-specific overrides for a more professional and unique look
+  if (title != null) {
+    final t = title.toLowerCase();
+    
+    // Articles & Nouns
+    if (t.contains('plural')) return Icons.plus_one_rounded;
+    if (t.contains('n-deklination')) return Icons.format_indent_increase_rounded;
+    if (t.contains('artikel')) return Icons.text_fields_rounded;
+    if (t.contains('nomen')) return Icons.smart_button_rounded;
+    
+    // Cases
+    if (t.contains('akkusativ') || t.contains('dativ') || t.contains('genitiv') || t.contains('nominativ')) {
+      return Icons.compare_arrows_rounded;
+    }
+    
+    // Verbs & Tenses
+    if (t.contains('präsens')) return Icons.timer_rounded;
+    if (t.contains('perfekt')) return Icons.history_rounded;
+    if (t.contains('präteritum')) return Icons.auto_stories_rounded;
+    if (t.contains('futur')) return Icons.update_rounded;
+    if (t.contains('modalverben')) return Icons.psychology_rounded;
+    if (t.contains('trennbare')) return Icons.content_cut_rounded;
+    if (t.contains('reflexive')) return Icons.settings_backup_restore_rounded;
+    if (t.contains('passiv')) return Icons.inbox_rounded;
+    if (t.contains('konjunktiv')) return Icons.auto_awesome_rounded;
+    if (t.contains('imperativ')) return Icons.priority_high_rounded;
+    if (t.contains('infinitiv')) return Icons.all_inclusive_rounded;
+    if (t.contains('partizip')) return Icons.extension_rounded;
+    if (t.contains('partikeln')) return Icons.grain_rounded;
+    if (t.contains('rede')) return Icons.record_voice_over_rounded;
+    if (t.contains('nomen-verb')) return Icons.handshake_rounded;
+    
+    // Sentence Structure
+    if (t.contains('negation')) return Icons.block_rounded;
+    if (t.contains('zahlen') || t.contains('nummer')) return Icons.numbers_rounded;
+    if (t.contains('zeit')) return Icons.access_time_rounded;
+    if (t.contains('nebensätze') || t.contains('relativsätze') || t.contains('konnektoren') || t.contains('konjunktionen')) {
+      return Icons.link_rounded;
+    }
+    if (t.contains('wortstellung')) return Icons.low_priority_rounded;
+    if (t.contains('apposition')) return Icons.add_circle_outline_rounded;
+    
+    // Adjectives & Nouns
+    if (t.contains('komparativ') || t.contains('superlativ')) return Icons.leaderboard_rounded;
+    if (t.contains('deklination')) return Icons.format_paint_rounded;
+    if (t.contains('adjektive')) return Icons.brush_rounded;
+    if (t.contains('nominalisierung') || t.contains('nominalstil')) return Icons.format_list_bulleted_rounded;
+    
+    // Pronouns
+    if (t.contains('pronomen')) return Icons.person_rounded;
+    
+    // Prepositions
+    if (t.contains('wechselpräpositionen')) return Icons.multiple_stop_rounded;
+  }
+
+  // Fallback to category-based icons
+  switch (category) {
+    case 'Artikel':
+    case 'Articles':
+    case 'حروف تعریف':
+    case 'Artikel & Nomen':
+      return Icons.article_rounded;
+    case 'Satzbau':
+    case 'Sentence structure':
+    case 'ساختار جمله':
+      return Icons.account_tree_rounded;
+    case 'Fälle':
+    case 'Kasus':
+    case 'Cases':
+    case 'حالت‌ها':
+      return Icons.layers_rounded;
+    case 'Pronomen':
+    case 'Pronouns':
+    case 'ضمایر':
+      return Icons.people_outline_rounded;
+    case 'Zeiten':
+    case 'Tenses':
+    case 'زمان‌ها':
+      return Icons.schedule_rounded;
+    case 'Verben':
+    case 'Verbs':
+    case 'افعال':
+      return Icons.play_arrow_rounded;
+    case 'Prapositionen':
+    case 'Präpositionen':
+    case 'Prepositions':
+    case 'حروف اضافه':
+      return Icons.place_rounded;
+    case 'Adjektive':
+    case 'Adjectives':
+    case 'صفات':
+      return Icons.color_lens_rounded;
+    case 'Nebensatze':
+    case 'Nebensätze':
+    case 'Subordinate clauses':
+    case 'جملات پیرو':
+      return Icons.link_rounded;
+    case 'Konjunktiv':
+    case 'Subjunctive':
+    case 'وجه التزامی':
+      return Icons.psychology_rounded;
+    case 'Partikeln':
+    case 'Particles':
+    case 'ادات':
+      return Icons.grain_rounded;
+    case 'Relativsatze':
+    case 'Relativsätze':
+    case 'Relative clauses':
+      return Icons.alt_route_rounded;
+    default:
+      return Icons.book_rounded;
+  }
+}
+
 /// List of grammar levels
 const grammarLevels = ['Alle', 'A1', 'A2', 'B1', 'B2', 'C1'];
 
@@ -130,6 +248,7 @@ String getGrammarCategoryLabel(AppUiText strings, String category) {
 /// Map of English topic titles
 const Map<String, String> grammarEnglishTopicTitles = {
   'Bestimmte Artikel': 'Definite Articles',
+  'Unbestimmte Artikel': 'Indefinite Articles',
   'Satzbau': 'Sentence Structure',
   'Nominativ & Akkusativ': 'Nominative & Accusative',
   'Personalpronomen': 'Personal Pronouns',
@@ -185,3 +304,6 @@ const Map<String, String> grammarEnglishTopicTitles = {
   'Apposition': 'Apposition',
   'Komplexe Attribute': 'Complex Attributes',
 };
+
+
+

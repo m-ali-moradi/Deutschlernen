@@ -1,0 +1,186 @@
+{
+    "topic": "Adjektivdeklination",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g20_1",
+            "type": "multiple-choice",
+            "question": "Das ist ein ___ Auto.",
+            "options": [
+                "neuen",
+                "neue",
+                "neues",
+                "neu"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g20_2",
+            "type": "multiple-choice",
+            "question": "Der ___ Mann liest ein Buch.",
+            "options": [
+                "alte",
+                "altes",
+                "alten",
+                "alter"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g20_3",
+            "type": "multiple-choice",
+            "question": "Ich kaufe einen ___ Pullover.",
+            "options": [
+                "rotes",
+                "roter",
+                "rote",
+                "roten"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g20_4",
+            "type": "multiple-choice",
+            "question": "Ein ___ heißer Kaffee schmeckt am Morgen gut.",
+            "options": [
+                "starken",
+                "starkes",
+                "starker",
+                "starke"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g20_5",
+            "type": "multiple-choice",
+            "question": "Ich trinke am liebsten ___ Tee ohne Zucker.",
+            "options": [
+                "grünen",
+                "grüner",
+                "grünes",
+                "grüne"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g20_6",
+            "type": "multiple-choice",
+            "question": "Die ___ Kinder spielen seit Stunden im Garten.",
+            "options": [
+                "kleiner",
+                "kleine",
+                "kleinen",
+                "kleines"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_adjektivdeklination_7",
+            "type": "multiple-choice",
+            "question": "Ich habe einen ___ (neu) Computer gekauft.",
+            "options": [
+                "neues",
+                "neuer",
+                "neue",
+                "neuen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_adjektivdeklination_8",
+            "type": "multiple-choice",
+            "question": "Mit meinem ___ (alt) Auto fahre ich nicht mehr.",
+            "options": [
+                "alten",
+                "alter",
+                "alte",
+                "altes"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_adjektivdeklination_9",
+            "type": "multiple-choice",
+            "question": "Sie trägt ein ___ (schön) Kleid.",
+            "options": [
+                "schöner",
+                "schönen",
+                "schöne",
+                "schönes"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_adjektivdeklination_10",
+            "type": "multiple-choice",
+            "question": "Wir wohnen in einem ___ (groß) Haus.",
+            "options": [
+                "große",
+                "großes",
+                "großer",
+                "großen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_adjektivdeklination_11",
+            "type": "multiple-choice",
+            "question": "Die ___ (klein) Kinder spielen draußen.",
+            "options": [
+                "kleinen",
+                "kleines",
+                "kleiner",
+                "kleine"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_adjektivdeklination_12",
+            "type": "multiple-choice",
+            "question": "Er trinkt ___ (heiß) Kaffee.",
+            "options": [
+                "heißer",
+                "heißes",
+                "heißen",
+                "heiße"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_adjektivdeklination_13",
+            "type": "multiple-choice",
+            "question": "Das ist ein ___ (gut) Buch.",
+            "options": [
+                "guten",
+                "gute",
+                "gutes",
+                "guter"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_adjektivdeklination_14",
+            "type": "multiple-choice",
+            "question": "Wir haben eine ___ (schwer) Prüfung.",
+            "options": [
+                "schweren",
+                "schweres",
+                "schwerer",
+                "schwere"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_adjektivdeklination_15",
+            "type": "multiple-choice",
+            "question": "Ich helfe dem ___ (krank) Mann.",
+            "options": [
+                "kranken",
+                "krankes",
+                "kranker",
+                "kranke"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

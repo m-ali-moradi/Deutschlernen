@@ -5,6 +5,8 @@
 build/
 docs/
 *.lock
+node_modules/
+tooling/
 
 # Generated plugin and package files
 .flutter-plugins
@@ -14,6 +16,12 @@ docs/
 # Databases
 *.sqlite
 *.sqlite-journal
+
+# Local secrets / tooling artifacts
+service-account-key.json
+google-services.json
+analysis_report.txt
+files_list.txt
 
 # IDE
 .idea/

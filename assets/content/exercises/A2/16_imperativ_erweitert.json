@@ -1,0 +1,186 @@
+{
+    "topic": "Imperativ (Erweitert)",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g59_1",
+            "type": "multiple-choice",
+            "question": "Setz ___ bitte hin!",
+            "options": [
+                "mich",
+                "dir",
+                "dich",
+                "sich"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g59_2",
+            "type": "multiple-choice",
+            "question": "Zieh ___ die Schuhe aus!",
+            "options": [
+                "dir",
+                "euch",
+                "dich",
+                "sich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g59_3",
+            "type": "multiple-choice",
+            "question": "Bitte nicht ___!",
+            "options": [
+                "rauche",
+                "rauchen",
+                "geraucht",
+                "raucht"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g59_4",
+            "type": "multiple-choice",
+            "question": "___ bitte sofort das Fenster ___!",
+            "options": [
+                "Mach - zu",
+                "Mache - zu",
+                "Machst - zu",
+                "Machen - zu"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g59_5",
+            "type": "multiple-choice",
+            "question": "___ Sie bitte vorsichtig ___!",
+            "options": [
+                "Tretet - ein",
+                "Treten - ein",
+                "Trete - ein",
+                "Treten Sie - ein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g59_6",
+            "type": "multiple-choice",
+            "question": "___ euch bitte warm ___!",
+            "options": [
+                "Zieht - aus",
+                "Zieh - an",
+                "Zieht - an",
+                "Ziehen - an"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_imperativ_erweitert_7",
+            "type": "multiple-choice",
+            "question": "___ mir bitte die Tür auf! (ihr)",
+            "options": [
+                "Mach",
+                "Macht",
+                "Machen",
+                "Machest"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_imperativ_erweitert_8",
+            "type": "multiple-choice",
+            "question": "___ bitte etwas leiser! (ihr)",
+            "options": [
+                "Sind",
+                "Seien",
+                "Seid",
+                "Sei"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_imperativ_erweitert_9",
+            "type": "multiple-choice",
+            "question": "___ nicht so viel Eis! (du)",
+            "options": [
+                "Iss",
+                "Essen",
+                "Esst",
+                "Esse"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_imperativ_erweitert_10",
+            "type": "multiple-choice",
+            "question": "___ mich heute Abend an! (du)",
+            "options": [
+                "Ruft",
+                "Ruf",
+                "Rufst",
+                "Rufen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_imperativ_erweitert_11",
+            "type": "multiple-choice",
+            "question": "___ Sie bitte hier! (unterschreiben)",
+            "options": [
+                "Unterschreibt",
+                "Unterschreiben",
+                "Unterschreibe",
+                "Unterschreib"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_imperativ_erweitert_12",
+            "type": "multiple-choice",
+            "question": "___ Sie doch Platz! (nehmen)",
+            "options": [
+                "Nehmt",
+                "Nehme",
+                "Nehmen",
+                "Nimm"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_imperativ_erweitert_13",
+            "type": "multiple-choice",
+            "question": "___ mir bitte das Salz! (geben, du)",
+            "options": [
+                "Gib",
+                "Gebt",
+                "Gebe",
+                "Geben"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_imperativ_erweitert_14",
+            "type": "multiple-choice",
+            "question": "___ nicht das Buch! (vergessen, du)",
+            "options": [
+                "Vergiss",
+                "Vergesse",
+                "Vergesst",
+                "Vergessen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_imperativ_erweitert_15",
+            "type": "multiple-choice",
+            "question": "___ Sie sich keine Sorgen! (machen)",
+            "options": [
+                "Mache",
+                "Mach",
+                "Macht",
+                "Machen"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Trennbare Verben",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g13_1",
+            "type": "multiple-choice",
+            "question": "Der Film ___ um 20 Uhr ___.",
+            "options": [
+                "anfangt",
+                "fangt an",
+                "an fängt",
+                "fängt an"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g13_2",
+            "type": "multiple-choice",
+            "question": "Wann ___ du am Samstag ___?",
+            "options": [
+                "stehest auf",
+                "aufstehst",
+                "stehst auf",
+                "stehst an"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g13_3",
+            "type": "multiple-choice",
+            "question": "Wir ___ im Supermarkt ___.",
+            "options": [
+                "kaufen an",
+                "kaufen aus",
+                "kaufen ein",
+                "ein kaufen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g13_4",
+            "type": "multiple-choice",
+            "question": "Ich ___ dich morgen ___.",
+            "options": [
+                "rufe - an",
+                "an - rufe",
+                "rufe - aus",
+                "rufe - mit"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g13_5",
+            "type": "multiple-choice",
+            "question": "___ du bitte das Licht ___?",
+            "options": [
+                "machst - aus",
+                "macht - aus",
+                "machen - aus",
+                "aus - machst"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g13_6",
+            "type": "multiple-choice",
+            "question": "Wir ___ pünktlich um 8 Uhr ___.",
+            "options": [
+                "gehen - ab",
+                "gehen - los",
+                "gehen - an",
+                "los - gehen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_trennbare_verben_7",
+            "type": "multiple-choice",
+            "question": "Wann ___ du an? (ankommen)",
+            "options": [
+                "kommen",
+                "kommst",
+                "kommt",
+                "komme"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_trennbare_verben_8",
+            "type": "multiple-choice",
+            "question": "Ich ___ um 7 Uhr auf. (aufstehen)",
+            "options": [
+                "steht",
+                "stehe",
+                "stehen",
+                "stehst"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_trennbare_verben_9",
+            "type": "multiple-choice",
+            "question": "Er ___ das Licht aus. (ausmachen)",
+            "options": [
+                "machst",
+                "macht",
+                "mache",
+                "machen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_trennbare_verben_10",
+            "type": "multiple-choice",
+            "question": "Wir ___ viel ein. (einkaufen)",
+            "options": [
+                "kaufen",
+                "kauft",
+                "kaufst",
+                "kaufe"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_trennbare_verben_11",
+            "type": "multiple-choice",
+            "question": "Sie ___ heute fern. (fernsehen)",
+            "options": [
+                "seht",
+                "sehen",
+                "sieht",
+                "sehe"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_trennbare_verben_12",
+            "type": "multiple-choice",
+            "question": "Um wie viel Uhr ___ der Zug ab? (abfahren)",
+            "options": [
+                "fahre",
+                "fährst",
+                "fährt",
+                "fahren"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_trennbare_verben_13",
+            "type": "multiple-choice",
+            "question": "Du ___ deine Freunde ein. (einladen)",
+            "options": [
+                "ladest",
+                "laden",
+                "lädst",
+                "ladet"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_trennbare_verben_14",
+            "type": "multiple-choice",
+            "question": "Ich ___ meine Jacke an. (anziehen)",
+            "options": [
+                "ziehst",
+                "zieht",
+                "ziehe",
+                "ziehen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_trennbare_verben_15",
+            "type": "multiple-choice",
+            "question": "___ ihr die Tür zu? (zumachen)",
+            "options": [
+                "Machst",
+                "Machen",
+                "Macht",
+                "Mache"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

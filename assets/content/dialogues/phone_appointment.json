@@ -1,0 +1,116 @@
+{
+    "id": "phone_appointment",
+    "title": "Termin am Telefon",
+    "english_title": "Making an Appointment by Phone",
+    "level": "A2",
+    "category": "Telefon",
+    "description": "Learn useful phrases for calling a clinic, explaining your request, and booking or moving an appointment.",
+    "icon": "phone_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Praxis Dr. Weber, guten Tag.",
+            "english": "Dr. Weber's practice, good day."
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag. Mein Name ist Sara Ahmadi. Ich moechte gern einen Termin vereinbaren.",
+            "english": "Good day. My name is Sara Ahmadi. I would like to make an appointment."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Sind Sie schon Patientin bei uns?",
+            "english": "Are you already a patient with us?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, ich bin neu.",
+            "english": "No, I am new."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Worum geht es?",
+            "english": "What is it about?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich habe seit zwei Tagen starke Halsschmerzen.",
+            "english": "I have had a bad sore throat for two days."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Verstehe. Haben Sie auch Fieber?",
+            "english": "I understand. Do you also have a fever?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, aber das Schlucken ist schwierig.",
+            "english": "No, but swallowing is difficult."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Wir haben morgen um 10 Uhr 30 einen freien Termin.",
+            "english": "We have a free appointment tomorrow at 10:30."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, das passt gut.",
+            "english": "Yes, that works well."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Bitte bringen Sie Ihre Gesundheitskarte mit.",
+            "english": "Please bring your health insurance card."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, natuerlich. Muss ich frueher da sein?",
+            "english": "Yes, of course. Do I need to be there earlier?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Ja, bitte kommen Sie zehn Minuten frueher fuer das Formular.",
+            "english": "Yes, please come ten minutes earlier for the form."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Alles klar. Vielen Dank fuer Ihre Hilfe.",
+            "english": "All right. Thank you very much for your help."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Praxisassistentin",
+            "german": "Gern. Dann bis morgen. Auf Wiederhoeren.",
+            "english": "You're welcome. See you tomorrow then. Goodbye on the phone."
+        }
+    ]
+}

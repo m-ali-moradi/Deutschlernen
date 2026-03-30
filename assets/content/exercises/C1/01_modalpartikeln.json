@@ -1,0 +1,186 @@
+{
+    "topic": "Modalpartikeln",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g49_1",
+            "type": "multiple-choice",
+            "question": "Das ist ___ eine gute Idee! (Überraschung)",
+            "options": [
+                "schon",
+                "ja",
+                "denn",
+                "halt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g49_2",
+            "type": "multiple-choice",
+            "question": "Was machst du ___ hier? (Interesse/Verwunderung)",
+            "options": [
+                "halt",
+                "aber",
+                "nur",
+                "denn"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g49_3",
+            "type": "multiple-choice",
+            "question": "Das Leben ist ___ nicht einfach. (Resignation)",
+            "options": [
+                "eben",
+                "doch",
+                "aber",
+                "schon"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g49_4",
+            "type": "multiple-choice",
+            "question": "Das hättest du mir ___ früher sagen können! (Vorwurf)",
+            "options": [
+                "eben",
+                "ja",
+                "doch",
+                "mal"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g49_5",
+            "type": "multiple-choice",
+            "question": "Komm ___ mal kurz her, ich muss dir etwas Wichtiges zeigen.",
+            "options": [
+                "schon",
+                "ja",
+                "doch",
+                "halt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g49_6",
+            "type": "multiple-choice",
+            "question": "Er wird ___ selbst am besten wissen, was jetzt zu tun ist.",
+            "options": [
+                "mal",
+                "wohl",
+                "eben",
+                "ja"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_modalpartikeln_7",
+            "type": "multiple-choice",
+            "question": "Wo warst du ___ so lange?",
+            "options": [
+                "vielleicht",
+                "denn",
+                "ja",
+                "aber"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_modalpartikeln_8",
+            "type": "multiple-choice",
+            "question": "Komm ___ her!",
+            "options": [
+                "denn",
+                "ja",
+                "doch",
+                "mal"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_modalpartikeln_9",
+            "type": "multiple-choice",
+            "question": "Das ist ___ unglaublich!",
+            "options": [
+                "vielleicht",
+                "ja",
+                "mal",
+                "denn"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_modalpartikeln_10",
+            "type": "multiple-choice",
+            "question": "Du hast ___ gar nichts gesagt!",
+            "options": [
+                "ebenso",
+                "denn",
+                "ja",
+                "vielleicht"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_modalpartikeln_11",
+            "type": "multiple-choice",
+            "question": "Hast du ___ Zeit für mich?",
+            "options": [
+                "ja",
+                "vielleicht",
+                "denn",
+                "eigentlich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_modalpartikeln_12",
+            "type": "multiple-choice",
+            "question": "Er wird ___ schon wissen, was er tut.",
+            "options": [
+                "halt",
+                "wohl",
+                "denn",
+                "eben"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_modalpartikeln_13",
+            "type": "multiple-choice",
+            "question": "Das habe ich dir ___ gesagt!",
+            "options": [
+                "mal",
+                "denn",
+                "vielleicht",
+                "doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_modalpartikeln_14",
+            "type": "multiple-choice",
+            "question": "Das war ___ ein toller Film!",
+            "options": [
+                "halt",
+                "vielleicht",
+                "mal",
+                "denn"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_modalpartikeln_15",
+            "type": "multiple-choice",
+            "question": "Wie heißt er ___ gleich nochmal?",
+            "options": [
+                "denn",
+                "ja",
+                "mal",
+                "doch"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

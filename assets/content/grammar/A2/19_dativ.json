@@ -1,0 +1,219 @@
+﻿{
+    "id":  "g39",
+    "title":  "Dativ",
+    "level":  "A2",
+    "category":  "Fälle",
+    "icon":  "🎯",
+    "rule":  "Dativ = indirektes Objekt (WEM?). Artikel: dem/der/dem/den+n.",
+    "explanation":  "The Dativ case marks the indirect object (WEM?). Articles change: der→dem, die→der, das→dem, die(pl)→den+n. Many verbs and prepositions require Dativ.",
+    "examples":  [
+                     "Ich gebe dem Mann das Buch.",
+                     "Sie hilft der Frau.",
+                     "Er dankt den Kindern.",
+                     "Ich schenke meiner Mutter Blumen."
+                 ],
+    "detail":  {
+                   "id":  "g39",
+                   "subtitle":  "Fälle · Dativ",
+                   "emoji":  "⚖️",
+                   "gradient":  [
+                                    "#F43F5E",
+                                    "#EC4899"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Der Dativ · The Dative Case",
+                                        "text":  "The Dative case marks the indirect object (to/for whom). It is also required after certain prepositions and verbs.",
+                                        "bullets":  [
+                                                        "Answers: WEM? (to/for whom?)",
+                                                        "Always after: mit, nach, aus, bei, von, zu, seit, gegenüber",
+                                                        "After Wechselpräpositionen in WO? position",
+                                                        "With verbs: helfen, danken, gefallen, gehören, antworten"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Dativartikel",
+                                        "headers":  [
+                                                        "",
+                                                        "Mask.",
+                                                        "Fem.",
+                                                        "Neut.",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "bestimmt",
+                                                         "dem",
+                                                         "der",
+                                                         "dem",
+                                                         "den"
+                                                     ],
+                                                     [
+                                                         "unbestimmt",
+                                                         "einem",
+                                                         "einer",
+                                                         "einem",
+                                                         "–"
+                                                     ],
+                                                     [
+                                                         "kein",
+                                                         "keinem",
+                                                         "keiner",
+                                                         "keinem",
+                                                         "keinen"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Indirektes Objekt",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich gebe dem Mann das Buch.",
+                                                          "en":  "I give the man the book. (WEM gebe ich?)"
+                                                      },
+                                                      {
+                                                          "de":  "Sie schreibt ihrer Mutter einen Brief.",
+                                                          "en":  "She writes her mother a letter."
+                                                      },
+                                                      {
+                                                          "de":  "Er hilft seinem Freund.",
+                                                          "en":  "He helps his friend."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Dativverben",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das Buch gehört mir.",
+                                                          "en":  "The book belongs to me."
+                                                      },
+                                                      {
+                                                          "de":  "Dieser Film gefällt mir.",
+                                                          "en":  "I like this film. (lit: This film pleases me)"
+                                                      },
+                                                      {
+                                                          "de":  "Ich danke Ihnen.",
+                                                          "en":  "I thank you."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Dative plural: all nouns add -n unless plural already ends in -n or -s: den Männ-ern, den Kind-ern.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Dativ = WEM? Always after: mit, nach, aus, bei, von, zu, seit.",
+                                                      "Only masculine changes again: dem, einem, keinem.",
+                                                      "Dative plural: article den + noun + n (if not already).",
+                                                      "Dative verbs: helfen, gefallen, gehören, danken, antworten."
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Wichtige Dativverben",
+                                        "color":  "rose",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "helfen",
+                                                         "right":  "to help (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "gefallen",
+                                                         "right":  "to please (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "gehören",
+                                                         "right":  "to belong to (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "danken",
+                                                         "right":  "to thank (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "antworten",
+                                                         "right":  "to answer (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "gratulieren",
+                                                         "right":  "to congratulate (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "fehlen",
+                                                         "right":  "to be missing/to miss (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "schmecken",
+                                                         "right":  "to taste (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "passen",
+                                                         "right":  "to fit/suit (+ Dat)"
+                                                     },
+                                                     {
+                                                         "left":  "glauben",
+                                                         "right":  "to believe (+ Dat person)"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Alle vier Fälle · Complete Case Table",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Frage",
+                                                        "mask.",
+                                                        "fem.",
+                                                        "neut.",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nominativ",
+                                                         "WER?",
+                                                         "der/ein",
+                                                         "die/eine",
+                                                         "das/ein",
+                                                         "die"
+                                                     ],
+                                                     [
+                                                         "Akkusativ",
+                                                         "WEN?",
+                                                         "den/einen",
+                                                         "die/eine",
+                                                         "das/ein",
+                                                         "die"
+                                                     ],
+                                                     [
+                                                         "Dativ",
+                                                         "WEM?",
+                                                         "dem/einem",
+                                                         "der/einer",
+                                                         "dem/einem",
+                                                         "den+n"
+                                                     ],
+                                                     [
+                                                         "Genitiv",
+                                                         "WESSEN?",
+                                                         "des/eines",
+                                                         "der/einer",
+                                                         "des/eines",
+                                                         "der"
+                                                     ]
+                                                 ]
+                                    }
+                                ]
+               }
+}

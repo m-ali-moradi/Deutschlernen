@@ -1,0 +1,186 @@
+{
+    "topic": "Imperativ",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g56_1",
+            "type": "multiple-choice",
+            "question": "___ mir bitte das Buch! (du)",
+            "options": [
+                "Gebe",
+                "Geben",
+                "Gib",
+                "Gibst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g56_2",
+            "type": "multiple-choice",
+            "question": "___ Platz! (Sie)",
+            "options": [
+                "Nimm",
+                "Nehmt",
+                "Nehmen",
+                "Nehmen Sie"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g56_3",
+            "type": "multiple-choice",
+            "question": "___ ruhig! (ihr)",
+            "options": [
+                "Seien",
+                "Sind",
+                "Seid",
+                "Sei"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g56_4",
+            "type": "multiple-choice",
+            "question": "___ bitte das Fenster auf!",
+            "options": [
+                "Mach",
+                "Machst",
+                "Macht",
+                "Machen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g56_5",
+            "type": "multiple-choice",
+            "question": "Bitte ___ leise!",
+            "options": [
+                "Seid",
+                "Bist",
+                "Sind",
+                "Sei"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g56_6",
+            "type": "multiple-choice",
+            "question": "___ Sie bitte hier auf mich!",
+            "options": [
+                "Wartet",
+                "Warten Sie",
+                "Warten",
+                "Warte"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_imperativ_7",
+            "type": "multiple-choice",
+            "question": "___ mir bitte das Buch! (geben, du)",
+            "options": [
+                "Geben",
+                "Gebt",
+                "Gib",
+                "Geb"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_imperativ_8",
+            "type": "multiple-choice",
+            "question": "___ bitte das Fenster zu! (machen, du)",
+            "options": [
+                "Machen",
+                "Mach",
+                "Machest",
+                "Macht"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_imperativ_9",
+            "type": "multiple-choice",
+            "question": "___ nicht so schnell! (sprechen, Sie)",
+            "options": [
+                "Sprechen Sie",
+                "Spricht",
+                "Sprich",
+                "Sprecht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_imperativ_10",
+            "type": "multiple-choice",
+            "question": "___ ruhig! (sein, ihr)",
+            "options": [
+                "Seid",
+                "Seien",
+                "Sei",
+                "Sind"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_imperativ_11",
+            "type": "multiple-choice",
+            "question": "___ den Text! (lesen, du)",
+            "options": [
+                "Lest",
+                "Lese",
+                "Lesen",
+                "Lies"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_imperativ_12",
+            "type": "multiple-choice",
+            "question": "___ mir bitte! (helfen, Sie)",
+            "options": [
+                "Helft",
+                "Hilf",
+                "Helfen Sie",
+                "Helfe"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_imperativ_13",
+            "type": "multiple-choice",
+            "question": "___ das Wasser! (trinken, du)",
+            "options": [
+                "Trinkt",
+                "Trink",
+                "Trinken",
+                "Trinke"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_imperativ_14",
+            "type": "multiple-choice",
+            "question": "___ pünktlich! (sein, Sie)",
+            "options": [
+                "Seid",
+                "Sei",
+                "Seien Sie",
+                "Sind"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_imperativ_15",
+            "type": "multiple-choice",
+            "question": "___ nach Hause! (gehen, ihr)",
+            "options": [
+                "Geh",
+                "Gehen",
+                "Gehest",
+                "Geht"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

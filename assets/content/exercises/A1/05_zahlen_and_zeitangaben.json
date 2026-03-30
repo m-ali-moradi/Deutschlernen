@@ -1,0 +1,186 @@
+{
+    "topic": "Zahlen & Zeitangaben",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g57_1",
+            "type": "multiple-choice",
+            "question": "Wie spät ist es? (02:30)",
+            "options": [
+                "dreißig nach zwei",
+                "zwei dreißig",
+                "halb zwei",
+                "halb drei"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g57_2",
+            "type": "multiple-choice",
+            "question": "Der ___ Mai.",
+            "options": [
+                "funfst",
+                "funfte",
+                "funf",
+                "funften"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g57_3",
+            "type": "multiple-choice",
+            "question": "Ich bin ___ Jahre alt. (25)",
+            "options": [
+                "fünfundzwanzig",
+                "zwei und fünfzig",
+                "fünfzwanzig",
+                "zwanzigfünf"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g57_4",
+            "type": "multiple-choice",
+            "question": "Wann beginnt der Kurs? ___ genau 9 Uhr.",
+            "options": [
+                "am",
+                "um",
+                "zum",
+                "im"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g57_5",
+            "type": "multiple-choice",
+            "question": "Wie viel kostet das? Es kostet ___ Euro.",
+            "options": [
+                "zwanzig",
+                "zwölf",
+                "zwei",
+                "zehn"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g57_6",
+            "type": "multiple-choice",
+            "question": "Heute ist der ___ Mai.",
+            "options": [
+                "erste",
+                "eins",
+                "erster",
+                "erst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_7",
+            "type": "multiple-choice",
+            "question": "Wie spät ist es? Es ist Viertel ___ zwölf. (11:45)",
+            "options": [
+                "nach",
+                "halb",
+                "um",
+                "vor"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_8",
+            "type": "multiple-choice",
+            "question": "Wir treffen uns ___ eins. (13:00)",
+            "options": [
+                "gegen",
+                "am",
+                "um",
+                "im"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_9",
+            "type": "multiple-choice",
+            "question": "Es ist halb ___. (14:30)",
+            "options": [
+                "vier",
+                "zwei",
+                "drei",
+                "eins"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_10",
+            "type": "multiple-choice",
+            "question": "Er kommt ___ Montag.",
+            "options": [
+                "im",
+                "am",
+                "um",
+                "von"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_11",
+            "type": "multiple-choice",
+            "question": "Ich bin ___ 1990 geboren.",
+            "options": [
+                "um",
+                "in",
+                "am",
+                "im Jahr"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_12",
+            "type": "multiple-choice",
+            "question": "Das Meeting ist ___ Juli.",
+            "options": [
+                "am",
+                "im",
+                "an",
+                "um"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_13",
+            "type": "multiple-choice",
+            "question": "Wir haben ___ Herbst Urlaub.",
+            "options": [
+                "in",
+                "am",
+                "im",
+                "um"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_14",
+            "type": "multiple-choice",
+            "question": "Was kostet das? Drei ___ fünfzig.",
+            "options": [
+                "Euros",
+                "Euro",
+                "Geld",
+                "Münzen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_zahlen_and_zeitangaben_15",
+            "type": "multiple-choice",
+            "question": "Wie viel ist zehn plus zehn? ___",
+            "options": [
+                "vierzig",
+                "zehnzehn",
+                "zwanzig",
+                "dreißig"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

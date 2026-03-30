@@ -1,0 +1,108 @@
+﻿{
+    "id":  "g13",
+    "title":  "Trennbare Verben",
+    "level":  "A1",
+    "category":  "Verben",
+    "icon":  "✂️",
+    "rule":  "Im Präsens trennt sich das Präfix und geht ans Satzende.",
+    "explanation":  "Separable verbs have a prefix that detaches in Präsens and goes to the end. In Perfekt, ge- goes between prefix and stem: auf-ge-standen.",
+    "examples":  [
+                     "Ich stehe um 7 Uhr auf.",
+                     "Sie kauft im Supermarkt ein.",
+                     "Der Zug kommt um 10 an.",
+                     "Ich bin aufgestanden."
+                 ],
+    "detail":  {
+                   "id":  "g13",
+                   "subtitle":  "Verben · Trennbare Verben",
+                   "emoji":  "✂️",
+                   "gradient":  [
+                                    "#22C55E",
+                                    "#10B981"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Trennbare Verben · Separable Verbs",
+                                        "text":  "Many German verbs have a separable prefix that detaches and goes to the END of the sentence in Präsens and Imperativ.",
+                                        "bullets":  [
+                                                        "Common prefixes: ab-, an-, auf-, aus-, ein-, mit-, vor-, zu-, zurück-",
+                                                        "The prefix carries meaning and changes the verb\u0027s definition",
+                                                        "In Perfekt: ge- goes BETWEEN prefix and stem: auf-ge-standen"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Wie funktioniert es?",
+                                        "from":  {
+                                                     "label":  "INFINITIV",
+                                                     "text":  "aufstehen (to get up)"
+                                                 },
+                                        "to":  {
+                                                   "label":  "PRÄSENS",
+                                                   "text":  "Ich stehe um 7 Uhr auf."
+                                               },
+                                        "note":  "Prefix \u0027auf\u0027 goes to the end of the clause"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele im Präsens",
+                                        "color":  "green",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich stehe um 7 Uhr auf.",
+                                                          "en":  "I get up at 7 o\u0027clock. (aufstehen)"
+                                                      },
+                                                      {
+                                                          "de":  "Sie kauft im Supermarkt ein.",
+                                                          "en":  "She shops at the supermarket. (einkaufen)"
+                                                      },
+                                                      {
+                                                          "de":  "Der Zug kommt um 10 Uhr an.",
+                                                          "en":  "The train arrives at 10. (ankommen)"
+                                                      },
+                                                      {
+                                                          "de":  "Er ruft mich morgen an.",
+                                                          "en":  "He calls me tomorrow. (anrufen)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Perfekt (ge- in der Mitte!)",
+                                        "color":  "emerald",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich bin um 7 Uhr aufgestanden.",
+                                                          "en":  "I got up at 7 o\u0027clock."
+                                                      },
+                                                      {
+                                                          "de":  "Sie hat im Supermarkt eingekauft.",
+                                                          "en":  "She shopped at the supermarket."
+                                                      },
+                                                      {
+                                                          "de":  "Der Zug ist angekommen.",
+                                                          "en":  "The train has arrived."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Inseparable prefixes (be-, emp-, ent-, er-, ge-, miss-, ver-, zer-) NEVER separate and have NO ge- in Partizip II.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Separable prefixes are stressed: ÁNrufen, ÁUFstehen.",
+                                                      "With modal verbs, the verb stays together: Ich muss aufstehen.",
+                                                      "In subordinate clauses: …weil ich aufstehe.",
+                                                      "Perfekt: prefix + ge + stem + t/en: ein-ge-kauft, auf-ge-standen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

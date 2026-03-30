@@ -1,0 +1,123 @@
+{
+    "id": "public_transport_ticket",
+    "title": "Am Bahnhof",
+    "english_title": "At the Train Station",
+    "level": "A2",
+    "category": "Mobilitaet",
+    "description": "Learn how to buy a ticket, ask about departure times and platforms, and understand simple station information.",
+    "icon": "train_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Guten Morgen. Wie kann ich Ihnen helfen?",
+            "english": "Good morning. How can I help you?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich moechte eine Fahrkarte nach Hamburg kaufen.",
+            "english": "I would like to buy a ticket to Hamburg."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Wann moechten Sie fahren?",
+            "english": "When would you like to travel?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Heute um etwa neun Uhr, bitte.",
+            "english": "Today at about nine o'clock, please."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Es gibt einen Zug um 9 Uhr 12 und einen um 9 Uhr 45.",
+            "english": "There is a train at 9:12 and one at 9:45."
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Welcher Zug ist schneller?",
+            "english": "Which train is faster?"
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Der Zug um 9 Uhr 12 faehrt direkt und ist schneller.",
+            "english": "The train at 9:12 goes direct and is faster."
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Dann nehme ich den Zug um 9 Uhr 12.",
+            "english": "Then I will take the train at 9:12."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Einfach oder hin und zurueck?",
+            "english": "One way or return?"
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Hin und zurueck, bitte.",
+            "english": "Return, please."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Das kostet 46 Euro. Moechten Sie mit Karte zahlen?",
+            "english": "That costs 46 euros. Would you like to pay by card?"
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, gern. Von welchem Gleis faehrt der Zug ab?",
+            "english": "Yes, gladly. From which platform does the train depart?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Heute faehrt er von Gleis 7 ab.",
+            "english": "Today it departs from platform 7."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Muss ich umsteigen?",
+            "english": "Do I have to change trains?"
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Mitarbeiterin",
+            "german": "Nein, dieser Zug faehrt direkt nach Hamburg.",
+            "english": "No, this train goes directly to Hamburg."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Perfekt. Vielen Dank fuer die Information.",
+            "english": "Perfect. Thank you very much for the information."
+        }
+    ]
+}

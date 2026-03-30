@@ -1,0 +1,186 @@
+{
+    "topic": "Erweiterte NebensÃ¤tze",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g26_1",
+            "type": "multiple-choice",
+            "question": "Ich beeile mich, ___ wir den Zug nicht verpassen.",
+            "options": [
+                "obwohl",
+                "damit",
+                "falls",
+                "seitdem"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g26_2",
+            "type": "multiple-choice",
+            "question": "___ es morgen regnet, bleiben wir zu Hause.",
+            "options": [
+                "Falls",
+                "Obwohl",
+                "Damit",
+                "Sodass"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g26_3",
+            "type": "multiple-choice",
+            "question": "Je mehr ich übe, ___ besser spreche ich Deutsch.",
+            "options": [
+                "je",
+                "sodass",
+                "desto",
+                "falls"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g26_4",
+            "type": "multiple-choice",
+            "question": "___ ich in Berlin wohne, gefällt es mir hier wirklich sehr gut.",
+            "options": [
+                "Falls",
+                "Seitdem",
+                "Sodass",
+                "Damit"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g26_5",
+            "type": "multiple-choice",
+            "question": "Es regnete gestern stark, ___ wir alle nass wurden.",
+            "options": [
+                "sodass",
+                "falls",
+                "seitdem",
+                "damit"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g26_6",
+            "type": "multiple-choice",
+            "question": "___ ich genug Zeit habe, lese ich jeden Tag ein Buch.",
+            "options": [
+                "Seitdem",
+                "Falls",
+                "Damit",
+                "Solange"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_7",
+            "type": "multiple-choice",
+            "question": "___ ich gestern nach Hause kam, war niemand da.",
+            "options": [
+                "Während",
+                "Wenn",
+                "Als",
+                "Nachdem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_8",
+            "type": "multiple-choice",
+            "question": "___ er in Berlin wohnte, hat er viel gelernt.",
+            "options": [
+                "Sobald",
+                "Während",
+                "Indem",
+                "Damit"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_9",
+            "type": "multiple-choice",
+            "question": "___ ich die Hausaufgaben gemacht hatte, ging ich ins Kino.",
+            "options": [
+                "Während",
+                "Als",
+                "Bevor",
+                "Nachdem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_10",
+            "type": "multiple-choice",
+            "question": "Er lernt Vokabeln, ___ er laut liest.",
+            "options": [
+                "weil",
+                "damit",
+                "als",
+                "indem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_11",
+            "type": "multiple-choice",
+            "question": "Wir fahren schnell, ___ wir nicht zu spät kommen.",
+            "options": [
+                "um",
+                "dass",
+                "indem",
+                "damit"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_12",
+            "type": "multiple-choice",
+            "question": "___ ich ankomme, rufe ich dich an.",
+            "options": [
+                "Während",
+                "Indem",
+                "Nachdem",
+                "Sobald"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_13",
+            "type": "multiple-choice",
+            "question": "Er geht ins Fitnessstudio, ___ fit zu bleiben.",
+            "options": [
+                "um",
+                "damit",
+                "für",
+                "weil"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_14",
+            "type": "multiple-choice",
+            "question": "___ es regnet, gehen wir nicht spazieren.",
+            "options": [
+                "Damit",
+                "Indem",
+                "Um",
+                "Da"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_erweiterte_nebensaetze_15",
+            "type": "multiple-choice",
+            "question": "___ er kein Geld hat, kauft er das Auto nicht.",
+            "options": [
+                "Während",
+                "Obwohl",
+                "Da",
+                "Sobald"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

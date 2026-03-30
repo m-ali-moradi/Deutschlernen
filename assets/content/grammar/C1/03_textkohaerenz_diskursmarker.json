@@ -1,0 +1,177 @@
+﻿{
+    "id":  "g62",
+    "title":  "Textkohärenz \u0026 Diskursmarker",
+    "level":  "C1",
+    "category":  "Satzbau",
+    "icon":  "🧭",
+    "rule":  "Diskursmarker strukturieren Argumentation: einerseits…andererseits, zusammenfassend, im Hinblick auf.",
+    "explanation":  "At C1 level, learners master discourse markers and text-cohesion strategies for academic, professional, and argumentative writing.",
+    "examples":  [
+                     "Einerseits ist das Projekt vielversprechend, andererseits ist es riskant.",
+                     "Zusammenfassend lässt sich sagen, dass ...",
+                     "Im Hinblick auf die aktuelle Lage müssen wir handeln.",
+                     "Darüber hinaus sollte berücksichtigt werden, dass ..."
+                 ],
+    "detail":  {
+                   "id":  "g62",
+                   "subtitle":  "Satzbau · Diskursmarker",
+                   "emoji":  "🧭",
+                   "gradient":  [
+                                    "#0EA5E9",
+                                    "#0369A1"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Textkohärenz \u0026 Diskursmarker",
+                                        "text":  "Diskursmarker und Konnektoren auf C1-Niveau ermöglichen es, komplexe Argumente zu strukturieren, Gedanken logisch aufzubauen und akademische oder berufliche Texte flüssig und überzeugend zu gestalten.",
+                                        "bullets":  [
+                                                        "Argumentation: einerseits…andererseits, zwar…aber",
+                                                        "Ursache/Folge: aufgrund, infolge, demzufolge",
+                                                        "Einschränkung: nichtsdestotrotz, gleichwohl, wenngleich",
+                                                        "Zusammenfassung: zusammenfassend, insgesamt, abschließend"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Argumentationsstruktur",
+                                        "headers":  [
+                                                        "Funktion",
+                                                        "Marker",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Einleitung",
+                                                         "zunächst, vorab, einleitend",
+                                                         "Zunächst möchte ich darauf hinweisen, dass ..."
+                                                     ],
+                                                     [
+                                                         "Argumentation",
+                                                         "einerseits…andererseits",
+                                                         "Einerseits ist es wichtig, andererseits ..."
+                                                     ],
+                                                     [
+                                                         "Ergänzung",
+                                                         "darüber hinaus, ferner",
+                                                         "Darüber hinaus sollte beachtet werden ..."
+                                                     ],
+                                                     [
+                                                         "Gegenargument",
+                                                         "hingegen, gleichwohl",
+                                                         "Gleichwohl ist zu bedenken, dass ..."
+                                                     ],
+                                                     [
+                                                         "Schlussfolgerung",
+                                                         "folglich, demnach",
+                                                         "Folglich lässt sich feststellen, dass ..."
+                                                     ],
+                                                     [
+                                                         "Zusammenfassung",
+                                                         "zusammenfassend, abschließend",
+                                                         "Zusammenfassend lässt sich sagen ..."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Wichtige Diskursmarker",
+                                        "color":  "sky",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "im Hinblick auf (+ Akk.)",
+                                                         "right":  "with regard to"
+                                                     },
+                                                     {
+                                                         "left":  "in Bezug auf (+ Akk.)",
+                                                         "right":  "in reference to"
+                                                     },
+                                                     {
+                                                         "left":  "angesichts (+ Gen.)",
+                                                         "right":  "in view of"
+                                                     },
+                                                     {
+                                                         "left":  "hinsichtlich (+ Gen.)",
+                                                         "right":  "regarding"
+                                                     },
+                                                     {
+                                                         "left":  "nichtsdestotrotz",
+                                                         "right":  "nevertheless"
+                                                     },
+                                                     {
+                                                         "left":  "gleichwohl",
+                                                         "right":  "nonetheless"
+                                                     },
+                                                     {
+                                                         "left":  "wenngleich",
+                                                         "right":  "even though"
+                                                     },
+                                                     {
+                                                         "left":  "infolgedessen",
+                                                         "right":  "as a result"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "In akademischen Texten",
+                                        "color":  "blue",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Im Hinblick auf die aktuelle Lage sind Maßnahmen erforderlich.",
+                                                          "en":  "In view of the current situation, measures are required."
+                                                      },
+                                                      {
+                                                          "de":  "Einerseits ist das Projekt vielversprechend, andererseits birgt es Risiken.",
+                                                          "en":  "On the one hand, the project is promising; on the other hand, it entails risks."
+                                                      },
+                                                      {
+                                                          "de":  "Die Studie zeigt ferner, dass der Trend anhält.",
+                                                          "en":  "The study furthermore shows that the trend continues."
+                                                      },
+                                                      {
+                                                          "de":  "Zusammenfassend lässt sich feststellen, dass die Ergebnisse positiv sind.",
+                                                          "en":  "In summary, it can be stated that the results are positive."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Ursache und Folge",
+                                        "color":  "cyan",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Aufgrund der steigenden Kosten müssen wir umplanen.",
+                                                          "en":  "Due to rising costs, we need to replan."
+                                                      },
+                                                      {
+                                                          "de":  "Infolge der Pandemie hat sich vieles verändert.",
+                                                          "en":  "As a result of the pandemic, much has changed."
+                                                      },
+                                                      {
+                                                          "de":  "Demzufolge ist eine Anpassung der Strategie notwendig.",
+                                                          "en":  "Consequently, an adjustment of strategy is necessary."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Unterscheide zwischen Konnektoren, die Inversion auslösen (dennoch, folglich → Verb Pos. 2) und Konjunktionen, die den Nebensatz einleiten (wenngleich, obwohl → Verb am Ende).",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Diskursmarker strukturieren den Text und leiten den Leser durch die Argumentation.",
+                                                      "Adverbiale Konnektoren (dennoch, folglich, nichtsdestotrotz) stehen auf Pos.1 → Inversion.",
+                                                      "Subjunktionen (wenngleich, obwohl) leiten Nebensätze ein → Verb am Ende.",
+                                                      "Genitivpräpositionen (angesichts, hinsichtlich, infolge) wirken besonders formell.",
+                                                      "Verwende Diskursmarker abwechslungsreich — Wiederholung schwächt die Wirkung."
+                                                  ]
+                                    }
+                                ]
+               }
+}

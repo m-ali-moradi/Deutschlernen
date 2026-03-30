@@ -1,0 +1,186 @@
+{
+    "topic": "Partizipialkonstruktionen",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g33_1",
+            "type": "multiple-choice",
+            "question": "Die ___ Zeitung lag auf dem Tisch. (Zeitung, die man gelesen hat)",
+            "options": [
+                "lesend",
+                "lesende",
+                "gelesene",
+                "gelesen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g33_2",
+            "type": "multiple-choice",
+            "question": "Der ___ Junge freut sich Ã¼ber das Eis. (Junge, der lacht)",
+            "options": [
+                "lachende",
+                "lachend",
+                "lachender",
+                "gelachte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g33_3",
+            "type": "multiple-choice",
+            "question": "Das ___ Haus wird bald abgerissen. (Haus, das zerstört wurde)",
+            "options": [
+                "zerstört",
+                "zerstörte",
+                "zerstörende",
+                "zerstören"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g33_4",
+            "type": "multiple-choice",
+            "question": "Die ___ Kinder spielten ausgelassen im großen Stadtpark.",
+            "options": [
+                "gelaufen",
+                "gelaufenen",
+                "laufend",
+                "laufenden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g33_5",
+            "type": "multiple-choice",
+            "question": "Vom plötzlichen Sturm ___, suchten sie schnell Schutz in einer Hütte.",
+            "options": [
+                "überrascht",
+                "überraschte",
+                "überraschend",
+                "überraschten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g33_6",
+            "type": "multiple-choice",
+            "question": "Das direkt am Stadtrand ___ Haus ist heutzutage sehr teuer.",
+            "options": [
+                "liegende",
+                "gelegen",
+                "liegend",
+                "gelegene"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_7",
+            "type": "multiple-choice",
+            "question": "Ein Auto, das schnell fährt. -> Ein schnell ___ Auto.",
+            "options": [
+                "gefahrener",
+                "gefahrenes",
+                "fahrender",
+                "fahrendes"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_8",
+            "type": "multiple-choice",
+            "question": "Eine Prüfung, die bestanden wurde. -> Eine ___ Prüfung.",
+            "options": [
+                "bestehender",
+                "bestehende",
+                "bestandene",
+                "bestandener"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_9",
+            "type": "multiple-choice",
+            "question": "Der Schlüssel, der verloren ging. -> Der ___ Schlüssel.",
+            "options": [
+                "verlierender",
+                "verlierende",
+                "verlorener",
+                "verlorene"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_10",
+            "type": "multiple-choice",
+            "question": "Kinder, die laut lachen. -> Laut ___ Kinder.",
+            "options": [
+                "gelachten",
+                "lachenden",
+                "gelachte",
+                "lachende"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_11",
+            "type": "multiple-choice",
+            "question": "Das Buch, das viel gelesen wird. -> Das viel ___ Buch.",
+            "options": [
+                "gelesene",
+                "lesendes",
+                "gelesenes",
+                "lesende"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_12",
+            "type": "multiple-choice",
+            "question": "Das Wasser, das kocht. -> Das ___ Wasser.",
+            "options": [
+                "gekochte",
+                "kochendes",
+                "kochende",
+                "gekochtes"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_13",
+            "type": "multiple-choice",
+            "question": "Die Blumen, die geschnitten wurden. -> Die ___ Blumen.",
+            "options": [
+                "geschnittene",
+                "schneidende",
+                "geschnittenen",
+                "schneidenden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_14",
+            "type": "multiple-choice",
+            "question": "Der Laptop, der repariert wurde. -> Der ___ Laptop.",
+            "options": [
+                "reparierende",
+                "reparierer",
+                "reparierender",
+                "reparierte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_partizipialkonstruktionen_15",
+            "type": "multiple-choice",
+            "question": "Der Zug, der um 8 Uhr abfährt. -> Der um 8 Uhr ___ Zug.",
+            "options": [
+                "abfahrende",
+                "abgefahrene",
+                "abgefahrener",
+                "abfahrender"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

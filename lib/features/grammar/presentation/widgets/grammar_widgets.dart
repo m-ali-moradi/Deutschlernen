@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../core/content/sync/sync_service.dart';
-import '../../../../core/database/app_database.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../domain/grammar_logic.dart';
-import '../../data/models/grammar_topic_type.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/shared/widgets/app_icon_button.dart';
+import 'package:deutschmate_mobile/shared/widgets/premium_card.dart';
+import 'package:deutschmate_mobile/shared/widgets/animated_progress_bar.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_logic.dart';
+import 'package:deutschmate_mobile/features/grammar/data/models/grammar_topic_type.dart';
 
 /// A chip widget for displaying a grammar level.
 ///
@@ -29,42 +31,55 @@ class GrammarLevelChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Ink(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      borderRadius: BorderRadius.circular(16),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(999),
+          borderRadius: BorderRadius.circular(16),
           gradient: selected
               ? const LinearGradient(
-                  colors: [Color(0xFF3B82F6), Color(0xFFA855F7)])
+                  colors: AppTokens.gradientBluePurple,
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                )
               : null,
-          color: selected
-              ? null
-              : (isDark ? const Color(0xFF1E293B) : Colors.white),
+          color: selected ? null : AppTokens.surface(isDark),
+          border: Border.all(
+            color: selected
+                ? Colors.transparent
+                : AppTokens.outline(isDark).withValues(alpha: 0.1),
+            width: 1.5,
+          ),
           boxShadow: selected
               ? [
                   BoxShadow(
-                    color: const Color(0xFF3B82F6).withValues(alpha: 0.3),
-                    blurRadius: 10,
-                    offset: const Offset(0, 4),
-                  )
+                    color: AppTokens.gradientBluePurple.first
+                        .withValues(alpha: 0.35),
+                    blurRadius: 15,
+                    offset: const Offset(0, 5),
+                  ),
+                  BoxShadow(
+                    color: Colors.white.withValues(alpha: 0.2),
+                    blurRadius: 0,
+                    offset: const Offset(-2, -2),
+                  ),
                 ]
               : [
                   BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.06),
-                    blurRadius: 8,
-                    offset: const Offset(0, 3),
+                    color: Colors.black.withValues(alpha: 0.04),
+                    blurRadius: 10,
+                    offset: const Offset(0, 4),
                   )
                 ],
         ),
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 13,
-            fontWeight: FontWeight.w600,
-            color: selected
-                ? Colors.white
-                : (isDark ? const Color(0xFFCBD5E1) : const Color(0xFF64748B)),
+            fontSize: 15,
+            fontWeight: selected ? FontWeight.w900 : FontWeight.w700,
+            letterSpacing: selected ? 0.3 : 0,
+            color: selected ? Colors.white : AppTokens.textMuted(isDark),
           ),
         ),
       ),
@@ -72,222 +87,157 @@ class GrammarLevelChip extends StatelessWidget {
   }
 }
 
-class GrammarIconButton extends StatelessWidget {
-  const GrammarIconButton({
-    super.key,
-    required this.icon,
-    required this.onPressed,
-    required this.isDark,
-    this.active = false,
-  });
-
-  final IconData icon;
-  final VoidCallback onPressed;
-  final bool isDark;
-  final bool active;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: 36,
-        height: 36,
-        decoration: BoxDecoration(
-          color: active
-              ? const Color(0xFF3B82F6)
-              : (isDark ? const Color(0xFF1E293B) : Colors.white),
-          borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.08),
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        alignment: Alignment.center,
-        child: Icon(
-          icon,
-          size: 18,
-          color: active
-              ? Colors.white
-              : (isDark ? Colors.white70 : Colors.black87),
-        ),
-      ),
-    );
-  }
-}
+/// (GrammarIconButton was here)
+typedef GrammarIconButton = AppIconButton;
 
 class GrammarTopicCard extends ConsumerWidget {
   const GrammarTopicCard({
     super.key,
     required this.entry,
     required this.onTap,
-    required this.onDownload,
   });
 
-  final SyncEntry<GrammarTopic> entry;
+  final GrammarTopic entry;
   final VoidCallback onTap;
-  final VoidCallback onDownload;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final strings = AppUiText(ref.watch(displayLanguageProvider));
-    final t = entry.localData;
-    final isDownloaded = entry.isDownloaded;
-    final englishTitle = entry.displayEnglishTitle ??
-        grammarEnglishTopicTitles[entry.displayTitle];
+    final englishTitle = grammarEnglishTopicTitles[entry.title] ?? entry.title;
 
-    return Container(
+    return PremiumCard(
       margin: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: Colors.transparent,
-        borderRadius: AppTokens.radius20,
-        child: InkWell(
-          borderRadius: AppTokens.radius20,
-          onTap: isDownloaded ? onTap : onDownload,
-          child: Ink(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : Colors.white,
-              borderRadius: AppTokens.radius20,
-              boxShadow: [
-                BoxShadow(
-                    color: isDark
-                        ? Colors.black.withValues(alpha: 0.2)
-                        : const Color(0xFFE2E8F0).withValues(alpha: 0.8),
-                    blurRadius: 16,
-                    offset: const Offset(0, 6))
-              ],
-            ),
-            child: Row(
-              children: [
-                _buildIcon(entry.cloudMetadata?['icon'] ?? t?.icon ?? '📚',
-                    isDark, entry.localData?.category ?? 'Default'),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+      padding: EdgeInsets.zero,
+      onTap: onTap,
+      useGlass: true,
+      blur: 12,
+      borderOpacity: isDark ? 0.08 : 0.05,
+      shadowOpacity: isDark ? 0.15 : 0.04,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            _buildIcon(entry.icon.isEmpty ? '📚' : entry.icon, isDark,
+                entry.category, entry.title),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    entry.title,
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.5,
+                      color: AppTokens.textPrimary(isDark),
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    englishTitle,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppTokens.textMuted(isDark),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: isGrammarTopicCompleted(entry.progress)
+                          ? const Color(0xFF22C55E).withValues(alpha: 0.12)
+                          : AppTokens.primary(isDark).withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text(
+                      grammarProgressStateLabel(
+                        entry.progress,
+                        isEnglish: strings.isEnglish,
+                      ),
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        color: isGrammarTopicCompleted(entry.progress)
+                            ? const Color(0xFF16A34A)
+                            : AppTokens.primary(isDark),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Stack(
                     children: [
-                      Text(
-                        entry.displayTitle,
-                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                            color: isDark
-                                ? AppTokens.darkText
-                                : AppTokens.lightText),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        isDownloaded
-                            ? (englishTitle ?? t!.category)
-                            : strings.either(
-                                german: 'Online verfügbar',
-                                english: 'Available online'),
-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                            color: isDark
-                                ? AppTokens.darkTextMuted
-                                : AppTokens.lightTextMuted),
-                      ),
-                      const SizedBox(height: 6),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 3),
-                          decoration: BoxDecoration(
-                            color: isDownloaded &&
-                                    isGrammarTopicCompleted(t!.progress)
-                                ? (isDark
-                                    ? const Color(0xFF052E16)
-                                    : const Color(0xFFF0FDF4))
-                                : (isDark
-                                    ? const Color(0xFF1E293B)
-                                    : const Color(0xFFEFF6FF)),
-                            borderRadius: BorderRadius.circular(999),
-                          ),
-                          child: Text(
-                            isDownloaded
-                                ? grammarProgressStateLabel(
-                                    t!.progress,
-                                    isEnglish: strings.isEnglish,
-                                  )
-                                : strings.either(
-                                    german: 'Nicht heruntergeladen',
-                                    english: 'Not downloaded'),
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w600,
-                              color: isDownloaded &&
-                                      isGrammarTopicCompleted(t!.progress)
-                                  ? (isDark
-                                      ? const Color(0xFF86EFAC)
-                                      : const Color(0xFF15803D))
-                                  : (isDark
-                                      ? const Color(0xFF93C5FD)
-                                      : const Color(0xFF1D4ED8)),
-                            ),
-                          ),
+                      Container(
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: isDark
+                              ? Colors.white.withValues(alpha: 0.05)
+                              : Colors.black.withValues(alpha: 0.05),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
-                      const SizedBox(height: 8),
-                      // Progress bar with category gradient
-                      if (isDownloaded)
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(999),
-                          child: LinearProgressIndicator(
-                            value: t!.progress / 100,
-                            minHeight: 5,
-                            backgroundColor: isDark
-                                ? const Color(0xFF1E293B)
-                                : const Color(0xFFE5E7EB),
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                                getGrammarCategoryGradient(t.category).last),
-                          ),
+                      AnimatedProgressBar(
+                        value: entry.progress / 100,
+                        height: 8,
+                        gradient: LinearGradient(
+                          colors: getGrammarCategoryGradient(entry.category),
                         ),
+                      ),
                     ],
                   ),
-                ),
-                const SizedBox(width: 8),
-                if (isDownloaded)
-                  Icon(Icons.chevron_right_rounded,
-                      color: isDark
-                          ? const Color(0xFF475569)
-                          : const Color(0xFFCBD5E1),
-                      size: 20)
-                else
-                  const Icon(Icons.download_for_offline_outlined,
-                      color: Colors.blueAccent),
-              ],
+                ],
+              ),
             ),
-          ),
+            const SizedBox(width: 8),
+            Icon(
+              Icons.chevron_right_rounded,
+              color: AppTokens.textMuted(isDark).withValues(alpha: 0.4),
+              size: 24,
+            ),
+          ],
         ),
       ),
     );
   }
 
-  Widget _buildIcon(String icon, bool isDark, String category) {
+  Widget _buildIcon(String icon, bool isDark, String category, String title) {
     final gradient = getGrammarCategoryGradient(category);
     return Container(
-      width: 48,
-      height: 48,
+      width: 52,
+      height: 52,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: gradient),
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            gradient.first,
+            gradient.last,
+          ],
+        ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-              color: gradient.last.withValues(alpha: 0.25),
-              blurRadius: 8,
-              offset: const Offset(0, 4))
+            color: gradient.last.withValues(alpha: 0.35),
+            blurRadius: 15,
+            offset: const Offset(0, 6),
+          ),
+          BoxShadow(
+            color: Colors.white.withValues(alpha: 0.25),
+            blurRadius: 0,
+            offset: const Offset(-2, -2),
+          ),
         ],
       ),
       alignment: Alignment.center,
-      child: Text(icon, style: const TextStyle(fontSize: 22)),
+      child: Icon(
+        getGrammarCategoryIcon(category, title),
+        size: 26,
+        color: Colors.white,
+      ),
     );
   }
 }

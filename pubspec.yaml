@@ -1,5 +1,5 @@
-name: deutschlernen_mobile
-description: Flutter implementation of DeutschLernen with SQLite + Drift.
+name: deutschmate_mobile
+description: Flutter implementation of DeutschMate with SQLite + Drift.
 publish_to: 'none'
 version: 0.1.0+1
 
@@ -20,9 +20,9 @@ dependencies:
   path_provider: ^2.1.5
   path: ^1.9.1
   url_launcher: ^6.3.2
-  connectivity_plus: ^7.0.0
-  firebase_core: ^4.5.0
-  cloud_firestore: ^6.1.3
+  flutter_tts: ^4.0.2
+  freezed_annotation: any
+  json_annotation: any
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +30,18 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   build_runner: ^2.4.15
   drift_dev: 2.31.0
+  flutter_launcher_icons: ^0.13.1
+  freezed: any
+  json_serializable: any
+  flutter_driver:
+    sdk: flutter
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
+  min_sdk_android: 21
+
 
 
 flutter:
@@ -43,8 +55,20 @@ flutter:
     - assets/content/vocabulary/B1/
     - assets/content/vocabulary/B2/
     - assets/content/vocabulary/C1/
-    - assets/content/exercises/
-    - assets/content/grammar/en/
-    - assets/content/grammar/fa/
+    - assets/content/exercises/A1/
+    - assets/content/exercises/A2/
+    - assets/content/exercises/B1/
+    - assets/content/exercises/B2/
+    - assets/content/exercises/C1/
+    - assets/content/grammar/A1/
+    - assets/content/grammar/A2/
+    - assets/content/grammar/B1/
+    - assets/content/grammar/B2/
+    - assets/content/grammar/C1/
     - assets/content/phrases/
     - assets/content/achievements/
+    - assets/content/exams/en/
+    - assets/content/exams/de/
+    - assets/content/dialogues/
+    - assets/images/icon.png
+    - assets/images/logo.png

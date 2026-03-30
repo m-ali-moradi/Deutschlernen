@@ -1,0 +1,190 @@
+{
+    "topic": "Konnektoren",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g36_1",
+            "type": "multiple-choice",
+            "question": "Die Löhne sind gestiegen. ___, sind die Preise auch gestiegen.",
+            "options": [
+                "Allerdings",
+                "Sondern",
+                "Zwar",
+                "Darüber hinaus"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g36_2",
+            "type": "multiple-choice",
+            "question": "Die Firma macht Verluste. ___ müssen Mitarbeiter entlassen werden.",
+            "options": [
+                "Während",
+                "Zwar",
+                "Dennoch",
+                "Folglich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g36_3",
+            "type": "multiple-choice",
+            "question": "Es hat stark geregnet. ___ sind wir wandern gegangen.",
+            "options": [
+                "Folglich",
+                "Deshalb",
+                "Stattdessen",
+                "Dennoch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g36_4",
+            "type": "multiple-choice",
+            "question": "Das Wetter war gestern sehr schlecht. ___ gingen wir lange spazieren.",
+            "options": [
+                "Dennoch",
+                "Zudem",
+                "Zwar",
+                "Folglich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g36_5",
+            "type": "multiple-choice",
+            "question": "Er ist sehr talentiert; ___ ist er leider auch oft unorganisiert.",
+            "options": [
+                "folglich",
+                "somit",
+                "allerdings",
+                "außerdem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g36_6",
+            "type": "multiple-choice",
+            "question": "Die Nachfrage sank erheblich; ___ fielen auch die Preise.",
+            "options": [
+                "zwar",
+                "dennoch",
+                "folglich",
+                "allerdings"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_b2_4",
+            "type": "fill-blank",
+            "question": "Je mehr ich lerne, ___ besser werde ich.",
+            "options": [
+                "wenn",
+                "desto",
+                "dann",
+                "weil"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_so_b2_3",
+            "type": "sentence-order",
+            "question": "Je länger ich warte, desto ungeduldiger werde ich.",
+            "options": [
+                "desto",
+                "ungeduldiger",
+                "werde",
+                "ich",
+                "Je",
+                "länger",
+                "ich",
+                "warte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_konnektoren_9",
+            "type": "multiple-choice",
+            "question": "Ich war krank. ___ konnte ich nicht kommen.",
+            "options": [
+                "Deshalb",
+                "Da",
+                "Denn",
+                "Weil"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_konnektoren_10",
+            "type": "multiple-choice",
+            "question": "Er hatte kein Geld, ___ kaufte er das Auto nicht.",
+            "options": [
+                "obwohl",
+                "weil",
+                "trotzdem",
+                "daher"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_konnektoren_11",
+            "type": "multiple-choice",
+            "question": "Wir gehen spazieren, ___ es regnet.",
+            "options": [
+                "weil",
+                "denn",
+                "trotzdem",
+                "obwohl"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_konnektoren_12",
+            "type": "multiple-choice",
+            "question": "Es regnet. ___, gehen wir spazieren.",
+            "options": [
+                "Trotzdem",
+                "Obwohl",
+                "Deshalb",
+                "Daher"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_konnektoren_13",
+            "type": "multiple-choice",
+            "question": "Er ist sehr intelligent. ___ ist er ziemlich faul.",
+            "options": [
+                "Weil",
+                "Allerdings",
+                "Obwohl",
+                "Deshalb"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_konnektoren_14",
+            "type": "multiple-choice",
+            "question": "___ du mir hilfst, werde ich schneller fertig.",
+            "options": [
+                "Als",
+                "Falls",
+                "Wenn",
+                "Ob"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konnektoren_15",
+            "type": "multiple-choice",
+            "question": "Er arbeitete viel, ___ verdiente er wenig.",
+            "options": [
+                "dennoch",
+                "weil",
+                "deshalb",
+                "obwohl"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "id": "job_interview",
+    "title": "Das Vorstellungsgespräch",
+    "english_title": "The Job Interview",
+    "level": "A2",
+    "category": "Arbeit",
+    "description": "Prepare for a job interview by practicing common questions about your experience and skills.",
+    "icon": "work_outline_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Guten Tag. Bitte nehmen Sie Platz. Möchten Sie etwas trinken?",
+            "english": "Good day. Please take a seat. Would you like something to drink?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Guten Tag. Nein danke, ich bin versorgt.",
+            "english": "Good day. No thanks, I'm okay."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Schön, dass Sie da sind. Erzählen Sie uns doch etwas über sich.",
+            "english": "Glad you are here. Tell us something about yourself."
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Gerne. Ich bin seit drei Jahren Programmierer und habe viel Erfahrung mit Flutter.",
+            "english": "Gladly. I have been a programmer for three years and have a lot of experience with Flutter."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Warum möchten Sie bei unserer Firma arbeiten?",
+            "english": "Why do you want to work for our company?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Ihre Projekte im Bereich Bildung interessieren mich sehr.",
+            "english": "Your projects in the field of education interest me a lot."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Was sind Ihre größten Stärken?",
+            "english": "What are your greatest strengths?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Ich bin sehr teamfähig und lerne schnell neue Technologien.",
+            "english": "I am a very good team player and I learn new technologies quickly."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Wie gehen Sie mit stressigen Situationen um?",
+            "english": "How do you handle stressful situations?"
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Ich bleibe ruhig und fokussiere mich auf die wichtigsten Aufgaben.",
+            "english": "I stay calm and focus on the most important tasks."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Haben Sie noch Fragen an uns?",
+            "english": "Do you have any questions for us?"
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Ja, wie sieht ein typischer Arbeitstag in Ihrem Team aus?",
+            "english": "Yes, what does a typical workday in your team look like?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Wir haben täglich ein kurzes Meeting und arbeiten dann konzentriert an unseren Projekten.",
+            "english": "We have a short daily meeting and then work concentratedly on our projects."
+        },
+        {
+            "id": 14,
+            "sender": "left",
+            "role": "Personalleiter",
+            "german": "Vielen Dank für das Gespräch. Wir melden uns in den nächsten Tagen bei Ihnen.",
+            "english": "Thank you for the interview. We will get back to you in the next few days."
+        },
+        {
+            "id": 15,
+            "sender": "right",
+            "role": "Bewerber",
+            "german": "Vielen Dank. Ich freue mich auf Ihre Rückmeldung. Auf Wiedersehen!",
+            "english": "Thank you very much. I look forward to your feedback. Goodbye!"
+        }
+    ]
+}

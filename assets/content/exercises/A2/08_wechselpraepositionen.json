@@ -1,0 +1,186 @@
+{
+    "topic": "WechselprÃ¤positionen",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g4_1",
+            "type": "multiple-choice",
+            "question": "Ich lege das Buch auf ___ Tisch.",
+            "options": [
+                "den",
+                "der",
+                "das",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g4_2",
+            "type": "multiple-choice",
+            "question": "Das Buch liegt auf ___ Tisch.",
+            "options": [
+                "den",
+                "dem",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g4_3",
+            "type": "multiple-choice",
+            "question": "Wir gehen in ___ Kino.",
+            "options": [
+                "der",
+                "das",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g4_4",
+            "type": "multiple-choice",
+            "question": "Die kleine Katze springt schnell auf ___ Sofa.",
+            "options": [
+                "der",
+                "das",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g4_5",
+            "type": "multiple-choice",
+            "question": "Die müde Katze schläft auf ___ bequemen Sofa.",
+            "options": [
+                "dem",
+                "das",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g4_6",
+            "type": "multiple-choice",
+            "question": "Ich hänge das neue Bild an ___ Wand.",
+            "options": [
+                "das",
+                "den",
+                "der",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_wechselpraepositionen_7",
+            "type": "multiple-choice",
+            "question": "Das Bild hängt an ___ Wand.",
+            "options": [
+                "dem",
+                "den",
+                "der",
+                "die"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_wechselpraepositionen_8",
+            "type": "multiple-choice",
+            "question": "Ich hänge das Bild an ___ Wand.",
+            "options": [
+                "die",
+                "der",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_wechselpraepositionen_9",
+            "type": "multiple-choice",
+            "question": "Das Buch liegt auf ___ Tisch.",
+            "options": [
+                "dem",
+                "der",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_wechselpraepositionen_10",
+            "type": "multiple-choice",
+            "question": "Er legt das Buch auf ___ Tisch.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_wechselpraepositionen_11",
+            "type": "multiple-choice",
+            "question": "Die Kinder spielen in ___ Garten.",
+            "options": [
+                "den",
+                "das",
+                "der",
+                "dem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_wechselpraepositionen_12",
+            "type": "multiple-choice",
+            "question": "Wir gehen in ___ Garten.",
+            "options": [
+                "dem",
+                "den",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_wechselpraepositionen_13",
+            "type": "multiple-choice",
+            "question": "Der Teppich liegt unter ___ Tisch.",
+            "options": [
+                "das",
+                "dem",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_wechselpraepositionen_14",
+            "type": "multiple-choice",
+            "question": "Stell die Lampe neben ___ Bett.",
+            "options": [
+                "der",
+                "das",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_wechselpraepositionen_15",
+            "type": "multiple-choice",
+            "question": "Das Auto steht vor ___ Haus.",
+            "options": [
+                "den",
+                "das",
+                "der",
+                "dem"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

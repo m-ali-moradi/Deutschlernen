@@ -1,0 +1,185 @@
+{
+    "topic": "Satzbau",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "ex_so_a1_6",
+            "type": "sentence-order",
+            "question": "Hast du Geschwister?",
+            "options": [
+                "du",
+                "Hast",
+                "Geschwister?"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_ja_nein-fragen_2",
+            "type": "multiple-choice",
+            "question": "___ du Deutsch?",
+            "options": [
+                "Sprecht",
+                "Sprechen",
+                "Sprichst",
+                "Spreche"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_3",
+            "type": "multiple-choice",
+            "question": "___ er aus Frankreich?",
+            "options": [
+                "Kommst",
+                "Komme",
+                "Kommt",
+                "Kommen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_4",
+            "type": "multiple-choice",
+            "question": "___ ihr heute Zeit?",
+            "options": [
+                "Hast",
+                "Habe",
+                "Habt",
+                "Haben"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_5",
+            "type": "multiple-choice",
+            "question": "___ wir jetzt essen?",
+            "options": [
+                "Wollt",
+                "Willst",
+                "Wollen",
+                "Will"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_6",
+            "type": "multiple-choice",
+            "question": "___ Sie Herr Müller?",
+            "options": [
+                "Sind",
+                "Bist",
+                "Seid",
+                "Ist"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_ja_nein-fragen_7",
+            "type": "multiple-choice",
+            "question": "___ das Ihr Auto?",
+            "options": [
+                "Ist",
+                "Bist",
+                "Sind",
+                "Seid"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_ja_nein-fragen_8",
+            "type": "multiple-choice",
+            "question": "___ du gern Pizza?",
+            "options": [
+                "Essen",
+                "Esse",
+                "Isst",
+                "Esst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_9",
+            "type": "multiple-choice",
+            "question": "___ er morgen?",
+            "options": [
+                "Arbeiten",
+                "Arbeitest",
+                "Arbeitet",
+                "Arbeits"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_10",
+            "type": "multiple-choice",
+            "question": "___ du das Buch?",
+            "options": [
+                "Haben",
+                "Habt",
+                "Hast",
+                "Hat"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_ja_nein-fragen_11",
+            "type": "multiple-choice",
+            "question": "___ wir ins Kino gehen?",
+            "options": [
+                "Sollst",
+                "Sollen",
+                "Soll",
+                "Sollt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_ja_nein-fragen_12",
+            "type": "multiple-choice",
+            "question": "___ Sie müde?",
+            "options": [
+                "Sind",
+                "Ist",
+                "Seid",
+                "Bist"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_ja_nein-fragen_13",
+            "type": "multiple-choice",
+            "question": "___ du mir helfen?",
+            "options": [
+                "Kannst",
+                "Kann",
+                "Könnt",
+                "Können"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_ja_nein-fragen_14",
+            "type": "multiple-choice",
+            "question": "___ das teuer?",
+            "options": [
+                "Ist",
+                "Bist",
+                "Sind",
+                "Seid"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_ja_nein-fragen_15",
+            "type": "multiple-choice",
+            "question": "___ er gut Fußball?",
+            "options": [
+                "Spielen",
+                "Spielt",
+                "Spiele",
+                "Spielst"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

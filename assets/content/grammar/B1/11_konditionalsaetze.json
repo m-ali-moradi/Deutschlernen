@@ -1,0 +1,105 @@
+﻿{
+    "id":  "g27",
+    "title":  "Konditionalsätze",
+    "level":  "B1",
+    "category":  "Nebensätze",
+    "icon":  "🔀",
+    "rule":  "Real: wenn + Indikativ. Irreal: wenn + Konjunktiv II.",
+    "explanation":  "Real conditions use Indikativ for possible situations. Unreal conditions use Konjunktiv II for hypothetical situations.",
+    "examples":  [
+                     "Wenn es regnet, bleibe ich zu Hause.",
+                     "Wenn ich reich wäre, würde ich reisen.",
+                     "Wenn ich Zeit hätte, würde ich dir helfen."
+                 ],
+    "detail":  {
+                   "id":  "g27",
+                   "subtitle":  "Konditionalsätze",
+                   "emoji":  "🔀",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#A855F7"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Konditionalsätze · Conditional Sentences",
+                                        "text":  "Real conditions (possible situations, use Präsens or Futur) vs. unreal conditions (hypothetical, use Konjunktiv II)."
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Reale Bedingungen (Indikativ)",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wenn es regnet, bleibe ich zu Hause.",
+                                                          "en":  "If it rains, I stay home."
+                                                      },
+                                                      {
+                                                          "de":  "Wenn du willst, können wir gehen.",
+                                                          "en":  "If you want, we can go."
+                                                      },
+                                                      {
+                                                          "de":  "Falls er kommt, sag mir Bescheid.",
+                                                          "en":  "If he comes, let me know."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Irreale Bedingungen (Konjunktiv II)",
+                                        "color":  "purple",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wenn ich reich wäre, würde ich reisen.",
+                                                          "en":  "If I were rich, I would travel."
+                                                      },
+                                                      {
+                                                          "de":  "Wenn ich Zeit hätte, würde ich dir helfen.",
+                                                          "en":  "If I had time, I would help you."
+                                                      },
+                                                      {
+                                                          "de":  "Wenn er Deutsch könnte, würde er in Berlin arbeiten.",
+                                                          "en":  "If he could speak German, he would work in Berlin."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Real vs. Irreal",
+                                        "headers":  [
+                                                        "",
+                                                        "Real (möglich)",
+                                                        "Irreal (hypothetisch)"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Verb",
+                                                         "Indikativ",
+                                                         "Konjunktiv II"
+                                                     ],
+                                                     [
+                                                         "wenn-Satz",
+                                                         "Wenn es regnet, ...",
+                                                         "Wenn es regnen würde, ..."
+                                                     ],
+                                                     [
+                                                         "Hauptsatz",
+                                                         "... bleibe ich zu Hause.",
+                                                         "... würde ich zu Hause bleiben."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Real: wenn + Indikativ → possible, might happen.",
+                                                      "Irreal: wenn + Konjunktiv II → hypothetical, not real.",
+                                                      "Common Konj. II forms: wäre, hätte, könnte, müsste, würde."
+                                                  ]
+                                    }
+                                ]
+               }
+}

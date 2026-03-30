@@ -4,45 +4,27 @@
 /// - `GrammarDetailBackButton`: A back button styled for the detail screen.
 /// - `GrammarDetailCard`: A card with consistent styling for content.
 /// - `GrammarExampleCard`: A card for displaying example sentences with numbering.
+library;
 
 import 'package:flutter/material.dart';
-import '../../../../core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/widgets/app_icon_button.dart';
 
 /// A back button styled for the detail screen.
 class GrammarDetailBackButton extends StatelessWidget {
   const GrammarDetailBackButton({
     super.key,
     required this.onPressed,
-    required this.isDark,
   });
 
   final VoidCallback onPressed;
-  final bool isDark;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: 36,
-        height: 36,
-        decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF1E293B) : Colors.white,
-          borderRadius: AppTokens.radius20,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
-              blurRadius: 10,
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
-        child: Icon(
-          Icons.arrow_back_ios_new_rounded,
-          size: 16,
-          color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF64748B),
-        ),
-      ),
+    return AppIconButton(
+      icon: Icons.arrow_back_ios_new_rounded,
+      iconSize: 16,
+      onPressed: onPressed,
     );
   }
 }
@@ -66,7 +48,7 @@ class GrammarDetailCard extends StatelessWidget {
       width: double.infinity,
       padding: padding,
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF0F172A) : Colors.white,
+        color: AppTokens.background(isDark),
         borderRadius: AppTokens.radius24,
         boxShadow: [
           BoxShadow(
@@ -137,3 +119,6 @@ class GrammarExampleCard extends StatelessWidget {
     );
   }
 }
+
+
+

@@ -1,0 +1,192 @@
+{
+    "topic": "Wissenschaftssprache",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "ex_fb_c1_4",
+            "type": "fill-blank",
+            "question": "Die Forschungsergebnisse lassen sich wie ___ zusammenfassen.",
+            "options": [
+                "gefolgt",
+                "folgende",
+                "folgend",
+                "folgt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "ex_so_c1_1",
+            "type": "sentence-order",
+            "question": "Es ist unumgänglich, die Konsequenzen zu bedenken.",
+            "options": [
+                "Konsequenzen",
+                "zu",
+                "bedenken",
+                "Es",
+                "ist",
+                "unumgänglich",
+                "die"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_c1_6",
+            "type": "sentence-order",
+            "question": "Es gilt, die komplexen ZusammenhÃ¤nge zu analysieren.",
+            "options": [
+                "komplexen",
+                "ZusammenhÃ¤nge",
+                "zu",
+                "analysieren",
+                "Es",
+                "gilt",
+                "die"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_wissenschaftssprache_4",
+            "type": "multiple-choice",
+            "question": "Daraus lässt sich ___, dass...",
+            "options": [
+                "geben",
+                "machen",
+                "schließen",
+                "tun"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_wissenschaftssprache_5",
+            "type": "multiple-choice",
+            "question": "Diese Studie ___ sich mit...",
+            "options": [
+                "tut",
+                "gibt",
+                "macht",
+                "befasst"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_wissenschaftssprache_6",
+            "type": "multiple-choice",
+            "question": "In der Tabelle lässt sich ___...",
+            "options": [
+                "blicken",
+                "sehen",
+                "schauen",
+                "ablesen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_wissenschaftssprache_7",
+            "type": "multiple-choice",
+            "question": "Es ist davon ___, dass...",
+            "options": [
+                "abzugehen",
+                "abgehen",
+                "ausgehen",
+                "auszugehen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_wissenschaftssprache_8",
+            "type": "multiple-choice",
+            "question": "Die Ergebnisse weisen darauf ___, dass...",
+            "options": [
+                "hin",
+                "aus",
+                "her",
+                "ein"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_wissenschaftssprache_9",
+            "type": "multiple-choice",
+            "question": "Dies hat zur ___, dass...",
+            "options": [
+                "Ergebnis",
+                "Ende",
+                "Folge",
+                "Schluss"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_wissenschaftssprache_10",
+            "type": "multiple-choice",
+            "question": "In diesem Zusammenhang muss ___ werden...",
+            "options": [
+                "gemacht",
+                "betont",
+                "gegeben",
+                "getan"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_wissenschaftssprache_11",
+            "type": "multiple-choice",
+            "question": "Die Theorie ___ auf der Annahme, dass...",
+            "options": [
+                "sitzt",
+                "liegt",
+                "steht",
+                "beruht"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_wissenschaftssprache_12",
+            "type": "multiple-choice",
+            "question": "Die Untersuchung ___ zu dem Ergebnis, dass...",
+            "options": [
+                "geht",
+                "läuft",
+                "fährt",
+                "kommt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_wissenschaftssprache_13",
+            "type": "multiple-choice",
+            "question": "Die Daten ___ die These.",
+            "options": [
+                "tun",
+                "stützen",
+                "geben",
+                "machen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_wissenschaftssprache_14",
+            "type": "multiple-choice",
+            "question": "Dem Autor ___ fällt auf...",
+            "options": [
+                "zufolge",
+                "laut",
+                "nach",
+                "gemäß"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_wissenschaftssprache_15",
+            "type": "multiple-choice",
+            "question": "Aus diesem Grund ist zu ___, dass...",
+            "options": [
+                "vermuten",
+                "geben",
+                "machen",
+                "tun"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

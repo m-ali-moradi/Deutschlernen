@@ -1,0 +1,186 @@
+{
+    "topic": "Futur I",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g17_1",
+            "type": "multiple-choice",
+            "question": "Ich ___ morgen lernen.",
+            "options": [
+                "werdet",
+                "wird",
+                "werden",
+                "werde"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g17_2",
+            "type": "multiple-choice",
+            "question": "Es ___ am Wochenende regnen.",
+            "options": [
+                "werde",
+                "werden",
+                "wirst",
+                "wird"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g17_3",
+            "type": "multiple-choice",
+            "question": "Wir ___ bald nach Hause ___.",
+            "options": [
+                "wird - gehen",
+                "werden - geht",
+                "wird - geht",
+                "werden - gehen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g17_4",
+            "type": "multiple-choice",
+            "question": "Ich ___ dir ganz sicher nächste Woche helfen.",
+            "options": [
+                "werde",
+                "werden",
+                "wirst",
+                "wird"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g17_5",
+            "type": "multiple-choice",
+            "question": "Im Jahr 2050 ___ die Autos fliegen können.",
+            "options": [
+                "werde",
+                "wird",
+                "werdet",
+                "werden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g17_6",
+            "type": "multiple-choice",
+            "question": "Wann ___ du endlich mit der Arbeit ___?",
+            "options": [
+                "wirst - war",
+                "wirst - wirst",
+                "wirst - bist",
+                "wirst - fertig sein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_futur_i_7",
+            "type": "multiple-choice",
+            "question": "Morgen ___ wir nach München fahren.",
+            "options": [
+                "werde",
+                "wird",
+                "werdet",
+                "werden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_futur_i_8",
+            "type": "multiple-choice",
+            "question": "Ich ___ dir später helfen.",
+            "options": [
+                "werden",
+                "werde",
+                "wird",
+                "werdet"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_futur_i_9",
+            "type": "multiple-choice",
+            "question": "Wann ___ ihr ankommen?",
+            "options": [
+                "werdet",
+                "werde",
+                "werden",
+                "wirst"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_futur_i_10",
+            "type": "multiple-choice",
+            "question": "Er ___ wahrscheinlich nicht kommen.",
+            "options": [
+                "wirst",
+                "werde",
+                "wird",
+                "werden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_futur_i_11",
+            "type": "multiple-choice",
+            "question": "Das Wetter ___ morgen besser sein.",
+            "options": [
+                "werden",
+                "werdet",
+                "wird",
+                "werde"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_futur_i_12",
+            "type": "multiple-choice",
+            "question": "___ du mich morgen anrufen?",
+            "options": [
+                "Wirst",
+                "Werdet",
+                "Werden",
+                "Wird"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_futur_i_13",
+            "type": "multiple-choice",
+            "question": "Wir ___ im Sommer nach Italien fliegen.",
+            "options": [
+                "werde",
+                "werden",
+                "werdet",
+                "wird"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_futur_i_14",
+            "type": "multiple-choice",
+            "question": "Die Kinder ___ sicher bald schlafen.",
+            "options": [
+                "wird",
+                "werdet",
+                "wirst",
+                "werden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_futur_i_15",
+            "type": "multiple-choice",
+            "question": "___ Sie mir bitte das Dokument schicken?",
+            "options": [
+                "Werdet",
+                "Wirst",
+                "Wird",
+                "Werden"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

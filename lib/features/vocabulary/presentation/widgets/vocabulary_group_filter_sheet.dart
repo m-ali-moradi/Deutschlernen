@@ -5,17 +5,17 @@
 /// - Shows the count of categories and words within each group.
 /// - Allows the user to toggle pinning a group to persist their selection.
 /// - Indicates if a group contains pending categories that need downloading.
+library;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../core/content/sync/sync_service.dart';
-import '../../../../core/database/app_database.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../domain/vocabulary_category_metrics.dart';
-import '../../domain/vocabulary_providers.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/features/vocabulary/domain/vocabulary_category_metrics.dart';
+import 'package:deutschmate_mobile/features/vocabulary/domain/vocabulary_providers.dart';
 
 class VocabularyGroupFilterSheet extends ConsumerWidget {
   const VocabularyGroupFilterSheet({
@@ -30,7 +30,7 @@ class VocabularyGroupFilterSheet extends ConsumerWidget {
   final List<VocabularyGroupEntity> groups;
   final List<VocabularyCategoryEntity> categories;
   final List<VocabularyPendingCategoryEntity> pendingCategories;
-  final List<SyncEntry<VocabularyWord>> allEntries;
+  final List<VocabularyWord> allEntries;
   final ValueChanged<String?> onTogglePinnedGroup;
 
   @override

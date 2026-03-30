@@ -1,0 +1,188 @@
+{
+    "topic": "PrÃ¤positionalobjekte",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "ex_fb_b1_5",
+            "type": "fill-blank",
+            "question": "Ich erinnere mich ___ unseren letzten Urlaub.",
+            "options": [
+                "für",
+                "über",
+                "an",
+                "auf"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_so_b1_1",
+            "type": "sentence-order",
+            "question": "Ich freue mich auf den Urlaub.",
+            "options": [
+                "den",
+                "freue",
+                "Urlaub",
+                "mich",
+                "Ich",
+                "auf"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_praepositionalobjekte_3",
+            "type": "multiple-choice",
+            "question": "Wartest du ___ den Bus?",
+            "options": [
+                "um",
+                "für",
+                "an",
+                "auf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_praepositionalobjekte_4",
+            "type": "multiple-choice",
+            "question": "Ich interessiere mich ___ Kunst.",
+            "options": [
+                "über",
+                "in",
+                "für",
+                "an"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_praepositionalobjekte_5",
+            "type": "multiple-choice",
+            "question": "Wir sprechen ___ die Zukunft.",
+            "options": [
+                "über",
+                "an",
+                "auf",
+                "um"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_praepositionalobjekte_6",
+            "type": "multiple-choice",
+            "question": "Er erinnert sich gern ___ seinen Urlaub.",
+            "options": [
+                "über",
+                "von",
+                "an",
+                "auf"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_praepositionalobjekte_7",
+            "type": "multiple-choice",
+            "question": "Sie freut sich schon sehr ___ das nächste Wochenende.",
+            "options": [
+                "auf",
+                "für",
+                "an",
+                "über"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_praepositionalobjekte_8",
+            "type": "multiple-choice",
+            "question": "Wir diskutieren ___ die neuen Regeln.",
+            "options": [
+                "um",
+                "über",
+                "auf",
+                "an"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_praepositionalobjekte_9",
+            "type": "multiple-choice",
+            "question": "Er hat sich ___ die Verspätung entschuldigt.",
+            "options": [
+                "über",
+                "um",
+                "an",
+                "für"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_praepositionalobjekte_10",
+            "type": "multiple-choice",
+            "question": "Denkst du oft ___ deine Schulzeit?",
+            "options": [
+                "auf",
+                "an",
+                "über",
+                "von"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_praepositionalobjekte_11",
+            "type": "multiple-choice",
+            "question": "Träumst du auch oft ___ fliegenden Autos?",
+            "options": [
+                "an",
+                "über",
+                "auf",
+                "von"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_praepositionalobjekte_12",
+            "type": "multiple-choice",
+            "question": "Kümmerst du dich ___ die Getränke?",
+            "options": [
+                "über",
+                "um",
+                "für",
+                "an"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_praepositionalobjekte_13",
+            "type": "multiple-choice",
+            "question": "Bittest du ihn ___ Hilfe?",
+            "options": [
+                "auf",
+                "für",
+                "nach",
+                "um"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_praepositionalobjekte_14",
+            "type": "multiple-choice",
+            "question": "Er fragt ___ dem Weg.",
+            "options": [
+                "für",
+                "über",
+                "um",
+                "nach"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_praepositionalobjekte_15",
+            "type": "multiple-choice",
+            "question": "Ich warne dich ___ dem Hund!",
+            "options": [
+                "auf",
+                "über",
+                "von",
+                "vor"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

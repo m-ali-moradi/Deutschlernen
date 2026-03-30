@@ -1,0 +1,109 @@
+﻿{
+    "id":  "g41",
+    "title":  "Passiv (Grundlagen)",
+    "level":  "A2",
+    "category":  "Zeiten",
+    "icon":  "⏰",
+    "rule":  "Präsens Passiv: werden + P.II. Perfekt Passiv: sein + P.II + worden.",
+    "explanation":  "Basic passive voice: Präsens Passiv with werden + Partizip II, and Perfekt Passiv with sein + P.II + worden. Agent with \u0027von + Dativ\u0027.",
+    "examples":  [
+                     "Das Essen wird gekocht.",
+                     "Der Brief wird geschrieben.",
+                     "Das Auto ist repariert worden.",
+                     "Die E-Mail wurde von ihm geschickt."
+                 ],
+    "detail":  {
+                   "id":  "g41",
+                   "subtitle":  "Zeiten · Passiv Grundlagen",
+                   "emoji":  "🏗️",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#A855F7"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Das Passiv · The Passive Voice",
+                                        "text":  "The passive voice shifts focus from the actor to the action. German has two types: Vorgangspassiv (werden, action) and Zustandspassiv (sein, result/state).",
+                                        "bullets":  [
+                                                        "Vorgangspassiv: werden + Partizip II = the action happening",
+                                                        "Zustandspassiv: sein + Partizip II = the resulting state",
+                                                        "Agent (by whom): von + Dativ"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Vorgangspassiv",
+                                        "formula":  "werden (konj.) + ... + Partizip II",
+                                        "colors":  [
+                                                       "#6366F1",
+                                                       "#4F46E5"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Zustandspassiv",
+                                        "formula":  "sein (konj.) + ... + Partizip II",
+                                        "colors":  [
+                                                       "#A855F7",
+                                                       "#7C3AED"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Vorgangspassiv (Zeiten)",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Vertrag wird unterschrieben.",
+                                                          "en":  "The contract is being signed. (Präsens)"
+                                                      },
+                                                      {
+                                                          "de":  "Der Vertrag wurde unterschrieben.",
+                                                          "en":  "The contract was signed. (Präteritum)"
+                                                      },
+                                                      {
+                                                          "de":  "Der Vertrag ist unterschrieben worden.",
+                                                          "en":  "The contract has been signed. (Perfekt)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Zustandspassiv",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Die Tür ist geöffnet.",
+                                                          "en":  "The door is open. (result)"
+                                                      },
+                                                      {
+                                                          "de":  "Die Aufgabe ist erledigt.",
+                                                          "en":  "The task is done. (result)"
+                                                      },
+                                                      {
+                                                          "de":  "Der Brief ist geschrieben.",
+                                                          "en":  "The letter is written. (result)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Vorgangspassiv describes what is HAPPENING. Zustandspassiv describes the RESULT. Compare: Die Tür wird geöffnet (someone opens it) vs. Die Tür ist geöffnet (it is open).",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Vorgangspassiv: werden + Partizip II (in all tenses).",
+                                                      "Zustandspassiv: sein + Partizip II (describes result).",
+                                                      "Agent: von + Dativ: Das Haus wurde vom Architekten gebaut.",
+                                                      "Perfekt Vorgangspassiv: ist + Partizip II + worden (not geworden!)."
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Adverbien",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_new_adver_1",
+            "type": "multiple-choice",
+            "question": "Wann kommst du? - Ich komme ___.",
+            "options": [
+                "sehr",
+                "heute",
+                "oben",
+                "hier"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_adver_2",
+            "type": "multiple-choice",
+            "question": "Wo ist das Buch? - Es liegt ___ auf dem Tisch.",
+            "options": [
+                "dort",
+                "besonders",
+                "bald",
+                "gestern"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_adver_3",
+            "type": "multiple-choice",
+            "question": "Er lernt Englisch und ___ freut er sich auf den Urlaub.",
+            "options": [
+                "deshalb",
+                "dort",
+                "heute",
+                "unten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_adver_4",
+            "type": "fill-blank",
+            "question": "Wir sehen uns ___ wieder.",
+            "options": [
+                "hier",
+                "gern",
+                "bald",
+                "sehr"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_adver_5",
+            "type": "multiple-choice",
+            "question": "Das Essen schmeckt ___ gut. (modal)",
+            "options": [
+                "dort",
+                "gestern",
+                "besonders",
+                "oben"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_adver_6",
+            "type": "multiple-choice",
+            "question": "Wo wohnst du jetzt? - Ich wohne ___ in Berlin.",
+            "options": [
+                "sehr",
+                "morgen",
+                "deshalb",
+                "jetzt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_adver_7",
+            "type": "multiple-choice",
+            "question": "Kommst du ___ zu meiner Party?",
+            "options": [
+                "dort",
+                "morgen",
+                "oben",
+                "gern"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_adver_8",
+            "type": "multiple-choice",
+            "question": "Die Toilette ist gleich ___ links.",
+            "options": [
+                "da drüben",
+                "zu",
+                "morgen",
+                "auf"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_adver_9",
+            "type": "fill-blank",
+            "question": "Gehst du ___ ins Kino? - Ja, sehr.",
+            "options": [
+                "bald",
+                "gern",
+                "sehr",
+                "heute"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_adver_10",
+            "type": "multiple-choice",
+            "question": "Gestern war ich krank. ___ konnte ich nicht kommen.",
+            "options": [
+                "Morgen",
+                "Da",
+                "Besonders",
+                "Darum"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_adver_11",
+            "type": "multiple-choice",
+            "question": "Das Wetter war ___ schlecht.",
+            "options": [
+                "darum",
+                "dort",
+                "gestern",
+                "gern"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_adver_12",
+            "type": "multiple-choice",
+            "question": "Wir fahren ___ Woche ans Meer.",
+            "options": [
+                "besonders",
+                "dort",
+                "nächste",
+                "deshalb"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_adver_13",
+            "type": "multiple-choice",
+            "question": "Mein Handy liegt ___ auf dem Sofa.",
+            "options": [
+                "gestern",
+                "früher",
+                "bald",
+                "oben"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_adver_14",
+            "type": "multiple-choice",
+            "question": "Ich habe ___ noch keinen Hunger.",
+            "options": [
+                "sehr",
+                "jetzt",
+                "dort",
+                "hier"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_adver_15",
+            "type": "multiple-choice",
+            "question": "Ich mag das rote Kleid. Das blaue mag ich ___ überhaupt nicht.",
+            "options": [
+                "bald",
+                "dagegen",
+                "gern",
+                "darum"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

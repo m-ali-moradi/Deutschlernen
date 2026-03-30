@@ -1,0 +1,131 @@
+﻿{
+    "id":  "g5",
+    "title":  "Perfekt",
+    "level":  "A2",
+    "category":  "Zeiten",
+    "icon":  "⏰",
+    "rule":  "Perfekt = haben/sein + Partizip II",
+    "explanation":  "The Perfekt tense is formed with an auxiliary verb (haben or sein) and the past participle. Most verbs use \u0027haben\u0027; verbs of motion/change use \u0027sein\u0027.",
+    "examples":  [
+                     "Ich habe Deutsch gelernt.",
+                     "Sie ist nach Berlin gefahren.",
+                     "Wir haben einen Film gesehen.",
+                     "Er ist gestern angekommen."
+                 ],
+    "detail":  {
+                   "id":  "g5",
+                   "subtitle":  "Zeiten · Vergangenheit",
+                   "emoji":  "⏰",
+                   "gradient":  [
+                                    "#F59E0B",
+                                    "#EA580C"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Das Perfekt · Present Perfect",
+                                        "text":  "Perfekt is the most common past tense in spoken German. It\u0027s formed with haben or sein + Partizip II. Most verbs use \u0027haben\u0027; verbs of motion and change of state use \u0027sein\u0027.",
+                                        "bullets":  [
+                                                        "haben + Partizip II: Ich habe gelernt.",
+                                                        "sein + Partizip II: Ich bin gefahren.",
+                                                        "sein-verbs: movement (gehen, fahren) and change (werden)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Perfekt-Formel",
+                                        "formula":  "haben/sein (konj.) + ... + Partizip II",
+                                        "colors":  [
+                                                       "#F59E0B",
+                                                       "#EA580C"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Partizip II Bildung",
+                                        "color":  "amber",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "Regelmäßig",
+                                                         "right":  "ge- + Stamm + -t: gemacht, gelernt"
+                                                     },
+                                                     {
+                                                         "left":  "Unregelmäßig",
+                                                         "right":  "ge- + Stamm + -en: geschrieben, gefahren"
+                                                     },
+                                                     {
+                                                         "left":  "Trennbar",
+                                                         "right":  "Präfix + ge + Stamm: ein-ge-kauft"
+                                                     },
+                                                     {
+                                                         "left":  "Untrennbar",
+                                                         "right":  "KEIN ge-: verstanden, bekommen"
+                                                     },
+                                                     {
+                                                         "left":  "-ieren Verben",
+                                                         "right":  "KEIN ge-: studiert, telefoniert"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit haben",
+                                        "color":  "amber",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich habe Deutsch gelernt.",
+                                                          "en":  "I have learned German."
+                                                      },
+                                                      {
+                                                          "de":  "Wir haben einen Film gesehen.",
+                                                          "en":  "We watched a film."
+                                                      },
+                                                      {
+                                                          "de":  "Sie hat das Buch gelesen.",
+                                                          "en":  "She read the book."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit sein",
+                                        "color":  "orange",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Sie ist nach Berlin gefahren.",
+                                                          "en":  "She went to Berlin."
+                                                      },
+                                                      {
+                                                          "de":  "Er ist gestern angekommen.",
+                                                          "en":  "He arrived yesterday."
+                                                      },
+                                                      {
+                                                          "de":  "Wir sind ins Kino gegangen.",
+                                                          "en":  "We went to the cinema."
+                                                      },
+                                                      {
+                                                          "de":  "Das Kind ist eingeschlafen.",
+                                                          "en":  "The child fell asleep."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "sein + bleiben, sein, werden also use \u0027sein\u0027 in Perfekt: Ich bin geblieben, Ich bin gewesen.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "Auxiliary verb (haben/sein) sits in Position 2.",
+                                                      "Partizip II goes to the END of the sentence.",
+                                                      "sein-verbs: motion (gehen, fahren), change of state (werden), bleiben, sein.",
+                                                      "No ge- with: ver-, be-, emp-, ent-, and -ieren verbs."
+                                                  ]
+                                    }
+                                ]
+               }
+}

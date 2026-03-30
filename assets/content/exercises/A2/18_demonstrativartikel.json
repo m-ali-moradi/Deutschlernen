@@ -1,0 +1,186 @@
+{
+    "topic": "Demonstrativartikel",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_new_demon_1",
+            "type": "multiple-choice",
+            "question": "Kaufst du ___ rote Auto?",
+            "options": [
+                "diese",
+                "dieses",
+                "dieser",
+                "diesen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_demon_2",
+            "type": "multiple-choice",
+            "question": "___ Schuhe sind zu teuer.",
+            "options": [
+                "Dieses",
+                "Diesen",
+                "Dieser",
+                "Diese"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_demon_3",
+            "type": "multiple-choice",
+            "question": "Ich kenne ___ Mann nicht.",
+            "options": [
+                "dieser",
+                "diese",
+                "diesen",
+                "dieses"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_demon_4",
+            "type": "multiple-choice",
+            "question": "Gehört ___ Tasche dir?",
+            "options": [
+                "diesen",
+                "dieses",
+                "dieser",
+                "diese"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_demon_5",
+            "type": "multiple-choice",
+            "question": "___ Pullover gefällt mir sehr gut.",
+            "options": [
+                "Dieser",
+                "Diesen",
+                "Dieses",
+                "Diese"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_demon_6",
+            "type": "multiple-choice",
+            "question": "Wir haben in ___ Restaurant sehr gut gegessen.",
+            "options": [
+                "diesem",
+                "dieses",
+                "dieser",
+                "diesen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_demon_7",
+            "type": "multiple-choice",
+            "question": "Ich fahre mit ___ Zug um 8 Uhr.",
+            "options": [
+                "diesem",
+                "dieses",
+                "dieser",
+                "diesen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_demon_8",
+            "type": "fill-blank",
+            "question": "Mit ___ Frau spreche ich nicht mehr.",
+            "options": [
+                "diesen",
+                "diesem",
+                "diese",
+                "dieser"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_demon_9",
+            "type": "multiple-choice",
+            "question": "Hast du ___ Film schon gesehen?",
+            "options": [
+                "dieses",
+                "diesem",
+                "diesen",
+                "dieser"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_demon_10",
+            "type": "multiple-choice",
+            "question": "___ Kinder warten auf den Bus.",
+            "options": [
+                "Dieser",
+                "Diese",
+                "Diesen",
+                "Dieses"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_demon_11",
+            "type": "fill-blank",
+            "question": "Ich helfe ___ Studentin sofort.",
+            "options": [
+                "diese",
+                "diesen",
+                "dieser",
+                "diesem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_demon_12",
+            "type": "multiple-choice",
+            "question": "Gefällt dir ___ Kleid?",
+            "options": [
+                "diesem",
+                "dieser",
+                "diese",
+                "dieses"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_demon_13",
+            "type": "multiple-choice",
+            "question": "Wir wollen ___ Jahr nach Italien fahren.",
+            "options": [
+                "diesen",
+                "diesem",
+                "dieses",
+                "dieser"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_demon_14",
+            "type": "multiple-choice",
+            "question": "Hast du in ___ Hotel gut geschlafen?",
+            "options": [
+                "dieser",
+                "dieses",
+                "diesem",
+                "diesen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_demon_15",
+            "type": "multiple-choice",
+            "question": "Von wem ist ___ Brief?",
+            "options": [
+                "dieser",
+                "diesen",
+                "dieses",
+                "diesem"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

@@ -1,0 +1,162 @@
+﻿{
+    "id":  "g42",
+    "title":  "Genitiv",
+    "level":  "B1",
+    "category":  "Fälle",
+    "icon":  "🎯",
+    "rule":  "Genitiv = Besitz (WESSEN?). Artikel: des/der. Maskulin/Neutrum: Nomen + -(e)s.",
+    "explanation":  "The Genitiv case expresses possession (WESSEN?). Masculine and neuter nouns add -(e)s. Used after certain prepositions and in formal/written German.",
+    "examples":  [
+                     "Das Auto des Mannes ist rot.",
+                     "Die Tasche der Frau liegt dort.",
+                     "Trotz des Regens gehen wir.",
+                     "Während des Unterrichts schläft er."
+                 ],
+    "detail":  {
+                   "id":  "g42",
+                   "subtitle":  "Fälle · Genitiv",
+                   "emoji":  "⚖️",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#6D28D9"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Der Genitiv · The Genitive Case",
+                                        "text":  "The Genitive shows possession or belonging. It answers \u0027WESSEN?\u0027 (whose?). Masculine and neuter nouns add -s/-es, articles change.",
+                                        "bullets":  [
+                                                        "Maskulin/Neutrum: des + Nomen + -(e)s",
+                                                        "Feminin/Plural: der + Nomen (no change)",
+                                                        "Genitiv-Präpositionen: wegen, trotz, aufgrund, während, statt"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Genitiv Artikel",
+                                        "headers":  [
+                                                        "",
+                                                        "Mask.",
+                                                        "Fem.",
+                                                        "Neut.",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "bestimmt",
+                                                         "des (-s)",
+                                                         "der",
+                                                         "des (-s)",
+                                                         "der"
+                                                     ],
+                                                     [
+                                                         "unbestimmt",
+                                                         "eines (-s)",
+                                                         "einer",
+                                                         "eines (-s)",
+                                                         "–"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Genitiv als Possessiv",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "das Auto des Mannes",
+                                                          "en":  "the man\u0027s car"
+                                                      },
+                                                      {
+                                                          "de":  "die Farbe der Wand",
+                                                          "en":  "the color of the wall"
+                                                      },
+                                                      {
+                                                          "de":  "der Name eines Studenten",
+                                                          "en":  "the name of a student"
+                                                      },
+                                                      {
+                                                          "de":  "die Meinung der Leute",
+                                                          "en":  "the opinion of the people"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Genitiv-Präpositionen",
+                                        "color":  "purple",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "wegen",
+                                                         "right":  "because of (+ Genitiv)"
+                                                     },
+                                                     {
+                                                         "left":  "trotz",
+                                                         "right":  "despite (+ Genitiv)"
+                                                     },
+                                                     {
+                                                         "left":  "aufgrund",
+                                                         "right":  "due to (+ Genitiv)"
+                                                     },
+                                                     {
+                                                         "left":  "während",
+                                                         "right":  "during (+ Genitiv)"
+                                                     },
+                                                     {
+                                                         "left":  "statt/anstatt",
+                                                         "right":  "instead of (+ Genitiv)"
+                                                     },
+                                                     {
+                                                         "left":  "außerhalb",
+                                                         "right":  "outside of (+ Genitiv)"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "In spoken German, \u0027wegen\u0027 is often used with Dativ: \u0027wegen dem Wetter\u0027 instead of \u0027wegen des Wetters\u0027. In standard writing, Genitiv is preferred.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Genitive shows possession: Das Auto des Mannes.",
+                                                      "Masculine/neuter nouns add -(e)s: des Mannes, des Kindes.",
+                                                      "Feminine and plural: just change the article: der Frau, der Kinder.",
+                                                      "Genitiv prepositions: wegen, trotz, aufgrund, während, statt."
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Genitiv-Präpositionen im Satz",
+                                        "color":  "purple",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wegen des Regens bleiben wir zu Hause.",
+                                                          "en":  "Because of the rain, we stay at home."
+                                                      },
+                                                      {
+                                                          "de":  "Trotz des schlechten Wetters gehen wir spazieren.",
+                                                          "en":  "Despite the bad weather, we go for a walk."
+                                                      },
+                                                      {
+                                                          "de":  "Während des Unterrichts darf man nicht telefonieren.",
+                                                          "en":  "During class, you are not allowed to use the phone."
+                                                      },
+                                                      {
+                                                          "de":  "Statt eines Kaffees möchte ich Tee.",
+                                                          "en":  "Instead of a coffee, I\u0027d like tea."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "When to add -s vs. -es: short nouns (1 syllable) often add -es: des Mannes, des Kindes. Longer nouns add just -s: des Lehrers, des Computers.",
+                                        "variant":  "info"
+                                    }
+                                ]
+               }
+}

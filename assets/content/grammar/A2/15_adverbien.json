@@ -1,0 +1,108 @@
+﻿{
+    "id":  "g67",
+    "title":  "Adverbien",
+    "level":  "A2",
+    "category":  "Adjektive",
+    "icon":  "📍",
+    "rule":  "Adverbien sind unveränderlich und beschreiben Zeit, Ort oder Häufigkeit.",
+    "explanation":  "Adverbs specify where, when, or how something happens. Unlike adjectives, adverbs NEVER change their form through declension.",
+    "examples":  [
+                     "Ich komme bald.",
+                     "Das Buch liegt dort.",
+                     "Wir kochen oft zusammen.",
+                     "Heute bleiben wir zu Hause."
+                 ],
+    "detail":  {
+                   "id":  "g67",
+                   "subtitle":  "Zeit · Ort · Häufigkeit",
+                   "emoji":  "📍",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#D946EF"
+                                ],
+                   "levelBg":  "#FEF9C3",
+                   "levelText":  "#A16207",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Was sind Adverbien?",
+                                        "text":  "Adverbs specify where, when, or how something happens. Unlike adjectives, adverbs NEVER change their form — no declension is needed!",
+                                        "bullets":  [
+                                                        "Lokaladverbien (Place): hier, dort, oben, unten, draußen",
+                                                        "Temporaladverbien (Time): heute, jetzt, bald, gestern",
+                                                        "Frequenzadverbien (Frequency): oft, selten, nie, manchmal"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Häufige Adverbien im Einsatz",
+                                        "headers":  [
+                                                        "Kategorie",
+                                                        "Beispiel",
+                                                        "Bedeutung"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Zeit",
+                                                         "Ich komme BALD.",
+                                                         "I\u0027m coming SOON."
+                                                     ],
+                                                     [
+                                                         "Ort",
+                                                         "Das Buch liegt DORT.",
+                                                         "The book is THERE."
+                                                     ],
+                                                     [
+                                                         "Häufigkeit",
+                                                         "Wir kochen OFT.",
+                                                         "We cook OFTEN."
+                                                     ],
+                                                     [
+                                                         "Art \u0026 Weise",
+                                                         "Er läuft SCHNELL.",
+                                                         "He runs FAST."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "title":  "Adjektiv vs. Adverb",
+                                        "text":  "If a word describes a NOUN, it\u0027s an adjective (der schnelle Mann). If it describes an ACTION, it\u0027s an adverb (Er rennt schnell). Only the adjective gets endings!",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Satzbeispiele",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "HEUTE bleiben wir ZUHAUSE.",
+                                                          "en":  "TODAY we are staying AT HOME."
+                                                      },
+                                                      {
+                                                          "de":  "DORT steht mein Auto.",
+                                                          "en":  "My car is standing OVER THERE."
+                                                      },
+                                                      {
+                                                          "de":  "Manchmal trinke ich Kaffee.",
+                                                          "en":  "Sometimes I drink coffee."
+                                                      },
+                                                      {
+                                                          "de":  "Er ist OBEN im Zimmer.",
+                                                          "en":  "He is UPSTAIRS in the room."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "Adverbs are immutable (no endings).",
+                                                      "Temporal adverbs (Time) often go to Position 1 for emphasis (Heute...).",
+                                                      "In negative sentences, \u0027nicht\u0027 often follows the adverb.",
+                                                      "They provide essential context to any sentence."
+                                                  ]
+                                    }
+                                ]
+               }
+}

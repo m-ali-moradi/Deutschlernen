@@ -1,0 +1,79 @@
+﻿{
+    "id":  "g33",
+    "title":  "Partizipialkonstruktionen",
+    "level":  "B2",
+    "category":  "Verben",
+    "icon":  "📐",
+    "rule":  "Partizip I/II als erweiterte Attribute, ersetzen Relativsätze.",
+    "explanation":  "Participial constructions replace relative clauses in formal writing. Extended attributive structures place modifiers before the participle.",
+    "examples":  [
+                     "Die am Fenster stehende Frau ist meine Chefin.",
+                     "Vom Regen überrascht, blieb er zu Hause.",
+                     "Die kürzlich renovierte Wohnung sieht toll aus."
+                 ],
+    "detail":  {
+                   "id":  "g33",
+                   "subtitle":  "Partizipialkonstruktionen",
+                   "emoji":  "🧩",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#8B5CF6"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Partizipialkonstruktionen · B2",
+                                        "text":  "Participial constructions replace subordinate clauses, making text more concise and formal. They use Partizip I or II with additional elements."
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Nebensatz → Partizipialkonstruktion",
+                                        "from":  {
+                                                     "label":  "NEBENSATZ",
+                                                     "text":  "Da er vom Regen überrascht wurde, blieb er zu Hause."
+                                                 },
+                                        "to":  {
+                                                   "label":  "PARTIZIP",
+                                                   "text":  "Vom Regen überrascht, blieb er zu Hause."
+                                               },
+                                        "note":  "Participial phrase moves to the front"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Partizip I (aktiv)",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "die lachende Frau",
+                                                          "en":  "the laughing woman (who is laughing)"
+                                                      },
+                                                      {
+                                                          "de":  "der gestern eingereichte Bericht",
+                                                          "en":  "the report submitted yesterday"
+                                                      },
+                                                      {
+                                                          "de":  "Das Buch, vor Jahren geschrieben, ist aktuell.",
+                                                          "en":  "The book, written years ago, is relevant."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Participial constructions are very common in formal/academic writing but rare in spoken German.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Partizip I (laufend, lachend) = active/ongoing process.",
+                                                      "Partizip II (geschrieben, gekauft) = passive/completed.",
+                                                      "Takes normal adjective endings when before a noun.",
+                                                      "Common in newspapers, reports, and academic texts."
+                                                  ]
+                                    }
+                                ]
+               }
+}

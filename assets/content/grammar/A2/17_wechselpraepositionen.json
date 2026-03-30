@@ -1,0 +1,147 @@
+﻿{
+    "id":  "g4",
+    "title":  "Wechselpräpositionen",
+    "level":  "A2",
+    "category":  "Präpositionen",
+    "icon":  "📍",
+    "rule":  "Wechselpräpositionen: Akkusativ (WOHIN?) oder Dativ (WO?).",
+    "explanation":  "Nine prepositions (an, auf, hinter, in, neben, über, unter, vor, zwischen) take Akkusativ for movement and Dativ for location.",
+    "examples":  [
+                     "Ich stelle das Buch auf den Tisch. (Akk)",
+                     "Das Buch liegt auf dem Tisch. (Dat)",
+                     "Er geht in die Schule. (Akk)",
+                     "Er ist in der Schule. (Dat)"
+                 ],
+    "detail":  {
+                   "id":  "g4",
+                   "subtitle":  "Präpositionen · Wechselpräpositionen",
+                   "emoji":  "📍",
+                   "gradient":  [
+                                    "#EC4899",
+                                    "#F43F5E"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Wechselpräpositionen · Two-Way Prepositions",
+                                        "text":  "Nine prepositions can take EITHER Akkusativ or Dativ. Akkusativ = movement/direction (WOHIN?), Dativ = location/position (WO?).",
+                                        "bullets":  [
+                                                        "an, auf, hinter, in, neben, über, unter, vor, zwischen",
+                                                        "WO? (Dativ) → position, no movement",
+                                                        "WOHIN? (Akkusativ) → direction, movement toward"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Die 9 Wechselpräpositionen",
+                                        "color":  "pink",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "an",
+                                                         "right":  "at / on (vertical)"
+                                                     },
+                                                     {
+                                                         "left":  "auf",
+                                                         "right":  "on (horizontal)"
+                                                     },
+                                                     {
+                                                         "left":  "hinter",
+                                                         "right":  "behind"
+                                                     },
+                                                     {
+                                                         "left":  "in",
+                                                         "right":  "in / into"
+                                                     },
+                                                     {
+                                                         "left":  "neben",
+                                                         "right":  "next to"
+                                                     },
+                                                     {
+                                                         "left":  "über",
+                                                         "right":  "over / above"
+                                                     },
+                                                     {
+                                                         "left":  "unter",
+                                                         "right":  "under / below"
+                                                     },
+                                                     {
+                                                         "left":  "vor",
+                                                         "right":  "in front of / before"
+                                                     },
+                                                     {
+                                                         "left":  "zwischen",
+                                                         "right":  "between"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Akkusativ (WOHIN?) vs. Dativ (WO?)",
+                                        "from":  {
+                                                     "label":  "WOHIN? → Akkusativ",
+                                                     "text":  "Ich stelle das Buch auf den Tisch."
+                                                 },
+                                        "to":  {
+                                                   "label":  "WO? → Dativ",
+                                                   "text":  "Das Buch liegt auf dem Tisch."
+                                               },
+                                        "note":  "Movement → Akk. / Position → Dat."
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Akkusativ (Bewegung → WOHIN?)",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich gehe in die Schule.",
+                                                          "en":  "I go into the school."
+                                                      },
+                                                      {
+                                                          "de":  "Er hängt das Bild an die Wand.",
+                                                          "en":  "He hangs the picture on the wall."
+                                                      },
+                                                      {
+                                                          "de":  "Sie legt das Buch auf den Tisch.",
+                                                          "en":  "She puts the book on the table."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Dativ (Position → WO?)",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er ist in der Schule.",
+                                                          "en":  "He is in the school."
+                                                      },
+                                                      {
+                                                          "de":  "Das Bild hängt an der Wand.",
+                                                          "en":  "The picture hangs on the wall."
+                                                      },
+                                                      {
+                                                          "de":  "Das Buch liegt auf dem Tisch.",
+                                                          "en":  "The book lies on the table."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "stellen/legen (action, Akk.) vs. stehen/liegen (position, Dat.): Ich stelle die Vase auf den Tisch ↔ Die Vase steht auf dem Tisch.",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "WOHIN? → Akkusativ (direction/movement).",
+                                                      "WO? → Dativ (position/location).",
+                                                      "Contractions: in + dem = im, in + das = ins, an + dem = am.",
+                                                      "Action verbs (stellen, legen) → Akkusativ. Position verbs (stehen, liegen) → Dativ."
+                                                  ]
+                                    }
+                                ]
+               }
+}

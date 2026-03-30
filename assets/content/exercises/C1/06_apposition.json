@@ -1,0 +1,186 @@
+{
+    "topic": "Apposition",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g54_1",
+            "type": "multiple-choice",
+            "question": "Herr Müller, unser neuer ___, kommt aus München.",
+            "options": [
+                "Chefes",
+                "Chef's",
+                "Chef",
+                "Chefs"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g54_2",
+            "type": "multiple-choice",
+            "question": "Ich spreche mit Frau Schmidt, der ___. ",
+            "options": [
+                "die Leiterin",
+                "Leiter",
+                "Leiterins",
+                "Leiterin"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g54_3",
+            "type": "multiple-choice",
+            "question": "Er kauft ein Geschenk für Lisa, seine ___ Schwester.",
+            "options": [
+                "kleine",
+                "kleiner",
+                "kleines",
+                "kleinen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g54_4",
+            "type": "multiple-choice",
+            "question": "Berlin, ___ historische ___ Deutschlands, hat kulturell viel zu bieten.",
+            "options": [
+                "die Hauptstadt",
+                "die HauptstÃ¤dte",
+                "das Hauptstadt",
+                "der Hauptstadt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g54_5",
+            "type": "multiple-choice",
+            "question": "Wir sprachen gestern lange mit dem Direktor, einem sehr ___ Mann.",
+            "options": [
+                "freundlicher",
+                "freundliche",
+                "freundlichen",
+                "freundliches"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g54_6",
+            "type": "multiple-choice",
+            "question": "Ich kenne Paris seit Jahren als die Stadt ___ ___.",
+            "options": [
+                "die Liebe",
+                "dem Liebe",
+                "den Liebe",
+                "der Liebe"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_apposition_7",
+            "type": "multiple-choice",
+            "question": "Ich spreche mit Herrn Müller, ___ (ein bekannter Anwalt).",
+            "options": [
+                "einem bekannten Anwalt",
+                "eines bekannten Anwalts",
+                "ein bekannter Anwalt",
+                "einen bekannten Anwalt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_apposition_8",
+            "type": "multiple-choice",
+            "question": "Wir danken Frau Schmidt, ___ (unsere treue Kollegin).",
+            "options": [
+                "unserer treuen Kollegin",
+                "unsere treuen Kollegin",
+                "unserer treue Kollegin",
+                "unsere treue Kollegin"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_apposition_9",
+            "type": "multiple-choice",
+            "question": "Er wohnt in Berlin, ___ (die Hauptstadt) Deutschlands.",
+            "options": [
+                "der Hauptstadt",
+                "den Hauptstadt",
+                "das Hauptstadt",
+                "die Hauptstadt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_apposition_10",
+            "type": "multiple-choice",
+            "question": "Das ist das Auto meines Vaters, ___ (ein alter Mann).",
+            "options": [
+                "eines alten Mannes",
+                "einem alten Mann",
+                "ein alter Mann",
+                "einen alten Mann"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_apposition_11",
+            "type": "multiple-choice",
+            "question": "Ich lese ein Buch von Goethe, ___ (der berühmte Dichter).",
+            "options": [
+                "des berühmten Dichters",
+                "den berühmten Dichter",
+                "dem berühmten Dichter",
+                "der berühmte Dichter"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_apposition_12",
+            "type": "multiple-choice",
+            "question": "Wir besuchten Rom, ___ (die ewige Stadt).",
+            "options": [
+                "die ewigen Stadt",
+                "der ewigen Stadt",
+                "der ewige Stadt",
+                "die ewige Stadt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_apposition_13",
+            "type": "multiple-choice",
+            "question": "Sie gab den Brief ihrem Bruder, ___ (ein guter Freund) von mir.",
+            "options": [
+                "eines guten Freundes",
+                "ein guter Freund",
+                "einem guten Freund",
+                "einen guten Freund"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_apposition_14",
+            "type": "multiple-choice",
+            "question": "Die Tasche gehört Maria, ___ (meine Schwester).",
+            "options": [
+                "meinen Schwester",
+                "meines Schwester",
+                "meine Schwester",
+                "meiner Schwester"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_apposition_15",
+            "type": "multiple-choice",
+            "question": "Wir gratulieren dem Gewinner, ___ (ein junger Student).",
+            "options": [
+                "einem jungen Studenten",
+                "einen jungen Studenten",
+                "eines jungen Studenten",
+                "ein junger Student"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

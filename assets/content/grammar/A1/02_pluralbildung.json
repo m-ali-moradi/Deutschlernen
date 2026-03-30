@@ -1,0 +1,105 @@
+﻿{
+    "id":  "g37",
+    "title":  "Pluralbildung",
+    "level":  "A1",
+    "category":  "Artikel",
+    "icon":  "📚",
+    "rule":  "5 Pluraltypen: -e, -er, -n/-en, -s, Umlaut. Immer Artikel \u0027die\u0027.",
+    "explanation":  "German has five main plural patterns. There is no single rule — the plural must be learned with each noun. All plurals use the article \u0027die\u0027.",
+    "examples":  [
+                     "der Tisch → die Tische",
+                     "das Kind → die Kinder",
+                     "die Frau → die Frauen",
+                     "das Auto → die Autos"
+                 ],
+    "detail":  {
+                   "id":  "g37",
+                   "subtitle":  "Artikel · Plural",
+                   "emoji":  "📘",
+                   "gradient":  [
+                                    "#3B82F6",
+                                    "#4F46E5"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Pluralbildung · Forming Plurals",
+                                        "text":  "German nouns form their plurals in several ways. Unfortunately there are no universal rules — you must learn each noun\u0027s plural form.",
+                                        "bullets":  [
+                                                        "-e / -¨e: der Tag → die Tage, der Stuhl → die Stühle",
+                                                        "-er / -¨er: das Kind → die Kinder, der Mann → die Männer",
+                                                        "-(e)n: die Frau → die Frauen, der Student → die Studenten",
+                                                        "-s: das Auto → die Autos",
+                                                        "no change or umlaut: der Vater → die Väter"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Pluraltypen",
+                                        "color":  "blue",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "-e / -¨e",
+                                                         "right":  "der Tag → die Tage"
+                                                     },
+                                                     {
+                                                         "left":  "-er / -¨er",
+                                                         "right":  "das Kind → die Kinder"
+                                                     },
+                                                     {
+                                                         "left":  "-(e)n",
+                                                         "right":  "die Frau → die Frauen"
+                                                     },
+                                                     {
+                                                         "left":  "-s",
+                                                         "right":  "das Auto → die Autos"
+                                                     },
+                                                     {
+                                                         "left":  "-¨ / –",
+                                                         "right":  "der Vater → die Väter"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "blue",
+                                        "items":  [
+                                                      {
+                                                          "de":  "der Mann → die Männer",
+                                                          "en":  "the man → the men"
+                                                      },
+                                                      {
+                                                          "de":  "das Buch → die Bücher",
+                                                          "en":  "the book → the books"
+                                                      },
+                                                      {
+                                                          "de":  "die Schule → die Schulen",
+                                                          "en":  "the school → the schools"
+                                                      },
+                                                      {
+                                                          "de":  "das Auto → die Autos",
+                                                          "en":  "the car → the cars"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "All plurals use \u0027die\u0027 as their article. In the Dative plural, all nouns add -n unless the plural already ends in -n or -s.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Always learn the plural with the noun: die Nacht, die Nächte.",
+                                                      "Feminine nouns in -e: usually add -n → die Lampe → die Lampen.",
+                                                      "Nouns from English/French: usually -s → das Café → die Cafés.",
+                                                      "Dative plural: always add -n: den Männern, den Kindern."
+                                                  ]
+                                    }
+                                ]
+               }
+}

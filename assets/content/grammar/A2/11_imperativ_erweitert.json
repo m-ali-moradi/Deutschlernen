@@ -1,0 +1,164 @@
+﻿{
+    "id":  "g59",
+    "title":  "Imperativ (Erweitert)",
+    "level":  "A2",
+    "category":  "Verben",
+    "icon":  "📢",
+    "rule":  "Imperativ mit Reflexivverben, trennbaren Verben, und höfliche Formen.",
+    "explanation":  "At A2, the imperative extends to reflexive verbs, separable verbs in complex sentences, and polite forms. You also learn to give instructions using Infinitiv (recipes, manuals).",
+    "examples":  [
+                     "Setz dich bitte hin!",
+                     "Zieh dir eine Jacke an!",
+                     "Bitte nicht rauchen!",
+                     "Den Teig 30 Minuten ruhen lassen."
+                 ],
+    "detail":  {
+                   "id":  "g59",
+                   "subtitle":  "Verben · Imperativ Erweitert",
+                   "emoji":  "📢",
+                   "gradient":  [
+                                    "#EF4444",
+                                    "#DC2626"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Imperativ Erweitert · Advanced Commands",
+                                        "text":  "At A2 level, the imperative extends to reflexive verbs, complex separable verbs, and alternative forms for giving instructions (Infinitiv and Partizip II for signs/manuals).",
+                                        "bullets":  [
+                                                        "Reflexive Verben: Setz dich! (reflexive pronoun changes)",
+                                                        "Trennbare + Reflexiv: Zieh dir eine Jacke an!",
+                                                        "Infinitiv as imperative: Bitte nicht rauchen! (signs)",
+                                                        "Partizip II as imperative: Aufgepasst! (attention!)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Reflexivverben im Imperativ",
+                                        "headers":  [
+                                                        "Verb",
+                                                        "du",
+                                                        "ihr",
+                                                        "Sie"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "sich setzen",
+                                                         "Setz dich!",
+                                                         "Setzt euch!",
+                                                         "Setzen Sie sich!"
+                                                     ],
+                                                     [
+                                                         "sich beeilen",
+                                                         "Beeil dich!",
+                                                         "Beeilt euch!",
+                                                         "Beeilen Sie sich!"
+                                                     ],
+                                                     [
+                                                         "sich anziehen",
+                                                         "Zieh dich an!",
+                                                         "Zieht euch an!",
+                                                         "Ziehen Sie sich an!"
+                                                     ],
+                                                     [
+                                                         "sich waschen",
+                                                         "Wasch dich!",
+                                                         "Wascht euch!",
+                                                         "Waschen Sie sich!"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Reflexiv im Dativ",
+                                        "color":  "red",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wasch dir die Hände!",
+                                                          "en":  "Wash your hands! (du)"
+                                                      },
+                                                      {
+                                                          "de":  "Merkt euch das Wort!",
+                                                          "en":  "Memorize the word! (ihr)"
+                                                      },
+                                                      {
+                                                          "de":  "Stellen Sie sich das vor!",
+                                                          "en":  "Imagine that! (Sie)"
+                                                      },
+                                                      {
+                                                          "de":  "Zieh dir eine warme Jacke an!",
+                                                          "en":  "Put on a warm jacket! (du)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Alternative Imperativformen",
+                                        "headers":  [
+                                                        "Form",
+                                                        "Verwendung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Infinitiv",
+                                                         "Schilder, Anleitungen",
+                                                         "Bitte nicht rauchen!"
+                                                     ],
+                                                     [
+                                                         "Partizip II",
+                                                         "Achtung, Warnungen",
+                                                         "Aufgepasst! Achtung!"
+                                                     ],
+                                                     [
+                                                         "man + sollen",
+                                                         "Allgemeine Aufforderung",
+                                                         "Man soll hier nicht parken."
+                                                     ],
+                                                     [
+                                                         "Passiv",
+                                                         "Rezepte, Anleitungen",
+                                                         "Das Gemüse wird geschnitten."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Höfliche Aufforderungen",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Würden Sie bitte das Fenster öffnen?",
+                                                          "en":  "Would you please open the window?"
+                                                      },
+                                                      {
+                                                          "de":  "Könntest du mir bitte helfen?",
+                                                          "en":  "Could you please help me?"
+                                                      },
+                                                      {
+                                                          "de":  "Wärst du so nett und reichst mir das Salz?",
+                                                          "en":  "Would you be so kind as to pass me the salt?"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "In recipes and manuals, the infinitive is used as imperative: \u0027Den Teig 30 Minuten ruhen lassen.\u0027 \u0027Alle Zutaten vermischen.\u0027",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Reflexive imperative: pronoun comes right after verb: Setz DICH!, Setzen SIE SICH!",
+                                                      "Dativ reflexive when body part follows: Wasch DIR die Hände!",
+                                                      "Infinitive as imperative on signs: Nicht rauchen! Bitte anschnallen!",
+                                                      "Polite alternatives: Würden/Könnten Sie bitte...?",
+                                                      "Soften with particles: doch, mal, bitte, ruhig."
+                                                  ]
+                                    }
+                                ]
+               }
+}

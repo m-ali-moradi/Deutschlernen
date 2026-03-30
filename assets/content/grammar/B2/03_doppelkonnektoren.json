@@ -1,0 +1,101 @@
+﻿{
+    "id":  "g46",
+    "title":  "Doppelkonnektoren",
+    "level":  "B2",
+    "category":  "Satzbau",
+    "icon":  "🔗",
+    "rule":  "nicht nur...sondern auch, sowohl...als auch, weder...noch, entweder...oder, zwar...aber.",
+    "explanation":  "Two-part connectors create sophisticated sentence structures for correlating ideas, contrasting, or listing.",
+    "examples":  [
+                     "Er spricht nicht nur Deutsch, sondern auch Französisch.",
+                     "Sowohl der Chef als auch die Mitarbeiter sind zufrieden.",
+                     "Weder das Essen noch der Service war gut."
+                 ],
+    "detail":  {
+                   "id":  "g46",
+                   "subtitle":  "Doppelkonnektoren · Satzverknüpfung",
+                   "emoji":  "⚖️",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#6D28D9"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Zweiteilige Konnektoren",
+                                        "text":  "Double connectors link two sentence parts and build balanced relationships such as alternatives, contrasts, additions, or limitations."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Wichtige Paare",
+                                        "headers":  [
+                                                        "Konnektor",
+                                                        "Bedeutung",
+                                                        "Beispielmuster"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "nicht nur ... sondern auch",
+                                                         "addition with emphasis",
+                                                         "Er spricht nicht nur Deutsch, sondern auch Französisch."
+                                                     ],
+                                                     [
+                                                         "entweder ... oder",
+                                                         "alternative",
+                                                         "Entweder wir gehen jetzt oder wir warten."
+                                                     ],
+                                                     [
+                                                         "sowohl ... als auch",
+                                                         "addition",
+                                                         "Sowohl Anna als auch Tom kommen."
+                                                     ],
+                                                     [
+                                                         "zwar ... aber",
+                                                         "concession/contrast",
+                                                         "Zwar ist es teuer, aber es lohnt sich."
+                                                     ],
+                                                     [
+                                                         "weder ... noch",
+                                                         "negative addition",
+                                                         "Weder er noch sie war da."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Satz",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er spricht nicht nur Deutsch, sondern auch Französisch.",
+                                                          "en":  "He speaks not only German, but also French."
+                                                      },
+                                                      {
+                                                          "de":  "Sowohl die Qualität als auch der Preis überzeugen.",
+                                                          "en":  "Both the quality and the price are convincing."
+                                                      },
+                                                      {
+                                                          "de":  "Zwar hat er wenig Zeit, aber er hilft trotzdem.",
+                                                          "en":  "It is true that he has little time, but he still helps."
+                                                      },
+                                                      {
+                                                          "de":  "Weder die E-Mail noch der Anruf ist angekommen.",
+                                                          "en":  "Neither the email nor the call arrived."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "The two parts belong together and should normally appear as a pair.",
+                                                      "The sentence structure depends on the connector, not all pairs behave the same way.",
+                                                      "zwar is normally followed by a main clause with aber.",
+                                                      "weder ... noch often keeps singular verb agreement when the subject is seen as one unit."
+                                                  ]
+                                    }
+                                ]
+               }
+}

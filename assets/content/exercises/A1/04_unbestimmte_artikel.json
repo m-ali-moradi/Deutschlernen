@@ -1,0 +1,186 @@
+﻿{
+    "topic":  "Unbestimmte Artikel",
+    "level":  "A1",
+    "exercises":  [
+                      {
+                          "id":  "ex_fb_a1_2",
+                          "type":  "fill-blank",
+                          "question":  "Das ist ___ Apfel.",
+                          "options":  [
+                                          "einem",
+                                          "einen",
+                                          "eine",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  3
+                      },
+                      {
+                          "id":  "a1_g68_1",
+                          "type":  "multiple-choice",
+                          "question":  "Das ist ___ Tisch.",
+                          "options":  [
+                                          "einer",
+                                          "einen",
+                                          "eine",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  3
+                      },
+                      {
+                          "id":  "a1_g68_2",
+                          "type":  "multiple-choice",
+                          "question":  "Dort sind ___ Blumen.",
+                          "options":  [
+                                          "einer",
+                                          "ein",
+                                          "-",
+                                          "eine"
+                                      ],
+                          "correctAnswer":  2
+                      },
+                      {
+                          "id":  "a1_g68_3",
+                          "type":  "multiple-choice",
+                          "question":  "Ich habe ___ Hund.",
+                          "options":  [
+                                          "ein",
+                                          "einer",
+                                          "einen",
+                                          "eine"
+                                      ],
+                          "correctAnswer":  2
+                      },
+                      {
+                          "id":  "a1_g68_4",
+                          "type":  "multiple-choice",
+                          "question":  "Das ist ___ Brille.",
+                          "options":  [
+                                          "einen",
+                                          "eine",
+                                          "einer",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  1
+                      },
+                      {
+                          "id":  "a1_g68_5",
+                          "type":  "multiple-choice",
+                          "question":  "Wir kaufen ___ Haus.",
+                          "options":  [
+                                          "einem",
+                                          "eine",
+                                          "ein",
+                                          "einen"
+                                      ],
+                          "correctAnswer":  2
+                      },
+                      {
+                          "id":  "a1_g68_6",
+                          "type":  "multiple-choice",
+                          "question":  "Sie liest ___ Zeitung.",
+                          "options":  [
+                                          "eine",
+                                          "einen",
+                                          "einer",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  0
+                      },
+                      {
+                          "id":  "a1_g68_7",
+                          "type":  "fill-blank",
+                          "question":  "Hast du ___ Bruder?",
+                          "options":  [
+                                          "einen",
+                                          "eine",
+                                          "einem",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  0
+                      },
+                      {
+                          "id":  "a1_g68_8",
+                          "type":  "multiple-choice",
+                          "question":  "Das ist ___ Kind.",
+                          "options":  [
+                                          "ein",
+                                          "eine",
+                                          "einen",
+                                          "einem"
+                                      ],
+                          "correctAnswer":  0
+                      },
+                      {
+                          "id":  "a1_g68_9",
+                          "type":  "multiple-choice",
+                          "question":  "Ich suche ___ Schlüssel.",
+                          "options":  [
+                                          "ein",
+                                          "einer",
+                                          "eine",
+                                          "einen"
+                                      ],
+                          "correctAnswer":  3
+                      },
+                      {
+                          "id":  "a1_g68_10",
+                          "type":  "multiple-choice",
+                          "question":  "Er braucht ___ Lampe.",
+                          "options":  [
+                                          "ein",
+                                          "eine",
+                                          "einer",
+                                          "einen"
+                                      ],
+                          "correctAnswer":  1
+                      },
+                      {
+                          "id":  "a1_g68_11",
+                          "type":  "multiple-choice",
+                          "question":  "Wir essen ___ Kuchen.",
+                          "options":  [
+                                          "eine",
+                                          "einer",
+                                          "einen",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  2
+                      },
+                      {
+                          "id":  "a1_g68_12",
+                          "type":  "multiple-choice",
+                          "question":  "Das ist ___ Ei.",
+                          "options":  [
+                                          "eine",
+                                          "ein",
+                                          "einen",
+                                          "einem"
+                                      ],
+                          "correctAnswer":  1
+                      },
+                      {
+                          "id":  "a1_g68_13",
+                          "type":  "fill-blank",
+                          "question":  "Ich sehe ___ Frau.",
+                          "options":  [
+                                          "einem",
+                                          "einen",
+                                          "eine",
+                                          "ein"
+                                      ],
+                          "correctAnswer":  2
+                      },
+                      {
+                          "id":  "a1_g68_14",
+                          "type":  "multiple-choice",
+                          "question":  "Ist das ___ Stuhl?",
+                          "options":  [
+                                          "ein",
+                                          "eine",
+                                          "einen",
+                                          "einer"
+                                      ],
+                          "correctAnswer":  0
+                      }
+                  ]
+}

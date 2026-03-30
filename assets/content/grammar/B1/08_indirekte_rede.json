@@ -1,0 +1,94 @@
+﻿{
+    "id":  "g30",
+    "title":  "Indirekte Rede",
+    "level":  "B1",
+    "category":  "Konjunktiv",
+    "icon":  "💬",
+    "rule":  "Konjunktiv I (formal) oder dass + Indikativ (Alltag).",
+    "explanation":  "Reported speech uses Konjunktiv I in formal contexts. In everyday speech, \u0027dass + Indikativ\u0027 is standard.",
+    "examples":  [
+                     "Er sagt, er sei müde.",
+                     "Sie sagt, sie habe keine Zeit.",
+                     "Er sagt, dass er müde ist."
+                 ],
+    "detail":  {
+                   "id":  "g30",
+                   "subtitle":  "Indirekte Rede · Einführung",
+                   "emoji":  "🗣️",
+                   "gradient":  [
+                                    "#14B8A6",
+                                    "#0891B2"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Indirekte Rede · Reported Speech",
+                                        "text":  "Indirect speech reports what someone said without quoting them directly. It uses Konjunktiv I (or Konjunktiv II as substitute)."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Konjunktiv I - sein \u0026 haben",
+                                        "color":  "teal",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "er/sie sei",
+                                                         "right":  "he/she be"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie habe",
+                                                         "right":  "he/she have"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie gehe",
+                                                         "right":  "he/she go"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie komme",
+                                                         "right":  "he/she come"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Direkte → Indirekte Rede",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Direkt: \"Ich komme morgen.\"",
+                                                          "en":  "Direct: \"I\u0027m coming tomorrow.\""
+                                                      },
+                                                      {
+                                                          "de":  "Indirekt: Er sagt, er komme morgen.",
+                                                          "en":  "Indirect: He says (that) he\u0027s coming tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Direkt: \"Ich habe keine Zeit.\"",
+                                                          "en":  "Direct: \"I have no time.\""
+                                                      },
+                                                      {
+                                                          "de":  "Indirekt: Sie sagt, sie habe keine Zeit.",
+                                                          "en":  "Indirect: She says she has no time."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "When Konjunktiv I looks identical to Indikativ (especially in wir/sie plural forms, e.g. \u0027sie kommen\u0027 → \u0027sie kommen\u0027), Konjunktiv II is often used instead: \u0027sie kämen\u0027.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Konjunktiv I forms for 3rd person: er sei, er habe, er gehe.",
+                                                      "Used in newspapers, reports, formal writing.",
+                                                      "Distancing function: the speaker is not confirming the truth.",
+                                                      "If Konj. I = Indikativ, Konj. II is often used instead to keep the reported-speech meaning clear.",
+                                                      "In everyday speech, \u0027dass + Indikativ\u0027 is also very common."
+                                                  ]
+                                    }
+                                ]
+               }
+}

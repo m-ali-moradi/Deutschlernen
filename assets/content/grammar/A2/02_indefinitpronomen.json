@@ -1,0 +1,113 @@
+﻿{
+    "id":  "g23",
+    "title":  "Indefinitpronomen",
+    "level":  "A2",
+    "category":  "Pronomen",
+    "icon":  "❓",
+    "rule":  "man, jemand, niemand, etwas, nichts, alle, viele, einige.",
+    "explanation":  "Indefinite pronouns refer to unspecified people or things. \u0027man\u0027 uses 3rd person singular. jemand/niemand are for people, etwas/nichts for things.",
+    "examples":  [
+                     "Man spricht hier Deutsch.",
+                     "Jemand hat angerufen.",
+                     "Niemand war zu Hause.",
+                     "Alle sind eingeladen."
+                 ],
+    "detail":  {
+                   "id":  "g23",
+                   "subtitle":  "Pronomen · Indefinitpronomen",
+                   "emoji":  "❓",
+                   "gradient":  [
+                                    "#64748B",
+                                    "#475569"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Indefinitpronomen",
+                                        "text":  "Indefinite pronouns refer to unspecified people or things. They are essential for everyday conversation."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Übersicht",
+                                        "color":  "slate",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "man",
+                                                         "right":  "one / people (general)"
+                                                     },
+                                                     {
+                                                         "left":  "jemand",
+                                                         "right":  "someone"
+                                                     },
+                                                     {
+                                                         "left":  "niemand",
+                                                         "right":  "no one"
+                                                     },
+                                                     {
+                                                         "left":  "etwas",
+                                                         "right":  "something"
+                                                     },
+                                                     {
+                                                         "left":  "nichts",
+                                                         "right":  "nothing"
+                                                     },
+                                                     {
+                                                         "left":  "alle",
+                                                         "right":  "all / everyone"
+                                                     },
+                                                     {
+                                                         "left":  "viele",
+                                                         "right":  "many"
+                                                     },
+                                                     {
+                                                         "left":  "einige",
+                                                         "right":  "some"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "slate",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Man spricht hier Deutsch.",
+                                                          "en":  "People speak German here."
+                                                      },
+                                                      {
+                                                          "de":  "Jemand hat angerufen.",
+                                                          "en":  "Someone called."
+                                                      },
+                                                      {
+                                                          "de":  "Niemand war zu Hause.",
+                                                          "en":  "No one was home."
+                                                      },
+                                                      {
+                                                          "de":  "Ich habe etwas für dich.",
+                                                          "en":  "I have something for you."
+                                                      },
+                                                      {
+                                                          "de":  "Alle sind eingeladen.",
+                                                          "en":  "Everyone is invited."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "\u0027man\u0027 always uses 3rd person singular: Man MUSS das lernen. It is NOT the same as \u0027Mann\u0027 (man)!",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "man → 3rd person singular, used for general statements.",
+                                                      "etwas/nichts are invariable (no declension).",
+                                                      "alle + plural verb, viele/einige + plural verb."
+                                                  ]
+                                    }
+                                ]
+               }
+}

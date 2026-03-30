@@ -1,0 +1,188 @@
+﻿{
+    "id":  "g14",
+    "title":  "Präpositionen (Akk/Dat)",
+    "level":  "A1",
+    "category":  "Präpositionen",
+    "icon":  "📍",
+    "rule":  "Akk: durch, für, ohne, gegen, um. Dat: mit, nach, aus, bei, von, zu, seit.",
+    "explanation":  "Some prepositions always take Akkusativ (DOGFU), others always take Dativ. The article changes based on the required case.",
+    "examples":  [
+                     "Ich gehe durch den Park.",
+                     "Das ist für dich.",
+                     "Ich fahre mit dem Bus.",
+                     "Sie kommt aus der Türkei."
+                 ],
+    "detail":  {
+                   "id":  "g14",
+                   "subtitle":  "Präpositionen · A1",
+                   "emoji":  "📍",
+                   "gradient":  [
+                                    "#EC4899",
+                                    "#F43F5E"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Präpositionen mit festem Kasus",
+                                        "text":  "German prepositions require a specific case. Learn two groups: those that always take Akkusativ and those that always take Dativ."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Akkusativ-Präpositionen",
+                                        "color":  "pink",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "durch",
+                                                         "right":  "through"
+                                                     },
+                                                     {
+                                                         "left":  "für",
+                                                         "right":  "for"
+                                                     },
+                                                     {
+                                                         "left":  "ohne",
+                                                         "right":  "without"
+                                                     },
+                                                     {
+                                                         "left":  "gegen",
+                                                         "right":  "against"
+                                                     },
+                                                     {
+                                                         "left":  "um",
+                                                         "right":  "around / at (time)"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Dativ-Präpositionen",
+                                        "color":  "rose",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "mit",
+                                                         "right":  "with"
+                                                     },
+                                                     {
+                                                         "left":  "nach",
+                                                         "right":  "to / after"
+                                                     },
+                                                     {
+                                                         "left":  "aus",
+                                                         "right":  "from / out of"
+                                                     },
+                                                     {
+                                                         "left":  "bei",
+                                                         "right":  "at / near"
+                                                     },
+                                                     {
+                                                         "left":  "von",
+                                                         "right":  "from / of"
+                                                     },
+                                                     {
+                                                         "left":  "zu",
+                                                         "right":  "to"
+                                                     },
+                                                     {
+                                                         "left":  "seit",
+                                                         "right":  "since / for"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit Akkusativ",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich gehe durch den Park.",
+                                                          "en":  "I walk through the park."
+                                                      },
+                                                      {
+                                                          "de":  "Das Geschenk ist für dich.",
+                                                          "en":  "The gift is for you."
+                                                      },
+                                                      {
+                                                          "de":  "Ohne meinen Schlüssel kann ich nicht rein.",
+                                                          "en":  "Without my key I can\u0027t get in."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit Dativ",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich fahre mit dem Bus.",
+                                                          "en":  "I go by bus."
+                                                      },
+                                                      {
+                                                          "de":  "Sie kommt aus der Türkei.",
+                                                          "en":  "She comes from Turkey."
+                                                      },
+                                                      {
+                                                          "de":  "Nach dem Essen gehen wir spazieren.",
+                                                          "en":  "After dinner we go for a walk."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Mnemonic for Akkusativ: DOGFU (Durch, Ohne, Gegen, Für, Um). For Dativ: mit nach bei seit von zu aus.",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Wichtige Kontraktionen",
+                                        "color":  "amber",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "zu + dem",
+                                                         "right":  "zum"
+                                                     },
+                                                     {
+                                                         "left":  "zu + der",
+                                                         "right":  "zur"
+                                                     },
+                                                     {
+                                                         "left":  "bei + dem",
+                                                         "right":  "beim"
+                                                     },
+                                                     {
+                                                         "left":  "von + dem",
+                                                         "right":  "vom"
+                                                     },
+                                                     {
+                                                         "left":  "an + dem",
+                                                         "right":  "am"
+                                                     },
+                                                     {
+                                                         "left":  "in + dem",
+                                                         "right":  "im"
+                                                     },
+                                                     {
+                                                         "left":  "in + das",
+                                                         "right":  "ins"
+                                                     },
+                                                     {
+                                                         "left":  "an + das",
+                                                         "right":  "ans"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Akkusativ prepositions: durch, für, ohne, gegen, um (DOGFU).",
+                                                      "Dativ prepositions: mit, nach, aus, bei, von, zu, seit.",
+                                                      "Contractions are very common and expected in spoken German.",
+                                                      "Contracted forms are very common and often sound more natural: zum Arzt, zur Schule, beim Essen.",
+                                                      "The full form can still appear for emphasis or style: zu dem Arzt, in das Haus."
+                                                  ]
+                                    }
+                                ]
+               }
+}

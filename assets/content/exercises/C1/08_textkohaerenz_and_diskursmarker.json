@@ -1,0 +1,186 @@
+{
+    "topic": "TextkohÃ¤renz & Diskursmarker",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g62_1",
+            "type": "multiple-choice",
+            "question": "___ des Wetters, mussten wir umkehren.",
+            "options": [
+                "Ebenso",
+                "Darüber hinaus",
+                "Nämlich",
+                "Angesichts"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g62_2",
+            "type": "multiple-choice",
+            "question": "Zusammenfassend lässt sich ___, dass das Projekt erfolgreich war.",
+            "options": [
+                "gesagt",
+                "sagen",
+                "sagt",
+                "sagend"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g62_3",
+            "type": "multiple-choice",
+            "question": "Er hat das Meeting vergessen. ___ hat er sich nicht vorbereitet.",
+            "options": [
+                "Folglich",
+                "Darüber hinaus",
+                "Außerdem",
+                "Einerseits"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g62_4",
+            "type": "multiple-choice",
+            "question": "Einerseits ist das Projekt riskant, ___ ist es absolut vielversprechend.",
+            "options": [
+                "folglich",
+                "zudem",
+                "andererseits",
+                "nämlich"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g62_5",
+            "type": "multiple-choice",
+            "question": "Er war schwer krank. ___ konnte er gestern leider nicht kommen.",
+            "options": [
+                "Einerseits",
+                "Darüber hinaus",
+                "Ebenso",
+                "Infolgedessen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g62_6",
+            "type": "multiple-choice",
+            "question": "Im Hinblick ___ unsere Zukunft müssen wir jetzt konsequent handeln.",
+            "options": [
+                "an",
+                "über",
+                "zu",
+                "auf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_7",
+            "type": "multiple-choice",
+            "question": "Das Wetter war schlecht. ___ gingen wir spazieren.",
+            "options": [
+                "Deshalb",
+                "Folglich",
+                "Nichtsdestotrotz",
+                "Daher"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_8",
+            "type": "multiple-choice",
+            "question": "Er hat nicht gelernt. ___ ist er durchgefallen.",
+            "options": [
+                "Nichtsdestotrotz",
+                "Dennoch",
+                "Folglich",
+                "Obwohl"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_9",
+            "type": "multiple-choice",
+            "question": "Er hat kein Geld. ___ kauft er ein neues Auto.",
+            "options": [
+                "Dennoch",
+                "Daher",
+                "Deshalb",
+                "Folglich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_10",
+            "type": "multiple-choice",
+            "question": "Wir müssen sparen, ___ wir sonst bankrott gehen.",
+            "options": [
+                "nichtsdestotrotz",
+                "dennoch",
+                "obwohl",
+                "da"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_11",
+            "type": "multiple-choice",
+            "question": "___ ich das richtig verstehe, bist du dagegen.",
+            "options": [
+                "Da",
+                "Als",
+                "Wenn",
+                "Obwohl"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_12",
+            "type": "multiple-choice",
+            "question": "Er ist krank. ___ kann er nicht kommen.",
+            "options": [
+                "Obwohl",
+                "Trotzdem",
+                "Dennoch",
+                "Infolgedessen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_13",
+            "type": "multiple-choice",
+            "question": "Es ist gefährlich. ___ macht es Spaß.",
+            "options": [
+                "Daher",
+                "Allerdings",
+                "Deshalb",
+                "Folglich"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_14",
+            "type": "multiple-choice",
+            "question": "Einerseits ist das gut, ___ ist es teuer.",
+            "options": [
+                "dennoch",
+                "obwohl",
+                "deshalb",
+                "andererseits"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_textkohaerenz_and_diskursmarker_15",
+            "type": "multiple-choice",
+            "question": "Erstens ist es zu teuer, ___ haben wir keine Zeit.",
+            "options": [
+                "dennoch",
+                "deshalb",
+                "andererseits",
+                "zweitens"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

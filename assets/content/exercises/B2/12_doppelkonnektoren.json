@@ -1,0 +1,186 @@
+{
+    "topic": "Doppelkonnektoren",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g46_1",
+            "type": "multiple-choice",
+            "question": "Er spricht ___ Englisch als auch Spanisch.",
+            "options": [
+                "zwar",
+                "sowohl",
+                "entweder",
+                "weder"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g46_2",
+            "type": "multiple-choice",
+            "question": "Das Auto ist ___ schnell, sondern auch umweltfreundlich.",
+            "options": [
+                "sowohl",
+                "weder",
+                "zwar",
+                "nicht nur"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g46_3",
+            "type": "multiple-choice",
+            "question": "Wir fahren ___ ans Meer oder in die Berge.",
+            "options": [
+                "sowohl",
+                "entweder",
+                "zwar",
+                "weder"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g46_4",
+            "type": "multiple-choice",
+            "question": "Er ist ___ außerordentlich intelligent ___ sehr fleißig.",
+            "options": [
+                "zwar - aber",
+                "entweder - oder",
+                "weder - noch",
+                "sowohl - als auch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g46_5",
+            "type": "multiple-choice",
+            "question": "Wir können ___ heute noch fahren ___ bis morgen warten.",
+            "options": [
+                "weder - noch",
+                "sowohl - als auch",
+                "zwar - aber",
+                "entweder - oder"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g46_6",
+            "type": "multiple-choice",
+            "question": "Das ist ___ recht teuer, ___ es ist von extrem guter QualitÃ¤t.",
+            "options": [
+                "entweder - oder",
+                "weder - noch",
+                "zwar - aber",
+                "nicht nur - sondern auch"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_doppelkonnektoren_7",
+            "type": "multiple-choice",
+            "question": "Er trinkt ___ Alkohol noch raucht er.",
+            "options": [
+                "weder",
+                "sowohl",
+                "entweder",
+                "zwar"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_doppelkonnektoren_8",
+            "type": "multiple-choice",
+            "question": "Wir haben weder Zeit ___ Geld für einen Urlaub.",
+            "options": [
+                "aber",
+                "oder",
+                "als",
+                "noch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_doppelkonnektoren_9",
+            "type": "multiple-choice",
+            "question": "Diese Wohnung ist ___ sehr teuer, aber auch sehr laut.",
+            "options": [
+                "weder",
+                "sowohl",
+                "nicht nur",
+                "zwar"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_doppelkonnektoren_10",
+            "type": "multiple-choice",
+            "question": "Sie spricht ___ Englisch als auch Spanisch.",
+            "options": [
+                "weder",
+                "nicht nur",
+                "entweder",
+                "sowohl"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_doppelkonnektoren_11",
+            "type": "multiple-choice",
+            "question": "Er ist nicht nur intelligent, ___ auch sehr fleißig.",
+            "options": [
+                "aber",
+                "sondern",
+                "noch",
+                "als"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_doppelkonnektoren_12",
+            "type": "multiple-choice",
+            "question": "___ arbeiten wir heute länger, oder wir haben morgen frei.",
+            "options": [
+                "Weder",
+                "Entweder",
+                "Sowohl",
+                "Zwar"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_doppelkonnektoren_13",
+            "type": "multiple-choice",
+            "question": "Zwar hast du recht, ___ ich sehe das anders.",
+            "options": [
+                "noch",
+                "oder",
+                "aber",
+                "sondern"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_doppelkonnektoren_14",
+            "type": "multiple-choice",
+            "question": "Das Auto ist sowohl schnell ___ auch sparsam.",
+            "options": [
+                "als",
+                "sondern",
+                "aber",
+                "wie"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_doppelkonnektoren_15",
+            "type": "multiple-choice",
+            "question": "Ich möchte weder nach Rom ___ nach Paris fahren.",
+            "options": [
+                "oder",
+                "aber",
+                "noch",
+                "als"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

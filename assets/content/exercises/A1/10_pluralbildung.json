@@ -1,0 +1,186 @@
+{
+    "topic": "Pluralbildung",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g37_1",
+            "type": "multiple-choice",
+            "question": "Ein Tisch, viele ___",
+            "options": [
+                "Tische",
+                "Tischn",
+                "Tischer",
+                "Tischs"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g37_2",
+            "type": "multiple-choice",
+            "question": "Eine Frau, zwei ___",
+            "options": [
+                "Frauer",
+                "Frauen",
+                "Fraus",
+                "Fraue"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g37_3",
+            "type": "multiple-choice",
+            "question": "Ein Kind, viele ___",
+            "options": [
+                "Kinden",
+                "Kinder",
+                "Kind",
+                "Kindern"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g37_4",
+            "type": "multiple-choice",
+            "question": "Ein Apfel, zwei ___",
+            "options": [
+                "Apfeln",
+                "Äpfel",
+                "Äpfeln",
+                "Apfel"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g37_5",
+            "type": "multiple-choice",
+            "question": "Das rote Auto, die vielen ___",
+            "options": [
+                "Auto",
+                "Auter",
+                "Auton",
+                "Autos"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g37_6",
+            "type": "multiple-choice",
+            "question": "Der nette Freund, viele ___",
+            "options": [
+                "Freunden",
+                "Freunds",
+                "Freunde",
+                "Freund"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_pluralbildung_7",
+            "type": "multiple-choice",
+            "question": "Ein Baum, viele ___.",
+            "options": [
+                "Bäume",
+                "Bäumen",
+                "Baums",
+                "Baume"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_pluralbildung_8",
+            "type": "multiple-choice",
+            "question": "Ein Kind, zwei ___.",
+            "options": [
+                "Kinds",
+                "Kinder",
+                "Kinde",
+                "Kindern"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_pluralbildung_9",
+            "type": "multiple-choice",
+            "question": "Ein Buch, drei ___.",
+            "options": [
+                "Buche",
+                "Buchs",
+                "Bücher",
+                "Büchern"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_pluralbildung_10",
+            "type": "multiple-choice",
+            "question": "Das Auto, die ___.",
+            "options": [
+                "Auto",
+                "Autos",
+                "Auten",
+                "Auter"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_pluralbildung_11",
+            "type": "multiple-choice",
+            "question": "Die Frau, die ___.",
+            "options": [
+                "Fraus",
+                "Frauer",
+                "Fraue",
+                "Frauen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_pluralbildung_12",
+            "type": "multiple-choice",
+            "question": "Der Mann, die ___.",
+            "options": [
+                "Manne",
+                "Manns",
+                "Mannen",
+                "Männer"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_pluralbildung_13",
+            "type": "multiple-choice",
+            "question": "Der Tisch, die ___.",
+            "options": [
+                "Tischar",
+                "Tische",
+                "Tischs",
+                "Tischen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_pluralbildung_14",
+            "type": "multiple-choice",
+            "question": "Die Lampe, die ___.",
+            "options": [
+                "Lampes",
+                "Lamper",
+                "Lampe",
+                "Lampen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_pluralbildung_15",
+            "type": "multiple-choice",
+            "question": "Das Mädchen, die ___.",
+            "options": [
+                "Mädchens",
+                "Mädcher",
+                "Mädchene",
+                "Mädchen"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

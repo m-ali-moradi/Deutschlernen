@@ -1,0 +1,123 @@
+{
+    "id": "pharmacy",
+    "title": "In der Apotheke",
+    "english_title": "At the Pharmacy",
+    "level": "A2",
+    "category": "Gesundheit",
+    "description": "Practice describing symptoms, asking for medicine, and understanding how to take it safely.",
+    "icon": "local_pharmacy_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Guten Tag. Wie kann ich Ihnen helfen?",
+            "english": "Good day. How can I help you?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag. Ich brauche etwas gegen Husten.",
+            "english": "Good day. I need something for a cough."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Seit wann haben Sie den Husten?",
+            "english": "How long have you had the cough?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Seit drei Tagen.",
+            "english": "For three days."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Haben Sie auch Fieber oder Halsschmerzen?",
+            "english": "Do you also have a fever or a sore throat?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Halsschmerzen ja, aber kein Fieber.",
+            "english": "A sore throat yes, but no fever."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Ist der Husten trocken oder haben Sie Schleim?",
+            "english": "Is the cough dry or do you have mucus?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Es ist meistens trockener Husten.",
+            "english": "It is mostly a dry cough."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Dann empfehle ich Ihnen diesen Hustensaft und Lutschtabletten.",
+            "english": "Then I recommend this cough syrup and lozenges."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Wie oft soll ich den Hustensaft nehmen?",
+            "english": "How often should I take the cough syrup?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Dreimal am Tag, jeweils zehn Milliliter nach dem Essen.",
+            "english": "Three times a day, ten milliliters each time after meals."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Gut. Kann ich damit Auto fahren?",
+            "english": "Good. Can I drive with it?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Ja, dieses Medikament macht normalerweise nicht muede.",
+            "english": "Yes, this medication does not normally make you tired."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Dann nehme ich beides. Was kostet das zusammen?",
+            "english": "Then I will take both. How much does that cost altogether?"
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Apothekerin",
+            "german": "Zusammen kostet es 14 Euro 20.",
+            "english": "Altogether it costs 14 euros 20."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke schoen. Auf Wiedersehen.",
+            "english": "Thank you very much. Goodbye."
+        }
+    ]
+}

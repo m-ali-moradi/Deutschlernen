@@ -1,0 +1,137 @@
+{
+    "id": "restaurant_cafe",
+    "title": "Im Restaurant",
+    "english_title": "At the Restaurant",
+    "level": "A2",
+    "category": "Essen & Trinken",
+    "description": "Practice asking for a table, ordering food and drinks, checking ingredients, and paying the bill.",
+    "icon": "restaurant_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Guten Abend. Haben Sie reserviert?",
+            "english": "Good evening. Do you have a reservation?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, aber haben Sie einen Tisch fuer eine Person?",
+            "english": "No, but do you have a table for one person?"
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Ja, natuerlich. Bitte kommen Sie mit.",
+            "english": "Yes, of course. Please come with me."
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke. Kann ich bitte die Speisekarte haben?",
+            "english": "Thank you. Can I have the menu, please?"
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Ja, hier ist die Speisekarte. Moechten Sie zuerst etwas trinken?",
+            "english": "Yes, here is the menu. Would you like something to drink first?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, ich nehme ein Mineralwasser, bitte.",
+            "english": "Yes, I will have a mineral water, please."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Gern. Haben Sie schon gewaehlt?",
+            "english": "Certainly. Have you chosen already?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Was koennen Sie empfehlen?",
+            "english": "What can you recommend?"
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Heute ist die Gemuesesuppe sehr beliebt. Das Nudelgericht ist auch gut.",
+            "english": "The vegetable soup is very popular today. The pasta dish is also good."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ist das Nudelgericht vegetarisch?",
+            "english": "Is the pasta dish vegetarian?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Ja, es ist vegetarisch und ohne Fleisch.",
+            "english": "Yes, it is vegetarian and without meat."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Dann nehme ich das Nudelgericht, bitte.",
+            "english": "Then I will take the pasta dish, please."
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Sehr gern. Moechten Sie auch einen Salat dazu?",
+            "english": "With pleasure. Would you also like a salad with that?"
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, danke. Das ist alles.",
+            "english": "No, thank you. That is all."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Guten Appetit. Wenn Sie noch etwas brauchen, sagen Sie bitte Bescheid.",
+            "english": "Enjoy your meal. If you need anything else, please let me know."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Entschuldigung, ich moechte jetzt zahlen.",
+            "english": "Excuse me, I would like to pay now."
+        },
+        {
+            "id": 17,
+            "sender": "left",
+            "role": "Kellner",
+            "german": "Zusammen sind das 18 Euro 40. Moechten Sie mit Karte zahlen?",
+            "english": "Altogether that is 18 euros 40. Would you like to pay by card?"
+        },
+        {
+            "id": 18,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, bitte. Vielen Dank. Das Essen war sehr gut.",
+            "english": "Yes, please. Thank you very much. The food was very good."
+        }
+    ]
+}

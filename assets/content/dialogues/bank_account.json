@@ -1,0 +1,137 @@
+{
+    "id": "bank_account",
+    "description": "You are a student and want to open a bank account.",
+    "title": "Konto eröffnen",
+    "english_title": "Open Bank Account",
+    "level": "A2",
+    "category": "Finanzen",
+    "icon": "account_balance_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Guten Tag, wie kann ich Ihnen helfen?",
+            "english": "Good day, how can I help you?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag, ich möchte ein Konto eröffnen.",
+            "english": "Good day, I would like to open a bank account."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Möchten Sie ein Girokonto oder ein Sparkonto eröffnen?",
+            "english": "Would you like to open a current account or a savings account?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ein Girokonto, bitte.",
+            "english": "A current account, please."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Haben Sie bereits eine Meldebescheinigung?",
+            "english": "Do you already have a registration certificate?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, ich habe meine Meldebescheinigung dabei.",
+            "english": "Yes, I have my registration certificate with me."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Darf ich bitte Ihren Ausweis oder Reisepass sehen?",
+            "english": "May I please see your ID or passport?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, hier ist mein Reisepass.",
+            "english": "Yes, here is my passport."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich bin Student.",
+            "english": "I am a student."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Für Studenten ist das Konto in der Regel kostenlos.",
+            "english": "For students, the account is usually free of charge."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Das klingt gut.",
+            "english": "That sounds good."
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Möchten Sie auch eine EC-Karte und Online-Banking?",
+            "english": "Would you also like a debit card and online banking?"
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, bitte.",
+            "english": "Yes, please."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Bitte unterschreiben Sie hier.",
+            "english": "Please sign here."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, gerne.",
+            "english": "Yes, of course."
+        },
+        {
+            "id": 17,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Ihr Konto ist jetzt eröffnet. Sie erhalten Ihre Karte per Post.",
+            "english": "Your account is now opened. You will receive your card by mail."
+        },
+        {
+            "id": 18,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank für Ihre Hilfe.",
+            "english": "Thank you very much for your help."
+        },
+        {
+            "id": 19,
+            "sender": "left",
+            "role": "Bankmitarbeiter",
+            "german": "Gern geschehen. Einen schönen Tag noch!",
+            "english": "You're welcome. Have a nice day!"
+        }
+    ]
+}

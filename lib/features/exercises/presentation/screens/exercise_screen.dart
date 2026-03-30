@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:deutschmate_mobile/shared/widgets/premium_card.dart';
+import 'package:deutschmate_mobile/shared/widgets/animated_progress_bar.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../core/database/app_database.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../data/models/exercise_type.dart';
-import '../../domain/exercise_providers.dart';
+import 'dart:convert';
+
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/features/exercises/data/models/exercise_type.dart';
+import 'package:deutschmate_mobile/features/exercises/domain/exercise_providers.dart';
+import '../notifiers/exercise_session_notifier.dart';
 import '../widgets/exercise_selection_widgets.dart';
 import '../widgets/exercise_session_widgets.dart';
-import '../../../../core/content/sync/sync_service.dart';
-import 'dart:math';
-import 'dart:convert';
+import 'package:deutschmate_mobile/shared/widgets/app_icon_button.dart';
+
+/// widget is the main screen for the exercises section.
 
 class ExerciseScreen extends ConsumerStatefulWidget {
   const ExerciseScreen({
@@ -31,20 +36,7 @@ class ExerciseScreen extends ConsumerStatefulWidget {
 }
 
 class _ExerciseScreenState extends ConsumerState<ExerciseScreen> {
-  ExerciseSessionState _state = ExerciseSessionState.select;
   bool _didAutoStart = false;
-  List<Exercise> _exercises = [];
-  Set<String> _answeredExerciseIds = <String>{};
-  int _currentIndex = 0;
-  int? _selectedAnswer;
-  bool? _isCorrect;
-  bool _isPreviouslyAnswered = false;
-  int _score = 0;
-  final List<bool> _answers = [];
-
-  // Sentence order specifics
-  List<String> _userOrder = [];
-  List<String> _availableWords = [];
 
   AppUiText get strings => AppUiText(ref.watch(displayLanguageProvider));
 
@@ -53,6 +45,10 @@ class _ExerciseScreenState extends ConsumerState<ExerciseScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
+
+      // Always enter the general Exercises section in selection mode.
+      ref.read(exerciseSessionProvider.notifier).exitToSelection();
+
       if (exerciseLevels.contains(widget.initialLevel)) {
         ref.read(exerciseLevelProvider.notifier).state = widget.initialLevel;
       }
@@ -61,311 +57,234 @@ class _ExerciseScreenState extends ConsumerState<ExerciseScreen> {
       ref.read(exerciseTopicProvider.notifier).state = widget.initialTopic;
       ref.read(exerciseCategoryProvider.notifier).state =
           widget.initialCategory;
+
+      // Allow a fresh auto-start decision after state reset.
+      _didAutoStart = false;
     });
   }
 
   Future<void> _startSession(String type) async {
-    final filtered = ref.read(filteredExercisesProvider);
-    final db = ref.read(appDatabaseProvider);
-
-    final attempts = await db.select(db.exerciseAttempts).get();
-    final answeredIds = attempts
-        .map((attempt) => attempt.exerciseId)
-        .where((id) => id.isNotEmpty)
-        .toSet();
-
-    // Use localData first, but also include exercises from cloudMetadata as fallback
-    final exercises = <Exercise>[];
-    for (final entry in filtered) {
-      if (entry.localData != null) {
-        exercises.add(entry.localData!);
-      } else if (entry.cloudMetadata != null) {
-        // Reconstruct Exercise from cloud metadata if not available locally
-        final ex = Exercise(
-          id: entry.id,
-          type: (entry.cloudMetadata?['type'] ?? '').toString(),
-          question: (entry.cloudMetadata?['question'] ?? '').toString(),
-          optionsJson: jsonEncode(
-            (entry.cloudMetadata?['options'] as List<dynamic>? ??
-                    const <dynamic>[])
-                .map((e) => e.toString())
-                .toList(),
-          ),
-          correctAnswer:
-              (entry.cloudMetadata?['correctAnswer'] as num?)?.toInt() ?? 0,
-          topic: (entry.cloudMetadata?['topic'] ?? '').toString(),
-          level: (entry.cloudMetadata?['level'] ?? '').toString(),
-          updatedAt: DateTime.now(),
-        );
-        exercises.add(ex);
-      }
-    }
-
-    // Apply exercise-type filter based on selected card.
-    final typeFiltered = type == 'all'
-        ? exercises
-        : exercises.where((ex) {
-            if (type == 'fill-blank') {
-              // Backward-compatible alias support.
-              return ex.type == 'fill-blank' || ex.type == 'fill-in-blank';
-            }
-            return ex.type == type;
-          }).toList();
-
-    if (typeFiltered.isEmpty) {
+    final started =
+        await ref.read(exerciseSessionProvider.notifier).startSession(type);
+    if (!started && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('No exercises found.')),
+        SnackBar(content: Text(strings.exerciseNoExercisesFound())),
       );
       return;
     }
-
-    final unanswered = <Exercise>[];
-    final answered = <Exercise>[];
-    for (final ex in typeFiltered) {
-      if (answeredIds.contains(ex.id)) {
-        answered.add(ex);
-      } else {
-        unanswered.add(ex);
-      }
-    }
-
-    unanswered.shuffle();
-    answered.shuffle();
-    final ordered = [...unanswered, ...answered];
-    final session = ordered.take(10).toList();
-
-    setState(() {
-      _answeredExerciseIds = answeredIds;
-      _exercises = session;
-      _currentIndex = 0;
-      _score = 0;
-      _answers.clear();
-      _selectedAnswer = null;
-      _isCorrect = null;
-      _isPreviouslyAnswered = false;
-      _state = ExerciseSessionState.playing;
-    });
-    _initCurrentExerciseContent();
-    _applyAnsweredStateForCurrentExercise();
   }
 
-  void _initCurrentExerciseContent() {
-    if (_exercises.isEmpty || _currentIndex >= _exercises.length) return;
-    final ex = _exercises[_currentIndex];
-
-    if (ex.type == 'sentence-order') {
-      final originalWords = List<String>.from(jsonDecode(ex.optionsJson));
-      final words = List<String>.from(originalWords);
-
-      // Shuffle and retry a few times to avoid showing the exact original order.
-      if (words.length > 1) {
-        final random = Random();
-        for (var i = 0; i < 5; i++) {
-          words.shuffle(random);
-          if (!_isSameWordOrder(words, originalWords)) {
-            break;
-          }
-        }
-      }
-
-      setState(() {
-        _availableWords = words;
-        _userOrder = [];
-      });
+  Future<void> _restartSession() async {
+    final started = await ref.read(exerciseSessionProvider.notifier).restartSession();
+    if (!started && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(strings.exerciseNoExercisesFound())),
+      );
     }
   }
 
-  bool _isSameWordOrder(List<String> a, List<String> b) {
-    if (a.length != b.length) return false;
-    for (var i = 0; i < a.length; i++) {
-      if (a[i] != b[i]) return false;
-    }
-    return true;
-  }
-
-  void _handleAnswer(int idx) {
-    if (_selectedAnswer != null) return;
-    final ex = _exercises[_currentIndex];
-    final correct = idx == ex.correctAnswer;
-
-    ref.read(appSettingsActionsProvider).recordExerciseOutcome(
-          exerciseId: ex.id,
-          isCorrect: correct,
-          xpGained: correct ? 10 : 0,
-        );
-
-    setState(() {
-      _selectedAnswer = idx;
-      _isCorrect = correct;
-      if (correct) _score++;
-      _answers.add(correct);
-      _state = ExerciseSessionState.feedback;
-    });
-  }
-
-  void _nextQuestion() {
-    if (_currentIndex + 1 >= _exercises.length) {
-      setState(() => _state = ExerciseSessionState.results);
-    } else {
-      setState(() {
-        _currentIndex++;
-        _selectedAnswer = null;
-        _isCorrect = null;
-        _isPreviouslyAnswered = false;
-        _state = ExerciseSessionState.playing;
-      });
-      _initCurrentExerciseContent();
-      _applyAnsweredStateForCurrentExercise();
-    }
-  }
-
-  void _applyAnsweredStateForCurrentExercise() {
-    if (_exercises.isEmpty || _currentIndex >= _exercises.length) return;
-    final ex = _exercises[_currentIndex];
-    if (!_answeredExerciseIds.contains(ex.id)) return;
-
-    setState(() {
-      if (ex.type == 'sentence-order') {
-        final normalized =
-            ex.question.trim().replaceAll(RegExp(r'[.!?,;:]'), '');
-        _userOrder = normalized
-            .split(RegExp(r'\s+'))
-            .where((w) => w.isNotEmpty)
-            .toList();
-        _availableWords = [];
-      }
-      _selectedAnswer = ex.correctAnswer;
-      _isCorrect = true;
-      _isPreviouslyAnswered = true;
-      _score++;
-      _answers.add(true);
-      _state = ExerciseSessionState.feedback;
-    });
-  }
-
+  /// widget to build the main screen
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final exercisesAsync = ref.watch(hybridExercisesProvider);
+    final exercises = ref.watch(localExercisesProvider);
     final textPrimary = AppTokens.textPrimary(isDark);
     final textMuted = AppTokens.textMuted(isDark);
     final cardColor = AppTokens.surface(isDark);
+    final session = ref.watch(exerciseSessionProvider);
+    final currentExercise = session.currentExercise;
 
-    return exercisesAsync.when(
-      data: (allEntries) {
-        if (widget.autoStart &&
-            !_didAutoStart &&
-            _state == ExerciseSessionState.select &&
-            allEntries.isNotEmpty) {
-          _didAutoStart = true;
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            if (!mounted) return;
-            _startSession('all');
-          });
-        }
-
-        switch (_state) {
-          case ExerciseSessionState.select:
-            return ExerciseSelectionView(
-              onStartExercise: _startSession,
-              autoStart: widget.autoStart,
-              initialTopic: widget.initialTopic,
-              initialCategory: widget.initialCategory,
-            );
-          case ExerciseSessionState.playing:
-          case ExerciseSessionState.feedback:
-            final ex = _exercises[_currentIndex];
-            return Scaffold(
-              backgroundColor:
-                  isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-              body: SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      _buildPlayingHeader(isDark, textMuted),
-                      const SizedBox(height: 24),
-                      QuestionCard(
-                        question: ex.question,
-                        isDark: isDark,
-                        textPrimary: textPrimary,
-                        cardColor: cardColor,
-                      ),
-                      const SizedBox(height: 24),
-                      Expanded(
-                        child: _buildTypeSpecificContent(
-                            ex, isDark, textPrimary, textMuted, cardColor),
-                      ),
-                      if (_state == ExerciseSessionState.feedback)
-                        _buildFeedbackArea(isDark, ex),
-                    ],
-                  ),
-                ),
-              ),
-            );
-          case ExerciseSessionState.results:
-            return _buildResultsView(isDark, textPrimary, textMuted);
+    return PopScope(
+      canPop: session.mode == ExerciseSessionState.select,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        if (session.mode != ExerciseSessionState.select) {
+          ref.read(exerciseSessionProvider.notifier).exitToSelection();
         }
       },
-      loading: () =>
-          const Scaffold(body: Center(child: CircularProgressIndicator())),
-      error: (e, s) => Scaffold(body: Center(child: Text(e.toString()))),
+      child: Builder(
+        builder: (context) {
+          if (widget.autoStart &&
+              !_didAutoStart &&
+              session.mode == ExerciseSessionState.select &&
+              exercises.isNotEmpty) {
+            _didAutoStart = true;
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (!mounted) return;
+              _startSession('all');
+            });
+          }
+
+          switch (session.mode) {
+            case ExerciseSessionState.select:
+              return ExerciseSelectionView(
+                onStartExercise: _startSession,
+                autoStart: widget.autoStart,
+                initialTopic: widget.initialTopic,
+                initialCategory: widget.initialCategory,
+              );
+            case ExerciseSessionState.playing:
+            case ExerciseSessionState.feedback:
+              final ex = currentExercise!;
+              return Scaffold(
+                extendBodyBehindAppBar: true,
+                body: Stack(
+                  children: [
+                    AppTokens.meshBackground(isDark),
+                    SafeArea(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          children: [
+                            _buildPlayingHeader(session, isDark, textMuted),
+                            const SizedBox(height: 24),
+                            QuestionCard(
+                              question: _questionTextForSession(session, ex),
+                              isDark: isDark,
+                              textPrimary: textPrimary,
+                              cardColor: cardColor,
+                            ),
+                            const SizedBox(height: 24),
+                            Expanded(
+                              child: SingleChildScrollView(
+                                child: _buildTypeSpecificContent(
+                                  session,
+                                  isDark,
+                                  textPrimary,
+                                  textMuted,
+                                  cardColor,
+                                ),
+                              ),
+                            ),
+                            if (session.mode ==
+                                ExerciseSessionState.feedback) ...[
+                              _buildFeedbackBox(session, ex, isDark, strings),
+                              const SizedBox(height: 24),
+                              _buildNextButton(session, isDark, strings),
+                            ],
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            case ExerciseSessionState.results:
+              return _buildResultsView(
+                session,
+                isDark,
+                textPrimary,
+                textMuted,
+                strings,
+              );
+          }
+        },
+      ),
     );
   }
 
-  Widget _buildPlayingHeader(bool isDark, Color textMuted) {
-    final progress = (_currentIndex + 1) / _exercises.length;
-    return Row(children: [
-      IconButton(
-        icon: const Icon(Icons.close_rounded),
-        onPressed: () => setState(() => _state = ExerciseSessionState.select),
-      ),
-      Expanded(
-        child: LinearProgressIndicator(value: progress),
-      ),
-      const SizedBox(width: 12),
-      Text('${_currentIndex + 1}/${_exercises.length}',
-          style: TextStyle(color: textMuted)),
-    ]);
+  /// widget to build the playing header
+  Widget _buildPlayingHeader(
+      ExerciseSessionStateModel session, bool isDark, Color textMuted) {
+    final progress = (session.currentIndex + 1) / session.exercises.length;
+    final ex = session.currentExercise!;
+    final formattedType = getExerciseTypeLabel(strings, ex.type);
+
+    return Column(
+      children: [
+        Row(
+          children: [
+            AppIconButton(
+              icon: Icons.arrow_back_ios_new_rounded,
+              iconSize: 16,
+              onPressed: () =>
+                  ref.read(exerciseSessionProvider.notifier).exitToSelection(),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    ex.topic,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 18,
+                      color: AppTokens.textPrimary(isDark),
+                      letterSpacing: -0.5,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  Text(
+                    formattedType,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: textMuted,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 12),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              decoration: BoxDecoration(
+                color: isDark
+                    ? Colors.white.withValues(alpha: 0.08)
+                    : Colors.black.withValues(alpha: 0.05),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                '${session.currentIndex + 1}/${session.exercises.length}',
+                style: TextStyle(
+                  color: AppTokens.textPrimary(isDark).withValues(alpha: 0.8),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'monospace',
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        AnimatedProgressBar(
+          value: progress,
+          height: 8,
+          progressColor: const Color(0xFFFB923C),
+          backgroundColor: isDark
+              ? Colors.white.withValues(alpha: 0.05)
+              : Colors.black.withValues(alpha: 0.05),
+        ),
+      ],
+    );
   }
 
-  Widget _buildTypeSpecificContent(Exercise ex, bool isDark, Color textPrimary,
-      Color textMuted, Color cardColor) {
+  /// widget to build the type specific content
+  Widget _buildTypeSpecificContent(ExerciseSessionStateModel session,
+      bool isDark, Color textPrimary, Color textMuted, Color cardColor) {
+    final ex = session.currentExercise!;
     if (ex.type == 'multiple-choice' || ex.type == 'fill-blank') {
       final options = List<String>.from(jsonDecode(ex.optionsJson));
       return MultipleChoiceOptions(
         options: options,
-        selectedAnswer: _selectedAnswer,
+        selectedAnswer: session.selectedAnswer,
         correctAnswer: ex.correctAnswer,
-        onOptionSelected: _handleAnswer,
+        onOptionSelected:
+            ref.read(exerciseSessionProvider.notifier).answerMultipleChoice,
         isDark: isDark,
         textPrimary: textPrimary,
         cardColor: cardColor,
       );
     } else if (ex.type == 'sentence-order') {
       return SentenceOrderWidget(
-        userOrder: _userOrder,
-        availableWords: _availableWords,
-        onWordAdded: (w) => setState(() {
-          if (_state == ExerciseSessionState.feedback) return;
-          _availableWords.remove(w);
-          _userOrder.add(w);
-          if (_availableWords.isEmpty) {
-            // Remove punctuation and compare (question may have period, but word list won't)
-            final userSentence = _userOrder.join(' ').toLowerCase().trim();
-            final correctSentence = ex.question
-                .toLowerCase()
-                .trim()
-                .replaceAll(RegExp(r'[.!?,;:]'), '');
-            final correct = userSentence == correctSentence;
-            _handleAnswer(correct ? 0 : -1); // Hack for session logic
-          }
-        }),
-        onWordRemoved: (w) => setState(() {
-          if (_state == ExerciseSessionState.feedback) return;
-          _userOrder.remove(w);
-          _availableWords.add(w);
-        }),
+        userOrder: session.userOrder,
+        availableWords: session.availableWords,
+        onWordAdded: ref.read(exerciseSessionProvider.notifier).addSentenceWord,
+        onWordRemoved:
+            ref.read(exerciseSessionProvider.notifier).removeSentenceWord,
         isDark: isDark,
         cardColor: cardColor,
         textPrimary: textPrimary,
@@ -374,77 +293,265 @@ class _ExerciseScreenState extends ConsumerState<ExerciseScreen> {
     return const Center(child: Text('Unsupported exercise type'));
   }
 
-  Widget _buildFeedbackArea(bool isDark, Exercise ex) {
-    return Column(
-      children: [
-        const SizedBox(height: 16),
-        ConstrainedBox(
-          constraints: const BoxConstraints(minHeight: 80),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(12),
+  /// widget to build the question text
+  String _questionTextForSession(
+    ExerciseSessionStateModel session,
+    Exercise exercise,
+  ) {
+    if (exercise.type != 'sentence-order') {
+      return exercise.question;
+    }
+
+    if (session.mode == ExerciseSessionState.feedback) {
+      return exercise.question;
+    }
+
+    return strings.exerciseSentenceOrderPrompt();
+  }
+
+  /// widget to build the feedback box
+  Widget _buildFeedbackBox(ExerciseSessionStateModel session, Exercise ex,
+      bool isDark, AppUiText strings) {
+    final isCorrect = session.isCorrect == true;
+
+    return PremiumCard(
+      useGlass: true,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      color: isCorrect
+          ? (isDark
+              ? const Color(0xFF064E3B).withValues(alpha: 0.3)
+              : const Color(0xFFD1FAE5).withValues(alpha: 0.6))
+          : (isDark
+              ? const Color(0xFF7F1D1D).withValues(alpha: 0.3)
+              : const Color(0xFFFEE2E2).withValues(alpha: 0.6)),
+      borderOpacity: 0.2,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                  color: isDark
-                      ? const Color(0xFF334155)
-                      : const Color(0xFFE2E8F0)),
+              color: isCorrect
+                  ? const Color(0xFF10B981).withValues(alpha: 0.15)
+                  : const Color(0xFFEF4444).withValues(alpha: 0.15),
+              shape: BoxShape.circle,
             ),
-            child: Row(
+            child: Text(
+              isCorrect ? '🎉' : '💡',
+              style: const TextStyle(fontSize: 24),
+            ),
+          ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(_isCorrect == true ? Icons.check_circle : Icons.error,
-                    color: _isCorrect == true ? Colors.green : Colors.red),
-                const SizedBox(width: 12),
-                Expanded(
-                    child: Text(_isCorrect == true
-                        ? (_isPreviouslyAnswered
-                            ? 'Already answered.'
-                            : 'Correct!')
-                        : 'Incorrect. Correct: ${ex.question}')),
+                Text(
+                  isCorrect
+                      ? strings.exerciseCorrect()
+                      : strings.either(german: 'Falsch', english: 'Incorrect'),
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.5,
+                    color: (isCorrect
+                            ? AppTokens.stateSuccessForeground(isDark)
+                            : AppTokens.stateDangerForeground(isDark))
+                        .withValues(alpha: 0.7),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  isCorrect
+                      ? (session.isPreviouslyAnswered
+                          ? strings.exerciseAlreadyAnswered()
+                          : strings.exerciseCorrect())
+                      : ex.type == 'multiple-choice' || ex.type == 'fill-blank'
+                          ? strings.exerciseIncorrectCorrect(
+                              String.fromCharCode(65 + ex.correctAnswer),
+                            )
+                          : strings.exerciseIncorrectCorrect(ex.question),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: isCorrect
+                        ? AppTokens.stateSuccessForeground(isDark)
+                        : AppTokens.stateDangerForeground(isDark),
+                  ),
+                ),
               ],
             ),
           ),
-        ),
-        const SizedBox(height: 16),
-        ElevatedButton(
-          onPressed: _nextQuestion,
-          style: ElevatedButton.styleFrom(
-            minimumSize: const Size(double.infinity, 50),
-            backgroundColor: const Color(0xFFFB923C),
-          ),
-          child: const Text('Next'),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
-  Widget _buildResultsView(bool isDark, Color textPrimary, Color textMuted) {
-    return Scaffold(
-      backgroundColor:
-          isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('🎉', style: TextStyle(fontSize: 60)),
-            const SizedBox(height: 16),
-            Text('Session Complete!',
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: textPrimary)),
-            const SizedBox(height: 8),
-            Text('Score: $_score / ${_exercises.length}',
-                style: TextStyle(fontSize: 18, color: textMuted)),
-            const SizedBox(height: 32),
-            ElevatedButton(
-              onPressed: () =>
-                  setState(() => _state = ExerciseSessionState.select),
-              child: const Text('Finish'),
-            ),
-          ],
+  /// widget to build the next button
+  Widget _buildNextButton(
+      ExerciseSessionStateModel session, bool isDark, AppUiText strings) {
+    final isLastQuestion = session.currentIndex + 1 >= session.exercises.length;
+    final label = isLastQuestion ? strings.exerciseFinish() : strings.exerciseNext();
+
+    return Container(
+      width: double.infinity,
+      height: 56,
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: AppTokens.gradientBluePurple,
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
+        borderRadius: BorderRadius.circular(18),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF6366F1).withValues(alpha: 0.3),
+            blurRadius: 15,
+            offset: const Offset(0, 6),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () =>
+              ref.read(exerciseSessionProvider.notifier).nextQuestion(),
+          borderRadius: BorderRadius.circular(18),
+            child: Center(
+              child: Text(
+                label.toUpperCase(),
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+                fontSize: 15,
+                letterSpacing: 1.2,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// widget to build the results view
+  Widget _buildResultsView(ExerciseSessionStateModel session, bool isDark,
+      Color textPrimary, Color textMuted, AppUiText strings) {
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      body: Stack(
+        children: [
+          AppTokens.meshBackground(isDark),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(32),
+              child: Center(
+                child: PremiumCard(
+                  padding: const EdgeInsets.all(32),
+                  useGlass: true,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('🎉', style: TextStyle(fontSize: 64)),
+                      const SizedBox(height: 24),
+                      Text(
+                        strings.exerciseSessionComplete(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w900,
+                          color: textPrimary,
+                          letterSpacing: -0.8,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        strings.exerciseScoreLabel(
+                            session.score, session.exercises.length),
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: textMuted,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.2,
+                        ),
+                      ),
+                      const SizedBox(height: 48),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: AppTokens.gradientBluePurple,
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFF6366F1)
+                                    .withValues(alpha: 0.3),
+                                blurRadius: 15,
+                                offset: const Offset(0, 6),
+                              ),
+                            ],
+                          ),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: _restartSession,
+                              borderRadius: BorderRadius.circular(18),
+                              child: Center(
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 18),
+                                  child: Text(
+                                    strings.exerciseTryAgain().toUpperCase(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 15,
+                                      letterSpacing: 1.1,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton(
+                          onPressed: () => ref
+                              .read(exerciseSessionProvider.notifier)
+                              .exitToSelection(),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: textPrimary,
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            side: BorderSide(
+                              color: isDark
+                                  ? Colors.white.withValues(alpha: 0.14)
+                                  : Colors.black.withValues(alpha: 0.08),
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18),
+                            ),
+                          ),
+                          child: Text(strings.either(
+                            german: 'Zur Übungsauswahl',
+                            english: 'Back to exercise list',
+                          )),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

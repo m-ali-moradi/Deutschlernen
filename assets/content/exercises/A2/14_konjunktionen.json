@@ -1,0 +1,186 @@
+{
+    "topic": "Konjunktionen",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g58_1",
+            "type": "multiple-choice",
+            "question": "Ich bin müde, ___ ich arbeite weiter.",
+            "options": [
+                "weil",
+                "und",
+                "aber",
+                "oder"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g58_2",
+            "type": "multiple-choice",
+            "question": "Du kannst Tee ___ Kaffee haben.",
+            "options": [
+                "denn",
+                "und",
+                "aber",
+                "oder"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g58_3",
+            "type": "multiple-choice",
+            "question": "Er lacht, ___ er glücklich ist.",
+            "options": [
+                "aber",
+                "denn",
+                "oder",
+                "weil"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g58_4",
+            "type": "multiple-choice",
+            "question": "Ich bleibe heute zu Hause, ___ ich bin leider krank.",
+            "options": [
+                "denn",
+                "aber",
+                "weil",
+                "und"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g58_5",
+            "type": "multiple-choice",
+            "question": "Entweder gehen wir ins Kino ___ wir bleiben heute hier.",
+            "options": [
+                "sondern",
+                "oder",
+                "aber",
+                "und"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g58_6",
+            "type": "multiple-choice",
+            "question": "Nicht nur er, ___ auch all seine Freunde kommen.",
+            "options": [
+                "aber",
+                "oder",
+                "und",
+                "sondern"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_konjunktionen_7",
+            "type": "multiple-choice",
+            "question": "Ich bleibe zu Hause, ___ ich krank bin.",
+            "options": [
+                "weil",
+                "denn",
+                "und",
+                "oder"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_konjunktionen_8",
+            "type": "multiple-choice",
+            "question": "Er lernt Deutsch, ___ er möchte in Deutschland arbeiten.",
+            "options": [
+                "denn",
+                "weil",
+                "obwohl",
+                "dass"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_konjunktionen_9",
+            "type": "multiple-choice",
+            "question": "Sag mir Bescheid, ___ du Zeit hast.",
+            "options": [
+                "wenn",
+                "als",
+                "denn",
+                "dass"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_konjunktionen_10",
+            "type": "multiple-choice",
+            "question": "Er sagt, ___ er heute später kommt.",
+            "options": [
+                "dass",
+                "ob",
+                "weil",
+                "obwohl"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_konjunktionen_11",
+            "type": "multiple-choice",
+            "question": "Ich weiß nicht, ___ er morgen kommt.",
+            "options": [
+                "als",
+                "dass",
+                "ob",
+                "wenn"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_konjunktionen_12",
+            "type": "multiple-choice",
+            "question": "Wir gehen spazieren, ___ es regnet.",
+            "options": [
+                "dass",
+                "denn",
+                "weil",
+                "obwohl"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_konjunktionen_13",
+            "type": "multiple-choice",
+            "question": "___ ich ein Kind war, habe ich in Berlin gewohnt.",
+            "options": [
+                "Wenn",
+                "Obwohl",
+                "Als",
+                "Dass"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_konjunktionen_14",
+            "type": "multiple-choice",
+            "question": "Ich gehe ins Kino, ___ ich keine Zeit habe.",
+            "options": [
+                "dass",
+                "obwohl",
+                "denn",
+                "weil"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_konjunktionen_15",
+            "type": "multiple-choice",
+            "question": "___ du Hilfe brauchst, ruf mich an.",
+            "options": [
+                "Als",
+                "Wenn",
+                "Ob",
+                "Dass"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

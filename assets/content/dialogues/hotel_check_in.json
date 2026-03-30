@@ -1,0 +1,123 @@
+{
+    "id": "hotel_check_in",
+    "title": "Im Hotel",
+    "english_title": "At the Hotel",
+    "level": "A2",
+    "category": "Reisen",
+    "description": "Practice checking in, confirming a reservation, asking about breakfast and Wi-Fi, and receiving your room key.",
+    "icon": "hotel_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Guten Abend. Willkommen im Hotel. Wie kann ich Ihnen helfen?",
+            "english": "Good evening. Welcome to the hotel. How can I help you?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Abend. Ich habe ein Zimmer reserviert.",
+            "english": "Good evening. I have reserved a room."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Auf welchen Namen, bitte?",
+            "english": "Under which name, please?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Auf den Namen Ali Rahimi.",
+            "english": "Under the name Ali Rahimi."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Ja, ich habe Ihre Reservierung. Sie bleiben zwei Naechte, richtig?",
+            "english": "Yes, I have your reservation. You are staying for two nights, correct?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, genau.",
+            "english": "Yes, exactly."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Darf ich bitte Ihren Ausweis oder Reisepass sehen?",
+            "english": "May I please see your ID or passport?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, hier ist mein Reisepass.",
+            "english": "Yes, here is my passport."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Danke. Das Fruehstueck ist von sieben bis zehn Uhr.",
+            "english": "Thank you. Breakfast is from seven to ten o'clock."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ist das Fruehstueck im Preis inbegriffen?",
+            "english": "Is breakfast included in the price?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Ja, das Fruehstueck und das WLAN sind inklusive.",
+            "english": "Yes, breakfast and Wi-Fi are included."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Sehr gut. Wie lautet das WLAN-Passwort?",
+            "english": "Very good. What is the Wi-Fi password?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Das Passwort steht auf dieser Karte.",
+            "english": "The password is written on this card."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke. In welchem Stock ist mein Zimmer?",
+            "english": "Thank you. On which floor is my room?"
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Rezeptionistin",
+            "german": "Im dritten Stock, Zimmer 314. Hier ist Ihre Schluesselkarte.",
+            "english": "On the third floor, room 314. Here is your key card."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank. Einen schoenen Abend noch.",
+            "english": "Thank you very much. Have a nice evening."
+        }
+    ]
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Perfekt",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g5_1",
+            "type": "multiple-choice",
+            "question": "Ich ___ gestern einen Apfel gegessen.",
+            "options": [
+                "habe",
+                "bin",
+                "ist",
+                "hat"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g5_2",
+            "type": "multiple-choice",
+            "question": "Wir sind nach Berlin ___.",
+            "options": [
+                "fahren",
+                "gefahrt",
+                "gefahren",
+                "gefÃ¤hrt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g5_3",
+            "type": "multiple-choice",
+            "question": "Was hast du gestern ___?",
+            "options": [
+                "gemacht",
+                "gemachen",
+                "machen",
+                "machst"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g5_4",
+            "type": "multiple-choice",
+            "question": "Ich ___ heute Morgen schon einen Kaffee getrunken.",
+            "options": [
+                "habe",
+                "ist",
+                "bin",
+                "hat"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g5_5",
+            "type": "multiple-choice",
+            "question": "Seid ihr schon mal nach Japan ___?",
+            "options": [
+                "geflogen",
+                "fliegt",
+                "geflogt",
+                "fliegen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g5_6",
+            "type": "multiple-choice",
+            "question": "Er ___ das Fenster sofort ___.",
+            "options": [
+                "ist - aufgemacht",
+                "hat - aufgemachen",
+                "hat - aufgemacht",
+                "hat - aufmacht"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_a2_2",
+            "type": "fill-blank",
+            "question": "Ich habe den Brief ___ . (schreiben)",
+            "options": [
+                "geschrieben",
+                "geschreibe",
+                "schreiben",
+                "geschreibt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a2_4",
+            "type": "sentence-order",
+            "question": "Ich habe gestern gearbeitet.",
+            "options": [
+                "gearbeitet",
+                "gestern",
+                "habe",
+                "Ich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a2_5",
+            "type": "sentence-order",
+            "question": "Wo hast du gewohnt?",
+            "options": [
+                "du",
+                "hast",
+                "Wo",
+                "gewohnt?"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_perfekt_10",
+            "type": "multiple-choice",
+            "question": "Was ___ ihr gestern gemacht?",
+            "options": [
+                "sind",
+                "seid",
+                "hat",
+                "habt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_perfekt_11",
+            "type": "multiple-choice",
+            "question": "Ich ___ nach Berlin gefahren.",
+            "options": [
+                "bist",
+                "habe",
+                "hast",
+                "bin"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_perfekt_12",
+            "type": "multiple-choice",
+            "question": "Wir haben gestern Abend einen Film ___.",
+            "options": [
+                "gesehen",
+                "sehen",
+                "geseht",
+                "sah"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_perfekt_13",
+            "type": "multiple-choice",
+            "question": "Wo ___ du am Wochenende gewesen?",
+            "options": [
+                "hast",
+                "habt",
+                "sind",
+                "bist"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_perfekt_14",
+            "type": "multiple-choice",
+            "question": "Wer hat den Laptop ___?",
+            "options": [
+                "kaputtmacht",
+                "kaputtgemacht",
+                "kaputtmachen",
+                "machte kaputt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_perfekt_15",
+            "type": "multiple-choice",
+            "question": "Ich habe meine Schlüssel ___.",
+            "options": [
+                "vergess",
+                "vergas",
+                "vergesst",
+                "vergessen"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

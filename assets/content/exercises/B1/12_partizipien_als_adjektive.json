@@ -1,0 +1,186 @@
+{
+    "topic": "Partizipien als Adjektive",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g28_1",
+            "type": "multiple-choice",
+            "question": "Das ___ Kind schläft auf dem Sofa.",
+            "options": [
+                "weinende",
+                "weinend",
+                "geweinte",
+                "weinen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g28_2",
+            "type": "multiple-choice",
+            "question": "Der ___ Kuchen schmeckt gut.",
+            "options": [
+                "gebackt",
+                "gebackene",
+                "gebackende",
+                "backend"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g28_3",
+            "type": "multiple-choice",
+            "question": "Die ___ Häuser wurden renoviert.",
+            "options": [
+                "zerstörend",
+                "zerstört",
+                "zerstörten",
+                "zerstörenden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g28_4",
+            "type": "multiple-choice",
+            "question": "Die ___ Sonne blendet mich heute beim Fahren.",
+            "options": [
+                "strahlen",
+                "gestrahlte",
+                "strahlend",
+                "strahlende"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g28_5",
+            "type": "multiple-choice",
+            "question": "Das ___ Glas liegt gefährlich auf dem Boden.",
+            "options": [
+                "zerbrochen",
+                "zerbrechende",
+                "zerbrechen",
+                "zerbrochene"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g28_6",
+            "type": "multiple-choice",
+            "question": "Viel Erfolg bei der ___ anstrengenden Arbeit!",
+            "options": [
+                "kommen",
+                "kommende",
+                "gekommenen",
+                "kommenden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_7",
+            "type": "multiple-choice",
+            "question": "Der ___ (kochen) Schinken schmeckt gut.",
+            "options": [
+                "gekochte",
+                "kochender",
+                "kochende",
+                "gekochter"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_8",
+            "type": "multiple-choice",
+            "question": "Das ___ (weinen) Kind sucht seine Mutter.",
+            "options": [
+                "geweintes",
+                "geweinte",
+                "weinendes",
+                "weinende"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_9",
+            "type": "multiple-choice",
+            "question": "Die ___ (schlafen) Katze liegt auf dem Sofa.",
+            "options": [
+                "geschlafener",
+                "schlafende",
+                "schlafender",
+                "geschlafene"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_10",
+            "type": "multiple-choice",
+            "question": "Der ___ (verlieren) Schlüssel wurde nicht gefunden.",
+            "options": [
+                "verlorener",
+                "verlierende",
+                "verlorene",
+                "verlierender"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_11",
+            "type": "multiple-choice",
+            "question": "Die ___ (bellen) Hunde sind laut.",
+            "options": [
+                "gebellten",
+                "bellenden",
+                "gebellte",
+                "bellende"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_12",
+            "type": "multiple-choice",
+            "question": "Das ___ (gebrauchen) Auto ist billig.",
+            "options": [
+                "gebrauchtes",
+                "gebrauchende",
+                "gebrauchte",
+                "gebrauchendes"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_13",
+            "type": "multiple-choice",
+            "question": "Ich lese ein ___ (spannen) Buch.",
+            "options": [
+                "gespannter",
+                "spannender",
+                "spannendes",
+                "gespanntes"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_14",
+            "type": "multiple-choice",
+            "question": "Die ___ (stehlen) Tasche war schwarz.",
+            "options": [
+                "stehlender",
+                "stehlende",
+                "gestohlene",
+                "gestohlener"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_partizipien_als_adjektive_15",
+            "type": "multiple-choice",
+            "question": "Der ___ (lächeln) Mann kam herein.",
+            "options": [
+                "lächelnde",
+                "gelächelter",
+                "lächelnder",
+                "gelächelte"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "topic": "Konjunktiv II",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g6_1",
+            "type": "multiple-choice",
+            "question": "Ich ___ gerne einen Kaffee, bitte.",
+            "options": [
+                "würdest",
+                "habe",
+                "würde",
+                "hätte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g6_2",
+            "type": "multiple-choice",
+            "question": "___ du mir bitte helfen?",
+            "options": [
+                "Konntest",
+                "Könntest",
+                "Könnt",
+                "Kann"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g6_3",
+            "type": "multiple-choice",
+            "question": "An deiner Stelle ___ ich zum Arzt gehen.",
+            "options": [
+                "würde",
+                "hätte",
+                "werde",
+                "wäre"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g6_4",
+            "type": "multiple-choice",
+            "question": "___ Sie so freundlich, mir kurz die Tür zu öffnen?",
+            "options": [
+                "Würden",
+                "Seien",
+                "Hätten",
+                "Wären"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g6_5",
+            "type": "multiple-choice",
+            "question": "Ich ___ am liebsten jetzt sofort weit weg in den Urlaub fahren.",
+            "options": [
+                "würde",
+                "werde",
+                "wäre",
+                "hätte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g6_6",
+            "type": "multiple-choice",
+            "question": "Wenn es heute nur nicht so viel ___ ___!",
+            "options": [
+                "geregnet hätte",
+                "regnete",
+                "regnen würde",
+                "regnet"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_b1_2",
+            "type": "fill-blank",
+            "question": "Wenn ich Zeit ___, würde ich kommen. (haben)",
+            "options": [
+                "habe",
+                "hätte",
+                "hättest",
+                "hatte"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_so_b1_4",
+            "type": "sentence-order",
+            "question": "Ich hätte gerne mehr Zeit zum Lesen.",
+            "options": [
+                "Zeit",
+                "mehr",
+                "Lesen",
+                "hätte",
+                "Ich",
+                "gerne",
+                "zum"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_konjunktiv_ii_9",
+            "type": "multiple-choice",
+            "question": "Ich ___ gern ein neues Auto.",
+            "options": [
+                "hätte",
+                "wäre",
+                "habe",
+                "würde"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_konjunktiv_ii_10",
+            "type": "multiple-choice",
+            "question": "___ ich doch nur mehr Zeit!",
+            "options": [
+                "Würde",
+                "Wäre",
+                "Habe",
+                "Hätte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_konjunktiv_ii_11",
+            "type": "multiple-choice",
+            "question": "Wenn ich reich ___, würde ich um die Welt reisen.",
+            "options": [
+                "wäre",
+                "würde",
+                "hätte",
+                "bin"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_konjunktiv_ii_12",
+            "type": "multiple-choice",
+            "question": "___ du mir bitte helfen?",
+            "options": [
+                "Kannst",
+                "Könntest",
+                "Könnt",
+                "Konntest"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_konjunktiv_ii_13",
+            "type": "multiple-choice",
+            "question": "Ich ___ das nicht tun, wenn ich du wäre.",
+            "options": [
+                "hätte",
+                "wäre",
+                "werde",
+                "würde"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_konjunktiv_ii_14",
+            "type": "multiple-choice",
+            "question": "Er tut so, als ___ er der Chef.",
+            "options": [
+                "wäre",
+                "ist",
+                "hätte",
+                "sei"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_konjunktiv_ii_15",
+            "type": "multiple-choice",
+            "question": "Wir ___ sehr froh, wenn du kommst.",
+            "options": [
+                "sind",
+                "würden",
+                "wären",
+                "hätten"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

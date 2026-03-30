@@ -1,0 +1,108 @@
+﻿{
+    "id":  "g71",
+    "title":  "Konjunktiv II",
+    "level":  "A2",
+    "category":  "Verben",
+    "icon":  "🧚",
+    "rule":  "Höflichkeit/Wünsche: ich möchte, hätte gern, würde gern…",
+    "explanation":  "Konjunktiv II is used for polite requests, wishes, and hypothetical situations. At A2, focus on the \u0027würde\u0027 + Infinitiv construction and the polite forms of \u0027haben\u0027 (hätte) and \u0027sein\u0027 (wäre).",
+    "examples":  [
+                     "Ich hätte gern einen Kaffee.",
+                     "Würden Sie mir bitte helfen?",
+                     "Ich wäre gern in Berlin.",
+                     "Wenn ich Zeit hätte, würde ich kommen."
+                 ],
+    "detail":  {
+                   "id":  "g71",
+                   "subtitle":  "Höflichkeit · Wünsche",
+                   "emoji":  "🧚",
+                   "gradient":  [
+                                    "#EC4899",
+                                    "#BE185D"
+                                ],
+                   "levelBg":  "#FEF9C3",
+                   "levelText":  "#A16207",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Konjunktiv II · Hypotheticals \u0026 Politeness",
+                                        "text":  "Konjunktiv II is used for polite requests, imagined situations, and dreams. In A2, we focus on being polite in restaurants, shops, and with friends.",
+                                        "bullets":  [
+                                                        "Höfliche Bitten (Polite requests)",
+                                                        "Träume \u0026 Wünsche (Dreams/Wishes)",
+                                                        "Construction: würde + Infinitiv (for most verbs)",
+                                                        "Special forms: wäre (from sein), hätte (from haben)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Haben vs. Sein (Konjunktiv II)",
+                                        "color":  "pink",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "hätte / wäre"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "hättest / wärest"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie/es",
+                                                         "right":  "hätte / wäre"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "hätten / wären"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "hättet / wärt"
+                                                     },
+                                                     {
+                                                         "left":  "sie/Sie",
+                                                         "right":  "hätten / wären"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "\u0027möchte\u0027 is actually the Konjunktiv II form of \u0027mögen\u0027! It sounds much more polite than \u0027ich will\u0027.",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Höfliche Anfragen \u0026 Wünsche",
+                                        "color":  "rose",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich HÄTTE gern einen Tee.",
+                                                          "en":  "I WOULD LIKE to have a tea."
+                                                      },
+                                                      {
+                                                          "de":  "WÜRDEN Sie mir bitte helfen?",
+                                                          "en":  "COULD you please help me?"
+                                                      },
+                                                      {
+                                                          "de":  "WÄRST du so nett?",
+                                                          "en":  "WOULD you be so kind?"
+                                                      },
+                                                      {
+                                                          "de":  "Ich WÜRDE gern in Japan leben.",
+                                                          "en":  "I WOULD LIKE to live in Japan."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wie man es bildet",
+                                        "items":  [
+                                                      "Use \u0027würde\u0027 + Infinitiv at the end for almost all verbs.",
+                                                      "Use \u0027hätte\u0027 (had/would have) for possession.",
+                                                      "Use \u0027wäre\u0027 (were/would be) for states of being.",
+                                                      "Essential for \u0027service\u0027 situations (cafes, doctor, information)."
+                                                  ]
+                                    }
+                                ]
+               }
+}

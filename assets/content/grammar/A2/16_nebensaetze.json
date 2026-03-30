@@ -1,0 +1,128 @@
+﻿{
+    "id":  "g3",
+    "title":  "Nebensätze",
+    "level":  "A2",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "Im Nebensatz steht das konjugierte Verb am Ende.",
+    "explanation":  "Subordinating conjunctions (weil, dass, wenn, obwohl, als, bevor, nachdem, während) push the verb to the end of the clause.",
+    "examples":  [
+                     "Ich lerne Deutsch, weil ich in Berlin arbeite.",
+                     "Sie sagt, dass sie morgen kommt.",
+                     "Wenn es regnet, bleibe ich zu Hause.",
+                     "Als ich Kind war, lebte ich in Kabul."
+                 ],
+    "detail":  {
+                   "id":  "g3",
+                   "subtitle":  "Nebensätze · Konjunktionen",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#14B8A6",
+                                    "#06B6D4"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Nebensätze · Subordinate Clauses",
+                                        "text":  "Subordinating conjunctions push the conjugated verb to the END of the clause. The subordinate clause is separated from the main clause by a comma.",
+                                        "bullets":  [
+                                                        "weil = because",
+                                                        "dass = that",
+                                                        "wenn = when / if",
+                                                        "obwohl = although",
+                                                        "während = while",
+                                                        "bevor = before",
+                                                        "nachdem = after",
+                                                        "als = when (past, single event)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Hauptsatz → Nebensatz",
+                                        "from":  {
+                                                     "label":  "HAUPTSATZ",
+                                                     "text":  "Ich arbeite in Berlin."
+                                                 },
+                                        "to":  {
+                                                   "label":  "NEBENSATZ",
+                                                   "text":  "..., weil ich in Berlin arbeite."
+                                               },
+                                        "note":  "The verb moves to the END in the subordinate clause"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "weil \u0026 dass",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich lerne Deutsch, weil ich in Berlin arbeite.",
+                                                          "en":  "I learn German because I work in Berlin."
+                                                      },
+                                                      {
+                                                          "de":  "Sie sagt, dass sie morgen kommt.",
+                                                          "en":  "She says that she\u0027s coming tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Ich weiß, dass er krank ist.",
+                                                          "en":  "I know that he is sick."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "wenn, obwohl, als",
+                                        "color":  "cyan",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wenn es regnet, bleibe ich zu Hause.",
+                                                          "en":  "When/If it rains, I stay home."
+                                                      },
+                                                      {
+                                                          "de":  "Obwohl er müde war, hat er weitergearbeitet.",
+                                                          "en":  "Although he was tired, he kept working."
+                                                      },
+                                                      {
+                                                          "de":  "Als ich Kind war, lebte ich in Kabul.",
+                                                          "en":  "When I was a child, I lived in Kabul."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "wenn = repeated events or future / als = single event in the past.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "bevor, nachdem, während",
+                                        "color":  "emerald",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Bevor ich esse, wasche ich mir die Hände.",
+                                                          "en":  "Before I eat, I wash my hands."
+                                                      },
+                                                      {
+                                                          "de":  "Nachdem er gegessen hatte, ging er spazieren.",
+                                                          "en":  "After he had eaten, he went for a walk."
+                                                      },
+                                                      {
+                                                          "de":  "Während sie lernt, hört sie Musik.",
+                                                          "en":  "While she studies, she listens to music."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "Subordinating conjunctions → verb at the END.",
+                                                      "Always separate with a comma.",
+                                                      "If the Nebensatz comes FIRST, the main clause starts with the verb (inversion).",
+                                                      "With Perfekt: ...weil ich Deutsch gelernt habe. (habe at the very end)"
+                                                  ]
+                                    }
+                                ]
+               }
+}

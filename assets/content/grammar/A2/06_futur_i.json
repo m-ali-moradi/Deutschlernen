@@ -1,0 +1,106 @@
+﻿{
+    "id":  "g17",
+    "title":  "Futur I",
+    "level":  "A2",
+    "category":  "Zeiten",
+    "icon":  "🔮",
+    "rule":  "werden (konjugiert) + Infinitiv",
+    "explanation":  "Futur I expresses future plans and predictions. However, Präsens + time word is more common in everyday speech.",
+    "examples":  [
+                     "Ich werde morgen kommen.",
+                     "Es wird regnen.",
+                     "Sie wird Ärztin werden.",
+                     "Wir werden das schaffen!"
+                 ],
+    "detail":  {
+                   "id":  "g17",
+                   "subtitle":  "Zeiten · Futur I",
+                   "emoji":  "🔮",
+                   "gradient":  [
+                                    "#0EA5E9",
+                                    "#3B82F6"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Futur I · Future Tense",
+                                        "text":  "Futur I is formed with \u0027werden\u0027 + Infinitiv. It expresses future plans, predictions, and assumptions. Often Präsens + time word is used instead."
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Formel",
+                                        "formula":  "werden (konj.) + ... + Infinitiv",
+                                        "colors":  [
+                                                       "#0EA5E9",
+                                                       "#3B82F6"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "werden konjugiert",
+                                        "color":  "sky",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "werde"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "wirst"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie/es",
+                                                         "right":  "wird"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "werden"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "werdet"
+                                                     },
+                                                     {
+                                                         "left":  "Sie/sie",
+                                                         "right":  "werden"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "sky",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich werde morgen nach Berlin fahren.",
+                                                          "en":  "I will go to Berlin tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Es wird regnen.",
+                                                          "en":  "It will rain."
+                                                      },
+                                                      {
+                                                          "de":  "Sie wird Ärztin werden.",
+                                                          "en":  "She will become a doctor."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "In everyday speech, Präsens + time word is preferred: \u0027Ich fahre morgen\u0027 instead of \u0027Ich werde morgen fahren\u0027.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "werden sits in Position 2, infinitive goes to the END.",
+                                                      "Used for: future plans, predictions, promises, assumptions.",
+                                                      "With \u0027wohl\u0027 or \u0027wahrscheinlich\u0027 → assumption: Er wird wohl kommen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

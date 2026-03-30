@@ -1,0 +1,186 @@
+{
+    "topic": "Adjektive Grundlagen",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g15_1",
+            "type": "multiple-choice",
+            "question": "Das Haus ist sehr ___.",
+            "options": [
+                "schöne",
+                "schönes",
+                "schönen",
+                "schön"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g15_2",
+            "type": "multiple-choice",
+            "question": "Das ist ein ___ Auto.",
+            "options": [
+                "neuen",
+                "neu",
+                "neue",
+                "neues"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g15_3",
+            "type": "multiple-choice",
+            "question": "Die ___ Lampe funktioniert nicht.",
+            "options": [
+                "altes",
+                "alt",
+                "alte",
+                "alter"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g15_4",
+            "type": "multiple-choice",
+            "question": "Die Suppe schmeckt sehr ___.",
+            "options": [
+                "leckeres",
+                "leckerer",
+                "lecker",
+                "leckeren"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g15_5",
+            "type": "multiple-choice",
+            "question": "Ich habe einen sehr ___ Hund.",
+            "options": [
+                "kleinen",
+                "kleine",
+                "kleines",
+                "kleiner"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g15_6",
+            "type": "multiple-choice",
+            "question": "Sie trägt heute ein ___ Kleid.",
+            "options": [
+                "roter",
+                "rot",
+                "rotes",
+                "roten"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_grundlagen_7",
+            "type": "multiple-choice",
+            "question": "Ein ___ Hund spielt im Garten.",
+            "options": [
+                "junges",
+                "junger",
+                "jungen",
+                "junge"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_adjektive_grundlagen_8",
+            "type": "multiple-choice",
+            "question": "Das ist ein ___ Auto.",
+            "options": [
+                "schneller",
+                "schnellen",
+                "schnelles",
+                "schnelle"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_grundlagen_9",
+            "type": "multiple-choice",
+            "question": "Ich kaufe eine ___ Blume.",
+            "options": [
+                "roten",
+                "rotes",
+                "rote",
+                "roter"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_grundlagen_10",
+            "type": "multiple-choice",
+            "question": "Ich trinke einen ___ Tee.",
+            "options": [
+                "heißer",
+                "heißes",
+                "heiße",
+                "heißen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_adjektive_grundlagen_11",
+            "type": "multiple-choice",
+            "question": "Sie trägt ein ___ Kleid.",
+            "options": [
+                "blauen",
+                "blauer",
+                "blaue",
+                "blaues"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_adjektive_grundlagen_12",
+            "type": "multiple-choice",
+            "question": "Das ist ein ___ Fehler.",
+            "options": [
+                "großes",
+                "großen",
+                "großer",
+                "große"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_grundlagen_13",
+            "type": "multiple-choice",
+            "question": "Wir essen einen ___ Apfel.",
+            "options": [
+                "grüner",
+                "grünen",
+                "grüne",
+                "grünes"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_adjektive_grundlagen_14",
+            "type": "multiple-choice",
+            "question": "Ich sehe eine ___ Katze.",
+            "options": [
+                "schwarzes",
+                "schwarzen",
+                "schwarze",
+                "schwarzer"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_adjektive_grundlagen_15",
+            "type": "multiple-choice",
+            "question": "Das ist ein ___ Film.",
+            "options": [
+                "guten",
+                "guter",
+                "gute",
+                "gutes"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

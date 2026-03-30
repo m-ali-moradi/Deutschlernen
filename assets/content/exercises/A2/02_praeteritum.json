@@ -1,0 +1,186 @@
+{
+    "topic": "PrÃ¤teritum",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g16_1",
+            "type": "multiple-choice",
+            "question": "Früher ___ ich in München.",
+            "options": [
+                "waren",
+                "war",
+                "sein",
+                "bin"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g16_2",
+            "type": "multiple-choice",
+            "question": "Er ___ keine Zeit.",
+            "options": [
+                "hattet",
+                "habt",
+                "hat",
+                "hatte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g16_3",
+            "type": "multiple-choice",
+            "question": "Wir ___ nicht kommen.",
+            "options": [
+                "konntet",
+                "können",
+                "könnt",
+                "konnten"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g16_4",
+            "type": "multiple-choice",
+            "question": "Als Kind ___ ich jeden Tag draußen.",
+            "options": [
+                "spielten",
+                "spielte",
+                "spielt",
+                "gespielte"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g16_5",
+            "type": "multiple-choice",
+            "question": "Es ___ einmal einen alten König.",
+            "options": [
+                "gaben",
+                "gbt",
+                "gabt",
+                "gab"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g16_6",
+            "type": "multiple-choice",
+            "question": "Wir ___ im letzten Urlaub in Spanien.",
+            "options": [
+                "seid",
+                "war",
+                "waren",
+                "sind"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_a2_3",
+            "type": "fill-blank",
+            "question": "Wir ___ gestern im Kino. (sein)",
+            "options": [
+                "waren",
+                "sind",
+                "war",
+                "wart"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_praeteritum_8",
+            "type": "multiple-choice",
+            "question": "Gestern ___ ich keine Zeit.",
+            "options": [
+                "bin",
+                "hatte",
+                "habe",
+                "war"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_praeteritum_9",
+            "type": "multiple-choice",
+            "question": "Wir ___ am Wochenende in München.",
+            "options": [
+                "sind",
+                "haben",
+                "hatten",
+                "waren"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_praeteritum_10",
+            "type": "multiple-choice",
+            "question": "Die Sonne ___ den ganzen Tag.",
+            "options": [
+                "schneit",
+                "scheint",
+                "schien",
+                "schein"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_praeteritum_11",
+            "type": "multiple-choice",
+            "question": "Was ___ ihr am Sonntag?",
+            "options": [
+                "macht",
+                "machtet",
+                "machen",
+                "machtet ihr"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_praeteritum_12",
+            "type": "multiple-choice",
+            "question": "Er ___ das Buch sehr schnell.",
+            "options": [
+                "lasen",
+                "las",
+                "lesen",
+                "liest"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_praeteritum_13",
+            "type": "multiple-choice",
+            "question": "Ich ___ nichts.",
+            "options": [
+                "sage",
+                "sagt",
+                "sagte",
+                "sagen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_praeteritum_14",
+            "type": "multiple-choice",
+            "question": "Die Studenten ___ viele Fragen.",
+            "options": [
+                "hatten",
+                "waren",
+                "war",
+                "haben"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_praeteritum_15",
+            "type": "multiple-choice",
+            "question": "Als Kind ___ ich gern Schokolade.",
+            "options": [
+                "aßt",
+                "esse",
+                "aß",
+                "essen"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

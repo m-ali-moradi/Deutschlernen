@@ -1,6 +1,6 @@
 {
-    "name": "deutschlernen_mobile",
-    "short_name": "deutschlernen_mobile",
+    "name": "deutschmate_mobile",
+    "short_name": "deutschmate_mobile",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
@@ -33,3 +33,4 @@
         }
     ]
 }
+

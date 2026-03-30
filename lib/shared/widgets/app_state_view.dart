@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
 
 class AppStateView extends StatelessWidget {
   const AppStateView.loading({
@@ -243,3 +243,4 @@ class AppActionButton extends StatelessWidget {
     return button;
   }
 }
+

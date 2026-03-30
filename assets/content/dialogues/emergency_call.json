@@ -1,0 +1,67 @@
+{
+    "id": "emergency_call",
+    "title": "Notruf (112)",
+    "english_title": "Emergency Call",
+    "level": "A1",
+    "category": "Notfall",
+    "description": "Lerne, wie du in einer Notsituation schnell und präzise Hilfe rufst. (Learning how to call for help in an emergency.)",
+    "icon": "emergency_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "role": "Notrufzentrale",
+            "sender": "left",
+            "german": "Notruf 112, wo ist der Notfallort?",
+            "english": "Emergency 112, where is the location of the emergency?"
+        },
+        {
+            "id": 2,
+            "role": "Du",
+            "sender": "right",
+            "german": "Hallo, hier ist ein Unfall in der Hauptstraße 10.",
+            "english": "Hello, there is an accident here at Hauptstraße 10."
+        },
+        {
+            "id": 3,
+            "role": "Notrufzentrale",
+            "sender": "left",
+            "german": "Was genau ist passiert?",
+            "english": "What exactly happened?"
+        },
+        {
+            "id": 4,
+            "role": "Du",
+            "sender": "right",
+            "german": "Ein Auto ist gegen einen Baum gefahren. Der Fahrer ist verletzt.",
+            "english": "A car hit a tree. The driver is injured."
+        },
+        {
+            "id": 5,
+            "role": "Notrufzentrale",
+            "sender": "left",
+            "german": "Ist die Person bei Bewusstsein?",
+            "english": "Is the person conscious?"
+        },
+        {
+            "id": 6,
+            "role": "Du",
+            "sender": "right",
+            "german": "Nein, er antwortet nicht, aber er atmet.",
+            "english": "No, he is not responding, but he is breathing."
+        },
+        {
+            "id": 7,
+            "role": "Notrufzentrale",
+            "sender": "left",
+            "german": "Bleiben Sie am Telefon. Der Rettungsdienst ist unterwegs.",
+            "english": "Stay on the line. The ambulance is on the way."
+        },
+        {
+            "id": 8,
+            "role": "Du",
+            "sender": "right",
+            "german": "Danke, ich bleibe hier und helfe.",
+            "english": "Thanks, I will stay here and help."
+        }
+    ]
+}

@@ -3,13 +3,14 @@ import 'dart:async';
 import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'app_database.dart';
-import '../../features/learning_path/domain/dashboard_logic.dart';
-import '../../features/learning_path/domain/continue_learning_logic.dart';
-import '../content/sync/grammar_localization_repository.dart';
-import '../../features/grammar/data/models/grammar_detail_models.dart';
-import '../learning/review_logic.dart';
-import '../learning/vocabulary_review.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/learning/learning_progress_service.dart';
+import 'package:deutschmate_mobile/features/learning_path/domain/dashboard_logic.dart';
+import 'package:deutschmate_mobile/features/learning_path/domain/continue_learning_logic.dart';
+import 'package:deutschmate_mobile/core/content/sync/grammar_localization_repository.dart';
+import 'package:deutschmate_mobile/features/grammar/data/models/grammar_detail_models.dart';
+import 'package:deutschmate_mobile/core/learning/review_logic.dart';
+import 'package:deutschmate_mobile/core/learning/vocabulary_review.dart';
 
 /// Provides the single database instance for the entire app.
 final appDatabaseProvider = Provider<AppDatabase>((ref) {
@@ -19,14 +20,15 @@ final appDatabaseProvider = Provider<AppDatabase>((ref) {
 });
 
 /// Streams the user's statistics (XP, level, streak) from the database.
-final userStatsStreamProvider = StreamProvider.autoDispose((ref) {
+final userStatsStreamProvider = StreamProvider.autoDispose<UserStat>((ref) {
   final db = ref.watch(appDatabaseProvider);
   return (db.select(db.userStats)..where((tbl) => tbl.id.equals(1)))
       .watchSingle();
 });
 
 /// Streams the user's app settings (dark mode, languages) from the database.
-final userPreferencesStreamProvider = StreamProvider.autoDispose((ref) {
+final userPreferencesStreamProvider =
+    StreamProvider.autoDispose<UserPreference>((ref) {
   final db = ref.watch(appDatabaseProvider);
   return (db.select(db.userPreferences)..where((tbl) => tbl.id.equals(1)))
       .watchSingle();
@@ -39,168 +41,152 @@ final displayLanguageProvider = Provider<String>((ref) {
       );
 });
 
-final achievementsStreamProvider = StreamProvider.autoDispose((ref) {
+final nativeLanguageProvider = Provider<String>((ref) {
+  return ref.watch(userPreferencesStreamProvider).maybeWhen(
+        data: (prefs) => prefs.nativeLanguage,
+        orElse: () => 'en',
+      );
+});
+
+final achievementsStreamProvider =
+    StreamProvider.autoDispose<List<Achievement>>((ref) {
   final db = ref.watch(appDatabaseProvider);
   return db.select(db.achievements).watch();
 });
 
+final vocabularyWordsStreamProvider =
+    StreamProvider.autoDispose<List<VocabularyWord>>((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return db.select(db.vocabularyWords).watch();
+});
+
+final vocabularyProgressStreamProvider =
+    StreamProvider.autoDispose<List<VocabularyProgressData>>((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return db.select(db.vocabularyProgress).watch();
+});
+
+final grammarTopicsStreamProvider =
+    StreamProvider.autoDispose<List<GrammarTopic>>((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return db.select(db.grammarTopics).watch();
+});
+
+final exercisesStreamProvider =
+    StreamProvider.autoDispose<List<Exercise>>((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return db.select(db.exercises).watch();
+});
+
+final exerciseAttemptsStreamProvider =
+    StreamProvider.autoDispose<List<ExerciseAttempt>>((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  return db.select(db.exerciseAttempts).watch();
+});
+
+/// Provides a computed stream of the user's current XP.
+final userXpProvider = Provider.autoDispose<AsyncValue<int>>((ref) {
+  return ref.watch(userStatsStreamProvider.select(
+    (s) => s.whenData((stats) => stats.xp),
+  ));
+});
+
+/// Provides a computed stream of the user's current level.
+final userLevelProvider = Provider.autoDispose<AsyncValue<String>>((ref) {
+  return ref.watch(userStatsStreamProvider.select(
+    (s) => s.whenData((stats) => stats.level),
+  ));
+});
+
+/// Provides only the weekly progress percentage.
+final weeklyProgressProvider = Provider.autoDispose<AsyncValue<int>>((ref) {
+  return ref.watch(dashboardSummaryProvider.select(
+    (s) => s.whenData((summary) => summary.weeklyProgress),
+  ));
+});
+
+/// Provides the count of words learned.
+final wordsLearnedCountProvider = Provider.autoDispose<AsyncValue<int>>((ref) {
+  return ref.watch(dashboardSummaryProvider.select(
+    (s) => s.whenData((summary) => summary.wordsLearned),
+  ));
+});
+
+/// Provides the count of exercise attempts.
+final exerciseAttemptCountProvider =
+    Provider.autoDispose<AsyncValue<int>>((ref) {
+  return ref.watch(dashboardSummaryProvider.select(
+    (s) => s.whenData((summary) => summary.exerciseAttemptCount),
+  ));
+});
+
 /// Provides a complete summary of the user's progress for the dashboard.
 ///
-/// It watches all learning tables and updates the UI automatically.
-final dashboardSummaryProvider = StreamProvider.autoDispose((ref) {
-  final db = ref.watch(appDatabaseProvider);
+/// It composes smaller stream providers instead of owning manual subscriptions.
+final dashboardSummaryProvider =
+    Provider.autoDispose<AsyncValue<DashboardSummary>>((ref) {
+  // We keep this for backward compatibility, but UI should prefer granular providers.
+  final vocabularyWords = ref.watch(vocabularyWordsStreamProvider);
+  final vocabularyProgress = ref.watch(vocabularyProgressStreamProvider);
+  final grammarTopics = ref.watch(grammarTopicsStreamProvider);
+  final exercises = ref.watch(exercisesStreamProvider);
+  final exerciseAttempts = ref.watch(exerciseAttemptsStreamProvider);
+  final achievements = ref.watch(achievementsStreamProvider);
+  final userStats = ref.watch(userStatsStreamProvider);
 
-  List<Map<String, Object?>> vocabularyWords = const [];
-  List<Map<String, Object?>> vocabularyProgress = const [];
-  List<Map<String, Object?>> grammarTopics = const [];
-  List<Map<String, Object?>> exercises = const [];
-  List<Map<String, Object?>> exerciseAttempts = const [];
-  List<Map<String, Object?>> achievements = const [];
-  Map<String, Object?> userStats = const {};
+  final asyncValues = [
+    vocabularyWords,
+    vocabularyProgress,
+    grammarTopics,
+    exercises,
+    exerciseAttempts,
+    achievements,
+    userStats,
+  ];
 
-  StreamSubscription<List<QueryRow>>? vocabularyWordsSub;
-  StreamSubscription<List<QueryRow>>? vocabularyProgressSub;
-  StreamSubscription<List<QueryRow>>? grammarTopicsSub;
-  StreamSubscription<List<QueryRow>>? exercisesSub;
-  StreamSubscription<List<QueryRow>>? exerciseAttemptsSub;
-  StreamSubscription<List<QueryRow>>? achievementsSub;
-  StreamSubscription<QueryRow>? userStatsSub;
-
-  void emit(StreamController<DashboardSummary> controller) {
-    if (!controller.isClosed) {
-      controller.add(
-        buildDashboardSummary(
-          userStats: userStats,
-          vocabularyWords: vocabularyWords,
-          vocabularyProgress: vocabularyProgress,
-          grammarTopics: grammarTopics,
-          exercises: exercises,
-          exerciseAttempts: exerciseAttempts,
-          achievements: achievements,
-          now: DateTime.now(),
-        ),
+  for (final asyncValue in asyncValues) {
+    if (asyncValue.hasError) {
+      return AsyncValue.error(
+        asyncValue.error!,
+        asyncValue.stackTrace ?? StackTrace.current,
       );
     }
   }
 
-  final controller = StreamController<DashboardSummary>();
+  if (asyncValues.any((v) => v.isLoading)) {
+    return const AsyncValue.loading();
+  }
 
-  controller.onListen = () async {
-    try {
-      vocabularyWords = (await db.customSelect('''
-SELECT id, german, english, dari, category, tag, example, context, context_dari, difficulty, is_favorite, is_difficult, updated_at
-FROM vocabulary_words
-''').get()).map((row) => row.data).toList(growable: false);
+  final stats = userStats.value;
+  final words = vocabularyWords.value;
+  final progress = vocabularyProgress.value;
+  final topics = grammarTopics.value;
+  final ex = exercises.value;
+  final attempts = exerciseAttempts.value;
+  final ach = achievements.value;
 
-      vocabularyProgress = (await db.customSelect('''
-SELECT word_id, leitner_box, status, last_result, review_count, lapse_count, last_reviewed_at, next_review_at, mastered_at, updated_at
-FROM vocabulary_progress
-''').get()).map((row) => row.data).toList(growable: false);
+  if (stats == null ||
+      words == null ||
+      progress == null ||
+      topics == null ||
+      ex == null ||
+      attempts == null ||
+      ach == null) {
+    return const AsyncValue.loading();
+  }
 
-      grammarTopics = (await db.customSelect('''
-SELECT id, title, level, category, icon, rule, explanation, examples_json, progress, updated_at
-FROM grammar_topics
-''').get()).map((row) => row.data).toList(growable: false);
-
-      exercises = (await db.customSelect('''
-SELECT id, type, question, options_json, correct_answer, topic, level, updated_at
-FROM exercises
-''').get()).map((row) => row.data).toList(growable: false);
-
-      exerciseAttempts = (await db.customSelect('''
-SELECT id, exercise_id, topic, level, is_correct, answered_at
-FROM exercise_attempts
-''').get()).map((row) => row.data).toList(growable: false);
-
-      achievements = (await db.customSelect('''
-SELECT id, title, description, icon, unlocked, updated_at
-FROM achievements
-''').get()).map((row) => row.data).toList(growable: false);
-
-      userStats = (await db.customSelect('''
-SELECT xp, level, streak, words_learned, exercises_completed, grammar_topics_completed, weekly_progress, weak_areas_json
-FROM user_stats
-WHERE id = 1
-''').getSingle()).data;
-
-      emit(controller);
-
-      vocabularyWordsSub = db.customSelect('''
-SELECT id, german, english, dari, category, tag, example, context, context_dari, difficulty, is_favorite, is_difficult, updated_at
-FROM vocabulary_words
-''').watch().listen((rows) {
-            vocabularyWords =
-                rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      vocabularyProgressSub = db.customSelect('''
-SELECT word_id, leitner_box, status, last_result, review_count, lapse_count, last_reviewed_at, next_review_at, mastered_at, updated_at
-FROM vocabulary_progress
-''').watch().listen((rows) {
-            vocabularyProgress =
-                rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      grammarTopicsSub = db.customSelect('''
-SELECT id, title, level, category, icon, rule, explanation, examples_json, progress, updated_at
-FROM grammar_topics
-''').watch().listen((rows) {
-            grammarTopics = rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      exercisesSub = db.customSelect('''
-SELECT id, type, question, options_json, correct_answer, topic, level, updated_at
-FROM exercises
-''').watch().listen((rows) {
-            exercises = rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      exerciseAttemptsSub = db.customSelect('''
-SELECT id, exercise_id, topic, level, is_correct, answered_at
-FROM exercise_attempts
-''').watch().listen((rows) {
-            exerciseAttempts =
-                rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      achievementsSub = db.customSelect('''
-SELECT id, title, description, icon, unlocked, updated_at
-FROM achievements
-''').watch().listen((rows) {
-            achievements = rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      userStatsSub = db.customSelect('''
-SELECT xp, level, streak, words_learned, exercises_completed, grammar_topics_completed, weekly_progress, weak_areas_json
-FROM user_stats
-WHERE id = 1
-''').watchSingle().listen((row) {
-            userStats = row.data;
-            emit(controller);
-          }, onError: controller.addError);
-    } catch (error, stackTrace) {
-      controller.addError(error, stackTrace);
-    }
-  };
-
-  ref.onDispose(() {
-    unawaited(vocabularyWordsSub?.cancel());
-    unawaited(vocabularyProgressSub?.cancel());
-    unawaited(grammarTopicsSub?.cancel());
-    unawaited(exercisesSub?.cancel());
-    unawaited(exerciseAttemptsSub?.cancel());
-    unawaited(achievementsSub?.cancel());
-    unawaited(userStatsSub?.cancel());
-    unawaited(controller.close());
-  });
-
-  return controller.stream;
+  return AsyncValue.data(
+    buildDashboardSummary(
+      userStats: stats,
+      vocabularyWords: words,
+      vocabularyProgress: progress,
+      grammarTopics: topics,
+      exercises: ex,
+      exerciseAttempts: attempts,
+      achievements: ach,
+      now: DateTime.now(),
+    ),
+  );
 });
 
 /// Lists the topics the user should practice more (where they made mistakes).
@@ -224,7 +210,7 @@ final continueLearningItemsProvider =
     Provider.autoDispose<List<ContinueLearningItem>>((ref) {
   final dashboardSummary = ref.watch(dashboardSummaryProvider).valueOrNull;
   final grammarTopics = ref.watch(grammarTopicsStreamProvider).valueOrNull;
-  final vocabularyWords = ref.watch(vocabularyStreamProvider).valueOrNull;
+  final vocabularyWords = ref.watch(vocabularyWordsStreamProvider).valueOrNull;
   final vocabularyReviewState =
       ref.watch(vocabularyReviewStateProvider).valueOrNull;
   final exercises = ref.watch(exercisesStreamProvider).valueOrNull;
@@ -238,71 +224,34 @@ final continueLearningItemsProvider =
   );
 });
 
-final vocabularyReviewStateProvider = StreamProvider.autoDispose((ref) {
-  final db = ref.watch(appDatabaseProvider);
+final vocabularyReviewStateProvider =
+    Provider.autoDispose<AsyncValue<VocabularyReviewState>>((ref) {
+  final words = ref.watch(vocabularyWordsStreamProvider);
+  final progress = ref.watch(vocabularyProgressStreamProvider);
 
-  List<Map<String, Object?>> vocabularyWords = const [];
-  List<Map<String, Object?>> vocabularyProgress = const [];
-  StreamSubscription<List<QueryRow>>? vocabularyWordsSub;
-  StreamSubscription<List<QueryRow>>? vocabularyProgressSub;
-
-  void emit(StreamController<VocabularyReviewState> controller) {
-    if (!controller.isClosed) {
-      controller.add(
-        buildVocabularyReviewState(
-          vocabularyWords: vocabularyWords,
-          vocabularyProgress: vocabularyProgress,
-          now: DateTime.now(),
-        ),
-      );
-    }
+  if (words.hasError) return AsyncValue.error(words.error!, words.stackTrace!);
+  if (progress.hasError) {
+    return AsyncValue.error(progress.error!, progress.stackTrace!);
   }
 
-  final controller = StreamController<VocabularyReviewState>();
+  if (words.isLoading || progress.isLoading) {
+    return const AsyncValue.loading();
+  }
 
-  controller.onListen = () async {
-    try {
-      vocabularyWords = (await db.customSelect('''
-SELECT id, german, english, dari, category, tag, example, context, context_dari, difficulty, is_favorite, is_difficult, updated_at
-FROM vocabulary_words
-''').get()).map((row) => row.data).toList(growable: false);
+  final wordsVal = words.value;
+  final progressVal = progress.value;
 
-      vocabularyProgress = (await db.customSelect('''
-SELECT word_id, leitner_box, status, last_result, review_count, lapse_count, last_reviewed_at, next_review_at, mastered_at, updated_at
-FROM vocabulary_progress
-''').get()).map((row) => row.data).toList(growable: false);
+  if (wordsVal == null || progressVal == null) {
+    return const AsyncValue.loading();
+  }
 
-      emit(controller);
-
-      vocabularyWordsSub = db.customSelect('''
-SELECT id, german, english, dari, category, tag, example, context, context_dari, difficulty, is_favorite, is_difficult, updated_at
-FROM vocabulary_words
-''').watch().listen((rows) {
-            vocabularyWords =
-                rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-
-      vocabularyProgressSub = db.customSelect('''
-SELECT word_id, leitner_box, status, last_result, review_count, lapse_count, last_reviewed_at, next_review_at, mastered_at, updated_at
-FROM vocabulary_progress
-''').watch().listen((rows) {
-            vocabularyProgress =
-                rows.map((row) => row.data).toList(growable: false);
-            emit(controller);
-          }, onError: controller.addError);
-    } catch (error, stackTrace) {
-      controller.addError(error, stackTrace);
-    }
-  };
-
-  ref.onDispose(() {
-    unawaited(vocabularyWordsSub?.cancel());
-    unawaited(vocabularyProgressSub?.cancel());
-    unawaited(controller.close());
-  });
-
-  return controller.stream;
+  return AsyncValue.data(
+    buildVocabularyReviewState(
+      vocabularyWords: wordsVal,
+      vocabularyProgress: progressVal,
+      now: DateTime.now(),
+    ),
+  );
 });
 
 final vocabularyReviewQueueProvider = Provider.family
@@ -322,29 +271,16 @@ final vocabularyReviewQueueProvider = Provider.family
   );
 });
 
-final vocabularyStreamProvider = StreamProvider.autoDispose((ref) {
-  final db = ref.watch(appDatabaseProvider);
-  return db.select(db.vocabularyWords).watch();
-});
-
-final exercisesStreamProvider = StreamProvider.autoDispose((ref) {
-  final db = ref.watch(appDatabaseProvider);
-  return db.select(db.exercises).watch();
-});
-
-final grammarTopicsStreamProvider = StreamProvider.autoDispose((ref) {
-  final db = ref.watch(appDatabaseProvider);
-  return db.select(db.grammarTopics).watch();
-});
-
-final vocabularyGroupsStreamProvider = StreamProvider.autoDispose((ref) {
+final vocabularyGroupsStreamProvider =
+    StreamProvider.autoDispose<List<VocabularyGroupEntity>>((ref) {
   final db = ref.watch(appDatabaseProvider);
   return (db.select(db.vocabularyGroups)
         ..orderBy([(t) => OrderingTerm(expression: t.sortOrder)]))
       .watch();
 });
 
-final vocabularyCategoriesStreamProvider = StreamProvider.autoDispose((ref) {
+final vocabularyCategoriesStreamProvider =
+    StreamProvider.autoDispose<List<VocabularyCategoryEntity>>((ref) {
   final db = ref.watch(appDatabaseProvider);
   return (db.select(db.vocabularyCategories)
         ..orderBy([(t) => OrderingTerm(expression: t.sortOrder)]))
@@ -352,7 +288,7 @@ final vocabularyCategoriesStreamProvider = StreamProvider.autoDispose((ref) {
 });
 
 final vocabularyPendingCategoriesStreamProvider =
-    StreamProvider.autoDispose((ref) {
+    StreamProvider.autoDispose<List<VocabularyPendingCategoryEntity>>((ref) {
   final db = ref.watch(appDatabaseProvider);
   return (db.select(db.vocabularyPendingCategories)
         ..orderBy([(t) => OrderingTerm(expression: t.sortOrder)]))
@@ -361,31 +297,41 @@ final vocabularyPendingCategoriesStreamProvider =
 
 /// Provides a set of actions to update app settings and learning progress.
 final appSettingsActionsProvider = Provider<_AppSettingsActions>((ref) {
-  return _AppSettingsActions(ref.watch(appDatabaseProvider));
+  return _AppSettingsActions(
+    ref.watch(appDatabaseProvider),
+    ref.watch(learningProgressServiceProvider),
+  );
+});
+
+final learningProgressServiceProvider =
+    Provider<LearningProgressService>((ref) {
+  return LearningProgressService(ref.watch(appDatabaseProvider));
 });
 
 class _AppSettingsActions {
-  _AppSettingsActions(this._db);
+  _AppSettingsActions(this._db, this._learningProgressService);
 
   final AppDatabase _db;
+  final LearningProgressService _learningProgressService;
 
-  Future<void> setDarkMode(bool value) => _db.setDarkMode(value);
+  Future<void> setDarkMode(bool value) => _db.userDao.setDarkMode(value);
 
   Future<void> setNativeLanguage(String lang) {
     return (_db.update(_db.userPreferences)..where((tbl) => tbl.id.equals(1)))
         .write(UserPreferencesCompanion(nativeLanguage: Value(lang)));
   }
 
-  Future<void> toggleFavorite(String wordId) => _db.toggleFavorite(wordId);
+  Future<void> toggleFavorite(String wordId) =>
+      _db.vocabularyDao.toggleFavorite(wordId);
 
   Future<void> setWordDifficulty(String wordId, String difficulty) =>
-      _db.setWordDifficulty(wordId, difficulty);
+      _db.vocabularyDao.setWordDifficulty(wordId, difficulty);
 
   Future<void> recordVocabularyReview({
     required String wordId,
     required ReviewResult result,
   }) =>
-      _db.recordVocabularyReview(wordId: wordId, result: result);
+      _db.vocabularyDao.recordVocabularyReview(wordId: wordId, result: result);
 
   Future<void> setDisplayLanguage(String lang) {
     return (_db.update(_db.userPreferences)..where((tbl) => tbl.id.equals(1)))
@@ -393,29 +339,33 @@ class _AppSettingsActions {
   }
 
   Future<void> updateGrammarProgress(String topicId, int progress) =>
-      _db.updateGrammarProgress(topicId, progress);
+      _learningProgressService.updateGrammarProgress(topicId, progress);
 
   Future<void> resetGrammarTopicExercises(String topicTitle) =>
-      _db.resetGrammarTopicExercises(topicTitle);
+      _learningProgressService.resetGrammarTopicExercises(topicTitle);
 
   Future<void> recordExerciseOutcome({
     required String exerciseId,
     required bool isCorrect,
     required int xpGained,
+    required String scope,
+    bool syncGrammarFromAttempt = true,
   }) =>
-      _db.recordExerciseOutcome(
+      _learningProgressService.recordExerciseOutcome(
         exerciseId: exerciseId,
         isCorrect: isCorrect,
         xpGained: xpGained,
+        scope: scope,
+        syncGrammarFromAttempt: syncGrammarFromAttempt,
       );
 
   Future<void> reseedContent() => _db.reseedContent();
 
   Future<void> resetAllUserProgress() => _db.resetAllUserProgress();
 
-  Future<void> markOnboardingAsSeen() => _db.markOnboardingAsSeen();
+  Future<void> markOnboardingAsSeen() => _db.userDao.markOnboardingAsSeen();
 
-  Future<void> setAutoSync(bool value) => _db.setAutoSync(value);
+  Future<void> setAutoSync(bool value) => _db.userDao.setAutoSync(value);
 }
 
 final localizedGrammarTopicsProvider =

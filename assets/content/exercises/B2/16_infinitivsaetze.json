@@ -1,0 +1,188 @@
+{
+    "topic": "InfinitivsÃ¤tze",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "ex_so_b2_6",
+            "type": "sentence-order",
+            "question": "Anstatt zu arbeiten, schaute er fern.",
+            "options": [
+                "schaute",
+                "er",
+                "fern",
+                "Anstatt",
+                "zu",
+                "arbeiten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_infinitivsaetze_2",
+            "type": "multiple-choice",
+            "question": "Ich habe vor, am Wochenende nach Paris ___.",
+            "options": [
+                "gefahren",
+                "fahren",
+                "zu fährt",
+                "zu fahren"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_infinitivsaetze_3",
+            "type": "multiple-choice",
+            "question": "Es ist verboten, hier ___.",
+            "options": [
+                "parken",
+                "zu parkt",
+                "geparkt",
+                "zu parken"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_infinitivsaetze_4",
+            "type": "multiple-choice",
+            "question": "Ich verspreche dir, pünktlich ___.",
+            "options": [
+                "zu ist",
+                "sein",
+                "zu sein",
+                "gewesen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_infinitivsaetze_5",
+            "type": "multiple-choice",
+            "question": "Hast du Lust, heute Abend ins Kino ___?",
+            "options": [
+                "gegangen",
+                "gehen",
+                "zu gehen",
+                "zu geht"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_infinitivsaetze_6",
+            "type": "multiple-choice",
+            "question": "Er hat vergessen, die Tür ___.",
+            "options": [
+                "abschließen zu",
+                "zu abschließen",
+                "abgeschlossen",
+                "abzuschließen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_infinitivsaetze_7",
+            "type": "multiple-choice",
+            "question": "Ist es möglich, das Ticket online ___?",
+            "options": [
+                "kaufen",
+                "zu kaufen",
+                "zu kauft",
+                "gekauft"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_infinitivsaetze_8",
+            "type": "multiple-choice",
+            "question": "Sie versucht, weniger Kaffee ___.",
+            "options": [
+                "zu trinkt",
+                "zu trinken",
+                "getrunken",
+                "trinken"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_infinitivsaetze_9",
+            "type": "multiple-choice",
+            "question": "Es macht keinen Spaß, im Regen ___.",
+            "options": [
+                "zu warten",
+                "gewartet",
+                "warten",
+                "zu wartet"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_infinitivsaetze_10",
+            "type": "multiple-choice",
+            "question": "Ich beginne bald, Spanisch ___.",
+            "options": [
+                "gelernt",
+                "zu lernt",
+                "zu lernen",
+                "lernen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_infinitivsaetze_11",
+            "type": "multiple-choice",
+            "question": "Es ist wichtig, jeden Tag Vokabeln ___.",
+            "options": [
+                "wiederholen",
+                "zu wiederholt",
+                "wiederholt",
+                "zu wiederholen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_pad_16_infinitivsaetze.json_0",
+            "type": "multiple-choice",
+            "question": "Ich plane, dieses Jahr nach Italien ___ .",
+            "options": [
+                "reisen",
+                "reist",
+                "gereist",
+                "zu reisen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_pad_16_infinitivsaetze.json_1",
+            "type": "multiple-choice",
+            "question": "Es ist gesund, viel Obst ___ .",
+            "options": [
+                "essen",
+                "isst",
+                "zu essen",
+                "gegessen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_pad_16_infinitivsaetze.json_2",
+            "type": "multiple-choice",
+            "question": "Wir haben vor, ein neues Auto ___ .",
+            "options": [
+                "zu kaufen",
+                "kaufen",
+                "kauft",
+                "gekauft"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_pad_16_infinitivsaetze.json_3",
+            "type": "multiple-choice",
+            "question": "Er hat vergessen, die Fenster ___ .",
+            "options": [
+                "schließt",
+                "geschlossen",
+                "zu schließen",
+                "schließen"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Erweiterte Passivformen",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g52_1",
+            "type": "multiple-choice",
+            "question": "Hier ___ nicht geparkt werden!",
+            "options": [
+                "kann",
+                "muss",
+                "wird",
+                "darf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g52_2",
+            "type": "multiple-choice",
+            "question": "Gestern ___ die Straße gesperrt ___.",
+            "options": [
+                "wurde - gewesen",
+                "ist - worden",
+                "war - geworden",
+                "hat - worden"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g52_3",
+            "type": "multiple-choice",
+            "question": "Er ___ (bekommen-Passiv) das Paket zugeschickt.",
+            "options": [
+                "wurde",
+                "lässt",
+                "wird",
+                "kriegt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g52_4",
+            "type": "multiple-choice",
+            "question": "Es ___ den ganzen Abend über ausgelassen ___.",
+            "options": [
+                "hat - getanzt",
+                "wurde - getanzt",
+                "ist - getanzt",
+                "war - getanzt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g52_5",
+            "type": "multiple-choice",
+            "question": "Er ___ die entstandenen Fahrtkosten am Ende des Monats ___.",
+            "options": [
+                "wird - erstattet",
+                "lässt - erstatten",
+                "bekommt - erstattet",
+                "wurde - erstattet"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_g52_6",
+            "type": "multiple-choice",
+            "question": "In dieser Bibliothek ___ absolut ___ gearbeitet werden.",
+            "options": [
+                "wird konzentriert",
+                "muss konzentriert",
+                "ist konzentriert",
+                "soll konzentriert"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_erweiterte_passivformen_7",
+            "type": "multiple-choice",
+            "question": "Das Buch ist leicht zu ___ (verstehen).",
+            "options": [
+                "verstehbar",
+                "verstehend",
+                "verstanden",
+                "verstehen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_erweiterte_passivformen_8",
+            "type": "multiple-choice",
+            "question": "Der Fehler lässt ___ nicht korrigieren.",
+            "options": [
+                "es",
+                "mich",
+                "sich",
+                "ihn"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_erweiterte_passivformen_9",
+            "type": "multiple-choice",
+            "question": "Diese Aufgabe ist kaum ___ (lösen).",
+            "options": [
+                "gelöst",
+                "lösbar",
+                "lösend",
+                "lösen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_erweiterte_passivformen_10",
+            "type": "multiple-choice",
+            "question": "Das Wasser ist nicht ___ (trinken).",
+            "options": [
+                "trinken",
+                "trinkend",
+                "trinkbar",
+                "getrunken"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_erweiterte_passivformen_11",
+            "type": "multiple-choice",
+            "question": "Es bleibt zu ___ (hoffen).",
+            "options": [
+                "gehofft",
+                "hoffen",
+                "hoffend",
+                "hofft"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_erweiterte_passivformen_12",
+            "type": "multiple-choice",
+            "question": "Dieses Problem ist schnellstens ___(lösen).",
+            "options": [
+                "zu lösen",
+                "lösbar",
+                "gelöst",
+                "lösen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_erweiterte_passivformen_13",
+            "type": "multiple-choice",
+            "question": "Diese Regeln sind zwingend ___ (beachten).",
+            "options": [
+                "beachten",
+                "zu beachten",
+                "beachtend",
+                "beachtet"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_erweiterte_passivformen_14",
+            "type": "multiple-choice",
+            "question": "Er gilt als sehr ___ (zuverlässig).",
+            "options": [
+                "zuverlässigen",
+                "zuverlässiger",
+                "zuverlässig",
+                "zuverlässiges"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_erweiterte_passivformen_15",
+            "type": "multiple-choice",
+            "question": "Das Haus steht zum ___ (Verkauf).",
+            "options": [
+                "Verkaufen",
+                "Verkauf",
+                "Verkäufe",
+                "Verkauft"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

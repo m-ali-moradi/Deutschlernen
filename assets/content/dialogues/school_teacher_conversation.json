@@ -1,0 +1,109 @@
+{
+    "id": "school_teacher_conversation",
+    "title": "Gespraech mit der Lehrerin",
+    "english_title": "Talking to the Teacher",
+    "level": "A2",
+    "category": "Bildung",
+    "description": "Practice talking with a teacher about your child, asking for support, and arranging a meeting.",
+    "icon": "school_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Guten Tag, Frau Rahimi. Schoen, dass Sie da sind.",
+            "english": "Good day, Mrs. Rahimi. Nice that you are here."
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag. Danke, dass Sie Zeit fuer mich haben.",
+            "english": "Good day. Thank you for having time for me."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Gern. Es geht heute um Ihren Sohn Amir.",
+            "english": "With pleasure. Today it is about your son Amir."
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja. Ich wollte fragen, wie es in der Schule laeuft.",
+            "english": "Yes. I wanted to ask how things are going at school."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Er ist freundlich und macht gut mit, aber beim Lesen braucht er noch Hilfe.",
+            "english": "He is friendly and participates well, but he still needs help with reading."
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Was koennen wir zu Hause machen?",
+            "english": "What can we do at home?"
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Es waere gut, wenn Sie jeden Tag zehn Minuten mit ihm lesen.",
+            "english": "It would be good if you read with him for ten minutes every day."
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, das machen wir. Gibt es auch extra Uebungen?",
+            "english": "Yes, we will do that. Are there also extra exercises?"
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Ja, ich gebe ihm ein kleines Arbeitsblatt fuer zu Hause mit.",
+            "english": "Yes, I will give him a small worksheet to take home."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke. Naechste Woche ist Amir vielleicht einen Tag krank.",
+            "english": "Thank you. Next week Amir may be sick for one day."
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Dann rufen Sie bitte morgens im Sekretariat an und entschuldigen ihn.",
+            "english": "Then please call the office in the morning and excuse him."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Gut zu wissen. Koennen wir in einem Monat noch einmal sprechen?",
+            "english": "Good to know. Can we talk again in a month?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Lehrerin",
+            "german": "Ja, gern. Ich schreibe Ihnen einen Termin in das Mitteilungsheft.",
+            "english": "Yes, gladly. I will write an appointment for you in the school notebook."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Perfekt. Vielen Dank fuer das Gespraech.",
+            "english": "Perfect. Thank you very much for the conversation."
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+﻿{
+    "id":  "g66",
+    "title":  "Demonstrativartikel",
+    "level":  "A2",
+    "category":  "Pronomen",
+    "icon":  "👉",
+    "rule":  "dieser, jeder, welcher folgen den Endungen der \u0027der-Wörter\u0027.",
+    "explanation":  "Words like \u0027dieser\u0027, \u0027jeder\u0027, and \u0027welcher\u0027 are determiners that follow the same endings as the definite article pattern (der/die/das).",
+    "examples":  [
+                     "Dieser Mantel ist teuer.",
+                     "Welchen Film sehen wir?",
+                     "Ich lerne jeden Tag.",
+                     "Er hilft dieser Frau."
+                 ],
+    "detail":  {
+                   "id":  "g66",
+                   "subtitle":  "dieser · jeder · welcher",
+                   "emoji":  "👉",
+                   "gradient":  [
+                                    "#3B82F6",
+                                    "#2563EB"
+                                ],
+                   "levelBg":  "#FEF9C3",
+                   "levelText":  "#A16207",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Was sind Demonstrativartikel?",
+                                        "text":  "These words function like article words before a noun and follow the same ending pattern as the definite article \u0027der/die/das\u0027.",
+                                        "bullets":  [
+                                                        "dieser / diese / dieses → this / that",
+                                                        "jeder / jede / jedes → every / each",
+                                                        "welcher / welche / welches → which?"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Deklinationstabelle (Beispiel: dieser)",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Maskulin",
+                                                        "Feminin",
+                                                        "Neutrum",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nominativ",
+                                                         "dieser",
+                                                         "diese",
+                                                         "dieses",
+                                                         "diese"
+                                                     ],
+                                                     [
+                                                         "Akkusativ",
+                                                         "diesen",
+                                                         "diese",
+                                                         "dieses",
+                                                         "diese"
+                                                     ],
+                                                     [
+                                                         "Dativ",
+                                                         "diesem",
+                                                         "dieser",
+                                                         "diesem",
+                                                         "diesen"
+                                                     ],
+                                                     [
+                                                         "Genitiv",
+                                                         "dieses",
+                                                         "dieser",
+                                                         "dieses",
+                                                         "dieser"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "\u0027jeder\u0027 is only used in the singular. For plural, use \u0027alle\u0027 (alle Menschen).",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Anwendungsbeispiele",
+                                        "color":  "blue",
+                                        "items":  [
+                                                      {
+                                                          "de":  "DIESER Mantel ist sehr teuer.",
+                                                          "en":  "THIS coat is very expensive."
+                                                      },
+                                                      {
+                                                          "de":  "WELCHEN Film sehen wir heute?",
+                                                          "en":  "WHICH film are we watching today?"
+                                                      },
+                                                      {
+                                                          "de":  "Ich gehe JEDEN Tag spazieren.",
+                                                          "en":  "I go for a walk EVERY day."
+                                                      },
+                                                      {
+                                                          "de":  "Er hilft DIESER Frau.",
+                                                          "en":  "He helps THIS woman. (Dative!)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "They follow the \u0027der-die-das\u0027 endings.",
+                                                      "Akkusativ masculine always ends in -en (diesen, jeden, welchen).",
+                                                      "Use \u0027jener\u0027 for things further away (rarer in speech).",
+                                                      "They clarify exactly which item is meant in a group."
+                                                  ]
+                                    }
+                                ]
+               }
+}

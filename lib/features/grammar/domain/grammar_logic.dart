@@ -14,13 +14,20 @@ int advanceGrammarProgress(int progress, {int step = 10}) {
 /// Returns a numeric rank for educational levels (A1-C1).
 int grammarLevelRank(String level) {
   switch (level.toUpperCase()) {
-    case 'A1': return 1;
-    case 'A2': return 2;
-    case 'B1': return 3;
-    case 'B2': return 4;
-    case 'C1': return 5;
-    case 'C2': return 6;
-    default: return 99;
+    case 'A1':
+      return 1;
+    case 'A2':
+      return 2;
+    case 'B1':
+      return 3;
+    case 'B2':
+      return 4;
+    case 'C1':
+      return 5;
+    case 'C2':
+      return 6;
+    default:
+      return 99;
   }
 }
 
@@ -67,17 +74,27 @@ String grammarProgressStateLabel(int progress, {required bool isEnglish}) {
 
 /// Generates a navigation route to open exercises for a specific grammar topic.
 String resolveGrammarExerciseRoute({
+  required String topicId,
   required String title,
   required String category,
   required String level,
+  required String backLevel,
+  required String backCategory,
+  required bool backShowFilters,
 }) {
   return Uri(
-    path: '/exercises',
+    path: '/grammar-exercises',
     queryParameters: {
+      'topicId': topicId,
       'topic': title,
       'category': category,
-      'autostart': '1',
       'level': level,
+      'backLevel': backLevel,
+      'backCategory': backCategory,
+      'backShowFilters': backShowFilters ? '1' : '0',
     },
   ).toString();
 }
+
+
+

@@ -1,6 +1,6 @@
-import '../data/models/weak_area_models.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
 
-/// A summary of the user's learning progress.
+/// Encapsulates all the user's learning metrics for display on the Home screen dashboard.
 class DashboardSummary {
   const DashboardSummary({
     required this.xp,
@@ -20,24 +20,53 @@ class DashboardSummary {
     required this.weakAreas,
   });
 
+  /// Total experience points earned by the user.
   final int xp;
+
+  /// The current German level (A1, A2, etc.) of the user.
   final String level;
+
+  /// Count of words that have been started (status is not 'new').
   final int wordsLearned;
+
+  /// Count of vocabulary words that have reached the 'mastered' level in the SRS.
   final int vocabularyMasteredCount;
+
+  /// Count of words currently scheduled for a review session.
   final int vocabularyDueCount;
+
+  /// Count of words that haven't been seen by the user yet.
   final int vocabularyNewCount;
+
+  /// Count of words that are in the middle of being learned (active boxes in SRS).
   final int vocabularyLearningCount;
+
+  /// Total number of exercises the user has attempted across all time.
   final int exerciseAttemptCount;
+
+  /// Count of exercises answered correctly.
   final int exerciseCorrectCount;
+
+  /// Count of exercises answered incorrectly.
   final int exerciseIncorrectCount;
+
+  /// Number of grammar topics fully completed (progress = 100%).
   final int grammarCompletedCount;
+
+  /// Total number of achievements available in the app.
   final int achievementTotalCount;
+
+  /// Number of achievements currently unlocked by the user.
   final int achievementUnlockedCount;
+
+  /// A percentage (0-100) representing how much of the weekly target has been met.
   final int weeklyProgress;
+
+  /// Top 3 grammar topics where the user has struggled recently.
   final List<String> weakAreas;
 }
 
-/// Information for the "Next Step" suggestion on the dashboard.
+/// Represents the most relevant next action for the user to take, suggested by the dashboard.
 class DashboardNextAction {
   const DashboardNextAction({
     required this.title,
@@ -47,104 +76,110 @@ class DashboardNextAction {
     required this.icon,
   });
 
+  /// Main heading for the recommendation.
   final String title;
+
+  /// Contextual details like "X words are due".
   final String subtitle;
+
+  /// Label for the action button.
   final String ctaLabel;
+
+  /// The internal route to navigate to.
   final String route;
+
+  /// Suggested icon/emoji for visual identification.
   final String icon;
 }
 
-/// Calculates the [DashboardSummary] by looking at all user data.
+/// Computes the complete learning state represented by [DashboardSummary].
+///
+/// This involves:
+/// 1. Mapping vocabulary words to their progress snapshots.
+/// 2. Analyzing exercise history to find errors (identifying weak areas).
+/// 3. Calculating weekly progress against targets (50 weekly questions).
+/// 4. Aggregating grammar and achievement status.
 DashboardSummary buildDashboardSummary({
-  required Map<String, Object?> userStats,
-  required List<Map<String, Object?>> vocabularyWords,
-  required List<Map<String, Object?>> vocabularyProgress,
-  required List<Map<String, Object?>> grammarTopics,
-  required List<Map<String, Object?>> exercises,
-  required List<Map<String, Object?>> exerciseAttempts,
-  required List<Map<String, Object?>> achievements,
+  required UserStat userStats,
+  required List<VocabularyWord> vocabularyWords,
+  required List<VocabularyProgressData> vocabularyProgress,
+  required List<GrammarTopic> grammarTopics,
+  required List<Exercise> exercises,
+  required List<ExerciseAttempt> exerciseAttempts,
+  required List<Achievement> achievements,
   required DateTime now,
 }) {
-  final progressByWordId = <String, Map<String, Object?>>{};
+  final progressByWordId = <String, VocabularyProgressData>{};
   for (final row in vocabularyProgress) {
-    final wordId = _stringValue(row['word_id']);
-    if (wordId.isNotEmpty) {
-      progressByWordId[wordId] = row;
-    }
+    progressByWordId[row.wordId] = row;
   }
 
   final learnedCount = progressByWordId.values.where((row) {
-    final status = _stringValue(row['status']);
-    return status != 'new';
+    return row.status != 'new';
   }).length;
 
   final masteredCount = progressByWordId.values.where((row) {
-    final status = _stringValue(row['status']);
-    final masteredAt = _dateTimeValue(row['mastered_at']);
-    return status == 'mastered' || masteredAt != null;
+    return row.status == 'mastered' || row.masteredAt != null;
   }).length;
 
   final dueCount = progressByWordId.values.where((row) {
-    final status = _stringValue(row['status']);
-    final masteredAt = _dateTimeValue(row['mastered_at']);
-    if (status == 'mastered' || masteredAt != null) {
+    if (row.status == 'mastered' || row.masteredAt != null) {
       return false;
     }
-    final nextReviewAt = _dateTimeValue(row['next_review_at']);
-    return nextReviewAt != null && !nextReviewAt.isAfter(now);
+    return row.nextReviewAt != null && !row.nextReviewAt!.isAfter(now);
   }).length;
 
   final learningCount = progressByWordId.values.where((row) {
-    final status = _stringValue(row['status']);
-    final masteredAt = _dateTimeValue(row['mastered_at']);
-    if (status == 'mastered' || masteredAt != null) {
+    if (row.status == 'mastered' || row.masteredAt != null) {
       return false;
     }
-    final nextReviewAt = _dateTimeValue(row['next_review_at']);
-    final reviewCount = _intValue(row['review_count']);
-    return status == 'learning' || (reviewCount > 0 && (nextReviewAt == null || nextReviewAt.isAfter(now)));
+    return row.status == 'learning' ||
+        (row.reviewCount > 0 &&
+            (row.nextReviewAt == null || row.nextReviewAt!.isAfter(now)));
   }).length;
 
-  final newCount = (vocabularyWords.length - progressByWordId.length).clamp(0, vocabularyWords.length).toInt();
-  final grammarCompletedCount = grammarTopics.where((row) => _intValue(row['progress']) >= 100).length;
-  final exerciseAttemptCount = exerciseAttempts.length;
-  final exerciseCorrectCount = exerciseAttempts.where((row) => _boolValue(row['is_correct'])).length;
+  final newCount = (vocabularyWords.length - progressByWordId.length)
+      .clamp(0, vocabularyWords.length)
+      .toInt();
+  final grammarCompletedCount =
+      grammarTopics.where((row) => row.progress >= 100).length;
+  final exerciseScopeAttempts =
+      exerciseAttempts.where((row) => row.scope == 'exercises').toList();
+  final exerciseAttemptCount = exerciseScopeAttempts.length;
+  final exerciseCorrectCount =
+      exerciseScopeAttempts.where((row) => row.isCorrect).length;
   final exerciseIncorrectCount = exerciseAttemptCount - exerciseCorrectCount;
-  final achievementUnlockedCount = achievements.where((row) => _boolValue(row['unlocked'])).length;
+  final achievementUnlockedCount =
+      achievements.where((row) => row.unlocked).length;
   final achievementTotalCount = achievements.length;
 
+  // Weak area identification: 14-day window for recent struggles.
   final recentWindow = now.subtract(const Duration(days: 14));
-  final recentIncorrectAttempts = exerciseAttempts.where((row) {
-    final isCorrect = _boolValue(row['is_correct']);
-    final answeredAt = _dateTimeValue(row['answered_at']);
-    return !isCorrect && answeredAt != null && !answeredAt.isBefore(recentWindow);
+  final recentIncorrectAttempts = exerciseScopeAttempts.where((row) {
+    return !row.isCorrect && !row.answeredAt.isBefore(recentWindow);
   }).toList();
   final weakSource = recentIncorrectAttempts.isNotEmpty
       ? recentIncorrectAttempts
-      : exerciseAttempts.where((row) => !_boolValue(row['is_correct'])).toList();
+      : exerciseScopeAttempts.where((row) => !row.isCorrect).toList();
 
-  final exerciseById = <String, Map<String, Object?>>{};
+  final exerciseById = <String, Exercise>{};
   for (final row in exercises) {
-    final exerciseId = _stringValue(row['id']);
-    if (exerciseId.isNotEmpty) {
-      exerciseById[exerciseId] = row;
-    }
+    exerciseById[row.id] = row;
   }
 
-  final validGrammarTitles = grammarTopics.map((row) => _stringValue(row['title'])).toSet();
+  // Correlate failed exercises with their parent grammar topics.
+  final validGrammarTitles = grammarTopics.map((row) => row.title).toSet();
   final weakGrammarAreaCounts = <String, int>{};
   for (final row in weakSource) {
-    final exerciseId = _stringValue(row['exercise_id']);
-    final topic = _stringValue(row['topic']);
     final grammarTitle = _grammarTitleForAttempt(
-      exerciseId: exerciseId,
-      topic: topic,
+      exerciseAttempt: row,
       exerciseById: exerciseById,
       grammarTopics: grammarTopics,
     );
 
     if (grammarTitle != null && validGrammarTitles.contains(grammarTitle)) {
-      weakGrammarAreaCounts[grammarTitle] = (weakGrammarAreaCounts[grammarTitle] ?? 0) + 1;
+      weakGrammarAreaCounts[grammarTitle] =
+          (weakGrammarAreaCounts[grammarTitle] ?? 0) + 1;
     }
   }
 
@@ -157,21 +192,27 @@ DashboardSummary buildDashboardSummary({
 
   final weakAreas = weakGrammarAreas.map((entry) => entry.key).toList();
 
+  // Weekly progress calculation: 60% based on volume (0-50 questions) and 40% based on accuracy.
   final weekStart = now.subtract(Duration(days: now.weekday - 1));
-  final weekStartTime = DateTime(weekStart.year, weekStart.month, weekStart.day);
-  final thisWeekAttempts = exerciseAttempts.where((row) {
-    final answeredAt = _dateTimeValue(row['answered_at']);
-    return answeredAt != null && !answeredAt.isBefore(weekStartTime);
+  final weekStartTime =
+      DateTime(weekStart.year, weekStart.month, weekStart.day);
+  final thisWeekAttempts = exerciseScopeAttempts.where((row) {
+    return !row.answeredAt.isBefore(weekStartTime);
   }).toList();
 
   final weekAttemptCount = thisWeekAttempts.length;
-  final weekCorrectCount = thisWeekAttempts.where((row) => _boolValue(row['is_correct'])).length;
-  final weekAccuracy = weekAttemptCount == 0 ? 0.0 : weekCorrectCount / weekAttemptCount;
-  final weeklyProgress = ((weekAttemptCount.clamp(0, 50) / 50 * 60) + (weekAccuracy * 40)).round().clamp(0, 100);
+  final weekCorrectCount =
+      thisWeekAttempts.where((row) => row.isCorrect).length;
+  final weekAccuracy =
+      weekAttemptCount == 0 ? 0.0 : weekCorrectCount / weekAttemptCount;
+  final weeklyProgress =
+      ((weekAttemptCount.clamp(0, 50) / 50 * 60) + (weekAccuracy * 40))
+          .round()
+          .clamp(0, 100);
 
   return DashboardSummary(
-    xp: _intValue(userStats['xp']),
-    level: _stringValue(userStats['level']),
+    xp: userStats.xp,
+    level: userStats.level,
     wordsLearned: learnedCount,
     vocabularyMasteredCount: masteredCount,
     vocabularyDueCount: dueCount,
@@ -188,32 +229,46 @@ DashboardSummary buildDashboardSummary({
   );
 }
 
+/// Identifies the grammar topic identifier assigned to a specific exercise attempt.
+///
+/// Uses fuzzy string match logic to resolve different representations of topics.
 String? _grammarTitleForAttempt({
-  required String exerciseId,
-  required String topic,
-  required Map<String, Map<String, Object?>> exerciseById,
-  required List<Map<String, Object?>> grammarTopics,
+  required ExerciseAttempt exerciseAttempt,
+  required Map<String, Exercise> exerciseById,
+  required List<GrammarTopic> grammarTopics,
 }) {
+  final topic = exerciseAttempt.topic;
   final eT = topic.toLowerCase();
-  if (eT.isEmpty) return null;
 
-  for (final g in grammarTopics) {
-    final tT = _stringValue(g['title']).toLowerCase();
-    final tC = _stringValue(g['category']).toLowerCase();
-    if (tT == eT || tT.contains(eT) || eT.contains(tT) || tC == eT || tC.contains(eT) || eT.contains(tC)) {
-      return _stringValue(g['title']);
+  if (eT.isNotEmpty) {
+    for (final g in grammarTopics) {
+      final tT = g.title.toLowerCase();
+      final tC = g.category.toLowerCase();
+      if (tT == eT ||
+          tT.contains(eT) ||
+          eT.contains(tT) ||
+          tC == eT ||
+          tC.contains(eT) ||
+          eT.contains(tC)) {
+        return g.title;
+      }
     }
   }
 
-  final mappedExercise = exerciseById[exerciseId];
+  final mappedExercise = exerciseById[exerciseAttempt.exerciseId];
   if (mappedExercise != null) {
-    final mappedTopic = _stringValue(mappedExercise['topic']).toLowerCase();
+    final mappedTopic = mappedExercise.topic.toLowerCase();
     if (mappedTopic.isNotEmpty && mappedTopic != eT) {
       for (final g in grammarTopics) {
-        final tT = _stringValue(g['title']).toLowerCase();
-        final tC = _stringValue(g['category']).toLowerCase();
-        if (tT == mappedTopic || tT.contains(mappedTopic) || mappedTopic.contains(tT) || tC == mappedTopic || tC.contains(mappedTopic) || mappedTopic.contains(tC)) {
-          return _stringValue(g['title']);
+        final tT = g.title.toLowerCase();
+        final tC = g.category.toLowerCase();
+        if (tT == mappedTopic ||
+            tT.contains(mappedTopic) ||
+            mappedTopic.contains(tT) ||
+            tC == mappedTopic ||
+            tC.contains(mappedTopic) ||
+            mappedTopic.contains(tC)) {
+          return g.title;
         }
       }
     }
@@ -221,6 +276,13 @@ String? _grammarTitleForAttempt({
   return null;
 }
 
+/// Heuristic logic to pick the most urgent and relevant task for the user's dashboard.
+///
+/// Priority:
+/// 1. Due vocabulary review (Urgent).
+/// 2. Struggles in Weak Areas (Knowledge gap).
+/// 3. Grammar topics if the user is a total beginner (Engagement).
+/// 4. Vertigo session if they have no current struggles (Retention).
 DashboardNextAction buildDashboardNextAction(DashboardSummary summary) {
   if (summary.vocabularyDueCount > 0) {
     return DashboardNextAction(
@@ -258,7 +320,7 @@ DashboardNextAction buildDashboardNextAction(DashboardSummary summary) {
       title: 'Übungen vertiefen',
       subtitle: 'Sichere dein Wissen mit einer kurzen Übungsrunde',
       ctaLabel: 'Zu den Übungen',
-      route: '/exercises',
+      route: '/practice/exercises',
       icon: '✏️',
     );
   }
@@ -272,26 +334,40 @@ DashboardNextAction buildDashboardNextAction(DashboardSummary summary) {
   );
 }
 
-int _intValue(Object? value) {
-  if (value is int) return value;
-  if (value is num) return value.toInt();
-  return int.tryParse(value?.toString() ?? '') ?? 0;
+/// Provides a fallback route for "weak area" identifiers that might not clearly
+/// indicate whether they are grammar lessons or standalone practice modules.
+DashboardNextAction resolveWeakAreaRoute(String area) {
+  final trimmed = area.trim();
+  if (trimmed.isEmpty) {
+    return const DashboardNextAction(
+      title: 'Grammatik öffnen',
+      subtitle: 'Wähle ein Thema zum Wiederholen',
+      ctaLabel: 'Lernen',
+      route: '/grammar',
+      icon: '📘',
+    );
+  }
+
+  if (area.contains('Exercise') || area.contains('Übung')) {
+    final encoded = Uri.encodeComponent(trimmed);
+    return DashboardNextAction(
+      title: 'Schwache Übung',
+      subtitle: trimmed,
+      ctaLabel: 'Üben',
+      route: '/practice/exercises?topic=$encoded',
+      icon: '✏️',
+    );
+  }
+
+  final encoded = Uri.encodeComponent(trimmed);
+  return DashboardNextAction(
+    title: 'Schwache Grammatik',
+    subtitle: trimmed,
+    ctaLabel: 'Lernen',
+    route: '/grammar?category=$encoded&showFilters=1',
+    icon: '📘',
+  );
 }
 
-bool _boolValue(Object? value) {
-  if (value is bool) return value;
-  if (value is num) return value != 0;
-  final normalized = value?.toString().toLowerCase();
-  return normalized == 'true' || normalized == '1';
-}
 
-String _stringValue(Object? value) => value?.toString() ?? '';
 
-DateTime? _dateTimeValue(Object? value) {
-  if (value is DateTime) return value;
-  if (value is int) return DateTime.fromMillisecondsSinceEpoch(value);
-  if (value is num) return DateTime.fromMillisecondsSinceEpoch(value.toInt());
-  final text = value?.toString();
-  if (text == null || text.isEmpty) return null;
-  return DateTime.tryParse(text);
-}

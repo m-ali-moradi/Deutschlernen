@@ -1,0 +1,186 @@
+{
+    "topic": "Das Wort 'Doch'",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g64_1",
+            "type": "multiple-choice",
+            "question": "Hast du keinen Hunger? - ___, ich habe Hunger!",
+            "options": [
+                "Nein",
+                "Doch",
+                "Ja",
+                "Nicht"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g64_2",
+            "type": "multiple-choice",
+            "question": "Kommst du nicht mit? - ___, ich komme gleich!",
+            "options": [
+                "Ja",
+                "Nein",
+                "Kein",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_3",
+            "type": "multiple-choice",
+            "question": "Kommst du nicht mit? - ___, ich komme mit.",
+            "options": [
+                "Nicht",
+                "Nein",
+                "Ja",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_4",
+            "type": "multiple-choice",
+            "question": "Hast du kein Geld? - ___, ich habe Geld.",
+            "options": [
+                "Ja",
+                "Doch",
+                "Nein",
+                "Kein"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_das_wort_'doch'_5",
+            "type": "multiple-choice",
+            "question": "Schmeckt es dir nicht? - ___, es schmeckt sehr gut.",
+            "options": [
+                "Nein",
+                "Schon",
+                "Ja",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_6",
+            "type": "multiple-choice",
+            "question": "Bist du nicht müde? - ___, ich bin sehr müde.",
+            "options": [
+                "Doch",
+                "Ja",
+                "Nicht",
+                "Nein"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_das_wort_'doch'_7",
+            "type": "multiple-choice",
+            "question": "Regnet es nicht? - ___, es regnet.",
+            "options": [
+                "Nein",
+                "Ja",
+                "Schon",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_8",
+            "type": "multiple-choice",
+            "question": "Hast du den Schlüssel nicht? - ___, hier ist er.",
+            "options": [
+                "Ja",
+                "Kein",
+                "Nein",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_9",
+            "type": "multiple-choice",
+            "question": "Gehst du nicht zur Party? - ___, natürlich!",
+            "options": [
+                "Doch",
+                "Ja",
+                "Nicht",
+                "Nein"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_das_wort_'doch'_10",
+            "type": "multiple-choice",
+            "question": "Bist du nicht aus Spanien? - ___, ich bin aus Madrid.",
+            "options": [
+                "Doch",
+                "Ja",
+                "Nein",
+                "Kein"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_das_wort_'doch'_11",
+            "type": "multiple-choice",
+            "question": "Willst du keinen Kaffee? - ___, ich möchte einen.",
+            "options": [
+                "Nein",
+                "Ja",
+                "Kein",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_12",
+            "type": "multiple-choice",
+            "question": "Sprichst du nicht Deutsch? - ___, ein bisschen.",
+            "options": [
+                "Doch",
+                "Nein",
+                "Ja",
+                "Nicht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_das_wort_'doch'_13",
+            "type": "multiple-choice",
+            "question": "Ist das nicht dein Auto? - ___, das ist meins.",
+            "options": [
+                "Nein",
+                "Ja",
+                "Kein",
+                "Doch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_das_wort_'doch'_14",
+            "type": "multiple-choice",
+            "question": "Weißt du das nicht? - ___, ich weiß es.",
+            "options": [
+                "Nicht",
+                "Nein",
+                "Doch",
+                "Ja"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_das_wort_'doch'_15",
+            "type": "multiple-choice",
+            "question": "Hast du nicht angerufen? - ___, gestern.",
+            "options": [
+                "Nicht",
+                "Doch",
+                "Ja",
+                "Nein"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

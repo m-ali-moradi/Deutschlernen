@@ -1,12 +1,12 @@
 [
-  {"id": "daily_life_basics", "name": "Daily Life Basics", "levelRange": "A1", "sortOrder": 1},
-  {"id": "personal_information", "name": "Personal Information", "levelRange": "A1–A2", "sortOrder": 2},
-  {"id": "travel_transport", "name": "Travel & Transport", "levelRange": "A1–A2", "sortOrder": 3},
-  {"id": "home_housing", "name": "Home & Housing", "levelRange": "A1–A2", "sortOrder": 4},
-  {"id": "health_body", "name": "Health & Body", "levelRange": "A1–B1", "sortOrder": 5},
-  {"id": "education", "name": "Education", "levelRange": "A2–B2", "sortOrder": 6},
-  {"id": "work_business", "name": "Work & Business", "levelRange": "A2–B2", "sortOrder": 7},
-  {"id": "technology_it", "name": "Technology & IT", "levelRange": "B1–B2", "sortOrder": 8},
-  {"id": "society_public_life", "name": "Society & Public Life", "levelRange": "B1–B2", "sortOrder": 9},
+  {"id": "personal_information", "name": "Personal Information", "levelRange": "A1", "sortOrder": 1},
+  {"id": "authorities_visa", "name": "Authorities & Visa", "levelRange": "A1–A2", "sortOrder": 2},
+  {"id": "work_business", "name": "Work & Business", "levelRange": "A2–B2", "sortOrder": 3},
+  {"id": "travel_transport", "name": "Travel & Transport", "levelRange": "A1–A2", "sortOrder": 4},
+  {"id": "home_housing", "name": "Home & Housing", "levelRange": "A1–A2", "sortOrder": 5},
+  {"id": "health_body", "name": "Health & Body", "levelRange": "A1–B1", "sortOrder": 6},
+  {"id": "education", "name": "Education", "levelRange": "A2–B2", "sortOrder": 7},
+  {"id": "daily_life_basics", "name": "Daily Life Basics", "levelRange": "A1", "sortOrder": 8},
+  {"id": "technology_it", "name": "Technology & IT", "levelRange": "B1–B2", "sortOrder": 9},
   {"id": "abstract_formal_language", "name": "Abstract & Formal Language", "levelRange": "B2–C1", "sortOrder": 10}
 ]

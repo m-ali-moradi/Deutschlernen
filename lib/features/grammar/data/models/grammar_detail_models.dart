@@ -7,14 +7,19 @@ import 'package:flutter/material.dart';
 class ExPair {
   /// The German sentence or phrase.
   final String de;
+
   /// The translated sentence or phrase (English, Dari, etc.).
   final String translation;
-  
+
   const ExPair(this.de, this.translation);
 }
 
+/// Represents a row in a two-column table.
 class TableRow2 {
+  /// The left cell content.
   final String left;
+
+  /// The right cell content.
   final String right;
   const TableRow2(this.left, this.right);
 }
@@ -104,8 +109,7 @@ class ExamplesSection extends GrammarSection {
       color: _sectionColorFromString((json['color'] ?? 'blue').toString()),
       items: (json['items'] as List<dynamic>? ?? const <dynamic>[])
           .whereType<Map<String, dynamic>>()
-          .map((item) => ExPair(
-              (item['de'] ?? '').toString(), 
+          .map((item) => ExPair((item['de'] ?? '').toString(),
               (item['translation'] ?? item['en'] ?? '').toString()))
           .toList(),
     );
@@ -211,8 +215,10 @@ class TransformSection extends GrammarSection {
 class GrammarDetailData {
   /// Topic ID (e.g., 'articles_a1')
   final String id;
+
   /// Secondary title or description
   final String subtitle;
+
   /// Representative emoji for the topic
   final String emoji;
   final List<Color> gradient;
@@ -248,6 +254,7 @@ class GrammarDetailData {
   }
 }
 
+/// widget to convert json to grammar section
 class GrammarSectionJson {
   static GrammarSection fromJson(Map<String, dynamic> json) {
     final type = (json['type'] ?? '').toString();
@@ -274,6 +281,7 @@ class GrammarSectionJson {
   }
 }
 
+/// enum to hold the section color. this is used to display the section color
 enum SectionColor {
   blue,
   indigo,
@@ -296,7 +304,9 @@ enum SectionColor {
   slate,
 }
 
+/// extension to get the background color of the section
 extension SectionColorExt on SectionColor {
+  /// widget to get the background color of the section
   Color get bg => const {
         SectionColor.blue: Color(0xFF3B82F6),
         SectionColor.indigo: Color(0xFF6366F1),
@@ -319,10 +329,14 @@ extension SectionColorExt on SectionColor {
         SectionColor.slate: Color(0xFF64748B),
       }[this]!;
 
+  /// widget to get the light background color of the section
   Color get lightBg => bg.withValues(alpha: 0.08);
+
+  /// widget to get the text color of the section
   Color get text => bg;
 }
 
+/// widget to convert string to section color
 SectionColor _sectionColorFromString(String color) {
   return SectionColor.values.firstWhere(
     (c) => c.name == color,
@@ -330,9 +344,13 @@ SectionColor _sectionColorFromString(String color) {
   );
 }
 
+/// widget to convert hex color to color
 Color _colorFromHex(String hex) {
   final cleaned = hex.replaceFirst('#', '').toUpperCase();
   final full = cleaned.length == 6 ? 'FF$cleaned' : cleaned;
   final value = int.parse(full, radix: 16);
   return Color(value);
 }
+
+
+

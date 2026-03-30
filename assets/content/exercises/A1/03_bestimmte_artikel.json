@@ -1,0 +1,199 @@
+﻿{
+    "topic": "Bestimmte Artikel",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g1_1",
+            "type": "multiple-choice",
+            "question": "___ Haus ist groß.",
+            "options": [
+                "Der",
+                "Die",
+                "Das",
+                "Ein"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g1_2",
+            "type": "multiple-choice",
+            "question": "Wo ist ___ Tisch?",
+            "options": [
+                "dem",
+                "die",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g1_3",
+            "type": "multiple-choice",
+            "question": "___ Lampe funktioniert nicht.",
+            "options": [
+                "Die",
+                "Der",
+                "Den",
+                "Das"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g1_4",
+            "type": "multiple-choice",
+            "question": "___ Katze schläft auf dem Sofa.",
+            "options": [
+                "Ein",
+                "Die",
+                "Der",
+                "Das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g1_5",
+            "type": "multiple-choice",
+            "question": "Kennen Sie ___ Mann dort?",
+            "options": [
+                "der",
+                "den",
+                "die",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g1_6",
+            "type": "multiple-choice",
+            "question": "___ Buch liegt auf dem Tisch.",
+            "options": [
+                "Der",
+                "Das",
+                "Die",
+                "Den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g1_11",
+            "type": "multiple-choice",
+            "question": "Ich kaufe ___ Tisch.",
+            "options": [
+                "der",
+                "die",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g1_12",
+            "type": "multiple-choice",
+            "question": "Siehst du ___ Kind?",
+            "options": [
+                "die",
+                "der",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g1_13",
+            "type": "multiple-choice",
+            "question": "Ich finde ___ Schlüssel nicht.",
+            "options": [
+                "den",
+                "der",
+                "die",
+                "das"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g1_14",
+            "type": "multiple-choice",
+            "question": "Wo ist ___ Schule?",
+            "options": [
+                "das",
+                "der",
+                "den",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g1_15",
+            "type": "multiple-choice",
+            "question": "Wir essen ___ Kuchen.",
+            "options": [
+                "das",
+                "die",
+                "der",
+                "den"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g1_16",
+            "type": "fill-blank",
+            "question": "Dort steht ___ Fernseher.",
+            "options": [
+                "die",
+                "der",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g1_17",
+            "type": "multiple-choice",
+            "question": "Ich nehme ___ Tasche.",
+            "options": [
+                "die",
+                "das",
+                "der",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g1_18",
+            "type": "multiple-choice",
+            "question": "Kennst du ___ Mann?",
+            "options": [
+                "die",
+                "der",
+                "den",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g1_19",
+            "type": "multiple-choice",
+            "question": "Das ist ___ Auto von Max.",
+            "options": [
+                "das",
+                "der",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g1_20",
+            "type": "sentence-order",
+            "question": "Das Haus ist sehr groß.",
+            "options": [
+                "groß",
+                "sehr",
+                "ist",
+                "Haus",
+                "Das"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

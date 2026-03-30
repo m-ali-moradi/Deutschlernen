@@ -1,0 +1,189 @@
+{
+    "topic": "Nomen-Verb-Verbindungen",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g51_1",
+            "type": "multiple-choice",
+            "question": "Wir müssen diese Möglichkeit in Betracht ___.",
+            "options": [
+                "bringen",
+                "ziehen",
+                "nehmen",
+                "stellen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g51_2",
+            "type": "multiple-choice",
+            "question": "Bitte ___ Sie mir morgen Bescheid.",
+            "options": [
+                "machen",
+                "sagen",
+                "tun",
+                "geben"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g51_3",
+            "type": "multiple-choice",
+            "question": "Das Risiko müssen wir in Kauf ___.",
+            "options": [
+                "ziehen",
+                "nehmen",
+                "bringen",
+                "tragen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_g51_4",
+            "type": "multiple-choice",
+            "question": "Er hat nach langer Ãœberlegung endlich eine Entscheidung ___.",
+            "options": [
+                "gegeben",
+                "gemacht",
+                "getan",
+                "getroffen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g51_5",
+            "type": "multiple-choice",
+            "question": "Wir müssen in unserer Gesellschaft mehr auf die Umwelt Rücksicht ___.",
+            "options": [
+                "nehmen",
+                "haben",
+                "geben",
+                "ziehen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g51_6",
+            "type": "multiple-choice",
+            "question": "Dieses Thema steht heute absolut nicht zur ___.",
+            "options": [
+                "Wahl",
+                "Debatte",
+                "Rede",
+                "Verfügung"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_so_c1_5",
+            "type": "sentence-order",
+            "question": "Die Relevanz dieses Themas steht außer Frage.",
+            "options": [
+                "steht",
+                "außer",
+                "Frage",
+                "Die",
+                "Relevanz",
+                "dieses",
+                "Themas"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_8",
+            "type": "multiple-choice",
+            "question": "Er hat einen Fehler ___.",
+            "options": [
+                "gemacht",
+                "getan",
+                "gestellt",
+                "begangen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_9",
+            "type": "multiple-choice",
+            "question": "Wir müssen eine Entscheidung ___.",
+            "options": [
+                "tun",
+                "machen",
+                "geben",
+                "treffen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_10",
+            "type": "multiple-choice",
+            "question": "Die Regierung hat Maßnahmen ___.",
+            "options": [
+                "gemacht",
+                "getan",
+                "ergrieffen",
+                "getroffen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_11",
+            "type": "multiple-choice",
+            "question": "Er hat einen Antrag ___.",
+            "options": [
+                "gestellt",
+                "gegeben",
+                "getan",
+                "gemacht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_12",
+            "type": "multiple-choice",
+            "question": "Wir haben Abschied ___.",
+            "options": [
+                "gesagt",
+                "gemacht",
+                "gegeben",
+                "genommen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_13",
+            "type": "multiple-choice",
+            "question": "Der Richter hat ein Urteil ___.",
+            "options": [
+                "gegeben",
+                "gefällt",
+                "getan",
+                "gemacht"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_14",
+            "type": "multiple-choice",
+            "question": "Sie hat Kritik ___.",
+            "options": [
+                "gemacht",
+                "geübt",
+                "getan",
+                "gegeben"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_nomen-verb-verbindungen_15",
+            "type": "multiple-choice",
+            "question": "Das Unternehmen hat Konkurs ___.",
+            "options": [
+                "angemeldet",
+                "getan",
+                "gemacht",
+                "gegeben"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

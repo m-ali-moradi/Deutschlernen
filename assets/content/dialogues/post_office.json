@@ -1,0 +1,123 @@
+{
+    "id": "post_office",
+    "title": "Bei der Post",
+    "english_title": "At the Post Office",
+    "level": "A2",
+    "category": "Service",
+    "description": "Practice sending a package, asking about delivery options, and paying for postal services.",
+    "icon": "local_post_office_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Guten Tag. Was moechten Sie machen?",
+            "english": "Good day. What would you like to do?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich moechte dieses Paket nach Koeln schicken.",
+            "english": "I would like to send this package to Cologne."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Ist schon ein Adressetikett drauf?",
+            "english": "Is there already an address label on it?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, noch nicht. Koennen Sie mir bitte helfen?",
+            "english": "No, not yet. Can you please help me?"
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Ja, natuerlich. Schreiben Sie bitte hier den Namen und die Adresse.",
+            "english": "Yes, of course. Please write the name and address here."
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Brauche ich auch meine eigene Adresse auf dem Paket?",
+            "english": "Do I also need my own address on the package?"
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Ja, bitte links oben als Absender.",
+            "english": "Yes, please put it in the top left as the sender."
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Wie lange dauert der Versand?",
+            "english": "How long does shipping take?"
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Normalerweise ein bis zwei Werktage.",
+            "english": "Normally one to two working days."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Gibt es auch Expressversand?",
+            "english": "Is there also express shipping?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Ja, aber das ist teurer. Moechten Sie Standard oder Express?",
+            "english": "Yes, but that is more expensive. Would you like standard or express?"
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Standard reicht. Wie viel kostet das?",
+            "english": "Standard is enough. How much does that cost?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Das kostet 6 Euro 99.",
+            "english": "That costs 6 euros 99."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Gut, ich zahle mit Karte.",
+            "english": "Good, I will pay by card."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Mitarbeiter",
+            "german": "Hier ist der Beleg mit der Sendungsnummer.",
+            "english": "Here is the receipt with the tracking number."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank. Auf Wiedersehen.",
+            "english": "Thank you very much. Goodbye."
+        }
+    ]
+}

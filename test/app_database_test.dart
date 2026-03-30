@@ -1,7 +1,8 @@
 import 'dart:io';
 
-import 'package:deutschlernen_mobile/core/database/app_database.dart';
-import 'package:deutschlernen_mobile/core/learning/review_logic.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/learning/learning_progress_service.dart';
+import 'package:deutschmate_mobile/core/learning/review_logic.dart';
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
@@ -39,7 +40,7 @@ ORDER BY name
   });
 
   test('database opens on a fresh file and reopens cleanly', () async {
-    final tempDir = await Directory.systemTemp.createTemp('deutschlernen_db_');
+    final tempDir = await Directory.systemTemp.createTemp('deutschmate_db_');
     addTearDown(() async {
       if (await tempDir.exists()) {
         await tempDir.delete(recursive: true);
@@ -78,10 +79,11 @@ ORDER BY name
           ),
         );
 
-    await db.recordExerciseOutcome(
+    await LearningProgressService(db).recordExerciseOutcome(
       exerciseId: 'exercise-1',
       isCorrect: true,
       xpGained: 10,
+      scope: 'exercises',
     );
 
     final attempts = await db.select(db.exerciseAttempts).get();
@@ -100,7 +102,7 @@ ORDER BY name
     final db = AppDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    await db.recordVocabularyReview(
+    await db.vocabularyDao.recordVocabularyReview(
       wordId: 'word-1',
       result: ReviewResult.easy,
     );
@@ -114,3 +116,4 @@ ORDER BY name
     expect(progress.single.masteredAt, isNull);
   });
 }
+

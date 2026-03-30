@@ -1,0 +1,186 @@
+{
+    "topic": "Passiv (Grundlagen)",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g41_1",
+            "type": "multiple-choice",
+            "question": "Das Auto ___ repariert.",
+            "options": [
+                "wird",
+                "ist",
+                "werden",
+                "sind"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g41_2",
+            "type": "multiple-choice",
+            "question": "Das Essen wird von ihm ___.",
+            "options": [
+                "kocht",
+                "kochen",
+                "kochte",
+                "gekocht"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g41_3",
+            "type": "multiple-choice",
+            "question": "Die Briefe ___ geschrieben werden.",
+            "options": [
+                "wird",
+                "werden",
+                "wurde",
+                "wurden"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g41_4",
+            "type": "multiple-choice",
+            "question": "In dieser Fabrik ___ wirklich viel gearbeitet.",
+            "options": [
+                "sind",
+                "wird",
+                "werden",
+                "ist"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g41_5",
+            "type": "multiple-choice",
+            "question": "Das Lied ___ von vielen Menschen gerne ___.",
+            "options": [
+                "wird - gesingt",
+                "wird - gesungen",
+                "ist - gesungen",
+                "wird - singen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g41_6",
+            "type": "multiple-choice",
+            "question": "Die Fenster ___ gestern grÃ¼ndlich ___.",
+            "options": [
+                "wurden - putzen",
+                "werden - geputzt",
+                "sind - geputzt",
+                "wurden - geputzt"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_passiv_grundlagen_7",
+            "type": "multiple-choice",
+            "question": "Das Haus ___ jetzt gebaut.",
+            "options": [
+                "werden",
+                "worden",
+                "wird",
+                "wurde"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_passiv_grundlagen_8",
+            "type": "multiple-choice",
+            "question": "Die Briefe ___ morgen geschrieben.",
+            "options": [
+                "wird",
+                "werden",
+                "wurden",
+                "worden"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_passiv_grundlagen_9",
+            "type": "multiple-choice",
+            "question": "Der Kuchen ___ von meiner Mutter gebacken.",
+            "options": [
+                "wurde",
+                "werden",
+                "wird",
+                "worden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_passiv_grundlagen_10",
+            "type": "multiple-choice",
+            "question": "Das Auto ___ repariert.",
+            "options": [
+                "worden",
+                "werden",
+                "wurde",
+                "wird"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_passiv_grundlagen_11",
+            "type": "multiple-choice",
+            "question": "Die Rechnungen ___ noch bezahlt.",
+            "options": [
+                "werden",
+                "worden",
+                "wird",
+                "wurden"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_passiv_grundlagen_12",
+            "type": "multiple-choice",
+            "question": "Hier ___ viel Kaffee getrunken.",
+            "options": [
+                "werden",
+                "worden",
+                "wurde",
+                "wird"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_passiv_grundlagen_13",
+            "type": "multiple-choice",
+            "question": "Der Termin ___ auf Freitag verschoben.",
+            "options": [
+                "werden",
+                "worden",
+                "wurde",
+                "wird"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_passiv_grundlagen_14",
+            "type": "multiple-choice",
+            "question": "Die Zimmer ___ jeden Tag gereinigt.",
+            "options": [
+                "werden",
+                "wird",
+                "wurde",
+                "worden"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_passiv_grundlagen_15",
+            "type": "multiple-choice",
+            "question": "Das Paket ___ heute geliefert.",
+            "options": [
+                "worden",
+                "wurde",
+                "wird",
+                "werden"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

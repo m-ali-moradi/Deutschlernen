@@ -1,0 +1,186 @@
+{
+    "topic": "KonditionalsÃ¤tze",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g27_1",
+            "type": "multiple-choice",
+            "question": "Wenn ich Zeit ___, würde ich dir helfen.",
+            "options": [
+                "hätte",
+                "habe",
+                "hatte",
+                "habet"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g27_2",
+            "type": "multiple-choice",
+            "question": "Was ___ du machen, wenn du reich wärst?",
+            "options": [
+                "würdest",
+                "würde",
+                "wirst",
+                "werdest"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g27_3",
+            "type": "multiple-choice",
+            "question": "Wenn ich es gewusst ___, wäre ich gekommen.",
+            "options": [
+                "hätte",
+                "hatte",
+                "habe",
+                "haben"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g27_4",
+            "type": "multiple-choice",
+            "question": "Wenn ich mehr Sport ___ ___, wäre ich heute viel fitter.",
+            "options": [
+                "treiben hätte",
+                "treibe würde",
+                "getrieben wäre",
+                "getrieben hätte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g27_5",
+            "type": "multiple-choice",
+            "question": "Ich ___ dir das Buch gerne geben, falls ich es morgen finde.",
+            "options": [
+                "wÃ¤re",
+                "werde",
+                "hÃ¤tte",
+                "wÃ¼rde"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g27_6",
+            "type": "multiple-choice",
+            "question": "Wärest du glücklicher, wenn du dauerhaft im Ausland ___ ___?",
+            "options": [
+                "gelebt hättest",
+                "leben würdest",
+                "leben wirst",
+                "lebst würdest"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_konditionalsaetze_7",
+            "type": "multiple-choice",
+            "question": "___ du früher gekommen wärst, hättest du ihn noch gesehen.",
+            "options": [
+                "Als",
+                "Ob",
+                "Falls",
+                "Wenn"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_konditionalsaetze_8",
+            "type": "multiple-choice",
+            "question": "___ er Zeit hat, kommt er vorbei.",
+            "options": [
+                "Dass",
+                "Als",
+                "Ob",
+                "Wenn"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_konditionalsaetze_9",
+            "type": "multiple-choice",
+            "question": "Ich helfe dir, ___ ich kann.",
+            "options": [
+                "wenn",
+                "dass",
+                "als",
+                "ob"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_konditionalsaetze_10",
+            "type": "multiple-choice",
+            "question": "Wir können draußen sitzen, ___ es nicht regnet.",
+            "options": [
+                "vorausgesetzt, dass",
+                "ob",
+                "nachdem",
+                "als"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_konditionalsaetze_11",
+            "type": "multiple-choice",
+            "question": "___ das Hotel nicht so teuer wäre, würden wir dort buchen.",
+            "options": [
+                "Als",
+                "Dass",
+                "Wenn",
+                "Ob"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_konditionalsaetze_12",
+            "type": "multiple-choice",
+            "question": "Ich komme mit, ___ im Auto noch Platz ist.",
+            "options": [
+                "denn",
+                "weil",
+                "sofern",
+                "als"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_konditionalsaetze_13",
+            "type": "multiple-choice",
+            "question": "___ ich gewusst hätte, dass du kommst, hätte ich gekocht.",
+            "options": [
+                "Ob",
+                "Als",
+                "Wenn",
+                "Falls"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_konditionalsaetze_14",
+            "type": "multiple-choice",
+            "question": "___ du mir hilfst, werde ich schneller fertig.",
+            "options": [
+                "Als",
+                "Wenn",
+                "Dass",
+                "Ob"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_konditionalsaetze_15",
+            "type": "multiple-choice",
+            "question": "___ wir uns beeilen, bekommen wir den Zug noch.",
+            "options": [
+                "Ob",
+                "Dass",
+                "Falls",
+                "Als"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

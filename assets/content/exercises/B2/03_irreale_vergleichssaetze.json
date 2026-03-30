@@ -1,0 +1,186 @@
+{
+    "topic": "Irreale VergleichssÃ¤tze",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g61_1",
+            "type": "multiple-choice",
+            "question": "Er sieht aus, als ___ er nicht geschlafen.",
+            "options": [
+                "hätte",
+                "hatte",
+                "hättest",
+                "hat"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g61_2",
+            "type": "multiple-choice",
+            "question": "Sie benahm sich, als ob sie mich nicht ___.",
+            "options": [
+                "kennte",
+                "kannte",
+                "kennt",
+                "kennen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g61_3",
+            "type": "multiple-choice",
+            "question": "Es scheint, als ___ alles in Ordnung.",
+            "options": [
+                "wäre",
+                "ist",
+                "sei",
+                "war"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g61_4",
+            "type": "multiple-choice",
+            "question": "Es klingt so, als ___ du mir absolut nicht ___.",
+            "options": [
+                "wirst - glauben",
+                "glaubst - glauben",
+                "würdest - glauben",
+                "hättest - geglaubt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g61_5",
+            "type": "multiple-choice",
+            "question": "Er tat so, als ___ er die richtige Antwort schon ___.",
+            "options": [
+                "wisse",
+                "wissen würde",
+                "wüsste",
+                "gewusst hätte"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g61_6",
+            "type": "multiple-choice",
+            "question": "Sie sieht heute wirklich aus, als ___ sie krank ___.",
+            "options": [
+                "sei",
+                "ist",
+                "wäre",
+                "würde sein"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_b2_1",
+            "type": "fill-blank",
+            "question": "Er tut so, als ___ er alles besser.",
+            "options": [
+                "wisse",
+                "weiß",
+                "wüsste",
+                "gewusst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_8",
+            "type": "multiple-choice",
+            "question": "Sie sieht aus, als ___ sie krank.",
+            "options": [
+                "ist",
+                "hätte",
+                "wäre",
+                "sei"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_9",
+            "type": "multiple-choice",
+            "question": "Er tut so, als ___ er alles wissen.",
+            "options": [
+                "wäre",
+                "würde",
+                "hätte",
+                "wird"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_10",
+            "type": "multiple-choice",
+            "question": "Du benimmst dich, als ___ du ein Kind.",
+            "options": [
+                "hättest",
+                "wärest",
+                "würdest",
+                "bist"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_11",
+            "type": "multiple-choice",
+            "question": "Es schien, als ___ es bald regnen.",
+            "options": [
+                "hätte",
+                "wäre",
+                "würde",
+                "wird"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_12",
+            "type": "multiple-choice",
+            "question": "Sie schaute mich an, als ___ sie mich nicht verstehen.",
+            "options": [
+                "würde",
+                "wäre",
+                "wird",
+                "hätte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_13",
+            "type": "multiple-choice",
+            "question": "Er spricht so perfekt, als ___ er Muttersprachler.",
+            "options": [
+                "würde",
+                "ist",
+                "sei",
+                "wäre"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_14",
+            "type": "multiple-choice",
+            "question": "Mir ist, als ___ ich das schon einmal erlebt.",
+            "options": [
+                "hätte",
+                "wäre",
+                "würde",
+                "habe"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_irreale_vergleichssaetze_15",
+            "type": "multiple-choice",
+            "question": "Er rannte, als ___ der Teufel hinter ihm her.",
+            "options": [
+                "sei",
+                "ist",
+                "wäre",
+                "hätte"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

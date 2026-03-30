@@ -1,0 +1,188 @@
+{
+    "topic": "Passiv",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g8_1",
+            "type": "multiple-choice",
+            "question": "Das Haus ___ im Jahr 1990 gebaut.",
+            "options": [
+                "wird",
+                "ist",
+                "wurde",
+                "war"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g8_2",
+            "type": "multiple-choice",
+            "question": "Die TÃ¼r ___ geschlossen. (Zustand: Jemand hat sie schon zugemacht)",
+            "options": [
+                "war",
+                "ist",
+                "wurde",
+                "wird"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g8_3",
+            "type": "multiple-choice",
+            "question": "Die E-Mail ___ gestern von ihm ___.",
+            "options": [
+                "wurde - geschrieben worden",
+                "war - geschrieben",
+                "hat - geschrieben werden",
+                "ist - geschrieben worden"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g8_4",
+            "type": "multiple-choice",
+            "question": "In der gestrigen Konferenz ___ ausführlich über die neuen Pläne ___.",
+            "options": [
+                "wird - diskutieren",
+                "ist - diskutiert",
+                "wurde - diskutieren",
+                "wurde - diskutiert"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g8_5",
+            "type": "multiple-choice",
+            "question": "Das komplizierte Problem ___ bereits vollständig gelöst.",
+            "options": [
+                "ist",
+                "wird",
+                "war",
+                "wurde"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g8_6",
+            "type": "multiple-choice",
+            "question": "Ich hoffe sehr, dass die anstrengende Arbeit bald ___ ___.",
+            "options": [
+                "fertiggestellt wurde",
+                "fertiggestellt wird",
+                "fertiggestellt ist",
+                "fertigstellt werde"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_fb_b2_3",
+            "type": "fill-blank",
+            "question": "Es ist wichtig, dass alle Mitarbeiter ___ werden. (informieren - Passiv)",
+            "options": [
+                "informiert sein",
+                "informiert werden",
+                "informiert",
+                "informieren"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_so_b2_4",
+            "type": "sentence-order",
+            "question": "Es wird erwartet, dass alle teilnehmen.",
+            "options": [
+                "dass",
+                "alle",
+                "teilnehmen",
+                "wird",
+                "Es",
+                "erwartet"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_passiv_9",
+            "type": "multiple-choice",
+            "question": "Das Haus ___ gerade ___ .",
+            "options": [
+                "wird bauen",
+                "ist gebaut",
+                "wird gebaut",
+                "wurde gebaut"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_passiv_10",
+            "type": "multiple-choice",
+            "question": "Die Fenster ___ gestern gereinigt.",
+            "options": [
+                "werden",
+                "wird",
+                "wurden",
+                "sind"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_passiv_11",
+            "type": "multiple-choice",
+            "question": "Das Gesetz ___ vom Parlament verabschiedet worden.",
+            "options": [
+                "wird",
+                "war",
+                "ist",
+                "wurde"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_passiv_12",
+            "type": "multiple-choice",
+            "question": "Solche Fehler müssen ___ ___ .",
+            "options": [
+                "können vermieden",
+                "vermieden werden",
+                "werden vermeiden",
+                "werden vermieden"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_passiv_13",
+            "type": "multiple-choice",
+            "question": "Hier darf nicht ___ ___ .",
+            "options": [
+                "rauchen werden",
+                "werden geraucht",
+                "geraucht werden",
+                "geraucht geworden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_passiv_14",
+            "type": "multiple-choice",
+            "question": "Die Tür ___ von alleine geschlossen.",
+            "options": [
+                "war",
+                "wurde",
+                "ist",
+                "wird"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_passiv_15",
+            "type": "multiple-choice",
+            "question": "Das Paket ___ noch heute zugestellt.",
+            "options": [
+                "werden",
+                "ist",
+                "wird",
+                "wurde"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

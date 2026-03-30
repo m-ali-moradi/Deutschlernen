@@ -1,0 +1,132 @@
+﻿{
+    "id":  "g21",
+    "title":  "Komparativ \u0026 Superlativ",
+    "level":  "A2",
+    "category":  "Adjektive",
+    "icon":  "📊",
+    "rule":  "Komparativ: +er (als). Superlativ: am +sten / der/die/das +ste.",
+    "explanation":  "Comparatives add -er, superlatives add -(e)sten. Many common adjectives get an Umlaut. Irregular: gut-besser-best, viel-mehr-meist.",
+    "examples":  [
+                     "Berlin ist größer als München.",
+                     "Das ist das beste Restaurant.",
+                     "Er ist nicht so groß wie sein Bruder.",
+                     "Deutsch ist genauso schwer wie Französisch."
+                 ],
+    "detail":  {
+                   "id":  "g21",
+                   "subtitle":  "Adjektive · Steigerung",
+                   "emoji":  "📊",
+                   "gradient":  [
+                                    "#F97316",
+                                    "#EF4444"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Komparativ \u0026 Superlativ",
+                                        "text":  "German comparatives add -er to the adjective, superlatives add -(e)sten. Many common adjectives also get an Umlaut (a→ä, o→ö, u→ü).",
+                                        "bullets":  [
+                                                        "Komparativ: Adjektiv + -er (+ als)",
+                                                        "Superlativ: am + Adjektiv + -sten",
+                                                        "Gleichheit: genauso ... wie / nicht so ... wie"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Regelmäßige Steigerung",
+                                        "color":  "orange",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "schnell",
+                                                         "right":  "schneller / am schnellsten"
+                                                     },
+                                                     {
+                                                         "left":  "klein",
+                                                         "right":  "kleiner / am kleinsten"
+                                                     },
+                                                     {
+                                                         "left":  "billig",
+                                                         "right":  "billiger / am billigsten"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Mit Umlaut",
+                                        "color":  "red",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "alt",
+                                                         "right":  "älter / am ältesten"
+                                                     },
+                                                     {
+                                                         "left":  "groß",
+                                                         "right":  "größer / am größten"
+                                                     },
+                                                     {
+                                                         "left":  "jung",
+                                                         "right":  "jünger / am jüngsten"
+                                                     },
+                                                     {
+                                                         "left":  "kalt",
+                                                         "right":  "kälter / am kältesten"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Unregelmäßig",
+                                        "color":  "amber",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "gut",
+                                                         "right":  "besser / am besten"
+                                                     },
+                                                     {
+                                                         "left":  "viel",
+                                                         "right":  "mehr / am meisten"
+                                                     },
+                                                     {
+                                                         "left":  "gern",
+                                                         "right":  "lieber / am liebsten"
+                                                     },
+                                                     {
+                                                         "left":  "hoch",
+                                                         "right":  "höher / am höchsten"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "orange",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Berlin ist größer als München.",
+                                                          "en":  "Berlin is bigger than Munich."
+                                                      },
+                                                      {
+                                                          "de":  "Deutsch ist genauso schwer wie Französisch.",
+                                                          "en":  "German is just as hard as French."
+                                                      },
+                                                      {
+                                                          "de":  "Das ist das beste Restaurant in der Stadt.",
+                                                          "en":  "That is the best restaurant in the city."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Komparativ: + er, Superlativ: am + sten.",
+                                                      "One-syllable adjectives often get Umlaut: alt → älter.",
+                                                      "als = than (comparison), wie = as (equality).",
+                                                      "Irregular: gut-besser-best, viel-mehr-meist."
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,134 @@
+﻿{
+    "id":  "g50",
+    "title":  "Subjektive Modalverben",
+    "level":  "C1",
+    "category":  "Verben",
+    "icon":  "🔧",
+    "rule":  "Modalverben drücken Vermutung aus: muss (sicher), dürfte (wahrscheinlich), kann (möglich).",
+    "explanation":  "Modal verbs have subjective meanings expressing degrees of certainty: müssen (certain), dürfen (probable), können (possible).",
+    "examples":  [
+                     "Er muss krank sein. (= sicher)",
+                     "Sie dürfte schon da sein. (= wahrscheinlich)",
+                     "Das kann stimmen. (= möglich)",
+                     "Er will das nicht gewusst haben."
+                 ],
+    "detail":  {
+                   "id":  "g50",
+                   "subtitle":  "Subjektive Modalverben · Vermutung und Distanz",
+                   "emoji":  "🔧",
+                   "gradient":  [
+                                    "#22C55E",
+                                    "#16A34A"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Subjektive Bedeutung von Modalverben",
+                                        "text":  "Auf C1-Niveau drücken Modalverben oft nicht mehr Fähigkeit, Erlaubnis oder Pflicht aus. Stattdessen bewerten sie, wie sicher der Sprecher eine Aussage einschätzt, oder sie geben Aussagen mit Distanz wieder. Deshalb nennt man sie subjektive Modalverben.",
+                                        "bullets":  [
+                                                        "müssen = fast sichere Schlussfolgerung",
+                                                        "dürfte = wahrscheinliche Vermutung",
+                                                        "kann / könnte = Möglichkeit",
+                                                        "sollen / wollen = berichtete Aussage oder Behauptung"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Sicherheitsstufen",
+                                        "headers":  [
+                                                        "Form",
+                                                        "Bedeutung",
+                                                        "Stärke"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Er muss zu Hause sein.",
+                                                         "logische Schlussfolgerung",
+                                                         "sehr hoch"
+                                                     ],
+                                                     [
+                                                         "Er dürfte zu Hause sein.",
+                                                         "wahrscheinliche Vermutung",
+                                                         "hoch"
+                                                     ],
+                                                     [
+                                                         "Er kann zu Hause sein.",
+                                                         "möglich",
+                                                         "mittel"
+                                                     ],
+                                                     [
+                                                         "Er könnte zu Hause sein.",
+                                                         "vorsichtige Möglichkeit",
+                                                         "niedriger / abgeschwächt"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Bedeutungsunterschiede",
+                                        "color":  "green",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das Licht ist an. Er muss also zu Hause sein.",
+                                                          "en":  "The light is on. He must be at home."
+                                                      },
+                                                      {
+                                                          "de":  "Sie dürfte den Zug bereits genommen haben.",
+                                                          "en":  "She has probably already taken the train."
+                                                      },
+                                                      {
+                                                          "de":  "Das kann stimmen, aber ich bin nicht sicher.",
+                                                          "en":  "That may be true, but I\u0027m not sure."
+                                                      },
+                                                      {
+                                                          "de":  "Er will davon nichts gewusst haben.",
+                                                          "en":  "He claims not to have known anything about it."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Objektiv vs. subjektiv",
+                                        "headers":  [
+                                                        "Satz",
+                                                        "Funktion"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Du musst jetzt gehen.",
+                                                         "Pflicht (objektiv)"
+                                                     ],
+                                                     [
+                                                         "Er muss jetzt gehen.",
+                                                         "Schlussfolgerung des Sprechers (subjektiv)"
+                                                     ],
+                                                     [
+                                                         "Sie darf länger bleiben.",
+                                                         "Erlaubnis (objektiv)"
+                                                     ],
+                                                     [
+                                                         "Sie dürfte schon angekommen sein.",
+                                                         "Wahrscheinlichkeit (subjektiv)"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Frag dich: Beschreibt das Modalverb eine echte Pflicht oder Erlaubnis, oder zeigt es nur, was der Sprecher für wahrscheinlich hält?",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Subjektive Modalverben drücken Sicherheit, Wahrscheinlichkeit, Möglichkeit oder berichtete Aussagen aus.",
+                                                      "Je sicherer der Sprecher ist, desto stärker ist die Modalaussage.",
+                                                      "sollen und wollen schaffen oft Distanz zu weitergegebenen Informationen.",
+                                                      "Diese Formen sind häufig in Journalismus, Interpretation und formalen Argumentationen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

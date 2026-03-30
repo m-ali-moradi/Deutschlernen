@@ -1,0 +1,121 @@
+﻿{
+    "id":  "g38",
+    "title":  "Negation",
+    "level":  "A1",
+    "category":  "Satzbau",
+    "icon":  "🚫",
+    "rule":  "\u0027nicht\u0027 negiert Verben/Adjektive. \u0027kein\u0027 negiert Nomen mit ein/eine oder ohne Artikel.",
+    "explanation":  "\u0027nicht\u0027 negates verbs, adjectives, adverbs, and specific parts of a sentence. \u0027kein\u0027 replaces ein/eine or zero article before nouns. The position of \u0027nicht\u0027 depends on what exactly is being negated.",
+    "examples":  [
+                     "Ich komme nicht.",
+                     "Das ist nicht gut.",
+                     "Ich habe kein Auto.",
+                     "Er trinkt keinen Kaffee."
+                 ],
+    "detail":  {
+                   "id":  "g38",
+                   "subtitle":  "Satzbau · Verneinung",
+                   "emoji":  "🚫",
+                   "gradient":  [
+                                    "#EF4444",
+                                    "#DC2626"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Verneinung · Negation",
+                                        "text":  "German uses \u0027nicht\u0027 to negate verbs, adjectives, adverbs, or a specific sentence element, and \u0027kein\u0027 to negate nouns.",
+                                        "bullets":  [
+                                                        "nicht = negates verbs, adjectives, adverbs, specific elements",
+                                                        "kein = negates nouns (replaces ein/–)",
+                                                        "Position of nicht: before the element you negate, or near the end when the whole statement is negated"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "nicht vs. kein",
+                                        "headers":  [
+                                                        "",
+                                                        "Affirmativ",
+                                                        "Negation"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Verb",
+                                                         "Ich lerne.",
+                                                         "Ich lerne nicht."
+                                                     ],
+                                                     [
+                                                         "Adj.",
+                                                         "Das ist gut.",
+                                                         "Das ist nicht gut."
+                                                     ],
+                                                     [
+                                                         "ein-Nomen",
+                                                         "Ich habe ein Auto.",
+                                                         "Ich habe kein Auto."
+                                                     ],
+                                                     [
+                                                         "Pl. Nomen",
+                                                         "Ich habe Bücher.",
+                                                         "Ich habe keine Bücher."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "nicht in der Praxis",
+                                        "color":  "red",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich komme nicht.",
+                                                          "en":  "I\u0027m not coming."
+                                                      },
+                                                      {
+                                                          "de":  "Er ist nicht müde.",
+                                                          "en":  "He is not tired."
+                                                      },
+                                                      {
+                                                          "de":  "Ich gehe nicht heute, sondern morgen.",
+                                                          "en":  "I\u0027m not going today, but tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Das ist nicht mein Buch.",
+                                                          "en":  "That is not my book."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "kein in der Praxis",
+                                        "color":  "orange",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich habe kein Geld.",
+                                                          "en":  "I have no money."
+                                                      },
+                                                      {
+                                                          "de":  "Er hat keine Zeit.",
+                                                          "en":  "He has no time."
+                                                      },
+                                                      {
+                                                          "de":  "Wir haben keine Bücher.",
+                                                          "en":  "We have no books."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Use \u0027kein\u0027 to negate nouns with ein/–.",
+                                                      "kein follows the same endings as ein: kein, keine, keinen, keinem...",
+                                                      "With whole-sentence negation, \u0027nicht\u0027 is often near the end: Ich komme heute nicht.",
+                                                      "\u0027nicht\u0027 stands before adjectives, adverbs, infinitives/participles, and specific elements: nicht gut, nicht heute, nicht gekommen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

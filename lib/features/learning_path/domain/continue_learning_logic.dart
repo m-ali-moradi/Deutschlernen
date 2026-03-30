@@ -1,5 +1,5 @@
 import 'dashboard_logic.dart';
-import '../../../core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
 
 class ContinueLearningItem {
   const ContinueLearningItem({
@@ -27,7 +27,7 @@ List<ContinueLearningItem> buildContinueLearningItems({
   final items = <ContinueLearningItem>[];
 
   // Logic to build suggestions based on state...
-  
+
   if (dashboardSummary != null && dashboardSummary.vocabularyDueCount > 0) {
     items.add(const ContinueLearningItem(
       sectionKey: 'vocabulary',
@@ -50,3 +50,6 @@ List<ContinueLearningItem> buildContinueLearningItems({
 
   return items;
 }
+
+
+

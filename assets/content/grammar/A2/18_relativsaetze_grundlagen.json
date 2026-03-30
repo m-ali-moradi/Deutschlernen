@@ -1,0 +1,115 @@
+﻿{
+    "id":  "g18",
+    "title":  "Relativsätze (Grundlagen)",
+    "level":  "A2",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "Relativpronomen: Genus/Numerus vom Bezugswort, Kasus aus dem Relativsatz.",
+    "explanation":  "Relative clauses add information about a noun. The pronoun matches the noun in gender/number but takes its case from its role in the relative clause.",
+    "examples":  [
+                     "Der Mann, der dort steht, ist mein Chef.",
+                     "Die Frau, die ich kenne, arbeitet bei Siemens.",
+                     "Das Buch, das ich lese, ist interessant.",
+                     "Die Leute, denen ich half, waren dankbar."
+                 ],
+    "detail":  {
+                   "id":  "g18",
+                   "subtitle":  "Nebensätze · Relativsätze",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#3B82F6"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Relativsätze · Relative Clauses",
+                                        "text":  "Relative clauses give additional information about a noun. The relative pronoun agrees in gender and number with the noun, but its case depends on its role in the relative clause."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Relativpronomen",
+                                        "headers":  [
+                                                        "",
+                                                        "Maskulin",
+                                                        "Feminin",
+                                                        "Neutrum",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nom.",
+                                                         "der",
+                                                         "die",
+                                                         "das",
+                                                         "die"
+                                                     ],
+                                                     [
+                                                         "Akk.",
+                                                         "den",
+                                                         "die",
+                                                         "das",
+                                                         "die"
+                                                     ],
+                                                     [
+                                                         "Dat.",
+                                                         "dem",
+                                                         "der",
+                                                         "dem",
+                                                         "denen"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Nominativ Relativsätze",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Mann, der dort steht, ist mein Chef.",
+                                                          "en":  "The man who stands there is my boss."
+                                                      },
+                                                      {
+                                                          "de":  "Die Frau, die dort arbeitet, ist nett.",
+                                                          "en":  "The woman who works there is nice."
+                                                      },
+                                                      {
+                                                          "de":  "Das Kind, das spielt, ist mein Sohn.",
+                                                          "en":  "The child who is playing is my son."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Akkusativ Relativsätze",
+                                        "color":  "blue",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Mann, den ich kenne, heißt Peter.",
+                                                          "en":  "The man whom I know is called Peter."
+                                                      },
+                                                      {
+                                                          "de":  "Die Frau, die ich gesehen habe, ist Ärztin.",
+                                                          "en":  "The woman whom I saw is a doctor."
+                                                      },
+                                                      {
+                                                          "de":  "Das Buch, das ich lese, ist spannend.",
+                                                          "en":  "The book that I\u0027m reading is exciting."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Gender/number: matches the noun it refers to.",
+                                                      "Case: determined by the role inside the relative clause.",
+                                                      "Verb goes to the END of the relative clause.",
+                                                      "Always separated by commas."
+                                                  ]
+                                    }
+                                ]
+               }
+}

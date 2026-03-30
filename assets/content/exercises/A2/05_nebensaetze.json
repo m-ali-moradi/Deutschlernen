@@ -1,0 +1,186 @@
+{
+    "topic": "NebensÃ¤tze",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g3_1",
+            "type": "multiple-choice",
+            "question": "Ich lerne Deutsch, weil ich in Deutschland ___.",
+            "options": [
+                "lebt",
+                "leben",
+                "lebe",
+                "bin"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g3_2",
+            "type": "multiple-choice",
+            "question": "Sie sagt, dass sie morgen ___.",
+            "options": [
+                "kommt",
+                "kommen",
+                "kommst",
+                "komme"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g3_3",
+            "type": "multiple-choice",
+            "question": "___ es regnet, bleibe ich zu Hause.",
+            "options": [
+                "Weil",
+                "Dass",
+                "Obwohl",
+                "Wenn"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g3_4",
+            "type": "multiple-choice",
+            "question": "Ich weiß leider nicht, ob er heute ___.",
+            "options": [
+                "kommen",
+                "kommt",
+                "kommst",
+                "komme"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g3_5",
+            "type": "multiple-choice",
+            "question": "Obwohl es sehr kalt war, ___ er spazieren.",
+            "options": [
+                "ging",
+                "ginge",
+                "geht",
+                "gegangen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g3_6",
+            "type": "multiple-choice",
+            "question": "Bevor ich schlafen gehe, ___ ich noch ein Glas Wasser.",
+            "options": [
+                "trinke",
+                "trinkst",
+                "trinkt",
+                "trinken"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_nebensaetze_7",
+            "type": "multiple-choice",
+            "question": "Ich glaube, dass er heute nicht ___.",
+            "options": [
+                "kommt",
+                "gekommen",
+                "kommen",
+                "komme"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_nebensaetze_8",
+            "type": "multiple-choice",
+            "question": "Weißt du, wann der Film ___?",
+            "options": [
+                "fängt an",
+                "anfängt",
+                "anfangen",
+                "anfinge"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_nebensaetze_9",
+            "type": "multiple-choice",
+            "question": "Er ist müde, weil er wenig ___ hat.",
+            "options": [
+                "schlafen",
+                "schlief",
+                "schläft",
+                "geschlafen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_nebensaetze_10",
+            "type": "multiple-choice",
+            "question": "Ich frage sie, ob sie morgen Zeit ___.",
+            "options": [
+                "hat",
+                "hast",
+                "haben",
+                "habt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_nebensaetze_11",
+            "type": "multiple-choice",
+            "question": "Das ist die Frau, die hier ___.",
+            "options": [
+                "arbeitest",
+                "arbeitet",
+                "arbeiten",
+                "arbeitetet"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_nebensaetze_12",
+            "type": "multiple-choice",
+            "question": "Wenn das Wetter schön ist, ___ wir schwimmen.",
+            "options": [
+                "geht",
+                "gehen",
+                "gehe",
+                "gehst"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_nebensaetze_13",
+            "type": "multiple-choice",
+            "question": "Ich bleibe im Bett, weil ich krank ___.",
+            "options": [
+                "sein",
+                "sind",
+                "bin",
+                "ist"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_nebensaetze_14",
+            "type": "multiple-choice",
+            "question": "Sie sagt, dass sie keine Lust ___.",
+            "options": [
+                "hat",
+                "habe",
+                "haben",
+                "hast"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_nebensaetze_15",
+            "type": "multiple-choice",
+            "question": "Ich hoffe, dass alles gut ___.",
+            "options": [
+                "werden",
+                "werde",
+                "wird",
+                "wirst"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

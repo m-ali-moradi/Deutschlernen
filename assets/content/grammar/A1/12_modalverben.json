@@ -1,0 +1,212 @@
+﻿{
+    "id":  "g12",
+    "title":  "Modalverben",
+    "level":  "A1",
+    "category":  "Verben",
+    "icon":  "🔧",
+    "rule":  "Modalverb (konjugiert, Pos. 2) + Infinitiv (am Ende).",
+    "explanation":  "Modal verbs (können, müssen, wollen, sollen, dürfen, möchten) express ability, obligation, or desire. The main verb goes to the end as infinitive.",
+    "examples":  [
+                     "Ich kann Deutsch sprechen.",
+                     "Du musst morgen arbeiten.",
+                     "Darf ich hier rauchen?",
+                     "Ich möchte einen Kaffee."
+                 ],
+    "detail":  {
+                   "id":  "g12",
+                   "subtitle":  "Verben · Modalverben",
+                   "emoji":  "🔧",
+                   "gradient":  [
+                                    "#F43F5E",
+                                    "#EC4899"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Modalverben · Modal Verbs",
+                                        "text":  "Modal verbs express ability, permission, obligation, or desire. They are used with a second verb in the infinitive, which goes to the END of the sentence.",
+                                        "bullets":  [
+                                                        "können = can, be able to",
+                                                        "müssen = must, have to",
+                                                        "wollen = want to",
+                                                        "sollen = should, supposed to",
+                                                        "dürfen = may, be allowed to",
+                                                        "möchten = would like to"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Satzstruktur",
+                                        "formula":  "Subjekt + Modalverb (konj.) + ... + Infinitiv",
+                                        "colors":  [
+                                                       "#F43F5E",
+                                                       "#EC4899"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "können / müssen / wollen",
+                                        "color":  "rose",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "kann / muss / will"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "kannst / musst / willst"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie/es",
+                                                         "right":  "kann / muss / will"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "können / müssen / wollen"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "könnt / müsst / wollt"
+                                                     },
+                                                     {
+                                                         "left":  "Sie/sie",
+                                                         "right":  "können / müssen / wollen"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Modal verbs have NO ending for ich and er/sie/es in Präsens: ich kann, er muss, sie will.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "dürfen / sollen / mögen",
+                                        "headers":  [
+                                                        "",
+                                                        "dürfen",
+                                                        "sollen",
+                                                        "mögen"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "ich",
+                                                         "darf",
+                                                         "soll",
+                                                         "mag"
+                                                     ],
+                                                     [
+                                                         "du",
+                                                         "darfst",
+                                                         "sollst",
+                                                         "magst"
+                                                     ],
+                                                     [
+                                                         "er/sie/es",
+                                                         "darf",
+                                                         "soll",
+                                                         "mag"
+                                                     ],
+                                                     [
+                                                         "wir",
+                                                         "dürfen",
+                                                         "sollen",
+                                                         "mögen"
+                                                     ],
+                                                     [
+                                                         "ihr",
+                                                         "dürft",
+                                                         "sollt",
+                                                         "mögt"
+                                                     ],
+                                                     [
+                                                         "Sie/sie",
+                                                         "dürfen",
+                                                         "sollen",
+                                                         "mögen"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Bedeutungsunterschiede",
+                                        "headers":  [
+                                                        "Modalverb",
+                                                        "Bedeutung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "können",
+                                                         "ability / possibility",
+                                                         "Ich kann schwimmen."
+                                                     ],
+                                                     [
+                                                         "müssen",
+                                                         "necessity / obligation",
+                                                         "Du musst lernen."
+                                                     ],
+                                                     [
+                                                         "wollen",
+                                                         "want / intention",
+                                                         "Er will gehen."
+                                                     ],
+                                                     [
+                                                         "sollen",
+                                                         "should / suggestion",
+                                                         "Du sollst mehr schlafen."
+                                                     ],
+                                                     [
+                                                         "dürfen",
+                                                         "permission",
+                                                         "Darf ich fragen?"
+                                                     ],
+                                                     [
+                                                         "möchten",
+                                                         "polite wish",
+                                                         "Ich möchte Wasser."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich kann Deutsch sprechen.",
+                                                          "en":  "I can speak German."
+                                                      },
+                                                      {
+                                                          "de":  "Du musst morgen arbeiten.",
+                                                          "en":  "You must work tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Sie will nach Berlin fahren.",
+                                                          "en":  "She wants to go to Berlin."
+                                                      },
+                                                      {
+                                                          "de":  "Darf ich hier rauchen?",
+                                                          "en":  "May I smoke here?"
+                                                      },
+                                                      {
+                                                          "de":  "Ich möchte einen Kaffee.",
+                                                          "en":  "I would like a coffee."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "The modal verb is conjugated and sits in Position 2.",
+                                                      "The main verb stays in the INFINITIVE at the END of the sentence.",
+                                                      "ich and er/sie/es have the SAME form (no ending).",
+                                                      "möchten is Konjunktiv II of mögen — used as a polite modal."
+                                                  ]
+                                    }
+                                ]
+               }
+}

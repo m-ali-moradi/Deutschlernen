@@ -1,0 +1,79 @@
+﻿{
+    "id":  "g55",
+    "title":  "Komplexe Attribute",
+    "level":  "C1",
+    "category":  "Satzbau",
+    "icon":  "📐",
+    "rule":  "Erweiterte Attribute vor dem Nomen, typisch für Fachsprache.",
+    "explanation":  "Complex pre-noun attributes compress relative clauses into extended adjective/participle phrases. Very common in academic and legal texts.",
+    "examples":  [
+                     "die seit langem diskutierte Frage",
+                     "der von allen unterschriebene Vertrag",
+                     "das in der letzten Sitzung beschlossene Gesetz"
+                 ],
+    "detail":  {
+                   "id":  "g55",
+                   "subtitle":  "Komplexe Attribute · Verdichtete Information",
+                   "emoji":  "📐",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#6D28D9"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Komplexe Attribute vor dem Nomen",
+                                        "text":  "Komplexe Attribute verdichten viele Informationen in der Nominalgruppe. Statt eines Relativsatzes nach dem Nomen stellt das Deutsche oft Partizipien und Ergänzungen vor das Nomen."
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Relativsatz → Attribut",
+                                        "from":  {
+                                                     "label":  "RELATIVSATZ",
+                                                     "text":  "der Vertrag, der von allen Beteiligten unterschrieben wurde"
+                                                 },
+                                        "to":  {
+                                                   "label":  "ATTRIBUT",
+                                                   "text":  "der von allen Beteiligten unterschriebene Vertrag"
+                                               },
+                                        "note":  "Die Information wandert vor das Nomen"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Komplexe Attribute",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "die seit Jahren diskutierte Reform",
+                                                          "en":  "the reform discussed for years"
+                                                      },
+                                                      {
+                                                          "de":  "das in der letzten Sitzung beschlossene Gesetz",
+                                                          "en":  "the law passed in the last meeting"
+                                                      },
+                                                      {
+                                                          "de":  "die von Experten empfohlene Lösung",
+                                                          "en":  "the solution recommended by experts"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Diese Strukturen sind in akademischem und amtlichem Deutsch sehr häufig. In der Alltagssprache ist oft ein vollständiger Relativsatz klarer.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Je weiter Informationen vor das Nomen rücken, desto dichter wird der Stil.",
+                                                      "Partizipformen verhalten sich wie Adjektive und erhalten Adjektivendungen.",
+                                                      "Komplexe Attribute sind besonders typisch für formelles Schriftdeutsch.",
+                                                      "Wenn die Lesbarkeit leidet, ist ein Relativsatz oft die klarere Wahl."
+                                                  ]
+                                    }
+                                ]
+               }
+}

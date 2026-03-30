@@ -1,0 +1,115 @@
+﻿{
+    "id":  "g43",
+    "title":  "n-Deklination",
+    "level":  "B1",
+    "category":  "Fälle",
+    "icon":  "📋",
+    "rule":  "Schwache Nomen (maskulin) erhalten -n/-en in allen Fällen außer Nominativ Singular.",
+    "explanation":  "Weak masculine nouns add -n or -en in Akkusativ, Dativ, and Genitiv singular. Includes: der Junge, der Kunde, der Kollege, der Herr, der Student, der Mensch.",
+    "examples":  [
+                     "Ich sehe den Studenten.",
+                     "Er hilft dem Kollegen.",
+                     "Das Büro des Herrn ist dort.",
+                     "Ich kenne den Kunden."
+                 ],
+    "detail":  {
+                   "id":  "g43",
+                   "subtitle":  "Fälle · Schwache Nomen",
+                   "emoji":  "⚖️",
+                   "gradient":  [
+                                    "#F43F5E",
+                                    "#EF4444"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Schwache Nomen · Weak Nouns",
+                                        "text":  "A special group of masculine nouns add -(e)n in ALL cases except Nominativ singular. These are called weak nouns (n-Deklination).",
+                                        "bullets":  [
+                                                        "These are ALL masculine nouns",
+                                                        "Add -n or -en in Gen., Dat., Akk. singular; the plural follows the noun\u0027s normal plural form",
+                                                        "Typical endings: -e (der Löwe), -ent (der Student), -ist (der Journalist), -and/-ant, -at, -ot, -et"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Deklination: der Mensch",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Singular",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nom.",
+                                                         "der Mensch",
+                                                         "die Menschen"
+                                                     ],
+                                                     [
+                                                         "Akk.",
+                                                         "den Menschen",
+                                                         "die Menschen"
+                                                     ],
+                                                     [
+                                                         "Dat.",
+                                                         "dem Menschen",
+                                                         "den Menschen"
+                                                     ],
+                                                     [
+                                                         "Gen.",
+                                                         "des Menschen",
+                                                         "der Menschen"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Beispiele schwacher Nomen",
+                                        "color":  "red",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "der Student",
+                                                         "right":  "des/dem/den Studenten"
+                                                     },
+                                                     {
+                                                         "left":  "der Journalist",
+                                                         "right":  "des/dem/den Journalisten"
+                                                     },
+                                                     {
+                                                         "left":  "der Kollege",
+                                                         "right":  "des/dem/den Kollegen"
+                                                     },
+                                                     {
+                                                         "left":  "der Löwe",
+                                                         "right":  "des/dem/den Löwen"
+                                                     },
+                                                     {
+                                                         "left":  "der Herr",
+                                                         "right":  "des Herrn, dem/den Herrn"
+                                                     },
+                                                     {
+                                                         "left":  "der Mensch",
+                                                         "right":  "des/dem/den Menschen"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "A helpful trick: if the noun can refer to a male person and ends in -e, -ent, -ist, -and, -at, -ot, -et → it\u0027s probably a weak noun!",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Weak nouns: add -(e)n in EVERY case except Nominativ singular.",
+                                                      "All weak nouns are MASCULINE (+ das Herz as special case).",
+                                                      "Common endings: -e, -ent, -ist, -and, -ant, -at.",
+                                                      "Watch out: Der Kollege → Ich kenne den Kollegen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

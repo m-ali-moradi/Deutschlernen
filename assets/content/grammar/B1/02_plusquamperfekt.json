@@ -1,0 +1,88 @@
+﻿{
+    "id":  "g24",
+    "title":  "Plusquamperfekt",
+    "level":  "B1",
+    "category":  "Zeiten",
+    "icon":  "⏪",
+    "rule":  "hatte/war (Präteritum) + Partizip II",
+    "explanation":  "Plusquamperfekt describes an action before another past action. Formed with hatte/war + Partizip II. It often appears with connectors like 'nachdem', 'bevor', or 'als', but it can also appear without them.",
+    "examples":  [
+                     "Nachdem ich gegessen hatte, ging ich spazieren.",
+                     "Er war schon gegangen, als ich ankam.",
+                     "Sie hatte das Buch gelesen, bevor sie den Film sah."
+                 ],
+    "detail":  {
+                   "id":  "g24",
+                   "subtitle":  "Zeiten · Plusquamperfekt",
+                   "emoji":  "⏪",
+                   "gradient":  [
+                                    "#D97706",
+                                    "#A16207"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Das Plusquamperfekt · Past Perfect",
+                                        "text":  "The Plusquamperfekt describes an action that happened BEFORE another past action. It\u0027s formed with hatte/war + Partizip II."
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Formel",
+                                        "formula":  "hatte/war (Präteritum) + ... + Partizip II",
+                                        "colors":  [
+                                                       "#D97706",
+                                                       "#A16207"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Zeitfolge · Sequence of Events",
+                                        "from":  {
+                                                     "label":  "ZUERST (Plusquamperfekt)",
+                                                     "text":  "Nachdem er gegessen hatte, ..."
+                                                 },
+                                        "to":  {
+                                                   "label":  "DANN (Präteritum/Perfekt)",
+                                                   "text":  "... ging er spazieren."
+                                               },
+                                        "note":  "Plusquamperfekt = the earlier action"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "amber",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Nachdem ich gegessen hatte, ging ich spazieren.",
+                                                          "en":  "After I had eaten, I went for a walk."
+                                                      },
+                                                      {
+                                                          "de":  "Er war schon gegangen, als ich ankam.",
+                                                          "en":  "He had already left when I arrived."
+                                                      },
+                                                      {
+                                                          "de":  "Sie hatte das Buch gelesen, bevor sie den Film sah.",
+                                                          "en":  "She had read the book before she saw the film."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Plusquamperfekt is often used with time connectors such as \u0027nachdem\u0027, \u0027bevor\u0027, or \u0027als\u0027. Use it for the earlier of two past events, even without a connector.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "hatte (for haben-verbs) / war (for sein-verbs) + Partizip II.",
+                                                      "Used for the EARLIER of two past events.",
+                                                      "Often appears with \u0027nachdem\u0027, \u0027bevor\u0027, or \u0027als\u0027, but not only with \u0027nachdem\u0027.",
+                                                      "Same Partizip II as Perfekt — only the auxiliary changes to Präteritum."
+                                                  ]
+                                    }
+                                ]
+               }
+}

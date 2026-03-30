@@ -1,0 +1,186 @@
+{
+    "topic": "Personalpronomen",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g11_1",
+            "type": "multiple-choice",
+            "question": "Das ist Tom. ___ lernt Deutsch.",
+            "options": [
+                "Sie",
+                "Ich",
+                "Wir",
+                "Er"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g11_2",
+            "type": "multiple-choice",
+            "question": "Kommst ___ aus Spanien?",
+            "options": [
+                "wir",
+                "Sie",
+                "du",
+                "ihr"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g11_3",
+            "type": "multiple-choice",
+            "question": "Wie heißen ___? (formell)",
+            "options": [
+                "ihr",
+                "du",
+                "Sie",
+                "sie"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g11_4",
+            "type": "multiple-choice",
+            "question": "Das ist Maria. ___ kommt aus Italien.",
+            "options": [
+                "Sie",
+                "Es",
+                "Er",
+                "Wir"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g11_5",
+            "type": "multiple-choice",
+            "question": "Wir sind müde. ___ gehen jetzt schlafen.",
+            "options": [
+                "Ich",
+                "Sie",
+                "Ihr",
+                "Wir"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g11_6",
+            "type": "multiple-choice",
+            "question": "Wo genau wohnst ___?",
+            "options": [
+                "wir",
+                "sie",
+                "du",
+                "er"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_personalpronomen_7",
+            "type": "multiple-choice",
+            "question": "Das ist mein Bruder. ___ heißt Tom.",
+            "options": [
+                "Es",
+                "Wir",
+                "Er",
+                "Sie"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_personalpronomen_8",
+            "type": "multiple-choice",
+            "question": "Das ist Maria. ___ kommt aus Italien.",
+            "options": [
+                "Er",
+                "Sie",
+                "Es",
+                "Wir"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_personalpronomen_9",
+            "type": "multiple-choice",
+            "question": "Das Kind weint. ___ ist müde.",
+            "options": [
+                "Er",
+                "Sie",
+                "Es",
+                "Ihn"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_personalpronomen_10",
+            "type": "multiple-choice",
+            "question": "Kommst ___ aus Deutschland?",
+            "options": [
+                "sie",
+                "ihr",
+                "du",
+                "er"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_personalpronomen_11",
+            "type": "multiple-choice",
+            "question": "Wo seid ___? (ihr/wir)",
+            "options": [
+                "du",
+                "sie",
+                "ihr",
+                "wir"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_personalpronomen_12",
+            "type": "multiple-choice",
+            "question": "Gehen ___ ins Kino? (wir)",
+            "options": [
+                "er",
+                "ihr",
+                "es",
+                "wir"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_personalpronomen_13",
+            "type": "multiple-choice",
+            "question": "Arbeitest ___ heute? (du)",
+            "options": [
+                "du",
+                "sie",
+                "ihr",
+                "er"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_personalpronomen_14",
+            "type": "multiple-choice",
+            "question": "Das sind meine Eltern. ___ leben in Berlin.",
+            "options": [
+                "Er",
+                "Sie",
+                "Wir",
+                "Ihr"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_personalpronomen_15",
+            "type": "multiple-choice",
+            "question": "___ lerne Deutsch.",
+            "options": [
+                "Ich",
+                "Sie",
+                "Du",
+                "Er"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

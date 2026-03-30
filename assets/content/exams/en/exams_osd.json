@@ -1,0 +1,470 @@
+[
+  {
+    "id": "osd-a1",
+    "title": "ÖSD Zertifikat A1",
+    "provider": "ÖSD",
+    "level": "A1",
+    "description": "Standard for entry and residence requirements for Austrian residency.",
+    "structure": [
+      {
+        "name": "Lesen (Reading)",
+        "duration": "30 Min.",
+        "description": "Read announcements, simple emails, and short information texts.",
+        "parts": [
+          {
+            "title": "Part 1: Emails/Messages",
+            "description": "Read 2 short emails or messages and decide if 5 statements are True or False."
+          },
+          {
+            "title": "Part 2: Selective Reading",
+            "description": "Read 5 short descriptions of people/situations and match them to 5 corresponding locations/ads (Selective reading)."
+          },
+          {
+            "title": "Part 3: Signs/Advertisements",
+            "description": "Read notices, signs, or short advertisements and answer 5 multiple-choice questions (a, b, c)."
+          }
+        ]
+      },
+      {
+        "name": "Hören (Listening)",
+        "duration": "10 Min.",
+        "description": "Understand short announcements and messages.",
+        "parts": [
+          {
+            "title": "Part 1: Telephone Calls",
+            "description": "Listen to 5 short recordings (e.g., telephone calls) and answer 5 multiple-choice questions (visual/text). Heard twice."
+          },
+          {
+            "title": "Part 2: Radio News",
+            "description": "Listen to a longer recording (e.g., radio news) and decide if 5 statements are True or False. Heard once."
+          },
+          {
+            "title": "Part 3: Announcements",
+            "description": "Listen to 5 short announcements and match them to 5 pictures or categories. Heard once."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "20 Min.",
+        "description": "Fill out personal information and write simple notes.",
+        "parts": [
+          {
+            "title": "Task 1: Form Filling",
+            "description": "Complete a form (e.g., registration) with 5 personal details based on a provided text."
+          },
+          {
+            "title": "Task 2: Personal Note",
+            "description": "Write a short personal note/email (approx. 30 words) responding to 3 points in a prompt."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "10 Min.",
+        "description": "Talk about yourself and ask questions.",
+        "parts": [
+          {
+            "title": "Part 1: Introduction",
+            "description": "Introduction: Give relevant personal information based on keywords (Name, Age, Country, etc.)."
+          },
+          {
+            "title": "Part 2: Questions/Answers",
+            "description": "Ask and answer questions about personal life using visual prompt cards."
+          },
+          {
+            "title": "Part 3: Requests/Suggestions",
+            "description": "Formula requests or make suggestions based on symbols/images; partner responds."
+          }
+        ]
+      }
+    ],
+    "grading": [
+      {
+        "points": "88–100",
+        "grade": "Very Good"
+      },
+      {
+        "points": "75–87",
+        "grade": "Good"
+      },
+      {
+        "points": "60–74",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "0–59",
+        "grade": "Fail"
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Information and Model Test",
+        "description": "Information and Model Test for ÖSD certificate A1 exam",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-a1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "osd-a2",
+    "title": "ÖSD Zertifikat A2",
+    "provider": "ÖSD",
+    "level": "A2",
+    "description": "Communicating on routine tasks and exchanges on familiar and common matters.",
+    "structure": [
+      {
+        "name": "Lesen (Reading)",
+        "duration": "30 Min.",
+        "description": "Read messages, signs, and advertisements.",
+        "parts": [
+          {
+            "title": "Part 1: Global Understanding",
+            "description": "Read 5 short messages/emails and answer 5 multiple-choice questions (Global understanding)."
+          },
+          {
+            "title": "Part 2: Selective Reading",
+            "description": "Read newspaper ads or directory listings and match them to 5 specific requirements (Selective reading)."
+          },
+          {
+            "title": "Part 3: Detailed Understanding",
+            "description": "Read notices, signs, or short articles and identify 5 specific details (True/False or MCQ)."
+          }
+        ]
+      },
+      {
+        "name": "Hören (Listening)",
+        "duration": "15 Min.",
+        "description": "Understand phone calls, radio, or direct spoken information.",
+        "parts": [
+          {
+            "title": "Part 1: Telephone Announcements",
+            "description": "Listen to 5 telephone announcements or messages and answer 5 multiple-choice questions (a, b, c). Heard once."
+          },
+          {
+            "title": "Part 2: Interview/Dialogue",
+            "description": "Listen to a longer dialogue (e.g., interview) and decide if 5 statements are True or False. Heard once."
+          },
+          {
+            "title": "Part 3: Radio Clips/News",
+            "description": "Listen to 5 radio announcements or bits of news and answer 5 multiple-choice questions (Selective listening). Heard twice."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "30 Min.",
+        "description": "Write messages and fill out more complex forms.",
+        "parts": [
+          {
+            "title": "Task 1: Personal Email/Letter",
+            "description": "Write a short email/letter (approx. 40 words) for a given situation, covering 3 bullet points."
+          },
+          {
+            "title": "Task 2: Form/Questionnaire",
+            "description": "Fill out a more complex form or questionnaire based on description (e.g., job application details)."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Exchange information on personal and common topics.",
+        "parts": [
+          {
+            "title": "Part 1: Short Presentation",
+            "description": "Give a short presentation (approx 2 mins) about yourself and answer follow-up questions."
+          },
+          {
+            "title": "Part 2: Dialogue",
+            "description": "Pick a prompt/topic and engage in a dialogue with your partner about your experiences."
+          },
+          {
+            "title": "Part 3: Joint Planning",
+            "description": "Collaborate with your partner to plan something (e.g., a meeting or an outing) and reach a consensus."
+          }
+        ]
+      }
+    ],
+    "grading": [
+      {
+        "points": " 80 -90",
+        "grade": "sehr gut"
+      },
+      {
+        "points": " 64 -79",
+        "grade": "gut"
+      },
+      {
+        "points": " 45 -63",
+        "grade": "bestanden"
+      },
+      {
+        "points": " 0 -44",
+        "grade": "nicht bestanden"
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Information and Model Test",
+        "description": "Information and Model Test for ÖSD Zertifikat A2 exam",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-a2-za2/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "osd-b1",
+    "title": "ÖSD Zertifikat B1",
+    "provider": "ÖSD",
+    "level": "B1",
+    "description": "Identical structure to Goethe-Zertifikat B1. Modular format.",
+    "structure": [
+      {
+        "name": "Lesen (Reading)",
+        "duration": "65 Min.",
+        "parts": [
+          {
+            "title": "Part 1: Experience Reports",
+            "description": "Blog posts/reports - 6 True/False."
+          },
+          {
+            "title": "Part 2: Newspaper Articles",
+            "description": "Newspaper reports - 6 MCQs (a, b, c)."
+          },
+          {
+            "title": "Part 3: Advertisements",
+            "description": "Match ads to situations (7 ads, 10 situations)."
+          },
+          {
+            "title": "Part 4: Forum Opinions",
+            "description": "Forum opinions - Identify authors' stance (Pro/Contra)."
+          },
+          {
+            "title": "Part 5: Instructions/Rules",
+            "description": "Rules/Instructions - 4 MCQs (a, b, c)."
+          }
+        ]
+      },
+      {
+        "name": "Hören (Listening)",
+        "duration": "40 Min.",
+        "parts": [
+          {
+            "title": "Part 1: Short Announcements",
+            "description": "Short announcements - MCQ + True/False (5 items). Heard twice."
+          },
+          {
+            "title": "Part 2: Presentation",
+            "description": "Lecture/Presentation - 5 MCQs. Heard once."
+          },
+          {
+            "title": "Part 3: Conversation",
+            "description": "Dialogue between 2 people - 7 True/False. Heard once."
+          },
+          {
+            "title": "Part 4: Radio Discussion",
+            "description": "Radio discussion - 8 speaker attributions. Heard twice."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "60 Min.",
+        "parts": [
+          {
+            "title": "Task 1: Personal Email",
+            "description": "Personal email (80 words, 3 points)."
+          },
+          {
+            "title": "Task 2: Forum Post",
+            "description": "Forum post (80 words, expressing opinion)."
+          },
+          {
+            "title": "Task 3: Formal Email",
+            "description": "Formal email (40 words, e.g. apology)."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "parts": [
+          {
+            "title": "Part 1: Joint Planning",
+            "description": "Planning something together."
+          },
+          {
+            "title": "Part 2: Oral Presentation",
+            "description": "Presentation on a topic (pros/cons)."
+          },
+          {
+            "title": "Part 3: Feedback/Questions",
+            "description": "Q&A session on the presentation."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Information and Model Test",
+        "description": "Information and Model Test for ÖSD Zertifikat B1 exam",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-b1-zb1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "osd-b2",
+    "title": "ÖSD Zertifikat B2",
+    "provider": "ÖSD",
+    "level": "B2",
+    "description": "General German for work or study. Advanced proficiency.",
+    "structure": [
+      {
+        "name": "Lesen (Reading)",
+        "duration": "90 Min.",
+        "description": "Understand complex texts and detailed information.",
+        "parts": [
+          {
+            "title": "Part 1: Global Understanding",
+            "description": "Read 5 short texts/articles and match to corresponding titles/headlines (Selective understanding)."
+          },
+          {
+            "title": "Part 2: Detailed Reading",
+            "description": "Read a longer magazine or newspaper article and answer 5 multiple-choice questions (Detailed reading)."
+          },
+          {
+            "title": "Part 3: Selective Reading",
+            "description": "Scan advertisements or specialized information and match correctly (Global reading)."
+          },
+          {
+            "title": "Part 4: Vocabulary/Grammar",
+            "description": "Read a text with gaps and fill them using correct prepositions or grammar (Advanced vocabulary/grammar)."
+          }
+        ]
+      },
+      {
+        "name": "Hören (Listening)",
+        "duration": "30 Min.",
+        "description": "Understand radio shows, interviews, and public talk.",
+        "parts": [
+          {
+            "title": "Part 1: Radio Interview/Report",
+            "description": "Listen to a radio interview or report and answer 10 multiple-choice or short-answer questions. Heard twice."
+          },
+          {
+            "title": "Part 2: Short Recordings",
+            "description": "Listen to 5 short recordings (news, weather, etc.) and answer 5 multiple-choice questions. Heard once."
+          },
+          {
+            "title": "Part 3: Identifying Opinions",
+            "description": "Listen to a discussion and decide if 5 statements are True or False. Heard once."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "90 Min.",
+        "description": "Express opinions on social or technical issues.",
+        "parts": [
+          {
+            "title": "Task 1: Personal Essay",
+            "description": "Write a detailed personal message or essay (approx. 200 words) on a provided topic."
+          },
+          {
+            "title": "Task 2: Formal Message",
+            "description": "Respond to a professional or institutional email/request formally (approx. 120 words)."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15-20 Min.",
+        "description": "Advanced interaction and monologues. Typically 2 participants.",
+        "parts": [
+          {
+            "title": "Part 1: Detailed Presentation",
+            "description": "Give a detailed presentation (approx 4 mins) on a complex topic and answer questions."
+          },
+          {
+            "title": "Part 2: Critical Discussion",
+            "description": "Engage in a critical discussion with your partner about a specific theme and exchange arguments."
+          },
+          {
+            "title": "Part 3: Negotiating/Consensus",
+            "description": "Negotiate or solve a complex task together while defending your position."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Information and Model Test",
+        "description": "Information and Model Test for ÖSD Zertifikat B2 exam",
+        "url": "https://www.osd.at/die-pruefungen/osd-prufungen/oesd-zertifikat-b2-zb2/",
+        "type": "url"
+      }
+    ]
+  }
+]

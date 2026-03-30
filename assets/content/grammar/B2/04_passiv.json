@@ -1,0 +1,125 @@
+﻿{
+    "id":  "g8",
+    "title":  "Passiv",
+    "level":  "B2",
+    "category":  "Zeiten",
+    "icon":  "⏰",
+    "rule":  "Vorgangspassiv: werden + Partizip II / Zustandspassiv: sein + Partizip II",
+    "explanation":  "German has two types of passive. Vorgangspassiv (process) uses \u0027werden\u0027 + past participle. Zustandspassiv (state) uses \u0027sein\u0027 + past participle.",
+    "examples":  [
+                     "Das Auto wird repariert. (Vorgang)",
+                     "Das Auto ist repariert. (Zustand)",
+                     "Der Brief wurde gestern geschrieben.",
+                     "Die Tür ist geöffnet."
+                 ],
+    "detail":  {
+                   "id":  "g8",
+                   "subtitle":  "Passiv · Vorgang und Zustand",
+                   "emoji":  "🏗️",
+                   "gradient":  [
+                                    "#F97316",
+                                    "#EA580C"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Passiv auf B2-Niveau",
+                                        "text":  "B2 learners should distinguish process passive (Vorgangspassiv) from state passive (Zustandspassiv), choose the right tense, and understand when the agent is omitted because the action matters more than the doer."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Vorgangspassiv vs. Zustandspassiv",
+                                        "headers":  [
+                                                        "Typ",
+                                                        "Form",
+                                                        "Fokus"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Vorgangspassiv",
+                                                         "werden + Partizip II",
+                                                         "the process/action"
+                                                     ],
+                                                     [
+                                                         "Zustandspassiv",
+                                                         "sein + Partizip II",
+                                                         "the resulting state"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Kontext",
+                                        "color":  "orange",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Bericht wird morgen geschrieben.",
+                                                          "en":  "The report is being written tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Der Bericht ist schon geschrieben.",
+                                                          "en":  "The report is already written."
+                                                      },
+                                                      {
+                                                          "de":  "Das Problem wurde schnell gelöst.",
+                                                          "en":  "The problem was solved quickly."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Passiv in allen Zeitstufen",
+                                        "headers":  [
+                                                        "Zeitstufe",
+                                                        "Vorgangspassiv",
+                                                        "Zustandspassiv"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Präsens",
+                                                         "wird geschrieben",
+                                                         "ist geschrieben"
+                                                     ],
+                                                     [
+                                                         "Präteritum",
+                                                         "wurde geschrieben",
+                                                         "war geschrieben"
+                                                     ],
+                                                     [
+                                                         "Perfekt",
+                                                         "ist geschrieben worden",
+                                                         "ist geschrieben gewesen"
+                                                     ],
+                                                     [
+                                                         "Plusquamperfekt",
+                                                         "war geschrieben worden",
+                                                         "war geschrieben gewesen"
+                                                     ],
+                                                     [
+                                                         "Futur I",
+                                                         "wird geschrieben werden",
+                                                         "wird geschrieben sein"
+                                                     ],
+                                                     [
+                                                         "Futur II",
+                                                         "wird geschrieben worden sein",
+                                                         "—"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "werden + Partizip II = action/process.",
+                                                      "sein + Partizip II = state/result.",
+                                                      "Use von + Dativ for the agent only when it matters.",
+                                                      "Passive is common in reports, manuals, and formal writing.",
+                                                      "Perfekt Passiv: ist + Part. II + worden (NOT geworden!)."
+                                                  ]
+                                    }
+                                ]
+               }
+}

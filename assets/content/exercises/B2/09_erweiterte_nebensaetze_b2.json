@@ -1,0 +1,186 @@
+{
+    "topic": "Erweiterte NebensÃ¤tze (B2)",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g34_1",
+            "type": "multiple-choice",
+            "question": "Man lernt am besten, ___ man viel spricht.",
+            "options": [
+                "indem",
+                "wobei",
+                "dadurch",
+                "während"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g34_2",
+            "type": "multiple-choice",
+            "question": "___ er reich ist, ist er unglücklich.",
+            "options": [
+                "Wobei",
+                "Dadurch",
+                "Während",
+                "Indem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g34_3",
+            "type": "multiple-choice",
+            "question": "Er arbeitet viel, ___ seine Gesundheit leidet.",
+            "options": [
+                "dass",
+                "wobei",
+                "indem",
+                "dadurch"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g34_4",
+            "type": "multiple-choice",
+            "question": "Er verbesserte sein Deutsch erheblich, ___ er täglich Radio hörte.",
+            "options": [
+                "insofern",
+                "indem",
+                "wodurch",
+                "wobei"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g34_5",
+            "type": "multiple-choice",
+            "question": "Es kam zu einem Unfall, ___ glücklicherweise niemand verletzt wurde.",
+            "options": [
+                "während",
+                "wodurch",
+                "indem",
+                "wobei"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g34_6",
+            "type": "multiple-choice",
+            "question": "___ er im Moment sehr beschäftigt war, nahm er sich Zeit für uns.",
+            "options": [
+                "Obschon",
+                "Indem",
+                "Wobei",
+                "Dadurch"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_7",
+            "type": "multiple-choice",
+            "question": "___ er in Berlin wohnte, hat er viel gelernt.",
+            "options": [
+                "Sobald",
+                "Indem",
+                "Während",
+                "Damit"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_8",
+            "type": "multiple-choice",
+            "question": "___ ich die Hausaufgaben gemacht hatte, ging ich ins Kino.",
+            "options": [
+                "Als",
+                "Bevor",
+                "Während",
+                "Nachdem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_9",
+            "type": "multiple-choice",
+            "question": "Er lernt Vokabeln, ___ er laut liest.",
+            "options": [
+                "weil",
+                "als",
+                "damit",
+                "indem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_10",
+            "type": "multiple-choice",
+            "question": "Wir fahren schnell, ___ wir nicht zu spät kommen.",
+            "options": [
+                "indem",
+                "dass",
+                "damit",
+                "um"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_11",
+            "type": "multiple-choice",
+            "question": "___ ich ankomme, rufe ich dich an.",
+            "options": [
+                "Während",
+                "Indem",
+                "Sobald",
+                "Nachdem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_12",
+            "type": "multiple-choice",
+            "question": "___ es regnet, gehen wir nicht spazieren.",
+            "options": [
+                "Damit",
+                "Da",
+                "Indem",
+                "Um"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_13",
+            "type": "multiple-choice",
+            "question": "___ er kein Geld hat, kauft er das Auto nicht.",
+            "options": [
+                "Während",
+                "Da",
+                "Obwohl",
+                "Sobald"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_14",
+            "type": "multiple-choice",
+            "question": "Er tut so, ___ ___ er alles wüsste.",
+            "options": [
+                "als dass",
+                "als",
+                "als ob",
+                "als wie"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_erweiterte_nebensaetze_b2_15",
+            "type": "multiple-choice",
+            "question": "Je mehr er übt, ___ besser wird er.",
+            "options": [
+                "desto",
+                "als",
+                "wie",
+                "umso"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

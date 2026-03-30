@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../core/content/sync/sync_service.dart';
-import '../../../../core/content/sync/connectivity_service.dart';
-import '../../../../core/database/app_database.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../../../shared/widgets/app_state_view.dart';
-import '../../domain/grammar_providers.dart';
-import '../../domain/grammar_view_providers.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/widgets/app_state_view.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_providers.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_view_providers.dart';
 import 'grammar_widgets.dart'; // Provides GrammarTopicCard
 
 /// Renders the list of grammar topics grouped by level.
@@ -29,45 +27,7 @@ class GrammarTopicList extends ConsumerWidget {
   });
 
   /// The pre-filtered and pre-grouped topics from `groupedGrammarTopicsProvider`.
-  final Map<String, List<SyncEntry<GrammarTopic>>> groupedTopics;
-
-  void _showDownloadDialog(
-      BuildContext context, WidgetRef ref, SyncEntry<GrammarTopic> entry) {
-    final strings = AppUiText(ref.read(displayLanguageProvider));
-    if (!(ref.read(connectivityProvider).valueOrNull ?? false)) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(strings.offlineMessage()),
-          duration: const Duration(seconds: 2),
-        ),
-      );
-      return;
-    }
-
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: Text(entry.displayTitle),
-        content: Text(strings.grammarLabel('download_prompt')),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx),
-            child: Text(strings.grammarLabel('cancel')),
-          ),
-          TextButton(
-            onPressed: () async {
-              Navigator.pop(ctx);
-              final lang = ref.read(displayLanguageProvider);
-              await ref
-                  .read(syncServiceProvider)
-                  .downloadGrammarTopic(entry.id, languageCode: lang);
-            },
-            child: Text(strings.grammarLabel('download')),
-          ),
-        ],
-      ),
-    );
-  }
+  final Map<String, List<GrammarTopic>> groupedTopics;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -120,10 +80,8 @@ class GrammarTopicList extends ConsumerWidget {
                         'showFilters': showFilters ? '1' : '0',
                       },
                     );
-                    context.go(uri.toString());
+                    context.push(uri.toString());
                   },
-                  onDownload: () =>
-                      _showDownloadDialog(context, ref, topicEntry),
                 )),
           ],
         );

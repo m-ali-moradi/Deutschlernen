@@ -1,0 +1,217 @@
+﻿{
+    "id":  "g57",
+    "title":  "Zahlen \u0026 Zeitangaben",
+    "level":  "A1",
+    "category":  "Satzbau",
+    "icon":  "🔢",
+    "rule":  "Kardinalzahlen (eins, zwei…), Ordinalzahlen (erste, zweite…). Uhrzeiten mit \u0027um\u0027 + Uhrzeit.",
+    "explanation":  "Numbers, dates, and time expressions are essential for daily life. German numbers follow specific patterns, and telling time uses both formal (24h) and informal (12h) systems.",
+    "examples":  [
+                     "Es ist halb drei. (2:30)",
+                     "Heute ist der dritte März.",
+                     "Ich habe am fünfzehnten Mai Geburtstag.",
+                     "Der Zug fährt um vierzehn Uhr dreißig."
+                 ],
+    "detail":  {
+                   "id":  "g57",
+                   "subtitle":  "Zahlen · Zeitangaben",
+                   "emoji":  "🔢",
+                   "gradient":  [
+                                    "#0EA5E9",
+                                    "#0284C7"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Zahlen \u0026 Zeitangaben · Numbers \u0026 Time",
+                                        "text":  "Numbers, dates, and time expressions are essential for daily communication. German numbers follow specific patterns, and you need to know both formal (24h) and informal (12h) time telling.",
+                                        "bullets":  [
+                                                        "Kardinalzahlen: eins, zwei, drei ... (counting)",
+                                                        "Ordinalzahlen: erste, zweite, dritte ... (ordering)",
+                                                        "Uhrzeiten: formal (14:30) vs. informal (halb drei)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Kardinalzahlen 1–20",
+                                        "color":  "sky",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "1–5",
+                                                         "right":  "eins, zwei, drei, vier, fünf"
+                                                     },
+                                                     {
+                                                         "left":  "6–10",
+                                                         "right":  "sechs, sieben, acht, neun, zehn"
+                                                     },
+                                                     {
+                                                         "left":  "11–12",
+                                                         "right":  "elf, zwölf"
+                                                     },
+                                                     {
+                                                         "left":  "13–19",
+                                                         "right":  "dreizehn, vierzehn ... neunzehn"
+                                                     },
+                                                     {
+                                                         "left":  "20",
+                                                         "right":  "zwanzig"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Numbers 21–99 are said \u0027backwards\u0027: 25 = fünfundzwanzig (five-and-twenty). This trips up many learners!",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Große Zahlen",
+                                        "color":  "blue",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "21",
+                                                         "right":  "einundzwanzig"
+                                                     },
+                                                     {
+                                                         "left":  "34",
+                                                         "right":  "vierunddreißig"
+                                                     },
+                                                     {
+                                                         "left":  "100",
+                                                         "right":  "(ein)hundert"
+                                                     },
+                                                     {
+                                                         "left":  "1.000",
+                                                         "right":  "(ein)tausend"
+                                                     },
+                                                     {
+                                                         "left":  "1.000.000",
+                                                         "right":  "eine Million"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Ordinalzahlen",
+                                        "headers":  [
+                                                        "Zahl",
+                                                        "Ordinal",
+                                                        "Datum-Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "1.",
+                                                         "erste",
+                                                         "der erste Januar"
+                                                     ],
+                                                     [
+                                                         "2.",
+                                                         "zweite",
+                                                         "der zweite Februar"
+                                                     ],
+                                                     [
+                                                         "3.",
+                                                         "dritte",
+                                                         "der dritte März"
+                                                     ],
+                                                     [
+                                                         "7.",
+                                                         "siebte",
+                                                         "der siebte Juli"
+                                                     ],
+                                                     [
+                                                         "20.",
+                                                         "zwanzigste",
+                                                         "der zwanzigste Mai"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Ordinal numbers 1–19: add -te (except erste, dritte, siebte, achte). From 20: add -ste: zwanzigste, einunddreißigste.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Uhrzeiten · Telling Time",
+                                        "headers":  [
+                                                        "Formal (24h)",
+                                                        "Informal",
+                                                        "Bedeutung"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "14:00 Uhr",
+                                                         "zwei Uhr",
+                                                         "2:00 PM"
+                                                     ],
+                                                     [
+                                                         "14:15 Uhr",
+                                                         "Viertel nach zwei",
+                                                         "2:15 PM"
+                                                     ],
+                                                     [
+                                                         "14:30 Uhr",
+                                                         "halb drei",
+                                                         "2:30 PM"
+                                                     ],
+                                                     [
+                                                         "14:45 Uhr",
+                                                         "Viertel vor drei",
+                                                         "2:45 PM"
+                                                     ],
+                                                     [
+                                                         "8:05 Uhr",
+                                                         "fünf nach acht",
+                                                         "8:05 AM"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "\u0027halb drei\u0027 = 2:30 (half TO three), NOT 3:30! This is the opposite of English \u0027half past\u0027. It\u0027s the #1 mistake learners make!",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Alltag",
+                                        "color":  "sky",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wie spät ist es? — Es ist halb drei.",
+                                                          "en":  "What time is it? — It\u0027s 2:30."
+                                                      },
+                                                      {
+                                                          "de":  "Heute ist der dritte März.",
+                                                          "en":  "Today is the third of March."
+                                                      },
+                                                      {
+                                                          "de":  "Ich habe am fünfzehnten Mai Geburtstag.",
+                                                          "en":  "My birthday is on the 15th of May."
+                                                      },
+                                                      {
+                                                          "de":  "Der Zug fährt um vierzehn Uhr dreißig.",
+                                                          "en":  "The train departs at 2:30 PM."
+                                                      },
+                                                      {
+                                                          "de":  "Ich brauche zweihundertfünfzig Gramm Käse.",
+                                                          "en":  "I need 250 grams of cheese."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Numbers 21–99: ones digit + und + tens: einundzwanzig, dreiunddreißig.",
+                                                      "halb drei = 2:30 (half TO three, not half PAST three!).",
+                                                      "Dates use ordinal numbers: am dritten Mai (on the 3rd of May).",
+                                                      "Formal time uses 24h clock: 15:00 Uhr = drei Uhr nachmittags.",
+                                                      "Use um for specific times: Der Kurs beginnt um 9 Uhr."
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,212 @@
+﻿{
+    "topic": "Satzbau",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g9_1",
+            "type": "multiple-choice",
+            "question": "Welcher Satz ist richtig?",
+            "options": [
+                "Heute gehe ich ins Kino.",
+                "Ich heute gehe ins Kino.",
+                "Gehe ich heute ins Kino.",
+                "Heute ich ins Kino gehe."
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g9_2",
+            "type": "multiple-choice",
+            "question": "___ du aus Berlin?",
+            "options": [
+                "Kommt",
+                "Kommst",
+                "Kommen",
+                "Komm"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g9_3",
+            "type": "multiple-choice",
+            "question": "Wo ___ der Bahnhof?",
+            "options": [
+                "ist",
+                "sind",
+                "sein",
+                "bist"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g9_4",
+            "type": "multiple-choice",
+            "question": "Woher ___ du?",
+            "options": [
+                "komme",
+                "kommen",
+                "kommst",
+                "kommt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g9_5",
+            "type": "multiple-choice",
+            "question": "Heute ___ ich leider keine Zeit.",
+            "options": [
+                "hat",
+                "habe",
+                "hast",
+                "haben"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g9_6",
+            "type": "multiple-choice",
+            "question": "Ich ___ am liebsten Pizza.",
+            "options": [
+                "esst",
+                "isst",
+                "esse",
+                "essen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_a1_3",
+            "type": "fill-blank",
+            "question": "Wie ___ du?",
+            "options": [
+                "heißt",
+                "heißst",
+                "heiße",
+                "heißen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_fb_a1_5",
+            "type": "fill-blank",
+            "question": "Wo ___ der Bahnhof?",
+            "options": [
+                "sind",
+                "ist",
+                "sein",
+                "bist"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_so_a1_1",
+            "type": "sentence-order",
+            "question": "Ich komme aus Deutschland.",
+            "options": [
+                "aus",
+                "Deutschland",
+                "Ich",
+                "komme"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_2",
+            "type": "sentence-order",
+            "question": "Das ist ein Apfel.",
+            "options": [
+                "ist",
+                "Apfel",
+                "ein",
+                "Das"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_4",
+            "type": "sentence-order",
+            "question": "Ich lerne Deutsch.",
+            "options": [
+                "Deutsch",
+                "lerne",
+                "Ich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_15",
+            "type": "sentence-order",
+            "question": "Trinkst du heute einen Kaffee?",
+            "options": [
+                "Kaffee?",
+                "einen",
+                "heute",
+                "du",
+                "Trinkst"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_16",
+            "type": "sentence-order",
+            "question": "Wir gehen heute ins Kino.",
+            "options": [
+                "Kino",
+                "ins",
+                "heute",
+                "gehen",
+                "Wir"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_17",
+            "type": "sentence-order",
+            "question": "Wo wohnst du jetzt?",
+            "options": [
+                "jetzt?",
+                "du",
+                "wohnst",
+                "Wo"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_18",
+            "type": "sentence-order",
+            "question": "Ich esse gerne Pizza.",
+            "options": [
+                "Pizza",
+                "gerne",
+                "esse",
+                "Ich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_19",
+            "type": "sentence-order",
+            "question": "Bist du heute glücklich?",
+            "options": [
+                "glücklich?",
+                "heute",
+                "du",
+                "Bist"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_so_a1_20",
+            "type": "sentence-order",
+            "question": "Sie lernen sehr schnell Deutsch.",
+            "options": [
+                "Deutsch",
+                "schnell",
+                "sehr",
+                "lernen",
+                "Sie"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

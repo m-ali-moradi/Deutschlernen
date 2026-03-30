@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../data/models/grammar_topic_type.dart';
-import '../../domain/grammar_providers.dart';
-import '../../domain/grammar_view_providers.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/features/grammar/data/models/grammar_topic_type.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_providers.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_view_providers.dart';
 import 'grammar_widgets.dart'; // Provides GrammarLevelChip
 
 /// Renders the level and category filters for grammar topics.
@@ -103,3 +103,6 @@ class GrammarFilters extends ConsumerWidget {
     );
   }
 }
+
+
+

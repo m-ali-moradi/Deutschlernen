@@ -1,0 +1,186 @@
+{
+    "topic": "Genitiv-PrÃ¤positionen",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g45_1",
+            "type": "multiple-choice",
+            "question": "___ des schlechten Wetters blieben wir zu Hause.",
+            "options": [
+                "Aufgrund",
+                "Während",
+                "Wegen",
+                "Trotz"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g45_2",
+            "type": "multiple-choice",
+            "question": "___ des Konzerts darf man nicht filmen.",
+            "options": [
+                "Wegen",
+                "Außerhalb",
+                "Trotz",
+                "Während"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g45_3",
+            "type": "multiple-choice",
+            "question": "___ Proteste wurde das Gesetz verabschiedet.",
+            "options": [
+                "Trotz den",
+                "Während der",
+                "Wegen der",
+                "Trotz der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g45_4",
+            "type": "multiple-choice",
+            "question": "___ der langandauernden Bauarbeiten ist die Straße gesperrt.",
+            "options": [
+                "Aufgrund",
+                "Während",
+                "Jenseits",
+                "Trotz"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g45_5",
+            "type": "multiple-choice",
+            "question": "___ eines Monats muss die Rechnung vollständig bezahlt werden.",
+            "options": [
+                "Innerhalb",
+                "Wegen",
+                "Außerhalb",
+                "Trotz"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g45_6",
+            "type": "multiple-choice",
+            "question": "Er kaufte das Auto schlussendlich ___ des extrem hohen Preises.",
+            "options": [
+                "trotz",
+                "aufgrund",
+                "während",
+                "wegen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv-praepositionen_7",
+            "type": "multiple-choice",
+            "question": "___ des schlechten Wetters bleiben wir hier.",
+            "options": [
+                "Wegen",
+                "Außerhalb",
+                "Trotz",
+                "Während"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv-praepositionen_8",
+            "type": "multiple-choice",
+            "question": "___ des Regens gingen wir spazieren.",
+            "options": [
+                "Während",
+                "Aufgrund",
+                "Trotz",
+                "Wegen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv-praepositionen_9",
+            "type": "multiple-choice",
+            "question": "___ der Arbeitszeit ist privates Surfen verboten.",
+            "options": [
+                "Wegen",
+                "Trotz",
+                "Während",
+                "Außerhalb"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv-praepositionen_10",
+            "type": "multiple-choice",
+            "question": "___ seines Alters ist er noch sehr fit.",
+            "options": [
+                "Aufgrund",
+                "Während",
+                "Trotz",
+                "Wegen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv-praepositionen_11",
+            "type": "multiple-choice",
+            "question": "___ der Stadt gibt es einen großen Wald.",
+            "options": [
+                "Innerhalb",
+                "Außerhalb",
+                "Wegen",
+                "Trotz"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_genitiv-praepositionen_12",
+            "type": "multiple-choice",
+            "question": "Das Restaurant befindet sich ___ des Hotels.",
+            "options": [
+                "wegen",
+                "außerhalb",
+                "innerhalb",
+                "trotz"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv-praepositionen_13",
+            "type": "multiple-choice",
+            "question": "___ meiner Krankheit konnte ich nicht kommen.",
+            "options": [
+                "Während",
+                "Trotz",
+                "Aufgrund",
+                "Außerhalb"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv-praepositionen_14",
+            "type": "multiple-choice",
+            "question": "Er wohnt ___ des Flusses.",
+            "options": [
+                "trotz",
+                "während",
+                "wegen",
+                "jenseits"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_genitiv-praepositionen_15",
+            "type": "multiple-choice",
+            "question": "Er parkte das Auto ___ des Grundstücks.",
+            "options": [
+                "innerhalb",
+                "trotz",
+                "wegen",
+                "außerhalb"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

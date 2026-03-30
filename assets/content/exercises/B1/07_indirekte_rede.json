@@ -1,0 +1,186 @@
+{
+    "topic": "Indirekte Rede",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g30_1",
+            "type": "multiple-choice",
+            "question": "Er sagt, dass er heute nicht ___.",
+            "options": [
+                "komme",
+                "kommst",
+                "kommt",
+                "kommen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g30_2",
+            "type": "multiple-choice",
+            "question": "Sie erzählt, sie ___ keine Zeit.",
+            "options": [
+                "hätte",
+                "hat",
+                "habe",
+                "haben"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g30_3",
+            "type": "multiple-choice",
+            "question": "Der Chef fragte, ob wir fertig ___.",
+            "options": [
+                "sind",
+                "sei",
+                "sein",
+                "seien"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g30_4",
+            "type": "multiple-choice",
+            "question": "Der Wetterbericht sagt heute, es ___ morgen stark regnen.",
+            "options": [
+                "werden",
+                "wird",
+                "werde",
+                "wÃ¼rde"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g30_5",
+            "type": "multiple-choice",
+            "question": "Sie fragte mich gestern, ob ich Hunger ___.",
+            "options": [
+                "haben",
+                "hätte",
+                "habe",
+                "habet"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g30_6",
+            "type": "multiple-choice",
+            "question": "Er behauptet steif und fest, er ___ das Auto nicht gestohlen.",
+            "options": [
+                "habe",
+                "habet",
+                "haben",
+                "hÃ¤tte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_indirekte_rede_7",
+            "type": "multiple-choice",
+            "question": "Er sagt, er ___ keine Zeit. (Gegenwart)",
+            "options": [
+                "hat",
+                "habe",
+                "hätte",
+                "habt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_indirekte_rede_8",
+            "type": "multiple-choice",
+            "question": "Sie meint, sie ___ nach Berlin fahren. (Gegenwart)",
+            "options": [
+                "führe",
+                "fahre",
+                "fahrt",
+                "fährt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_indirekte_rede_9",
+            "type": "multiple-choice",
+            "question": "Der Lehrer sagt, wir ___ mehr lernen.",
+            "options": [
+                "sollen",
+                "sollst",
+                "sollt",
+                "sollten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_indirekte_rede_10",
+            "type": "multiple-choice",
+            "question": "Er fragte mich, ob ich Zeit ___.",
+            "options": [
+                "hast",
+                "hätte",
+                "hat",
+                "habe"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_indirekte_rede_11",
+            "type": "multiple-choice",
+            "question": "Sie erzählte, sie ___ im Kino gewesen.",
+            "options": [
+                "ist",
+                "wäre",
+                "sind",
+                "sei"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_indirekte_rede_12",
+            "type": "multiple-choice",
+            "question": "Der Arzt meint, du ___ im Bett bleiben.",
+            "options": [
+                "sollst",
+                "solle",
+                "soll",
+                "sollen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_indirekte_rede_13",
+            "type": "multiple-choice",
+            "question": "Sie sagt, sie ___ das Buch schon gelesen.",
+            "options": [
+                "hätte",
+                "habe",
+                "habt",
+                "hat"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_indirekte_rede_14",
+            "type": "multiple-choice",
+            "question": "Er behauptet, er ___ gestern krank gewesen.",
+            "options": [
+                "sind",
+                "sei",
+                "wäre",
+                "ist"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_indirekte_rede_15",
+            "type": "multiple-choice",
+            "question": "Die Frau sagt, ihr Auto ___ in der Werkstatt.",
+            "options": [
+                "wäre",
+                "sei",
+                "ist",
+                "sind"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

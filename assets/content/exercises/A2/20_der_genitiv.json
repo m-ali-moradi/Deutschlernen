@@ -1,0 +1,186 @@
+{
+    "topic": "Der Genitiv",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_new_der_g_1",
+            "type": "multiple-choice",
+            "question": "Das ist das Auto ___ Vaters.",
+            "options": [
+                "meinem",
+                "meines",
+                "mein",
+                "meinen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_der_g_2",
+            "type": "multiple-choice",
+            "question": "Die Farbe ___ Hauses ist rot.",
+            "options": [
+                "der",
+                "dem",
+                "den",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_der_g_3",
+            "type": "multiple-choice",
+            "question": "Die Tür ___ Wohnung steht offen.",
+            "options": [
+                "die",
+                "den",
+                "der",
+                "dem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_der_g_4",
+            "type": "multiple-choice",
+            "question": "Wegen ___ Sturms bleiben wir drinnen.",
+            "options": [
+                "der",
+                "des",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_der_g_5",
+            "type": "fill-blank",
+            "question": "Trotz ___ schlechten Wetters gehen wir spazieren.",
+            "options": [
+                "dem",
+                "den",
+                "der",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_der_g_6",
+            "type": "multiple-choice",
+            "question": "Hier sind die Spielzeuge ___ Kinder.",
+            "options": [
+                "des",
+                "den",
+                "die",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_der_g_7",
+            "type": "multiple-choice",
+            "question": "Der Garten ___ Großeltern ist wunderschön.",
+            "options": [
+                "meinen",
+                "meine",
+                "meines",
+                "meiner"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_der_g_8",
+            "type": "multiple-choice",
+            "question": "Während ___ Urlaubs haben wir viel gesehen.",
+            "options": [
+                "des",
+                "der",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_der_g_9",
+            "type": "fill-blank",
+            "question": "Das Büro ___ Chefs ist leer.",
+            "options": [
+                "des",
+                "den",
+                "der",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_der_g_10",
+            "type": "multiple-choice",
+            "question": "Die Katze ___ Nachbarn ist süß.",
+            "options": [
+                "der",
+                "des",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_new_der_g_11",
+            "type": "multiple-choice",
+            "question": "Das Dach ___ Autos ist schwarz.",
+            "options": [
+                "des",
+                "der",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_der_g_12",
+            "type": "multiple-choice",
+            "question": "Das ist das Buch ___ Lehrerin.",
+            "options": [
+                "der",
+                "die",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_der_g_13",
+            "type": "multiple-choice",
+            "question": "Der Name ___ Hundes ist Bello.",
+            "options": [
+                "dem",
+                "den",
+                "der",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_der_g_14",
+            "type": "multiple-choice",
+            "question": "Anstelle ___ Vaters kam der Sohn.",
+            "options": [
+                "den",
+                "der",
+                "dem",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_der_g_15",
+            "type": "multiple-choice",
+            "question": "Das Ende ___ Films war traurig.",
+            "options": [
+                "der",
+                "des",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

@@ -1,0 +1,199 @@
+{
+    "topic": "Modalverben",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g12_1",
+            "type": "multiple-choice",
+            "question": "Du ___ heute arbeiten.",
+            "options": [
+                "muss",
+                "müsst",
+                "müssen",
+                "musst"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g12_2",
+            "type": "multiple-choice",
+            "question": "Ich ___ nicht schwimmen.",
+            "options": [
+                "kann",
+                "können",
+                "kannst",
+                "könnt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g12_3",
+            "type": "multiple-choice",
+            "question": "Hier ___ man nicht rauchen.",
+            "options": [
+                "darf",
+                "darfst",
+                "dürft",
+                "dürfen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g12_4",
+            "type": "multiple-choice",
+            "question": "Wir ___ jetzt nach Hause gehen.",
+            "options": [
+                "will",
+                "wollen",
+                "wollt",
+                "willst"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g12_5",
+            "type": "multiple-choice",
+            "question": "___ du mir bitte helfen?",
+            "options": [
+                "Könnt",
+                "Kann",
+                "Kannst",
+                "Können"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g12_6",
+            "type": "multiple-choice",
+            "question": "Er ___ heute keine Pizza essen.",
+            "options": [
+                "möchten",
+                "möchtet",
+                "möchtest",
+                "möchte"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g12_13",
+            "type": "multiple-choice",
+            "question": "___ wir morgen ins Museum gehen?",
+            "options": [
+                "Will",
+                "Willst",
+                "Wollen",
+                "Wollt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g12_14",
+            "type": "multiple-choice",
+            "question": "Du ___ heute nicht arbeiten, es ist Sonntag.",
+            "options": [
+                "müsst",
+                "musst",
+                "müssen",
+                "muss"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g12_15",
+            "type": "multiple-choice",
+            "question": "___ (Dürfen) ich hier ein Foto machen?",
+            "options": [
+                "Dürfen",
+                "Dürft",
+                "Darfst",
+                "Darf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g12_16",
+            "type": "multiple-choice",
+            "question": "Er ___ (Sollen) seine Hausaufgaben machen.",
+            "options": [
+                "sollen",
+                "sollt",
+                "sollst",
+                "soll"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g12_17",
+            "type": "multiple-choice",
+            "question": "___ (Können) ihr gut Deutsch sprechen?",
+            "options": [
+                "Kann",
+                "Könnt",
+                "Kannst",
+                "Können"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g12_18",
+            "type": "multiple-choice",
+            "question": "Wir ___ (Müssen) jetzt gehen, es ist spät.",
+            "options": [
+                "muss",
+                "müssen",
+                "müsst",
+                "musst"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g12_19",
+            "type": "fill-blank",
+            "question": "Ich ___ (Wollen) Schokolade essen.",
+            "options": [
+                "willst",
+                "wollen",
+                "wollt",
+                "will"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g12_20",
+            "type": "sentence-order",
+            "question": "Ich muss heute viel lernen.",
+            "options": [
+                "lernen",
+                "viel",
+                "heute",
+                "muss",
+                "Ich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_modalverben_15",
+            "type": "multiple-choice",
+            "question": "Ich ___ heute länger arbeiten. (Pflicht)",
+            "options": [
+                "kann",
+                "will",
+                "muss",
+                "darf"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_modalverben_16",
+            "type": "multiple-choice",
+            "question": "___ du Klavier spielen? (Fähigkeit)",
+            "options": [
+                "Darfst",
+                "Musst",
+                "Willst",
+                "Kannst"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

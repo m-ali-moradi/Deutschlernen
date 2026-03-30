@@ -1,0 +1,186 @@
+{
+    "topic": "Indefinitpronomen",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g23_1",
+            "type": "multiple-choice",
+            "question": "Hier spricht ___ Deutsch.",
+            "options": [
+                "jemand",
+                "niemand",
+                "man",
+                "alle"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g23_2",
+            "type": "multiple-choice",
+            "question": "Hat ___ angerufen?",
+            "options": [
+                "man",
+                "nichts",
+                "jemand",
+                "alles"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g23_3",
+            "type": "multiple-choice",
+            "question": "Ich habe ___ gegessen.",
+            "options": [
+                "nichts",
+                "alles",
+                "jemand",
+                "niemand"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g23_4",
+            "type": "multiple-choice",
+            "question": "___ hat einfach meinen Stift genommen.",
+            "options": [
+                "Etwas",
+                "Jemand",
+                "Niemand",
+                "Alles"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g23_5",
+            "type": "multiple-choice",
+            "question": "Es gibt hier leider ___ zu essen.",
+            "options": [
+                "niemand",
+                "man",
+                "alle",
+                "nichts"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g23_6",
+            "type": "multiple-choice",
+            "question": "___ wissen mittlerweile, wie wichtig Sport ist.",
+            "options": [
+                "Etwas",
+                "Man",
+                "Jemand",
+                "Alle"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_indefinitpronomen_7",
+            "type": "multiple-choice",
+            "question": "Ich habe ___ (niemand) gesehen.",
+            "options": [
+                "niemandem",
+                "niemanden",
+                "niemand",
+                "niemandes"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_indefinitpronomen_8",
+            "type": "multiple-choice",
+            "question": "___ hat mein Brot gegessen! (Jemand)",
+            "options": [
+                "Jemanden",
+                "Niemand",
+                "Jemand",
+                "Jemandem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_indefinitpronomen_9",
+            "type": "multiple-choice",
+            "question": "Wir haben noch ___ Äpfel. (einige)",
+            "options": [
+                "einigem",
+                "einiges",
+                "einigen",
+                "einige"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_indefinitpronomen_10",
+            "type": "multiple-choice",
+            "question": "Ist ___ hier? (jemand)",
+            "options": [
+                "kein",
+                "jemand",
+                "jemandem",
+                "jemanden"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_indefinitpronomen_11",
+            "type": "multiple-choice",
+            "question": "Er versteht ___. (überhaupt nichts)",
+            "options": [
+                "nichts",
+                "alles",
+                "jemanden",
+                "etwas"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_indefinitpronomen_12",
+            "type": "multiple-choice",
+            "question": "___ wollen nach Hause gehen. (Alle)",
+            "options": [
+                "Alle",
+                "Alles",
+                "Allen",
+                "Allem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_indefinitpronomen_13",
+            "type": "multiple-choice",
+            "question": "Ich habe ___ (etwas) Interessantes gelesen.",
+            "options": [
+                "etwas",
+                "nichts",
+                "alles",
+                "jemand"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_indefinitpronomen_14",
+            "type": "multiple-choice",
+            "question": "Ich muss ___ (man) fragen.",
+            "options": [
+                "man",
+                "jemanden",
+                "jemandem",
+                "jemand"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_indefinitpronomen_15",
+            "type": "multiple-choice",
+            "question": "Das weiß ___! (Jeder)",
+            "options": [
+                "jeder",
+                "jedem",
+                "jeden",
+                "jedes"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Possessivartikel",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g69_1",
+            "type": "multiple-choice",
+            "question": "Wo ist ___ Tasche, Sarah?",
+            "options": [
+                "deinen",
+                "dein",
+                "deiner",
+                "deine"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g69_2",
+            "type": "multiple-choice",
+            "question": "Das ist ___ Auto.",
+            "options": [
+                "meine",
+                "meinen",
+                "meiner",
+                "mein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_possessivartikel_3",
+            "type": "multiple-choice",
+            "question": "Ich lese ___ Buch.",
+            "options": [
+                "mein",
+                "meinen",
+                "meines",
+                "meine"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_possessivartikel_4",
+            "type": "multiple-choice",
+            "question": "Er ruft ___ Vater an.",
+            "options": [
+                "seinen",
+                "seine",
+                "sein",
+                "seinem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_possessivartikel_5",
+            "type": "multiple-choice",
+            "question": "Wir fahren mit ___ Auto.",
+            "options": [
+                "unser",
+                "unserem",
+                "unseren",
+                "unsere"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_possessivartikel_6",
+            "type": "multiple-choice",
+            "question": "Sie liebt ___ Katze.",
+            "options": [
+                "ihre",
+                "ihren",
+                "ihr",
+                "ihrem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_possessivartikel_7",
+            "type": "multiple-choice",
+            "question": "Hast du ___ Schlüssel?",
+            "options": [
+                "dein",
+                "deinen",
+                "deinem",
+                "deine"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_possessivartikel_8",
+            "type": "multiple-choice",
+            "question": "Können Sie mir ___ Nummer geben?",
+            "options": [
+                "Ihren",
+                "Ihr",
+                "Ihre",
+                "Ihrem"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_possessivartikel_9",
+            "type": "multiple-choice",
+            "question": "Das ist ___ Haus. (von uns)",
+            "options": [
+                "unserem",
+                "unseren",
+                "unsere",
+                "unser"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_possessivartikel_10",
+            "type": "multiple-choice",
+            "question": "Peter verkauft ___ Computer.",
+            "options": [
+                "seinem",
+                "seine",
+                "seinen",
+                "sein"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_possessivartikel_11",
+            "type": "multiple-choice",
+            "question": "Das ist ___ Freundin. (von ihm)",
+            "options": [
+                "seinem",
+                "seine",
+                "seinen",
+                "sein"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_possessivartikel_12",
+            "type": "multiple-choice",
+            "question": "Was macht ___ Bruder? (von dir)",
+            "options": [
+                "deinem",
+                "deinen",
+                "deine",
+                "dein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_possessivartikel_13",
+            "type": "multiple-choice",
+            "question": "Gefällt euch ___ Stadt? (von euch)",
+            "options": [
+                "euren",
+                "eure",
+                "euer",
+                "euere"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_possessivartikel_14",
+            "type": "multiple-choice",
+            "question": "Die Kinder machen ___ Hausaufgaben.",
+            "options": [
+                "ihr",
+                "ihren",
+                "ihrem",
+                "ihre"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_possessivartikel_15",
+            "type": "multiple-choice",
+            "question": "Ich spreche mit ___ Chef.",
+            "options": [
+                "meines",
+                "mein",
+                "meinen",
+                "meinem"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

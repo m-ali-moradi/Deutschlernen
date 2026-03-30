@@ -1,0 +1,90 @@
+﻿{
+    "id":  "g31",
+    "title":  "Konjunktiv I",
+    "level":  "B2",
+    "category":  "Konjunktiv",
+    "icon":  "📰",
+    "rule":  "Infinitivstamm + -e, -est, -e, -en, -et, -en. Für indirekte Rede in formellen Texten.",
+    "explanation":  "Konjunktiv I is used in B2 for indirect speech in news, academic texts, and formal communications. If a Konjunktiv-I form is identical to the Indikativ form, Konjunktiv II is often used instead to avoid ambiguity.",
+    "examples":  [
+                     "Der Minister sagte, die Lage sei ernst.",
+                     "Experten behaupten, das Klima werde sich verändern.",
+                     "Er sagte, er habe kein Geld."
+                 ],
+    "detail":  {
+                   "id":  "g31",
+                   "subtitle":  "Konjunktiv I · Indirekte Rede",
+                   "emoji":  "💬",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#6366F1"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Konjunktiv I in der indirekten Rede",
+                                        "text":  "In written/formal German, Konjunktiv I marks reported speech. Forms are derived from the infinitive stem."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Konjunktiv I Formen",
+                                        "headers":  [
+                                                        "Person",
+                                                        "sein",
+                                                        "haben",
+                                                        "kommen"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "er/sie/es",
+                                                         "sei",
+                                                         "habe",
+                                                         "komme"
+                                                     ],
+                                                     [
+                                                         "sie (pl.)",
+                                                         "seien",
+                                                         "haben (= Indikativ)",
+                                                         "kommen (= Indikativ)"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Many plural forms (wir/sie) look exactly like the Indikativ: wir haben, sie kommen. If the indirect-speech meaning should be clearer, German often uses Konjunktiv II instead: sie kämen, sie hätten.",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "In der Praxis",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Sprecher erklärte, er sei bereit.",
+                                                          "en":  "The speaker explained he was ready."
+                                                      },
+                                                      {
+                                                          "de":  "Sie berichtete, sie habe alles geklärt.",
+                                                          "en":  "She reported she had cleared everything."
+                                                      },
+                                                      {
+                                                          "de":  "Laut Bericht sei das Problem gelöst.",
+                                                          "en":  "According to the report, the problem is solved."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Konjunktiv I is standard in newspaper/news reporting.",
+                                                      "Shows the speaker distances themselves from the content.",
+                                                      "If Konj. I = Indikativ form, use Konj. II instead.",
+                                                      "The most important form: er/sie sei (sein), er/sie habe (haben)."
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,185 @@
+{
+    "topic": "Satzbau",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "ex_so_a1_3",
+            "type": "sentence-order",
+            "question": "Wo wohnst du?",
+            "options": [
+                "du?",
+                "Wo",
+                "wohnst"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g58_1",
+            "type": "multiple-choice",
+            "question": "___ heißt du?",
+            "options": [
+                "Wo",
+                "Was",
+                "Wie",
+                "Wer"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g58_2",
+            "type": "multiple-choice",
+            "question": "___ kommst du?",
+            "options": [
+                "Wo",
+                "Woher",
+                "Was",
+                "Wie"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g58_3",
+            "type": "multiple-choice",
+            "question": "___ wohnst du?",
+            "options": [
+                "Wie",
+                "Wo",
+                "Was",
+                "Woher"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g58_4",
+            "type": "multiple-choice",
+            "question": "___ ist das? Das ist mein Handy.",
+            "options": [
+                "Wer",
+                "Wo",
+                "Was",
+                "Wie"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g58_5",
+            "type": "multiple-choice",
+            "question": "___ sprichst du? Deutsch und Englisch.",
+            "options": [
+                "Welche",
+                "Wo",
+                "Wie",
+                "Was"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g58_6",
+            "type": "multiple-choice",
+            "question": "___ alt bist du?",
+            "options": [
+                "Wie",
+                "Wer",
+                "Wo",
+                "Was"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_w-fragen_8",
+            "type": "multiple-choice",
+            "question": "___ spät ist es?",
+            "options": [
+                "Wer",
+                "Wie",
+                "Was",
+                "Wo"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_w-fragen_9",
+            "type": "multiple-choice",
+            "question": "___ kostet das?",
+            "options": [
+                "Wie",
+                "Was",
+                "Wo",
+                "Wie viel"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_w-fragen_10",
+            "type": "multiple-choice",
+            "question": "___ fahren Sie? - Nach Berlin.",
+            "options": [
+                "Wohin",
+                "Woher",
+                "Wer",
+                "Wo"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_w-fragen_11",
+            "type": "multiple-choice",
+            "question": "___ kommen Sie? - Aus Spanien.",
+            "options": [
+                "Wohin",
+                "Woher",
+                "Wer",
+                "Wo"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_w-fragen_12",
+            "type": "multiple-choice",
+            "question": "___ wohnst du? - In München.",
+            "options": [
+                "Wo",
+                "Woher",
+                "Wie",
+                "Wohin"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_w-fragen_13",
+            "type": "multiple-choice",
+            "question": "___ ist das? - Das ist mein Bruder.",
+            "options": [
+                "Was",
+                "Wie",
+                "Wer",
+                "Wo"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_w-fragen_14",
+            "type": "multiple-choice",
+            "question": "___ machen Sie beruflich?",
+            "options": [
+                "Wen",
+                "Wo",
+                "Wem",
+                "Was"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_w-fragen_15",
+            "type": "multiple-choice",
+            "question": "___ lange bleibst du?",
+            "options": [
+                "Woher",
+                "Wie",
+                "Was",
+                "Wo"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

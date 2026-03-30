@@ -1,0 +1,186 @@
+{
+    "topic": "n-Deklination",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g43_1",
+            "type": "multiple-choice",
+            "question": "Ich kenne den ___ nicht.",
+            "options": [
+                "Herren",
+                "Herre",
+                "Herrn",
+                "Herr"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g43_2",
+            "type": "multiple-choice",
+            "question": "Der Chef spricht mit dem ___.",
+            "options": [
+                "Kollegen",
+                "Kollegin",
+                "Kolleg",
+                "Kollege"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g43_3",
+            "type": "multiple-choice",
+            "question": "Das ist die Tasche des ___.",
+            "options": [
+                "Student",
+                "Students",
+                "Studentes",
+                "Studenten"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g43_4",
+            "type": "multiple-choice",
+            "question": "Ich habe dem ___ die wichtige Nachricht gegeben.",
+            "options": [
+                "Jungen",
+                "Jungem",
+                "Jungs",
+                "Junge"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g43_5",
+            "type": "multiple-choice",
+            "question": "Der ___ muss sich am Eingang ausweisen.",
+            "options": [
+                "Kunde",
+                "Kunden",
+                "Kunden",
+                "Kundem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g43_6",
+            "type": "multiple-choice",
+            "question": "Er sucht gerade einen kompetenten ___.",
+            "options": [
+                "Psychologes",
+                "Psycholog",
+                "Psychologen",
+                "Psychologe"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_n-deklination_7",
+            "type": "multiple-choice",
+            "question": "Ich spreche mit einem ___ (Student).",
+            "options": [
+                "Studentem",
+                "Students",
+                "Student",
+                "Studenten"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_n-deklination_8",
+            "type": "multiple-choice",
+            "question": "Kennst du den ___ (Herr) dort?",
+            "options": [
+                "Herrn",
+                "Herrem",
+                "Herrs",
+                "Herr"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_n-deklination_9",
+            "type": "multiple-choice",
+            "question": "Wir füttern den ___ (Affe).",
+            "options": [
+                "Affe",
+                "Affen",
+                "Affen",
+                "Affem"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_n-deklination_10",
+            "type": "multiple-choice",
+            "question": "Der Name des ___ (Kunde).",
+            "options": [
+                "Kunde",
+                "Kunde",
+                "Kunden",
+                "Kunds"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_n-deklination_11",
+            "type": "multiple-choice",
+            "question": "Wir rufen den ___ (Polizist).",
+            "options": [
+                "Polizists",
+                "Polizistem",
+                "Polizist",
+                "Polizisten"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_n-deklination_12",
+            "type": "multiple-choice",
+            "question": "Er hilft dem ___ (Junge).",
+            "options": [
+                "Jungem",
+                "Junge",
+                "Junges",
+                "Jungen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_n-deklination_13",
+            "type": "multiple-choice",
+            "question": "Die Medizin hilft dem ___ (Patient).",
+            "options": [
+                "Patient",
+                "Patienten",
+                "Patientem",
+                "Patients"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_n-deklination_14",
+            "type": "multiple-choice",
+            "question": "Hast du den ___ (Löwe) gesehen?",
+            "options": [
+                "Löwem",
+                "Löwe",
+                "Löwen",
+                "Löwes"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_n-deklination_15",
+            "type": "multiple-choice",
+            "question": "Das Auto des ___ (Nachbar).",
+            "options": [
+                "Nachbarem",
+                "Nachbar",
+                "Nachbarn",
+                "Nachbars"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

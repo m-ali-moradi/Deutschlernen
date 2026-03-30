@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../data/models/vocabulary_category.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/widgets/premium_card.dart';
+import 'package:deutschmate_mobile/shared/widgets/animated_progress_bar.dart';
+import 'package:deutschmate_mobile/features/vocabulary/data/models/vocabulary_category.dart';
 
 /// A card widget that displays a vocabulary category.
 ///
@@ -23,7 +25,6 @@ class VocabularyCategoryCard extends StatelessWidget {
     required this.progress,
     required this.isCached,
     required this.onTap,
-    this.onDownload,
   });
 
   final VocabularyCategory category;
@@ -32,7 +33,6 @@ class VocabularyCategoryCard extends StatelessWidget {
   final double progress;
   final bool isCached;
   final VoidCallback onTap;
-  final VoidCallback? onDownload;
 
   /// Builds the widget.
   @override
@@ -40,125 +40,95 @@ class VocabularyCategoryCard extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final gradient = category.gradient;
 
-    return Material(
-      color: Colors.transparent,
-      borderRadius: AppTokens.radius20,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: AppTokens.radius20,
-        child: Ink(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: isDark ? const Color(0xFF0F172A) : Colors.white,
-            borderRadius: AppTokens.radius20,
-            boxShadow: [
-              BoxShadow(
-                  color: isDark
-                      ? Colors.black.withValues(alpha: 0.2)
-                      : const Color(0xFFE2E8F0).withValues(alpha: 0.8),
-                  blurRadius: 16,
-                  offset: const Offset(0, 6))
-            ],
+    return PremiumCard(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.all(12),
+      onTap: onTap,
+      useGlass: true,
+      blur: 12,
+      borderOpacity: isDark ? 0.08 : 0.05,
+      shadowOpacity: isDark ? 0.12 : 0.04,
+      child: Row(
+        children: [
+          // Icon with category gradient
+          Container(
+            width: 52,
+            height: 52,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: gradient),
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                    color: gradient.last.withValues(alpha: 0.35),
+                    blurRadius: 14,
+                    offset: const Offset(0, 4))
+              ],
+            ),
+            alignment: Alignment.center,
+            child: Icon(
+              getVocabularyCategoryIcon(category.id),
+              size: 26,
+              color: Colors.white,
+            ),
           ),
-          child: Row(
-            children: [
-              // Icon with category gradient
-              Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: gradient),
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    BoxShadow(
-                        color: category.gradient.first.withValues(alpha: 0.25),
-                        blurRadius: 12,
-                        offset: const Offset(0, 4))
-                  ],
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: -0.5,
+                    color: AppTokens.textPrimary(isDark),
+                  ),
                 ),
-                alignment: Alignment.center,
-                child:
-                    Text(category.icon, style: const TextStyle(fontSize: 22)),
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                const SizedBox(height: 4),
+                Text(
+                  countLabel,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: AppTokens.textMuted(isDark),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Stack(
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            title,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              color: AppTokens.textPrimary(isDark),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        if (!isCached && onDownload != null) ...[
-                          IconButton(
-                            visualDensity: VisualDensity.compact,
-                            padding: EdgeInsets.zero,
-                            constraints: const BoxConstraints(),
-                            splashRadius: 16,
-                            tooltip: 'Download',
-                            onPressed: onDownload,
-                            icon: Icon(
-                              Icons.download_rounded,
-                              size: 18,
-                              color: isDark
-                                  ? const Color(0xFF60A5FA)
-                                  : const Color(0xFF2563EB),
-                            ),
-                          ),
-                          const SizedBox(width: 4),
-                        ],
-                        Icon(
-                          Icons.chevron_right_rounded,
-                          color: isDark
-                              ? const Color(0xFF475569)
-                              : const Color(0xFFCBD5E1),
-                          size: 20,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      countLabel,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: AppTokens.textMuted(isDark),
+                    Container(
+                      height: 8,
+                      decoration: BoxDecoration(
+                        color:
+                            AppTokens.textMuted(isDark).withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(4),
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(999),
-                      child: LinearProgressIndicator(
-                        value: progress.clamp(0.0, 1.0),
-                        minHeight: 5,
-                        backgroundColor: isDark
-                            ? const Color(0xFF1E293B)
-                            : const Color(0xFFE5E7EB),
-                        valueColor:
-                            AlwaysStoppedAnimation<Color>(gradient.last),
-                      ),
+                    AnimatedProgressBar(
+                      value: progress,
+                      height: 8,
+                      gradient: LinearGradient(colors: gradient),
                     ),
                   ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
+          const SizedBox(width: 12),
+          Icon(
+            Icons.chevron_right_rounded,
+            color: AppTokens.textMuted(isDark).withValues(alpha: 0.4),
+            size: 22,
+          ),
+        ],
       ),
     );
   }

@@ -1,0 +1,159 @@
+﻿{
+    "id":  "g16",
+    "title":  "Präteritum",
+    "level":  "A2",
+    "category":  "Zeiten",
+    "icon":  "📜",
+    "rule":  "Regelmäßig: Stamm + -te. Unregelmäßig: Stammvokaländerung.",
+    "explanation":  "Präteritum is mainly used in written German. In speech, it is especially common with sein (war), haben (hatte), and modal verbs (konnte, musste), while many other verbs are more often used in Perfekt.",
+    "examples":  [
+                     "Ich war gestern in Berlin.",
+                     "Er hatte keine Zeit.",
+                     "Sie konnte nicht kommen.",
+                     "Der König lebte in einem Schloss."
+                 ],
+    "detail":  {
+                   "id":  "g16",
+                   "subtitle":  "Zeiten · Präteritum",
+                   "emoji":  "📜",
+                   "gradient":  [
+                                    "#78716C",
+                                    "#57534E"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Das Präteritum · Simple Past",
+                                        "text":  "Präteritum is used mainly in written German. In spoken language, it is especially common with sein, haben, and modal verbs.",
+                                        "bullets":  [
+                                                        "Regular verbs: stem + -te, -test, -te, -ten, -tet, -ten",
+                                                        "Irregular verbs: stem change + no ending for ich/er",
+                                                        "Mixed verbs: stem change + -te endings (bringen → brachte)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "sein \u0026 haben im Präteritum",
+                                        "color":  "stone",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "war / hatte"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "warst / hattest"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie/es",
+                                                         "right":  "war / hatte"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "waren / hatten"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "wart / hattet"
+                                                     },
+                                                     {
+                                                         "left":  "Sie/sie",
+                                                         "right":  "waren / hatten"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Modalverben im Präteritum",
+                                        "color":  "amber",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "können",
+                                                         "right":  "konnte"
+                                                     },
+                                                     {
+                                                         "left":  "müssen",
+                                                         "right":  "musste"
+                                                     },
+                                                     {
+                                                         "left":  "wollen",
+                                                         "right":  "wollte"
+                                                     },
+                                                     {
+                                                         "left":  "sollen",
+                                                         "right":  "sollte"
+                                                     },
+                                                     {
+                                                         "left":  "dürfen",
+                                                         "right":  "durfte"
+                                                     },
+                                                     {
+                                                         "left":  "mögen",
+                                                         "right":  "mochte"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "stone",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich war gestern in Berlin.",
+                                                          "en":  "I was in Berlin yesterday."
+                                                      },
+                                                      {
+                                                          "de":  "Er hatte keine Zeit.",
+                                                          "en":  "He had no time."
+                                                      },
+                                                      {
+                                                          "de":  "Sie konnte nicht kommen.",
+                                                          "en":  "She couldn\u0027t come."
+                                                      },
+                                                      {
+                                                          "de":  "Der König lebte in einem Schloss.",
+                                                          "en":  "The king lived in a castle. (narrative)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Perfekt vs. Präteritum",
+                                        "headers":  [
+                                                        "Perfekt (gesprochen)",
+                                                        "Präteritum (geschrieben)"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Ich habe gelernt.",
+                                                         "Ich lernte."
+                                                     ],
+                                                     [
+                                                         "Er ist gegangen.",
+                                                         "Er ging."
+                                                     ],
+                                                     [
+                                                         "Sie hat gesagt.",
+                                                         "Sie sagte."
+                                                     ],
+                                                     [
+                                                         "Ich bin gewesen.",
+                                                         "Ich war."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "In speech: first learn Präteritum especially for sein, haben, and modals.",
+                                                      "In writing (stories, news): Präteritum is standard.",
+                                                      "Regular: Stamm + -te (machte, lernte).",
+                                                      "Modal verbs lose their Umlaut in Präteritum: können → konnte."
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,74 @@
+﻿{
+    "id":  "g54",
+    "title":  "Apposition",
+    "level":  "C1",
+    "category":  "Satzbau",
+    "icon":  "📋",
+    "rule":  "Einschub, der ein Nomen näher bestimmt. Steht im gleichen Kasus.",
+    "explanation":  "An apposition is a noun phrase placed next to another noun to explain or identify it. It takes the same case as the noun it refers to.",
+    "examples":  [
+                     "Berlin, die Hauptstadt Deutschlands, ist groß.",
+                     "Herr Müller, unser neuer Chef, kommt aus München.",
+                     "Ich sprach mit Frau Schmidt, der Leiterin."
+                 ],
+    "detail":  {
+                   "id":  "g54",
+                   "subtitle":  "Apposition · Einschub mit Kasusgleichheit",
+                   "emoji":  "📋",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#4338CA"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Was ist eine Apposition?",
+                                        "text":  "Eine Apposition ist eine Nominalgruppe, die direkt neben einer anderen Nominalgruppe steht, um sie zu erklären, zu benennen oder näher zu bestimmen. Beide Teile beziehen sich auf dieselbe Person oder Sache und stehen normalerweise im gleichen Kasus."
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Relativsatz → Apposition",
+                                        "from":  {
+                                                     "label":  "RELATIVSATZ",
+                                                     "text":  "Thomas Mann, der ein bedeutender Schriftsteller war, wurde in Lübeck geboren."
+                                                 },
+                                        "to":  {
+                                                   "label":  "APPOSITION",
+                                                   "text":  "Thomas Mann, ein bedeutender Schriftsteller, wurde in Lübeck geboren."
+                                               },
+                                        "note":  "Appositionen verdichten erklärende Informationen"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Typische Appositionen",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Berlin, die Hauptstadt Deutschlands, zieht viele Besucher an.",
+                                                          "en":  "Berlin, the capital of Germany, attracts many visitors."
+                                                      },
+                                                      {
+                                                          "de":  "Ich sprach mit Frau Keller, der Leiterin des Projekts.",
+                                                          "en":  "I spoke with Ms Keller, the head of the project."
+                                                      },
+                                                      {
+                                                          "de":  "Thomas Mann, ein bedeutender Schriftsteller, wurde in Lübeck geboren.",
+                                                          "en":  "Thomas Mann, an important writer, was born in Lübeck."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Die Apposition steht normalerweise im gleichen Kasus wie das Nomen, das sie erklärt.",
+                                                      "Nicht einschränkende Appositionen werden meist durch Kommas abgetrennt.",
+                                                      "Appositionen sind häufig in formellen Texten, Biografien und Berichten.",
+                                                      "Sie verdichten Texte, weil sie längere Erklärungssätze ersetzen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

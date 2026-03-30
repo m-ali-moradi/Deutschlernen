@@ -1,0 +1,85 @@
+﻿{
+    "id":  "g64",
+    "title":  "Das Wort \u0027Doch\u0027",
+    "level":  "A1",
+    "category":  "Satzbau",
+    "icon":  "💬",
+    "rule":  "\u0027Doch\u0027 widerspricht einer negativen Frage oder Aussage.",
+    "explanation":  "\u0027Doch\u0027 is used to answer \u0027Yes\u0027 to a question that contains a negative. It contradicts the negative bias and confirms the positive state.",
+    "examples":  [
+                     "Hast du keinen Hunger? - Doch!",
+                     "Kommst du nicht? - Doch!",
+                     "Das ist nicht wahr! - Doch!",
+                     "Haben Sie keine Zeit? - Doch, ich habe Zeit."
+                 ],
+    "detail":  {
+                   "id":  "g64",
+                   "subtitle":  "Antwortpartikel · Negation",
+                   "emoji":  "💬",
+                   "gradient":  [
+                                    "#EC4899",
+                                    "#8B5CF6"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Warum \u0027Doch\u0027?",
+                                        "text":  "\u0027Doch\u0027 is a essential German word that has no direct English equivalent. It is used to contradict a negative statement or question with a \u0027Yes\u0027.",
+                                        "bullets":  [
+                                                        "Ja → positive answer to a positive question",
+                                                        "Nein → negative answer to any question",
+                                                        "Doch → positive answer to a NEGATIVE question"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Logik der Antwort",
+                                        "from":  {
+                                                     "label":  "NEG. FRAGE",
+                                                     "text":  "Hast du KEINEN Hunger?"
+                                                 },
+                                        "to":  {
+                                                   "label":  "DOCH",
+                                                   "text":  "Doch, ich habe Hunger!"
+                                               },
+                                        "note":  "English would often just say \u0027Yes\u0027, but German normally uses \u0027Doch\u0027 here to clearly contradict the negative."
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Dialog-Beispiele",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Kommst du nicht? - Doch, ich komme gleich!",
+                                                          "en":  "Aren\u0027t you coming? - Yes (contradicting), I\u0027m coming right now!"
+                                                      },
+                                                      {
+                                                          "de":  "Du hast kein Geld, oder? - Doch, natürlich!",
+                                                          "en":  "You don\u0027t have any money, right? - Yes (contradicting), of course I do!"
+                                                      },
+                                                      {
+                                                          "de":  "Das ist nicht wahr! - Doch!",
+                                                          "en":  "That\u0027s not true! - Yes it is!"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Using \u0027Ja\u0027 instead of \u0027Doch\u0027 to a negative question sounds wrong in German. Practice using \u0027Doch\u0027 for every contradiction!",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Use \u0027Doch\u0027 to mean \u0027Yes, on the contrary\u0027.",
+                                                      "Used after negative adverbs like \u0027nicht\u0027 or \u0027kein\u0027.",
+                                                      "It acts as a strong, assertive confirmation.",
+                                                      "Crucial for avoiding confusion in daily dialogues."
+                                                  ]
+                                    }
+                                ]
+               }
+}

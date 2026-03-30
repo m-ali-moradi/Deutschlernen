@@ -1,0 +1,190 @@
+{
+    "topic": "RelativsÃ¤tze",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "ex_fb_b1_1",
+            "type": "fill-blank",
+            "question": "Ich hÃ¤tte gerne ein Auto, ___ schneller ist.",
+            "options": [
+                "der",
+                "die",
+                "den",
+                "das"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "ex_so_b1_3",
+            "type": "sentence-order",
+            "question": "Das Kind, das dort spielt, ist mein Sohn.",
+            "options": [
+                "spielt",
+                "ist",
+                "mein",
+                "Das",
+                "Sohn",
+                "Kind",
+                "das",
+                "dort"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_relativsaetze_3",
+            "type": "multiple-choice",
+            "question": "Das ist das Haus, ___ ich gekauft habe.",
+            "options": [
+                "das",
+                "dem",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_relativsaetze_4",
+            "type": "multiple-choice",
+            "question": "Ist das die Frau, ___ gestern hier war?",
+            "options": [
+                "dem",
+                "den",
+                "der",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_relativsaetze_5",
+            "type": "multiple-choice",
+            "question": "Der Mann, ___ dort steht, ist mein Bruder.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_6",
+            "type": "multiple-choice",
+            "question": "Das sind die Kinder, ___ im Garten spielen.",
+            "options": [
+                "den",
+                "der",
+                "die",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_7",
+            "type": "multiple-choice",
+            "question": "Wo ist der Schlüssel, ___ auf dem Tisch lag?",
+            "options": [
+                "den",
+                "dem",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_relativsaetze_8",
+            "type": "multiple-choice",
+            "question": "Das ist das Buch, ___ mir so gut gefällt.",
+            "options": [
+                "dem",
+                "das",
+                "der",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_relativsaetze_9",
+            "type": "multiple-choice",
+            "question": "Ich treffe die Freunde, ___ ich eingeladen habe.",
+            "options": [
+                "denen",
+                "der",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_relativsaetze_10",
+            "type": "multiple-choice",
+            "question": "Zeig mir den Brief, ___ du geschrieben hast.",
+            "options": [
+                "den",
+                "dem",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_relativsaetze_11",
+            "type": "multiple-choice",
+            "question": "Das sind die Blumen, ___ sie mir geschenkt hat.",
+            "options": [
+                "der",
+                "die",
+                "denen",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_relativsaetze_12",
+            "type": "multiple-choice",
+            "question": "Das ist das Auto, in ___ ich gefahren bin.",
+            "options": [
+                "dem",
+                "das",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_relativsaetze_13",
+            "type": "multiple-choice",
+            "question": "Die Frau, ___ ich das Buch gegeben habe, ist eine Freundin.",
+            "options": [
+                "der",
+                "dem",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_relativsaetze_14",
+            "type": "multiple-choice",
+            "question": "Hier ist der Computer, mit ___ ich arbeite.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_relativsaetze_15",
+            "type": "multiple-choice",
+            "question": "Das ist der Hund, ___ uns immer anbellt.",
+            "options": [
+                "der",
+                "dem",
+                "den",
+                "das"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

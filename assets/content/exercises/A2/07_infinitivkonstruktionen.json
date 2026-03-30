@@ -1,0 +1,186 @@
+{
+    "topic": "Infinitivkonstruktionen",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g19_1",
+            "type": "multiple-choice",
+            "question": "Ich versuche, schneller ___ ___.",
+            "options": [
+                "lernen",
+                "zu lernen",
+                "lerne",
+                "gelernt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g19_2",
+            "type": "multiple-choice",
+            "question": "Sie arbeitet viel, ___ viel Geld zu verdienen.",
+            "options": [
+                "ohne",
+                "weil",
+                "um",
+                "anstatt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g19_3",
+            "type": "multiple-choice",
+            "question": "Er geht, ___ ein Wort zu sagen.",
+            "options": [
+                "um",
+                "ohne",
+                "anstatt",
+                "dass"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g19_4",
+            "type": "multiple-choice",
+            "question": "Es ist gesund, jeden Tag viel Obst ___ ___.",
+            "options": [
+                "zu essen",
+                "esse",
+                "gegessen",
+                "essen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g19_5",
+            "type": "multiple-choice",
+            "question": "Ich koche heute zu Hause, anstatt essen ___ ___.",
+            "options": [
+                "zu gehen",
+                "gegessen",
+                "gehen",
+                "gehe"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g19_6",
+            "type": "multiple-choice",
+            "question": "Hast du Lust, heute Abend mit ins Kino ___ ___?",
+            "options": [
+                "gehen",
+                "gegessen",
+                "zu gehen",
+                "gehst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_7",
+            "type": "multiple-choice",
+            "question": "Ich habe keine Lust, heute ___. (arbeiten)",
+            "options": [
+                "gearbeitet",
+                "arbeiten",
+                "zu arbeiten",
+                "zu arbeite"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_8",
+            "type": "multiple-choice",
+            "question": "Es ist wichtig, viel Wasser ___. (trinken)",
+            "options": [
+                "trinken",
+                "trank",
+                "zu trinken",
+                "getrunken"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_9",
+            "type": "multiple-choice",
+            "question": "Er versucht, das Problem ___. (lösen)",
+            "options": [
+                "lösen",
+                "zu löse",
+                "zu lösen",
+                "gelöst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_10",
+            "type": "multiple-choice",
+            "question": "Wir planen, im Sommer nach Spanien ___. (fahren)",
+            "options": [
+                "zu fahre",
+                "fahren",
+                "gefahren",
+                "zu fahren"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_11",
+            "type": "multiple-choice",
+            "question": "Hast du Zeit, mir ___? (helfen)",
+            "options": [
+                "zu helfen",
+                "geholfen",
+                "zu hilf",
+                "helfen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_12",
+            "type": "multiple-choice",
+            "question": "Ich fange an, Deutsch ___. (lernen)",
+            "options": [
+                "lerne zu",
+                "zu lernen",
+                "gelernt",
+                "lernen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_13",
+            "type": "multiple-choice",
+            "question": "Es macht Spaß, im Meer ___. (schwimmen)",
+            "options": [
+                "geschwommen",
+                "schwimmen",
+                "schwamm",
+                "zu schwimmen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_14",
+            "type": "multiple-choice",
+            "question": "Ich bitte dich, mich nicht ___. (stören)",
+            "options": [
+                "stören",
+                "zu störe",
+                "gestört",
+                "zu stören"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_infinitivkonstruktionen_15",
+            "type": "multiple-choice",
+            "question": "Er hofft, die Prüfung ___. (bestehen)",
+            "options": [
+                "zu bestehen",
+                "bestand",
+                "bestanden",
+                "bestehen"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

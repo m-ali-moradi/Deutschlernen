@@ -1,0 +1,186 @@
+{
+    "topic": "Präsens",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g2_1",
+            "type": "multiple-choice",
+            "question": "Er ___ ein Buch. (lesen)",
+            "options": [
+                "lest",
+                "lesen",
+                "lese",
+                "liest"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g2_2",
+            "type": "multiple-choice",
+            "question": "Wir ___ nach Hause. (gehen)",
+            "options": [
+                "gehe",
+                "geht",
+                "gehen",
+                "gehst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g2_3",
+            "type": "multiple-choice",
+            "question": "___ ihr Deutsch?",
+            "options": [
+                "Sprecht",
+                "Sprichst",
+                "Spricht",
+                "Sprechen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g2_4",
+            "type": "multiple-choice",
+            "question": "Was ___ du beruflich?",
+            "options": [
+                "macht",
+                "mache",
+                "machst",
+                "machen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g2_5",
+            "type": "multiple-choice",
+            "question": "Die Kinder ___ heute Deutsch.",
+            "options": [
+                "lernen",
+                "lerne",
+                "lernst",
+                "lernt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g2_6",
+            "type": "multiple-choice",
+            "question": "Wo ___ ihr gerade?",
+            "options": [
+                "wohnt",
+                "wohnst",
+                "wohnen",
+                "wohne"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_fb_a1_1",
+            "type": "fill-blank",
+            "question": "Ich ___ aus Deutschland. (kommen)",
+            "options": [
+                "komme",
+                "kommst",
+                "kommen",
+                "kommt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_fb_a1_4",
+            "type": "fill-blank",
+            "question": "Wir ___ nach Hause. (gehen)",
+            "options": [
+                "gehst",
+                "geht",
+                "gehen",
+                "gehe"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "ex_fb_a1_6",
+            "type": "fill-blank",
+            "question": "Er ___ ein Buch. (lesen)",
+            "options": [
+                "liest",
+                "lest",
+                "lesen",
+                "lese"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_praesens_10",
+            "type": "multiple-choice",
+            "question": "Er ___ ein Buch. (lesen)",
+            "options": [
+                "liest",
+                "lese",
+                "lest",
+                "leset"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_praesens_11",
+            "type": "multiple-choice",
+            "question": "Ich ___ aus Italien. (kommen)",
+            "options": [
+                "kommst",
+                "kommt",
+                "kommen",
+                "komme"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_praesens_12",
+            "type": "multiple-choice",
+            "question": "Wir ___ Deutsch. (lernen)",
+            "options": [
+                "lerne",
+                "lernst",
+                "lernen",
+                "lernt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_praesens_13",
+            "type": "multiple-choice",
+            "question": "Du ___ gut. (singen)",
+            "options": [
+                "singst",
+                "singe",
+                "singt",
+                "singen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_praesens_14",
+            "type": "multiple-choice",
+            "question": "Sie ___ schnell. (laufen)",
+            "options": [
+                "läufst",
+                "läuft",
+                "laufen",
+                "laufe"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_praesens_15",
+            "type": "multiple-choice",
+            "question": "Er ___ gern Pizza. (essen)",
+            "options": [
+                "esst",
+                "isst",
+                "essen",
+                "esse"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

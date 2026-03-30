@@ -1,0 +1,186 @@
+{
+    "id": "wohnungsbesichtigung",
+    "title": "Wohnungsbesichtigung",
+    "english_title": "Apartment Viewing",
+    "level": "A2",
+    "category": "Wohnen",
+    "description": "Essential vocabulary for viewing an apartment and asking important questions about the rental contract.",
+    "icon": "home_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Guten Tag, sind Sie wegen der Wohnung hier?",
+            "english": "Good day, are you here for the apartment viewing?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, genau. Ich habe einen Termin zur Besichtigung.",
+            "english": "Yes, exactly. I have an appointment for the viewing."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Kommen Sie bitte herein.",
+            "english": "Please come in."
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank.",
+            "english": "Thank you very much."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Das ist das Wohnzimmer. Die Wohnung ist 60 Quadratmeter groß.",
+            "english": "This is the living room. The apartment is 60 square meters."
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Sehr schön. Wie hoch ist die Miete?",
+            "english": "Very nice. How much is the rent?"
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Die Kaltmiete beträgt 800 Euro, dazu kommen 200 Euro Nebenkosten.",
+            "english": "The base rent is 800 euros, plus 200 euros additional costs."
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Sind die Nebenkosten inklusive Heizung?",
+            "english": "Are the additional costs including heating?"
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Ja, die Heizung ist in den Nebenkosten enthalten.",
+            "english": "Yes, heating is included in the additional costs."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Gibt es eine Kaution?",
+            "english": "Is there a deposit?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Ja, die Kaution beträgt drei Monatskaltmieten.",
+            "english": "Yes, the deposit is three months' base rent."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Wann ist die Wohnung verfügbar?",
+            "english": "When is the apartment available?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Ab dem 1. April.",
+            "english": "From April 1st."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ist die Wohnung möbliert?",
+            "english": "Is the apartment furnished?"
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Nein, sie wird unmöbliert vermietet.",
+            "english": "No, it is rented unfurnished."
+        },
+        {
+            "id": 16,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Wie ist die Verkehrsanbindung?",
+            "english": "How is the public transport connection?"
+        },
+        {
+            "id": 17,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Die U-Bahn ist fünf Minuten zu Fuß entfernt.",
+            "english": "The subway is five minutes away on foot."
+        },
+        {
+            "id": 18,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Darf ich mich für die Wohnung bewerben?",
+            "english": "May I apply for the apartment?"
+        },
+        {
+            "id": 19,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Ja, bitte schicken Sie mir Ihre Unterlagen per E-Mail.",
+            "english": "Yes, please send me your documents by email."
+        },
+        {
+            "id": 20,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Welche Unterlagen werden benötigt?",
+            "english": "Which documents are required?"
+        },
+        {
+            "id": 21,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Eine Schufa-Auskunft, Einkommensnachweise und eine Kopie Ihres Ausweises.",
+            "english": "A Schufa credit report, proof of income, and a copy of your ID."
+        },
+        {
+            "id": 22,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Alles klar, das bereite ich vor.",
+            "english": "Alright, I will prepare that."
+        },
+        {
+            "id": 23,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Haben Sie noch Fragen?",
+            "english": "Do you have any other questions?"
+        },
+        {
+            "id": 24,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, das war alles. Vielen Dank für die Besichtigung.",
+            "english": "No, that was all. Thank you for the viewing."
+        },
+        {
+            "id": 25,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Gern geschehen. Ich wünsche Ihnen einen schönen Tag.",
+            "english": "You're welcome. I wish you a nice day."
+        }
+    ]
+}

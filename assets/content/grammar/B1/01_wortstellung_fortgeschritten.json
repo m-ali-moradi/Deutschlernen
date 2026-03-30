@@ -1,0 +1,111 @@
+﻿{
+    "id":  "g44",
+    "title":  "Wortstellung (Fortgeschritten)",
+    "level":  "B1",
+    "category":  "Satzbau",
+    "icon":  "🏗️",
+    "rule":  "TeKaMoLo: Temporal, Kausal, Modal, Lokal.",
+    "explanation":  "Advanced word order follows TeKaMoLo (Time-Cause-Manner-Place). Adverbs and connectors have specific positions.",
+    "examples":  [
+                     "Ich fahre morgen wegen der Arbeit schnell nach Berlin.",
+                     "Er hat gestern aus Langeweile allein im Park gesessen.",
+                     "Deshalb muss er heute unbedingt ins Büro gehen."
+                 ],
+    "detail":  {
+                   "id":  "g44",
+                   "subtitle":  "Wortstellung · Fortgeschritten",
+                   "emoji":  "🧭",
+                   "gradient":  [
+                                    "#06B6D4",
+                                    "#2563EB"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Wortstellung auf B1-Niveau",
+                                        "text":  "At B1 level, word order is not only about Verbzweitstellung. Learners must control where time, cause, manner, and place go, how connectors affect inversion, and how sentence elements move for emphasis.",
+                                        "bullets":  [
+                                                        "Main clause: finite verb stays in Position 2.",
+                                                        "Connector/adverb in Position 1 causes inversion: Dann gehe ich ...",
+                                                        "Typical middle-field order: TeKaMoLo = Temporal, Kausal, Modal, Lokal."
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Grundmuster",
+                                        "formula":  "Position 1 + Verb + Subjekt + TeKaMoLo + Satzende",
+                                        "colors":  [
+                                                       "#0EA5E9",
+                                                       "#2563EB"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Typische Wortstellung",
+                                        "color":  "sky",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich fahre morgen wegen des Termins mit dem Auto nach Berlin.",
+                                                          "en":  "I am travelling to Berlin tomorrow because of the appointment by car."
+                                                      },
+                                                      {
+                                                          "de":  "Morgen fahre ich wegen des Termins mit dem Auto nach Berlin.",
+                                                          "en":  "Tomorrow I am travelling to Berlin because of the appointment by car."
+                                                      },
+                                                      {
+                                                          "de":  "Deshalb gehe ich heute früher nach Hause.",
+                                                          "en":  "That is why I am going home earlier today."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "TeKaMoLo im Satz",
+                                        "headers":  [
+                                                        "Element",
+                                                        "Frage",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Temporal",
+                                                         "wann?",
+                                                         "morgen"
+                                                     ],
+                                                     [
+                                                         "Kausal",
+                                                         "warum?",
+                                                         "wegen des Termins"
+                                                     ],
+                                                     [
+                                                         "Modal",
+                                                         "wie?",
+                                                         "mit dem Auto"
+                                                     ],
+                                                     [
+                                                         "Lokal",
+                                                         "wohin/wo?",
+                                                         "nach Berlin"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "If you move something to Position 1 for emphasis, only one element goes there. The verb still stays in Position 2.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Only one unit stands before the verb in a main clause.",
+                                                      "Adverbs like dann, deshalb, trotzdem trigger inversion.",
+                                                      "TeKaMoLo is a strong guideline, but emphasis can change the order.",
+                                                      "In subordinate clauses, the conjugated verb moves to the end."
+                                                  ]
+                                    }
+                                ]
+               }
+}

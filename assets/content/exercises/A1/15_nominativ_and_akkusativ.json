@@ -1,0 +1,186 @@
+{
+    "topic": "Nominativ & Akkusativ",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g10_1",
+            "type": "multiple-choice",
+            "question": "Ich sehe ___ Hund.",
+            "options": [
+                "der",
+                "dem",
+                "den",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g10_2",
+            "type": "multiple-choice",
+            "question": "___ Apfel ist lecker.",
+            "options": [
+                "Das",
+                "Den",
+                "Dem",
+                "Der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g10_3",
+            "type": "multiple-choice",
+            "question": "Wir kaufen ___ Auto.",
+            "options": [
+                "einem",
+                "einer",
+                "ein",
+                "einen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g10_4",
+            "type": "multiple-choice",
+            "question": "Er sucht schon lange ___ Schlüssel.",
+            "options": [
+                "das",
+                "den",
+                "der",
+                "die"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g10_5",
+            "type": "multiple-choice",
+            "question": "Haben Sie heute ___ Termin?",
+            "options": [
+                "eine",
+                "einen",
+                "einem",
+                "ein"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g10_6",
+            "type": "multiple-choice",
+            "question": "___ Apfelsaft schmeckt sehr gut.",
+            "options": [
+                "Dem",
+                "Des",
+                "Den",
+                "Der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_7",
+            "type": "multiple-choice",
+            "question": "Ich kaufe ___ Tisch.",
+            "options": [
+                "der",
+                "die",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_8",
+            "type": "multiple-choice",
+            "question": "___ Frau trinkt einen Kaffee.",
+            "options": [
+                "Der",
+                "Den",
+                "Die",
+                "Das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_9",
+            "type": "multiple-choice",
+            "question": "Wir brauchen ___ Computer (Pl).",
+            "options": [
+                "der",
+                "den",
+                "das",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_10",
+            "type": "multiple-choice",
+            "question": "Er sucht ___ Schlüssel.",
+            "options": [
+                "den",
+                "das",
+                "der",
+                "die"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_11",
+            "type": "multiple-choice",
+            "question": "___ Haus ist sehr alt.",
+            "options": [
+                "Den",
+                "Der",
+                "Das",
+                "Die"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_12",
+            "type": "multiple-choice",
+            "question": "Sie liest ___ Buch.",
+            "options": [
+                "das",
+                "der",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_13",
+            "type": "multiple-choice",
+            "question": "Kaufst du ___ Blume?",
+            "options": [
+                "der",
+                "das",
+                "die",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_14",
+            "type": "multiple-choice",
+            "question": "Ich trinke ___ Saft.",
+            "options": [
+                "das",
+                "den",
+                "die",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_nominativ_and_akkusativ_15",
+            "type": "multiple-choice",
+            "question": "Wer hat ___ Geld?",
+            "options": [
+                "der",
+                "die",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

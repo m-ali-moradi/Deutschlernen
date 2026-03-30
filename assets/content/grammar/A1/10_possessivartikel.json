@@ -1,0 +1,107 @@
+﻿{
+    "id":  "g69",
+    "title":  "Possessivartikel",
+    "level":  "A1",
+    "category":  "Pronomen",
+    "icon":  "🎒",
+    "rule":  "mein, dein, sein, ihr… folgen den Endungen von \u0027ein\u0027.",
+    "explanation":  "Possessive articles show ownership. They change their endings based on the gender and case of the noun that follows, following the same pattern as \u0027ein\u0027.",
+    "examples":  [
+                     "Das ist mein Hund.",
+                     "Ist das deine Tasche?",
+                     "Sein Auto ist neu.",
+                     "Ihr Name ist Anna."
+                 ],
+    "detail":  {
+                   "id":  "g69",
+                   "subtitle":  "mein · dein · sein · ihr",
+                   "emoji":  "🎒",
+                   "gradient":  [
+                                    "#10B981",
+                                    "#059669"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Possessivartikel · Possessive Articles",
+                                        "text":  "Possessive articles (my, your, his, etc.) indicate ownership or belonging. They follow the same declension pattern (endings) as the indefinite article \u0027ein\u0027.",
+                                        "bullets":  [
+                                                        "mein / meine (my)",
+                                                        "dein / deine (your - informal)",
+                                                        "sein / seine (his/its)",
+                                                        "ihr / ihre (her)",
+                                                        "unser / unsere (our)",
+                                                        "euer / eure (your - plural)",
+                                                        "ihr / ihre (their)",
+                                                        "Ihr / Ihre (your - formal)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Endungen (Nominativ)",
+                                        "headers":  [
+                                                        "Possessiv",
+                                                        "Maskulin (der)",
+                                                        "Feminin (die)",
+                                                        "Neutrum (das)"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "ich",
+                                                         "mein Vater",
+                                                         "meine Mutter",
+                                                         "mein Kind"
+                                                     ],
+                                                     [
+                                                         "du",
+                                                         "dein Vater",
+                                                         "deine Mutter",
+                                                         "dein Kind"
+                                                     ],
+                                                     [
+                                                         "er/es",
+                                                         "sein Vater",
+                                                         "seine Mutter",
+                                                         "sein Kind"
+                                                     ],
+                                                     [
+                                                         "sie",
+                                                         "ihr Vater",
+                                                         "ihre Mutter",
+                                                         "ihr Kind"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "The ending depends on the noun that COMES AFTER the possessive article, not the person who owns it! (Der Hund → MEIN Hund, Die Katze → MEINE Katze).",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "In Aktion",
+                                        "color":  "emerald",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wo ist MEIN Schlüssel?",
+                                                          "en":  "Where is MY key?"
+                                                      },
+                                                      {
+                                                          "de":  "Ist das DEINE Tasche?",
+                                                          "en":  "Is that YOUR bag?"
+                                                      },
+                                                      {
+                                                          "de":  "SEIN Auto ist sehr schnell.",
+                                                          "en":  "HIS car is very fast."
+                                                      },
+                                                      {
+                                                          "de":  "Besucht ihr UNSERE Stadt?",
+                                                          "en":  "Are you visiting OUR city?"
+                                                      }
+                                                  ]
+                                    }
+                                ]
+               }
+}

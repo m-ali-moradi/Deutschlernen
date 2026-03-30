@@ -1,0 +1,522 @@
+[
+  {
+    "id": "telc-a1",
+    "title": "telc Deutsch A1",
+    "provider": "Telc",
+    "level": "A1",
+    "description": "Die telc Deutsch A1-Prüfung ist für jeden geeignet, der etwa 100-150 Stunden Deutschunterricht besucht hat. Es handelt sich um eine allgemeine Sprachprüfung.",
+    "structure": [
+      {
+        "name": "Hören",
+        "duration": "20 Min.",
+        "description": "Kurze Alltagstexte und Durchsagen hören.",
+        "parts": [
+          {
+            "title": "Teil 1: Dialoge",
+            "description": "6 kurze Dialoge hören und Multiple-Choice-Fragen beantworten (Bild/Text). Jeweils zweimal gehört."
+          },
+          {
+            "title": "Teil 2: Ansagen",
+            "description": "4 Durchsagen hören (z. B. am Bahnhof) und Richtig/Falsch entscheiden. Jeweils einmal gehört."
+          },
+          {
+            "title": "Teil 3: Nachrichten",
+            "description": "5 kurze Telefonansagen/Nachrichten hören und MCQs beantworten. Jeweils zweimal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "45 Min.",
+        "description": "Kurze E-Mails, Anzeigen und Grammatikaufgaben lesen.",
+        "parts": [
+          {
+            "title": "Teil 1: Korrespondenz (E-Mails)",
+            "description": "2 kurze E-Mails/Notizen lesen und 5 Fragen beantworten (MCQ/Richtig-Falsch)."
+          },
+          {
+            "title": "Teil 2: Anzeigen",
+            "description": "Anzeigen (z. B. in einer Zeitung) scannen und die richtigen Informationen 5 Situationen zuordnen."
+          },
+          {
+            "title": "Teil 3: Aushänge",
+            "description": "Hinweisschilder, Schilder oder Plakate lesen und 5 Richtig/Falsch-Fragen beantworten."
+          },
+          {
+            "title": "Sprachbausteine: Lückentext",
+            "description": "Einen kurzen Text mit der richtigen Grammatik/Wortwahl ergänzen (6 Items)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "20 Min.",
+        "description": "Ein Formular ausfüllen und eine kurze persönliche Notiz schreiben.",
+        "parts": [
+          {
+            "title": "Teil 1: Formular ausfüllen",
+            "description": "Eine Situation lesen und ein Formular (z. B. für ein Hotel) mit 5 fehlenden Angaben ausfüllen."
+          },
+          {
+            "title": "Aufgabe 2: Persönliche Mitteilung",
+            "description": "Eine kurze persönliche E-Mail oder Notiz (ca. 30 Wörter) als Antwort auf 3 Stichpunkte schreiben."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Interaktion in einer Gruppe von Teilnehmern.",
+        "parts": [
+          {
+            "title": "Teil 1: Sich vorstellen",
+            "description": "Sich vorstellen (Name, Alter, Land usw.) und Anschlussfragen des Prüfers beantworten."
+          },
+          {
+            "title": "Teil 2: Informationen austauschen",
+            "description": "Karten mit Themen ziehen und Fragen mit dem Partner stellen/beantworten."
+          },
+          {
+            "title": "Teil 3: Bitten und Antworten",
+            "description": "Karten mit Bildern ziehen und Bitten/Befehle formulieren; auf den Partner reagieren."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "grading": [
+      {
+        "points": "54–60",
+        "grade": "Sehr Gut"
+      },
+      {
+        "points": "48–53.5",
+        "grade": "Gut"
+      },
+      {
+        "points": "42–47.5",
+        "grade": "Befriedigend"
+      },
+      {
+        "points": "36–41.5",
+        "grade": "Ausreichend"
+      },
+      {
+        "points": "0–35.5",
+        "grade": "Nicht bestanden"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Übungstests",
+        "description": "Informationen und Übungstests für die telc Deutsch A1 Prüfung",
+        "url": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/start-deutsch-1-/-telc-deutsch-a1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "telc-a2",
+    "title": "telc Deutsch A2",
+    "provider": "Telc",
+    "level": "A2",
+    "description": "Testet Ihre Fähigkeit, sich in einfachen Alltags- und Berufssituationen auszudrücken.",
+    "structure": [
+      {
+        "name": "Hören",
+        "duration": "20 Min.",
+        "description": "Telefonnachrichten, Nachrichtenbeiträge und Dialoge hören.",
+        "parts": [
+          {
+            "title": "Teil 1: Telefonnotizen",
+            "description": "5 kurze Telefonansagen hören und fehlende Informationen in Telefonnotizen ergänzen (z. B. Name, Uhrzeit, Nummer). Zweimal gehört."
+          },
+          {
+            "title": "Teil 2: Kurznachrichten",
+            "description": "5 Radiodurchsagen oder Nachrichtenschnipsel hören und 5 Multiple-Choice-Fragen beantworten (a, b, c). Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Dialoge",
+            "description": "Ein längeres Gespräch hören (z. B. Reiseplanung) und 5 Bilder oder Aussagen der richtigen Person zuordnen. Zweimal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "70 Min. (inkl. Schreiben)",
+        "description": "Grundrisse, Anzeigen lesen und Grammatikaufgaben lösen.",
+        "parts": [
+          {
+            "title": "Teil 1: Zuordnung (Etagenplan)",
+            "description": "Einen Etagenplan eines Kaufhauses oder ein Verzeichnis lesen und 5 Anfragen den richtigen Orten zuordnen (MCQ a, b, c)."
+          },
+          {
+            "title": "Teil 2: Selektives Lesen (Anzeigen)",
+            "description": "5 Zeitungs- oder Zeitschriftenanzeigen lesen und 5 Multiple-Choice-Fragen beantworten (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Detailverstehen (Mitteilungen)",
+            "description": "5 kurze Mitteilungen, Schilder oder E-Mails lesen und entscheiden, ob eine gegebene Aussage Richtig oder Falsch ist."
+          },
+          {
+            "title": "Sprachbausteine: Grammatik & Wortschatz",
+            "description": "Zwei kurze Texte mit der richtigen Grammatik/Wortwahl ergänzen (insgesamt 10 Items)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "Teil von 70 Min.",
+        "description": "Ein Formular ausfüllen und eine halbformelle Mitteilung schreiben.",
+        "parts": [
+          {
+            "title": "Teil 1: Formular ausfüllen",
+            "description": "Informationen über eine Person lesen und ein Formular (z. B. Serviceanfrage) mit 5 details ausfüllen."
+          },
+          {
+            "title": "Teil 2: Schriftliche Mitteilung",
+            "description": "E-Mail oder persönlichen Brief schreiben (ca. 40 Wörter), 3 Stichpunkte abdecken."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Teilnahme an einer Partnerprüfung ohne Vorbereitungszeit.",
+        "parts": [
+          {
+            "title": "Teil 1: Sich vorstellen",
+            "description": "Sich anhand von Stichworten vorstellen (Name, Geburtsort, Familie, Hobbys) und Fragen des Prüfers beantworten."
+          },
+          {
+            "title": "Teil 2: Alltagsgespräch",
+            "description": "Alltagsgespräch: Mit dem Partner über ein Alltagsthema anhand von Impulskarten sprechen."
+          },
+          {
+            "title": "Teil 3: Gemeinsam planen",
+            "description": "Gemeinsam mit dem Partner eine Aktivität aushandeln oder planen und eine Einigung erzielen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "Sehr Gut"
+      },
+      {
+        "points": "80–89.5",
+        "grade": "Gut"
+      },
+      {
+        "points": "70–79.5",
+        "grade": "Befriedigend"
+      },
+      {
+        "points": "60–69.5",
+        "grade": "Ausreichend"
+      },
+      {
+        "points": "0–59.5",
+        "grade": "Nicht bestanden"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Übungstests",
+        "description": "Informationen und Übungstests für die telc Deutsch A2 Prüfung",
+        "url": "https://www.telc.net/sprachpruefungen/deutsch/start-deutsch-2-telc-deutsch-a2/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "telc-b1",
+    "title": "telc Deutsch B1",
+    "provider": "Telc",
+    "level": "B1",
+    "description": "Fundierte Grundkenntnisse der deutschen Sprache für die selbstständige Kommunikation.",
+    "structure": [
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "90 Min.",
+        "description": "Blogbeiträge, Anzeigen lesen und Grammatikaufgaben lösen.",
+        "parts": [
+          {
+            "title": "Teil 1: Globalverstehen",
+            "description": "5 kurze Texte lesen und 5 entsprechenden Überschriften zuordnen."
+          },
+          {
+            "title": "Teil 2: Detailverstehen",
+            "description": "Einen Artikel oder Bericht lesen und 5 Multiple-Choice-Fragen beantworten (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Selektives Verstehen (Anzeigen)",
+            "description": "10 geeignete Anzeigen für 10 bestimmte Personen/Situationen finden."
+          },
+          {
+            "title": "Teil 1: Grammatik",
+            "description": "Einen Brief/E-Mail mit 10 richtigen Wörtern ergänzen (Multiple-Choice aus jeweils 3 Optionen)."
+          },
+          {
+            "title": "Teil 2: Wortschatz",
+            "description": "Einen Text mit 10 richtigen Wörtern aus einer Liste von 15 Wörtern vervollständigen."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "30 Min.",
+        "description": "Globale und detaillierte Informationen aus Audio verstehen.",
+        "parts": [
+          {
+            "title": "Teil 1: Globalverstehen (Durchsagen)",
+            "description": "5 Durchsagen hören (z. B. am Flughafen) und Richtig/Falsch entscheiden. Einmal gehört."
+          },
+          {
+            "title": "Teil 2: Selektives Verstehen (Gespräch)",
+            "description": "Ein Interview oder einen Bericht hören und 10 Richtig/Falsch-Fragen beantworten. Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Detailverstehen (Dialoge)",
+            "description": "10 kurze Dialoge hören und entscheiden, ob die Aussagen Richtig oder Falsch sind. Einmal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "30 Min.",
+        "description": "Persönliche oder halbformelle E-Mails/Briefe schreiben.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: E-Mail schreiben",
+            "description": "E-Mail oder Brief (ca. 80-100 Wörter) als Antwort auf 4 Stichpunkte in einer Situation schreiben."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Partnerprüfung mit Vorbereitungszeit.",
+        "parts": [
+          {
+            "title": "Teil 1: Kontaktaufnahme",
+            "description": "Kontaktaufnahme: Den Partner durch Fragen zu Leben/Hobbys kennenlernen."
+          },
+          {
+            "title": "Teil 2: Thema präsentieren",
+            "description": "Über ein Thema sprechen (z. B. eine Erfahrung oder Meinung) anhand von Impulsen."
+          },
+          {
+            "title": "Teil 3: Gemeinsam planen",
+            "description": "Gemeinsam eine Aktivität planen oder eine Aufgabe mit dem Partner lösen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "grading": [
+      {
+        "points": "270–300",
+        "grade": "Sehr Gut"
+      },
+      {
+        "points": "240–269.5",
+        "grade": "Gut"
+      },
+      {
+        "points": "210–239.5",
+        "grade": "Befriedigend"
+      },
+      {
+        "points": "180–209.5",
+        "grade": "Ausreichend"
+      },
+      {
+        "points": "0–179.5",
+        "grade": "Nicht bestanden"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Übungstests",
+        "description": "Informationen und Übungstests für die telc Deutsch B1 Prüfung",
+        "url": "https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "telc-b2",
+    "title": "telc Deutsch B2",
+    "provider": "Telc",
+    "level": "B2",
+    "description": "Fortgeschrittene Kenntnisse für berufliche und akademische Kontexte.",
+    "structure": [
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "90 Min.",
+        "description": "Komplexe Leseaufgaben und fortgeschrittene Grammatik.",
+        "parts": [
+          {
+            "title": "Teil 1: Globalverstehen",
+            "description": "Globalverstehen: 5 Überschriften 5 kurzen Zeitungsartikeln zuordnen."
+          },
+          {
+            "title": "Teil 2: Detailverstehen",
+            "description": "Detailverstehen: Einen längeren text lesen und 5 Multiple-Choice-Fragen beantworten (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Selektives Verstehen (Anzeigen)",
+            "description": "Selektives Verstehen: 10 Anzeigen identifizieren, die zu 10 spezifischen Situationen passen."
+          },
+          {
+            "title": "Teil 1: Grammatik",
+            "description": "Einen formellen Brief/Text mit 10 richtigen Wörtern ergänzen (MCQ aus 3 Optionen)."
+          },
+          {
+            "title": "Teil 2: Wortschatz",
+            "description": "Einen Fachtext mit 10 richtigen Wörtern aus einer Liste von 15 vervollständigen."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "25 Min.",
+        "description": "Interviews und Diskussionen verstehen.",
+        "parts": [
+          {
+            "title": "Teil 1: Meinungen zuordnen",
+            "description": "5 Personen hören, die ihre Meinung zu einem Thema äußern, und Aussagen zuordnen. Einmal gehört."
+          },
+          {
+            "title": "Teil 2: Global/Detail (Interview)",
+            "description": "Ein Radiointerview oder eine Diskussion hören und 10 Richtig/Falsch-Fragen beantworten. Einmal gehört."
+          },
+          {
+            "title": "Teil 3: Selektives Verstehen (Nachrichten)",
+            "description": "5 kurze Berichte/Durchsagen hören und 5 Fragen beantworten (MCQ/TF). Einmal gehört."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "30 Min.",
+        "description": "Eine formelle Nachricht oder Antwort schreiben.",
+        "parts": [
+          {
+            "title": "Aufgabe 1: Formeller Brief/E-Mail",
+            "description": "Formellen Brief oder E-Mail (ca. 150 Wörter) schreiben, Stellung beziehen oder auf eine berufliche Anfrage antworten."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Themen diskutieren und in Paaren verhandeln.",
+        "parts": [
+          {
+            "title": "Teil 1: Präsentation",
+            "description": "Präsentation: Ein Thema oder eine Erfahrung ca. 2 Minuten lang klar präsentieren."
+          },
+          {
+            "title": "Teil 2: Diskussion",
+            "description": "Diskussion: Mit dem Partner über ein kontroverses Thema diskutieren und die eigene Meinung äußern."
+          },
+          {
+            "title": "Teil 3: Problemlösung (Verhandeln)",
+            "description": "Problemlösung: Mit dem Partner eine Einigung bei einer Planungsaufgabe erzielen."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kommen Sie mindestens 15 Minuten vor Prüfungsbeginn an.",
+      "Kennen Sie das Prüfungsformat perfekt (Anzahl der Teile, Zeitvorgaben).",
+      "Üben Sie mit offiziellen Modellsätzen, um Vertrauen aufzubauen.",
+      "Meistern Sie das Zeitmanagement: Lassen Sie keine Frage unbeantwortet.",
+      "Lesen/Hören: Lesen Sie Fragen/Optionen, bevor der Text/Audio beginnt.",
+      "Schreiben: Nutzen Sie Standard-Konnektoren (weil, obwohl, deshalb).",
+      "Sprechen: Kommunikation ist wichtiger als 100% perfekte Grammatik.",
+      "Sprechen: Nutzen Sie Redemittel, um flüssig zu bleiben."
+    ],
+    "grading": [
+      {
+        "points": "270–300",
+        "grade": "Sehr Gut"
+      },
+      {
+        "points": "240–269.5",
+        "grade": "Gut"
+      },
+      {
+        "points": "210–239.5",
+        "grade": "Befriedigend"
+      },
+      {
+        "points": "180–209.5",
+        "grade": "Ausreichend"
+      },
+      {
+        "points": "0–179.5",
+        "grade": "Nicht bestanden"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Informationen und Übungstests",
+        "description": "Informationen und Übungstests für die telc Deutsch B2 Prüfung",
+        "url": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/telc-deutsch-b2/",
+        "type": "url"
+      }
+    ]
+  }
+]

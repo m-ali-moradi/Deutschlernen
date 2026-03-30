@@ -1,0 +1,204 @@
+﻿{
+    "id":  "g58",
+    "title":  "Konjunktionen",
+    "level":  "A2",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "Nebenordnend (und, aber, oder): keine Änderung. Unterordnend (weil, dass): Verb ans Ende.",
+    "explanation":  "Coordinating conjunctions (und, aber, oder, denn, sondern) connect clauses without changing word order. Subordinating conjunctions (weil, dass, wenn, obwohl) push the verb to the end.",
+    "examples":  [
+                     "Ich lerne Deutsch und sie lernt Englisch.",
+                     "Er ist müde, aber er arbeitet weiter.",
+                     "Ich lerne, weil ich in Berlin leben möchte.",
+                     "Sie sagt, dass sie morgen kommt."
+                 ],
+    "detail":  {
+                   "id":  "g58",
+                   "subtitle":  "Nebensätze · Konjunktionen",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#3B82F6",
+                                    "#2563EB"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Konjunktionen · Connecting Sentences",
+                                        "text":  "Conjunctions connect clauses and sentences. German has two main types: coordinating (Hauptsatz + Hauptsatz) and subordinating (Hauptsatz + Nebensatz). The key difference is word order.",
+                                        "bullets":  [
+                                                        "Nebenordnend (und, aber, oder): word order stays the same",
+                                                        "Unterordnend (weil, dass, wenn): verb goes to the END",
+                                                        "Adverbial connectors (deshalb, trotzdem): verb in position 2 with INVERSION"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Nebenordnende Konjunktionen",
+                                        "headers":  [
+                                                        "Konjunktion",
+                                                        "Bedeutung",
+                                                        "Wortstellung"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "und",
+                                                         "and",
+                                                         "no change"
+                                                     ],
+                                                     [
+                                                         "aber",
+                                                         "but",
+                                                         "no change"
+                                                     ],
+                                                     [
+                                                         "oder",
+                                                         "or",
+                                                         "no change"
+                                                     ],
+                                                     [
+                                                         "denn",
+                                                         "because",
+                                                         "no change"
+                                                     ],
+                                                     [
+                                                         "sondern",
+                                                         "but rather (after negation)",
+                                                         "no change"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Unterordnende Konjunktionen",
+                                        "headers":  [
+                                                        "Konjunktion",
+                                                        "Bedeutung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "weil",
+                                                         "because",
+                                                         "..., weil ich müde BIN."
+                                                     ],
+                                                     [
+                                                         "dass",
+                                                         "that",
+                                                         "..., dass er morgen KOMMT."
+                                                     ],
+                                                     [
+                                                         "wenn",
+                                                         "when / if",
+                                                         "Wenn es REGNET, ..."
+                                                     ],
+                                                     [
+                                                         "obwohl",
+                                                         "although",
+                                                         "..., obwohl er krank IST."
+                                                     ],
+                                                     [
+                                                         "als",
+                                                         "when (past, once)",
+                                                         "Als ich jung WAR, ..."
+                                                     ],
+                                                     [
+                                                         "damit",
+                                                         "so that",
+                                                         "..., damit sie es VERSTEHT."
+                                                     ],
+                                                     [
+                                                         "bevor",
+                                                         "before",
+                                                         "Bevor du GEHST, ..."
+                                                     ],
+                                                     [
+                                                         "nachdem",
+                                                         "after",
+                                                         "Nachdem er GEGESSEN hat, ..."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Wortstellung: Hauptsatz vs. Nebensatz",
+                                        "from":  {
+                                                     "label":  "HAUPTSATZ + HAUPTSATZ",
+                                                     "text":  "Er ist müde, denn er hat wenig geschlafen."
+                                                 },
+                                        "to":  {
+                                                   "label":  "HAUPTSATZ + NEBENSATZ",
+                                                   "text":  "Er ist müde, weil er wenig geschlafen hat."
+                                               },
+                                        "note":  "With subordinating conjunctions, the conjugated verb moves to the END"
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "When a Nebensatz comes FIRST, the main clause starts with the verb (inversion): \u0027Weil ich müde bin, gehe ich schlafen.\u0027 — Verb-Verb at the comma!",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Adverbiale Konnektoren (Inversion!)",
+                                        "color":  "blue",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "deshalb / deswegen",
+                                                         "right":  "therefore: Er ist müde, deshalb GEHT er."
+                                                     },
+                                                     {
+                                                         "left":  "trotzdem",
+                                                         "right":  "nevertheless: Es regnet, trotzdem GEHT er."
+                                                     },
+                                                     {
+                                                         "left":  "dann",
+                                                         "right":  "then: Erst essen, dann GEHEN wir."
+                                                     },
+                                                     {
+                                                         "left":  "außerdem",
+                                                         "right":  "furthermore: Er ist klug, außerdem IST er nett."
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Kontext",
+                                        "color":  "blue",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich lerne Deutsch, weil ich in Berlin leben möchte.",
+                                                          "en":  "I learn German because I want to live in Berlin."
+                                                      },
+                                                      {
+                                                          "de":  "Er sagt, dass er morgen kommt.",
+                                                          "en":  "He says that he\u0027s coming tomorrow."
+                                                      },
+                                                      {
+                                                          "de":  "Wenn es regnet, bleibe ich zu Hause.",
+                                                          "en":  "If/When it rains, I stay at home."
+                                                      },
+                                                      {
+                                                          "de":  "Ich bin müde, aber ich muss noch arbeiten.",
+                                                          "en":  "I\u0027m tired, but I still have to work."
+                                                      },
+                                                      {
+                                                          "de":  "Bevor du gehst, räum bitte auf!",
+                                                          "en":  "Before you go, please tidy up!"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Coordinating (und, aber, oder, denn, sondern): NO word order change.",
+                                                      "Subordinating (weil, dass, wenn, obwohl, als...): verb goes to END.",
+                                                      "Adverbial connectors (deshalb, trotzdem): verb in position 2 = inversion.",
+                                                      "Nebensatz first → main clause verb immediately after comma.",
+                                                      "denn ≠ weil: same meaning but different word order!"
+                                                  ]
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,186 @@
+{
+    "topic": "Nominalstil",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g35_1",
+            "type": "multiple-choice",
+            "question": "Typisch fÃ¼r den Nominalstil: 'Nach der ___ der Daten...'",
+            "options": [
+                "analysierend",
+                "Analysieren",
+                "analysiert",
+                "Analyse"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g35_2",
+            "type": "multiple-choice",
+            "question": "'Weil es viel geregnet hat...' -> Nominalstil: '___ des starken Regens...'",
+            "options": [
+                "Trotz",
+                "Innerhalb",
+                "WÃ¤hrend",
+                "Aufgrund"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g35_3",
+            "type": "multiple-choice",
+            "question": "'Bevor er abfuhr' → Nominalstil: 'Vor ___'",
+            "options": [
+                "seiner Abfahrt",
+                "seinem Abfahren",
+                "seinen Abfahren",
+                "seine Abfahrt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g35_4",
+            "type": "multiple-choice",
+            "question": "Wegen ___ der Kosten musste das Projekt sofort gestoppt werden.",
+            "options": [
+                "des Anstiegs",
+                "des Steigens",
+                "dem Anstieg",
+                "der Steigerung"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g35_5",
+            "type": "multiple-choice",
+            "question": "Trotz ___ der schwierigen Prüfung war er am Abend deprimiert.",
+            "options": [
+                "des Bestanden",
+                "dem Bestehen",
+                "des Bestands",
+                "des Bestehens"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g35_6",
+            "type": "multiple-choice",
+            "question": "Nach ___ des offiziellen Vertrages begannen endlich die Arbeiten.",
+            "options": [
+                "der Unterzeichnung",
+                "des Unterzeichnens",
+                "dem Unterzeichnen",
+                "der Unterzeichnet"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nominalstil_7",
+            "type": "multiple-choice",
+            "question": "Weil es stark regnete... -> Wegen des ___ (starker Regen)...",
+            "options": [
+                "starken Regens",
+                "starkes Regens",
+                "starker Regen",
+                "starkem Regen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nominalstil_8",
+            "type": "multiple-choice",
+            "question": "Als das Haus gebaut wurde... -> Beim ___ (Bau) des Hauses...",
+            "options": [
+                "Gebaut",
+                "Bau",
+                "Baus",
+                "Bauen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_nominalstil_9",
+            "type": "multiple-choice",
+            "question": "Nachdem er abgefahren war... -> Nach seiner ___ (Abfahrt)...",
+            "options": [
+                "Abfahrts",
+                "Abgefahren",
+                "Abfahrt",
+                "Abfahren"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_nominalstil_10",
+            "type": "multiple-choice",
+            "question": "Obwohl das Wetter schlecht war... -> Trotz des ___ (schlechtes Wetter)...",
+            "options": [
+                "schlechten Wetters",
+                "schlechtes Wetters",
+                "schlechtes Wetter",
+                "schlechten Wetter"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nominalstil_11",
+            "type": "multiple-choice",
+            "question": "Um gesund zu bleiben... -> Zur ___ (Erhaltung) der Gesundheit...",
+            "options": [
+                "Erhaltung",
+                "Haltung",
+                "Erhalten",
+                "Erhalte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nominalstil_12",
+            "type": "multiple-choice",
+            "question": "Da er krank war... -> Aufgrund seiner ___ (Krankheit)...",
+            "options": [
+                "Erkrankt",
+                "Kranken",
+                "Krankheit",
+                "Krank"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_nominalstil_13",
+            "type": "multiple-choice",
+            "question": "Bevor er ankam... -> Vor seiner ___ (Ankunft)...",
+            "options": [
+                "Ankunft",
+                "Ankunfts",
+                "Ankommt",
+                "Ankommen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_nominalstil_14",
+            "type": "multiple-choice",
+            "question": "Damit die Maschine funktioniert... -> Zum ___ (Funktionieren) der Maschine...",
+            "options": [
+                "Funktion",
+                "Funktioniert",
+                "Funktionalität",
+                "Funktionieren"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_nominalstil_15",
+            "type": "multiple-choice",
+            "question": "Während sie studierte... -> Während ihres ___ (Studium)...",
+            "options": [
+                "Studieren",
+                "Studium",
+                "Studien",
+                "Studiums"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

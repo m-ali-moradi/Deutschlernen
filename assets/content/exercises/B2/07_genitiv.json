@@ -1,0 +1,186 @@
+{
+    "topic": "Genitiv",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "ex_fb_b2_2",
+            "type": "fill-blank",
+            "question": "Trotz ___ Regens gingen wir spazieren.",
+            "options": [
+                "des",
+                "dem",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "ex_fb_b2_6",
+            "type": "fill-blank",
+            "question": "Anstelle ___ Autos nahm er das Fahrrad.",
+            "options": [
+                "des",
+                "das",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv_3",
+            "type": "multiple-choice",
+            "question": "Das Haus ___ Lehrers ist groß.",
+            "options": [
+                "des",
+                "dem",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv_4",
+            "type": "multiple-choice",
+            "question": "Das Auto ___ Frau ist neu.",
+            "options": [
+                "der",
+                "die",
+                "den",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv_5",
+            "type": "multiple-choice",
+            "question": "Das Spielzeug ___ Kindes ist kaputt.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_genitiv_6",
+            "type": "multiple-choice",
+            "question": "Die Blätter ___ Baumes fallen ab.",
+            "options": [
+                "der",
+                "dem",
+                "des",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv_7",
+            "type": "multiple-choice",
+            "question": "Der Mut ___ Mannes war bemerkenswert.",
+            "options": [
+                "der",
+                "dem",
+                "den",
+                "des"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_genitiv_8",
+            "type": "multiple-choice",
+            "question": "Die Rede ___ Präsidenten war lang.",
+            "options": [
+                "der",
+                "dem",
+                "des",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv_9",
+            "type": "multiple-choice",
+            "question": "Das Lächeln ___ Mädchens bezauberte alle.",
+            "options": [
+                "der",
+                "des",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_genitiv_10",
+            "type": "multiple-choice",
+            "question": "Die Farbe ___ Kleides ist schön.",
+            "options": [
+                "dem",
+                "der",
+                "des",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_genitiv_11",
+            "type": "multiple-choice",
+            "question": "Ich erinnere mich ___ Tages.",
+            "options": [
+                "der",
+                "des",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_genitiv_12",
+            "type": "multiple-choice",
+            "question": "Das Dach ___ Hauses muss repariert werden.",
+            "options": [
+                "des",
+                "der",
+                "dem",
+                "den"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv_13",
+            "type": "multiple-choice",
+            "question": "Ich bedarf ___ Ruhe.",
+            "options": [
+                "den",
+                "die",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_genitiv_14",
+            "type": "multiple-choice",
+            "question": "Das Wasser ___ Sees ist kristallklar.",
+            "options": [
+                "des",
+                "den",
+                "der",
+                "dem"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_genitiv_15",
+            "type": "multiple-choice",
+            "question": "Er rühmt sich ___ Sieges.",
+            "options": [
+                "des",
+                "den",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

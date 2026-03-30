@@ -1,0 +1,186 @@
+{
+    "topic": "Passiv",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "ex_fb_b1_3",
+            "type": "fill-blank",
+            "question": "Das Haus ___ gerade ___ . (bauen - Passiv)",
+            "options": [
+                "wird bauen",
+                "wird gebaut",
+                "wurde gebaut",
+                "ist gebaut"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_2",
+            "type": "multiple-choice",
+            "question": "Das Fenster ___ von mir geöffnet. (Präsens)",
+            "options": [
+                "ist",
+                "wird",
+                "wurde",
+                "war"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_3",
+            "type": "multiple-choice",
+            "question": "Die Tür ___ gestern geschlossen. (Präteritum)",
+            "options": [
+                "ist",
+                "wurde",
+                "wird",
+                "war"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_4",
+            "type": "multiple-choice",
+            "question": "Der Kuchen ___ gebacken worden. (Perfekt)",
+            "options": [
+                "war",
+                "wurde",
+                "wird",
+                "ist"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_passiv_5",
+            "type": "multiple-choice",
+            "question": "Das Problem ___ gelöst werden. (Futur I)",
+            "options": [
+                "werden",
+                "wurde",
+                "war",
+                "wird"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_passiv_6",
+            "type": "multiple-choice",
+            "question": "Hier ___ nicht geraucht. (Präsens)",
+            "options": [
+                "werden",
+                "wird",
+                "war",
+                "ist"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_7",
+            "type": "multiple-choice",
+            "question": "Die Aufgabe ___ schon gemacht worden. (Perfekt)",
+            "options": [
+                "wurde",
+                "wird",
+                "ist",
+                "war"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_passiv_8",
+            "type": "multiple-choice",
+            "question": "Der Brief ___ vor einer Stunde geschrieben. (Präteritum)",
+            "options": [
+                "ward",
+                "wird",
+                "war",
+                "wurde"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_passiv_9",
+            "type": "multiple-choice",
+            "question": "Dieses Haus muss dringend renoviert ___. (Infinitiv)",
+            "options": [
+                "werden",
+                "worden",
+                "wurden",
+                "wird"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_passiv_10",
+            "type": "multiple-choice",
+            "question": "Mein Fahrrad ___ gestohlen worden. (Perfekt)",
+            "options": [
+                "hatte",
+                "ist",
+                "hat",
+                "war"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_11",
+            "type": "multiple-choice",
+            "question": "Als ich kam, war das Auto schon repariert ___. (Plusquamperfekt)",
+            "options": [
+                "worden",
+                "wurden",
+                "wurde",
+                "werden"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_passiv_new_0",
+            "type": "multiple-choice",
+            "question": "Die Fenster ___ gestern gereinigt.",
+            "options": [
+                "wird",
+                "wurden",
+                "werden",
+                "sein"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_new_1",
+            "type": "multiple-choice",
+            "question": "Das Buch ___ noch dieses Jahr veröffentlicht.",
+            "options": [
+                "wird",
+                "ist",
+                "wurde",
+                "werden"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_passiv_new_2",
+            "type": "multiple-choice",
+            "question": "Der Schlüssel ___ gefunden worden.",
+            "options": [
+                "war",
+                "ist",
+                "wurde",
+                "wird"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_passiv_new_3",
+            "type": "multiple-choice",
+            "question": "Das Essen ___ gerade gekocht.",
+            "options": [
+                "werden",
+                "wird",
+                "worden",
+                "wurde"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

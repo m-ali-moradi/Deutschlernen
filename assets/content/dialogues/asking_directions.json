@@ -1,0 +1,109 @@
+{
+    "id": "asking_directions",
+    "title": "Nach dem Weg fragen",
+    "english_title": "Asking for Directions",
+    "level": "A1",
+    "category": "Orientierung",
+    "description": "Practice asking where places are and understanding simple directions like left, right, and straight ahead.",
+    "icon": "map_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Entschuldigung, koennen Sie mir helfen?",
+            "english": "Excuse me, can you help me?"
+        },
+        {
+            "id": 2,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Ja, natuerlich.",
+            "english": "Yes, of course."
+        },
+        {
+            "id": 3,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Wo ist bitte die Apotheke?",
+            "english": "Where is the pharmacy, please?"
+        },
+        {
+            "id": 4,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Gehen Sie zuerst geradeaus bis zur Ampel.",
+            "english": "First go straight ahead until the traffic light."
+        },
+        {
+            "id": 5,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Und dann?",
+            "english": "And then?"
+        },
+        {
+            "id": 6,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Dann gehen Sie nach links in die Berliner Strasse.",
+            "english": "Then go left into Berliner Strasse."
+        },
+        {
+            "id": 7,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ist die Apotheke weit weg?",
+            "english": "Is the pharmacy far away?"
+        },
+        {
+            "id": 8,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Nein, nur etwa fuenf Minuten zu Fuss.",
+            "english": "No, only about five minutes on foot."
+        },
+        {
+            "id": 9,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ist sie auf der linken oder auf der rechten Seite?",
+            "english": "Is it on the left or on the right side?"
+        },
+        {
+            "id": 10,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Auf der rechten Seite, neben einer Baeckerei.",
+            "english": "On the right side, next to a bakery."
+        },
+        {
+            "id": 11,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Vielen Dank. Und wo ist der Bahnhof?",
+            "english": "Thank you very much. And where is the train station?"
+        },
+        {
+            "id": 12,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Der Bahnhof ist hinter dem Park. Von hier sind es zehn Minuten.",
+            "english": "The train station is behind the park. From here it is ten minutes."
+        },
+        {
+            "id": 13,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Super, danke fuer Ihre Hilfe.",
+            "english": "Great, thanks for your help."
+        },
+        {
+            "id": 14,
+            "sender": "left",
+            "role": "Passantin",
+            "german": "Gern geschehen. Viel Erfolg.",
+            "english": "You are welcome. Good luck."
+        }
+    ]
+}

@@ -1,0 +1,170 @@
+﻿{
+    "id":  "g20",
+    "title":  "Adjektivdeklination",
+    "level":  "A2",
+    "category":  "Adjektive",
+    "icon":  "🎨",
+    "rule":  "Endung hängt ab von: Artikeltyp, Genus, Kasus.",
+    "explanation":  "Adjective endings depend on the article type (definite, indefinite/possessive, or none), gender, number, and case. After der/die/das, the adjective is mostly -e or -en. After ein/kein/possessives, the adjective often carries the gender signal. Without an article, the adjective usually carries the full ending.",
+    "examples":  [
+                     "Der neue Kollege ist nett.",
+                     "Ich kaufe einen roten Pullover.",
+                     "Sie arbeitet in einem großen Büro.",
+                     "Die alten Bücher sind interessant."
+                 ],
+    "detail":  {
+                   "id":  "g20",
+                   "subtitle":  "Adjektive · Deklination",
+                   "emoji":  "🎨",
+                   "gradient":  [
+                                    "#D946EF",
+                                    "#EC4899"
+                                ],
+                   "levelBg":  "#DBEAFE",
+                   "levelText":  "#1D4ED8",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Adjektivdeklination · Adjective Declension",
+                                        "text":  "When an adjective comes BEFORE a noun, it gets an ending. The ending depends on: 1) the type of article (definite, indefinite/possessive, or none), 2) the gender/number, 3) the case."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Nach bestimmtem Artikel (der/die/das)",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Maskulin",
+                                                        "Feminin",
+                                                        "Neutrum",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nom.",
+                                                         "der alt-e",
+                                                         "die alt-e",
+                                                         "das alt-e",
+                                                         "die alt-en"
+                                                     ],
+                                                     [
+                                                         "Akk.",
+                                                         "den alt-en",
+                                                         "die alt-e",
+                                                         "das alt-e",
+                                                         "die alt-en"
+                                                     ],
+                                                     [
+                                                         "Dat.",
+                                                         "dem alt-en",
+                                                         "der alt-en",
+                                                         "dem alt-en",
+                                                         "den alt-en"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Nach unbestimmtem Artikel (ein/eine)",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Maskulin",
+                                                        "Feminin",
+                                                        "Neutrum"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nom.",
+                                                         "ein alt-er",
+                                                         "eine alt-e",
+                                                         "ein alt-es"
+                                                     ],
+                                                     [
+                                                         "Akk.",
+                                                         "einen alt-en",
+                                                         "eine alt-e",
+                                                         "ein alt-es"
+                                                     ],
+                                                     [
+                                                         "Dat.",
+                                                         "einem alt-en",
+                                                         "einer alt-en",
+                                                         "einem alt-en"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Ohne Artikel",
+                                        "headers":  [
+                                                        "Kasus",
+                                                        "Maskulin",
+                                                        "Feminin",
+                                                        "Neutrum",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nom.",
+                                                         "alt-er Wein",
+                                                         "alt-e Milch",
+                                                         "alt-es Brot",
+                                                         "alt-e Häuser"
+                                                     ],
+                                                     [
+                                                         "Akk.",
+                                                         "alt-en Wein",
+                                                         "alt-e Milch",
+                                                         "alt-es Brot",
+                                                         "alt-e Häuser"
+                                                     ],
+                                                     [
+                                                         "Dat.",
+                                                         "alt-em Wein",
+                                                         "alt-er Milch",
+                                                         "alt-em Brot",
+                                                         "alt-en Häusern"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "fuchsia",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der neue Kollege ist nett.",
+                                                          "en":  "The new colleague is nice."
+                                                      },
+                                                      {
+                                                          "de":  "Ich kaufe einen roten Pullover.",
+                                                          "en":  "I buy a red sweater."
+                                                      },
+                                                      {
+                                                          "de":  "Sie arbeitet in einem großen Büro.",
+                                                          "en":  "She works in a big office."
+                                                      },
+                                                      {
+                                                          "de":  "Die alten Bücher sind interessant.",
+                                                          "en":  "The old books are interesting."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "The SIGNAL (strong ending showing gender) must appear somewhere — either on the article or the adjective.",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "After der/die/das → mostly -e in Nom./Akk. singular, otherwise -en.",
+                                                      "After ein → the adjective often shows gender: ein großER Mann, ein großES Kind.",
+                                                      "After kein/possessives → same pattern as ein: mein großER Hund, keine altEN Bücher.",
+                                                      "Without an article, the adjective usually carries the full ending: kalter Kaffee, frische Milch.",
+                                                      "Dativ plural: adjective -en, and the noun often also adds -n if possible: mit den alten Büchern."
+                                                  ]
+                                    }
+                                ]
+               }
+}

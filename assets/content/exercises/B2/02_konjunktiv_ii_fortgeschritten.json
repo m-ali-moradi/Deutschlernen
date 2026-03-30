@@ -1,0 +1,186 @@
+{
+    "topic": "Konjunktiv II (Fortgeschritten)",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g32_1",
+            "type": "multiple-choice",
+            "question": "Wenn ich das gewusst ___, ___ ich nicht gekommen.",
+            "options": [
+                "hatte - war",
+                "hätte - wurde",
+                "habe - wäre",
+                "hätte - wäre"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g32_2",
+            "type": "multiple-choice",
+            "question": "Er tut so, als ___ er alles.",
+            "options": [
+                "wüsste",
+                "wissen",
+                "weiß",
+                "wusste"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g32_3",
+            "type": "multiple-choice",
+            "question": "___ du mir bitte das Salz reichen?",
+            "options": [
+                "Könntest",
+                "Können",
+                "Kannst",
+                "Konntest"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g32_4",
+            "type": "multiple-choice",
+            "question": "Hättest du mir die Wahrheit gesagt, ___ ich jetzt nicht so enttäuscht ___.",
+            "options": [
+                "war - gewesen",
+                "wäre - gewesen",
+                "hättest - gewesen",
+                "würde - sein"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_g32_5",
+            "type": "multiple-choice",
+            "question": "Es wäre wirklich besser gewesen, wenn wir damals viel früher ___ ___.",
+            "options": [
+                "losgingen",
+                "losgegangen sind",
+                "losgegangen wären",
+                "losgehen würden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g32_6",
+            "type": "multiple-choice",
+            "question": "An deiner Stelle ___ ich das tolle Angebot sofort angenommen.",
+            "options": [
+                "würde",
+                "hätte",
+                "wäre",
+                "habe"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_7",
+            "type": "multiple-choice",
+            "question": "Wenn ich das gewusst ___, hätte ich dir geholfen.",
+            "options": [
+                "wäre",
+                "hätte",
+                "bin",
+                "habe"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_8",
+            "type": "multiple-choice",
+            "question": "Ohne deine Hilfe ___ wir es nicht geschafft.",
+            "options": [
+                "sind",
+                "haben",
+                "hätten",
+                "wären"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_9",
+            "type": "multiple-choice",
+            "question": "___ er doch nur gekommen!",
+            "options": [
+                "Sei",
+                "Würde",
+                "Wäre",
+                "Hätte"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_10",
+            "type": "multiple-choice",
+            "question": "An deiner Stelle ___ ich das nicht tun.",
+            "options": [
+                "hätte",
+                "wäre",
+                "werde",
+                "würde"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_11",
+            "type": "multiple-choice",
+            "question": "Es ___ besser gewesen, wenn du geschwiegen hättest.",
+            "options": [
+                "sei",
+                "wäre",
+                "hätte",
+                "würde"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_12",
+            "type": "multiple-choice",
+            "question": "Wir ___ pünktlich gewesen, wenn der Zug nicht Verspätung gehabt hätte.",
+            "options": [
+                "sind",
+                "hätten",
+                "wären",
+                "würden"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_13",
+            "type": "multiple-choice",
+            "question": "___ sie mehr gelernt, hätte sie die Prüfung bestanden.",
+            "options": [
+                "Hätte",
+                "Hat",
+                "Wäre",
+                "Würde"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_14",
+            "type": "multiple-choice",
+            "question": "Fast ___ ich gestürzt.",
+            "options": [
+                "würde",
+                "bin",
+                "hätte",
+                "wäre"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_konjunktiv_ii_fortgeschritten_15",
+            "type": "multiple-choice",
+            "question": "Ich ___ gerne noch ein Stück Kuchen.",
+            "options": [
+                "hätte",
+                "würde",
+                "wäre",
+                "habe"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+﻿{
+    "id":  "g28",
+    "title":  "Partizipien als Adjektive",
+    "level":  "B1",
+    "category":  "Verben",
+    "icon":  "📝",
+    "rule":  "Partizip I (Inf+d) = laufend. Partizip II (ge...t/en). Beide als Adjektive deklinierbar.",
+    "explanation":  "Both participles can be used as adjectives. Partizip I expresses an ongoing action (spielend = playing), Partizip II a completed state (repariert = repaired).",
+    "examples":  [
+                     "Das spielende Kind lacht.",
+                     "Das reparierte Auto fährt wieder.",
+                     "Die schlafende Katze liegt auf dem Sofa."
+                 ],
+    "detail":  {
+                   "id":  "g28",
+                   "subtitle":  "Partizipien als Adjektive",
+                   "emoji":  "🧩",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#8B5CF6"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Partizip I \u0026 II als Adjektive",
+                                        "text":  "Partizip I (present) describes ongoing actions, Partizip II describes completed actions. Both can be used as adjectives before nouns, taking regular adjective endings.",
+                                        "bullets":  [
+                                                        "Partizip I: Infinitiv + -d → lachend, schlafend",
+                                                        "Partizip II: gelernt, geschrieben, gefahren",
+                                                        "Both take normal adjective endings when used before a noun"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Partizip I als Adjektiv",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "der lachende Mann",
+                                                          "en":  "the laughing man"
+                                                      },
+                                                      {
+                                                          "de":  "das schlafende Kind",
+                                                          "en":  "the sleeping child"
+                                                      },
+                                                      {
+                                                          "de":  "die weinende Frau",
+                                                          "en":  "the crying woman"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Partizip II als Adjektiv",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "die geöffnete Tür",
+                                                          "en":  "the opened door"
+                                                      },
+                                                      {
+                                                          "de":  "das gelesene Buch",
+                                                          "en":  "the read book"
+                                                      },
+                                                      {
+                                                          "de":  "ein gekochtes Ei",
+                                                          "en":  "a boiled egg"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Partizip I = active/ongoing (the crying woman is still crying). Partizip II = passive/completed (the opened door was opened by someone).",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Partizip I: Infinitiv + -d: lachend, arbeitend, spielend.",
+                                                      "Add normal adjective endings: der lachend-e Mann.",
+                                                      "Partizip II as adjective: die geöffnet-e Tür.",
+                                                      "Common in formal/written German."
+                                                  ]
+                                    }
+                                ]
+               }
+}

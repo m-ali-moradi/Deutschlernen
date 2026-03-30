@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../data/models/grammar_detail_models.dart';
-import '../../domain/grammar_logic.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/shared/widgets/app_icon_button.dart';
+import 'package:deutschmate_mobile/features/grammar/data/models/grammar_detail_models.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_logic.dart';
+import 'package:deutschmate_mobile/features/grammar/data/models/grammar_topic_type.dart';
+import 'package:deutschmate_mobile/shared/widgets/premium_card.dart';
 
 // ─── Main Widget ──────────────────────────────────────────────────────────────
 
@@ -17,23 +20,38 @@ import '../../domain/grammar_logic.dart';
 /// - Localization of UI labels using [AppUiText].
 /// - Audio playback for German sentences.
 class GrammarRichDetailView extends ConsumerWidget {
+  /// Unique ID of the grammar topic.
+  final String topicId;
+
   /// The title of the grammar topic.
   final String topicTitle;
+
   /// The category (e.g., 'Noun', 'Verb').
   final String topicCategory;
+
   /// The CEFR level (e.g., 'A1', 'B2').
   final String topicLevel;
+
   /// User's current progress (0-100).
   final int topicProgress;
+
   /// The full rich detail payload.
   final GrammarDetailData detail;
+
   /// Callback for navigation.
   final VoidCallback onBack;
+
   /// Callback to reset topic-specific exercises.
   final VoidCallback onResetExercises;
 
+  /// Filter state used for returning to the grammar list.
+  final String backLevel;
+  final String backCategory;
+  final bool backShowFilters;
+
   const GrammarRichDetailView({
     super.key,
+    required this.topicId,
     required this.topicTitle,
     required this.topicCategory,
     required this.topicLevel,
@@ -41,6 +59,9 @@ class GrammarRichDetailView extends ConsumerWidget {
     required this.detail,
     required this.onBack,
     required this.onResetExercises,
+    required this.backLevel,
+    required this.backCategory,
+    required this.backShowFilters,
   });
 
   @override
@@ -48,121 +69,205 @@ class GrammarRichDetailView extends ConsumerWidget {
     final strings = AppUiText(ref.watch(displayLanguageProvider));
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(16, 24, 16, 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // ── Header ──
-            _Header(
-              title: '$topicTitle ${detail.emoji}',
-              level: topicLevel,
-              subtitle: detail.subtitle,
-              levelBg: isDark
-                  ? detail.levelBg.withValues(alpha: 0.25)
-                  : detail.levelBg,
-              levelText: detail.levelText,
-              onBack: onBack,
+    return Scaffold(
+      backgroundColor: AppTokens.background(isDark),
+      body: Stack(
+        children: [
+          // Premium Background
+          Positioned.fill(
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: isDark
+                      ? [
+                          const Color(0xFF0F172A),
+                          const Color(0xFF1E293B),
+                          const Color(0xFF0F172A),
+                        ]
+                      : [
+                          const Color(0xFFF8FAFC),
+                          const Color(0xFFF1F5F9),
+                          const Color(0xFFE2E8F0),
+                        ],
+                ),
+              ),
             ),
-            const SizedBox(height: 20),
-
-            // ── Dynamic Sections ──
-            for (final section in detail.sections) ...[
-              _RenderSection(section: section, strings: strings),
-              const SizedBox(height: 14),
-            ],
-
-            // ── Exercise Button ──
-            if (topicProgress >= 100) ...[
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: () => context.go(
-                    resolveGrammarExerciseRoute(
-                      title: topicTitle,
-                      category: topicCategory,
-                      level: topicLevel,
-                    ),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      foregroundColor:
-                          isDark ? AppTokens.darkText : AppTokens.lightText,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      side: BorderSide(
-                          color: isDark
-                              ? const Color(0xFF334155)
-                              : const Color(0xFFE2E8F0)),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: AppTokens.radius20)),
-                  child: Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text(
-                      strings.grammarLabel('completed'),
-                      style: const TextStyle(fontSize: 16),
-                    ),
-                    const SizedBox(width: 6),
-                    const Text('✅'),
-                  ]),
+          ),
+          if (isDark)
+            Positioned(
+              top: -60,
+              right: -60,
+              child: Container(
+                width: 250,
+                height: 250,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: AppTokens.primary(true).withValues(alpha: 0.1),
                 ),
               ),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: onResetExercises,
-                  style: FilledButton.styleFrom(
-                      backgroundColor: isDark
-                          ? const Color(0xFF334155)
-                          : const Color(0xFF94A3B8), // Gray fill
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: AppTokens.radius20)),
-                  child: Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text(
-                      strings.grammarLabel('reset_exercises'),
-                      style: const TextStyle(fontSize: 16),
-                    ),
-                    const SizedBox(width: 6),
-                    const Text('🔄'),
-                  ]),
+            ),
+          if (isDark)
+            Positioned(
+              bottom: -100,
+              left: -50,
+              child: Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.05),
                 ),
               ),
-            ] else ...[
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: () => context.go(
-                    resolveGrammarExerciseRoute(
-                      title: topicTitle,
-                      category: topicCategory,
-                      level: topicLevel,
-                    ),
+            ),
+
+          SafeArea(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // ── Header ──
+                  _Header(
+                    title: topicTitle,
+                    category: topicCategory,
+                    level: topicLevel,
+                    subtitle: detail.subtitle,
+                    levelBg: isDark
+                        ? detail.levelBg.withValues(alpha: 0.25)
+                        : detail.levelBg,
+                    levelText: detail.levelText,
+                    onBack: onBack,
                   ),
-                  style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFFF97316),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: AppTokens.radius20),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        strings.grammarLabel('start_exercises'),
-                        style: const TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                  const SizedBox(height: 24),
+
+                  // ── Dynamic Sections ──
+                  for (final section in detail.sections) ...[
+                    _RenderSection(section: section, strings: strings),
+                    const SizedBox(height: 16),
+                  ],
+
+                  const SizedBox(height: 8),
+
+                  // ── Exercise Button ──
+                  if (topicProgress >= 100) ...[
+                    PremiumCard(
+                      padding: EdgeInsets.zero,
+                      blur: 15,
+                      child: InkWell(
+                        onTap: () => context.push(
+                          resolveGrammarExerciseRoute(
+                            topicId: topicId,
+                            title: topicTitle,
+                            category: topicCategory,
+                            level: topicLevel,
+                            backLevel: backLevel,
+                            backCategory: backCategory,
+                            backShowFilters: backShowFilters,
+                          ),
+                        ),
+                        borderRadius: AppTokens.radius24,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                strings.grammarLabel('completed'),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.w700,
+                                      color: isDark
+                                          ? AppTokens.darkText
+                                          : AppTokens.lightText,
+                                    ),
+                              ),
+                              const SizedBox(width: 8),
+                              const Icon(Icons.check_circle_rounded,
+                                  size: 20, color: Colors.green),
+                            ],
+                          ),
+                        ),
                       ),
-                      const SizedBox(width: 6),
-                      const Text('✏️'),
-                    ],
-                  ),
-                ),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: TextButton.icon(
+                        onPressed: onResetExercises,
+                        icon: const Icon(Icons.refresh_rounded, size: 18),
+                        label: Text(strings.grammarLabel('reset_exercises')),
+                        style: TextButton.styleFrom(
+                          foregroundColor: isDark
+                              ? AppTokens.darkTextMuted
+                              : AppTokens.lightTextMuted,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                        ),
+                      ),
+                    ),
+                  ] else ...[
+                    SizedBox(
+                      width: double.infinity,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: AppTokens.radius24,
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppTokens.primary(isDark)
+                                  .withValues(alpha: 0.3),
+                              blurRadius: 20,
+                              offset: const Offset(0, 10),
+                            ),
+                          ],
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () => context.push(
+                            resolveGrammarExerciseRoute(
+                              topicId: topicId,
+                              title: topicTitle,
+                              category: topicCategory,
+                              level: topicLevel,
+                              backLevel: backLevel,
+                              backCategory: backCategory,
+                              backShowFilters: backShowFilters,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppTokens.primary(isDark),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 18),
+                            elevation: 0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: AppTokens.radius24,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                strings.grammarLabel('start_exercises'),
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 0.5,
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              const Icon(Icons.arrow_forward_rounded, size: 20),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ),
-            ],
-          ],
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -173,6 +278,7 @@ class GrammarRichDetailView extends ConsumerWidget {
 class _Header extends StatelessWidget {
   const _Header({
     required this.title,
+    required this.category,
     required this.level,
     required this.subtitle,
     required this.levelBg,
@@ -180,7 +286,7 @@ class _Header extends StatelessWidget {
     required this.onBack,
   });
 
-  final String title, level, subtitle;
+  final String title, category, level, subtitle;
   final Color levelBg, levelText;
   final VoidCallback onBack;
 
@@ -189,34 +295,81 @@ class _Header extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Row(
       children: [
-        _SmallIconButton(icon: Icons.arrow_back_rounded, onPressed: onBack),
-        const SizedBox(width: 10),
+        PremiumCard(
+          padding: EdgeInsets.zero,
+          borderRadius: BorderRadius.circular(12),
+          child: AppIconButton(
+            icon: Icons.arrow_back_ios_new_rounded,
+            iconSize: 16,
+            onPressed: onBack,
+          ),
+        ),
+        const SizedBox(width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title,
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      color: isDark ? AppTokens.darkText : AppTokens.lightText,
-                      fontSize: 22)),
-              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                            color: isDark
+                                ? AppTokens.darkText
+                                : AppTokens.lightText,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: -0.5,
+                          ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: AppTokens.primary(isDark).withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Icon(
+                      getGrammarCategoryIcon(category, title),
+                      color: AppTokens.primary(isDark),
+                      size: 20,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 6),
               Row(
                 children: [
                   Container(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
-                        color: levelBg,
-                        borderRadius: BorderRadius.circular(999)),
+                        color: levelBg.withValues(alpha: isDark ? 0.2 : 0.8),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: levelBg.withValues(alpha: 0.3),
+                          width: 1,
+                        )),
                     child: Text(level,
-                        style: TextStyle(fontSize: 11, color: levelText)),
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800,
+                          color: isDark ? levelBg : levelText,
+                        )),
                   ),
-                  const SizedBox(width: 8),
-                  Text(subtitle,
-                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: isDark
-                              ? AppTokens.darkTextMuted
-                              : AppTokens.lightTextMuted)),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      subtitle,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: isDark
+                                ? AppTokens.darkTextMuted
+                                : AppTokens.lightTextMuted,
+                            fontWeight: FontWeight.w500,
+                          ),
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -243,7 +396,8 @@ class _RenderSection extends StatelessWidget {
       return _FormulaCard(s: section as FormulaSection);
     }
     if (section is ConjugationSection) {
-      return _ConjugationCard(s: section as ConjugationSection, strings: strings);
+      return _ConjugationCard(
+          s: section as ConjugationSection, strings: strings);
     }
     if (section is ExamplesSection) {
       return _ExamplesCard(s: section as ExamplesSection, strings: strings);
@@ -272,46 +426,57 @@ class _ConceptCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: _cardDecoration(isDark),
-      padding: const EdgeInsets.all(18),
+    return PremiumCard(
+      padding: const EdgeInsets.all(24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(children: [
-            _ColoredIcon(
-                icon: Icons.menu_book_rounded,
-                color: const Color(0xFF3B82F6),
-                size: 16,
-                boxSize: 32,
-                radius: 10),
-            const SizedBox(width: 10),
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: AppTokens.primary(isDark).withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(
+                Icons.menu_book_rounded,
+                color: AppTokens.primary(isDark),
+                size: 20,
+              ),
+            ),
+            const SizedBox(width: 14),
             Expanded(
                 child: Text(
               strings.grammarSectionTitle(s.title),
               style: _titleStyle(context, isDark),
             )),
           ]),
-          const SizedBox(height: 10),
+          const SizedBox(height: 16),
           Text(s.text, style: _bodyStyle(context, isDark)),
           if (s.bullets != null) ...[
-            const SizedBox(height: 12),
+            const SizedBox(height: 18),
             Container(
               decoration: BoxDecoration(
-                  color: const Color(0xFF3B82F6)
-                      .withValues(alpha: isDark ? 0.15 : 0.07),
-                  borderRadius: AppTokens.radius16),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                  color: AppTokens.primary(isDark)
+                      .withValues(alpha: isDark ? 0.08 : 0.04),
+                  borderRadius: AppTokens.radius16,
+                  border: Border.all(
+                    color: AppTokens.primary(isDark).withValues(alpha: 0.1),
+                  )),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 children: s.bullets!
                     .map((b) => Padding(
-                          padding: const EdgeInsets.only(bottom: 6),
+                          padding: const EdgeInsets.only(bottom: 10),
                           child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Icon(Icons.check_circle_outline_rounded,
-                                    size: 14, color: const Color(0xFF3B82F6)),
-                                const SizedBox(width: 8),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 2),
+                                  child: Icon(Icons.check_circle_outline_rounded,
+                                      size: 16, color: AppTokens.primary(isDark)),
+                                ),
+                                const SizedBox(width: 10),
                                 Expanded(
                                     child: Text(b,
                                         style: _smallStyle(context, isDark))),
@@ -380,48 +545,56 @@ class _ConjugationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final c = s.color;
-    return Container(
-      decoration: _cardDecoration(isDark),
-      padding: const EdgeInsets.all(16),
+    return PremiumCard(
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(children: [
-            _ColoredIcon(
-                icon: Icons.table_chart_outlined,
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: c.bg.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Icon(
+                Icons.table_chart_outlined,
                 color: c.bg,
-                size: 14,
-                boxSize: 28,
-                radius: 8),
-            const SizedBox(width: 8),
+                size: 18,
+              ),
+            ),
+            const SizedBox(width: 12),
             Text(strings.grammarSectionTitle(s.title),
                 style: _subtitleStyle(context, isDark)),
           ]),
-          const SizedBox(height: 10),
+          const SizedBox(height: 16),
           ClipRRect(
             borderRadius: AppTokens.radius16,
             child: Column(
               children: s.rows.asMap().entries.map((e) {
                 final even = e.key % 2 == 0;
                 return Container(
-                  color: even
-                      ? c.lightBg
-                      : (isDark ? const Color(0xFF0F172A) : Colors.white),
+                  color: even 
+                    ? c.bg.withValues(alpha: isDark ? 0.1 : 0.05) 
+                    : Colors.transparent,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                   child: Row(children: [
                     SizedBox(
-                        width: 100,
+                        width: 110,
                         child: Text(e.value.left,
                             style: TextStyle(
                                 fontSize: 13,
-                                color: c.text,
-                                fontWeight: FontWeight.w500))),
+                                color: isDark ? AppTokens.darkText : AppTokens.lightText,
+                                fontWeight: FontWeight.w600))),
                     Expanded(
                       child: Text(e.value.right,
                           softWrap: true,
-                          style: const TextStyle(
-                              fontSize: 12.5, fontFamily: 'monospace')),
+                          style: TextStyle(
+                              fontSize: 14, 
+                              fontFamily: 'monospace',
+                              color: isDark ? AppTokens.darkText : AppTokens.lightText,
+                          )),
                     ),
                   ]),
                 );
@@ -449,52 +622,50 @@ class _ExamplesCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 4, bottom: 8),
+          padding: const EdgeInsets.only(left: 4, bottom: 12),
           child: Text(strings.grammarSectionTitle(s.title),
-              style: _smallMutedStyle(context, isDark)),
+              style: _smallMutedStyle(context, isDark)?.copyWith(
+                fontWeight: FontWeight.w700,
+                letterSpacing: 1.0,
+                fontSize: 11,
+              )),
         ),
         for (var i = 0; i < s.items.length; i++) ...[
-          Container(
-            margin: const EdgeInsets.only(bottom: 8),
-            decoration: BoxDecoration(
-              color: isDark
-                  ? const Color(0xFF1E293B).withValues(alpha: 0.6)
-                  : Colors.white,
-              borderRadius: AppTokens.radius20,
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withValues(alpha: isDark ? 0.15 : 0.05),
-                    blurRadius: 8,
-                    offset: const Offset(0, 3))
-              ],
-            ),
-            padding: const EdgeInsets.all(12),
+          PremiumCard(
+            margin: const EdgeInsets.only(bottom: 12),
+            padding: const EdgeInsets.all(16),
             child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(color: c.bg, shape: BoxShape.circle),
+                width: 28,
+                height: 28,
+                decoration: BoxDecoration(
+                  color: c.bg.withValues(alpha: 0.15),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: c.bg.withValues(alpha: 0.2)),
+                ),
                 alignment: Alignment.center,
                 child: Text('${i + 1}',
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 11,
-                        fontWeight: FontWeight.w700)),
+                    style: TextStyle(
+                        color: c.bg,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w800)),
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 14),
               Expanded(
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                     Text(s.items[i].de,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             color: isDark
                                 ? AppTokens.darkText
-                                : AppTokens.lightText)),
-                    const SizedBox(height: 2),
+                                : AppTokens.lightText,
+                            fontWeight: FontWeight.w600,
+                            height: 1.4)),
+                    const SizedBox(height: 4),
                     Text(s.items[i].translation,
                         style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 13,
                             color: isDark
                                 ? AppTokens.darkTextMuted
                                 : AppTokens.lightTextMuted,
@@ -518,25 +689,30 @@ class _ComparisonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: _cardDecoration(isDark),
-      padding: const EdgeInsets.all(16),
+    return PremiumCard(
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(children: [
-            _ColoredIcon(
-                icon: Icons.table_chart_outlined,
-                color: const Color(0xFF64748B),
-                size: 14,
-                boxSize: 28,
-                radius: 8),
-            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: const Color(0xFF64748B).withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Icon(
+                Icons.compare_arrows_rounded,
+                color: Color(0xFF64748B),
+                size: 18,
+              ),
+            ),
+            const SizedBox(width: 12),
             Expanded(
                 child: Text(strings.grammarSectionTitle(s.title),
                     style: _subtitleStyle(context, isDark))),
           ]),
-          const SizedBox(height: 10),
+          const SizedBox(height: 16),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: ClipRRect(
@@ -546,24 +722,25 @@ class _ComparisonCard extends StatelessWidget {
                 border: TableBorder(
                     horizontalInside: BorderSide(
                         color: isDark
-                            ? const Color(0xFF1E293B)
-                            : const Color(0xFFE5E7EB),
-                        width: 0.5)),
+                            ? Colors.white.withValues(alpha: 0.1)
+                            : Colors.black.withValues(alpha: 0.05),
+                        width: 1)),
                 children: [
                   // Header row
                   TableRow(
                     decoration: BoxDecoration(
                         color: isDark
-                            ? const Color(0xFF1E293B)
-                            : const Color(0xFFF1F5F9)),
+                            ? Colors.white.withValues(alpha: 0.05)
+                            : Colors.black.withValues(alpha: 0.02)),
                     children: s.headers
                         .map((h) => Padding(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 8),
+                                  horizontal: 16, vertical: 12),
                               child: Text(h,
                                   style: TextStyle(
                                       fontSize: 12,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 0.5,
                                       color: isDark
                                           ? AppTokens.darkTextMuted
                                           : AppTokens.lightTextMuted)),
@@ -575,20 +752,17 @@ class _ComparisonCard extends StatelessWidget {
                     TableRow(
                       decoration: BoxDecoration(
                           color: i % 2 == 0
-                              ? (isDark
-                                  ? const Color(0xFF0F172A)
-                                      .withValues(alpha: 0.5)
-                                  : const Color(0xFFF8FAFC))
+                              ? Colors.transparent
                               : (isDark
-                                  ? const Color(0xFF0F172A)
-                                  : Colors.white)),
+                                  ? Colors.white.withValues(alpha: 0.02)
+                                  : Colors.black.withValues(alpha: 0.01))),
                       children: s.rows[i].cells
                           .map((cell) => Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 12, vertical: 9),
+                                    horizontal: 16, vertical: 14),
                                 child: Text(cell,
                                     style: TextStyle(
-                                        fontSize: 12,
+                                        fontSize: 13,
                                         color: isDark
                                             ? AppTokens.darkText
                                             : AppTokens.lightText)),
@@ -614,56 +788,68 @@ class _RulesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-            colors: [Color(0xFF6366F1), Color(0xFFA855F7)]),
-        borderRadius: AppTokens.radius24,
-        boxShadow: [
-          BoxShadow(
-              color: const Color(0xFFA855F7).withValues(alpha: 0.3),
-              blurRadius: 16,
-              offset: const Offset(0, 6))
-        ],
+    return PremiumCard(
+      padding: const EdgeInsets.all(24),
+      gradient: const LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [Color(0xFF6366F1), Color(0xFFA855F7)],
       ),
-      padding: const EdgeInsets.all(18),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(children: [
-            const Icon(Icons.lightbulb_rounded,
-                size: 18, color: Color(0xFFFDE68A)),
-            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Icon(
+                Icons.lightbulb_rounded,
+                size: 20,
+                color: Color(0xFFFDE68A),
+              ),
+            ),
+            const SizedBox(width: 14),
             Text(strings.grammarSectionTitle(s.title),
                 style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600)),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.3)),
           ]),
-          const SizedBox(height: 12),
+          const SizedBox(height: 20),
           for (var i = 0; i < s.items.length; i++)
             Padding(
-              padding: const EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.only(bottom: 12),
               child:
                   Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: 24,
+                  height: 24,
                   decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.25),
-                      shape: BoxShape.circle),
+                      color: Colors.white.withValues(alpha: 0.15),
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: 0.2),
+                        width: 1,
+                      )),
                   alignment: Alignment.center,
                   child: Text('${i + 1}',
                       style: const TextStyle(
                           color: Colors.white,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600)),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700)),
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 12),
                 Expanded(
                     child: Text(s.items[i],
                         style: const TextStyle(
-                            color: Colors.white, fontSize: 13, height: 1.4))),
+                            color: Colors.white, 
+                            fontSize: 14, 
+                            height: 1.5,
+                            fontWeight: FontWeight.w500))),
               ]),
             ),
         ],
@@ -671,7 +857,6 @@ class _RulesCard extends StatelessWidget {
     );
   }
 }
-
 
 // ─── TipCard ─────────────────────────────────────────────────────────────────
 
@@ -682,49 +867,38 @@ class _TipCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    Color bg, border, iconColor, textColor;
+    Color bg, iconColor;
     IconData icon;
     switch (s.variant) {
       case TipVariant.warning:
-        bg = isDark
-            ? const Color(0xFFF59E0B).withValues(alpha: 0.15)
-            : const Color(0xFFFFFBEB);
-        border = isDark ? const Color(0xFFD97706) : const Color(0xFFFDE68A);
+        bg = const Color(0xFFF59E0B);
         iconColor = const Color(0xFFF59E0B);
-        textColor = isDark ? const Color(0xFFFCD34D) : const Color(0xFFB45309);
         icon = Icons.warning_amber_rounded;
         break;
       case TipVariant.success:
-        bg = isDark
-            ? const Color(0xFF22C55E).withValues(alpha: 0.15)
-            : const Color(0xFFF0FDF4);
-        border = isDark ? const Color(0xFF16A34A) : const Color(0xFFBBF7D0);
+        bg = const Color(0xFF22C55E);
         iconColor = const Color(0xFF22C55E);
-        textColor = isDark ? const Color(0xFF86EFAC) : const Color(0xFF15803D);
         icon = Icons.check_circle_outline_rounded;
         break;
       default: // info
-        bg = isDark
-            ? const Color(0xFF3B82F6).withValues(alpha: 0.15)
-            : const Color(0xFFEFF6FF);
-        border = isDark ? const Color(0xFF1D4ED8) : const Color(0xFFBFDBFE);
-        iconColor = const Color(0xFF3B82F6);
-        textColor = isDark ? const Color(0xFF93C5FD) : const Color(0xFF1D4ED8);
+        bg = AppTokens.primary(isDark);
+        iconColor = AppTokens.primary(isDark);
         icon = Icons.info_outline_rounded;
     }
-    return Container(
-      decoration: BoxDecoration(
-          color: bg,
-          border: Border.all(color: border),
-          borderRadius: AppTokens.radius16),
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+    return PremiumCard(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      color: bg.withValues(alpha: isDark ? 0.15 : 0.08),
+      borderOpacity: 0.2,
       child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Icon(icon, size: 15, color: iconColor),
-        const SizedBox(width: 10),
+        Icon(icon, size: 18, color: iconColor),
+        const SizedBox(width: 12),
         Expanded(
             child: Text(s.text,
-                style:
-                    TextStyle(fontSize: 12, color: textColor, height: 1.45))),
+                style: TextStyle(
+                    fontSize: 13, 
+                    color: isDark ? AppTokens.darkText : AppTokens.lightText, 
+                    height: 1.5,
+                    fontWeight: FontWeight.w500))),
       ]),
     );
   }
@@ -740,76 +914,91 @@ class _TransformCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: _cardDecoration(isDark),
-      padding: const EdgeInsets.all(16),
+    return PremiumCard(
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(strings.grammarSectionTitle(s.title),
               style: _subtitleStyle(context, isDark)),
-          const SizedBox(height: 10),
-          Container(
-            decoration: BoxDecoration(
-              color: isDark
-                  ? const Color(0xFF14532D).withValues(alpha: 0.4)
-                  : const Color(0xFFF0FDF4),
-              border: Border.all(
-                  color: isDark
-                      ? const Color(0xFF166534)
-                      : const Color(0xFFBBF7D0)),
-              borderRadius: AppTokens.radius12,
-            ),
-            padding: const EdgeInsets.all(12),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(s.from.label,
-                  style: const TextStyle(
-                      fontSize: 10,
-                      color: Color(0xFF22C55E),
-                      fontWeight: FontWeight.w600)),
-              const SizedBox(height: 3),
-              Text(s.from.text, style: Theme.of(context).textTheme.bodyMedium),
-            ]),
+          const SizedBox(height: 16),
+          _TransformBox(
+            label: s.from.label,
+            text: s.from.text,
+            isDark: isDark,
+            color: const Color(0xFF22C55E),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6),
+            padding: const EdgeInsets.symmetric(vertical: 8),
             child: Row(children: [
-              const SizedBox(width: 12),
-              const Icon(Icons.arrow_downward_rounded,
-                  size: 14, color: Color(0xFFF97316)),
+              const SizedBox(width: 20),
+              const Icon(Icons.keyboard_double_arrow_down_rounded,
+                  size: 20, color: Color(0xFFF97316)),
               if (s.note != null) ...[
-                const SizedBox(width: 6),
+                const SizedBox(width: 10),
                 Flexible(
                     child: Text(s.note!,
-                        style:
-                            const TextStyle(fontSize: 11, color: Colors.grey)))
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: isDark
+                              ? AppTokens.darkTextMuted
+                              : AppTokens.lightTextMuted,
+                          fontStyle: FontStyle.italic,
+                        )))
               ],
             ]),
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: isDark
-                  ? const Color(0xFF7C2D12).withValues(alpha: 0.4)
-                  : const Color(0xFFFFF7ED),
-              border: Border.all(
-                  color: isDark
-                      ? const Color(0xFF9A3412)
-                      : const Color(0xFFFED7AA)),
-              borderRadius: AppTokens.radius12,
-            ),
-            padding: const EdgeInsets.all(12),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(s.to.label,
-                  style: const TextStyle(
-                      fontSize: 10,
-                      color: Color(0xFFF97316),
-                      fontWeight: FontWeight.w600)),
-              const SizedBox(height: 3),
-              Text(s.to.text, style: Theme.of(context).textTheme.bodyMedium),
-            ]),
+          _TransformBox(
+            label: s.to.label,
+            text: s.to.text,
+            isDark: isDark,
+            color: const Color(0xFFF97316),
+            isBottom: true,
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TransformBox extends StatelessWidget {
+  const _TransformBox({
+    required this.label,
+    required this.text,
+    required this.isDark,
+    required this.color,
+    this.isBottom = false,
+  });
+
+  final String label, text;
+  final bool isDark, isBottom;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: isDark ? 0.15 : 0.05),
+        borderRadius: AppTokens.radius16,
+        border: Border.all(color: color.withValues(alpha: 0.2)),
+      ),
+      padding: const EdgeInsets.all(14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(label.toUpperCase(),
+              style: TextStyle(
+                  fontSize: 10,
+                  color: color,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: 1.0)),
+          const SizedBox(height: 6),
+          Text(text,
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    color: isDark ? AppTokens.darkText : AppTokens.lightText,
+                    fontWeight: FontWeight.w600,
+                  )),
         ],
       ),
     );
@@ -818,91 +1007,29 @@ class _TransformCard extends StatelessWidget {
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-class _SmallIconButton extends StatelessWidget {
-  const _SmallIconButton({required this.icon, required this.onPressed});
-  final IconData icon;
-  final VoidCallback onPressed;
 
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: 36,
-        height: 36,
-        decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF1E293B) : Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.08),
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: Icon(
-          icon == Icons.arrow_back_rounded
-              ? Icons.arrow_back_ios_new_rounded
-              : icon,
-          size: 16,
-          color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF64748B),
-        ),
-      ),
-    );
-  }
-}
-
-class _ColoredIcon extends StatelessWidget {
-  const _ColoredIcon(
-      {required this.icon,
-      required this.color,
-      required this.size,
-      required this.boxSize,
-      required this.radius});
-  final IconData icon;
-  final Color color;
-  final double size, boxSize, radius;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: boxSize,
-      height: boxSize,
-      decoration: BoxDecoration(
-          color: color, borderRadius: BorderRadius.circular(radius)),
-      child: Icon(icon, size: size, color: Colors.white),
-    );
-  }
-}
-
-BoxDecoration _cardDecoration(bool isDark) => BoxDecoration(
-      color: isDark ? const Color(0xFF0F172A) : Colors.white,
-      borderRadius: AppTokens.radius24,
-      boxShadow: [
-        BoxShadow(
-            color: isDark
-                ? Colors.black.withValues(alpha: 0.2)
-                : const Color(0xFFE2E8F0).withValues(alpha: 0.8),
-            blurRadius: 14,
-            offset: const Offset(0, 6))
-      ],
-    );
 
 TextStyle? _titleStyle(BuildContext ctx, bool isDark) =>
     Theme.of(ctx).textTheme.titleSmall?.copyWith(
-        color: isDark ? AppTokens.darkText : AppTokens.lightText, fontSize: 15);
+        color: isDark ? AppTokens.darkText : AppTokens.lightText, 
+        fontSize: 16,
+        fontWeight: FontWeight.w700);
 TextStyle? _subtitleStyle(BuildContext ctx, bool isDark) =>
     Theme.of(ctx).textTheme.titleSmall?.copyWith(
-        color: isDark ? AppTokens.darkText : AppTokens.lightText, fontSize: 14);
+        color: isDark ? AppTokens.darkText : AppTokens.lightText, 
+        fontSize: 15,
+        fontWeight: FontWeight.w700);
 TextStyle? _bodyStyle(BuildContext ctx, bool isDark) =>
     Theme.of(ctx).textTheme.bodyMedium?.copyWith(
-        color: isDark ? AppTokens.darkTextMuted : AppTokens.lightTextMuted,
-        height: 1.5);
+        color: isDark ? AppTokens.darkText : AppTokens.lightText,
+        height: 1.6);
 TextStyle? _smallStyle(BuildContext ctx, bool isDark) =>
-    Theme.of(ctx).textTheme.bodySmall?.copyWith(
+    Theme.of(ctx).textTheme.bodyMedium?.copyWith(
+        fontSize: 13,
         color: isDark ? AppTokens.darkTextMuted : AppTokens.lightTextMuted);
 TextStyle? _smallMutedStyle(BuildContext ctx, bool isDark) =>
     Theme.of(ctx).textTheme.bodySmall?.copyWith(
         color: isDark ? AppTokens.darkTextMuted : AppTokens.lightTextMuted);
+
+
+

@@ -1,0 +1,154 @@
+﻿{
+    "id":  "g60",
+    "title":  "Doppelter Infinitiv",
+    "level":  "B1",
+    "category":  "Verben",
+    "icon":  "♾️",
+    "rule":  "Bei Modalverben im Perfekt: haben + Infinitiv + Modalverb (Infinitiv, nicht Partizip!).",
+    "explanation":  "When modal verbs are used in Perfekt, the Partizip II is replaced by the infinitive, creating a \u0027double infinitive\u0027 at the end: Ich habe kommen müssen.",
+    "examples":  [
+                     "Ich habe nicht kommen können.",
+                     "Er hat das machen müssen.",
+                     "Sie hat früher gehen wollen.",
+                     "Wir haben das nicht sagen dürfen."
+                 ],
+    "detail":  {
+                   "id":  "g60",
+                   "subtitle":  "Verben · Doppelter Infinitiv",
+                   "emoji":  "♾️",
+                   "gradient":  [
+                                    "#F59E0B",
+                                    "#D97706"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Doppelter Infinitiv · Double Infinitive",
+                                        "text":  "When modal verbs (können, müssen, wollen, sollen, dürfen) are used in Perfekt, they do NOT use Partizip II. Instead, the infinitive of the modal verb is used, creating a double infinitive construction at the end of the sentence.",
+                                        "bullets":  [
+                                                        "Normal Perfekt: Ich habe das gemacht. (Partizip II)",
+                                                        "Modal Perfekt: Ich habe das machen müssen. (double infinitive!)",
+                                                        "The modal verb stays in infinitive form, NOT gemusst/gekonnt",
+                                                        "This also applies to lassen, sehen, hören in Perfekt"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Formel",
+                                        "formula":  "haben + ... + Infinitiv + Modalverb (Inf.)",
+                                        "colors":  [
+                                                       "#F59E0B",
+                                                       "#D97706"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Partizip II vs. Doppelter Infinitiv",
+                                        "headers":  [
+                                                        "Situation",
+                                                        "Form",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Modal allein (ohne 2. Verb)",
+                                                         "haben + gekonnt/gemusst",
+                                                         "Ich habe das gekonnt."
+                                                     ],
+                                                     [
+                                                         "Modal + Infinitiv",
+                                                         "haben + Inf + Modal-Inf",
+                                                         "Ich habe kommen müssen."
+                                                     ],
+                                                     [
+                                                         "lassen + Infinitiv",
+                                                         "haben + Inf + lassen",
+                                                         "Ich habe es reparieren lassen."
+                                                     ],
+                                                     [
+                                                         "sehen/hören + Infinitiv",
+                                                         "haben + Inf + sehen/hören",
+                                                         "Ich habe ihn kommen sehen."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit Modalverben",
+                                        "color":  "amber",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich habe nicht kommen können.",
+                                                          "en":  "I was not able to come."
+                                                      },
+                                                      {
+                                                          "de":  "Er hat das machen müssen.",
+                                                          "en":  "He had to do it."
+                                                      },
+                                                      {
+                                                          "de":  "Sie hat früher gehen wollen.",
+                                                          "en":  "She wanted to leave earlier."
+                                                      },
+                                                      {
+                                                          "de":  "Wir haben das nicht sagen dürfen.",
+                                                          "en":  "We were not allowed to say that."
+                                                      },
+                                                      {
+                                                          "de":  "Du hast mehr lernen sollen.",
+                                                          "en":  "You should have studied more."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit lassen, sehen, hören",
+                                        "color":  "yellow",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich habe mein Auto reparieren lassen.",
+                                                          "en":  "I had my car repaired."
+                                                      },
+                                                      {
+                                                          "de":  "Wir haben sie singen hören.",
+                                                          "en":  "We heard her singing."
+                                                      },
+                                                      {
+                                                          "de":  "Er hat den Zug kommen sehen.",
+                                                          "en":  "He saw the train coming."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "In Nebensätzen",
+                                        "from":  {
+                                                     "label":  "HAUPTSATZ",
+                                                     "text":  "Er hat nicht kommen können."
+                                                 },
+                                        "to":  {
+                                                   "label":  "NEBENSATZ",
+                                                   "text":  "..., weil er nicht hat kommen können."
+                                               },
+                                        "note":  "In subordinate clauses, haben moves BEFORE the double infinitive!"
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "When the modal verb stands ALONE (no second verb), use normal Partizip II: \u0027Ich habe das gekonnt.\u0027 But with a second verb, it\u0027s always double infinitive: \u0027Ich habe das machen können.\u0027",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Modal + Infinitiv in Perfekt → double infinitive: haben + Inf + Modal-Inf.",
+                                                      "Also applies to lassen, sehen, hören + Infinitiv.",
+                                                      "Modal alone (no second verb) → normal Partizip: Ich habe gekonnt/gemusst.",
+                                                      "In Nebensätzen: haben moves before double infinitive: ...weil er hat kommen müssen.",
+                                                      "In everyday speech, Germans often use Präteritum instead: Ich musste kommen."
+                                                  ]
+                                    }
+                                ]
+               }
+}

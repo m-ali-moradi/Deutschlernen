@@ -1,5 +1,6 @@
-import 'package:deutschlernen_mobile/core/database/app_database.dart';
-import 'package:deutschlernen_mobile/features/grammar/domain/grammar_logic.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/learning/learning_progress_service.dart';
+import 'package:deutschmate_mobile/features/grammar/domain/grammar_logic.dart';
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -11,10 +12,12 @@ void main() {
     expect(isGrammarTopicCompleted(99), isFalse);
     expect(isGrammarTopicCompleted(100), isTrue);
     expect(grammarProgressStateLabel(100, isEnglish: false), 'Abgeschlossen');
-    expect(grammarProgressStateLabel(40, isEnglish: false), 'In Arbeit');
+    expect(grammarProgressStateLabel(40, isEnglish: false),
+        'In Bearbeitung (40%)');
   });
 
-  test('updateGrammarProgress persists and completes a grammar topic', () async {
+  test('updateGrammarProgress persists and completes a grammar topic',
+      () async {
     final db = AppDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
@@ -42,7 +45,7 @@ INSERT INTO grammar_topics (
 )
 ''');
 
-    await db.updateGrammarProgress('g-test', 100);
+    await LearningProgressService(db).updateGrammarProgress('g-test', 100);
 
     final topic = await (db.select(db.grammarTopics)
           ..where((t) => t.id.equals('g-test')))

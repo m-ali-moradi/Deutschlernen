@@ -111,3 +111,4 @@ class _RingPainter extends CustomPainter {
         oldDelegate.gradient != gradient;
   }
 }
+

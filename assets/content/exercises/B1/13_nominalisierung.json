@@ -1,0 +1,186 @@
+{
+    "topic": "Nominalisierung",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g29_1",
+            "type": "multiple-choice",
+            "question": "___ macht mir SpaÃŸ.",
+            "options": [
+                "Die Lernen",
+                "Das Lernen",
+                "Er lernt",
+                "Lernen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g29_2",
+            "type": "multiple-choice",
+            "question": "Wir hoffen auf etwas ___.",
+            "options": [
+                "gutes",
+                "gute",
+                "Gutes",
+                "Gute"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g29_3",
+            "type": "multiple-choice",
+            "question": "Der ___ braucht Hilfe.",
+            "options": [
+                "Kranke",
+                "Kranken",
+                "krank",
+                "kranke"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g29_4",
+            "type": "multiple-choice",
+            "question": "___ vor großen Hunden ist weit verbreitet.",
+            "options": [
+                "Die Angst",
+                "Angsten",
+                "Das Angst",
+                "Ängstlich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g29_5",
+            "type": "multiple-choice",
+            "question": "Ich interessiere mich schon lange für ___.",
+            "options": [
+                "das Zeichnen",
+                "gezeichnet",
+                "Zeichnen",
+                "Zeichnung"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g29_6",
+            "type": "multiple-choice",
+            "question": "Die ___ der unberührten Natur ist wichtig.",
+            "options": [
+                "Schönen",
+                "Schön",
+                "Schönheit",
+                "Schöne"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_nominalisierung_7",
+            "type": "multiple-choice",
+            "question": "Das ___ (lernen) fällt ihm schwer.",
+            "options": [
+                "Lernen",
+                "Lern",
+                "Lernt",
+                "lern"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_nominalisierung_8",
+            "type": "multiple-choice",
+            "question": "Beim ___ (essen) soll man nicht sprechen.",
+            "options": [
+                "ess",
+                "essen",
+                "Esst",
+                "Essen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nominalisierung_9",
+            "type": "multiple-choice",
+            "question": "Zum ___ (schreiben) brauche ich einen Stift.",
+            "options": [
+                "schreiben",
+                "Schreiben",
+                "schreib",
+                "Schreibt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_nominalisierung_10",
+            "type": "multiple-choice",
+            "question": "Das ___ (lesen) dieses Buches dauert lange.",
+            "options": [
+                "lesen",
+                "liest",
+                "Liest",
+                "Lesen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nominalisierung_11",
+            "type": "multiple-choice",
+            "question": "Nach dem ___ (aufstehen) dusche ich sofort.",
+            "options": [
+                "Steht auf",
+                "aufsteht",
+                "aufstehen",
+                "Aufstehen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nominalisierung_12",
+            "type": "multiple-choice",
+            "question": "Wir diskutieren über das ___ (rauchen) in Restaurants.",
+            "options": [
+                "rauchen",
+                "raucht",
+                "Raucht",
+                "Rauchen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_nominalisierung_13",
+            "type": "multiple-choice",
+            "question": "Das ständige ___ (warten) nervt mich.",
+            "options": [
+                "Wartet",
+                "warte",
+                "Warten",
+                "warten"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_nominalisierung_14",
+            "type": "multiple-choice",
+            "question": "Während des ___ (fahren) darf man nicht telefonieren.",
+            "options": [
+                "Fahren",
+                "Fahrens",
+                "gefahren",
+                "Fährt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_nominalisierung_15",
+            "type": "multiple-choice",
+            "question": "Er hat Angst vor dem ___ (fliegen).",
+            "options": [
+                "Fliegt",
+                "fliegt",
+                "fliegen",
+                "Fliegen"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

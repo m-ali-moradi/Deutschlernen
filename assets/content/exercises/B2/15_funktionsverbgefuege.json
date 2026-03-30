@@ -1,0 +1,186 @@
+{
+    "topic": "FunktionsverbgefÃ¼ge",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g48_1",
+            "type": "multiple-choice",
+            "question": "Der Politiker ___ einen wichtigen Entschluss ___.",
+            "options": [
+                "hat - gemacht",
+                "hat - getan",
+                "hat - gefasst",
+                "hat - getroffen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g48_2",
+            "type": "multiple-choice",
+            "question": "Ich möchte Ihnen einen Vorschlag ___.",
+            "options": [
+                "geben",
+                "bringen",
+                "tun",
+                "machen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g48_3",
+            "type": "multiple-choice",
+            "question": "Wir müssen die Maschine in Betrieb ___.",
+            "options": [
+                "bringen",
+                "stellen",
+                "nehmen",
+                "setzen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g48_4",
+            "type": "multiple-choice",
+            "question": "Wir müssen dieses wichtige Thema zur Sprache ___.",
+            "options": [
+                "nehmen",
+                "stellen",
+                "bringen",
+                "setzen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g48_5",
+            "type": "multiple-choice",
+            "question": "Er hat massiv auf die Entscheidung der Regierung ___ ___.",
+            "options": [
+                "Einfluss gemacht",
+                "Einfluss gegeben",
+                "Einfluss getan",
+                "Einfluss genommen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g48_6",
+            "type": "multiple-choice",
+            "question": "Das steht heute wirklich nicht zur ___.",
+            "options": [
+                "Diskussion",
+                "Verfügung",
+                "Wahl",
+                "Rede"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_funktionsverbgefuege_7",
+            "type": "multiple-choice",
+            "question": "Wir müssen eine Entscheidung ___.",
+            "options": [
+                "geben",
+                "tun",
+                "treffen",
+                "machen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_funktionsverbgefuege_8",
+            "type": "multiple-choice",
+            "question": "Er hat den Befehl ___.",
+            "options": [
+                "gegeben",
+                "getan",
+                "getroffen",
+                "gemacht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_funktionsverbgefuege_9",
+            "type": "multiple-choice",
+            "question": "Sie stellte die Behauptung ___.",
+            "options": [
+                "aus",
+                "ein",
+                "an",
+                "auf"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_funktionsverbgefuege_10",
+            "type": "multiple-choice",
+            "question": "Das Problem kommt zur ___.",
+            "options": [
+                "Wort",
+                "Sprache",
+                "Sprechen",
+                "Rede"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_funktionsverbgefuege_11",
+            "type": "multiple-choice",
+            "question": "Ich nehme ___ auf dich.",
+            "options": [
+                "Rücksicht",
+                "Acht",
+                "Sicht",
+                "Aufmerksamkeit"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_funktionsverbgefuege_12",
+            "type": "multiple-choice",
+            "question": "Er bringt diese Maschine in ___.",
+            "options": [
+                "Lauf",
+                "Fahrt",
+                "Bewegung",
+                "Gang"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_funktionsverbgefuege_13",
+            "type": "multiple-choice",
+            "question": "Sie hat mir einen guten Rat ___.",
+            "options": [
+                "gegeben",
+                "getan",
+                "erstellt",
+                "gemacht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_funktionsverbgefuege_14",
+            "type": "multiple-choice",
+            "question": "Wir müssen Abschied ___.",
+            "options": [
+                "nehmen",
+                "sagen",
+                "machen",
+                "geben"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_funktionsverbgefuege_15",
+            "type": "multiple-choice",
+            "question": "Der Vertrag tritt am Montag in ___.",
+            "options": [
+                "Kraft",
+                "Geltung",
+                "Wirkung",
+                "Macht"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

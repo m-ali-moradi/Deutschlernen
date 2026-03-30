@@ -1,0 +1,209 @@
+﻿{
+    "id":  "g2",
+    "title":  "Präsens",
+    "level":  "A1",
+    "category":  "Zeiten",
+    "icon":  "⏰",
+    "rule":  "Im Präsens konjugiert man das Verb nach Person und Numerus.",
+    "explanation":  "The present tense in German is formed by adding endings to the verb stem: -e, -st, -t, -en, -t, -en. Some verbs have stem changes (e→i, a→ä).",
+    "examples":  [
+                     "Ich lerne Deutsch.",
+                     "Du arbeitest jeden Tag.",
+                     "Er spricht Englisch.",
+                     "Wir gehen ins Kino."
+                 ],
+    "detail":  {
+                   "id":  "g2",
+                   "subtitle":  "Zeiten · Konjugation",
+                   "emoji":  "⏰",
+                   "gradient":  [
+                                    "#F59E0B",
+                                    "#EA580C"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Grundkonzept · Basic Concept",
+                                        "text":  "The present tense (Präsens) is formed by removing the -en ending from the infinitive and adding personal endings. It\u0027s used for current, habitual, and even future events.",
+                                        "bullets":  [
+                                                        "Remove -en from the infinitive to get the stem",
+                                                        "Add endings: -e, -st, -t, -en, -t, -en",
+                                                        "Some verbs have stem changes (e→i, a→ä)"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Regelmäßige Konjugation: lernen",
+                                        "color":  "amber",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "lern-e"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "lern-st"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie/es",
+                                                         "right":  "lern-t"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "lern-en"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "lern-t"
+                                                     },
+                                                     {
+                                                         "left":  "Sie/sie",
+                                                         "right":  "lern-en"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Unregelmäßig: sein \u0026 haben",
+                                        "color":  "orange",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "ich",
+                                                         "right":  "bin / habe"
+                                                     },
+                                                     {
+                                                         "left":  "du",
+                                                         "right":  "bist / hast"
+                                                     },
+                                                     {
+                                                         "left":  "er/sie/es",
+                                                         "right":  "ist / hat"
+                                                     },
+                                                     {
+                                                         "left":  "wir",
+                                                         "right":  "sind / haben"
+                                                     },
+                                                     {
+                                                         "left":  "ihr",
+                                                         "right":  "seid / habt"
+                                                     },
+                                                     {
+                                                         "left":  "Sie/sie",
+                                                         "right":  "sind / haben"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Verbs with stems ending in -t, -d add an extra \u0027e\u0027 before -st and -t: du arbeit-e-st, er arbeit-e-t.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "amber",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich lerne Deutsch.",
+                                                          "en":  "I am learning German."
+                                                      },
+                                                      {
+                                                          "de":  "Du arbeitest jeden Tag.",
+                                                          "en":  "You work every day."
+                                                      },
+                                                      {
+                                                          "de":  "Er spricht Englisch.",
+                                                          "en":  "He speaks English. (e→i change)"
+                                                      },
+                                                      {
+                                                          "de":  "Wir gehen morgen ins Kino.",
+                                                          "en":  "We\u0027re going to the cinema tomorrow."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Stammvokaländerungen",
+                                        "headers":  [
+                                                        "Typ",
+                                                        "Infinitiv",
+                                                        "er/sie/es"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "e → i",
+                                                         "sprechen",
+                                                         "spricht"
+                                                     ],
+                                                     [
+                                                         "e → i",
+                                                         "geben",
+                                                         "gibt"
+                                                     ],
+                                                     [
+                                                         "e → i",
+                                                         "nehmen",
+                                                         "nimmt"
+                                                     ],
+                                                     [
+                                                         "e → i",
+                                                         "essen",
+                                                         "isst"
+                                                     ],
+                                                     [
+                                                         "e → i",
+                                                         "helfen",
+                                                         "hilft"
+                                                     ],
+                                                     [
+                                                         "e → ie",
+                                                         "lesen",
+                                                         "liest"
+                                                     ],
+                                                     [
+                                                         "e → ie",
+                                                         "sehen",
+                                                         "sieht"
+                                                     ],
+                                                     [
+                                                         "e → ie",
+                                                         "empfehlen",
+                                                         "empfiehlt"
+                                                     ],
+                                                     [
+                                                         "a → ä",
+                                                         "fahren",
+                                                         "fährt"
+                                                     ],
+                                                     [
+                                                         "a → ä",
+                                                         "schlafen",
+                                                         "schläft"
+                                                     ],
+                                                     [
+                                                         "a → ä",
+                                                         "tragen",
+                                                         "trägt"
+                                                     ],
+                                                     [
+                                                         "au → äu",
+                                                         "laufen",
+                                                         "läuft"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "The verb always takes Position 2 in a statement.",
+                                                      "Stem-vowel changes only happen with du, er/sie/es.",
+                                                      "sein, haben, werden are fully irregular — memorize them.",
+                                                      "Präsens can express future if a time word is present: Morgen fahre ich."
+                                                  ]
+                                    }
+                                ]
+               }
+}

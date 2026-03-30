@@ -1,0 +1,186 @@
+{
+    "topic": "Doppelter Infinitiv",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g60_1",
+            "type": "multiple-choice",
+            "question": "Ich habe nicht ___ ___.",
+            "options": [
+                "kommen können",
+                "gekonnt kommen",
+                "kommen gekonnt",
+                "gekommen können"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_g60_2",
+            "type": "multiple-choice",
+            "question": "Wir haben unsere Hausaufgaben ___ ___.",
+            "options": [
+                "machen gemusst",
+                "gemusst machen",
+                "machen müssen",
+                "gemacht müssen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g60_3",
+            "type": "multiple-choice",
+            "question": "Sie haben die E-Mail ___ ___.",
+            "options": [
+                "gewollt schreiben",
+                "schreiben wollen",
+                "geschrieben wollen",
+                "schreiben gewollt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g60_4",
+            "type": "multiple-choice",
+            "question": "Hast du das gestern wirklich ___ ___?",
+            "options": [
+                "gesehen dürfen",
+                "sehen gedurft",
+                "gesehen gedurft",
+                "sehen dürfen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_g60_5",
+            "type": "multiple-choice",
+            "question": "Ich hätte das eigentlich nicht ___ ___.",
+            "options": [
+                "getan sollen",
+                "tun sollen",
+                "tun gesollt",
+                "getan gesollt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g60_6",
+            "type": "multiple-choice",
+            "question": "Sie haben uns gestern Abend nicht ___ ___.",
+            "options": [
+                "hören gekonnt",
+                "gehört können",
+                "hören können",
+                "gehört gekonnt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_doppelter_infinitiv_7",
+            "type": "multiple-choice",
+            "question": "Er hat das Auto nicht ___ ___.",
+            "options": [
+                "gekonnt reparieren",
+                "repariert gekonnt",
+                "können reparieren",
+                "reparieren können"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_doppelter_infinitiv_8",
+            "type": "multiple-choice",
+            "question": "Wir haben gestern lange ___ ___.",
+            "options": [
+                "gemusst arbeiten",
+                "müssen arbeiten",
+                "arbeiten müssen",
+                "gearbeitet gemusst"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_doppelter_infinitiv_9",
+            "type": "multiple-choice",
+            "question": "Ich habe ihn ___ ___.",
+            "options": [
+                "kommen sehen",
+                "sehen kommen",
+                "kommen gesehen",
+                "gesehen kommen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_doppelter_infinitiv_10",
+            "type": "multiple-choice",
+            "question": "Sie hat die Prüfung nicht ___ ___.",
+            "options": [
+                "geschrieben gedurft",
+                "gedurft schreiben",
+                "dürfen schreiben",
+                "schreiben dürfen"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_doppelter_infinitiv_11",
+            "type": "multiple-choice",
+            "question": "Hast du den Chef ___ ___? (sprechen, wollen)",
+            "options": [
+                "wollen sprechen",
+                "sprechen wollen",
+                "gesprochen gewollt",
+                "gewollt gesprochen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_doppelter_infinitiv_12",
+            "type": "multiple-choice",
+            "question": "Wir haben das Haus ___ ___.",
+            "options": [
+                "gelassen bauen",
+                "lassen bauen",
+                "bauen lassen",
+                "gebaut gelassen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_doppelter_infinitiv_13",
+            "type": "multiple-choice",
+            "question": "Er hat das Lied ___ ___.",
+            "options": [
+                "gesungen gehört",
+                "hören singen",
+                "singen hören",
+                "gehört singen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_doppelter_infinitiv_14",
+            "type": "multiple-choice",
+            "question": "Ich hätte das ___ ___.",
+            "options": [
+                "müssen wissen",
+                "wissen müssen",
+                "gemusst wissen",
+                "gewusst gemusst"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_doppelter_infinitiv_15",
+            "type": "multiple-choice",
+            "question": "Wir hätten früher ___ ___.",
+            "options": [
+                "gesollt losfahren",
+                "losgefahren gesollt",
+                "losfahren sollen",
+                "sollen losfahren"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+﻿{
+    "id":  "g26",
+    "title":  "Erweiterte Nebensätze",
+    "level":  "B1",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "damit, sodass, falls, seitdem, solange, sobald, je...desto",
+    "explanation":  "B1 introduces new subordinating conjunctions for purpose, result, condition, and proportional relationships.",
+    "examples":  [
+                     "Ich erkläre es langsam, damit du es verstehst.",
+                     "Falls es regnet, bleiben wir zu Hause.",
+                     "Je mehr ich lerne, desto besser verstehe ich."
+                 ],
+    "detail":  {
+                   "id":  "g26",
+                   "subtitle":  "Nebensätze · Erweitert",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#14B8A6",
+                                    "#10B981"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Erweiterte Nebensätze · B1",
+                                        "text":  "At B1 level, new subordinating conjunctions for purpose, result, condition, and time.",
+                                        "bullets":  [
+                                                        "damit = so that (different subject)",
+                                                        "sodass = so that (result)",
+                                                        "falls = in case / if",
+                                                        "seitdem = since (time)",
+                                                        "solange = as long as",
+                                                        "sobald = as soon as",
+                                                        "je ... desto = the more ... the more"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "damit \u0026 sodass",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich erkläre es langsam, damit du es verstehst.",
+                                                          "en":  "I explain it slowly so that you understand."
+                                                      },
+                                                      {
+                                                          "de":  "Er war so müde, sodass er sofort einschlief.",
+                                                          "en":  "He was so tired that he fell asleep immediately."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "\u0027damit\u0027 (different subjects) vs. \u0027um...zu\u0027 (same subject): Ich erkläre es, damit du es verstehst vs. Ich lerne, um die Prüfung zu bestehen.",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "falls, seitdem, solange, sobald",
+                                        "color":  "emerald",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Falls es regnet, bleiben wir zu Hause.",
+                                                          "en":  "In case it rains, we\u0027ll stay home."
+                                                      },
+                                                      {
+                                                          "de":  "Seitdem er hier arbeitet, ist er glücklicher.",
+                                                          "en":  "Since he works here, he\u0027s happier."
+                                                      },
+                                                      {
+                                                          "de":  "Sobald er ankommt, rufe ich dich an.",
+                                                          "en":  "As soon as he arrives, I\u0027ll call you."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "je ... desto / je ... umso",
+                                        "color":  "cyan",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Je mehr ich lerne, desto besser verstehe ich.",
+                                                          "en":  "The more I learn, the better I understand."
+                                                      },
+                                                      {
+                                                          "de":  "Je schneller du fährst, desto gefährlicher ist es.",
+                                                          "en":  "The faster you drive, the more dangerous it is."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "All subordinating conjunctions → verb at the END.",
+                                                      "damit vs. um...zu: different subjects → damit, same subject → um...zu.",
+                                                      "je + Komparativ ..., desto/umso + Komparativ + Verb."
+                                                  ]
+                                    }
+                                ]
+               }
+}

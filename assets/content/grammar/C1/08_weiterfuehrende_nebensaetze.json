@@ -1,0 +1,93 @@
+﻿{
+    "id":  "g53",
+    "title":  "Weiterführende Nebensätze",
+    "level":  "C1",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "was, wo, worüber, weshalb als Relativpronomen. Freie Relativsätze.",
+    "explanation":  "Advanced relative clauses use \u0027was\u0027 (whole clauses, indefinites, superlatives), \u0027wo\u0027 (places/times), and wo(r)-compounds.",
+    "examples":  [
+                     "Er hat bestanden, was mich freut.",
+                     "Das Beste, was passieren kann.",
+                     "Die Stadt, wo ich geboren bin.",
+                     "Das ist etwas, worüber wir reden müssen."
+                 ],
+    "detail":  {
+                   "id":  "g53",
+                   "subtitle":  "Weiterführende Nebensätze · Relativ und frei",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#14B8A6",
+                                    "#0D9488"
+                                ],
+                   "levelBg":  "#FEE2E2",
+                   "levelText":  "#DC2626",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Fortgeschrittene Nebensatzmuster",
+                                        "text":  "Auf C1-Niveau geht der Gebrauch von Relativ- und Nebensätzen über die üblichen der/die/das-Muster hinaus. Lernende müssen was, wo, worüber und freie Relativsätze sicher beherrschen."
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Typische Muster",
+                                        "headers":  [
+                                                        "Form",
+                                                        "Verwendung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "was",
+                                                         "ganzer Satz / unbestimmter Bezug",
+                                                         "Er hat bestanden, was mich freut."
+                                                     ],
+                                                     [
+                                                         "wo",
+                                                         "Ort/Zeit in umgangs- oder regionalsprachlicher Verwendung",
+                                                         "Die Stadt, wo ich geboren bin ..."
+                                                     ],
+                                                     [
+                                                         "worüber / womit ...",
+                                                         "Präposition + Bezug auf eine Sache",
+                                                         "Das ist etwas, worüber wir reden müssen."
+                                                     ],
+                                                     [
+                                                         "freie Relativsätze",
+                                                         "selbstständiger Relativsatz",
+                                                         "Wer viel liest, lernt viel."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Satz",
+                                        "color":  "teal",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das Beste, was passieren konnte, ist eingetreten.",
+                                                          "en":  "The best thing that could happen has happened."
+                                                      },
+                                                      {
+                                                          "de":  "Sie erwähnte etwas, worüber wir später sprechen sollten.",
+                                                          "en":  "She mentioned something we should talk about later."
+                                                      },
+                                                      {
+                                                          "de":  "Wer gut vorbereitet ist, wirkt sicherer.",
+                                                          "en":  "Whoever is well prepared appears more confident."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Verwende was für ganze Sätze, Superlative und unbestimmte Pronomen.",
+                                                      "wo(r)-Verbindungen ersetzen Muster aus Präposition + was.",
+                                                      "Freie Relativsätze funktionieren wie eigenständige Satzgefüge.",
+                                                      "Diese Strukturen sind typisch für fortgeschrittenes schriftliches und gesprochenes Deutsch."
+                                                  ]
+                                    }
+                                ]
+               }
+}

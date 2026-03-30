@@ -1,0 +1,104 @@
+﻿{
+    "id":  "g29",
+    "title":  "Nominalisierung",
+    "level":  "B1",
+    "category":  "Verben",
+    "icon":  "🔄",
+    "rule":  "Verb → das + Infinitiv (das Lesen). Adjektiv → substantiviert (der Alte).",
+    "explanation":  "Nominalization turns verbs and adjectives into nouns. Nominalized infinitives are always neuter (das Lesen). Common in formal German.",
+    "examples":  [
+                     "Das Lesen macht mir Spaß.",
+                     "Das Gute daran ist...",
+                     "Was gibt es Neues?",
+                     "Der Kranke braucht Ruhe."
+                 ],
+    "detail":  {
+                   "id":  "g29",
+                   "subtitle":  "Nominalisierung",
+                   "emoji":  "📝",
+                   "gradient":  [
+                                    "#EC4899",
+                                    "#D946EF"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Nominalisierung · Nominalization",
+                                        "text":  "Verbs and adjectives can be turned into nouns. They are always capitalized, always neuter (das), and take normal noun endings. Very common in formal German."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Verben → Nomen",
+                                        "color":  "pink",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "lernen",
+                                                         "right":  "das Lernen"
+                                                     },
+                                                     {
+                                                         "left":  "schreiben",
+                                                         "right":  "das Schreiben"
+                                                     },
+                                                     {
+                                                         "left":  "arbeiten",
+                                                         "right":  "das Arbeiten"
+                                                     },
+                                                     {
+                                                         "left":  "reisen",
+                                                         "right":  "das Reisen"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Verb-Nominalisierungen",
+                                        "color":  "fuchsia",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Beim Lernen hört er Musik.",
+                                                          "en":  "While studying, he listens to music."
+                                                      },
+                                                      {
+                                                          "de":  "Das Lesen macht mir Spaß.",
+                                                          "en":  "Reading is fun for me."
+                                                      },
+                                                      {
+                                                          "de":  "Ich bin für das Kochen zuständig.",
+                                                          "en":  "I am responsible for cooking."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Adjektiv-Nominalisierungen",
+                                        "color":  "pink",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Etwas Gutes ist passiert.",
+                                                          "en":  "Something good happened."
+                                                      },
+                                                      {
+                                                          "de":  "Er hat etwas Neues gelernt.",
+                                                          "en":  "He learned something new."
+                                                      },
+                                                      {
+                                                          "de":  "Das Beste ist der Anfang.",
+                                                          "en":  "The best (part) is the beginning."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Nominalized verbs are always neuter (das Lernen, das Schreiben).",
+                                                      "Used in formal texts to condense information.",
+                                                      "Nominalized adjectives: etwas Gutes, nichts Neues, alles Wichtige.",
+                                                      "Often replaces a subordinate clause: statt zu arbeiten → das Arbeiten."
+                                                  ]
+                                    }
+                                ]
+               }
+}

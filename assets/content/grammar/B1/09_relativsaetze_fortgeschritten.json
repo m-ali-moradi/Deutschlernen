@@ -1,0 +1,117 @@
+﻿{
+    "id":  "g7",
+    "title":  "Relativsätze (Fortgeschritten)",
+    "level":  "B1",
+    "category":  "Nebensätze",
+    "icon":  "🔗",
+    "rule":  "Relativsätze mit Präpositionen und Genitiv (dessen, deren).",
+    "explanation":  "Advanced relative clauses use prepositions + relative pronouns and genitive forms (dessen, deren) for possession.",
+    "examples":  [
+                     "Der Mann, mit dem ich sprach, ist Arzt.",
+                     "Die Stadt, in der ich wohne, ist schön.",
+                     "Der Mann, dessen Auto rot ist, ist mein Nachbar."
+                 ],
+    "detail":  {
+                   "id":  "g7",
+                   "subtitle":  "Nebensätze · Relativsätze B1",
+                   "emoji":  "🔗",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#A855F7"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Relativsätze · Advanced",
+                                        "text":  "At B1 level, you learn relative clauses with prepositions and with genitive relative pronouns (dessen, deren)."
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Mit Präpositionen",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Mann, mit dem ich gesprochen habe, ist Arzt.",
+                                                          "en":  "The man with whom I spoke is a doctor."
+                                                      },
+                                                      {
+                                                          "de":  "Die Stadt, in der ich wohne, ist schön.",
+                                                          "en":  "The city in which I live is beautiful."
+                                                      },
+                                                      {
+                                                          "de":  "Das Thema, über das wir sprechen, ist wichtig.",
+                                                          "en":  "The topic about which we speak is important."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Genitiv: dessen \u0026 deren",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Mann, dessen Auto gestohlen wurde, ist verärgert.",
+                                                          "en":  "The man whose car was stolen is upset."
+                                                      },
+                                                      {
+                                                          "de":  "Die Frau, deren Tochter ich kenne, heißt Maria.",
+                                                          "en":  "The woman whose daughter I know is called Maria."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Relativpronomen Übersicht",
+                                        "headers":  [
+                                                        "",
+                                                        "Mask.",
+                                                        "Fem.",
+                                                        "Neut.",
+                                                        "Plural"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Nom.",
+                                                         "der",
+                                                         "die",
+                                                         "das",
+                                                         "die"
+                                                     ],
+                                                     [
+                                                         "Akk.",
+                                                         "den",
+                                                         "die",
+                                                         "das",
+                                                         "die"
+                                                     ],
+                                                     [
+                                                         "Dat.",
+                                                         "dem",
+                                                         "der",
+                                                         "dem",
+                                                         "denen"
+                                                     ],
+                                                     [
+                                                         "Gen.",
+                                                         "dessen",
+                                                         "deren",
+                                                         "dessen",
+                                                         "deren"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Preposition + relative pronoun: use correct case for the preposition.",
+                                                      "Genitive relatives: dessen (m/n), deren (f/pl).",
+                                                      "Verb goes to the END in all relative clauses.",
+                                                      "Always separated by commas."
+                                                  ]
+                                    }
+                                ]
+               }
+}

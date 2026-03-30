@@ -1,0 +1,518 @@
+[
+  {
+    "id": "telc-a1",
+    "title": "telc Deutsch A1",
+    "provider": "Telc",
+    "level": "A1",
+    "description": "The telc Deutsch A1 exam is for anyone who has attended about 100-150 hours of German lessons. It is a general language exam.",
+    "structure": [
+      {
+        "name": "Hören (Listening)",
+        "duration": "20 Min.",
+        "description": "Listen to short everyday texts and announcements.",
+        "parts": [
+          {
+            "title": "Teil 1: Dialogues (Dialoge)",
+            "description": "Listen to 6 short dialogues and answer multiple-choice questions (visual/text). Each heard twice."
+          },
+          {
+            "title": "Teil 2: Announcements (Ansagen)",
+            "description": "Listen to 4 announcements (e.g., at a station) and decide if True/False. Each heard once."
+          },
+          {
+            "title": "Teil 3: Messages (Nachrichten)",
+            "description": "Listen to 5 short telephone announcements/messages and answer MCQs. Each heard twice."
+          }
+        ]
+      },
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "45 Min.",
+        "description": "Read short emails, ads, and grammar tasks.",
+        "parts": [
+          {
+            "title": "Teil 1: Correspondence (E-Mails)",
+            "description": "Read 2 short emails/notes and answer 5 questions (MCQ/True-False)."
+          },
+          {
+            "title": "Teil 2: Information (Anzeigen)",
+            "description": "Scan advertisements (e.g., in a newspaper) and match correct info to 5 situations."
+          },
+          {
+            "title": "Teil 3: Announcements (Aushänge)",
+            "description": "Read notices, signs, or posters and answer 5 True/False questions."
+          },
+          {
+            "title": "Sprachbausteine: Cloze Test",
+            "description": "Complete a short text with the correct grammar/vocabulary choices (6 items)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "20 Min.",
+        "description": "Fill out a form and write a short personal note.",
+        "parts": [
+          {
+            "title": "Part 1: Form Filling (Formular)",
+            "description": "Read a situation and fill in a form (e.g., for a hotel) with 5 missing items."
+          },
+          {
+            "title": "Task 2: Personal Note (Mitteilung)",
+            "description": "Write a short personal email or note (approx. 30 words) responding to 3 points in a prompt."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Interact in a group of participants.",
+        "parts": [
+          {
+            "title": "Teil 1: Introduction (Vorstellen)",
+            "description": "Introduce yourself (Name, Age, Country, etc.) and answer follow-up questions from the examiner."
+          },
+          {
+            "title": "Teil 2: Information Exchange (Austauschen)",
+            "description": "Pick cards with themes and ask/answer questions with your partner."
+          },
+          {
+            "title": "Teil 3: Requests & Responses (Bitten)",
+            "description": "Pick cards with images and formulate requests/commands; respond to partner."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "grading": [
+      {
+        "points": "54–60",
+        "grade": "Very Good"
+      },
+      {
+        "points": "48–53.5",
+        "grade": "Good"
+      },
+      {
+        "points": "42–47.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "36–41.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–35.5",
+        "grade": "Fail"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Information and practice tests",
+        "description": "Information and practice tests for telc Deutsch A1 exam",
+        "url": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/start-deutsch-1-/-telc-deutsch-a1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "telc-a2",
+    "title": "telc Deutsch A2",
+    "provider": "Telc",
+    "level": "A2",
+    "description": "Tests your ability to express yourself in a simple way in everyday and professional situations.",
+    "structure": [
+      {
+        "name": "Hören (Listening)",
+        "duration": "20 Min.",
+        "description": "Listen to phone messages, news bits, and dialogues.",
+        "parts": [
+          {
+            "title": "Teil 1: Phone Notes (Notizen)",
+            "description": "Listen to 5 short telephone announcements and complete missing information in phone notes (e.g., name, time, number). Heard twice."
+          },
+          {
+            "title": "Teil 2: News Snippets (Nachrichten)",
+            "description": "Listen to  radio announcements or news snippets and answer 5 multiple-choice questions (a, b, c). Heard once."
+          },
+          {
+            "title": "Teil 3: Dialogues (Gespräche)",
+            "description": "Listen to a longer conversation (e.g., planning a trip) and match 5 pictures or statements to the correct person. Heard twice."
+          }
+        ]
+      },
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "70 Min. (incl. Writing)",
+        "description": "Read floor plans, ads, and solve grammar tasks.",
+        "parts": [
+          {
+            "title": "Teil 1: Matching (Zuordnung)",
+            "description": "Read a department store floor plan or complex directory and match 5 requests to the correct locations (MCQ a, b, c)."
+          },
+          {
+            "title": "Teil 2: Selective Reading (Anzeigen)",
+            "description": "Read 5 newspaper or magazine ads/snippets and answer 5 multiple-choice questions (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Detailed Reading (Mitteilungen)",
+            "description": "Read 5 short notices, signs, or emails and decide for each if a given statement is True or False."
+          },
+          {
+            "title": "Sprachbausteine: Grammar & Vocabulary",
+            "description": "Complete two short texts with the correct grammar/vocabulary choices (10 items total)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "Part of 70 Min.",
+        "description": "Fill out a form and write a semi-formal message.",
+        "parts": [
+          {
+            "title": "Teil 1: Form Filling (Formular)",
+            "description": "Read information about a person and use it to complete a form (e.g., service request) with 5 details."
+          },
+          {
+            "title": "Teil 2: Personal Message (Brief)",
+            "description": "Write a personal email or letter (approx. 40 words) covering 3 specific bullet points provided."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "20 Min.",
+        "description": "Break between written and oral part.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Participate in a pair exam with no preparation time.",
+        "parts": [
+          {
+            "title": "Teil 1: Self-Introduction (Vorstellen)",
+            "description": "Introduce yourself using keywords (Name, Born, Family, Hobbies) and answer examiner questions."
+          },
+          {
+            "title": "Teil 2: Everyday Topic (Alltagsgespräch)",
+            "description": "Alltagsgespräch: Engage in a dialogue with your partner about an everyday topic using prompt cards."
+          },
+          {
+            "title": "Teil 3: Planning Together (Planen)",
+            "description": "Negotiate or plan an activity together with your partner and reach an agreement."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "Very Good"
+      },
+      {
+        "points": "80–89.5",
+        "grade": "Good"
+      },
+      {
+        "points": "70–79.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "60–69.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–59.5",
+        "grade": "Fail"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Information and practice tests",
+        "description": "Information and practice tests for telc Deutsch A2 exam",
+        "url": "https://www.telc.net/sprachpruefungen/deutsch/start-deutsch-2-telc-deutsch-a2/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "telc-b1",
+    "title": "telc Deutsch B1",
+    "provider": "Telc",
+    "level": "B1",
+    "description": "Sound basic knowledge of German for independent communication.",
+    "structure": [
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "90 Min.",
+        "description": "Read blog posts, ads, and grammar tasks.",
+        "parts": [
+          {
+            "title": "Teil 1: Global Reading (Globalverstehen)",
+            "description": "Read 5 short texts and match them to 5 corresponding headlines."
+          },
+          {
+            "title": "Teil 2: Detailed Reading (Detailverstehen)",
+            "description": "Read an article or report and answer 5 multiple-choice questions (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Selective Reading (Anzeigen)",
+            "description": "Identify 10 suitable advertisements for 10 specific people/situations."
+          },
+          {
+            "title": "Teil 1: Grammar (Grammatik)",
+            "description": "Complete a letter/email with 10 correct words (multiple choice from 3 options each)."
+          },
+          {
+            "title": "Teil 2: Vocabulary (Wortschatz)",
+            "description": "Complete a text with 10 correct words from a provided list of 15 words."
+          }
+        ]
+      },
+      {
+        "name": "Hören (Listening)",
+        "duration": "30 Min.",
+        "description": "Understand global and detailed info from audio.",
+        "parts": [
+          {
+            "title": "Teil 1: Global Listening (Globalverstehen)",
+            "description": "Listen to 5 announcements (e.g., at an airport) and decide if True/False. Heard once."
+          },
+          {
+            "title": "Teil 2: Selective Listening (Gespräch)",
+            "description": "Listen to an interview or report and answer 10 True/False questions. Heard once."
+          },
+          {
+            "title": "Teil 3: Detailed Listening (Dialoge)",
+            "description": "Listen to 10 short dialogues and decide if statements are True/False. Heard once."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "30 Min.",
+        "description": "Write personal or semi-formal emails/letters.",
+        "parts": [
+          {
+            "title": "Part 1: Email/Letter (E-Mail/Brief)",
+            "description": "Write an email or letter (approx. 80-100 words) responding to 4 bullet points in a situation."
+          }
+        ]
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Pair examination with preparation time.",
+        "parts": [
+          {
+            "title": "Teil 1: Getting to Know (Kontaktaufnahme)",
+            "description": "Kontaktaufnahme: Get to know your partner by asking questions about their life/hobbies."
+          },
+          {
+            "title": "Teil 2: Topic Presentation (Thema)",
+            "description": "Talk about a topic (e.g., an experience or opinion) using provided prompts."
+          },
+          {
+            "title": "Teil 3: Planning Together (Planen)",
+            "description": "Plan an activity or solve a task together with your partner."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "grading": [
+      {
+        "points": "270–300",
+        "grade": "Very Good"
+      },
+      {
+        "points": "240–269.5",
+        "grade": "Good"
+      },
+      {
+        "points": "210–239.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "180–209.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–179.5",
+        "grade": "Fail"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Information and practice tests",
+        "description": "Information and practice tests for telc Deutsch B1 exam",
+        "url": "https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/",
+        "type": "url"
+      }
+    ]
+  },
+  {
+    "id": "telc-b2",
+    "title": "telc Deutsch B2",
+    "provider": "Telc",
+    "level": "B2",
+    "description": "Advanced proficiency for professional and academic contexts.",
+    "structure": [
+      {
+        "name": "Lesen & Sprachbausteine",
+        "duration": "90 Min.",
+        "description": "Complex reading tasks and advanced grammar.",
+        "parts": [
+          {
+            "title": "Teil 1: Global Reading (Globalverstehen)",
+            "description": "Global comprehension: Match 5 headlines to 5 short newspaper articles."
+          },
+          {
+            "title": "Teil 2: Detailed Reading (Detailverstehen)",
+            "description": "Detailed comprehension: Read a longer text and answer 5 multiple-choice questions (a, b, c)."
+          },
+          {
+            "title": "Teil 3: Selective Reading (Anzeigen)",
+            "description": "Selective comprehension: Identify 10 advertisements that match 10 specific situations."
+          },
+          {
+            "title": "Teil 1: Grammar (Grammatik)",
+            "description": "Complete a formal letter/text with 10 correct words (MCQ from 3 options)."
+          },
+          {
+            "title": "Teil 2: Vocabulary (Wortschatz)",
+            "description": "Complete a specialized text with 10 correct words from a list of 15."
+          }
+        ]
+      },
+      {
+        "name": "Hören (Listening)",
+        "duration": "25 Min.",
+        "description": "Understand interviews and discussions.",
+        "parts": [
+          {
+            "title": "Teil 1: Opinion Matching (Meinungen)",
+            "description": "Listen to 5 people stating their opinions on a topic and match statements. Heard once."
+          },
+          {
+            "title": "Teil 2: Global/Detailed (Interview)",
+            "description": "Listen to a radio interview or discussion and answer 10 True/False questions. Heard once."
+          },
+          {
+            "title": "Teil 3: Selective Listening (Nachrichten)",
+            "description": "Listen to 5 short reports/announcements and answer 5 questions (MCQ/TF). Heard once."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben (Writing)",
+        "duration": "30 Min.",
+        "description": "Write a formal message or response.",
+        "parts": [
+          {
+            "title": "Task 1: Formal Message (Brief/Mail)",
+            "description": "Write a formal letter/email (at least 150 words) addressing 4 mandatory points."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Discuss topics and negotiate in pairs.",
+        "parts": [
+          {
+            "title": "Teil 1: Topic Presentation (Vorstellen)",
+            "description": "Presentation: Present a topic or experience clearly for about 2 minutes."
+          },
+          {
+            "title": "Teil 2: Discussion (Diskussion)",
+            "description": "Discussion: Discuss a controversial topic with your partner, expressing your opinion."
+          },
+          {
+            "title": "Teil 3: Problem Solving (Verhandeln)",
+            "description": "Problem Solving: Reach an agreement with your partner on a planning task."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "grading": [
+      {
+        "points": "270–300",
+        "grade": "Very Good"
+      },
+      {
+        "points": "240–269.5",
+        "grade": "Good"
+      },
+      {
+        "points": "210–239.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "180–209.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–179.5",
+        "grade": "Fail"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Information and practice tests",
+        "description": "Information and practice tests for telc Deutsch B2 exam",
+        "url": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/telc-deutsch-b2/",
+        "type": "url"
+      }
+    ]
+  }
+]

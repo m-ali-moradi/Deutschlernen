@@ -1,0 +1,181 @@
+﻿{
+    "id":  "g6",
+    "title":  "Konjunktiv II",
+    "level":  "B1",
+    "category":  "Konjunktiv",
+    "icon":  "💭",
+    "rule":  "Konjunktiv II drückt irreale Situationen, Wünsche und höfliche Bitten aus.",
+    "explanation":  "Konjunktiv II is used for hypothetical situations, wishes, and polite requests. For most verbs, use \u0027würde\u0027 + infinitive. Common verbs have special forms: wäre, hätte, könnte.",
+    "examples":  [
+                     "Wenn ich reich wäre, würde ich reisen.",
+                     "Ich hätte gern einen Kaffee.",
+                     "Könnten Sie mir bitte helfen?",
+                     "Wenn ich Zeit hätte, würde ich mehr lernen."
+                 ],
+    "detail":  {
+                   "id":  "g6",
+                   "subtitle":  "Konjunktiv · Wünsche \u0026 Bitten",
+                   "emoji":  "💭",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#6366F1"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Konjunktiv II",
+                                        "text":  "Konjunktiv II expresses unreal/hypothetical situations, wishes, polite requests, and advice. For most verbs, use \u0027würde + Infinitiv\u0027. Key verbs have their own forms.",
+                                        "bullets":  [
+                                                        "Wünsche: Ich wünschte, ich wäre reich.",
+                                                        "Höfliche Bitten: Könnten Sie mir helfen?",
+                                                        "Hypothetisch: Wenn ich Zeit hätte, ...",
+                                                        "Ratschläge: An deiner Stelle würde ich ..."
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Wichtige Konjunktiv II Formen",
+                                        "color":  "violet",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "sein",
+                                                         "right":  "wäre"
+                                                     },
+                                                     {
+                                                         "left":  "haben",
+                                                         "right":  "hätte"
+                                                     },
+                                                     {
+                                                         "left":  "können",
+                                                         "right":  "könnte"
+                                                     },
+                                                     {
+                                                         "left":  "müssen",
+                                                         "right":  "müsste"
+                                                     },
+                                                     {
+                                                         "left":  "dürfen",
+                                                         "right":  "dürfte"
+                                                     },
+                                                     {
+                                                         "left":  "werden",
+                                                         "right":  "würde"
+                                                     },
+                                                     {
+                                                         "left":  "wissen",
+                                                         "right":  "wüsste"
+                                                     },
+                                                     {
+                                                         "left":  "kommen",
+                                                         "right":  "käme"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "formula",
+                                        "label":  "Für die meisten Verben",
+                                        "formula":  "würde + Infinitiv",
+                                        "colors":  [
+                                                       "#8B5CF6",
+                                                       "#6366F1"
+                                                   ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Wünsche \u0026 Hypothesen",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wenn ich reich wäre, würde ich reisen.",
+                                                          "en":  "If I were rich, I would travel."
+                                                      },
+                                                      {
+                                                          "de":  "Ich hätte gern mehr Freizeit.",
+                                                          "en":  "I would like more free time."
+                                                      },
+                                                      {
+                                                          "de":  "Wenn ich du wäre, würde ich das nicht tun.",
+                                                          "en":  "If I were you, I wouldn\u0027t do that."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Höfliche Bitten",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Könnten Sie mir bitte helfen?",
+                                                          "en":  "Could you please help me?"
+                                                      },
+                                                      {
+                                                          "de":  "Würden Sie bitte das Fenster öffnen?",
+                                                          "en":  "Would you please open the window?"
+                                                      },
+                                                      {
+                                                          "de":  "Dürfte ich Sie etwas fragen?",
+                                                          "en":  "Might I ask you something?"
+                                                      },
+                                                      {
+                                                          "de":  "Ich hätte gern einen Kaffee.",
+                                                          "en":  "I would like a coffee."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Höflichkeit im Alltag",
+                                        "headers":  [
+                                                        "Situation",
+                                                        "Direkt (unhöflich)",
+                                                        "Konjunktiv II (höflich)"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Restaurant",
+                                                         "Ich will Kaffee.",
+                                                         "Ich hätte gern einen Kaffee."
+                                                     ],
+                                                     [
+                                                         "Um Hilfe bitten",
+                                                         "Hilf mir!",
+                                                         "Könntest du mir helfen?"
+                                                     ],
+                                                     [
+                                                         "Vorschlag",
+                                                         "Wir gehen ins Kino.",
+                                                         "Wir könnten ins Kino gehen."
+                                                     ],
+                                                     [
+                                                         "Rat geben",
+                                                         "Mach das nicht.",
+                                                         "An deiner Stelle würde ich das nicht tun."
+                                                     ],
+                                                     [
+                                                         "Wunsch",
+                                                         "Ich will Urlaub.",
+                                                         "Ich hätte gern Urlaub."
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Use würde + Infinitiv for most verbs. But for sein (wäre), haben (hätte), modal verbs (könnte, müsste, dürfte) and wissen (wüsste), always use the special Konjunktiv II form!",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "Use Konjunktiv II forms for: sein, haben, modal verbs, wissen.",
+                                                      "For all other verbs: würde + Infinitiv.",
+                                                      "Wishes: Wenn ich nur ... hätte/wäre/könnte!",
+                                                      "Advice: An deiner/Ihrer Stelle würde ich ...",
+                                                      "Konjunktiv II makes requests much more polite than Indikativ."
+                                                  ]
+                                    }
+                                ]
+               }
+}

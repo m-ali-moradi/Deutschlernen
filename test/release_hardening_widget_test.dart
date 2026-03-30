@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-import 'package:deutschlernen_mobile/core/database/app_database.dart';
-import 'package:deutschlernen_mobile/core/database/database_providers.dart';
-import 'package:deutschlernen_mobile/features/exercises/presentation/screens/exercise_screen.dart';
-import 'package:deutschlernen_mobile/features/grammar/data/models/grammar_detail_models.dart';
-import 'package:deutschlernen_mobile/features/grammar/presentation/widgets/grammar_rich_detail_view.dart';
-import 'package:deutschlernen_mobile/features/vocabulary/presentation/screens/vocabulary_screen.dart';
-import 'package:deutschlernen_mobile/shared/widgets/app_state_view.dart';
+import 'package:deutschmate_mobile/core/database/app_database.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/features/exercises/presentation/screens/exercise_screen.dart';
+import 'package:deutschmate_mobile/features/grammar/data/models/grammar_detail_models.dart';
+import 'package:deutschmate_mobile/features/grammar/presentation/widgets/grammar_rich_detail_view.dart';
+import 'package:deutschmate_mobile/features/vocabulary/presentation/screens/vocabulary_screen.dart';
+import 'package:deutschmate_mobile/shared/widgets/app_state_view.dart';
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,12 +27,16 @@ Future<void> _pumpWithDatabase(
   WidgetTester tester,
   AppDatabase db,
   Widget child,
+  {List<Override> overrides = const []}
 ) async {
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [appDatabaseProvider.overrideWithValue(db)],
+      overrides: [
+        appDatabaseProvider.overrideWithValue(db),
+        ...overrides,
+      ],
       child: MaterialApp(
-        home: Scaffold(body: child),
+        home: child,
       ),
     ),
   );
@@ -43,10 +47,25 @@ Future<void> _pumpWithDatabase(
 void _addDatabaseTearDown(WidgetTester tester, AppDatabase db) {
   addTearDown(() async {
     await tester.pumpWidget(const SizedBox.shrink());
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.idle();
     await db.close();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.idle();
   });
 }
+
+UserPreference _testPreferences([DateTime? now]) => UserPreference(
+      id: 1,
+      darkMode: false,
+      nativeLanguage: 'en',
+      displayLanguage: 'en',
+      hasSeenOnboarding: true,
+      autoSync: false,
+      updatedAt: now ?? DateTime(2026, 3, 30),
+    );
 
 void main() {
   testWidgets('AppStateView exposes retry actions', (tester) async {
@@ -75,6 +94,9 @@ void main() {
   testWidgets(
       'grammar rich detail page focuses on lesson content and exercises',
       (tester) async {
+    final db = await _createTestDatabase();
+    _addDatabaseTearDown(tester, db);
+
     final detail = GrammarDetailData(
       id: 'g-test',
       subtitle: 'Test subtitle',
@@ -87,18 +109,25 @@ void main() {
       ],
     );
 
-    await tester.pumpWidget(
-      MaterialApp(
-        home: GrammarRichDetailView(
-          topicTitle: 'Konjunktiv',
-          topicCategory: 'Konjunktiv',
-          topicLevel: 'B1',
-          topicProgress: 50,
-          detail: detail,
-          onBack: () {},
-          onResetExercises: () {},
-        ),
+    await _pumpWithDatabase(
+      tester,
+      db,
+      GrammarRichDetailView(
+        topicId: 'g-test',
+        topicTitle: 'Konjunktiv',
+        topicCategory: 'Konjunktiv',
+        topicLevel: 'B1',
+        topicProgress: 50,
+        detail: detail,
+        onBack: () {},
+        onResetExercises: () {},
+        backLevel: 'Alle',
+        backCategory: 'Alle',
+        backShowFilters: false,
       ),
+      overrides: [
+        displayLanguageProvider.overrideWith((ref) => 'en'),
+      ],
     );
 
     expect(find.text('Concept'), findsOneWidget);
@@ -120,7 +149,7 @@ void main() {
             german: 'fragen',
             english: 'to ask',
             dari: 'پرسیدن',
-            category: 'Bewerbung & Karriere',
+            category: 'application',
             tag: 'Verb',
             example: 'Ich frage nach dem Weg.',
             context: '',
@@ -129,46 +158,86 @@ void main() {
           ),
         );
 
+    final word = VocabularyWord(
+      id: 'word-1',
+      german: 'fragen',
+      english: 'to ask',
+      dari: 'پرسیدن',
+      category: 'application',
+      tag: 'Verb',
+      example: 'Ich frage nach dem Weg.',
+      context: '',
+      contextDari: '',
+      level: 'A1',
+      difficulty: 'easy',
+      isFavorite: false,
+      isDifficult: false,
+      updatedAt: DateTime(2026, 3, 30),
+    );
+    final group = VocabularyGroupEntity(
+      id: 'work_business',
+      name: 'Work & Business',
+      levelRange: 'A2-B2',
+      sortOrder: 1,
+      updatedAt: DateTime(2026, 3, 30),
+    );
+    final category = VocabularyCategoryEntity(
+      id: 'application',
+      groupId: 'work_business',
+      name: 'Application & Career',
+      icon: '💼',
+      gradientColorsJson: jsonEncode(['0xFF1E40AF', '0xFF1D4ED8']),
+      sortOrder: 1,
+      wordCount: 1,
+      isCached: true,
+      updatedAt: DateTime(2026, 3, 30),
+    );
+
     await _pumpWithDatabase(
       tester,
       db,
-      const VocabularyScreen(initialTab: 'words'),
+      const VocabularyScreen(initialCategory: 'application', initialTab: 'words'),
+      overrides: [
+        userPreferencesStreamProvider.overrideWith(
+          (ref) => Stream.value(_testPreferences()),
+        ),
+        vocabularyWordsStreamProvider.overrideWith(
+          (ref) => Stream.value([word]),
+        ),
+        vocabularyProgressStreamProvider.overrideWith(
+          (ref) => Stream.value(const <VocabularyProgressData>[]),
+        ),
+        vocabularyGroupsStreamProvider.overrideWith(
+          (ref) => Stream.value([group]),
+        ),
+        vocabularyCategoriesStreamProvider.overrideWith(
+          (ref) => Stream.value([category]),
+        ),
+        vocabularyPendingCategoriesStreamProvider.overrideWith(
+          (ref) => Stream.value(const <VocabularyPendingCategoryEntity>[]),
+        ),
+      ],
     );
 
-    expect(find.text('Fällig'), findsNothing);
-    expect(find.text('Neu'), findsNothing);
-    expect(find.text('Gemeistert'), findsNothing);
     expect(find.text('fragen'), findsOneWidget);
-
-    await tester.scrollUntilVisible(
-      find.text('Bewerbung & Karriere').last,
-      400,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.tap(find.text('Bewerbung & Karriere').last);
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 250));
-
     expect(find.text('Flashcards'), findsOneWidget);
 
     await tester.tap(find.text('Flashcards'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 300));
+    await tester.pumpAndSettle();
 
-    expect(find.text('Tippen zum Umdrehen'), findsOneWidget);
+    expect(find.text('Tap to flip'), findsOneWidget);
     expect(find.text('fragen'), findsOneWidget);
 
-    await tester.tap(find.text('Tippen zum Umdrehen'));
+    await tester.tap(find.text('Tap to flip'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 350));
 
     expect(find.text('to ask'), findsOneWidget);
 
-    await tester.fling(find.text('to ask'), const Offset(500, 0), 1000);
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 500));
+    await tester.tap(find.text('EASY'));
+    await tester.pumpAndSettle();
 
-    expect(find.text('Flashcards'), findsOneWidget);
+    expect(find.text('fragen'), findsOneWidget);
 
     final progress = await db.select(db.vocabularyProgress).get();
     expect(progress, hasLength(1));
@@ -179,7 +248,7 @@ void main() {
   });
 
   testWidgets(
-      'vocabulary detail removes learning status and keeps context tidy',
+      'vocabulary word list stays focused without deprecated detail chrome',
       (tester) async {
     final db = await _createTestDatabase();
     _addDatabaseTearDown(tester, db);
@@ -190,7 +259,7 @@ void main() {
             german: 'vereinbaren',
             english: 'to arrange',
             dari: 'هماهنگ کردن',
-            category: 'Meetings',
+            category: 'meetings',
             tag: 'Verb',
             example: 'Wir vereinbaren einen Termin.',
             context: '',
@@ -199,30 +268,56 @@ void main() {
           ),
         );
 
+    final word = VocabularyWord(
+      id: 'word-2',
+      german: 'vereinbaren',
+      english: 'to arrange',
+      dari: 'هماهنگ کردن',
+      category: 'meetings',
+      tag: 'Verb',
+      example: 'Wir vereinbaren einen Termin.',
+      context: '',
+      contextDari: '',
+      level: 'A1',
+      difficulty: 'medium',
+      isFavorite: false,
+      isDifficult: false,
+      updatedAt: DateTime(2026, 3, 30),
+    );
+
     await _pumpWithDatabase(
       tester,
       db,
-      const VocabularyScreen(initialTab: 'words'),
+      const VocabularyScreen(initialCategory: 'meetings', initialTab: 'words'),
+      overrides: [
+        userPreferencesStreamProvider.overrideWith(
+          (ref) => Stream.value(_testPreferences()),
+        ),
+        vocabularyWordsStreamProvider.overrideWith(
+          (ref) => Stream.value([word]),
+        ),
+        vocabularyProgressStreamProvider.overrideWith(
+          (ref) => Stream.value(const <VocabularyProgressData>[]),
+        ),
+        vocabularyGroupsStreamProvider.overrideWith(
+          (ref) => Stream.value(const <VocabularyGroupEntity>[]),
+        ),
+        vocabularyCategoriesStreamProvider.overrideWith(
+          (ref) => Stream.value(const <VocabularyCategoryEntity>[]),
+        ),
+        vocabularyPendingCategoriesStreamProvider.overrideWith(
+          (ref) => Stream.value(const <VocabularyPendingCategoryEntity>[]),
+        ),
+      ],
     );
 
-    await tester.scrollUntilVisible(
-      find.text('vereinbaren'),
-      400,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.scrollUntilVisible(
-      find.text('vereinbaren'),
-      400,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.tap(find.text('vereinbaren'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 250));
-
+    expect(find.text('vereinbaren'), findsOneWidget);
+    expect(find.text('to arrange'), findsOneWidget);
+    expect(find.text('Meetings'), findsNothing);
     expect(find.text('Lernstatus'), findsNothing);
-    expect(find.text('Business-Kontext'), findsOneWidget);
+    expect(find.text('Business-Kontext'), findsNothing);
     expect(find.text('Verb'), findsWidgets);
-    expect(find.text('Flashcard starten'), findsOneWidget);
+    expect(find.text('Flashcards'), findsOneWidget);
   });
 
   testWidgets('exercise results persist attempts and show retry actions',
@@ -242,18 +337,36 @@ void main() {
           ),
         );
 
+    final exercise = Exercise(
+      id: 'exercise-1',
+      type: 'multiple-choice',
+      question: 'Wähle die richtige Antwort',
+      optionsJson: jsonEncode(['Antwort A', 'Antwort B']),
+      correctAnswer: 0,
+      topic: 'Konjunktiv',
+      level: 'A1',
+      updatedAt: DateTime(2026, 3, 30),
+    );
+
     await _pumpWithDatabase(
       tester,
       db,
       const ExerciseScreen(),
+      overrides: [
+        userPreferencesStreamProvider.overrideWith(
+          (ref) => Stream.value(_testPreferences()),
+        ),
+        exercisesStreamProvider.overrideWith(
+          (ref) => Stream.value([exercise]),
+        ),
+        exerciseAttemptsStreamProvider.overrideWith(
+          (ref) => Stream.value(const <ExerciseAttempt>[]),
+        ),
+        exerciseWeakAreasProvider.overrideWith((ref) => const <String>[]),
+      ],
     );
 
-    await tester.scrollUntilVisible(
-      find.text('Alle Übungen').first,
-      400,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.tap(find.text('Alle Übungen').first);
+    await tester.tap(find.text('All exercises').first);
     await tester.pumpAndSettle();
 
     expect(find.text('Wähle die richtige Antwort'), findsOneWidget);
@@ -262,16 +375,21 @@ void main() {
     await tester.pumpAndSettle();
     await tester.pump(const Duration(milliseconds: 300));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Ergebnis anzeigen'));
+    await tester.tap(find.text('FINISH'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Try again'), findsOneWidget);
-    expect(find.text('Grammar List'), findsOneWidget);
+    expect(find.text('TRY AGAIN'), findsOneWidget);
+    expect(find.text('Back to exercise list'), findsOneWidget);
 
     final attempts = await db.select(db.exerciseAttempts).get();
     expect(attempts, hasLength(1));
     expect(attempts.single.exerciseId, 'exercise-1');
     expect(attempts.single.topic, 'Konjunktiv');
     expect(attempts.single.isCorrect, isFalse);
+
+    await tester.tap(find.text('TRY AGAIN'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Wähle die richtige Antwort'), findsOneWidget);
   });
 }

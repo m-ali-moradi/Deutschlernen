@@ -2,6 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'app_tokens.dart';
 
+const _appPageTransitionsTheme = PageTransitionsTheme(
+  builders: {
+    TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+    TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+    TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
+    TargetPlatform.windows: FadeUpwardsPageTransitionsBuilder(),
+    TargetPlatform.linux: FadeUpwardsPageTransitionsBuilder(),
+  },
+);
+
 /// This function builds the light theme for the app.
 ThemeData buildLightTheme() {
   final base = ColorScheme.fromSeed(
@@ -86,6 +96,7 @@ ThemeData buildLightTheme() {
         ),
       ),
     ),
+    pageTransitionsTheme: _appPageTransitionsTheme,
   );
 }
 
@@ -170,5 +181,7 @@ ThemeData buildDarkTheme() {
         ),
       ),
     ),
+    pageTransitionsTheme: _appPageTransitionsTheme,
   );
 }
+

@@ -1,0 +1,522 @@
+[
+  {
+    "id": "goethe-a1",
+    "title": "Goethe-Zertifikat A1: Start Deutsch 1",
+    "provider": "Goethe",
+    "level": "A1",
+    "description": "Standard for spouse visas and basic communication.",
+    "structure": [
+      {
+        "name": "Hören",
+        "duration": "20 Min.",
+        "description": "Listen to short announcements and dialogues.",
+        "parts": [
+          {
+            "title": "Part 1: Short Dialogues",
+            "description": "6 short conversations (MCQ, heard twice)."
+          },
+          {
+            "title": "Part 2: Announcements",
+            "description": "4 announcements (True/False, heard once)."
+          },
+          {
+            "title": "Part 3: Telephone Messages",
+            "description": "5 telephone messages (MCQ, heard twice)."
+          }
+        ]
+      },
+      {
+        "name": "Lesen",
+        "duration": "25 Min.",
+        "description": "Read notes, emails, and ads.",
+        "parts": [
+          {
+            "title": "Part 1: Emails/Notes",
+            "description": "2 short emails/notes (True/False or MCQ)."
+          },
+          {
+            "title": "Part 2: Advertisements",
+            "description": "Match 5 advertisements to situations."
+          },
+          {
+            "title": "Part 3: Notices/Signs",
+            "description": "Read notices/signs (True/False)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "20 Min.",
+        "description": "Form filling and short message.",
+        "parts": [
+          {
+            "title": "Part 1: Form Filling",
+            "description": "Fill out a form based on a short text (5 items)."
+          },
+          {
+            "title": "Part 2: Short Message",
+            "description": "Write a short personal email or note (approx. 30 words)."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Introduction and group interaction.",
+        "parts": [
+          {
+            "title": "Part 1: Self-Introduction",
+            "description": "Self-introduction (spell name, say number)."
+          },
+          {
+            "title": "Part 2: Information Exchange",
+            "description": "Ask/answer questions on a theme card."
+          },
+          {
+            "title": "Part 3: Formulate Requests",
+            "description": "Formulate requests based on image cards."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Practice Materials",
+        "description": "Official sample practice materials for A1 exam",
+        "url": "https://www.goethe.de/ins/mm/en/spr/prf/gzsd1/ueb.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "Very Good"
+      },
+      {
+        "points": "80–89.5",
+        "grade": "Good"
+      },
+      {
+        "points": "70–79.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "60–69.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–59.5",
+        "grade": "Fail"
+      }
+    ]
+  },
+  {
+    "id": "goethe-a2",
+    "title": "Goethe-Zertifikat A2",
+    "provider": "Goethe",
+    "level": "A2",
+    "description": "Basic language proficiency for daily life.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "30 Min.",
+        "description": "Short reports and notices.",
+        "parts": [
+          {
+            "title": "Part 1: Blog Post/Article",
+            "description": "Read a blog post/article (5 MCQ)."
+          },
+          {
+            "title": "Part 2: Informative Text",
+            "description": "Read an informative text (e.g., schedule) and extract details."
+          },
+          {
+            "title": "Part 3: Advertisements",
+            "description": "Match 5 situations with 7 advertisements."
+          },
+          {
+            "title": "Part 4: Announcements",
+            "description": "Reading multiple announcements and choosing the right one."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "30 Min.",
+        "description": "Radio messages and conversations.",
+        "parts": [
+          {
+            "title": "Part 1: Announcements/Messages",
+            "description": "5 short announcements/messages (MCQ, heard twice)."
+          },
+          {
+            "title": "Part 2: Daily Activities",
+            "description": "A conversation about daily activities (Assignment task, heard once)."
+          },
+          {
+            "title": "Part 3: Private Conversation",
+            "description": "Private conversation (MCQ, heard once)."
+          },
+          {
+            "title": "Part 4: Radio Interview",
+            "description": "Interview on the radio (True/False, heard twice)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "30 Min.",
+        "description": "Personal messages.",
+        "parts": [
+          {
+            "title": "Part 1: Daily Situation",
+            "description": "Write a message related to a situation (approx. 40 words)."
+          },
+          {
+            "title": "Part 2: Formal Message",
+            "description": "Answer a question or describe something (approx. 30 words)."
+          }
+        ]
+      },
+      {
+        "name": "Pause",
+        "duration": "15 Min.",
+        "description": "Break before oral part.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Group oral exam.",
+        "parts": [
+          {
+            "title": "Part 1: Questions/Self-intro",
+            "description": "Ask/answer 4 personal questions based on prompt words."
+          },
+          {
+            "title": "Part 2: Information on Topic",
+            "description": "Talk about something from your life based on a card."
+          },
+          {
+            "title": "Part 3: Planning Activity",
+            "description": "Plan something together with your partner."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Practice Materials",
+        "description": "Official sample practice materials for A2 exam",
+        "url": "https://www.goethe.de/ins/mm/en/spr/prf/gzsd2/ueb.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "Very Good"
+      },
+      {
+        "points": "80–89.5",
+        "grade": "Good"
+      },
+      {
+        "points": "70–79.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "60–69.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–59.5",
+        "grade": "Fail"
+      }
+    ]
+  },
+  {
+    "id": "goethe-b1",
+    "title": "Goethe-Zertifikat B1",
+    "provider": "Goethe",
+    "level": "B1",
+    "description": "Independent use of language.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "65 Min.",
+        "description": "Blogs, articles, and rules.",
+        "parts": [
+          {
+            "title": "Part 1: Emails/Posts",
+            "description": "Read a personal blog/email (6 True/False)."
+          },
+          {
+            "title": "Part 2: Newspaper Articles",
+            "description": "Read newspaper articles (6 MCQ)."
+          },
+          {
+            "title": "Part 3: Advertisements",
+            "description": "Match 7 interest descriptions to 10 advertisements."
+          },
+          {
+            "title": "Part 4: Guest Opinions",
+            "description": "Read comments on a topic and identify opinions (True/False)."
+          },
+          {
+            "title": "Part 5: Instructions/Rules",
+            "description": "Read rules/instructions and answer MCQ."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "40 Min.",
+        "description": "Announcements and discussions.",
+        "parts": [
+          {
+            "title": "Part 1: Short Messages",
+            "description": "10 short announcements (True/False & MCQ, heard twice)."
+          },
+          {
+            "title": "Part 2: Presentation",
+            "description": "Guided tour or presentation (MCQ, heard once)."
+          },
+          {
+            "title": "Part 3: Private Talk",
+            "description": "Conversation between two people (True/False, heard once)."
+          },
+          {
+            "title": "Part 4: Radio Show",
+            "description": "Radio discussion with host and guests (MCQ, heard twice)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "60 Min.",
+        "description": "Personal and semi-formal emails.",
+        "parts": [
+          {
+            "title": "Task 1: Personal Email",
+            "description": "Write a personal email (approx. 80 words)."
+          },
+          {
+            "title": "Task 2: Opinion Post",
+            "description": "Give your opinion on a forum topic (approx. 80 words)."
+          },
+          {
+            "title": "Task 3: Formal Message",
+            "description": "Formal email (40 words, e.g. apology)."
+          }
+        ]
+      },
+      {
+        "name": "Break",
+        "duration": "20 Min.",
+        "isBreak": true
+      },
+      {
+        "name": "Sprechen (Speaking)",
+        "duration": "15 Min.",
+        "description": "Presentation and discussion.",
+        "parts": [
+          {
+            "title": "Part 1: Planning Activity",
+            "description": "Plan something together with a partner."
+          },
+          {
+            "title": "Part 2: Presentation",
+            "description": "Give a short presentation about a topic."
+          },
+          {
+            "title": "Part 3: Feedback/Questions",
+            "description": "Ask/answer questions about the presentations."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Practice Materials",
+        "description": "Official sample practice materials for B1 exam",
+        "url": "https://www.goethe.de/ins/mm/en/spr/prf/gzb1/ueb.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "90–100",
+        "grade": "Very Good"
+      },
+      {
+        "points": "80–89.5",
+        "grade": "Good"
+      },
+      {
+        "points": "70–79.5",
+        "grade": "Satisfactory"
+      },
+      {
+        "points": "60–69.5",
+        "grade": "Sufficient"
+      },
+      {
+        "points": "0–59.5",
+        "grade": "Fail"
+      }
+    ]
+  },
+  {
+    "id": "goethe-b2",
+    "title": "Goethe-Zertifikat B2",
+    "provider": "Goethe",
+    "level": "B2",
+    "description": "Competent language skills for work and studies.",
+    "structure": [
+      {
+        "name": "Lesen",
+        "duration": "65 Min.",
+        "description": "Complex reports and opinions.",
+        "parts": [
+          {
+            "title": "Part 1: Opinions Matching",
+            "description": "Read forum posts and identify opinions (True/False)."
+          },
+          {
+            "title": "Part 2: Text Logic (Gaps)",
+            "description": "Insert missing sentences into a text."
+          },
+          {
+            "title": "Part 3: Complex Article",
+            "description": "Read an analytical text and answer MCQ."
+          },
+          {
+            "title": "Part 4: Situation Matching",
+            "description": "Match statements to texts (Search reading)."
+          },
+          {
+            "title": "Part 5: Rules/Regulations",
+            "description": "Read regulations/instructions and answer MCQ."
+          }
+        ]
+      },
+      {
+        "name": "Hören",
+        "duration": "40 Min.",
+        "description": "Radio programs and lectures.",
+        "parts": [
+          {
+            "title": "Part 1: Short Audio Clips",
+            "description": "Understand short conversations/messages (True/False & MCQ)."
+          },
+          {
+            "title": "Part 2: Radio Interview",
+            "description": "Understand a longer talk about a topic (MCQ)."
+          },
+          {
+            "title": "Part 3: Discussion/Lecture",
+            "description": "Identify opinions in a discussion (Assignment task)."
+          },
+          {
+            "title": "Part 4: Expert Talk",
+            "description": "Understand a lecture or interview (MCQ)."
+          }
+        ]
+      },
+      {
+        "name": "Schreiben",
+        "duration": "75 Min.",
+        "description": "Opinion and formal messages.",
+        "parts": [
+          {
+            "title": "Task 1: Forum Post",
+            "description": "Write a post expressing your opinion (approx. 150 words)."
+          },
+          {
+            "title": "Task 2: Formal Message",
+            "description": "Write a formal message/email for information (approx. 100 words)."
+          }
+        ]
+      },
+      {
+        "name": "Sprechen",
+        "duration": "15 Min.",
+        "description": "Interaction in pairs.",
+        "parts": [
+          {
+            "title": "Part 1: Oral Presentation",
+            "description": "Give a short presentation on a topic and answer questions."
+          },
+          {
+            "title": "Part 2: Partner Discussion",
+            "description": "Discuss a topic with your partner, expressing and supporting opinions."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Arrive at least 15 minutes before the exam starts.",
+      "Know the exam format perfectly (number of parts, timing).",
+      "Practice with official model tests to build confidence.",
+      "Master time management: never leave a question blank.",
+      "Reading/Listening: Read questions/options before text/audio starts.",
+      "Writing: Use standard connectors (weil, obwohl, deshalb) as shortcuts.",
+      "Speaking: Clear communication is better than 100% perfect grammar.",
+      "Speaking: Use safe phrases (Redemittel) to stay fluent."
+    ],
+    "resources": [
+      {
+        "title": "Practice Materials",
+        "description": "Official sample practice materials for B2 exam",
+        "url": "https://www.goethe.de/ins/mm/en/spr/prf/gzb2/ue9.html",
+        "type": "url"
+      }
+    ],
+    "sourceUrl": "https://www.goethe.de/",
+    "grading": [
+      {
+        "points": "60% in each module",
+        "grade": "Pass"
+      }
+    ]
+  }
+]

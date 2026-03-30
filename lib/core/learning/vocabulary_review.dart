@@ -1,3 +1,4 @@
+import '../database/app_database.dart';
 import 'review_logic.dart';
 
 /// Detailed review status for a single vocabulary word.
@@ -58,7 +59,7 @@ class VocabularyReviewState {
     required this.summary,
   });
 
-  final List<Map<String, Object?>> wordRows;
+  final List<VocabularyWord> wordRows;
   final Map<String, VocabularyReviewInfo> byWordId;
   final VocabularyReviewSummary summary;
 }
@@ -71,16 +72,13 @@ typedef VocabularyReviewFilters = ({
 
 /// Builds the [VocabularyReviewState] by looking at words and their progress.
 VocabularyReviewState buildVocabularyReviewState({
-  required List<Map<String, Object?>> vocabularyWords,
-  required List<Map<String, Object?>> vocabularyProgress,
+  required List<VocabularyWord> vocabularyWords,
+  required List<VocabularyProgressData> vocabularyProgress,
   required DateTime now,
 }) {
-  final progressByWordId = <String, Map<String, Object?>>{};
+  final progressByWordId = <String, VocabularyProgressData>{};
   for (final row in vocabularyProgress) {
-    final wordId = _stringValue(row['word_id']);
-    if (wordId.isNotEmpty) {
-      progressByWordId[wordId] = row;
-    }
+    progressByWordId[row.wordId] = row;
   }
 
   final byWordId = <String, VocabularyReviewInfo>{};
@@ -90,14 +88,10 @@ VocabularyReviewState buildVocabularyReviewState({
   var masteredCount = 0;
 
   for (final word in vocabularyWords) {
-    final wordId = _stringValue(word['id']);
-    if (wordId.isEmpty) {
-      continue;
-    }
-
+    final wordId = word.id;
     final info = _buildReviewInfo(
       wordId: wordId,
-      progressRow: progressByWordId[wordId],
+      progress: progressByWordId[wordId],
       now: now,
     );
     byWordId[wordId] = info;
@@ -115,7 +109,7 @@ VocabularyReviewState buildVocabularyReviewState({
   }
 
   return VocabularyReviewState(
-    wordRows: List<Map<String, Object?>>.unmodifiable(vocabularyWords),
+    wordRows: List<VocabularyWord>.unmodifiable(vocabularyWords),
     byWordId: Map<String, VocabularyReviewInfo>.unmodifiable(byWordId),
     summary: VocabularyReviewSummary(
       totalWords: vocabularyWords.length,
@@ -131,7 +125,7 @@ VocabularyReviewState buildVocabularyReviewState({
 ///
 /// It can filter by search text, category, or favorite status.
 List<String> buildVocabularyReviewQueue({
-  required List<Map<String, Object?>> vocabularyWords,
+  required List<VocabularyWord> vocabularyWords,
   required Map<String, VocabularyReviewInfo> reviewByWordId,
   required DateTime now,
   String search = '',
@@ -142,40 +136,35 @@ List<String> buildVocabularyReviewQueue({
   final queueItems = <_VocabularyQueueItem>[];
 
   for (final word in vocabularyWords) {
-    final wordId = _stringValue(word['id']);
-    if (wordId.isEmpty) {
+    final wordId = word.id;
+
+    if (favoritesOnly && !word.isFavorite) {
       continue;
     }
 
-    if (favoritesOnly && !_boolValue(word['is_favorite'])) {
-      continue;
-    }
-
-    if (category != null &&
-        category.isNotEmpty &&
-        _stringValue(word['category']) != category) {
+    if (category != null && category.isNotEmpty && word.category != category) {
       continue;
     }
 
     if (normalizedSearch.isNotEmpty) {
       final haystack = [
-        word['german'],
-        word['english'],
-        word['dari'],
-        word['category'],
-        word['tag'],
-      ].map(_stringValue).join(' ').toLowerCase();
+        word.german,
+        word.english,
+        word.dari,
+        word.category,
+        word.tag,
+      ].join(' ').toLowerCase();
       if (!haystack.contains(normalizedSearch)) {
         continue;
       }
     }
 
     final reviewInfo = reviewByWordId[wordId] ??
-        _buildReviewInfo(wordId: wordId, progressRow: null, now: now);
+        _buildReviewInfo(wordId: wordId, progress: null, now: now);
 
     queueItems.add(_VocabularyQueueItem(
       wordId: wordId,
-      german: _stringValue(word['german']),
+      german: word.german,
       reviewInfo: reviewInfo,
     ));
   }
@@ -215,10 +204,10 @@ String formatVocabularyNextReviewLabel(
 
 VocabularyReviewInfo _buildReviewInfo({
   required String wordId,
-  required Map<String, Object?>? progressRow,
+  required VocabularyProgressData? progress,
   required DateTime now,
 }) {
-  if (progressRow == null) {
+  if (progress == null) {
     return VocabularyReviewInfo(
       wordId: wordId,
       status: VocabularyReviewStatus.newWord,
@@ -232,35 +221,26 @@ VocabularyReviewInfo _buildReviewInfo({
     );
   }
 
-  final leitnerBox = _intValue(progressRow['leitner_box']);
-  final reviewCount = _intValue(progressRow['review_count']);
-  final lapseCount = _intValue(progressRow['lapse_count']);
-  final lastReviewedAt = _dateTimeValue(progressRow['last_reviewed_at']);
-  final nextReviewAt = _dateTimeValue(progressRow['next_review_at']);
-  final masteredAt = _dateTimeValue(progressRow['mastered_at']);
-  final lastResultValue = _stringValue(progressRow['last_result']);
-  final storedStatus = _stringValue(progressRow['status']);
-
   final status = deriveReviewStatus(
     now: now,
-    nextReviewAt: nextReviewAt,
-    masteredAt: masteredAt,
-    storedStatus: storedStatus,
-    reviewCount: reviewCount,
+    nextReviewAt: progress.nextReviewAt,
+    masteredAt: progress.masteredAt,
+    storedStatus: progress.status,
+    reviewCount: progress.reviewCount,
   );
 
   return VocabularyReviewInfo(
     wordId: wordId,
     status: status,
-    lastResult: lastResultValue.isEmpty
+    lastResult: (progress.lastResult == null || progress.lastResult!.isEmpty)
         ? null
-        : ReviewResultX.fromValue(lastResultValue),
-    leitnerBox: leitnerBox,
-    reviewCount: reviewCount,
-    lapseCount: lapseCount,
-    lastReviewedAt: lastReviewedAt,
-    nextReviewAt: nextReviewAt,
-    masteredAt: masteredAt,
+        : ReviewResultX.fromValue(progress.lastResult!),
+    leitnerBox: progress.leitnerBox,
+    reviewCount: progress.reviewCount,
+    lapseCount: progress.lapseCount,
+    lastReviewedAt: progress.lastReviewedAt,
+    nextReviewAt: progress.nextReviewAt,
+    masteredAt: progress.masteredAt,
   );
 }
 
@@ -335,46 +315,6 @@ String _formatDuration(Duration duration) {
   return '${duration.inSeconds}s';
 }
 
-int _intValue(Object? value) {
-  if (value is int) {
-    return value;
-  }
-  if (value is num) {
-    return value.toInt();
-  }
-  return int.tryParse(value?.toString() ?? '') ?? 0;
-}
-
-bool _boolValue(Object? value) {
-  if (value is bool) {
-    return value;
-  }
-  if (value is num) {
-    return value != 0;
-  }
-  final normalized = value?.toString().toLowerCase();
-  return normalized == 'true' || normalized == '1';
-}
-
-String _stringValue(Object? value) => value?.toString() ?? '';
-
-DateTime? _dateTimeValue(Object? value) {
-  if (value is DateTime) {
-    return value;
-  }
-  if (value is int) {
-    return DateTime.fromMillisecondsSinceEpoch(value);
-  }
-  if (value is num) {
-    return DateTime.fromMillisecondsSinceEpoch(value.toInt());
-  }
-  final text = value?.toString();
-  if (text == null || text.isEmpty) {
-    return null;
-  }
-  return DateTime.tryParse(text);
-}
-
 class _VocabularyQueueItem {
   const _VocabularyQueueItem({
     required this.wordId,
@@ -386,3 +326,4 @@ class _VocabularyQueueItem {
   final String german;
   final VocabularyReviewInfo reviewInfo;
 }
+

@@ -1,0 +1,120 @@
+﻿{
+    "id":  "g70",
+    "title":  "Der Genitiv",
+    "level":  "A2",
+    "category":  "Fälle",
+    "icon":  "🗝️",
+    "rule":  "Genitiv (WESSEN?): des (+s/es), der, des (+s/es), der.",
+    "explanation":  "The Genitive case shows possession or belonging. Masculine and neuter nouns usually add -s or -es to the ending. It is common after prepositions like \u0027wegen\u0027 or \u0027während\u0027.",
+    "examples":  [
+                     "Das ist das Auto des Vaters.",
+                     "Die Tasche der Mutter ist hier.",
+                     "Wegen des Regens bleiben wir.",
+                     "Das Haus meines Bruders."
+                 ],
+    "detail":  {
+                   "id":  "g70",
+                   "subtitle":  "Besitz · Wessen?",
+                   "emoji":  "🗝️",
+                   "gradient":  [
+                                    "#6366F1",
+                                    "#4F46E5"
+                                ],
+                   "levelBg":  "#FEF9C3",
+                   "levelText":  "#A16207",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Der Genitiv · The Genitive Case",
+                                        "text":  "The Genitive case is used to show possession, belonging, or relationship. It answers the question \u0027Wessen?\u0027 (Whose?).",
+                                        "bullets":  [
+                                                        "Maskulin/Neutrum: des (-s/es)",
+                                                        "Feminin/Plural: der",
+                                                        "Usually used in more formal German or after specific prepositions."
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Artikel-Tabelle (Genitiv)",
+                                        "color":  "indigo",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "Maskulin",
+                                                         "right":  "des Vaters / eines Vaters"
+                                                     },
+                                                     {
+                                                         "left":  "Feminin",
+                                                         "right":  "der Mutter / einer Mutter"
+                                                     },
+                                                     {
+                                                         "left":  "Neutrum",
+                                                         "right":  "des Kindes / eines Kindes"
+                                                     },
+                                                     {
+                                                         "left":  "Plural",
+                                                         "right":  "der Eltern / (-) Eltern"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Masculine and Neuter nouns get an extra -s or -es in Genitive! One syllable words usually take -es (des Tages), longer words take -s (des Lehrers).",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Präpositionen mit Genitiv",
+                                        "headers":  [
+                                                        "Präposition",
+                                                        "Bedeutung",
+                                                        "Beispiel"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "wegen",
+                                                         "because of",
+                                                         "wegen des Regens"
+                                                     ],
+                                                     [
+                                                         "während",
+                                                         "during",
+                                                         "während des Urlaubs"
+                                                     ],
+                                                     [
+                                                         "trotz",
+                                                         "despite",
+                                                         "trotz der Kälte"
+                                                     ],
+                                                     [
+                                                         "statt",
+                                                         "instead of",
+                                                         "statt des Buches"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Häufige Sätze",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Das ist das Auto MEINES Bruders.",
+                                                          "en":  "That is MY brother\u0027s car."
+                                                      },
+                                                      {
+                                                          "de":  "Die Hauptstadt DER Schweiz ist Bern.",
+                                                          "en":  "Switzerland\u0027S capital is Bern."
+                                                      },
+                                                      {
+                                                          "de":  "Wegen DES Wetters bleibe ich zu Hause.",
+                                                          "en":  "Because OF THE weather, I\u0027m staying home."
+                                                      },
+                                                      {
+                                                          "de":  "Das Ende DER Straße.",
+                                                          "en":  "The end OF THE street."
+                                                      }
+                                                  ]
+                                    }
+                                ]
+               }
+}

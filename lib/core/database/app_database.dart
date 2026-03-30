@@ -1,22 +1,25 @@
-import 'dart:io';
 import 'dart:convert';
 
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
-import 'package:path/path.dart' as p;
+import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 
-import '../content/content_assets.dart';
-import '../content/content_loader.dart';
-import '../learning/review_logic.dart';
-import 'tables.dart';
+import 'package:deutschmate_mobile/core/content/content_assets.dart';
+import 'package:deutschmate_mobile/core/content/content_loader.dart';
+import 'package:deutschmate_mobile/core/database/tables.dart';
+
+import 'package:deutschmate_mobile/core/database/daos/vocabulary_dao.dart';
+import 'package:deutschmate_mobile/core/database/daos/grammar_dao.dart';
+import 'package:deutschmate_mobile/core/database/daos/user_dao.dart';
+import 'package:deutschmate_mobile/core/database/daos/exercise_dao.dart';
 
 part 'app_database.g.dart';
 
-/// The main database class for the application.
+/// The main database class for the application, built on top of the Drift persistence library.
 ///
-/// This class manages all database connections and data updates.
-/// It uses the Drift library to work with SQLite.
+/// This class centralizes all SQLite interactions, managing tables, data migrations,
+/// and the initial seeding of content from localized JSON assets.
 @DriftDatabase(
   tables: [
     VocabularyWords,
@@ -31,34 +34,73 @@ part 'app_database.g.dart';
     VocabularyCategories,
     VocabularyPendingCategories,
     GrammarDetails,
+    SyncMetadata,
+    Dialogues,
+  ],
+  daos: [
+    VocabularyDao,
+    GrammarDao,
+    UserDao,
+    ExerciseDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
+  static const String _vocabularySyncMetadataId = 'local_vocabulary_assets';
+  static const List<String> _dialogueIds = [
+    'city_registration_appointment',
+    'wohnungsbesichtigung',
+    'doctor_appointment',
+    'bank_account',
+    'supermarket',
+    'workplace_first_day',
+    'job_interview',
+    'emergency_call',
+    'restaurant_cafe',
+    'public_transport_ticket',
+    'asking_directions',
+    'hotel_check_in',
+    'phone_appointment',
+    'post_office',
+    'pharmacy',
+    'meeting_neighbors',
+    'school_teacher_conversation',
+    'landlord_repair',
+  ];
+
+  /// Internal constructor for creating a database with a specific executor.
   AppDatabase._(super.executor, {required bool seedContent})
       : _seedContent = seedContent;
 
+  /// Default constructor that initializes the database File on the local filesystem.
+  ///
+  /// By default, it uses 'deutschmate.sqlite' in the application documents directory.
   AppDatabase()
       : _seedContent = true,
         super(
           driftDatabase(
-            name: 'deutschlernen.sqlite',
+            name: 'deutschmate.sqlite',
             native: DriftNativeOptions(
               databaseDirectory: getApplicationDocumentsDirectory,
+              setup: (db) {
+                db.execute('PRAGMA journal_mode = WAL;');
+                db.execute('PRAGMA busy_timeout = 5000;');
+              },
             ),
           ),
         );
 
+  /// Helper constructor for unit tests, allowing a memory-based executor.
   AppDatabase.forTesting(QueryExecutor executor, {bool seedContent = false})
       : this._(executor, seedContent: seedContent);
 
+  /// Flag indicating whether the database should attempt to seed content from assets.
   final bool _seedContent;
 
-  /// The current version of the database.
-  ///
-  /// Incremented when tables or columns change.
+  /// The current schema version. Incremented whenever tables or column definitions change.
   @override
-  int get schemaVersion => 11;
+  int get schemaVersion => 14;
 
+  /// Defines the logic for creating and upgrading the database schema.
   @override
   MigrationStrategy get migration => MigrationStrategy(
         onCreate: (m) async {
@@ -69,40 +111,47 @@ class AppDatabase extends _$AppDatabase {
           }
         },
         onUpgrade: (m, from, to) async {
+          // Version 2: Added progress tracking for exercises and vocabulary.
           if (from < 2) {
             await m.createTable(vocabularyProgress);
             await m.createTable(exerciseAttempts);
           }
+          // Version 3: Cleaned up vocabulary structure (removed phonetics).
           if (from < 3) {
-            // Recreate vocabulary_words due to phonetic column removal
             await m.deleteTable(vocabularyWords.actualTableName);
             await m.createTable(vocabularyWords);
           }
+          // Version 4: Added onboarding tracking.
           if (from < 4) {
             try {
               await m.addColumn(
                   userPreferences, userPreferences.hasSeenOnboarding);
             } catch (_) {}
           }
+          // Version 5: Added auto-sync preference.
           if (from < 5) {
             try {
               await m.addColumn(userPreferences, userPreferences.autoSync);
             } catch (_) {}
           }
+          // Version 6: Added CEFR levels to vocabulary.
           if (from < 6) {
             try {
               await m.addColumn(vocabularyWords, vocabularyWords.level);
             } catch (_) {}
           }
+          // Version 7: Introduced structured vocabulary groups and categories.
           if (from < 7) {
             await m.createTable(vocabularyGroups);
             await m.createTable(vocabularyCategories);
           }
+          // Version 8: Cloud sync support; track which categories are local.
           if (from < 8) {
             await m.addColumn(
                 vocabularyCategories, vocabularyCategories.isCached);
             await m.createTable(vocabularyPendingCategories);
           }
+          // Version 9: Added metadata for progress bars (word counts).
           if (from < 9) {
             try {
               await m.addColumn(
@@ -113,17 +162,58 @@ class AppDatabase extends _$AppDatabase {
                   vocabularyPendingCategories.wordCount);
             } catch (_) {}
           }
+          // Version 10: Rich grammar detail caching.
           if (from < 10) {
             await m.createTable(grammarDetails);
           }
+          // Version 11: Added category filtering for grammar details.
           if (from < 11) {
             try {
               await m.addColumn(grammarDetails, grammarDetails.category);
             } catch (_) {}
           }
+          // Version 12: Scoped exercise attempts (differentiate between modules).
+          if (from < 12) {
+            try {
+              await m.addColumn(exerciseAttempts, exerciseAttempts.scope);
+            } catch (_) {}
+            await customStatement(
+              "UPDATE exercise_attempts SET scope = 'exercises' WHERE COALESCE(scope, '') = ''",
+            );
+          }
+
+          // Version 13: Add missing columns to achievements table for improved tracking and normalization.
+          if (from < 13) {
+            try {
+              await m.addColumn(achievements, achievements.unlockedAt);
+              await m.addColumn(achievements, achievements.updatedAt);
+            } catch (_) {
+              // Ignore if columns already exist (e.g., from failed partial migrations)
+            }
+          }
+          // Version 14: Central Content Synchronization Infrastructure.
+          // - Creates 'sync_metadata' to track the lastSyncAt high-water mark per collection.
+          // - Creates 'dialogues' table to migrate dialogue scenarios from local assets to database.
+          // - Adds 'updatedAt' columns to all syncable content tables for delta-based cloud updates.
+          if (from < 14) {
+            await m.createTable(syncMetadata);
+            await m.createTable(dialogues);
+            try {
+              await m.addColumn(vocabularyGroups, vocabularyGroups.updatedAt);
+              await m.addColumn(
+                  vocabularyCategories, vocabularyCategories.updatedAt);
+              await m.addColumn(vocabularyWords, vocabularyWords.updatedAt);
+              await m.addColumn(grammarTopics, grammarTopics.updatedAt);
+              await m.addColumn(grammarDetails, grammarDetails.updatedAt);
+              await m.addColumn(exercises, exercises.updatedAt);
+            } catch (_) {
+              // Ignore if columns already exist from a partially failed previous migration
+            }
+          }
           await createManualIndexes();
         },
         beforeOpen: (details) async {
+          // Patch for SQLite versions that don't support modern DateTime formats.
           await _normalizeLegacyDateTimeStorage();
 
           if (_seedContent) {
@@ -131,6 +221,7 @@ class AppDatabase extends _$AppDatabase {
               await _seedInitialData(force: true);
             } else if ((details.versionBefore ?? 0) > 0 &&
                 (details.versionBefore ?? 0) < schemaVersion) {
+              // Forced reseed if moving from a very old version with missing relationships.
               if ((details.versionBefore ?? 0) < 8) {
                 await _seedInitialData(force: true);
               }
@@ -142,6 +233,7 @@ class AppDatabase extends _$AppDatabase {
         },
       );
 
+  /// Creates non-standard indexes to optimize frequent queries on large tables.
   Future<void> createManualIndexes() async {
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_vocab_category ON vocabulary_words (category)',
@@ -173,12 +265,19 @@ class AppDatabase extends _$AppDatabase {
     await customStatement(
       'CREATE INDEX IF NOT EXISTS idx_exercise_attempts_topic_answered ON exercise_attempts (topic, answered_at)',
     );
+    await customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_exercise_attempts_scope_topic_answered ON exercise_attempts (scope, topic, answered_at)',
+    );
   }
 
+  /// Verifies if core app content is present and triggers a re-seed if tables are empty.
+  ///
+  /// Also performs a weekly XP reset check when the database is first initialized.
   Future<void> _seedIfContentMissing() async {
     final vocabCountExp = vocabularyWords.id.count();
     final exerciseCountExp = exercises.id.count();
     final grammarCountExp = grammarTopics.id.count();
+    final dialogueCountExp = dialogues.id.count();
 
     final vocabCountRow = await (selectOnly(vocabularyWords)
           ..addColumns([vocabCountExp]))
@@ -189,64 +288,54 @@ class AppDatabase extends _$AppDatabase {
     final grammarCountRow = await (selectOnly(grammarTopics)
           ..addColumns([grammarCountExp]))
         .getSingle();
+    final dialogueCountRow = await (selectOnly(dialogues)
+          ..addColumns([dialogueCountExp]))
+        .getSingle();
 
     final vocabCount = vocabCountRow.read(vocabCountExp) ?? 0;
     final exerciseCount = exerciseCountRow.read(exerciseCountExp) ?? 0;
     final grammarCount = grammarCountRow.read(grammarCountExp) ?? 0;
+    final dialogueCount = dialogueCountRow.read(dialogueCountExp) ?? 0;
 
     final groupCountRow =
         await customSelect('SELECT COUNT(*) AS c FROM vocabulary_groups')
             .getSingle();
     final groupCount = (groupCountRow.data['c'] as int?) ?? 0;
+    final vocabularyContentOutdated = await _isVocabularyContentOutdated();
 
     if (vocabCount == 0 ||
         exerciseCount == 0 ||
         grammarCount == 0 ||
-        groupCount == 0) {
+        dialogueCount == 0 ||
+        groupCount == 0 ||
+        vocabularyContentOutdated) {
       await _seedInitialData();
-      await _migrateLegacyCategories(this);
+      await vocabularyDao.migrateLegacyCategories();
       return;
     }
 
     // Always run migration to ensure any legacy categories in existing words match the new UI
-    await _migrateLegacyCategories(this);
+    await vocabularyDao.migrateLegacyCategories();
 
-    // Weekly reset check
-    final stats = await (select(userStats)..where((t) => t.id.equals(1)))
-        .getSingleOrNull();
-    if (stats != null) {
-      final now = DateTime.now();
-      final lastWeek = _getIsoWeek(stats.updatedAt);
-      final currentWeek = _getIsoWeek(now);
+    // Weekly reset check for the leaderboard/progress summary.
+    await userDao.syncWeeklyProgressIfNewWeek();
 
-      if (currentWeek != lastWeek) {
-        await (update(userStats)..where((t) => t.id.equals(1))).write(
-          const UserStatsCompanion(
-            weeklyProgress: Value(0),
-          ),
-        );
-      }
-    }
-
-    // Also reseed when new grammar topics or exercises have been added to JSON files.
-    // _seedInitialData uses insertOrReplace, and we clear old exercises so they are fully synced.
-    final allVocabData = await ContentLoader.loadMany(ContentAssets.vocabulary);
-    final grammarData = await ContentLoader.loadAllLevels(
-      'grammar/en',
-      ['topics_a1', 'topics_a2', 'topics_b1', 'topics_b2', 'topics_c1'],
-    );
-    final allExerciseData = await ContentLoader.loadAllLevels(
-      'exercises',
-      ['a1', 'a2', 'b1', 'b2', 'c1'],
-    );
+    // Perform a background sync if asset files appear to have more entries than the local state.
+    final allVocabData =
+        await ContentLoader.loadVocabulary(ContentAssets.vocabulary);
+    final grammarData = await ContentLoader.loadMany(ContentAssets.grammar);
+    final allExerciseData =
+        await ContentLoader.loadExercises(ContentAssets.exercises);
 
     if (allVocabData.length != vocabCount ||
         grammarData.length > grammarCount ||
-        allExerciseData.length != exerciseCount) {
+        allExerciseData.length != exerciseCount ||
+        dialogueCount != _dialogueIds.length) {
       await _seedInitialData();
     }
   }
 
+  /// Ensures every vocabulary word has its translated meaning (Dari/Persian) populated.
   Future<void> _backfillVocabularyMeaningsIfMissing() async {
     final missingRow = await customSelect(
       '''
@@ -282,16 +371,16 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
     });
   }
 
+  /// The primary content ingestion logic.
+  ///
+  /// Loads raw data from all asset folders and inserts or replaces rows in the database.
+  /// Uses a transaction to ensure atomic updates across related tables.
   Future<void> _seedInitialData({bool force = false}) async {
-    final vocabulary = await ContentLoader.loadMany(ContentAssets.vocabulary);
-    final exerciseData = await ContentLoader.loadAllLevels(
-      'exercises',
-      ['a1', 'a2', 'b1', 'b2', 'c1'],
-    );
-    final grammarData = await ContentLoader.loadAllLevels(
-      'grammar/en',
-      ['topics_a1', 'topics_a2', 'topics_b1', 'topics_b2', 'topics_c1'],
-    );
+    final vocabulary =
+        await ContentLoader.loadVocabulary(ContentAssets.vocabulary);
+    final exerciseData =
+        await ContentLoader.loadExercises(ContentAssets.exercises);
+    final grammarData = await ContentLoader.loadMany(ContentAssets.grammar);
     final achievementsData = await ContentLoader.loadList(
       'assets/content/achievements/achievements.json',
     );
@@ -299,6 +388,16 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
         await ContentLoader.loadList(ContentAssets.vocabularyGroups);
     final categoriesData =
         await ContentLoader.loadList(ContentAssets.vocabularyCategories);
+
+    final dialoguesData = <Map<String, dynamic>>[];
+    for (final id in _dialogueIds) {
+      try {
+        final data =
+            await ContentLoader.loadMap('assets/content/dialogues/$id.json');
+        data['id'] = id;
+        dialoguesData.add(data);
+      } catch (_) {}
+    }
 
     await transaction(() async {
       final existingStats = await (select(userStats)
@@ -328,32 +427,34 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
             .insert(const UserPreferencesCompanion(id: Value(1)));
       }
 
-      await _upsertVocabularyGroups(groupsData);
-      await _upsertVocabularyCategories(categoriesData, isCached: true);
-      await _upsertVocabularyContent(vocabulary);
+      await vocabularyDao.upsertVocabularyGroups(groupsData);
+      await vocabularyDao.upsertVocabularyCategories(categoriesData,
+          isCached: true);
+      await _deleteStaleVocabularyContent(vocabulary, categoriesData, groupsData);
+      await vocabularyDao.upsertVocabularyContent(vocabulary);
 
-      // Clear old exercises to remove any deleted JSON entries (e.g., old vocab exercises)
-      await delete(exercises).go();
+      // Clear old exercises to remove any deleted JSON entries (e.g., outdated vocab exercises)
+      await exerciseDao.clearAllExercises();
+
+      await exerciseDao.insertAllExercises(
+        exerciseData
+            .map((row) => ExercisesCompanion.insert(
+                  id: (row['id'] ?? '').toString(),
+                  type: (row['type'] ?? '').toString(),
+                  question: (row['question'] ?? '').toString(),
+                  optionsJson: jsonEncode(
+                    (row['options'] as List<dynamic>? ?? const <dynamic>[])
+                        .map((e) => e.toString())
+                        .toList(),
+                  ),
+                  correctAnswer: (row['correctAnswer'] as num?)?.toInt() ?? 0,
+                  topic: (row['topic'] ?? '').toString(),
+                  level: (row['level'] ?? '').toString(),
+                ))
+            .toList(),
+      );
 
       await batch((b) {
-        b.insertAll(
-          exercises,
-          exerciseData.map((row) => ExercisesCompanion.insert(
-                id: (row['id'] ?? '').toString(),
-                type: (row['type'] ?? '').toString(),
-                question: (row['question'] ?? '').toString(),
-                optionsJson: jsonEncode(
-                  (row['options'] as List<dynamic>? ?? const <dynamic>[])
-                      .map((e) => e.toString())
-                      .toList(),
-                ),
-                correctAnswer: (row['correctAnswer'] as num?)?.toInt() ?? 0,
-                topic: (row['topic'] ?? '').toString(),
-                level: (row['level'] ?? '').toString(),
-              )),
-          mode: InsertMode.insertOrReplace,
-        );
-
         b.insertAll(
           achievements,
           achievementsData.map(
@@ -369,51 +470,166 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
         );
       });
 
-      // Grammar topics are upserted individually so we can preserve
-      // existing progress while updating metadata for existing topics.
+      // Grammar topics are upserted manually to preserve current progress stats (percentage).
       for (final row in grammarData) {
-        final id = (row['id'] ?? '').toString();
         final examplesJson = jsonEncode(
           (row['examples'] as List<dynamic>? ?? const <dynamic>[])
               .map((e) => e.toString())
               .toList(),
         );
-        await customStatement(
-          '''
-INSERT INTO grammar_topics (id, title, level, category, icon, rule, explanation, examples_json, progress)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)
-ON CONFLICT(id) DO UPDATE SET
-  title = excluded.title,
-  level = excluded.level,
-  category = excluded.category,
-  icon = excluded.icon,
-  rule = excluded.rule,
-  explanation = excluded.explanation,
-  examples_json = excluded.examples_json,
-  updated_at = (CAST(strftime('%s', 'now') AS INTEGER) * 1000)
-''',
-          [
-            id,
-            (row['title'] ?? '').toString(),
-            (row['level'] ?? '').toString(),
-            (row['category'] ?? '').toString(),
-            (row['icon'] ?? '').toString(),
-            (row['rule'] ?? '').toString(),
-            (row['explanation'] ?? '').toString(),
-            examplesJson,
-          ],
+        await grammarDao.upsertGrammarTopic(
+          id: (row['id'] ?? '').toString(),
+          title: (row['title'] ?? '').toString(),
+          level: (row['level'] ?? '').toString(),
+          category: (row['category'] ?? '').toString(),
+          icon: (row['icon'] ?? '').toString(),
+          rule: (row['rule'] ?? '').toString(),
+          explanation: (row['explanation'] ?? '').toString(),
+          examplesJson: examplesJson,
+        );
+      }
+
+      for (final row in dialoguesData) {
+        await into(dialogues).insertOnConflictUpdate(
+          DialoguesCompanion.insert(
+            id: row['id'].toString(),
+            title: row['title']?.toString() ?? '',
+            englishTitle: Value(row['english_title']?.toString() ?? ''),
+            description: Value(row['description']?.toString() ?? ''),
+            level: row['level']?.toString() ?? 'A1',
+            category: row['category']?.toString() ?? 'General',
+            icon: Value(row['icon']?.toString() ?? ''),
+            entriesJson: jsonEncode(row['messages'] ?? []),
+          ),
         );
       }
     });
+
+    await _markVocabularyContentCurrent();
   }
 
-  /// Deletes all user progress and resets the app to a fresh state.
-  ///
-  /// This keeps the grammar topics and vocabulary words but resets
-  /// scores, XP, and mastered status.
+  Future<bool> _isVocabularyContentOutdated() async {
+    final row = await (select(syncMetadata)
+          ..where((t) => t.id.equals(_vocabularySyncMetadataId)))
+        .getSingleOrNull();
+    return row?.lastSyncAt != _vocabularyContentStampDate();
+  }
+
+  Future<void> _markVocabularyContentCurrent() {
+    return into(syncMetadata).insertOnConflictUpdate(
+      SyncMetadataCompanion.insert(
+        id: _vocabularySyncMetadataId,
+        lastSyncAt: _vocabularyContentStampDate(),
+      ),
+    );
+  }
+
+  DateTime _vocabularyContentStampDate() {
+    var checksum = 17;
+    for (final codeUnit in ContentAssets.vocabularyContentStamp.codeUnits) {
+      checksum = ((checksum * 31) + codeUnit) & 0x7fffffff;
+    }
+    return DateTime.fromMillisecondsSinceEpoch(checksum, isUtc: true);
+  }
+
+  Future<void> _deleteStaleVocabularyContent(
+    List<Map<String, dynamic>> vocabulary,
+    List<Map<String, dynamic>> categoriesData,
+    List<Map<String, dynamic>> groupsData,
+  ) async {
+    final currentWordIds = vocabulary
+        .map((row) => (row['id'] ?? '').toString())
+        .where((id) => id.isNotEmpty)
+        .toSet();
+    final currentCategoryIds = categoriesData
+        .map((row) => (row['id'] ?? '').toString())
+        .where((id) => id.isNotEmpty)
+        .toSet();
+    final currentGroupIds = groupsData
+        .map((row) => (row['id'] ?? '').toString())
+        .where((id) => id.isNotEmpty)
+        .toSet();
+
+    final existingWordRows =
+        await (selectOnly(vocabularyWords)..addColumns([vocabularyWords.id]))
+            .get();
+    final staleWordIds = existingWordRows
+        .map((row) => row.read(vocabularyWords.id) ?? '')
+        .where((id) => id.isNotEmpty && !currentWordIds.contains(id))
+        .toList();
+    await _deleteWordIds(staleWordIds);
+
+    final existingPendingRows = await (selectOnly(vocabularyPendingCategories)
+          ..addColumns([vocabularyPendingCategories.id]))
+        .get();
+    final stalePendingIds = existingPendingRows
+        .map((row) => row.read(vocabularyPendingCategories.id) ?? '')
+        .where((id) => id.isNotEmpty && !currentCategoryIds.contains(id))
+        .toList();
+    await _deletePendingCategoryIds(stalePendingIds);
+
+    final existingCategoryRows = await (selectOnly(vocabularyCategories)
+          ..addColumns([vocabularyCategories.id]))
+        .get();
+    final staleCategoryIds = existingCategoryRows
+        .map((row) => row.read(vocabularyCategories.id) ?? '')
+        .where((id) => id.isNotEmpty && !currentCategoryIds.contains(id))
+        .toList();
+    await _deleteCategoryIds(staleCategoryIds);
+
+    final existingGroupRows =
+        await (selectOnly(vocabularyGroups)..addColumns([vocabularyGroups.id]))
+            .get();
+    final staleGroupIds = existingGroupRows
+        .map((row) => row.read(vocabularyGroups.id) ?? '')
+        .where((id) => id.isNotEmpty && !currentGroupIds.contains(id))
+        .toList();
+    await _deleteGroupIds(staleGroupIds);
+  }
+
+  Future<void> _deleteWordIds(List<String> ids) async {
+    for (final chunk in _chunk(ids, 200)) {
+      await (delete(vocabularyProgress)
+            ..where((t) => t.wordId.isIn(chunk)))
+          .go();
+      await (delete(vocabularyWords)..where((t) => t.id.isIn(chunk))).go();
+    }
+  }
+
+  Future<void> _deletePendingCategoryIds(List<String> ids) async {
+    for (final chunk in _chunk(ids, 200)) {
+      await (delete(vocabularyPendingCategories)
+            ..where((t) => t.id.isIn(chunk)))
+          .go();
+    }
+  }
+
+  Future<void> _deleteCategoryIds(List<String> ids) async {
+    for (final chunk in _chunk(ids, 200)) {
+      await (delete(vocabularyCategories)..where((t) => t.id.isIn(chunk))).go();
+    }
+  }
+
+  Future<void> _deleteGroupIds(List<String> ids) async {
+    for (final chunk in _chunk(ids, 200)) {
+      await (delete(vocabularyGroups)..where((t) => t.id.isIn(chunk))).go();
+    }
+  }
+
+  Iterable<List<String>> _chunk(List<String> values, int size) sync* {
+    if (values.isEmpty) {
+      return;
+    }
+
+    for (var i = 0; i < values.length; i += size) {
+      final end = (i + size < values.length) ? i + size : values.length;
+      yield values.sublist(i, end);
+    }
+  }
+
+  /// Destructive reset that clears user stats, progress, and attempts while keeping content.
   Future<void> resetAllUserProgress() async {
     await transaction(() async {
-      // 1. Reset UserStats
       await (update(userStats)..where((t) => t.id.equals(1))).write(
         const UserStatsCompanion(
           xp: Value(0),
@@ -427,478 +643,65 @@ ON CONFLICT(id) DO UPDATE SET
         ),
       );
 
-      // 2. Reset all grammar progress
       await (update(grammarTopics)).write(
         const GrammarTopicsCompanion(progress: Value(0)),
       );
 
-      // 3. Clear exercise attempts
       await delete(exerciseAttempts).go();
-
-      // 4. Clear vocabulary progress
       await delete(vocabularyProgress).go();
-
-      // 5. Clear achievement progress (optional, but requested 'start fresh')
       await (update(achievements)).write(
         const AchievementsCompanion(unlocked: Value(false)),
       );
     });
   }
 
-  Future<void> _upsertVocabularyGroups(List<Map<String, dynamic>> rows) async {
-    for (final row in rows) {
-      await customStatement(
-        '''
-INSERT INTO vocabulary_groups (id, name, level_range, sort_order)
-VALUES (?, ?, ?, ?)
-ON CONFLICT(id) DO UPDATE SET
-  name = excluded.name,
-  level_range = excluded.level_range,
-  sort_order = excluded.sort_order
-''',
-        [
-          (row['id'] ?? '').toString(),
-          (row['name'] ?? '').toString(),
-          (row['levelRange'] ?? '').toString(),
-          (row['sortOrder'] as num?)?.toInt() ?? 0,
-        ],
-      );
-    }
-  }
-
-  Future<void> _upsertVocabularyCategories(
-    List<Map<String, dynamic>> rows, {
-    bool isCached = true,
-  }) async {
-    for (final row in rows) {
-      await customStatement(
-        '''
-INSERT INTO vocabulary_categories (id, group_id, name, icon, gradient_colors_json, sort_order, is_cached)
-VALUES (?, ?, ?, ?, ?, ?, ?)
-ON CONFLICT(id) DO UPDATE SET
-  group_id = excluded.group_id,
-  name = excluded.name,
-  icon = excluded.icon,
-  gradient_colors_json = excluded.gradient_colors_json,
-  sort_order = excluded.sort_order,
-  is_cached = excluded.is_cached
-''',
-        [
-          (row['id'] ?? '').toString(),
-          (row['groupId'] ?? '').toString(),
-          (row['name'] ?? '').toString(),
-          (row['icon'] ?? '').toString(),
-          jsonEncode(row['colors'] ?? []),
-          (row['sortOrder'] as num?)?.toInt() ?? 0,
-          isCached ? 1 : 0,
-        ],
-      );
-    }
-  }
-
-  String _mapLegacyCategory(String category, String tag) {
-    switch (category) {
-      case 'Unternehmensführung':
-        return 'Company';
-      case 'Meetings':
-        return 'Meetings';
-      case 'Akademischer Diskurs':
-        return 'University';
-      case 'Abstrakte Konzepte':
-        return 'Opinions & Arguments';
-      case 'Bildung':
-        return 'School';
-      case 'Bildung & Schule':
-        switch (tag) {
-          case 'University':
-            return 'University';
-          case 'Exams':
-            return 'Exams & Homework';
-          default:
-            return 'School';
-        }
-      case 'Bewerbung':
-        return 'Application & Career';
-      case 'Finanzen':
-        return 'Finance & Accounting';
-      case 'Marketing & Vertrieb':
-        return 'Marketing & Sales';
-      case 'Personalwesen':
-        return 'Human Resources';
-      case 'Visa & Behörden':
-        return 'Authorities & Visa';
-      case 'IT & Technologie':
-      case 'IT & Technik':
-        return 'Software & App';
-      case 'Telekommunikation':
-        return 'Software & App';
-      case 'Berufe':
-        return 'Application & Career';
-      case 'Gesundheit':
-        return 'Doctor & Pharmacy';
-      case 'Alltag & Basics':
-        return 'Greetings';
-      case 'Office':
-        return 'Office & Tasks';
-      default:
-        return category;
-    }
-  }
-
-  Future<void> _migrateLegacyCategories(AppDatabase db) async {
-    final mapping = {
-      'Unternehmensführung': 'Company',
-      'Meetings': 'Meetings',
-      'Verträge': 'Contracts',
-      'Vertrage': 'Contracts',
-      'Akademischer Diskurs': 'University',
-      'Abstrakte Konzepte': 'Opinions & Arguments',
-      'Bildung': 'School',
-      'Bildung & Schule': 'School',
-      'Bewerbung': 'Application & Career',
-      'Finanzen': 'Finance & Accounting',
-      'Marketing & Vertrieb': 'Marketing & Sales',
-      'Personalwesen': 'Human Resources',
-      'Visa & Behörden': 'Authorities & Visa',
-      'IT & Technologie': 'Software & App',
-      'IT & Technik': 'Software & App',
-      'Telekommunikation': 'Software & App',
-      'Berufe': 'Application & Career',
-      'Gesundheit': 'Doctor & Pharmacy',
-      'Alltag & Basics': 'Greetings',
-      'Office': 'Office & Tasks',
-      'Verträge & Recht': 'Government & Law',
-    };
-
-    for (final entry in mapping.entries) {
-      await db.customStatement(
-        'UPDATE vocabulary_words SET category = ? WHERE category = ?',
-        [entry.value, entry.key],
-      );
-    }
-  }
-
-  Future<void> _upsertVocabularyContent(List<Map<String, dynamic>> rows) async {
-    for (final row in rows) {
-      final category = (row['category'] ?? '').toString();
-      final tag = (row['tag'] ?? '').toString();
-      final mappedCategory = _mapLegacyCategory(category, tag);
-
-      await customStatement(
-        '''
-INSERT INTO vocabulary_words (
-  id,
-  german,
-  english,
-  dari,
-  category,
-  tag,
-  example,
-  context,
-  context_dari,
-  difficulty,
-  is_favorite,
-  is_difficult,
-  level
-)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-ON CONFLICT(id) DO UPDATE SET
-  german = excluded.german,
-  english = excluded.english,
-  dari = excluded.dari,
-  category = excluded.category,
-  tag = excluded.tag,
-  example = excluded.example,
-  context = excluded.context,
-  context_dari = excluded.context_dari,
-  difficulty = excluded.difficulty,
-  level = excluded.level,
-  updated_at = (CAST(strftime('%s', 'now') AS INTEGER) * 1000)
-''',
-        [
-          (row['id'] ?? '').toString(),
-          (row['german'] ?? '').toString(),
-          (row['english'] ?? '').toString(),
-          (row['dari'] ?? '').toString(),
-          mappedCategory,
-          (row['tag'] ?? '').toString(),
-          (row['example'] ?? '').toString(),
-          (row['context'] ?? '').toString(),
-          (row['contextDari'] ?? '').toString(),
-          (row['difficulty'] ?? 'medium').toString(),
-          ((row['isFavorite'] as bool?) ?? false) ? 1 : 0,
-          ((row['isDifficult'] as bool?) ?? false) ? 1 : 0,
-          (row['level'] ?? 'A1').toString(),
-        ],
-      );
-    }
-  }
-
-  Future<void> _normalizeLegacyDateTimeStorage() async {
-    // Legacy rows may contain text timestamps; DateTime columns expect epoch millis.
-    await customStatement('''
-UPDATE vocabulary_words
-SET updated_at = (CAST(strftime('%s', updated_at) AS INTEGER) * 1000)
-WHERE typeof(updated_at) = 'text'
-''');
-  }
-
-  /// Updates the learning progress for a specific grammar topic.
-  Future<void> updateGrammarProgress(String topicId, int progress) {
-    return transaction(() async {
-      await (update(grammarTopics)..where((t) => t.id.equals(topicId))).write(
-        GrammarTopicsCompanion(
-          progress: Value(progress),
-          updatedAt: Value(DateTime.now()),
-        ),
-      );
-      await _refreshGrammarCompletionStats();
-    });
-  }
-
-  /// Marks a word as a "favorite" or removes the favorite mark.
-  Future<void> toggleFavorite(String wordId) async {
-    await transaction(() async {
-      final word = await (select(vocabularyWords)
-            ..where((t) => t.id.equals(wordId)))
-          .getSingleOrNull();
-      if (word != null) {
-        await (update(vocabularyWords)..where((t) => t.id.equals(wordId)))
-            .write(
-          VocabularyWordsCompanion(
-            isFavorite: Value(!word.isFavorite),
-            updatedAt: Value(DateTime.now()),
-          ),
-        );
-      }
-    });
-  }
-
-  /// Sets how difficult a word is for the user (e.g., 'easy', 'hard').
-  Future<void> setWordDifficulty(String wordId, String difficulty) {
-    final normalizedDifficulty = difficulty.toLowerCase();
-    return (update(vocabularyWords)..where((t) => t.id.equals(wordId))).write(
-      VocabularyWordsCompanion(
-        difficulty: Value(normalizedDifficulty),
-        isDifficult: Value(normalizedDifficulty == 'hard' ||
-            normalizedDifficulty == 'difficult'),
-        updatedAt: Value(DateTime.now()),
-      ),
-    );
-  }
-
-  /// Saves the result of a vocabulary practice session.
-  ///
-  /// It calculates when the word should be reviewed next.
-  Future<void> recordVocabularyReview({
-    required String wordId,
-    required ReviewResult result,
-  }) async {
-    await transaction(() async {
-      final current = await (select(vocabularyProgress)
-            ..where((t) => t.wordId.equals(wordId)))
-          .getSingleOrNull();
-
-      final now = DateTime.now();
-      final update = calculateReviewUpdate(
-        result: result,
-        now: now,
-        current: current == null
-            ? null
-            : ReviewSnapshot(
-                leitnerBox: current.leitnerBox,
-                reviewCount: current.reviewCount,
-                lapseCount: current.lapseCount,
-              ),
-      );
-
-      await into(vocabularyProgress).insertOnConflictUpdate(
-        VocabularyProgressCompanion.insert(
-          wordId: wordId,
-          leitnerBox: Value(update.leitnerBox),
-          status: Value(update.status.value),
-          lastResult: Value(update.lastResult.value),
-          reviewCount: Value(update.reviewCount),
-          lapseCount: Value(update.lapseCount),
-          lastReviewedAt: Value(update.lastReviewedAt),
-          nextReviewAt: Value(update.nextReviewAt),
-          masteredAt: Value(update.masteredAt),
-          updatedAt: Value(now),
-        ),
-      );
-    });
-  }
-
-  /// Changes the app theme to dark mode or light mode.
-  Future<void> setDarkMode(bool value) {
-    return (update(userPreferences)..where((t) => t.id.equals(1))).write(
-      UserPreferencesCompanion(
-        darkMode: Value(value),
-        updatedAt: Value(DateTime.now()),
-      ),
-    );
-  }
-
-  /// Sets whether the app should automatically sync cloud content.
-  Future<void> setAutoSync(bool value) {
-    return (update(userPreferences)..where((t) => t.id.equals(1))).write(
-      UserPreferencesCompanion(
-        autoSync: Value(value),
-        updatedAt: Value(DateTime.now()),
-      ),
-    );
-  }
-
+  /// Explicitly triggers a content re-seed from local asset files.
   Future<void> reseedContent() async {
     await _seedInitialData();
   }
 
-  Future<int> _completedGrammarTopicCount() async {
-    final rows = await (select(grammarTopics)
-          ..where((t) => t.progress.equals(100)))
-        .get();
-    return rows.length;
-  }
+  /// Patch for SQLite versions that don't support modern DateTime formats.
+  /// Converts any accidental ISO string dates in existing columns to millisecond integers.
+  Future<void> _normalizeLegacyDateTimeStorage() async {
+    final dateColumns = {
+      'user_stats': ['updated_at'],
+      'user_preferences': ['updated_at'],
+      'vocabulary_words': ['updated_at'],
+      'vocabulary_progress': [
+        'last_reviewed_at',
+        'next_review_at',
+        'mastered_at',
+        'updated_at'
+      ],
+      'grammar_topics': ['updated_at'],
+      'grammar_details': ['updated_at'],
+      'exercises': ['updated_at'],
+      'exercise_attempts': ['answered_at'],
+      'achievements': ['unlocked_at', 'updated_at'],
+    };
 
-  Future<void> _refreshGrammarCompletionStats() async {
-    await (update(userStats)..where((t) => t.id.equals(1))).write(
-      UserStatsCompanion(
-        grammarTopicsCompleted: Value(await _completedGrammarTopicCount()),
-        updatedAt: Value(DateTime.now()),
-      ),
-    );
-  }
-
-  Future<void> resetGrammarTopicExercises(String topicTitle) async {
     await transaction(() async {
-      final topicRow = await (select(grammarTopics)
-            ..where((t) => t.title.equals(topicTitle)))
-          .getSingleOrNull();
-      if (topicRow == null) return;
-
-      // Phase 2: Exact match only
-      await (delete(exerciseAttempts)..where((t) => t.topic.equals(topicTitle)))
-          .go();
-
-      await (update(grammarTopics)..where((t) => t.id.equals(topicRow.id)))
-          .write(
-        GrammarTopicsCompanion(
-          progress: const Value(0),
-          updatedAt: Value(DateTime.now()),
-        ),
-      );
-      await _refreshGrammarCompletionStats();
+      for (final table in dateColumns.keys) {
+        for (final column in dateColumns[table]!) {
+          try {
+            await customStatement('''
+              UPDATE $table 
+              SET $column = CAST(strftime('%s', $column) AS INTEGER) * 1000 
+              WHERE $column IS NOT NULL AND TYPEOF($column) = 'text' AND $column LIKE '20%';
+            ''');
+          } catch (e) {
+            // Log and ignore to prevent startup crashes. This usually means a column hasn't
+            // been added to the database yet, which is fine since the normalization
+            // will just skip it until it exists.
+            debugPrint('Failed to normalize $table.$column: $e');
+          }
+        }
+      }
     });
   }
 
-  /// Saves the result of a practice exercise.
-  ///
-  /// It updates the user's XP and checks if grammar progress has improved.
-  Future<void> recordExerciseOutcome({
-    required String exerciseId,
-    required bool isCorrect,
-    required int xpGained,
-  }) async {
-    final exerciseRow = await (select(exercises)
-          ..where((t) => t.id.equals(exerciseId)))
-        .getSingleOrNull();
-    if (exerciseRow == null) return;
-
-    final stats =
-        await (select(userStats)..where((t) => t.id.equals(1))).getSingle();
-
-    await (update(userStats)..where((t) => t.id.equals(1))).write(
-      UserStatsCompanion(
-        xp: Value(stats.xp + xpGained),
-        exercisesCompleted: Value(stats.exercisesCompleted + 1),
-        updatedAt: Value(DateTime.now()),
-      ),
-    );
-
-    await into(exerciseAttempts).insert(
-      ExerciseAttemptsCompanion.insert(
-        exerciseId: exerciseId,
-        topic: exerciseRow.topic,
-        level: exerciseRow.level,
-        isCorrect: isCorrect,
-        answeredAt: Value(DateTime.now()),
-      ),
-    );
-
-    if (isCorrect) {
-      await _syncGrammarCompletionForExercise(exerciseId);
-    }
-  }
-
-  Future<void> _syncGrammarCompletionForExercise(String exerciseId) async {
-    final attemptRef = await (select(exercises)
-          ..where((t) => t.id.equals(exerciseId)))
-        .getSingleOrNull();
-    if (attemptRef == null) return;
-
-    final topicTitle = attemptRef.topic;
-    if (topicTitle.isEmpty) return;
-
-    // Phase 2: Exact match only for reliability
-    final topic = await (select(grammarTopics)
-          ..where((t) => t.title.equals(topicTitle)))
-        .getSingleOrNull();
-
-    if (topic != null) {
-      final allLinkedExercises = await (select(exercises)
-            ..where((t) => t.topic.equals(topic.title)))
-          .get();
-      final linkedIds = allLinkedExercises.map((e) => e.id).toList();
-
-      if (linkedIds.isEmpty) return;
-
-      final correctAttempts = await (select(exerciseAttempts)
-            ..where(
-                (t) => t.exerciseId.isIn(linkedIds) & t.isCorrect.equals(true)))
-          .get();
-
-      final distinctCorrectIds =
-          correctAttempts.map((a) => a.exerciseId).toSet();
-      final progress = ((distinctCorrectIds.length / linkedIds.length) * 100)
-          .round()
-          .clamp(0, 100);
-
-      await (update(grammarTopics)..where((t) => t.id.equals(topic.id))).write(
-        GrammarTopicsCompanion(
-          progress: Value(progress),
-          updatedAt: Value(DateTime.now()),
-        ),
-      );
-
-      await _refreshGrammarCompletionStats();
-    }
-  }
-
-  int _getIsoWeek(DateTime date) {
-    // Week number according to ISO 8601
-    final dayOfYear = date.difference(DateTime(date.year, 1, 1)).inDays;
-    final woy = ((dayOfYear - date.weekday + 10) / 7).floor();
-    if (woy < 1) {
-      return _getIsoWeek(DateTime(date.year - 1, 12, 31));
-    }
-    if (woy > 52 && DateTime(date.year, 12, 31).weekday < 4) {
-      return 1;
-    }
-    return date.year * 100 + woy;
-  }
-
+  /// Gracefully shuts down the database connection and frees resources.
   Future<void> disposeDatabase() async {
     await close();
-  }
-
-  Future<File> debugDatabaseFile() async {
-    final base = await getApplicationDocumentsDirectory();
-    return File(p.join(base.path, 'deutschlernen.sqlite'));
-  }
-
-  /// Remembers that the user has seen the "Quick Start" guide.
-  Future<void> markOnboardingAsSeen() async {
-    await (update(userPreferences)..where((t) => t.id.equals(1)))
-        .write(UserPreferencesCompanion(hasSeenOnboarding: const Value(true)));
   }
 }

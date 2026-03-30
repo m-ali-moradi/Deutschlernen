@@ -1,0 +1,186 @@
+{
+    "topic": "Subjektive Modalverben",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "c1_g50_1",
+            "type": "multiple-choice",
+            "question": "Er ___ (mit hoher Wahrscheinlichkeit) noch im Büro sein.",
+            "options": [
+                "dürfte",
+                "kann",
+                "will",
+                "soll"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g50_2",
+            "type": "multiple-choice",
+            "question": "Sie ___ (sicher) den Zug verpasst haben.",
+            "options": [
+                "muss",
+                "mag",
+                "soll",
+                "kann"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g50_3",
+            "type": "multiple-choice",
+            "question": "Er ___ ein reicher Mann sein. (Gerücht, andere sagen das)",
+            "options": [
+                "will",
+                "darf",
+                "muss",
+                "soll"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_g50_4",
+            "type": "multiple-choice",
+            "question": "Er ___ unbedingt im Lotto gewonnen haben. (Behauptung von sich selbst)",
+            "options": [
+                "will",
+                "soll",
+                "mag",
+                "muss"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g50_5",
+            "type": "multiple-choice",
+            "question": "Das ___ zwar wahr sein, aber ich kann es kaum glauben.",
+            "options": [
+                "mag",
+                "darf",
+                "muss",
+                "soll"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_g50_6",
+            "type": "multiple-choice",
+            "question": "Sie ___ laut Bericht den Vertrag bereits gestern unterzeichnet haben.",
+            "options": [
+                "will",
+                "soll",
+                "darf",
+                "muss"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_subjektive_modalverben_7",
+            "type": "multiple-choice",
+            "question": "Er ___ ein sehr gutes Auto gekauft haben. (Gerücht)",
+            "options": [
+                "muss",
+                "mag",
+                "will",
+                "soll"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_subjektive_modalverben_8",
+            "type": "multiple-choice",
+            "question": "Sie ___ angeblich sehr reich sein.",
+            "options": [
+                "soll",
+                "muss",
+                "will",
+                "kann"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_subjektive_modalverben_9",
+            "type": "multiple-choice",
+            "question": "Er ___ das Buch selbst geschrieben haben. (Er behauptet das)",
+            "options": [
+                "will",
+                "mag",
+                "soll",
+                "muss"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_subjektive_modalverben_10",
+            "type": "multiple-choice",
+            "question": "Sie ___ nächste Woche heiraten. (Man sagt das)",
+            "options": [
+                "wollen",
+                "können",
+                "sollen",
+                "müssen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_subjektive_modalverben_11",
+            "type": "multiple-choice",
+            "question": "Er ___ den Fehler nicht bemerkt haben. (Starke Vermutung)",
+            "options": [
+                "will",
+                "mag",
+                "soll",
+                "muss"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_subjektive_modalverben_12",
+            "type": "multiple-choice",
+            "question": "Sie ___ das vergessen haben. (Möglichkeit)",
+            "options": [
+                "könnte",
+                "soll",
+                "will",
+                "muss"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_subjektive_modalverben_13",
+            "type": "multiple-choice",
+            "question": "Das ___ ein Witz sein! (Fassungslosigkeit, starke Gewissheit)",
+            "options": [
+                "muss",
+                "mag",
+                "soll",
+                "will"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_subjektive_modalverben_14",
+            "type": "multiple-choice",
+            "question": "Er ___ den ganzen Tag geschlafen haben. (Das behauptet er)",
+            "options": [
+                "soll",
+                "mag",
+                "muss",
+                "will"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_subjektive_modalverben_15",
+            "type": "multiple-choice",
+            "question": "Das ___ wahr sein, aber ich glaube es nicht.",
+            "options": [
+                "soll",
+                "mag",
+                "muss",
+                "will"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

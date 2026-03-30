@@ -1,0 +1,186 @@
+{
+    "topic": "Reflexive Verben",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g22_1",
+            "type": "multiple-choice",
+            "question": "Ich freue ___ auf das Wochenende.",
+            "options": [
+                "dich",
+                "mich",
+                "mir",
+                "sich"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g22_2",
+            "type": "multiple-choice",
+            "question": "Er wäscht ___ die Hände.",
+            "options": [
+                "dir",
+                "mich",
+                "ihm",
+                "sich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g22_3",
+            "type": "multiple-choice",
+            "question": "Wir treffen ___ um 8 Uhr.",
+            "options": [
+                "mich",
+                "uns",
+                "sich",
+                "euch"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g22_4",
+            "type": "multiple-choice",
+            "question": "Ich muss ___ jetzt wirklich beeilen.",
+            "options": [
+                "sich",
+                "dich",
+                "mir",
+                "mich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g22_5",
+            "type": "multiple-choice",
+            "question": "Setzt ___ bitte schnell hin!",
+            "options": [
+                "sich",
+                "uns",
+                "dich",
+                "euch"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g22_6",
+            "type": "multiple-choice",
+            "question": "Interessierst du ___ eigentlich für Politik?",
+            "options": [
+                "dich",
+                "dir",
+                "sich",
+                "mich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_reflexive_verben_7",
+            "type": "multiple-choice",
+            "question": "Ich wasche ___ die Hände.",
+            "options": [
+                "mich",
+                "mir",
+                "dich",
+                "dir"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_reflexive_verben_8",
+            "type": "multiple-choice",
+            "question": "Er wäscht ___ jeden Morgen.",
+            "options": [
+                "ihn",
+                "dir",
+                "ihm",
+                "sich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_reflexive_verben_9",
+            "type": "multiple-choice",
+            "question": "Wir freuen ___ auf den Urlaub.",
+            "options": [
+                "uns",
+                "sich",
+                "euch",
+                "wir"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_reflexive_verben_10",
+            "type": "multiple-choice",
+            "question": "Interessierst du ___ für Politik?",
+            "options": [
+                "dich",
+                "sich",
+                "dir",
+                "mich"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_reflexive_verben_11",
+            "type": "multiple-choice",
+            "question": "Ich kann ___ das nicht vorstellen.",
+            "options": [
+                "dich",
+                "mir",
+                "dir",
+                "mich"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_reflexive_verben_12",
+            "type": "multiple-choice",
+            "question": "Bitte setzen Sie ___.",
+            "options": [
+                "Ihnen",
+                "uns",
+                "Sie",
+                "sich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_reflexive_verben_13",
+            "type": "multiple-choice",
+            "question": "Ihr müsst ___ beeilen!",
+            "options": [
+                "ihr",
+                "uns",
+                "euch",
+                "sich"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_reflexive_verben_14",
+            "type": "multiple-choice",
+            "question": "Sie hat ___ erkältet.",
+            "options": [
+                "uns",
+                "sie",
+                "ihr",
+                "sich"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_reflexive_verben_15",
+            "type": "multiple-choice",
+            "question": "Kaufst du ___ ein neues Auto?",
+            "options": [
+                "dir",
+                "mich",
+                "dich",
+                "mir"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

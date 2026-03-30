@@ -1,0 +1,219 @@
+﻿{
+    "id":  "g56",
+    "title":  "Imperativ",
+    "level":  "A1",
+    "category":  "Verben",
+    "icon":  "📢",
+    "rule":  "du: Stamm(+e), ihr: Stamm+t, Sie: Infinitiv + Sie.",
+    "explanation":  "The imperative is used for commands, requests, and instructions. German has three imperative forms: informal singular (du), informal plural (ihr), and formal (Sie).",
+    "examples":  [
+                     "Komm bitte her! (du)",
+                     "Macht eure Hausaufgaben! (ihr)",
+                     "Nehmen Sie bitte Platz! (Sie)",
+                     "Sei ruhig! (du)"
+                 ],
+    "detail":  {
+                   "id":  "g56",
+                   "subtitle":  "Verben · Befehle",
+                   "emoji":  "📢",
+                   "gradient":  [
+                                    "#F97316",
+                                    "#EA580C"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Der Imperativ · Commands \u0026 Requests",
+                                        "text":  "The imperative mood is used for commands, requests, instructions, and advice. German has three imperative forms depending on whom you are addressing.",
+                                        "bullets":  [
+                                                        "du-Form (informal singular): verb stem (+e optional)",
+                                                        "ihr-Form (informal plural): stem + t",
+                                                        "Sie-Form (formal): infinitive + Sie"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Imperativ-Bildung",
+                                        "headers":  [
+                                                        "Person",
+                                                        "Formel",
+                                                        "Beispiel (kommen)"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "du",
+                                                         "Stamm (+e)",
+                                                         "Komm(e)!"
+                                                     ],
+                                                     [
+                                                         "ihr",
+                                                         "Stamm + t",
+                                                         "Kommt!"
+                                                     ],
+                                                     [
+                                                         "Sie",
+                                                         "Infinitiv + Sie",
+                                                         "Kommen Sie!"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Regelmäßige Verben",
+                                        "headers":  [
+                                                        "Verb",
+                                                        "du",
+                                                        "ihr",
+                                                        "Sie"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "machen",
+                                                         "Mach!",
+                                                         "Macht!",
+                                                         "Machen Sie!"
+                                                     ],
+                                                     [
+                                                         "lernen",
+                                                         "Lern(e)!",
+                                                         "Lernt!",
+                                                         "Lernen Sie!"
+                                                     ],
+                                                     [
+                                                         "öffnen",
+                                                         "Öffne!",
+                                                         "Öffnet!",
+                                                         "Öffnen Sie!"
+                                                     ],
+                                                     [
+                                                         "warten",
+                                                         "Warte!",
+                                                         "Wartet!",
+                                                         "Warten Sie!"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Unregelmäßige Verben",
+                                        "headers":  [
+                                                        "Verb",
+                                                        "du",
+                                                        "ihr",
+                                                        "Sie"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "sein",
+                                                         "Sei!",
+                                                         "Seid!",
+                                                         "Seien Sie!"
+                                                     ],
+                                                     [
+                                                         "haben",
+                                                         "Hab(e)!",
+                                                         "Habt!",
+                                                         "Haben Sie!"
+                                                     ],
+                                                     [
+                                                         "werden",
+                                                         "Werde!",
+                                                         "Werdet!",
+                                                         "Werden Sie!"
+                                                     ],
+                                                     [
+                                                         "geben",
+                                                         "Gib!",
+                                                         "Gebt!",
+                                                         "Geben Sie!"
+                                                     ],
+                                                     [
+                                                         "nehmen",
+                                                         "Nimm!",
+                                                         "Nehmt!",
+                                                         "Nehmen Sie!"
+                                                     ],
+                                                     [
+                                                         "lesen",
+                                                         "Lies!",
+                                                         "Lest!",
+                                                         "Lesen Sie!"
+                                                     ],
+                                                     [
+                                                         "fahren",
+                                                         "Fahr(e)!",
+                                                         "Fahrt!",
+                                                         "Fahren Sie!"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Verbs with e→i/ie stem change keep the change in du-form: geben → Gib! lesen → Lies! But a→ä verbs do NOT change: fahren → Fahr! (not Fähr!)",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Im Alltag",
+                                        "color":  "orange",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Komm bitte her!",
+                                                          "en":  "Come here, please! (du)"
+                                                      },
+                                                      {
+                                                          "de":  "Macht eure Hausaufgaben!",
+                                                          "en":  "Do your homework! (ihr)"
+                                                      },
+                                                      {
+                                                          "de":  "Nehmen Sie bitte Platz!",
+                                                          "en":  "Please take a seat! (Sie)"
+                                                      },
+                                                      {
+                                                          "de":  "Sei ruhig!",
+                                                          "en":  "Be quiet! (du)"
+                                                      },
+                                                      {
+                                                          "de":  "Gib mir das Buch!",
+                                                          "en":  "Give me the book! (du)"
+                                                      },
+                                                      {
+                                                          "de":  "Lest den Text!",
+                                                          "en":  "Read the text! (ihr)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "transform",
+                                        "title":  "Trennbare Verben im Imperativ",
+                                        "from":  {
+                                                     "label":  "INFINITIV",
+                                                     "text":  "aufstehen (to get up)"
+                                                 },
+                                        "to":  {
+                                                   "label":  "IMPERATIV",
+                                                   "text":  "Steh auf! / Steht auf!"
+                                               },
+                                        "note":  "The prefix goes to the end, just like in Präsens"
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Soften commands with \u0027bitte\u0027, \u0027doch\u0027, or \u0027mal\u0027: \u0027Komm doch mal vorbei!\u0027 sounds much friendlier than \u0027Komm!\u0027",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "du-Form: verb stem (+ optional -e): Komm! Lern(e)! Öffne!",
+                                                      "Verbs with e→i/ie change keep it: Gib! Lies! Nimm! (but NOT a→ä)",
+                                                      "ihr-Form: same as normal ihr conjugation minus \u0027ihr\u0027: Kommt! Lernt!",
+                                                      "Sie-Form: infinitive + Sie: Kommen Sie! Lernen Sie!",
+                                                      "Separable verbs: prefix goes to end: Steh auf! Mach zu!"
+                                                  ]
+                                    }
+                                ]
+               }
+}

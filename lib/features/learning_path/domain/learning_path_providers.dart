@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../core/database/database_providers.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
 import 'dashboard_logic.dart';
 import '../data/models/learning_path_models.dart';
 
@@ -22,3 +22,6 @@ final learningPathProvider = Provider<AsyncValue<LearningPathState>>((ref) {
     error: (e, s) => AsyncValue.error(e, s),
   );
 });
+
+
+

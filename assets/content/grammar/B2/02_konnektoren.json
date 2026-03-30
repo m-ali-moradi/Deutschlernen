@@ -1,0 +1,97 @@
+﻿{
+    "id":  "g36",
+    "title":  "Konnektoren",
+    "level":  "B2",
+    "category":  "Satzbau",
+    "icon":  "🔗",
+    "rule":  "allerdings, dennoch, hingegen, folglich, somit, außerdem.",
+    "explanation":  "Sophisticated adverbial connectors for argumentation: contrast (allerdings, dennoch), consequence (folglich, somit), addition (außerdem).",
+    "examples":  [
+                     "Die Preise sind gestiegen; allerdings sind die Löhne gleich geblieben.",
+                     "Dennoch gingen wir spazieren.",
+                     "Folglich steigen auch die Preise."
+                 ],
+    "detail":  {
+                   "id":  "g36",
+                   "subtitle":  "Konnektoren \u0026 Textverknüpfung",
+                   "emoji":  "🧲",
+                   "gradient":  [
+                                    "#3B82F6",
+                                    "#6366F1"
+                                ],
+                   "levelBg":  "#FEF3C7",
+                   "levelText":  "#B45309",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Textverknüpfung · Text Cohesion",
+                                        "text":  "Connectors structure arguments and create cohesion. They express contrast, consequence, or addition."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Wichtige Konnektoren",
+                                        "color":  "blue",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "allerdings",
+                                                         "right":  "however, though"
+                                                     },
+                                                     {
+                                                         "left":  "dennoch",
+                                                         "right":  "nevertheless, still"
+                                                     },
+                                                     {
+                                                         "left":  "hingegen",
+                                                         "right":  "on the other hand"
+                                                     },
+                                                     {
+                                                         "left":  "folglich",
+                                                         "right":  "consequently, therefore"
+                                                     },
+                                                     {
+                                                         "left":  "somit",
+                                                         "right":  "thus, therefore"
+                                                     },
+                                                     {
+                                                         "left":  "außerdem",
+                                                         "right":  "furthermore, besides"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "indigo",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Er hat viel gelernt; dennoch fiel die Prüfung schwer.",
+                                                          "en":  "He studied a lot; nevertheless, the exam was hard."
+                                                      },
+                                                      {
+                                                          "de":  "Die Zahlen steigen, folglich investieren wir mehr.",
+                                                          "en":  "The numbers rise, consequently we invest more."
+                                                      },
+                                                      {
+                                                          "de":  "Sie ist klug; außerdem ist sie sehr fleißig.",
+                                                          "en":  "She is clever; furthermore, she is very diligent."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "These connectors take Position 1 in a sentence → they cause inversion: \u0027Dennoch GEHT er.\u0027 (not: \u0027Dennoch er geht.\u0027)",
+                                        "variant":  "warning"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "Connectors taking Position 1 cause inversion.",
+                                                      "allerdings/jedoch = restriction. dennoch/trotzdem = concession.",
+                                                      "folglich/somit = consequence. außerdem/zudem = addition.",
+                                                      "hindegen/dagegen = contrast."
+                                                  ]
+                                    }
+                                ]
+               }
+}

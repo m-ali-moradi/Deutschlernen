@@ -1,20 +1,38 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/shared/widgets/premium_card.dart';
+
+import 'package:deutschmate_mobile/core/learning/review_logic.dart';
 
 class DifficultyDot extends StatelessWidget {
-  const DifficultyDot(this.difficulty, {super.key});
-  final String difficulty;
+  const DifficultyDot(this.result, {super.key});
+  final ReviewResult? result;
+
   @override
   Widget build(BuildContext context) {
-    final color = difficulty == 'easy'
-        ? const Color(0xFF22C55E)
-        : difficulty == 'hard'
-            ? const Color(0xFFEF4444)
-            : const Color(0xFFF59E0B);
+    // Hard = Red, Medium = Orange, Easy = Green. New = Grayish.
+    final color = switch (result) {
+      ReviewResult.hard => const Color(0xFFEF4444),
+      ReviewResult.medium => const Color(0xFFF59E0B),
+      ReviewResult.easy => const Color(0xFF22C55E),
+      null => Colors.grey.withValues(alpha: 0.5),
+    };
+
     return Container(
-        width: 8,
-        height: 8,
-        decoration: BoxDecoration(color: color, shape: BoxShape.circle));
+      width: 10,
+      height: 10,
+      decoration: BoxDecoration(
+        color: color,
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(
+            color: color.withValues(alpha: 0.4),
+            blurRadius: 6,
+            spreadRadius: 1,
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -25,38 +43,36 @@ class DetailCard extends StatelessWidget {
     required this.title,
     required this.child,
   });
-  
+
   final Color cardColor;
   final String title;
   final Widget child;
-  
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      width: double.infinity,
+    return PremiumCard(
+      useGlass: true,
+      blur: 2,
+      borderOpacity: isDark ? 0.08 : 0.04,
+      shadowOpacity: isDark ? 0.1 : 0.02,
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: cardColor,
-        borderRadius: BorderRadius.circular(18),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
-              blurRadius: 8,
-              offset: const Offset(0, 2))
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title.toUpperCase(),
+            style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 0.8,
+              color: AppTokens.textMuted(isDark).withValues(alpha: 0.7),
+            ),
+          ),
+          const SizedBox(height: 8),
+          child,
         ],
       ),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(title,
-            style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w600,
-                color: isDark
-                    ? const Color(0xFF94A3B8)
-                    : const Color(0xFF6B7280))),
-        const SizedBox(height: 6),
-        child,
-      ]),
     );
   }
 }
@@ -80,16 +96,18 @@ class ListHeading extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
+            fontSize: 18,
+            fontWeight: FontWeight.w800,
+            letterSpacing: -0.5,
             color: AppTokens.textPrimary(isDark),
           ),
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: 2),
         Text(
           subtitle,
           style: TextStyle(
-            fontSize: 12,
+            fontSize: 13,
+            fontWeight: FontWeight.w500,
             color: AppTokens.textMuted(isDark),
           ),
         ),
@@ -117,17 +135,24 @@ class MetaPill extends StatelessWidget {
     final chip = Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
-        color: dark ? const Color(0xFF1E3A5F) : const Color(0xFFEFF6FF),
-        borderRadius: BorderRadius.circular(999),
+        color: AppTokens.primary(dark).withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+          color: AppTokens.primary(dark).withValues(alpha: 0.15),
+        ),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 12, color: const Color(0xFF2563EB)),
+          Icon(icon, size: 14, color: AppTokens.primary(dark)),
           const SizedBox(width: 6),
           Text(
             label,
-            style: const TextStyle(fontSize: 11, color: Color(0xFF2563EB)),
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+              color: AppTokens.primary(dark),
+            ),
           ),
         ],
       ),
@@ -137,7 +162,11 @@ class MetaPill extends StatelessWidget {
       return chip;
     }
 
-    return GestureDetector(onTap: onTap, child: chip);
+    return GestureDetector(
+      onTap: onTap,
+      behavior: HitTestBehavior.opaque,
+      child: chip,
+    );
   }
 }
 
@@ -148,43 +177,60 @@ class FloatingFlashcardsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(18),
-        child: Ink(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF3B82F6), Color(0xFF9333EA)],
-            ),
-            borderRadius: BorderRadius.circular(18),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF3B82F6).withValues(alpha: 0.3),
-                blurRadius: 16,
-                offset: const Offset(0, 8),
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return PremiumCard(
+      padding: EdgeInsets.zero,
+      borderRadius: BorderRadius.circular(20),
+      useGlass: true,
+      blur: 8,
+      borderOpacity: 0.2,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(20),
+          child: Ink(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  AppTokens.primary(isDark),
+                  const Color(0xFF9333EA),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
-            ],
-          ),
-          child: const Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(Icons.style_rounded, size: 16, color: Colors.white),
-              SizedBox(width: 8),
-              Text(
-                'Flashcards',
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: AppTokens.primary(isDark).withValues(alpha: 0.4),
+                  blurRadius: 20,
+                  offset: const Offset(0, 8),
                 ),
-              ),
-            ],
+              ],
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.style_rounded, size: 18, color: Colors.white),
+                SizedBox(width: 10),
+                Text(
+                  'Flashcards',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.2,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+
+

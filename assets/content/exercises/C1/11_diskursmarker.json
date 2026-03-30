@@ -1,0 +1,191 @@
+{
+    "topic": "Diskursmarker",
+    "level": "C1",
+    "exercises": [
+        {
+            "id": "ex_fb_c1_6",
+            "type": "fill-blank",
+            "question": "Zusammenfassend lässt sich ___ , dass...",
+            "options": [
+                "sagend",
+                "sagen",
+                "sagte",
+                "gesagt"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "ex_so_c1_3",
+            "type": "sentence-order",
+            "question": "Zusammenfassend lässt sich sagen, dass die Studie erfolgreich war.",
+            "options": [
+                "dass",
+                "die",
+                "Studie",
+                "erfolgreich",
+                "war",
+                "Zusammenfassend",
+                "lässt",
+                "sich",
+                "sagen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_3",
+            "type": "multiple-choice",
+            "question": "Zusammenfassend lässt sich ___...",
+            "options": [
+                "sagen",
+                "geben",
+                "tun",
+                "machen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_4",
+            "type": "multiple-choice",
+            "question": "Außerdem möchte ich ___...",
+            "options": [
+                "machen",
+                "hinzufügen",
+                "tun",
+                "geben"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_diskursmarker_5",
+            "type": "multiple-choice",
+            "question": "Das ist ___ wahr, aber...",
+            "options": [
+                "zwar",
+                "denn",
+                "ja",
+                "wohl"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_6",
+            "type": "multiple-choice",
+            "question": "Im Gegensatz ___ ...",
+            "options": [
+                "dafür",
+                "dazu",
+                "daran",
+                "darauf"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "c1_diskursmarker_7",
+            "type": "multiple-choice",
+            "question": "Darüber ___...",
+            "options": [
+                "heraus",
+                "herein",
+                "hinein",
+                "hinaus"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_diskursmarker_8",
+            "type": "multiple-choice",
+            "question": "Abgesehen ___...",
+            "options": [
+                "dafür",
+                "daran",
+                "darauf",
+                "davon"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "c1_diskursmarker_9",
+            "type": "multiple-choice",
+            "question": "Was das ___, so...",
+            "options": [
+                "trifft",
+                "geht",
+                "betrifft",
+                "läuft"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_diskursmarker_10",
+            "type": "multiple-choice",
+            "question": "Auf der einen Seite..., auf der ___...",
+            "options": [
+                "anderen",
+                "nächsten",
+                "letzten",
+                "zweiten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_11",
+            "type": "multiple-choice",
+            "question": "Wie bereits ___, ...",
+            "options": [
+                "erwähnt",
+                "getan",
+                "gemacht",
+                "gesagt"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_12",
+            "type": "multiple-choice",
+            "question": "In Bezug ___...",
+            "options": [
+                "auf",
+                "über",
+                "für",
+                "an"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_13",
+            "type": "multiple-choice",
+            "question": "Es steht außer ___, dass...",
+            "options": [
+                "Wort",
+                "Zweifel",
+                "Frage",
+                "Antwort"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "c1_diskursmarker_14",
+            "type": "multiple-choice",
+            "question": "Ich bin der ___, dass...",
+            "options": [
+                "Meinung",
+                "Aussage",
+                "Denke",
+                "Ansicht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "c1_diskursmarker_15",
+            "type": "multiple-choice",
+            "question": "Es lässt sich nicht ___, dass...",
+            "options": [
+                "machen",
+                "sagen",
+                "lügen",
+                "leugnen"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

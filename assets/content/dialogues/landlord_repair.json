@@ -1,0 +1,116 @@
+{
+    "id": "landlord_repair",
+    "title": "Den Vermieter anrufen",
+    "english_title": "Calling the Landlord",
+    "level": "A2",
+    "category": "Wohnen",
+    "description": "Practice reporting a problem in your apartment, describing what is broken, and arranging a repair visit.",
+    "icon": "home_repair_service_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Guten Tag, hier spricht Herr Schneider.",
+            "english": "Good day, Mr. Schneider speaking."
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Guten Tag, hier ist Laila Rahimi aus der Gartenstrasse 12.",
+            "english": "Good day, this is Laila Rahimi from Gartenstrasse 12."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Ja, Frau Rahimi. Was ist passiert?",
+            "english": "Yes, Mrs. Rahimi. What happened?"
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Die Heizung im Wohnzimmer funktioniert seit gestern nicht mehr.",
+            "english": "The heating in the living room has not been working since yesterday."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Wird der Heizkoerper gar nicht warm?",
+            "english": "Does the radiator not get warm at all?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, er bleibt ganz kalt.",
+            "english": "No, it stays completely cold."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Haben Sie das Thermostat schon ueberprueft?",
+            "english": "Have you already checked the thermostat?"
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, aber es aendert sich nichts.",
+            "english": "Yes, but nothing changes."
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Dann schicke ich morgen einen Handwerker vorbei.",
+            "english": "Then I will send a repair person tomorrow."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Sehr gut. Um welche Uhrzeit kommt er?",
+            "english": "Very good. At what time will he come?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Zwischen neun und elf Uhr.",
+            "english": "Between nine and eleven o'clock."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ich bin um zehn Uhr zu Hause. Soll ich noch etwas vorbereiten?",
+            "english": "I am at home at ten o'clock. Should I prepare anything else?"
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Nein, das ist nicht noetig. Bitte sorgen Sie nur fuer freien Zugang zur Heizung.",
+            "english": "No, that is not necessary. Please just make sure there is clear access to the radiator."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Alles klar. Vielen Dank fuer Ihre schnelle Hilfe.",
+            "english": "All right. Thank you very much for your quick help."
+        },
+        {
+            "id": 15,
+            "sender": "left",
+            "role": "Vermieter",
+            "german": "Gern geschehen. Auf Wiederhoeren.",
+            "english": "You are welcome. Goodbye on the phone."
+        }
+    ]
+}

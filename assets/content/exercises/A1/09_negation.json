@@ -1,0 +1,186 @@
+{
+    "topic": "Negation",
+    "level": "A1",
+    "exercises": [
+        {
+            "id": "a1_g38_1",
+            "type": "multiple-choice",
+            "question": "Das ist ___ Auto.",
+            "options": [
+                "kein",
+                "keine",
+                "nicht",
+                "keinen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g38_2",
+            "type": "multiple-choice",
+            "question": "Ich bin ___ müde.",
+            "options": [
+                "keine",
+                "nicht",
+                "kein",
+                "nichts"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_g38_3",
+            "type": "multiple-choice",
+            "question": "Er hat ___ Zeit.",
+            "options": [
+                "kein",
+                "nicht",
+                "keine",
+                "nichts"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_g38_4",
+            "type": "multiple-choice",
+            "question": "Ich verstehe diesen Satz ___.",
+            "options": [
+                "kein",
+                "keine",
+                "nichts",
+                "nicht"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_g38_5",
+            "type": "multiple-choice",
+            "question": "Er hat im Moment ___ Geld.",
+            "options": [
+                "kein",
+                "nichts",
+                "nicht",
+                "keine"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_g38_6",
+            "type": "multiple-choice",
+            "question": "Das ist absolut ___ Problem.",
+            "options": [
+                "keine",
+                "nicht",
+                "nichts",
+                "kein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_negation_7",
+            "type": "multiple-choice",
+            "question": "Das ist ___ Auto.",
+            "options": [
+                "nichts",
+                "nicht",
+                "keine",
+                "kein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_negation_8",
+            "type": "multiple-choice",
+            "question": "Ich komme ___ aus Spanien.",
+            "options": [
+                "keinen",
+                "kein",
+                "nicht",
+                "keine"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_negation_9",
+            "type": "multiple-choice",
+            "question": "Er hat ___ Zeit.",
+            "options": [
+                "nicht",
+                "keine",
+                "kein",
+                "keinen"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a1_negation_10",
+            "type": "multiple-choice",
+            "question": "Wir kennen diesen Mann ___.",
+            "options": [
+                "nicht",
+                "keine",
+                "kein",
+                "nichts"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_negation_11",
+            "type": "multiple-choice",
+            "question": "Ich esse das Obst ___.",
+            "options": [
+                "nicht",
+                "nichts",
+                "kein",
+                "keine"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a1_negation_12",
+            "type": "multiple-choice",
+            "question": "Hier gibt es ___ Problem.",
+            "options": [
+                "nicht",
+                "keinen",
+                "keine",
+                "kein"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_negation_13",
+            "type": "multiple-choice",
+            "question": "Er arbeitet heute ___.",
+            "options": [
+                "keine",
+                "kein",
+                "nichts",
+                "nicht"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a1_negation_14",
+            "type": "multiple-choice",
+            "question": "Das sind ___ Äpfel.",
+            "options": [
+                "keinen",
+                "nicht",
+                "keine",
+                "kein"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a1_negation_15",
+            "type": "multiple-choice",
+            "question": "Das Buch ist ___ interessant.",
+            "options": [
+                "keine",
+                "nicht",
+                "kein",
+                "nichts"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

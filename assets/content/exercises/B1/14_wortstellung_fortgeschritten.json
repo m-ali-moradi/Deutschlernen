@@ -1,0 +1,186 @@
+{
+    "topic": "Wortstellung (Fortgeschritten)",
+    "level": "B1",
+    "exercises": [
+        {
+            "id": "b1_g44_1",
+            "type": "multiple-choice",
+            "question": "Welcher Satz ist richtig (TeKaMoLo)?",
+            "options": [
+                "Ich fahre morgen schnell nach Berlin wegen der Arbeit.",
+                "Ich fahre schnell morgen wegen der Arbeit nach Berlin.",
+                "Ich fahre morgen wegen der Arbeit schnell nach Berlin.",
+                "Ich fahre nach Berlin morgen schnell wegen der Arbeit."
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g44_2",
+            "type": "multiple-choice",
+            "question": "Er ist ___.",
+            "options": [
+                "mit dem Zug heute nach Hamburg gefahren",
+                "mit dem Zug nach Hamburg heute gefahren",
+                "heute mit dem Zug nach Hamburg gefahren",
+                "nach Hamburg heute mit dem Zug gefahren"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g44_3",
+            "type": "multiple-choice",
+            "question": "Sie hat ___ geweint.",
+            "options": [
+                "bitterlich aus Trauer gestern",
+                "gestern aus Trauer bitterlich",
+                "gestern bitterlich aus Trauer",
+                "aus Trauer bitterlich gestern"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_g44_4",
+            "type": "multiple-choice",
+            "question": "Ich habe ___ gearbeitet (TeKaMoLo).",
+            "options": [
+                "fleißig heute wegen des Termins im Büro",
+                "heute im Büro fleißig wegen des Termins",
+                "heute wegen des Termins fleißig im Büro",
+                "wegen des Termins heute fleißig im Büro"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g44_5",
+            "type": "multiple-choice",
+            "question": "Er ist ___ (TeKaMoLo).",
+            "options": [
+                "aus Neugier gestern heimlich ins Haus gegangen",
+                "heimlich gestern aus Neugier ins Haus gegangen",
+                "gestern aus Neugier heimlich ins Haus gegangen",
+                "gestern ins Haus heimlich aus Neugier gegangen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_g44_6",
+            "type": "multiple-choice",
+            "question": "Wir sind ___ (TeKaMoLo).",
+            "options": [
+                "letzten Sonntag zum Spaß schnell nach Köln gefahren",
+                "schnell letzten Sonntag zum Spaß nach Köln gefahren",
+                "zum Spaß letzten Sonntag schnell nach Köln gefahren",
+                "letzten Sonntag schnell zum Spaß nach Köln gefahren"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_7",
+            "type": "multiple-choice",
+            "question": "Ich gebe (1) ___ ___.",
+            "options": [
+                "das Buch dem Mann",
+                "dem Mann das Buch",
+                "dem Buch das Mann",
+                "das Mann dem Buch"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_8",
+            "type": "multiple-choice",
+            "question": "Er kauft (1) ___ ___.",
+            "options": [
+                "einem Eis seiner Tochter",
+                "ein Eis seiner Tochter",
+                "seiner Tochter ein Eis",
+                "seine Tochter einem Eis"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_9",
+            "type": "multiple-choice",
+            "question": "Ich schenke ___ (es - akk) ___ (ihm - dat).",
+            "options": [
+                "es ihm",
+                "ihm es",
+                "ihn es",
+                "es ihn"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_10",
+            "type": "multiple-choice",
+            "question": "Wir haben (gestern) (im Park) ___ Fußball gespielt.",
+            "options": [
+                "gestern Fußball im Park",
+                "Fußball im Park gestern",
+                "im Park gestern",
+                "gestern im Park"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_11",
+            "type": "multiple-choice",
+            "question": "Gestern ___ ich ins Kino gegangen.",
+            "options": [
+                "gegangen",
+                "ich",
+                "ich bin",
+                "bin"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_12",
+            "type": "multiple-choice",
+            "question": "___ hat er heute keine Zeit.",
+            "options": [
+                "Leider er",
+                "Heute leider",
+                "Er leider",
+                "Leider"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_13",
+            "type": "multiple-choice",
+            "question": "Ich habe ___ ___.",
+            "options": [
+                "ihr vorgestellt ihn",
+                "ihr ihn vorgestellt",
+                "ihn ihr vorgestellt",
+                "vorgestellt ihn ihr"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_14",
+            "type": "multiple-choice",
+            "question": "Obwohl er krank war, ___ er zur Arbeit.",
+            "options": [
+                "er ging",
+                "ist gegangen",
+                "ging",
+                "er ist gegangen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b1_wortstellung_fortgeschritten_15",
+            "type": "multiple-choice",
+            "question": "Ich danke ___ ___ für die Einladung.",
+            "options": [
+                "herzlich ihnen",
+                "für ihnen herzlich",
+                "herzlich für ihnen",
+                "ihnen herzlich"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

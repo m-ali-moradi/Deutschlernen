@@ -1,0 +1,186 @@
+{
+    "topic": "Wortbildung",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_new_wortb_1",
+            "type": "multiple-choice",
+            "question": "Welchen Artikel hat das Wort 'Wohnung'?",
+            "options": [
+                "das",
+                "der",
+                "den",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_2",
+            "type": "multiple-choice",
+            "question": "Welchen Artikel hat das Wort 'Mädchen'?",
+            "options": [
+                "dem",
+                "der",
+                "das",
+                "die"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_wortb_3",
+            "type": "multiple-choice",
+            "question": "Welches Wort ist richtig zusammengesetzt? (Haus + Tür)",
+            "options": [
+                "das Haustür",
+                "die Hauses Tür",
+                "der Haustür",
+                "die Haustür"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_4",
+            "type": "multiple-choice",
+            "question": "Das Wort 'Schlafzimmer' hat welchen Artikel? (Zimmer = das)",
+            "options": [
+                "der",
+                "die",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_wortb_5",
+            "type": "multiple-choice",
+            "question": "Welche Endung haben Nomen immer mit dem Artikel 'die'?",
+            "options": [
+                "-chen",
+                "-er",
+                "-ismus",
+                "-ung"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_6",
+            "type": "multiple-choice",
+            "question": "Ein Wort mit der Endung '-chen' (z.B. Brötchen) ist immer...",
+            "options": [
+                "männlich (der)",
+                "im Plural (die)",
+                "weiblich (die)",
+                "sächlich (das)"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_7",
+            "type": "multiple-choice",
+            "question": "Welches Wort ist richtig? (Apfel + Saft)",
+            "options": [
+                "die Apfelsaft",
+                "das Apfelsaft",
+                "der Apfelsaft",
+                "der Apfelesaft"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_wortb_8",
+            "type": "multiple-choice",
+            "question": "Wie nennt man ein Wort mit der Endung '-keit', z.B. 'Möglichkeit'?",
+            "options": [
+                "das Möglichkeit",
+                "den Möglichkeit",
+                "die Möglichkeit",
+                "der Möglichkeit"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_wortb_9",
+            "type": "fill-blank",
+            "question": "Ich trinke gern einen ___ . (Orange + Saft)",
+            "options": [
+                "Orangensaft",
+                "Orangen Saft",
+                "Orangesaft",
+                "Orange Saft"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_new_wortb_10",
+            "type": "multiple-choice",
+            "question": "Welchen Artikel hat 'Krankheit'?",
+            "options": [
+                "das",
+                "den",
+                "die",
+                "der"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_wortb_11",
+            "type": "multiple-choice",
+            "question": "Welchen Artikel hat 'Bäcker'?",
+            "options": [
+                "das",
+                "die",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_12",
+            "type": "fill-blank",
+            "question": "Das ist unsere neue ___ . (Waschen + Maschine)",
+            "options": [
+                "Wäschemaschine",
+                "Wasch Maschine",
+                "Waschenmaschine",
+                "Waschmaschine"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_13",
+            "type": "multiple-choice",
+            "question": "Aus welchen Wörtern besteht 'Regenschirm'?",
+            "options": [
+                "Regene + Schirm",
+                "Regen + s + Schirm",
+                "Regen + Schirm",
+                "Regnen + Schirm"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_new_wortb_14",
+            "type": "multiple-choice",
+            "question": "Welcher Artikel passt zu 'Universitätsbibliothek'?",
+            "options": [
+                "das (von Bibliothek)",
+                "der (von Bibliothek)",
+                "die (von Universität)",
+                "die (von Bibliothek)"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_new_wortb_15",
+            "type": "multiple-choice",
+            "question": "Was bestimmt den Artikel bei zusammengesetzten Nomen?",
+            "options": [
+                "Das letzte Wort",
+                "Das erste Wort",
+                "Der Klang des Wortes",
+                "Die Länge des Wortes"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

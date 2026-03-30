@@ -1,0 +1,186 @@
+{
+    "topic": "RelativsÃ¤tze (Grundlagen)",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g18_1",
+            "type": "multiple-choice",
+            "question": "Der Mann, ___ da steht, ist mein Bruder.",
+            "options": [
+                "den",
+                "dem",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g18_2",
+            "type": "multiple-choice",
+            "question": "Die Frau, ___ ich kenne, wohnt hier.",
+            "options": [
+                "die",
+                "den",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g18_3",
+            "type": "multiple-choice",
+            "question": "Das Buch, ___ ich lese, ist super.",
+            "options": [
+                "die",
+                "der",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g18_4",
+            "type": "multiple-choice",
+            "question": "Das Kind, ___ dort spielt, ist meine Nichte.",
+            "options": [
+                "den",
+                "die",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_g18_5",
+            "type": "multiple-choice",
+            "question": "Die Leute, ___ wir gestern trafen, waren freundlich.",
+            "options": [
+                "den",
+                "die",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g18_6",
+            "type": "multiple-choice",
+            "question": "Wo ist der Hund, ___ so laut bellt?",
+            "options": [
+                "dem",
+                "den",
+                "das",
+                "der"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_7",
+            "type": "multiple-choice",
+            "question": "Das ist der Mann, ___ hier arbeitet.",
+            "options": [
+                "der",
+                "den",
+                "dem",
+                "das"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_8",
+            "type": "multiple-choice",
+            "question": "Das ist die Frau, ___ ich gestern gesehen habe.",
+            "options": [
+                "die",
+                "das",
+                "dem",
+                "der"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_9",
+            "type": "multiple-choice",
+            "question": "Ist das das Buch, ___ du suchst?",
+            "options": [
+                "dem",
+                "das",
+                "den",
+                "der"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_10",
+            "type": "multiple-choice",
+            "question": "Wo sind die Kinder, ___ draußen spielen?",
+            "options": [
+                "den",
+                "die",
+                "der",
+                "das"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_11",
+            "type": "multiple-choice",
+            "question": "Der Pullover, ___ er trägt, ist neu.",
+            "options": [
+                "der",
+                "dem",
+                "das",
+                "den"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_12",
+            "type": "multiple-choice",
+            "question": "Die Schuhe, ___ ich gekauft habe, sind teuer.",
+            "options": [
+                "das",
+                "den",
+                "der",
+                "die"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_13",
+            "type": "multiple-choice",
+            "question": "Das ist das Haus, in ___ er wohnt.",
+            "options": [
+                "den",
+                "der",
+                "das",
+                "dem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_14",
+            "type": "multiple-choice",
+            "question": "Der Freund, mit ___ ich fahre, heißt Tom.",
+            "options": [
+                "den",
+                "der",
+                "das",
+                "dem"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_relativsaetze_grundlagen_15",
+            "type": "multiple-choice",
+            "question": "Die Tasche, ___ hier steht, ist von Maria.",
+            "options": [
+                "das",
+                "die",
+                "der",
+                "den"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}

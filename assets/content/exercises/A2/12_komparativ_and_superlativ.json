@@ -1,0 +1,186 @@
+{
+    "topic": "Komparativ & Superlativ",
+    "level": "A2",
+    "exercises": [
+        {
+            "id": "a2_g21_1",
+            "type": "multiple-choice",
+            "question": "Ein Elefant ist ___ als eine Maus.",
+            "options": [
+                "großer",
+                "am größten",
+                "groß",
+                "große"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_g21_2",
+            "type": "multiple-choice",
+            "question": "Dieses Buch ist ___ am besten.",
+            "options": [
+                "gut",
+                "beste",
+                "besser",
+                "am besten"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g21_3",
+            "type": "multiple-choice",
+            "question": "Ich trinke Tee, aber Kaffee trinke ich ___.",
+            "options": [
+                "mehr",
+                "lieber",
+                "gern",
+                "am liebsten"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_g21_4",
+            "type": "multiple-choice",
+            "question": "Heute ist es viel ___ als gestern.",
+            "options": [
+                "warm",
+                "warme",
+                "am wärmsten",
+                "wärmer"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g21_5",
+            "type": "multiple-choice",
+            "question": "Das ist das ___ Haus in der ganzen Stadt.",
+            "options": [
+                "alte",
+                "älter",
+                "am ältesten",
+                "älteste"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_g21_6",
+            "type": "multiple-choice",
+            "question": "Die Grammatik ist ___ als ich dachte.",
+            "options": [
+                "am schwersten",
+                "schwere",
+                "schwerer",
+                "schwer"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_7",
+            "type": "multiple-choice",
+            "question": "Ein Auto ist ___ als ein Fahrrad.",
+            "options": [
+                "schnelles",
+                "schnell",
+                "schneller",
+                "am schnellsten"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_8",
+            "type": "multiple-choice",
+            "question": "Er spricht ___ (gut) Deutsch als ich.",
+            "options": [
+                "besser",
+                "gut",
+                "guter",
+                "am besten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_9",
+            "type": "multiple-choice",
+            "question": "Wer ist am ___ (groß) in deiner Familie?",
+            "options": [
+                "groß",
+                "größten",
+                "größer",
+                "großersten"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_10",
+            "type": "multiple-choice",
+            "question": "Ich trinke gern Tee, aber Kaffee trinke ich ___.",
+            "options": [
+                "am liebsten",
+                "gern",
+                "gerner",
+                "lieber"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_11",
+            "type": "multiple-choice",
+            "question": "Am ___ (gern) trinke ich Wasser.",
+            "options": [
+                "gernsten",
+                "gern",
+                "liebsten",
+                "lieber"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_12",
+            "type": "multiple-choice",
+            "question": "Dieser Koffer ist ___ (schwer) als deiner.",
+            "options": [
+                "schwer",
+                "schwers",
+                "schwerer",
+                "am schwersten"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_13",
+            "type": "multiple-choice",
+            "question": "Das ist das ___ (teuer) Hotel in der Stadt.",
+            "options": [
+                "teuerste",
+                "teuere",
+                "teurer",
+                "am teuersten"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_14",
+            "type": "multiple-choice",
+            "question": "Heute ist es ___ (kalt) als gestern.",
+            "options": [
+                "kälter",
+                "am kältesten",
+                "kalt",
+                "kälteste"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "a2_komparativ_and_superlativ_15",
+            "type": "multiple-choice",
+            "question": "Mein Bruder ist so ___ (alt) wie ich.",
+            "options": [
+                "alt",
+                "am ältesten",
+                "älter",
+                "alte"
+            ],
+            "correctAnswer": 0
+        }
+    ]
+}

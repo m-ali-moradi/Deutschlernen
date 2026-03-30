@@ -1,42 +1,44 @@
 /// A standalone header widget for the vocabulary screen.
-/// 
+///
 /// Responsibilities:
 /// - Displays the screen title and subtitle.
 /// - Provides a back navigation button.
 /// - Provides a filter button to open the groups/categories filter sheet.
 /// - Displays and manages a horizontal tab selector (Words, Phrases, Favorites).
-/// 
+///
 /// This widget uses Riverpod to watch its required state (like active tabs and
 /// filter groups) so the parent screen doesn't need to pass many arguments.
+library;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../../core/theme/app_tokens.dart';
-import '../../../../core/database/database_providers.dart';
-import '../../../../core/content/sync/sync_service.dart';
-import '../../../../shared/localization/app_ui_text.dart';
-import '../../../grammar/presentation/widgets/grammar_widgets.dart'; // For GrammarIconButton
-import '../../domain/vocabulary_providers.dart';
-import 'vocabulary_group_filter_sheet.dart';
+import 'package:deutschmate_mobile/core/theme/app_tokens.dart';
+import 'package:deutschmate_mobile/core/database/database_providers.dart';
+import 'package:deutschmate_mobile/shared/localization/app_ui_text.dart';
+import 'package:deutschmate_mobile/features/grammar/presentation/widgets/grammar_widgets.dart'; // For GrammarIconButton
+import 'package:deutschmate_mobile/features/vocabulary/domain/vocabulary_providers.dart';
+import './vocabulary_group_filter_sheet.dart';
 
 /// A widget that displays the header section of the vocabulary screen.
 /// Includes the title, a back button, tab navigation, and a filter button.
 class VocabularyHeader extends ConsumerWidget {
   const VocabularyHeader({super.key});
 
-  static const List<String> _tabs = ['words', 'phrases', 'favorites'];
+  static const List<String> _tabs = ['words', 'hard_words', 'favorites'];
 
   /// Helper method to toggle a pinned group.
   /// Moved from the main screen to keep filter logic self-contained.
   void _togglePinnedGroup(WidgetRef ref, String? groupId) {
-    final categories = ref.read(vocabularyCategoriesStreamProvider).valueOrNull ?? [];
+    final categories =
+        ref.read(vocabularyCategoriesStreamProvider).valueOrNull ?? [];
     final selectedCategory = ref.read(vocabularySelectedCategoryProvider);
     String? selectedCategoryGroup;
-    
+
     if (selectedCategory != null) {
-      final match = categories.where((category) => category.id == selectedCategory).toList();
+      final match = categories
+          .where((category) => category.id == selectedCategory)
+          .toList();
       if (match.isNotEmpty) {
         selectedCategoryGroup = match.first.groupId;
       }
@@ -66,9 +68,11 @@ class VocabularyHeader extends ConsumerWidget {
   /// Displays the modal bottom sheet for filtering groups and categories.
   void _showGroupFilterSheet(BuildContext context, WidgetRef ref) {
     final groups = ref.read(vocabularyGroupsStreamProvider).valueOrNull ?? [];
-    final categories = ref.read(vocabularyCategoriesStreamProvider).valueOrNull ?? [];
-    final pendingCategories = ref.read(vocabularyPendingCategoriesStreamProvider).valueOrNull ?? [];
-    final allEntries = ref.read(hybridVocabularyProvider).valueOrNull ?? [];
+    final categories =
+        ref.read(vocabularyCategoriesStreamProvider).valueOrNull ?? [];
+    final pendingCategories =
+        ref.read(vocabularyPendingCategoriesStreamProvider).valueOrNull ?? [];
+    final allEntries = ref.read(localVocabularyEntriesProvider);
 
     showModalBottomSheet<void>(
       context: context,
@@ -92,85 +96,84 @@ class VocabularyHeader extends ConsumerWidget {
     final pinnedGroupIds = ref.watch(vocabularyPinnedGroupProvider);
 
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              // Back Button
-              GrammarIconButton(
-                icon: Icons.arrow_back_ios_new_rounded,
-                isDark: isDark,
-                onPressed: () {
-                  if (context.canPop()) {
-                    context.pop();
-                  } else {
-                    context.go('/');
-                  }
-                },
-              ),
-              const SizedBox(width: 10),
-              
               // Title and Subtitle
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      strings.either(german: 'Wortschatz', english: 'Vocabulary'),
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            color: isDark ? AppTokens.darkText : AppTokens.lightText,
-                          ),
+                      strings.either(
+                          german: 'Wortschatz', english: 'Vocabulary'),
+                      style: AppTokens.headingStyle(context, isDark),
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      strings.either(german: 'Wörter & Phrasen', english: 'Words & phrases'),
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: isDark ? AppTokens.darkTextMuted : AppTokens.lightTextMuted,
-                          ),
+                      strings.either(
+                          german: 'Wörter & Phrasen',
+                          english: 'Words & phrases'),
+                      style: AppTokens.subheadingStyle(context, isDark),
                     ),
                   ],
                 ),
               ),
-              
+
               // Filter Button
               GrammarIconButton(
-                icon: Icons.filter_alt_rounded,
-                isDark: isDark,
+                icon: Icons.filter_list_rounded,
                 active: pinnedGroupIds.isNotEmpty,
                 onPressed: () => _showGroupFilterSheet(context, ref),
               ),
             ],
           ),
-          const SizedBox(height: 16),
-          
-          // Tab Selector
+          const SizedBox(height: 24),
+
+          // Tab Selector (Modernized with Premium Styling)
           Container(
-            padding: const EdgeInsets.all(4),
+            padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-              borderRadius: BorderRadius.circular(12),
+              color: isDark 
+                  ? Colors.white.withValues(alpha: 0.03) 
+                  : Colors.black.withValues(alpha: 0.03),
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: isDark 
+                    ? Colors.white.withValues(alpha: 0.05) 
+                    : Colors.black.withValues(alpha: 0.05),
+              ),
             ),
             child: Row(
               children: _tabs.map((tabKey) {
                 final isSelected = tab == tabKey;
                 return Expanded(
                   child: GestureDetector(
-                    onTap: () => ref.read(vocabularyTabProvider.notifier).state = tabKey,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
+                    onTap: () => ref
+                        .read(vocabularyTabProvider.notifier)
+                        .state = tabKey,
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       decoration: BoxDecoration(
-                        color: isSelected
-                            ? (isDark ? const Color(0xFF334155) : Colors.white)
-                            : Colors.transparent,
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: isSelected && !isDark
+                        gradient: isSelected
+                            ? const LinearGradient(
+                                colors: AppTokens.gradientBluePurple,
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              )
+                            : null,
+                        borderRadius: BorderRadius.circular(14),
+                        boxShadow: isSelected
                             ? [
                                 BoxShadow(
-                                  color: Colors.black.withValues(alpha: 0.05),
-                                  blurRadius: 4,
-                                  offset: const Offset(0, 2),
+                                  color: AppTokens.gradientBluePurple.first
+                                      .withValues(alpha: 0.3),
+                                  blurRadius: 12,
+                                  offset: const Offset(0, 4),
                                 ),
                               ]
                             : null,
@@ -180,9 +183,10 @@ class VocabularyHeader extends ConsumerWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 13,
-                          fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                          fontWeight:
+                              isSelected ? FontWeight.w800 : FontWeight.w600,
                           color: isSelected
-                              ? AppTokens.textPrimary(isDark)
+                              ? Colors.white
                               : AppTokens.textMuted(isDark),
                         ),
                       ),
@@ -197,3 +201,6 @@ class VocabularyHeader extends ConsumerWidget {
     );
   }
 }
+
+
+

@@ -1,0 +1,175 @@
+﻿{
+    "id":  "g10",
+    "title":  "Nominativ \u0026 Akkusativ",
+    "level":  "A1",
+    "category":  "Fälle",
+    "icon":  "🎯",
+    "rule":  "Nominativ = Subjekt (WER?/WAS?), Akkusativ = direktes Objekt (WEN?/WAS?). Nur maskulin ändert sich: der→den.",
+    "explanation":  "German has four cases. At A1, focus on Nominativ (subject) and Akkusativ (direct object). Nominativ answers WER?/WAS?, Akkusativ answers WEN?/WAS?. Only masculine articles change in the Akkusativ: der→den, ein→einen.",
+    "examples":  [
+                     "Der Mann liest. (Nom)",
+                     "Ich sehe den Mann. (Akk)",
+                     "Sie kauft einen Tisch.",
+                     "Wir lesen das Buch."
+                 ],
+    "detail":  {
+                   "id":  "g10",
+                   "subtitle":  "Kasus · Fälle",
+                   "emoji":  "🎯",
+                   "gradient":  [
+                                    "#8B5CF6",
+                                    "#A855F7"
+                                ],
+                   "levelBg":  "#DCFCE7",
+                   "levelText":  "#16A34A",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Die vier Fälle · The Four Cases",
+                                        "text":  "German has four cases that change the form of articles, pronouns, and adjectives. Focus on Nominativ (subject) and Akkusativ (direct object) first.",
+                                        "bullets":  [
+                                                        "Nominativ = WER? (who?) → the subject",
+                                                        "Akkusativ = WEN? / WAS? → the direct object",
+                                                        "Dativ = WEM? (to whom?) → the indirect object",
+                                                        "Genitiv = WESSEN? (whose?) → possession"
+                                                    ]
+                                    },
+                                    {
+                                        "type":  "comparison",
+                                        "title":  "Artikel in Nominativ \u0026 Akkusativ",
+                                        "headers":  [
+                                                        "",
+                                                        "Nominativ",
+                                                        "Akkusativ"
+                                                    ],
+                                        "rows":  [
+                                                     [
+                                                         "Maskulin",
+                                                         "der / ein",
+                                                         "den / einen"
+                                                     ],
+                                                     [
+                                                         "Feminin",
+                                                         "die / eine",
+                                                         "die / eine"
+                                                     ],
+                                                     [
+                                                         "Neutrum",
+                                                         "das / ein",
+                                                         "das / ein"
+                                                     ],
+                                                     [
+                                                         "Plural",
+                                                         "die / –",
+                                                         "die / –"
+                                                     ]
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Only MASCULINE changes in the Akkusativ! der → den, ein → einen. Everything else stays the same.",
+                                        "variant":  "success"
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Nominativ (Subjekt)",
+                                        "color":  "violet",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Der Mann liest.",
+                                                          "en":  "The man reads. (WER liest?)"
+                                                      },
+                                                      {
+                                                          "de":  "Die Frau kocht.",
+                                                          "en":  "The woman cooks. (WER kocht?)"
+                                                      },
+                                                      {
+                                                          "de":  "Das Kind spielt.",
+                                                          "en":  "The child plays. (WER spielt?)"
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Akkusativ (Direktes Objekt)",
+                                        "color":  "purple",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Ich sehe den Mann.",
+                                                          "en":  "I see the man. (WEN sehe ich?)"
+                                                      },
+                                                      {
+                                                          "de":  "Sie kauft einen Tisch.",
+                                                          "en":  "She buys a table. (WAS kauft sie?)"
+                                                      },
+                                                      {
+                                                          "de":  "Wir lesen das Buch.",
+                                                          "en":  "We read the book. (WAS lesen wir?)"
+                                                      },
+                                                      {
+                                                          "de":  "Er hat keine Zeit.",
+                                                          "en":  "He has no time."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Wichtige Regeln",
+                                        "items":  [
+                                                      "Nominativ: answers WER? or WAS? — always the subject.",
+                                                      "Akkusativ: answers WEN? or WAS? — the direct object.",
+                                                      "Only masculine articles change: der→den, ein→einen, kein→keinen.",
+                                                      "Feminine, neuter, and plural stay the same in Akkusativ.",
+                                                      "Many verbs require Akkusativ: haben, sehen, kaufen, lesen, finden."
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Häufige Verben mit Akkusativ",
+                                        "color":  "fuchsia",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "haben",
+                                                         "right":  "to have"
+                                                     },
+                                                     {
+                                                         "left":  "brauchen",
+                                                         "right":  "to need"
+                                                     },
+                                                     {
+                                                         "left":  "sehen",
+                                                         "right":  "to see"
+                                                     },
+                                                     {
+                                                         "left":  "kaufen",
+                                                         "right":  "to buy"
+                                                     },
+                                                     {
+                                                         "left":  "lesen",
+                                                         "right":  "to read"
+                                                     },
+                                                     {
+                                                         "left":  "finden",
+                                                         "right":  "to find"
+                                                     },
+                                                     {
+                                                         "left":  "trinken",
+                                                         "right":  "to drink"
+                                                     },
+                                                     {
+                                                         "left":  "essen",
+                                                         "right":  "to eat"
+                                                     },
+                                                     {
+                                                         "left":  "kennen",
+                                                         "right":  "to know (a person)"
+                                                     },
+                                                     {
+                                                         "left":  "mögen",
+                                                         "right":  "to like"
+                                                     }
+                                                 ]
+                                    }
+                                ]
+               }
+}

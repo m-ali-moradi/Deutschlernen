@@ -1,0 +1,186 @@
+{
+    "topic": "Konjunktiv I",
+    "level": "B2",
+    "exercises": [
+        {
+            "id": "b2_g31_1",
+            "type": "multiple-choice",
+            "question": "Der Sprecher betonte, die Situation ___ ernst.",
+            "options": [
+                "wäre",
+                "ist",
+                "sind",
+                "sei"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_g31_2",
+            "type": "multiple-choice",
+            "question": "Er sagte, er ___ das Buch nicht gelesen.",
+            "options": [
+                "habe",
+                "hat",
+                "hatte",
+                "hätte"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g31_3",
+            "type": "multiple-choice",
+            "question": "Die Kanzlerin erklärte, man ___ neue Wege gehen.",
+            "options": [
+                "müsse",
+                "müsste",
+                "muss",
+                "müssen"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_g31_4",
+            "type": "multiple-choice",
+            "question": "Die Zeugen berichteten später, der Verdächtige ___ sofort geflohen.",
+            "options": [
+                "wäre",
+                "habe",
+                "sei",
+                "ist"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g31_5",
+            "type": "multiple-choice",
+            "question": "Sie behauptet steif und fest, sie ___ immer die Wahrheit gesagt.",
+            "options": [
+                "hat",
+                "hätte",
+                "habe",
+                "habet"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_g31_6",
+            "type": "multiple-choice",
+            "question": "In der gestrigen Zeitung stand, das Projekt ___ erfolgreich abgeschlossen.",
+            "options": [
+                "ist",
+                "sei",
+                "werde",
+                "wäre"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "id": "b2_konjunktiv_i_7",
+            "type": "multiple-choice",
+            "question": "Er sagt, er ___ nach Hause. / gehen",
+            "options": [
+                "gehe",
+                "gegangen ist",
+                "ginge",
+                "geht"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_konjunktiv_i_8",
+            "type": "multiple-choice",
+            "question": "Sie meint, sie ___ keine Zeit. / haben",
+            "options": [
+                "hätte",
+                "hat",
+                "habe",
+                "hatte"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_i_9",
+            "type": "multiple-choice",
+            "question": "Der Minister betont, das Projekt ___ wichtig. / sein",
+            "options": [
+                "war",
+                "wäre",
+                "ist",
+                "sei"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "id": "b2_konjunktiv_i_10",
+            "type": "multiple-choice",
+            "question": "Man sagt, er ___ sehr reich. / sein",
+            "options": [
+                "ist",
+                "war",
+                "sei",
+                "wäre"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_i_11",
+            "type": "multiple-choice",
+            "question": "Der Arzt sagte, ich ___ Tabletten nehmen. / sollen",
+            "options": [
+                "sollte",
+                "soll",
+                "solle",
+                "sollen"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_i_12",
+            "type": "multiple-choice",
+            "question": "Er behauptet, sie ___ den Vertrag unterschrieben. / haben",
+            "options": [
+                "hat",
+                "habt",
+                "habe",
+                "hätte"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_i_13",
+            "type": "multiple-choice",
+            "question": "Die Frau sagt, sie ___ das Auto gesehen. / haben",
+            "options": [
+                "hätte",
+                "hat",
+                "habe",
+                "habt"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "id": "b2_konjunktiv_i_14",
+            "type": "multiple-choice",
+            "question": "Sie erzählte, sie ___ in Paris gewesen. / sein",
+            "options": [
+                "sei",
+                "wäre",
+                "ist",
+                "war"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "id": "b2_konjunktiv_i_15",
+            "type": "multiple-choice",
+            "question": "Er berichtete, alles ___ gut verlaufen. / sein",
+            "options": [
+                "ist",
+                "war",
+                "sei",
+                "wäre"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

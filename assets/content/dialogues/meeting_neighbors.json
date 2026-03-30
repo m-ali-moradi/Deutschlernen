@@ -1,0 +1,109 @@
+{
+    "id": "meeting_neighbors",
+    "title": "Neue Nachbarn",
+    "english_title": "Meeting the Neighbors",
+    "level": "A1",
+    "category": "Soziale Kontakte",
+    "description": "Practice introducing yourself, making small talk with neighbors, and arranging a simple visit.",
+    "icon": "groups_rounded",
+    "messages": [
+        {
+            "id": 1,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Hallo. Sie sind neu hier, oder?",
+            "english": "Hello. You are new here, right?"
+        },
+        {
+            "id": 2,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Ja, genau. Ich bin gestern eingezogen.",
+            "english": "Yes, exactly. I moved in yesterday."
+        },
+        {
+            "id": 3,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Herzlich willkommen. Ich heisse Frau Becker.",
+            "english": "A warm welcome. My name is Mrs. Becker."
+        },
+        {
+            "id": 4,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Freut mich. Ich heisse Ahmad.",
+            "english": "Nice to meet you. My name is Ahmad."
+        },
+        {
+            "id": 5,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Kommen Sie aus Berlin?",
+            "english": "Are you from Berlin?"
+        },
+        {
+            "id": 6,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Nein, ich komme aus Herat, aber ich wohne jetzt in Deutschland.",
+            "english": "No, I come from Herat, but I live in Germany now."
+        },
+        {
+            "id": 7,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Wenn Sie Fragen zum Haus haben, koennen Sie mich gern fragen.",
+            "english": "If you have questions about the building, you are welcome to ask me."
+        },
+        {
+            "id": 8,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Das ist sehr nett. Wo ist der Waschraum?",
+            "english": "That is very kind. Where is the laundry room?"
+        },
+        {
+            "id": 9,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Im Keller, gleich neben dem Fahrradraum.",
+            "english": "In the basement, right next to the bicycle room."
+        },
+        {
+            "id": 10,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Danke. Haben Sie vielleicht am Wochenende Zeit fuer einen Kaffee?",
+            "english": "Thank you. Do you perhaps have time for a coffee at the weekend?"
+        },
+        {
+            "id": 11,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Ja, gern. Am Samstag am Nachmittag passt es gut.",
+            "english": "Yes, gladly. Saturday afternoon works well."
+        },
+        {
+            "id": 12,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Super. Dann komme ich gegen drei Uhr vorbei.",
+            "english": "Great. Then I will come by around three o'clock."
+        },
+        {
+            "id": 13,
+            "sender": "left",
+            "role": "Nachbarin",
+            "german": "Sehr schoen. Bis Samstag dann.",
+            "english": "Very nice. See you on Saturday then."
+        },
+        {
+            "id": 14,
+            "sender": "right",
+            "role": "Sie",
+            "german": "Bis Samstag. Vielen Dank.",
+            "english": "See you on Saturday. Thank you very much."
+        }
+    ]
+}

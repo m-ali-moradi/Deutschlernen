@@ -1,0 +1,133 @@
+﻿{
+    "id":  "g40",
+    "title":  "Verben mit Präpositionen",
+    "level":  "A2",
+    "category":  "Verben",
+    "icon":  "🔧",
+    "rule":  "Viele Verben haben feste Präpositionen: warten auf (Akk), sprechen über (Akk).",
+    "explanation":  "Many German verbs require a specific preposition with a fixed case. These must be memorized as a unit: sich freuen auf (Akk), Angst haben vor (Dat).",
+    "examples":  [
+                     "Ich warte auf den Bus.",
+                     "Sie denkt an ihre Familie.",
+                     "Er interessiert sich für Kunst.",
+                     "Wir sprechen über das Problem."
+                 ],
+    "detail":  {
+                   "id":  "g40",
+                   "subtitle":  "Verben · Feste Präpositionen",
+                   "emoji":  "🔧",
+                   "gradient":  [
+                                    "#22C55E",
+                                    "#16A34A"
+                                ],
+                   "levelBg":  "#EDE9FE",
+                   "levelText":  "#7C3AED",
+                   "sections":  [
+                                    {
+                                        "type":  "concept",
+                                        "title":  "Verben mit festen Präpositionen",
+                                        "text":  "Many German verbs require a fixed preposition that determines the case of the following noun phrase. These must be memorized."
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Verb + Akkusativ-Präposition",
+                                        "color":  "green",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "warten auf + Akk.",
+                                                         "right":  "to wait for"
+                                                     },
+                                                     {
+                                                         "left":  "sich freuen auf + Akk.",
+                                                         "right":  "to look forward to"
+                                                     },
+                                                     {
+                                                         "left":  "denken an + Akk.",
+                                                         "right":  "to think of"
+                                                     },
+                                                     {
+                                                         "left":  "glauben an + Akk.",
+                                                         "right":  "to believe in"
+                                                     },
+                                                     {
+                                                         "left":  "sich erinnern an + Akk.",
+                                                         "right":  "to remember"
+                                                     },
+                                                     {
+                                                         "left":  "sich interessieren für + Akk.",
+                                                         "right":  "to be interested in"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "conjugation",
+                                        "title":  "Weitere Verben + feste Präposition",
+                                        "color":  "emerald",
+                                        "rows":  [
+                                                     {
+                                                         "left":  "sprechen über + Akk.",
+                                                         "right":  "to talk about"
+                                                     },
+                                                     {
+                                                         "left":  "sich ärgern über + Akk.",
+                                                         "right":  "to be annoyed about"
+                                                     },
+                                                     {
+                                                         "left":  "abhängen von + Dat.",
+                                                         "right":  "to depend on"
+                                                     },
+                                                     {
+                                                         "left":  "träumen von + Dat.",
+                                                         "right":  "to dream of"
+                                                     },
+                                                     {
+                                                         "left":  "leiden an + Dat.",
+                                                         "right":  "to suffer from"
+                                                     },
+                                                     {
+                                                         "left":  "teilnehmen an + Dat.",
+                                                         "right":  "to participate in"
+                                                     }
+                                                 ]
+                                    },
+                                    {
+                                        "type":  "examples",
+                                        "title":  "Beispiele",
+                                        "color":  "green",
+                                        "items":  [
+                                                      {
+                                                          "de":  "Wir warten auf den Zug.",
+                                                          "en":  "We are waiting for the train."
+                                                      },
+                                                      {
+                                                          "de":  "Ich freue mich auf die Ferien.",
+                                                          "en":  "I look forward to the holidays."
+                                                      },
+                                                      {
+                                                          "de":  "Er träumt von einer Reise nach Japan.",
+                                                          "en":  "He dreams of a trip to Japan."
+                                                      },
+                                                      {
+                                                          "de":  "Das hängt von dem Wetter ab.",
+                                                          "en":  "That depends on the weather."
+                                                      }
+                                                  ]
+                                    },
+                                    {
+                                        "type":  "tip",
+                                        "text":  "Use \u0027da(r)-\u0027 before prepositions to refer to things: \u0027Worauf wartest du? — Darauf.\u0027 (on it) vs. \u0027Auf wen wartest du? — Auf ihn.\u0027 (on him, person).",
+                                        "variant":  "info"
+                                    },
+                                    {
+                                        "type":  "rules",
+                                        "title":  "Merke dir!",
+                                        "items":  [
+                                                      "The preposition is FIXED — it doesn\u0027t change with meaning.",
+                                                      "Refer to things with da(r)- compounds: darauf, davon, daran.",
+                                                      "Refer to people with normal prepositional phrases: auf ihn, von ihr.",
+                                                      "Ask for things with wo(r)-: Worauf wartest du?"
+                                                  ]
+                                    }
+                                ]
+               }
+}
