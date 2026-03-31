@@ -13,7 +13,8 @@ part 'vocabulary_dao.g.dart';
   VocabularyCategories,
   VocabularyPendingCategories,
 ])
-class VocabularyDao extends DatabaseAccessor<AppDatabase> with _$VocabularyDaoMixin {
+class VocabularyDao extends DatabaseAccessor<AppDatabase>
+    with _$VocabularyDaoMixin {
   VocabularyDao(super.db);
 
   /// Toggles the 'favorite' status for a specific vocabulary word.
@@ -283,5 +284,3 @@ ON CONFLICT(id) DO UPDATE SET
     });
   }
 }
-
-

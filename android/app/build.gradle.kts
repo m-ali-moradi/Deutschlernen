@@ -47,16 +47,23 @@ android {
         applicationId = "com.deutschmate.mobile"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdk = flutter.minSdkVersion // Explicitly set to match standard device compatibility
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        ndk {
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64"))
+        }
     }
 
     buildTypes {
         release {
             if (hasReleaseKeystore) {
                 signingConfig = signingConfigs.getByName("release")
+            } else {
+                // FALLBACK: Use the debug signing key so the APK is installable on other devices
+                signingConfig = signingConfigs.getByName("debug")
             }
         }
     }

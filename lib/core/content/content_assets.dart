@@ -2,7 +2,7 @@
 ///
 /// It organizes the files by level (A1, A2, etc.) and category.
 class ContentAssets {
-  static const String vocabularyContentStamp = '2026-03-30-v5';
+  static const String vocabularyContentStamp = '2026-03-31-v7';
 
   /// This list contains all vocabulary files for level A1.
   static const List<String> vocabularyA1 = [
@@ -101,6 +101,14 @@ class ContentAssets {
     'assets/content/vocabulary/B1/77_social_media.json',
     'assets/content/vocabulary/B1/78_programming.json',
     'assets/content/vocabulary/B1/79_important_phrases_technology.json',
+    'assets/content/vocabulary/B1/81_job_details.json',
+    'assets/content/vocabulary/B1/82_interviews.json',
+    'assets/content/vocabulary/B1/83_work_culture.json',
+    'assets/content/vocabulary/B1/84_it_workplace.json',
+    'assets/content/vocabulary/B1/85_onboarding.json',
+    'assets/content/vocabulary/B1/86_work_problems.json',
+    'assets/content/vocabulary/B1/87_performance_feedback.json',
+    'assets/content/vocabulary/B1/88_legal_rights.json',
   ];
 
   static const List<String> vocabularyB2 = [
@@ -113,7 +121,7 @@ class ContentAssets {
     'assets/content/vocabulary/B2/86_important_phrases_abstract.json',
   ];
 
-    static const List<String> exercisesA1 = [
+  static const List<String> exercisesA1 = [
     'assets/content/exercises/A1/01_personalpronomen.json',
     'assets/content/exercises/A1/02_praesens.json',
     'assets/content/exercises/A1/03_bestimmte_artikel.json',
@@ -135,7 +143,8 @@ class ContentAssets {
     'assets/content/exercises/A1/19_imperativ.json',
     'assets/content/exercises/A1/20_praepositionen_akk_dat.json',
   ];
-    static const List<String> exercisesA2 = [
+
+  static const List<String> exercisesA2 = [
     'assets/content/exercises/A2/01_perfekt.json',
     'assets/content/exercises/A2/02_praeteritum.json',
     'assets/content/exercises/A2/03_futur_i.json',
@@ -157,7 +166,8 @@ class ContentAssets {
     'assets/content/exercises/A2/19_adverbien.json',
     'assets/content/exercises/A2/20_der_genitiv.json',
   ];
-    static const List<String> exercisesB1 = [
+
+  static const List<String> exercisesB1 = [
     'assets/content/exercises/B1/01_genitiv.json',
     'assets/content/exercises/B1/02_n-deklination.json',
     'assets/content/exercises/B1/03_plusquamperfekt.json',
@@ -177,7 +187,8 @@ class ContentAssets {
     'assets/content/exercises/B1/17_praepositionalobjekte.json',
     'assets/content/exercises/B1/18_infinitivsaetze.json',
   ];
-    static const List<String> exercisesB2 = [
+
+  static const List<String> exercisesB2 = [
     'assets/content/exercises/B2/01_konjunktiv_i.json',
     'assets/content/exercises/B2/02_konjunktiv_ii_fortgeschritten.json',
     'assets/content/exercises/B2/03_irreale_vergleichssaetze.json',
@@ -194,11 +205,9 @@ class ContentAssets {
     'assets/content/exercises/B2/14_nominalstil.json',
     'assets/content/exercises/B2/15_funktionsverbgefuege.json',
     'assets/content/exercises/B2/16_infinitivsaetze.json',
-    'assets/content/exercises/B2/17_berichtswesen.json',
-    'assets/content/exercises/B2/18_beschaffung.json',
-    'assets/content/exercises/B2/19_marketing.json',
   ];
-    static const List<String> exercisesC1 = [
+
+  static const List<String> exercisesC1 = [
     'assets/content/exercises/C1/01_modalpartikeln.json',
     'assets/content/exercises/C1/02_subjektive_modalverben.json',
     'assets/content/exercises/C1/03_nomen-verb-verbindungen.json',
@@ -211,12 +220,6 @@ class ContentAssets {
     'assets/content/exercises/C1/10_wissenschaftssprache.json',
     'assets/content/exercises/C1/11_diskursmarker.json',
     'assets/content/exercises/C1/12_praepositionen.json',
-    'assets/content/exercises/C1/13_strategisches_management.json',
-    'assets/content/exercises/C1/14_compliance.json',
-    'assets/content/exercises/C1/15_arbeitsrecht.json',
-    'assets/content/exercises/C1/16_finanzierung.json',
-    'assets/content/exercises/C1/17_unternehmensfuehrung.json',
-    'assets/content/exercises/C1/18_wirtschaftspolitik.json',
   ];
 
   /// This list combines all vocabulary files from all levels.
@@ -333,4 +336,3 @@ class ContentAssets {
   static const String vocabularyGroups = 'assets/content/vocabulary/groups.json';
   static const String vocabularyCategories = 'assets/content/vocabulary/categories.json';
 }
-

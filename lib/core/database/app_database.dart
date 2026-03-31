@@ -430,7 +430,8 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
       await vocabularyDao.upsertVocabularyGroups(groupsData);
       await vocabularyDao.upsertVocabularyCategories(categoriesData,
           isCached: true);
-      await _deleteStaleVocabularyContent(vocabulary, categoriesData, groupsData);
+      await _deleteStaleVocabularyContent(
+          vocabulary, categoriesData, groupsData);
       await vocabularyDao.upsertVocabularyContent(vocabulary);
 
       // Clear old exercises to remove any deleted JSON entries (e.g., outdated vocab exercises)
@@ -550,9 +551,9 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
         .where((id) => id.isNotEmpty)
         .toSet();
 
-    final existingWordRows =
-        await (selectOnly(vocabularyWords)..addColumns([vocabularyWords.id]))
-            .get();
+    final existingWordRows = await (selectOnly(vocabularyWords)
+          ..addColumns([vocabularyWords.id]))
+        .get();
     final staleWordIds = existingWordRows
         .map((row) => row.read(vocabularyWords.id) ?? '')
         .where((id) => id.isNotEmpty && !currentWordIds.contains(id))
@@ -577,9 +578,9 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
         .toList();
     await _deleteCategoryIds(staleCategoryIds);
 
-    final existingGroupRows =
-        await (selectOnly(vocabularyGroups)..addColumns([vocabularyGroups.id]))
-            .get();
+    final existingGroupRows = await (selectOnly(vocabularyGroups)
+          ..addColumns([vocabularyGroups.id]))
+        .get();
     final staleGroupIds = existingGroupRows
         .map((row) => row.read(vocabularyGroups.id) ?? '')
         .where((id) => id.isNotEmpty && !currentGroupIds.contains(id))
@@ -589,8 +590,7 @@ WHERE id = ? AND TRIM(COALESCE(dari, '')) = ''
 
   Future<void> _deleteWordIds(List<String> ids) async {
     for (final chunk in _chunk(ids, 200)) {
-      await (delete(vocabularyProgress)
-            ..where((t) => t.wordId.isIn(chunk)))
+      await (delete(vocabularyProgress)..where((t) => t.wordId.isIn(chunk)))
           .go();
       await (delete(vocabularyWords)..where((t) => t.id.isIn(chunk))).go();
     }

@@ -147,8 +147,33 @@ IconData getVocabularyCategoryIcon(String idOrName) {
       return Icons.account_balance_wallet_rounded;
     case 'marketing':
       return Icons.campaign_rounded;
+    case 'Human Resources':
     case 'hr':
-      return Icons.hail_rounded;
+      return Icons.groups_rounded;
+    case 'Job Description & Requirements':
+    case 'job_details':
+      return Icons.fact_check_rounded;
+    case 'Job Interviews':
+    case 'interviews':
+      return Icons.record_voice_over_rounded;
+    case 'Workplace Culture & Behavior':
+    case 'work_culture':
+      return Icons.handshake_rounded;
+    case 'Onboarding & First Day':
+    case 'onboarding':
+      return Icons.door_front_door_rounded;
+    case 'IT & Technical Workplace':
+    case 'it_workplace':
+      return Icons.developer_board_rounded;
+    case 'Problem & Support':
+    case 'work_problems':
+      return Icons.help_outline_rounded;
+    case 'Legal & Rights (Work)':
+    case 'legal_rights':
+      return Icons.gavel_rounded;
+    case 'Feedback & Performance':
+    case 'performance_feedback':
+      return Icons.query_stats_rounded;
 
     // Travel & Transport
     case 'train_bus':

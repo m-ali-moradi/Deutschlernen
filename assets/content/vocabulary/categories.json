@@ -1,106 +1,1135 @@
 [
-	{"id": "name_origin", "groupId": "personal_information", "name": "Name & Origin", "icon": "🆔", "colors": ["0xFF10B981", "0xFF059669"], "sortOrder": 1},
-	{"id": "address_phone", "groupId": "personal_information", "name": "Address & Phone", "icon": "📍", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 2},
-	{"id": "documents", "groupId": "personal_information", "name": "Documents", "icon": "📄", "colors": ["0xFF64748B", "0xFF334155"], "sortOrder": 3},
-	{"id": "date_of_birth", "groupId": "personal_information", "name": "Date of Birth", "icon": "🎂", "colors": ["0xFF0EA5E9", "0xFF0369A1"], "sortOrder": 4},
-	{"id": "marital_status", "groupId": "personal_information", "name": "Marital Status", "icon": "💍", "colors": ["0xFFEC4899", "0xFFBE185D"], "sortOrder": 5},
-	{"id": "age_nationality", "groupId": "personal_information", "name": "Age & Nationality", "icon": "🌍", "colors": ["0xFFF43F5E", "0xFFE11D48"], "sortOrder": 6},
-	{"id": "languages", "groupId": "personal_information", "name": "Languages", "icon": "🗣️", "colors": ["0xFF14B8A6", "0xFF0F766E"], "sortOrder": 7},
-	{"id": "important_phrases_personal", "groupId": "personal_information", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 8},
-	{"id": "alphabet_spelling", "groupId": "personal_information", "name": "Alphabet & Spelling", "icon": "🔤", "colors": ["0xFF0EA5E9", "0xFF0369A1"], "sortOrder": 9},
-
-	{"id": "registration_anmeldung", "groupId": "authorities_visa", "name": "Registration / Anmeldung", "icon": "🏢", "colors": ["0xFF334155", "0xFF1E293B"], "sortOrder": 1},
-	{"id": "residence_permit_visa", "groupId": "authorities_visa", "name": "Residence Permit / Visa", "icon": "🛂", "colors": ["0xFF1D4ED8", "0xFF1E3A8A"], "sortOrder": 2},
-	{"id": "appointments_authorities", "groupId": "authorities_visa", "name": "Appointments", "icon": "📅", "colors": ["0xFF7C3AED", "0xFF5B21B6"], "sortOrder": 3},
-	{"id": "forms_documents_authorities", "groupId": "authorities_visa", "name": "Forms & Documents", "icon": "📄", "colors": ["0xFF64748B", "0xFF334155"], "sortOrder": 4},
-	{"id": "offices_authorities", "groupId": "authorities_visa", "name": "Offices / Authorities", "icon": "🏛️", "colors": ["0xFF475569", "0xFF1E293B"], "sortOrder": 5},
-	{"id": "tax_id_numbers", "groupId": "authorities_visa", "name": "Tax ID / Identification Numbers", "icon": "🆔", "colors": ["0xFF0F766E", "0xFF115E59"], "sortOrder": 6},
-	{"id": "insurance_authorities", "groupId": "authorities_visa", "name": "Insurance", "icon": "🛡️", "colors": ["0xFF059669", "0xFF065F46"], "sortOrder": 7},
-	{"id": "legal_procedures", "groupId": "authorities_visa", "name": "Legal Procedures", "icon": "⚖️", "colors": ["0xFFB91C1C", "0xFF7F1D1D"], "sortOrder": 8},
-	{"id": "important_phrases_authorities", "groupId": "authorities_visa", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 9},
-
-	{"id": "application", "groupId": "work_business", "name": "Application & Career", "icon": "💼", "colors": ["0xFF1E40AF", "0xFF1D4ED8"], "sortOrder": 1},
-	{"id": "office_tasks", "groupId": "work_business", "name": "Office & Tasks", "icon": "🖥️", "colors": ["0xFFD97706", "0xFF92400E"], "sortOrder": 2},
-	{"id": "company", "groupId": "work_business", "name": "Company", "icon": "🏢", "colors": ["0xFF1E40AF", "0xFF1E3A8A"], "sortOrder": 3},
-	{"id": "meetings", "groupId": "work_business", "name": "Meetings", "icon": "🤝", "colors": ["0xFF0EA5E9", "0xFF0369A1"], "sortOrder": 4},
-	{"id": "email_communication", "groupId": "work_business", "name": "Email & Communication", "icon": "✉️", "colors": ["0xFF0284C7", "0xFF0369A1"], "sortOrder": 5},
-	{"id": "salary_projects", "groupId": "work_business", "name": "Salary & Projects", "icon": "📈", "colors": ["0xFF7C3AED", "0xFF4C1D95"], "sortOrder": 6},
-	{"id": "contracts", "groupId": "work_business", "name": "Contracts", "icon": "📄", "colors": ["0xFF059669", "0xFF064E3B"], "sortOrder": 7},
-	{"id": "work_schedule_shifts", "groupId": "work_business", "name": "Work Schedule / Shifts", "icon": "🕒", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 8},
-	{"id": "finance", "groupId": "work_business", "name": "Finance & Accounting", "icon": "💰", "colors": ["0xFF10B981", "0xFF059669"], "sortOrder": 9},
-	{"id": "marketing", "groupId": "work_business", "name": "Marketing & Sales", "icon": "📢", "colors": ["0xFFF97316", "0xFFEA580C"], "sortOrder": 10},
-	{"id": "hr", "groupId": "work_business", "name": "Human Resources", "icon": "👥", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 11},
-	{"id": "important_phrases_work", "groupId": "work_business", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 12},
-
-	{"id": "train_bus", "groupId": "travel_transport", "name": "Train & Bus", "icon": "🚆", "colors": ["0xFF3B82F6", "0xFF2563EB"], "sortOrder": 1},
-	{"id": "ticket_booking", "groupId": "travel_transport", "name": "Ticket & Booking", "icon": "🎫", "colors": ["0xFF10B981", "0xFF059669"], "sortOrder": 2},
-	{"id": "directions", "groupId": "travel_transport", "name": "Directions", "icon": "🧭", "colors": ["0xFFEC4899", "0xFFDB2777"], "sortOrder": 3},
-	{"id": "delays_problems", "groupId": "travel_transport", "name": "Delays & Problems", "icon": "⏳", "colors": ["0xFFF97316", "0xFFEA580C"], "sortOrder": 4},
-	{"id": "airport", "groupId": "travel_transport", "name": "Airport", "icon": "✈️", "colors": ["0xFF06B6D4", "0xFF0891B2"], "sortOrder": 5},
-	{"id": "hotel", "groupId": "travel_transport", "name": "Hotel", "icon": "🏨", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 6},
-	{"id": "luggage", "groupId": "travel_transport", "name": "Luggage", "icon": "🧳", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 7},
-	{"id": "important_phrases_travel", "groupId": "travel_transport", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 8},
-
-	{"id": "apartment_search", "groupId": "home_housing", "name": "Apartment Search", "icon": "🔎", "colors": ["0xFF3B82F6", "0xFF1E40AF"], "sortOrder": 1},
-	{"id": "rent_contract", "groupId": "home_housing", "name": "Rent & Contract", "icon": "📝", "colors": ["0xFF10B981", "0xFF047857"], "sortOrder": 2},
-	{"id": "rooms", "groupId": "home_housing", "name": "Rooms", "icon": "🚪", "colors": ["0xFF8B5CF6", "0xFF7C3AED"], "sortOrder": 3},
-	{"id": "utilities", "groupId": "home_housing", "name": "Utilities", "icon": "⚡", "colors": ["0xFFF59E0B", "0xFFB45309"], "sortOrder": 4},
-	{"id": "furniture", "groupId": "home_housing", "name": "Furniture", "icon": "🛋️", "colors": ["0xFFF43F5E", "0xFFC026D3"], "sortOrder": 5},
-	{"id": "cleaning", "groupId": "home_housing", "name": "Cleaning", "icon": "🧽", "colors": ["0xFFEC4899", "0xFFBE185D"], "sortOrder": 6},
-	{"id": "repairs", "groupId": "home_housing", "name": "Repairs", "icon": "🛠️", "colors": ["0xFF64748B", "0xFF475569"], "sortOrder": 7},
-	{"id": "landlord_tenant", "groupId": "home_housing", "name": "Landlord / Tenant", "icon": "🔑", "colors": ["0xFF64748B", "0xFF334155"], "sortOrder": 8},
-	{"id": "important_phrases_home", "groupId": "home_housing", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 9},
-
-	{"id": "symptoms", "groupId": "health_body", "name": "Symptoms", "icon": "🤒", "colors": ["0xFF10B981", "0xFF047857"], "sortOrder": 1},
-	{"id": "doctor_visit", "groupId": "health_body", "name": "Doctor Visit", "icon": "🩺", "colors": ["0xFF3B82F6", "0xFF1E40AF"], "sortOrder": 2},
-	{"id": "emergency", "groupId": "health_body", "name": "Emergency", "icon": "🚨", "colors": ["0xFFF97316", "0xFFC2410C"], "sortOrder": 3},
-	{"id": "appointments_health", "groupId": "health_body", "name": "Appointments", "icon": "📅", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 4},
-	{"id": "medicine", "groupId": "health_body", "name": "Medicine", "icon": "💊", "colors": ["0xFF10B981", "0xFF047857"], "sortOrder": 5},
-	{"id": "pharmacy", "groupId": "health_body", "name": "Pharmacy", "icon": "🏪", "colors": ["0xFFF97316", "0xFFEA580C"], "sortOrder": 6},
-	{"id": "insurance_health", "groupId": "health_body", "name": "Insurance", "icon": "🛡️", "colors": ["0xFF059669", "0xFF065F46"], "sortOrder": 7},
-	{"id": "body_parts", "groupId": "health_body", "name": "Body Parts", "icon": "💪", "colors": ["0xFFEF4444", "0xFFB91C1C"], "sortOrder": 8},
-	{"id": "important_phrases_health", "groupId": "health_body", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 9},
-
-	{"id": "university", "groupId": "education", "name": "University", "icon": "🏛️", "colors": ["0xFF10B981", "0xFF065F46"], "sortOrder": 1},
-	{"id": "exams_homework", "groupId": "education", "name": "Exams & Homework", "icon": "✍️", "colors": ["0xFFEC4899", "0xFF9D174D"], "sortOrder": 2},
-	{"id": "registration_enrollment", "groupId": "education", "name": "Registration / Enrollment", "icon": "🧾", "colors": ["0xFF8B5CF6", "0xFF5B21B6"], "sortOrder": 3},
-	{"id": "courses_modules", "groupId": "education", "name": "Courses / Modules", "icon": "📘", "colors": ["0xFF10B981", "0xFF065F46"], "sortOrder": 4},
-	{"id": "deadlines", "groupId": "education", "name": "Deadlines", "icon": "⏳", "colors": ["0xFFF59E0B", "0xFFB45309"], "sortOrder": 5},
-	{"id": "school", "groupId": "education", "name": "School", "icon": "🏫", "colors": ["0xFF8B5CF6", "0xFF5B21B6"], "sortOrder": 6},
-	{"id": "subjects", "groupId": "education", "name": "Subjects", "icon": "📚", "colors": ["0xFFF59E0B", "0xFFB45309"], "sortOrder": 7},
-	{"id": "important_phrases_education", "groupId": "education", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 8},
-
-	{"id": "greetings", "groupId": "daily_life_basics", "name": "Greetings", "icon": "👋", "colors": ["0xFF2563EB", "0xFF1D4ED8"], "sortOrder": 1},
-	{"id": "numbers", "groupId": "daily_life_basics", "name": "Numbers", "icon": "🔢", "colors": ["0xFF0EA5E9", "0xFF0284C7"], "sortOrder": 2},
-	{"id": "time_calendar", "groupId": "daily_life_basics", "name": "Time & Calendar", "icon": "🗓️", "colors": ["0xFF22C55E", "0xFF15803D"], "sortOrder": 3},
-	{"id": "food_drinks", "groupId": "daily_life_basics", "name": "Food & Drinks", "icon": "🥤", "colors": ["0xFFF97316", "0xFFEA580C"], "sortOrder": 4},
-	{"id": "shopping_prices", "groupId": "daily_life_basics", "name": "Shopping & Prices", "icon": "🛒", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 5},
-	{"id": "family", "groupId": "daily_life_basics", "name": "Family", "icon": "👨‍👩‍👧‍👦", "colors": ["0xFF8B5CF6", "0xFF7C3AED"], "sortOrder": 6},
-	{"id": "home_basics", "groupId": "daily_life_basics", "name": "Home Basics", "icon": "🏡", "colors": ["0xFFEC4899", "0xFFDB2777"], "sortOrder": 7},
-	{"id": "daily_actions", "groupId": "daily_life_basics", "name": "Daily Actions", "icon": "🚶", "colors": ["0xFF0EA5E9", "0xFF0284C7"], "sortOrder": 8},
-	{"id": "common_objects", "groupId": "daily_life_basics", "name": "Common Objects", "icon": "🧸", "colors": ["0xFF8B5CF6", "0xFF7C3AED"], "sortOrder": 9},
-	{"id": "feelings_states", "groupId": "daily_life_basics", "name": "Feelings & States", "icon": "🙂", "colors": ["0xFF14B8A6", "0xFF0F766E"], "sortOrder": 10},
-	{"id": "important_phrases_daily", "groupId": "daily_life_basics", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 11},
-	{"id": "weather_seasons", "groupId": "daily_life_basics", "name": "Weather & Seasons", "icon": "⛅", "colors": ["0xFFF59E0B", "0xFFD97706"], "sortOrder": 12},
-	{"id": "hobbies_leisure", "groupId": "daily_life_basics", "name": "Hobbies & Leisure", "icon": "🎨", "colors": ["0xFF10B981", "0xFF047857"], "sortOrder": 13},
-	{"id": "clothing_colors", "groupId": "daily_life_basics", "name": "Clothing & Colors", "icon": "👕", "colors": ["0xFF8B5CF6", "0xFF6D28D9"], "sortOrder": 14},
-	{"id": "invitations_events", "groupId": "daily_life_basics", "name": "Invitations & Events", "icon": "🎉", "colors": ["0xFFEC4899", "0xFFDB2777"], "sortOrder": 15},
-
-	{"id": "software_app", "groupId": "technology_it", "name": "Software & Apps", "icon": "📱", "colors": ["0xFF0891B2", "0xFF155E75"], "sortOrder": 1},
-	{"id": "internet_data", "groupId": "technology_it", "name": "Internet & Data", "icon": "🌐", "colors": ["0xFF7E22CE", "0xFF581C87"], "sortOrder": 2},
-	{"id": "accounts_login", "groupId": "technology_it", "name": "Accounts & Login", "icon": "🔐", "colors": ["0xFF4F46E5", "0xFF3730A3"], "sortOrder": 3},
-	{"id": "computer_hardware", "groupId": "technology_it", "name": "Computer & Hardware", "icon": "💻", "colors": ["0xFF4F46E5", "0xFF3730A3"], "sortOrder": 4},
-	{"id": "security", "groupId": "technology_it", "name": "Security", "icon": "🔒", "colors": ["0xFFBE123C", "0xFF881337"], "sortOrder": 5},
-	{"id": "files_storage", "groupId": "technology_it", "name": "Files & Storage", "icon": "🗂️", "colors": ["0xFF0891B2", "0xFF155E75"], "sortOrder": 6},
-	{"id": "social_media", "groupId": "technology_it", "name": "Social Media", "icon": "📱", "colors": ["0xFFEC4899", "0xFFDB2777"], "sortOrder": 7},
-	{"id": "programming", "groupId": "technology_it", "name": "Programming", "icon": "👨‍💻", "colors": ["0xFF2563EB", "0xFF1D4ED8"], "sortOrder": 8},
-	{"id": "important_phrases_technology", "groupId": "technology_it", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 9},
-
-	{"id": "formal_phrases", "groupId": "abstract_formal_language", "name": "Formal Phrases", "icon": "🗣️", "colors": ["0xFF4B5563", "0xFF1F2937"], "sortOrder": 1},
-	{"id": "opinions_arguments", "groupId": "abstract_formal_language", "name": "Opinions & Arguments", "icon": "💭", "colors": ["0xFF4B5563", "0xFF1F2937"], "sortOrder": 2},
-	{"id": "cause_result", "groupId": "abstract_formal_language", "name": "Cause & Result", "icon": "🔗", "colors": ["0xFFB91C1C", "0xFF7F1D1D"], "sortOrder": 3},
-	{"id": "comparison", "groupId": "abstract_formal_language", "name": "Comparison", "icon": "⚖️", "colors": ["0xFF1D4ED8", "0xFF1E3A8A"], "sortOrder": 4},
-	{"id": "condition_hypothesis", "groupId": "abstract_formal_language", "name": "Condition / Hypothesis", "icon": "🧠", "colors": ["0xFF1D4ED8", "0xFF1E3A8A"], "sortOrder": 5},
-	{"id": "linking_words", "groupId": "abstract_formal_language", "name": "Linking Words", "icon": "🔗", "colors": ["0xFFB91C1C", "0xFF7F1D1D"], "sortOrder": 6},
-	{"id": "important_phrases_abstract", "groupId": "abstract_formal_language", "name": "Important Phrases", "icon": "💬", "colors": ["0xFF6366F1", "0xFF4338CA"], "sortOrder": 7}
+	{
+		"id": "name_origin",
+		"groupId": "personal_information",
+		"name": "Name & Origin",
+		"icon": "🆔",
+		"colors": [
+			"0xFF10B981",
+			"0xFF059669"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "address_phone",
+		"groupId": "personal_information",
+		"name": "Address & Phone",
+		"icon": "📍",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF6D28D9"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "documents",
+		"groupId": "personal_information",
+		"name": "Documents",
+		"icon": "📄",
+		"colors": [
+			"0xFF64748B",
+			"0xFF334155"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "date_of_birth",
+		"groupId": "personal_information",
+		"name": "Date of Birth",
+		"icon": "🎂",
+		"colors": [
+			"0xFF0EA5E9",
+			"0xFF0369A1"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "marital_status",
+		"groupId": "personal_information",
+		"name": "Marital Status",
+		"icon": "💍",
+		"colors": [
+			"0xFFEC4899",
+			"0xFFBE185D"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "age_nationality",
+		"groupId": "personal_information",
+		"name": "Age & Nationality",
+		"icon": "🌍",
+		"colors": [
+			"0xFFF43F5E",
+			"0xFFE11D48"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "languages",
+		"groupId": "personal_information",
+		"name": "Languages",
+		"icon": "🗣️",
+		"colors": [
+			"0xFF14B8A6",
+			"0xFF0F766E"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "important_phrases_personal",
+		"groupId": "personal_information",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "alphabet_spelling",
+		"groupId": "personal_information",
+		"name": "Alphabet & Spelling",
+		"icon": "🔤",
+		"colors": [
+			"0xFF0EA5E9",
+			"0xFF0369A1"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "registration_anmeldung",
+		"groupId": "authorities_visa",
+		"name": "Registration / Anmeldung",
+		"icon": "🏢",
+		"colors": [
+			"0xFF334155",
+			"0xFF1E293B"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "residence_permit_visa",
+		"groupId": "authorities_visa",
+		"name": "Residence Permit / Visa",
+		"icon": "🛂",
+		"colors": [
+			"0xFF1D4ED8",
+			"0xFF1E3A8A"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "appointments_authorities",
+		"groupId": "authorities_visa",
+		"name": "Appointments",
+		"icon": "📅",
+		"colors": [
+			"0xFF7C3AED",
+			"0xFF5B21B6"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "forms_documents_authorities",
+		"groupId": "authorities_visa",
+		"name": "Forms & Documents",
+		"icon": "📄",
+		"colors": [
+			"0xFF64748B",
+			"0xFF334155"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "offices_authorities",
+		"groupId": "authorities_visa",
+		"name": "Offices / Authorities",
+		"icon": "🏛️",
+		"colors": [
+			"0xFF475569",
+			"0xFF1E293B"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "tax_id_numbers",
+		"groupId": "authorities_visa",
+		"name": "Tax ID / Identification Numbers",
+		"icon": "🆔",
+		"colors": [
+			"0xFF0F766E",
+			"0xFF115E59"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "insurance_authorities",
+		"groupId": "authorities_visa",
+		"name": "Insurance",
+		"icon": "🛡️",
+		"colors": [
+			"0xFF059669",
+			"0xFF065F46"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "legal_procedures",
+		"groupId": "authorities_visa",
+		"name": "Legal Procedures",
+		"icon": "⚖️",
+		"colors": [
+			"0xFFB91C1C",
+			"0xFF7F1D1D"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "important_phrases_authorities",
+		"groupId": "authorities_visa",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "application",
+		"groupId": "work_business",
+		"name": "Application & Career",
+		"icon": "💼",
+		"colors": [
+			"0xFF1E40AF",
+			"0xFF1D4ED8"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "job_details",
+		"groupId": "work_business",
+		"name": "Job Description & Requirements",
+		"icon": "📋",
+		"colors": [
+			"0xFF1E40AF",
+			"0xFF1D4ED8"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "interviews",
+		"groupId": "work_business",
+		"name": "Job Interviews",
+		"icon": "💬",
+		"colors": [
+			"0xFF1E40AF",
+			"0xFF1E3A8A"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "company",
+		"groupId": "work_business",
+		"name": "Company",
+		"icon": "🏢",
+		"colors": [
+			"0xFF1E40AF",
+			"0xFF1E3A8A"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "hr",
+		"groupId": "work_business",
+		"name": "Human Resources",
+		"icon": "👥",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF6D28D9"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "work_culture",
+		"groupId": "work_business",
+		"name": "Workplace Culture & Behavior",
+		"icon": "🤝",
+		"colors": [
+			"0xFF4B5563",
+			"0xFF1F2937"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "onboarding",
+		"groupId": "work_business",
+		"name": "Onboarding & First Day",
+		"icon": "🆕",
+		"colors": [
+			"0xFF10B981",
+			"0xFF059669"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "office_tasks",
+		"groupId": "work_business",
+		"name": "Office & Tasks",
+		"icon": "🖥️",
+		"colors": [
+			"0xFFD97706",
+			"0xFF92400E"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "meetings",
+		"groupId": "work_business",
+		"name": "Meetings",
+		"icon": "🤝",
+		"colors": [
+			"0xFF0EA5E9",
+			"0xFF0369A1"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "email_communication",
+		"groupId": "work_business",
+		"name": "Email & Communication",
+		"icon": "✉️",
+		"colors": [
+			"0xFF0284C7",
+			"0xFF0369A1"
+		],
+		"sortOrder": 10
+	},
+	{
+		"id": "it_workplace",
+		"groupId": "work_business",
+		"name": "IT & Technical Workplace",
+		"icon": "👨‍💻",
+		"colors": [
+			"0xFF0891B2",
+			"0xFF155E75"
+		],
+		"sortOrder": 11
+	},
+	{
+		"id": "work_problems",
+		"groupId": "work_business",
+		"name": "Problem & Support",
+		"icon": "🆘",
+		"colors": [
+			"0xFFB91C1C",
+			"0xFF7F1D1D"
+		],
+		"sortOrder": 12
+	},
+	{
+		"id": "salary_projects",
+		"groupId": "work_business",
+		"name": "Salary & Projects",
+		"icon": "📈",
+		"colors": [
+			"0xFF7C3AED",
+			"0xFF4C1D95"
+		],
+		"sortOrder": 13
+	},
+	{
+		"id": "work_schedule_shifts",
+		"groupId": "work_business",
+		"name": "Work Schedule / Shifts",
+		"icon": "🕒",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFD97706"
+		],
+		"sortOrder": 14
+	},
+	{
+		"id": "contracts",
+		"groupId": "work_business",
+		"name": "Contracts",
+		"icon": "📄",
+		"colors": [
+			"0xFF059669",
+			"0xFF064E3B"
+		],
+		"sortOrder": 15
+	},
+	{
+		"id": "legal_rights",
+		"groupId": "work_business",
+		"name": "Legal & Rights (Work)",
+		"icon": "⚖️",
+		"colors": [
+			"0xFF475569",
+			"0xFF1E293B"
+		],
+		"sortOrder": 16
+	},
+	{
+		"id": "performance_feedback",
+		"groupId": "work_business",
+		"name": "Feedback & Performance",
+		"icon": "📈",
+		"colors": [
+			"0xFF7C3AED",
+			"0xFF4C1D95"
+		],
+		"sortOrder": 17
+	},
+	{
+		"id": "finance",
+		"groupId": "work_business",
+		"name": "Finance & Accounting",
+		"icon": "💰",
+		"colors": [
+			"0xFF10B981",
+			"0xFF059669"
+		],
+		"sortOrder": 18
+	},
+	{
+		"id": "marketing",
+		"groupId": "work_business",
+		"name": "Marketing & Sales",
+		"icon": "📢",
+		"colors": [
+			"0xFFF97316",
+			"0xFFEA580C"
+		],
+		"sortOrder": 19
+	},
+	{
+		"id": "important_phrases_work",
+		"groupId": "work_business",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 20
+	},
+	{
+		"id": "train_bus",
+		"groupId": "travel_transport",
+		"name": "Train & Bus",
+		"icon": "🚆",
+		"colors": [
+			"0xFF3B82F6",
+			"0xFF2563EB"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "ticket_booking",
+		"groupId": "travel_transport",
+		"name": "Ticket & Booking",
+		"icon": "🎫",
+		"colors": [
+			"0xFF10B981",
+			"0xFF059669"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "directions",
+		"groupId": "travel_transport",
+		"name": "Directions",
+		"icon": "🧭",
+		"colors": [
+			"0xFFEC4899",
+			"0xFFDB2777"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "delays_problems",
+		"groupId": "travel_transport",
+		"name": "Delays & Problems",
+		"icon": "⏳",
+		"colors": [
+			"0xFFF97316",
+			"0xFFEA580C"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "airport",
+		"groupId": "travel_transport",
+		"name": "Airport",
+		"icon": "✈️",
+		"colors": [
+			"0xFF06B6D4",
+			"0xFF0891B2"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "hotel",
+		"groupId": "travel_transport",
+		"name": "Hotel",
+		"icon": "🏨",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFD97706"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "luggage",
+		"groupId": "travel_transport",
+		"name": "Luggage",
+		"icon": "🧳",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF6D28D9"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "important_phrases_travel",
+		"groupId": "travel_transport",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "apartment_search",
+		"groupId": "home_housing",
+		"name": "Apartment Search",
+		"icon": "🔎",
+		"colors": [
+			"0xFF3B82F6",
+			"0xFF1E40AF"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "rent_contract",
+		"groupId": "home_housing",
+		"name": "Rent & Contract",
+		"icon": "📝",
+		"colors": [
+			"0xFF10B981",
+			"0xFF047857"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "rooms",
+		"groupId": "home_housing",
+		"name": "Rooms",
+		"icon": "🚪",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF7C3AED"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "utilities",
+		"groupId": "home_housing",
+		"name": "Utilities",
+		"icon": "⚡",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFB45309"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "furniture",
+		"groupId": "home_housing",
+		"name": "Furniture",
+		"icon": "🛋️",
+		"colors": [
+			"0xFFF43F5E",
+			"0xFFC026D3"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "cleaning",
+		"groupId": "home_housing",
+		"name": "Cleaning",
+		"icon": "🧽",
+		"colors": [
+			"0xFFEC4899",
+			"0xFFBE185D"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "repairs",
+		"groupId": "home_housing",
+		"name": "Repairs",
+		"icon": "🛠️",
+		"colors": [
+			"0xFF64748B",
+			"0xFF475569"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "landlord_tenant",
+		"groupId": "home_housing",
+		"name": "Landlord / Tenant",
+		"icon": "🔑",
+		"colors": [
+			"0xFF64748B",
+			"0xFF334155"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "important_phrases_home",
+		"groupId": "home_housing",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "symptoms",
+		"groupId": "health_body",
+		"name": "Symptoms",
+		"icon": "🤒",
+		"colors": [
+			"0xFF10B981",
+			"0xFF047857"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "doctor_visit",
+		"groupId": "health_body",
+		"name": "Doctor Visit",
+		"icon": "🩺",
+		"colors": [
+			"0xFF3B82F6",
+			"0xFF1E40AF"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "emergency",
+		"groupId": "health_body",
+		"name": "Emergency",
+		"icon": "🚨",
+		"colors": [
+			"0xFFF97316",
+			"0xFFC2410C"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "appointments_health",
+		"groupId": "health_body",
+		"name": "Appointments",
+		"icon": "📅",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF6D28D9"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "medicine",
+		"groupId": "health_body",
+		"name": "Medicine",
+		"icon": "💊",
+		"colors": [
+			"0xFF10B981",
+			"0xFF047857"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "pharmacy",
+		"groupId": "health_body",
+		"name": "Pharmacy",
+		"icon": "🏪",
+		"colors": [
+			"0xFFF97316",
+			"0xFFEA580C"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "insurance_health",
+		"groupId": "health_body",
+		"name": "Insurance",
+		"icon": "🛡️",
+		"colors": [
+			"0xFF059669",
+			"0xFF065F46"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "body_parts",
+		"groupId": "health_body",
+		"name": "Body Parts",
+		"icon": "💪",
+		"colors": [
+			"0xFFEF4444",
+			"0xFFB91C1C"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "important_phrases_health",
+		"groupId": "health_body",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "university",
+		"groupId": "education",
+		"name": "University",
+		"icon": "🏛️",
+		"colors": [
+			"0xFF10B981",
+			"0xFF065F46"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "exams_homework",
+		"groupId": "education",
+		"name": "Exams & Homework",
+		"icon": "✍️",
+		"colors": [
+			"0xFFEC4899",
+			"0xFF9D174D"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "registration_enrollment",
+		"groupId": "education",
+		"name": "Registration / Enrollment",
+		"icon": "🧾",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF5B21B6"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "courses_modules",
+		"groupId": "education",
+		"name": "Courses / Modules",
+		"icon": "📘",
+		"colors": [
+			"0xFF10B981",
+			"0xFF065F46"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "deadlines",
+		"groupId": "education",
+		"name": "Deadlines",
+		"icon": "⏳",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFB45309"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "school",
+		"groupId": "education",
+		"name": "School",
+		"icon": "🏫",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF5B21B6"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "subjects",
+		"groupId": "education",
+		"name": "Subjects",
+		"icon": "📚",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFB45309"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "important_phrases_education",
+		"groupId": "education",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "greetings",
+		"groupId": "daily_life_basics",
+		"name": "Greetings",
+		"icon": "👋",
+		"colors": [
+			"0xFF2563EB",
+			"0xFF1D4ED8"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "numbers",
+		"groupId": "daily_life_basics",
+		"name": "Numbers",
+		"icon": "🔢",
+		"colors": [
+			"0xFF0EA5E9",
+			"0xFF0284C7"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "time_calendar",
+		"groupId": "daily_life_basics",
+		"name": "Time & Calendar",
+		"icon": "🗓️",
+		"colors": [
+			"0xFF22C55E",
+			"0xFF15803D"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "food_drinks",
+		"groupId": "daily_life_basics",
+		"name": "Food & Drinks",
+		"icon": "🥤",
+		"colors": [
+			"0xFFF97316",
+			"0xFFEA580C"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "shopping_prices",
+		"groupId": "daily_life_basics",
+		"name": "Shopping & Prices",
+		"icon": "🛒",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFD97706"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "family",
+		"groupId": "daily_life_basics",
+		"name": "Family",
+		"icon": "👨‍👩‍👧‍👦",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF7C3AED"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "home_basics",
+		"groupId": "daily_life_basics",
+		"name": "Home Basics",
+		"icon": "🏡",
+		"colors": [
+			"0xFFEC4899",
+			"0xFFDB2777"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "daily_actions",
+		"groupId": "daily_life_basics",
+		"name": "Daily Actions",
+		"icon": "🚶",
+		"colors": [
+			"0xFF0EA5E9",
+			"0xFF0284C7"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "common_objects",
+		"groupId": "daily_life_basics",
+		"name": "Common Objects",
+		"icon": "🧸",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF7C3AED"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "feelings_states",
+		"groupId": "daily_life_basics",
+		"name": "Feelings & States",
+		"icon": "🙂",
+		"colors": [
+			"0xFF14B8A6",
+			"0xFF0F766E"
+		],
+		"sortOrder": 10
+	},
+	{
+		"id": "important_phrases_daily",
+		"groupId": "daily_life_basics",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 11
+	},
+	{
+		"id": "weather_seasons",
+		"groupId": "daily_life_basics",
+		"name": "Weather & Seasons",
+		"icon": "⛅",
+		"colors": [
+			"0xFFF59E0B",
+			"0xFFD97706"
+		],
+		"sortOrder": 12
+	},
+	{
+		"id": "hobbies_leisure",
+		"groupId": "daily_life_basics",
+		"name": "Hobbies & Leisure",
+		"icon": "🎨",
+		"colors": [
+			"0xFF10B981",
+			"0xFF047857"
+		],
+		"sortOrder": 13
+	},
+	{
+		"id": "clothing_colors",
+		"groupId": "daily_life_basics",
+		"name": "Clothing & Colors",
+		"icon": "👕",
+		"colors": [
+			"0xFF8B5CF6",
+			"0xFF6D28D9"
+		],
+		"sortOrder": 14
+	},
+	{
+		"id": "invitations_events",
+		"groupId": "daily_life_basics",
+		"name": "Invitations & Events",
+		"icon": "🎉",
+		"colors": [
+			"0xFFEC4899",
+			"0xFFDB2777"
+		],
+		"sortOrder": 15
+	},
+	{
+		"id": "software_app",
+		"groupId": "technology_it",
+		"name": "Software & Apps",
+		"icon": "📱",
+		"colors": [
+			"0xFF0891B2",
+			"0xFF155E75"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "internet_data",
+		"groupId": "technology_it",
+		"name": "Internet & Data",
+		"icon": "🌐",
+		"colors": [
+			"0xFF7E22CE",
+			"0xFF581C87"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "accounts_login",
+		"groupId": "technology_it",
+		"name": "Accounts & Login",
+		"icon": "🔐",
+		"colors": [
+			"0xFF4F46E5",
+			"0xFF3730A3"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "computer_hardware",
+		"groupId": "technology_it",
+		"name": "Computer & Hardware",
+		"icon": "💻",
+		"colors": [
+			"0xFF4F46E5",
+			"0xFF3730A3"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "security",
+		"groupId": "technology_it",
+		"name": "Security",
+		"icon": "🔒",
+		"colors": [
+			"0xFFBE123C",
+			"0xFF881337"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "files_storage",
+		"groupId": "technology_it",
+		"name": "Files & Storage",
+		"icon": "🗂️",
+		"colors": [
+			"0xFF0891B2",
+			"0xFF155E75"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "social_media",
+		"groupId": "technology_it",
+		"name": "Social Media",
+		"icon": "📱",
+		"colors": [
+			"0xFFEC4899",
+			"0xFFDB2777"
+		],
+		"sortOrder": 7
+	},
+	{
+		"id": "programming",
+		"groupId": "technology_it",
+		"name": "Programming",
+		"icon": "👨‍💻",
+		"colors": [
+			"0xFF2563EB",
+			"0xFF1D4ED8"
+		],
+		"sortOrder": 8
+	},
+	{
+		"id": "important_phrases_technology",
+		"groupId": "technology_it",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 9
+	},
+	{
+		"id": "formal_phrases",
+		"groupId": "abstract_formal_language",
+		"name": "Formal Phrases",
+		"icon": "🗣️",
+		"colors": [
+			"0xFF4B5563",
+			"0xFF1F2937"
+		],
+		"sortOrder": 1
+	},
+	{
+		"id": "opinions_arguments",
+		"groupId": "abstract_formal_language",
+		"name": "Opinions & Arguments",
+		"icon": "💭",
+		"colors": [
+			"0xFF4B5563",
+			"0xFF1F2937"
+		],
+		"sortOrder": 2
+	},
+	{
+		"id": "cause_result",
+		"groupId": "abstract_formal_language",
+		"name": "Cause & Result",
+		"icon": "🔗",
+		"colors": [
+			"0xFFB91C1C",
+			"0xFF7F1D1D"
+		],
+		"sortOrder": 3
+	},
+	{
+		"id": "comparison",
+		"groupId": "abstract_formal_language",
+		"name": "Comparison",
+		"icon": "⚖️",
+		"colors": [
+			"0xFF1D4ED8",
+			"0xFF1E3A8A"
+		],
+		"sortOrder": 4
+	},
+	{
+		"id": "condition_hypothesis",
+		"groupId": "abstract_formal_language",
+		"name": "Condition / Hypothesis",
+		"icon": "🧠",
+		"colors": [
+			"0xFF1D4ED8",
+			"0xFF1E3A8A"
+		],
+		"sortOrder": 5
+	},
+	{
+		"id": "linking_words",
+		"groupId": "abstract_formal_language",
+		"name": "Linking Words",
+		"icon": "🔗",
+		"colors": [
+			"0xFFB91C1C",
+			"0xFF7F1D1D"
+		],
+		"sortOrder": 6
+	},
+	{
+		"id": "important_phrases_abstract",
+		"groupId": "abstract_formal_language",
+		"name": "Important Phrases",
+		"icon": "💬",
+		"colors": [
+			"0xFF6366F1",
+			"0xFF4338CA"
+		],
+		"sortOrder": 7
+	}
 ]

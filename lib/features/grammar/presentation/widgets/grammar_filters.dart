@@ -33,7 +33,7 @@ class GrammarFilters extends ConsumerWidget {
       children: [
         // --- Level Filter ---
         SizedBox(
-          height: 42,
+          height: 46,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: grammarLevels.length,
@@ -71,20 +71,27 @@ class GrammarFilters extends ConsumerWidget {
                       .state = cat,
                   child: Container(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                        const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                     decoration: BoxDecoration(
                       color: selected
                           ? const Color(0xFFA855F7)
                           : (isDark
-                              ? const Color(0xFF1E293B)
+                              ? Colors.white.withValues(alpha: 0.05)
                               : const Color(0xFFF1F5F9)),
-                      borderRadius: BorderRadius.circular(999),
+                      borderRadius: BorderRadius.circular(22),
+                      border: Border.all(
+                        color: selected
+                            ? Colors.transparent
+                            : (isDark
+                                ? Colors.white.withValues(alpha: 0.1)
+                                : const Color(0xFFE2E8F0)),
+                      ),
                     ),
                     child: Text(
                       getGrammarCategoryLabel(strings, cat),
                       style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 13,
+                        fontWeight: selected ? FontWeight.bold : FontWeight.w600,
                         color: selected
                             ? Colors.white
                             : (isDark

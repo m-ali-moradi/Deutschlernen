@@ -29,56 +29,24 @@ class GrammarLevelChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return PremiumCard(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          gradient: selected
-              ? const LinearGradient(
-                  colors: AppTokens.gradientBluePurple,
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                )
-              : null,
-          color: selected ? null : AppTokens.surface(isDark),
-          border: Border.all(
-            color: selected
-                ? Colors.transparent
-                : AppTokens.outline(isDark).withValues(alpha: 0.1),
-            width: 1.5,
-          ),
-          boxShadow: selected
-              ? [
-                  BoxShadow(
-                    color: AppTokens.gradientBluePurple.first
-                        .withValues(alpha: 0.35),
-                    blurRadius: 15,
-                    offset: const Offset(0, 5),
-                  ),
-                  BoxShadow(
-                    color: Colors.white.withValues(alpha: 0.2),
-                    blurRadius: 0,
-                    offset: const Offset(-2, -2),
-                  ),
-                ]
-              : [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.04),
-                    blurRadius: 10,
-                    offset: const Offset(0, 4),
-                  )
-                ],
-        ),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+      borderRadius: BorderRadius.circular(22),
+      useGlass: !selected,
+      gradient: selected
+          ? const LinearGradient(
+              colors: AppTokens.gradientBluePurple,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            )
+          : null,
+      child: Center(
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 15,
-            fontWeight: selected ? FontWeight.w900 : FontWeight.w700,
-            letterSpacing: selected ? 0.3 : 0,
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
             color: selected ? Colors.white : AppTokens.textMuted(isDark),
           ),
         ),
